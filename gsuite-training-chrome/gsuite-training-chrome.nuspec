@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gsuite-training-chrome</id>
+    <version>1.8.7</version>
+    <title>G Suite Training for Chrome</title>
+    <authors>Google</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/g-suite-training/idkloemkmldbemijiamdiolojbffnjlh</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/Fi1c_RTXaXq2xKNJtwAZfjEK_m9ovFrmirbpv6b1yP5R66wLT2pIAxCxtV2-kE4svU6T452f=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://www.google.com/intl/en/policies/</licenseUrl>
+	<docsUrl>https://support.google.com/a/answer/7039472</docsUrl>
+    <description>
+###Interactive training and walkthroughs, right within G Suite
+
+New to G Suite? G Suite Training is a Chrome extension that offers simple and interactive training lessons to get you up and running fast with G Suite (formerly Google Apps). 
+
+• Rich, interactive training - Whether you’re in Gmail, Calendar, Sheets, Slides, or Docs, you can learn and take actions, all at the same time.
+
+• In-App experience - Training is accessible directly within G Suite, so you don’t need to leave the application to learn how to use it.
+
+• Available to all - Whether it’s to master Google Classroom, or the G Suite Admin Console, G Suite Training is free for your entire organization.
+
+• Learn more at https://support.google.com/a/answer/7039472.
+
+After adding to Chrome, refresh your Gmail, Calendar, Drive, Docs, Sheets, Slides, Sites, Forms, Google+, Classroom, and Admin Console tabs to access the training menu.
+
+If you require technical support please contact us through the Settings link in the Training menu.
+
+By installing this item, you agree to the Google Terms of Service and Privacy Policy at https://www.google.com/intl/en/policies/.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>gsuite google apps suite calendar sheets slides docs training chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>google-hangouts-chrome</id>
+    <version>2016.1026.1535.1</version>
+    <title>Google Hangouts for Chrome</title>
+    <authors>Google</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/google-hangouts/nckgahadagoaajjgafhacjanaoiihapd</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/2ywuhIgDHIeRRCgUncyhqjmvqnliGTWtBChGE7FiPhH8tQoFugbx1iJiHNl6HBfSHxAYHusG=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###Hangouts brings conversations to life with photos, emoji, and even group video calls for free.
+
+Use Hangouts to keep in touch. Message friends, start free video or voice calls, and hop on a conversation with one person or a group.
+ * Include all your friends with group chats for up to 150 people.
+ * Say more with photos, videos, maps, emoji, stickers, and animated GIFs.Turn any conversation into a free group video call with up to 10 friends.
+ * Keep in touch with friends across Android, iOS, and the web, and sync chats across all your devices.
+ * Message friends anytime, even if they’re offline.
+ * Snooze your notifications so you can respond later.
+ * See what you chatted about in the past, including shared photos and your video call history.
+ * Keep a record of any conversation for just a short period of time by turning history off.
+ * Connect your Google Voice account to make calls, send and receive SMS, and access your voicemail.
+
+Hangouts Chrome extension:
+ * Use Hangouts and get notifications as you move from tab to tab in Chrome, or even without a Chrome window open.
+ * Position Hangouts anywhere on your screen, even if you have more than one monitor. Keep conversations in a single window or pop out the important ones. 
+ * View and continue your conversations across devices.
+ * Get notifications just once. After you see an alert, it’ll be removed on other devices.
+
+Notes:
+ * Unlike the Chat for Google app, Hangouts doesn’t support “invisible status”.
+ * Mobile carrier and ISP charges may apply.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>google hangouts chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
