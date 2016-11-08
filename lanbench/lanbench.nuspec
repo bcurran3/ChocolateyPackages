@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lanbench</id>
+    <title>LANBench</title>
+    <version>1.1.0.20161009</version>
+    <authors>Zach Saw</authors>
+    <owners>bcurran3</owners>
+    <summary>A Simple LAN / TCP Network Benchmark Utility</summary>
+    <description>
+![Screenshot of LANBench](http://www.zachsaw.com/images/lanbench.png)
+	
+LANBench is a simple LAN / TCP Network benchmark utility. It is designed for testing network performance between two computers and is based on Winsock 2.2. LANBench tests TCP performance only and is designed for minimal CPU usage so that the pure performance of your network could be fully tested. 
+
+Features summary:
+Freeware
+Multiple simultaneous connections - up to 20 (for load simulation)
+Low CPU overhead for pure network performance test
+Multithreaded utilizing Windows I/O completion port
+Configurable packet size, test duration and transfer mode
+    </description>
+    <projectUrl>http://www.zachsaw.com/?pg=lanbench_tcp_network_benchmark</projectUrl>
+    <mailingListUrl>http://www.zachsaw.com/forum/viewforum.php?f=15</mailingListUrl>
+    <bugTrackerUrl>http://www.zachsaw.com/?pg=lanbench_tcp_network_benchmark</bugTrackerUrl>
+    <tags>lanbench tcp network benchmark utility tool</tags>
+    <copyright>Copyright 2009-2011 Zach Saw. All rights reserved.</copyright>
+    <licenseUrl>http://www.zachsaw.com/?pg=lanbench_tcp_network_benchmark</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://static.windowspedia.net/data/programs/icons/lanbench_icon_127820.png</iconUrl>
+    <releaseNotes>added checksums and screenshot</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
