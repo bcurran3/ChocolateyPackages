@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>program-install-and-uninstall-troubleshooter</id>
+    <version>1.0</version>
+    <owners>bcurran3</owners>
+    <title>Microsoft Program Install and Uninstall Troubleshooter (Portable)</title>
+    <authors>Microsoft Corporation</authors>
+    <projectUrl>https://support.microsoft.com/en-us/help/17588/fix-problems-that-block-programs-from-being-installed-or-removed</projectUrl>
+    <iconUrl>https://assets.onestore.ms/cdnfiles/external/uhf/long/9a49a7e9d8e881327e81b9eb43dabc01de70a9bb/images/microsoft-gray.png</iconUrl>
+    <copyright>Microsoft Corporation</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>microsoft install uninstalltroubleshooter portable</tags>
+    <summary>Fix problems that block programs from being installed or removed</summary>
+    <description>
+###What it fixes
+* Corrupted registry keys on 64-bit operating systems
+* Corrupted registry keys that control the update data
+* Problems that prevent new programs from being installed
+* Problems that prevent existing programs from being completely uninstalled or updated
+* Problems that block you from uninstalling a program through Add or Remove Programs (or Programs and Features) in Control Panel
+
+###Runs on
+* Windows 7
+* Windows 8
+* Windows 8.1
+* Windows 10	
+	</description>
+    <releaseNotes>Nobody is ever going to type this long package name.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>pushbullet-chrome</id>
+    <version>336.0</version>
+    <title>Pushbullet for Chrome</title>
+    <authors>pushbullet.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd</projectUrl>
+    <iconUrl>https://lh4.googleusercontent.com/gpPq_ErVW-i1W3mFuqqAN5LCN_upxlQIqNfKtLOLyzb9CzM1_ZfO37f57YEPIRg4vqn00mAS2Q=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://www.pushbullet.com/tos</licenseUrl>
+    <description>
+###Bringing together your devices, friends, and the things you care about.
+
+Pushbullet is "the app you never knew you needed", according to CNET. Here's why:
+
+STAY CONNECTED
+• Conveniently send and receive SMS messages from your computer (requires Android)
+• Reply to messages from many popular apps including WhatsApp, Kik, and Facebook Messenger (requires Android)
+• Easily share links and files between your devices, or with friends
+
+NEVER MISS A NOTIFICATION
+• See all of your phone's notifications on your computer, including phone calls (requires Android)
+• Dismiss a notification on your computer and it goes away on your phone too
+• Use Pushbullet Channels to subscribe to timely notifications about things you care about
+
+SAVE TIME
+• Text from your computer using your keyboard instead of grabbing your phone
+• The easiest way to get a link or file onto your phone to open or share
+• Deal with notifications on your computer as they arrive
+
+"Pushbullet Is a Fantastic App Every Phone Should Have" - Gizmodo
+
+"TNW’s Apps of the Year: PushBullet for Android" - TNW
+
+★ Secure: Protect your notifications and SMS with end-to-end encryption
+★ Used by millions of people and counting
+★ Translated into over a dozen languages by an awesome group of our own users
+
+See all the places Pushbullet is available: https://www.pushbullet.com/apps
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>pushbullet chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

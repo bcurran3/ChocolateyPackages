@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>office-online-chrome</id>
+    <version>1.5.0</version>
+    <title>Microsoft Office Online for Chrome</title>
+    <authors>Microsoft Corporation</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/office-online/ndjpnladcallmjemlbaebfadecfhkepb</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/wZMwJuLJFa8G-gituAAdM0ckm9tpYdj6fnmVtEg-Sdxu2a77auIvDOwt1PBGAYIIebDZr40=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###View, edit, and create Office files in your browser.
+
+Built for Chrome – Use Word, Excel, PowerPoint, OneNote, and Sway Online without needing Office installed.
+
+Create with confidence – Use familiar formatting and layout options to express your ideas in full fidelity.
+
+Work on the go – Get to your files from anywhere, thanks to integration with OneDrive and OneDrive for Business.
+
+Copy and paste conveniently – Use Copy and Paste buttons on the ribbon and right-click menu, or use keyboard shortcuts for copying and pasting.
+
+By installing the app, you agree to these terms and conditions: 
+
+PLEASE NOTE: Refer to your license terms for Microsoft Office Online software (the "software") to identify the entity licensing this supplement to you and for support information. You may use a copy of this supplement with each validly licensed copy of the software. You may not use the supplement if you do not have a license for the software. The license terms for the software apply to your use of this supplement.
+
+Privacy Policy: http://aka.ms/privacy
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>microsoft office online chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

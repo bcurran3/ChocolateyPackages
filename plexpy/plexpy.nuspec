@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>plexpy</id>
+    <version>1.4.13</version>
+    <owners>bcurran3</owners>
+    <title>PlexPy (Portable)</title>
+    <authors>JohnyWong16</authors>
+    <projectUrl>https://forums.plex.tv/discussion/169591/plexpy-another-plex-monitoring-program</projectUrl>
+    <iconUrl>https://pbs.twimg.com/profile_images/644980756117327874/kUszL3FD_400x400.png</iconUrl>
+    <licenseUrl>https://github.com/JonnyWong16/plexpy/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/JonnyWong16/plexpy</projectSourceUrl>
+    <docsUrl>https://github.com/JonnyWong16/plexpy/wiki/Installation</docsUrl>
+    <mailingListUrl>https://forums.plex.tv/discussion/169591/plexpy-another-plex-monitoring-program</mailingListUrl>
+    <bugTrackerUrl>https://github.com/JonnyWong16/plexpy/issues</bugTrackerUrl>
+    <tags>plexpy plex python portable</tags>
+    <summary>PlexPy - Another Plex Monitoring Program</summary>
+    <description>
+![Screenshot of PlexPy](https://15254b2dcaab7f5478ab-24461f391e20b7336331d5789078af53.ssl.cf1.rackcdn.com/plex.vanillacommunity.com/editor/rm/oa3j2p3bqmg7.png)	
+
+A python based web application for monitoring, analytics and notifications for Plex Media Server.
+
+This project is based on code from Headphones and PlexWatchWeb.
+
+###Features
+* Responsive web design viewable on desktop, tablet and mobile web browsers.
+* Themed to complement Plex/Web.
+* Easy configuration setup (no separate web server required).
+* Monitor current Plex Media Server activity.
+* Fully customizable notifications for stream activity and recently added media.
+* Top statistics on home page with configurable duration and measurement metric.
+* Global watching history with search/filtering and dynamic column sorting.
+* Full user list with general information and comparison stats.
+* Individual user information including devices IP addresses.
+* Complete library statistics and media file information.
+* Rich analytics presented using Highcharts graphing.
+* Beautiful content information pages.
+* Full sync list data on all users syncing items from your library.
+* And many more!!
+
+####PACKAGING NOTE: After install, you need to edit permissions for \ProgramData\chocolatey\lib\plexpy\tools\plexpy-master so that the program can create/write data.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+       <dependency id="python2" version="" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

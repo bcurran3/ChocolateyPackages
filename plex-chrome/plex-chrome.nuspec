@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>plex-chrome</id>
+    <version>2.10.7</version>
+    <title>Plex for Chrome</title>
+    <authors>Plex, Inc.</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/plex/fpniocchabmgenibceglhnfeimmdhdfm</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/baprWvhSMAT1qRpKT7rhfzVkE9elty0UupCgLJQ7runWVIb4YzisAB2_OXc9waVW441WNW75Tbw=s50-h50-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<mailingListUrl>https://support.plex.tv/hc/en-us</mailingListUrl>
+    <summary>Plex Chrome extension</summary>	
+    <description>
+###Easily organize and share your personal media and online content on all of your devices, no matter where you are.
+
+Plex organizes all of your personal media, wherever you keep it, so you can enjoy it on any device. With Plex, you can easily stream your videos, music, photos and home movies to your laptop or mobile device from your home computer running Plex Media Server (available for free at https://plex.tv).
+
+####Note: Installed Chrome apps do not support the Chromecast. Please use https://plex.tv/web for casting.
+
+* Plex makes your media beautiful with rich descriptions, artwork, and other related information.
+* Plex automatically converts your media on-the-fly to play on any device.
+* Easily share your media with friends and family.
+* Sync media to your phone or tablet for offline viewing (Plex Pass).
+* Sync media to your favorite cloud provider including Google Drive, Dropbox, and Box, so you can stream media even when your server is offline (Plex Pass).
+* Access a wide range of online channels such as TED, Revision3, and TWiT.
+* Queue online videos from sites like Vimeo and YouTube and watch them later on any device.
+
+With Plex, your media universe is constantly expanding. Getting up and running is easy, so start now!
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <tags>plex chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
