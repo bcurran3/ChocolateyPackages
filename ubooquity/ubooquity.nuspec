@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ubooquity</id>
+    <title>Ubooquity</title>
+    <version>1.10.1.20161008</version>
+    <authors>Tom</authors>
+    <owners>bcurran3</owners>
+    <summary>Home server for comics and ebooks</summary>
+    <description>
+![Screenshot of Ubooquity Server](http://vaemendis.net/ubooquity/data/images/screenshots/main_window.jpg)
+
+Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.
+
+Main features
+Simple graphical interface to configure your server in a few minutes
+
+Web administration page available if you prefer to do everything through your browser
+
+User management with secured access, to decide who can see what
+
+Online comic reader to read your comics without downloading huge files
+
+Compatible with Calibre metadata, for better ebooks collection management
+
+Can be installed on any OS supporting Java (Windows, Linux, Mac OS...) and on a wide range of hardware (desktop computer, server, NAS...)
+
+Supports many types of files, with a preference for epub, cbz, cbr and PDF files    </description>
+    <projectUrl>http://vaemendis.net/ubooquity/</projectUrl>
+    <tags>ubooquity comic comicbook ebook server comicrack java</tags>
+    <copyright>Vae Mendis Software</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://vaemendis.net/ubooquity/wiki/lib/tpl/dokuwiki/images/logo.png</iconUrl>
+    <docsUrl>http://vaemendis.net/ubooquity/static14/help</docsUrl>
+    <mailingListUrl>http://ubooquity.userecho.com/</mailingListUrl>
+    <licenseUrl>http://vaemendis.net/ubooquity/static12/license</licenseUrl>
+    <dependencies>
+      <dependency id="javaruntime" version="" />
+    </dependencies>
+    <releaseNotes>checksums added</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
