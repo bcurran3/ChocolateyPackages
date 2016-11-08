@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>game-key-revealer.portable</id>
+    <title>Game Key Revealer (Portable)</title>
+    <version>1.6.32.20161009</version>
+    <authors>Mustafa Buğra AKTAŞ</authors>
+    <owners>bcurran3</owners>
+    <summary>Recover Game Keys</summary>
+    <description>
+![alt text](https://sites.google.com/site/cakirbey/_/rsrc/1267560319771/ssgkr-medium-init-.jpg)
+
+Game Key Revealer retrieves the CD-Key and Serial for installed games on computer. If you lost legal CD-Keys or Serials of your purchased games, you can find them with help of Game Key Revealer.
+
+####Features:
+- Recover game product keys
+- CD Key Changer
+   * Battlefield 2
+   * Battlefield 2: Special Forces
+   * Battlefield 2142
+   * Command and Conquer 3: Tiberium Wars
+   * Command and Conquer: Red Alert 3
+   * Call of Duty 2
+   * Call of Duty 4: Modern Warfare
+   * Call of Duty: World at War
+   * Counter-Strike
+   * Counter-Strike 1.5-1.6
+   * Crysis
+   * Dead Space
+   * Half-Life
+   * Half-Life 2 (DVD Edition)
+   * Medieval II: Total War
+   * Mount and Blade: Warband
+   * Mount and Blade: With Fire and Sword
+   * Need for Speed Shift
+   * Quake 4
+   * Unreal Tournament 2004
+- Refresh Rate Overriding
+- and
+    </description>
+    <projectUrl>https://sites.google.com/site/cakirbey/gamekeyrevealer</projectUrl>
+    <tags>game key revealer serial util utility portable</tags>
+    <copyright>Copyright © 2008-2014 Mustafa Buğra AKTAŞ </copyright>
+    <licenseUrl>https://sites.google.com/site/cakirbey/gamekeyrevealer</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://sites.google.com/site/cakirbey/_/rsrc/1267560321528/game3Big-custom-size-350-260.jpg</iconUrl>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

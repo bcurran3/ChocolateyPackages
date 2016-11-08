@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>google-play-music-manager</id>
+    <version>1.3.31.5</version>
+    <owners>bcurran3</owners>
+    <title>Google Play Music Manager (Install)</title>
+    <authors>Google Inc.</authors>
+    <projectUrl>https://play.google.com/intl/en-US_us/about/music/unlock/</projectUrl>
+    <iconUrl>http://icons.veryicon.com/256/Internet%20%26%20Web/Google%20Play/Google%20Play%20Music.png</iconUrl>
+    <copyright>Copyright 2007-2010 Google Inc.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.google.com/googleplay/answer/1075570?hl=en</docsUrl>
+    <mailingListUrl>https://productforums.google.com/forum/#!forum/play</mailingListUrl>
+    <tags>google play music manager admin</tags>
+    <summary>Program to upload your music to Google Play.</summary>
+    <description>
+![Screenshot of Google Play Music Manager](https://3.bp.blogspot.com/-Zzssu37FYZk/UafIFsDKqpI/AAAAAAAAi4w/pWZTyJKxJpc/s1600/Google+Play+select+files.png)
+	
+It only takes a few minutes to get started with uploading your music collection to Google Play.
+
+Keep up to 50,000 songs in Google Play for free.
+
+Add your collection from iTunes, Windows Media Player, or folders.
+
+Listen on the web or your mobile devices without the hassle of wires or syncing.	
+	</description>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>	
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
