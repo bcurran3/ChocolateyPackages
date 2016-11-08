@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>setpoint</id>
+    <title>Logitech SetPoint (Install)</title>
+    <version>6.67.83.20161009</version>
+    <authors>Logitech</authors>
+    <owners>bcurran3</owners>
+    <summary>SetPoint lets you customize your mouse, keyboard, touchpad and number pad settings in Windows.</summary>
+    <description>
+![Screenshot of Logitech SetPoint](https://secure.logitech.com/assets/33024/9/m570-image.jpg)
+	
+SetPoint lets you customize your mouse buttons, keyboard F-keys and hot-keys, control tracking speed, and configure other device-specific settings. It can also notify you of your device's battery status, and whether Caps Lock and Num Lock are on.
+#####Full Installer – Full-sized download, contains the files for all supported devices. Lets you install offline.
+    </description>
+    <projectUrl>http://support.logitech.com/en_us/software/setpoint</projectUrl>
+    <docsUrl>http://support.logitech.com/en_us/article/44525?product=a0qi00000069vBvAAI</docsUrl>
+    <mailingListUrl>http://support.logitech.com/en_us/software/setpoint#</mailingListUrl>
+    <tags>logitech setpoint mouse utility util notsilent admin</tags>
+    <copyright>© 1987 - 2015 Logitech. All rights reserved.</copyright>
+    <licenseUrl>http://www.logitech.com/en-us/footer/terms-of-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://secure.logitech.com/assets/46515/setpoint-deviceid.png</iconUrl>
+    <releaseNotes>added checksums and screenshot</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

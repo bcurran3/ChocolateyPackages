@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>streambaby</id>
+    <title>streambaby (Install)</title>
+    <version>0.53</version>
+    <authors>Kevin Moye</authors>
+    <owners>bcurran3</owners>
+    <summary>A TiVo HME application for streaming videos</summary>
+    <description>
+![Screenshot of streambaby on TiVo menu] (https://a.fsdn.com/con/app/proj/streambaby/screenshots/streambaby.gif)
+![Screenshot of streambaby] (https://a.fsdn.com/con/app/proj/streambaby/screenshots/Selection_screen.gif)
+
+NOTE: This is a revival of the original streambaby project on Google Code which no longer allows uploads to downloads section and did not have any updates for a few years.
+
+* Random access streaming of MP4 and MPG video files. Able to seek to anywhere in the video. Also removes need for qt-faststart. 
+* Ability to FF/RWD to points in the video that have not been buffered yet. When outside of the buffer, a "preview" of the movie (low-quality static images) will appear, and when play is pressed the video stream will be repositioned to start streaming at that point (ala Netflix/TiVo) 
+* Ability to transcode and stream video that is not inherently TiVo compatible. Supports most files that TiVo and/or ffmpeg can handle. Preview mode and random-positioning work with most transcoded files. 
+Remembers your position in the video when you stop watching and automatically starts at that position next time you watch. Works even when exiting playing via the "TiVo" button.
+
+PACKAGER NOTES: READ the documentation and edit your streambaby.ini file to get started. You have to run as admin for streambaby to download additional support files.
+Version 0.53 (Aug 7th, 2016)
+    </description>
+    <projectUrl>https://sourceforge.net/projects/streambaby/</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/p/streambaby/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/p/streambaby/wiki/Home/</docsUrl>	
+    <mailingListUrl>https://sourceforge.net/p/streambaby/discussion/general/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/streambaby/tickets/?source=navbar</bugTrackerUrl>
+    <tags>streambaby TiVo tivo HME stream streaming video server java admin</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+       <dependency id="jre8" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

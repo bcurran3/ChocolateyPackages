@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>snort</id>
+    <version>2.9.8.3</version>
+    <owners>bucrran3</owners>
+    <title>Snort (Install)</title>
+    <authors>By Martin Roesch and The Snort Team</authors>
+    <projectUrl>https://www.snort.org/</projectUrl>
+    <iconUrl>https://www.snort.org/assets/Snortpig_professor2.png</iconUrl>
+    <copyright>Copyright (C) 2014-2015 Cisco and/or its affiliates. All rights reserved. Copyright (C) 1998-2013 Sourcefire, Inc., et al.</copyright>
+    <licenseUrl>https://www.snort.org/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.snort.org/downloads</projectSourceUrl>
+    <docsUrl>https://www.snort.org/documents</docsUrl>
+    <mailingListUrl>https://www.snort.org/community</mailingListUrl>
+    <bugTrackerUrl>https://www.snort.org/downloads</bugTrackerUrl>
+    <tags>snort network intrusion security utility packet sniffer</tags>
+    <summary>Snort is an open source network intrusion prevention system.</summary>
+    <description>
+####What is Snort?
+
+Snort is an open source network intrusion prevention system, capable of performing real-time traffic analysis and packet logging on IP networks. It can perform protocol analysis, content searching/matching, and can be used to detect a variety of attacks and probes, such as buffer overflows, stealth port scans, CGI attacks, SMB probes, OS fingerprinting attempts, and much more.
+
+####What can I do with Snort?
+
+Snort has three primary uses: It can be used as a straight packet sniffer like tcpdump, a packet logger (useful for network traffic debugging, etc), or as a full blown network intrusion prevention system.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+      <dependency id="winpcap" version="4.1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
