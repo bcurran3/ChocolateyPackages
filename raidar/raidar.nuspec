@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>raidar</id>
+    <version>6.2</version>
+    <owners>bcurran3</owners>
+    <title>RAIDar (Portable)</title>
+    <authors>NETGEAR</authors>
+    <projectUrl>http://kb.netgear.com/app/answers/detail/a_id/20684</projectUrl>
+    <iconUrl>http://kb.netgear.com/euf/assets/ui2016/images/netgear-logo.png</iconUrl>
+    <copyright>Copyright 1996-2015 NETGEAR</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://kb.netgear.com/app/answers/detail/a_id/22765/~/basic-setup-with-raidar</docsUrl>
+    <bugTrackerUrl>http://kb.netgear.com/app/answers/detail/a_id/31288</bugTrackerUrl>
+    <tags>netgear nas raidar admin</tags>
+    <summary>RAIDar is used to discover NETGEAR Storage on your local network.</summary>
+    <description>
+![Screenshot of NETGEAR RAIDar] (http://www.downloads.netgear.com/files/answer_media/images/raidar/raidar6.png)
+
+RAIDar is used to discover NETGEAR Storage devices on your local network.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
