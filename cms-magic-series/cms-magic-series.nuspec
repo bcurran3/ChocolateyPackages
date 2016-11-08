@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>cms-magic-series</id>
+    <version>2.0.1.66</version>
+    <owners>bcurran3</owners>
+    <title>CMS (Central Management System) for MAGIC Series DVRs (Install)</title>
+    <authors>Unknown/Unbranded</authors>
+    <projectUrl>http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/MANUAL/CMS_ENG_1050_01.pdf</docsUrl>
+    <tags>cms central management system cctv magic dvr admin</tags>
+    <summary>CMS is a remote viewing program for MAGIC Series DVRs.</summary>
+    <description>
+The Windows Central Management Software for MAGIC Series DVRs allows users to connect to and view security cameras from multiple DVR locations from a central client application. The software lets the user configure groups of connections, then picks and choose which cameras should be displayed.
+
+NOTE: This has been tested with TVST (HD-TVI) and XVST (HD-SDI) MAGIC Series DVRs. It probably will work with UVST (EX-SDI) MAGIC Series DVRs as well.
+	</description>
+    <releaseNotes>There are many OEM versions of this program. This one is probably specific to http://unixcctv.com/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>arq</id>
+    <version>5.1.45</version>
+    <owners>bcurran3</owners>
+    <title>Arq (Trial) (Install)</title>
+    <authors>Haystack Software LLC</authors>
+    <projectUrl>https://www.arqbackup.com/</projectUrl>
+    <iconUrl>https://www.arqbackup.com/assets/images/arq256.png</iconUrl>
+    <copyright>Copyright @ 2009-2016 Haystack Software LLC </copyright>
+    <licenseUrl>https://www.arqbackup.com/documentation/pages/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.arqbackup.com/documentation/</docsUrl>
+    <mailingListUrl>https://www.arqbackup.com/</mailingListUrl>
+    <bugTrackerUrl>https://www.arqbackup.com/download/arq5win_release_notes.html</bugTrackerUrl>
+    <tags>arq backup cloud amazon google dropbox onedrive sftp nas trial admin</tags>
+    <summary>Back up your files automatically to the cloud</summary>
+    <description>
+![Screenshot of Arq](https://www.arqbackup.com/screenshots/1backup_anything.png)
+
+##Product Features
+Everything you wanted in a backup app
+
+###True privacy and control
+Arq encrypts your file data before it leaves your computer, so your files are never sent on the network in the clear. You choose the encryption password. We have no access to your files. All transmission over the network is through SSL/TLS.
+
+###Totally transparent
+Your backups are stored in an open, documented format. We've published an open-source command-line utility so you can see for yourself your backups and directly restore your files from cloud storage. Other users have also contributed Arq-compatible utilities like arqinator.
+
+###Awesome Support
+We're obsessive about getting solutions to customers' problems, so we strive to fix issues in Arq quickly. We often deliver patches within days or even hours of first report of a software problem. Email us at support@arqbackup.com and we'll get back to you promptly.
+
+###Native apps
+Both Arq for Mac and Arq for Windows are native apps built for maximum device fidelity and maximum performance. No Java means no Java-related upgrade headaches or performance problems.
+
+###Efficient
+Arq does all it can to minimize uploads: Compression reduces upload sizes. Client-side de-duplication ensures Arq never uploads the same content twice. Rsync-style "rolling checksum" ensures only the changed parts of files are uploaded.
+
+###Cloud Choice
+You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Cloud Storage, Google Drive, Dropbox, or OneDrive accounts, or your SFTP server or NAS. Use that extra space in your existing cloud account to store your encrypted backups.
+
+###Unlimited in every way
+* Arq backs up everything or just the files you choose.
+* Arq doesn't skip videos or ignore certain file types
+* Arq backs up files of any size -- 4GB, 40GB, it doesn't matter
+* Arq backs up your external drives
+* Arq backs up your network drives
+* Arq doesn't delete backups of your external drives just because you haven't plugged them in lately
+* Arq doesn't forcibly delete old backup records (unless you tell it to).
+* Arq restores your files onto any computer.
+
+####System Requirements - Windows: Windows 7 or later, with .NET 4.5.1 or later
+
+####30-day free trial. $49.99 to purchase v5 or $79.98 for lifetime upgrades.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
