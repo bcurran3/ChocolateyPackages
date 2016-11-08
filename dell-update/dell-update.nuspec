@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dell-update</id>
+    <version>1.9.5.0</version>
+    <owners>bcurran3</owners>
+    <title>Dell Update (Install)</title>
+    <authors>Dell Inc.</authors>
+    <projectUrl>https://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=75FF5</projectUrl>
+    <iconUrl>https://si.cdn.dell.com/images/global/brand/ui/logo-wt-bl.png</iconUrl>
+    <copyright>(c) 2005-2015 Dell Inc.</copyright>
+    <licenseUrl>https://software.dell.com/legal/license-agreements.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>dell update admin</tags>
+    <summary>This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</summary>
+    <description>This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</description>
+    <releaseNotes>Dell's webpage shows v1.9.4.0, A10 but filename and app show v1.9.5.0</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

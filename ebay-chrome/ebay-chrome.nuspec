@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ebay-chrome</id>
+    <version>4.2.24</version>
+    <title>eBay for Chrome</title>
+    <authors>ebay.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/ebay-for-chrome/khhckppjhonfmcpegdjdibmngahahhck</projectUrl>
+    <iconUrl>https://lh6.googleusercontent.com/RKI_xy6H8qT9-DI387b04UKs7pweljceFQkaZ7g9FSNuO8fnvuP8mpFD1AnuBiS9sZg0adY5wA=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###See quick updates on all your activity while you browse the web with the official eBay app for Chrome.
+
+Keep an eye on all your eBay activity wherever you go on the web. Install the official eBay extension for Google Chrome. It’s free and helps you keep track of what you’re shopping for and selling. 
+
+You can even pick which notifications you receive from us to stay on top of your eBay activity.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>ebay chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

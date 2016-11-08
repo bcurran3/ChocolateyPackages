@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>expandrive</id>
+    <version>5.4.1</version>
+    <owners>bcurran3</owners>
+    <title>ExpanDrive (Trial) (Install)</title>
+    <authors>ExpanDrive, Inc.</authors>
+    <projectUrl>http://www.expandrive.com/apps/expandrive/</projectUrl>
+    <iconUrl>https://www.expandrive.com/wp-content/uploads/2015/05/expandrive_logo_2@2x.png</iconUrl>
+    <copyright>©2004-2016 ExpanDrive, Inc.</copyright>
+    <licenseUrl>http://www.expandrive.com/license-terms/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.expandrive.com/docs/</docsUrl>
+    <bugTrackerUrl>http://updates.expandrive.com/release_notes/expandrive_win</bugTrackerUrl>
+    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav trial admin</tags>
+    <summary>ExpanDrive Version 5 delivers super-fast background saves and transfers, and offers more cloud storage provider options than ever before.</summary>
+    <description>
+![Screenshot of ExpanDrive](http://www.expandrive.com/wp-content/uploads/2013/03/Screen-Shot-2013-03-19-at-12.27.26-PM.png)
+
+##ExpanDrive Version 5 delivers super-fast background saves and transfers, and offers more cloud storage provider options than ever before.
+
+###Supports every Cloud
+ExpanDrive creates a virtual USB drive that connects to all major cloud storage providers such as Dropbox, Google Drive, Amazon Cloud Drive, Box, OneDrive, Openstack Swift, Amazon S3 or your own SFTP, FTP or WebDAV server.
+
+###Super-fast instant uploads
+ExpanDrive v5 changes the game again by moving transfers into the background – just like popular sync apps do [think: Dropbox/Google Drive]. This lets you keep working and stop waiting for transfers to complete. ExpanDrive v5 quickly uploads your files in the background. We’ve built a multi-threaded connection engine that makes our latest version faster and much more responsive.
+
+###Cloud storage in every application
+ExpanDrive v5 acts just like a USB drive plugged into your computer. Open, edit, and save files to remote computers from within your favorite programs—even when they are on a server half a world away. Enhance every single application on your computer by transparently connecting it to remote data.
+
+###Finder and Explorer is your user interface
+Securely access any remote file server directly from Finder and Explorer, or even the terminal. There’s no need to open a separate transfer client just for file transfer. ExpanDrive v5 extends the way all applications can access data.
+
+####System Requirements:
+* Windows XP SP3 or newer, tested through Windows 8.1
+* Supports 32-bit and 64-bit installations
+* Supports Windows Server editions, including terminal server
+* Does not support Windows RT
+
+####ExpanDrive runs unlicensed and fully featured for 7 days giving you a chance to try everything out. Once the trial period you’ll need to buy a license or you will be limited to 20 minutes of use.
+####Single User license is $49.95.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
