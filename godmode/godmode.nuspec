@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>godmode</id>
+    <version>1.0</version>
+    <owners>bcurran3</owners>
+    <title>GodMode</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com</projectUrl>
+    <iconUrl>http://media.bestofmicro.com/H/U/235218/original/godmode-icon-Capture.PNG</iconUrl>
+    <copyright>Microsoft</copyright>
+    <docsUrl>https://en.wikipedia.org/wiki/Windows_Master_Control_Panel_shortcut</docsUrl>
+    <tags>microsoft windows godmode god mode control panel admin</tags>
+    <summary>A short-cut to access various control settings in Windows Vista and later operating systems.</summary>
+    <description>
+The Windows Master Control Panel shortcut, labeled All Tasks and also called Windows God Mode by bloggers and All Tasks folder by at least one Microsoft developer,[1] is a short-cut to access various control settings in Windows Vista and later operating systems. By creating a folder with a certain name, users have access to all of the operating system's control panels from within a single folder. The hack was published outside of Microsoft documentation in 2007[2] and gained popularity when the name God Mode was used by bloggers. Variations of the same method can access different settings, and have also been called “God Mode” folders.
+
+####There is no software to install, this simply creates the GodMode icon on the current users's desktop.
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

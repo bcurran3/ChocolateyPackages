@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>google-voice-chrome</id>
+    <version>2.4.4</version>
+    <title>Google Voice (by Google) for Chrome</title>
+    <authors>Google</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/google-voice-by-google/kcnhkahnjcbndmmehfkdnkjomaanaooo</projectUrl>
+    <iconUrl>https://lh5.googleusercontent.com/_pgrttDIsxp32wu5xeBCPRUuDs-jH6kOYThblRrOPGAlxRVgAP6Pb6ds_tzt0CVyeCXNfTQb--M=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>###Make calls, send SMS, preview Inbox, and get notified of new messages. (US only)
+New:
+* Bug fixes.
+
+Extension Features:
+* Adds a button to the toolbar, which displays the number of unread messages in your Google Voice inbox.
+* Audible alert on new messages (can turn off in extension options).
+* Gives you quick access to your most recent messages with transcripts and voicemail playback.
+* Lets you initiate calls and send free text messages by just typing any number or contact name.
+* Makes phone numbers on websites callable via Google Voice by just clicking on them.
+* If a phone number doesn't turn into a link on any website (ex: Google Calendar), you can select the text with your mouse and the click to call popup will automatically display (note: might not work with all numbers).
+
+Info:
+* If you don't like the extension turning numbers into click to call links then you can turn it off in the extension options.
+* SMS is only available for accounts with a Google Number. SMS is not available in voicemail only accounts.
+
+Known issues:
+* Incompatible with the Skype extension. If the Skype extension is installed then the Voice extension will not turn numbers into call links.
+* Sometimes your forwarding phone list will be empty. If this happens make sure you are logged in to http://www.google.com/voice and then wait ~30 minutes. The problem should fix itselft automatically within 30 minutes and work from then on.
+
+Warning explained:
+When installing the extension it says "This extension will have access to all browsing history and private data on all websites" This is the default warning for any extension that needs content script access to all websites. This access is needed for detecting phone 	
+
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.</description>
+    <summary />
+    <copyright />
+    <tags>google voice chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>go-contact-sync-mod</id>
+    <title>GO Contact Sync Mod</title>
+    <version>3.10.9</version>
+    <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
+    <owners>bcurran3</owners>
+    <summary>GO Contact Sync Mod is an open source tool to synchronize your Microsoft Outlook contacts with Google Mail</summary>
+    <description>
+![Screenshot of program interface](https://a.fsdn.com/con/app/proj/googlesyncmod/screenshots/GCSMScreenshot.PNG)
+
+####+++ NEWS +++
+The newest versions of Google APIs client Library for .NET dropped support for .NET 4.0. 
+Minimum requirement for GO Contact Sync Mod (starting with v3.10.0) is .NET 4.5 which is not working on Windows XP.
+
+GO Contact Sync Mod is an open source tool to synchronize your Microsoft Outlook contacts with Google Mail. With this tool you do not need to enter your contact details more than once, always have the latest version everywhere: in Outlook and in Google. Contact categories are supported, as well as contact photos to make your contacts look exactly the same. You can set up sync options to start up and synchronize automatically, so it is the perfect backup tool.
+
+This project adds various enhancements and bug fixes to the currently (presumably) dead project Go Contact Sync.
+
+Features and Benefits
+
+	* Synchronize your contacts between Microsoft Outlook and Google Mail.
+	* Contact Categories and Contact Photos
+	* Automatic Synchronization
+	* Backup your Outlook Contacts to the Cloud
+	* Software free-of-charge
+	* Synchronize your Exchange contacts as well as your contacts in a PST file
+	* Synchronize your contacts with Windows Phone 7 (WP7), iPhone and Android over the air through Google
+    </description>
+    <projectUrl>https://sourceforge.net/projects/googlesyncmod/</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/p/googlesyncmod/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>http://googlesyncmod.sourceforge.net/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/googlesyncmod/mailman/?source=navbar</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/googlesyncmod/bugs/</bugTrackerUrl>
+    <tags>GO Contact Sync Mod Outlook Gmail Google email e-mail synchronization admin</tags>
+    <licenseUrl>http://googlesyncmod.sourceforge.net/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://googlesyncmod.sourceforge.net/contacts-sync_3_48x48x32.png</iconUrl>
+    <dependencies>
+      <dependency id="dotnet4.5" version="4.5" />
+    </dependencies>
+    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.9.15/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
