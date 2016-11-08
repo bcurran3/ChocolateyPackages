@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>amazondrive</id>
+    <version>3.6.4.65</version>
+    <owners>bcurran3</owners>
+    <title>Amazon Drive (Install)</title>
+    <authors>Amazon.com</authors>
+    <projectUrl>https://www.amazon.com/clouddrive</projectUrl>
+    <iconUrl>https://images-na.ssl-images-amazon.com/images/G/01/digital/adrive/images/drive_logo.png</iconUrl>
+    <copyright>(C) 1996-2016 Amazon.com Inc.</copyright>
+    <licenseUrl>https://www.amazon.com/gp/help/customer/display.html/?nodeId=201376540</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>amazon amazondrive amazonclouddrive cloud drive dropbox googledrive onedrive admin</tags>
+    <summary>Unlimited Secure Storage from Amazon</summary>
+    <description>
+![Screenshot of Amazon Drive](https://images-na.ssl-images-amazon.com/images/I/31tbQUopH8L.jpg)
+
+##Unlimited Secure Storage from Amazon ($59.99 per year)
+* For photos, videos, music, documents, and more
+* Accessible via phone, tablet, or computer
+* Safe and private with Amazon security
+
+###You've got important stuff. We keep all of it secure.
+When you upload a file or photo to Amazon Drive, you’re saving a backup copy in Amazon's secure servers. Your content is safe and easy to get to, and we’ll never change or reduce the quality of your images.
+
+###Take Amazon Drive with you.
+Access your content from nearly any device. Free mobile apps for iOS and Android let you quickly view, organize, and share things when you need to, no matter where you are.
+
+###Install Amazon Drive on your computer.
+Quickly save files from your computer to Amazon Drive. You can upload folders, large files, and multiple items at once.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

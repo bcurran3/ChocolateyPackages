@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>amazon-assistant-chrome</id>
+    <version>10.1610.8.120</version>
+    <title>Amazon Assistant for Chrome</title>
+    <authors>amazon.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/amazon-assistant-for-chro/pbjikboenpfhbbejgkoklgkhjpfogcam</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/neNxhpzGU7AHTHD9kKrCgtdNbbNgMFaFSoKQGDFg20p-P-m9Asz_KyQPhxBcygEd4Emwj_yi=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>http://www.amazon.com/gp/BIT</licenseUrl>
+    <description>
+###Amazon's official browser extension. By installing you agree to the Conditions of Use at amazon.com/gp/BIT/TOU
+
+Amazon Assistant helps you make better decisions wherever you shop online by giving you access to: 
+* Deal of the Day: Never miss a deal. Assistant delivers the best deals every day.
+* Product Comparison: Keep an eye out for product and price comparisons that can save time and money.
+* Universal Wish List: Save products from any website with the Wish List tab.
+* Shortcuts: Save time. Assistant gives you shortcuts to popular Amazon destinations right in your browser.
+
+We offer localized support in all 9 locales, including US, Canada, France, Germany, Italy, UK, Spain, Japan, and China.
+
+By installing you are agreeing to the Conditions of Use located at www.amazon.com/gp/BIT/TOU.
+
+Learn more at www.amazon.com/gp/BIT.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>amazon assistant chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
