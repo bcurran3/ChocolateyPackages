@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>unifying</id>
+    <title>Logitech Unifying (Install)</title>
+    <version>2.50.25.20161009</version>
+    <authors>Logitech</authors>
+    <owners>bcurran3</owners>
+    <summary>Lets you add and remove devices that use a Unifying receiver</summary>
+    <description>
+![Screenshot of Logitech Unifying Software](https://secure.logitech.com/assets/36548/2/cdgeneric1.jpg)
+
+	Logitech Unifying software lets you manage your devices that use a Unifying receiver. You can add or remove devices using the software's wizard or use advanced mode. Advanced mode also displays the status of your paired devices, battery level and firmware version.
+	
+	OS: Windows 8, Windows 7, Windows Vista, Windows XP (or older), Windows 10
+    </description>
+    <projectUrl>http://support.logitech.com/en_us/software/unifying</projectUrl>
+    <docsUrl>http://support.logitech.com/en_us/software/unifying#</docsUrl>
+    <tags>logitech unifying software mouse util utility admin</tags>
+    <copyright>Copyright (C) 2014 Logitech</copyright>
+    <licenseUrl>http://www.logitech.com/en-us/footer/terms-of-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/6467b6ee7894eedd629c4cc22d4fdf85bfabfb05/icons/unifying.png</iconUrl>
+    <releaseNotes>added checksum and screenshot</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

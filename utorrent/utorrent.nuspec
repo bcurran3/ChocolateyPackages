@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
+    <id>utorrent</id>
+    <title>uTorrent (Install)</title>
+    <version>3.4.9</version>
+    <authors>BitTorrent, Inc.</authors>
+    <owners>bcurran3</owners>
+    <summary>A (very) tiny BitTorrent client.</summary>
+    <description>
+![Screenshot of uTorrent] (https://d1hzrv37chit31.cloudfront.net/monthly_2016_06/screenshot.jpg.e3ec4b2d08d1094a62284ec4c67dd799.jpg)	
+
+##The #1 torrent download client on desktops worldwide.
+
+###Why It's Awesome
+
+####Lightweight
+µTorrent is a little over 1 MB (smaller than a digital photo!). It installs ultra-fast and will never hog your valuable system resources.
+
+####Powerful
+Want total control? uTorrent offers advanced settings such as automation, scripting, remote management and more.
+
+####Fast
+Download your files as quickly and efficiently as possible without slowing down your other online activities.
+
+####Bundles
+Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download media directly from a variety of artists, bands, authors and filmmakers.
+
+
+####PACKAGING NOTES: This downloads the latest stable release and should work for upgrades, currently µTorrent Stable(3.4.8 build 42449) as of August 2, 2016.
+    </description>
+    <projectUrl>http://www.utorrent.com</projectUrl>
+    <docsUrl>http://help.utorrent.com/</docsUrl>
+    <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
+    <bugTrackerUrl>http://releasenotes.utorrent.com/</bugTrackerUrl>
+    <tags>utorrent bittorrent client admin</tags>
+    <copyright>© 2016 BitTorrent, Inc.</copyright>
+    <licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://gyre.wpengine.netdna-cdn.com/files/2012/10/UT-iOS-Icon-512.png</iconUrl>
+    <releaseNotes></releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

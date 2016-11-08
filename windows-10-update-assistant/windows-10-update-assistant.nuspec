@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>windows-10-update-assistant</id>
+    <version>1.4.9200.17354</version>
+    <owners>bcurran3</owners>
+    <title>Windows 10 Update Assistant (Portable)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
+    <iconUrl>https://assets.onestore.ms/cdnfiles/onestorerolling-1608-23000/shell/v3/images/logo/microsoft.png</iconUrl>
+    <copyright>© 2016 Microsoft</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.microsoft.com/en-us/help/12373/windows-update-faq</docsUrl>
+    <tags>microsoft windows 10 win10 anniversary update assistant 1607 admin</tags>
+    <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 Anniversary Update (version 1607)</summary>
+    <description>
+To help keep all Windows 10 systems secure and provide the latest features and improvements, the Windows 10 Update Assistant downloads and starts the setup for Windows 10 Anniversary Update (version 1607). The Windows 10 Update Assistant will be deployed to Windows 10 PCs that have not yet had the latest update installed. 
+
+You can check which version of Windows 10 your device is currently running to see whether you are eligible for the Windows 10 Anniversary update. To do this, click the Start button, then click Settings > System > About.
+If the About window shows that you have Version 10.0 (Build 10240) or Version 1511 (OS Build 10565), you are eligible to install the Windows 10 Anniversary update.
+If the About window shows that you have Version 1607 (OS Build 14393), you already have the Windows 10 Anniversary update.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

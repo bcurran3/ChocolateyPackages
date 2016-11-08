@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>take-command</id>
+    <version>20.0.17</version>
+    <owners>bcurran3</owners>
+    <title>Take Command (30-Day Trial) (Install)</title>
+    <authors>JP Software</authors>
+    <iconUrl>https://jpsoft.com/images/take-command.png</iconUrl>
+    <projectUrl>https://jpsoft.com/</projectUrl>
+    <copyright>Copyright © 2016 JP Software, All Rights Reserved</copyright>
+    <licenseUrl>https://jpsoft.com/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://jpsoft.com/help/index.htm?overview.htm</docsUrl>
+    <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
+    <bugTrackerUrl>https://jpsoft.com/forums/forums/announcements.17/</bugTrackerUrl>
+    <tags>jpsoftware jpsoft take command prompt cmd cli shell trial admin</tags>
+    <summary>Take Command is a comprehensive interactive GUI and command line environment</summary>
+    <description>
+![Screenshot of Take Command] (https://jpsoft.com/images/takecommand.jpg)
+
+###Take Command 20.0 build 17 Released 2016-09-05
+
+Take Command is a comprehensive interactive GUI and command line environment that makes using the Windows command prompt and creating batch files easy, fasterm and far more powerful. Take Command displays your command line applications in tabbed windows, with optional File Explorer-style integration for a visual look at your directories. Take Command includes hundreds of major enhancements to CMD commands such as COPY, DEL, DIR, and MOVE, and adds 170+ new commands, 640+ internal variables and functions, a batch file IDE / debugger, advanced command line editing and programmable tab completion, and thousands of other features.
+
+We're so convinced you'll find Take Command essential for all your command prompt windows that we offer a 90-day unconditional money-back guarantee.
+
+New copy $79.95 Upgrade $39.95
+
+###WINDOWS COMMAND LINE PROMPTS AND WINDOWS CONSOLES
+
+Are you looking for a replacement command shell that provides an enhanced Windows command line environment? Do you need an upgraded Windows command console with modern features? Are you frustrated with the limitations of CMD commands and batch files? Do you yearn for a more capable batch scripting language with an integrated batch file IDE and debugger? 
+
+Take Command is our flagship product. For 25 years, JP Software has been helping programmers, system administrators, technical support professionals, and advanced users save time and beat their Windows command prompt frustrations. Take Command offers a new approach to working with Windows command line applications, bringing users the power of the command line and the ease of use of the GUI. Take Command is a complete Windows console and CMD replacement that provides you with a vastly better command prompt UI, a batch programming IDE (with syntax coloring and a powerful debugger), and thousands of additional features not available at the CMD command line.
+
+NOTE: If anyone would like older versions packaged because they bought the software and haven't upgraded yet, just make a request and I'll be glad to do it.
+	</description>
+    <releaseNotes>Psuedo silent install. Completely automated but progress windows will appear.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
