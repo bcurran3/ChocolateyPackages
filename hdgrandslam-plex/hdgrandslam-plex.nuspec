@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hdgrandslam-plex</id>
+    <version>1.6</version>
+    <owners>bcurran3</owners>
+    <title>HDGrandSlam for Plex</title>
+    <authors>jumpmanjay</authors>
+    <projectUrl>https://forums.plex.tv/discussion/229258/rel-hdgrandslam-plex-channel-interface-for-hdhomerun-tuners-dvrs</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://github.com/jumpmanjay/HDGrandSlam.bundle/blob/master/LICENSE</licenseUrl>
+    <projectSourceUrl>https://github.com/jumpmanjay/HDGrandSlam.bundle</projectSourceUrl>
+    <docsUrl>https://forums.plex.tv/discussion/229258/rel-hdgrandslam-plex-channel-interface-for-hdhomerun-tuners-dvrs</docsUrl>
+    <bugTrackerUrl>https://github.com/jumpmanjay/HDGrandSlam.bundle/issues</bugTrackerUrl>
+    <tags>hdgrandslam hdhomerun plex</tags>
+    <summary>A Plex plug-in that interfaces with HDHomeRun tuners and DVRs</summary>
+    <description>
+A Plex plug-in that interfaces with HDHomeRun tuners and DVRs
+
+This Plex plug-in will let you stream live TV from your HDHomeRun Tuners and recorded programs from your HDHomeRun DVRs.
+
+Known Supported Clients:
+
+-Chrome
+
+-Windows UWP
+
+-Nexus 9
+
+-nVidia ShieldTV
+
+-Nexus Player (Nougat)
+
+-Nexus 6P (Nougat)
+
+Known Incompatible Clients:
+
+-Nexus 6P (Marshmallow)
+
+-Nexus 7 (2013)
+
+-Nexus Player (Marshmallow)
+
+Download this repo and install as a Plug-in.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="plexmediaserver" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>comicreader-plex</id>
+    <version>1.3.5</version>
+    <owners>bcurran3</owners>
+    <title>ComicReader for Plex</title>
+    <authors>Cory Parsons</authors>
+    <projectUrl>https://github.com/coryo/ComicReader.bundle</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/coryo/ComicReader.bundle</projectSourceUrl>
+    <docsUrl>https://github.com/coryo/ComicReader.bundle</docsUrl>
+    <bugTrackerUrl>https://github.com/coryo/ComicReader.bundle/releases</bugTrackerUrl>
+    <tags>comicreader plex ubooquity cbz cbr cb7 admin</tags>
+    <summary>Plex Media Server channel for comic archives.</summary>
+    <description>
+###A Plex Media Server channel.
+
+Browse and view locally stored CBZ, CBR, CB7 comic book archives. It currently acts like a file browser, starting at the directory specified in the channels preferences.
+
+Each user of the channel will have their reading status saved for each comic. Comics can be marked as read/unread and can be resumed from your previous position.
+
+###Format Support
+
+* .CBZ - the ideal format for the channel. Consider converting archives to zip, it's much easier to work with.
+* .CBR - requires unrar.
+* .CB7 - requires 7-Zip (windows). or p7zip (linux, osx).
+* .zip, .rar, and .7z should also work.
+
+###Windows
+
+* unrar
+* 7-Zip
+* set channel preferences paths:
+C:\Program Files (x86)\WinRAR\unrar.exe if you installed WinRAR, or C:\wherever\unrar.exe
+C:\Program Files (x86)\7-Zip\7z.exe if you installed 7-Zip.	
+
+###Plex Client Support
+
+working: OpenPHT, PMP, Plex Web, Android, iOS
+
+###Channel Preferences
+
+* Comics Path: path to the root directory of where comic archives are stored.
+* Unrar Executable Path: path to unrar binary. leave blank if unrar is in $PATH.
+* 7-Zip Executable Path: path to 7z binary. leave blank if 7z is in $PATH.
+* Items per page: default: 50 number of directories/comics to show per page.
+* Number of pages to include before resume page: default: 5 when going to the resume option on a comic, the channel will start the list at the last viewed page. This is the number of pages prior to that page to include so you can get a recap.
+* Show directories on top: Put the directories at the start of the list when file browsing. (Windows style)
+* Enable channel updater: default: enabled disable this if you don't want the channel to check for updates.
+* Read Indicator: default: blank string to add to the start of a file to indicate it is read.
+* Unread Indicator: default: * string to add to the start of a file to indicate it is unread.
+* In Progress Indicator: default: > string to add to the start of a file to indicate it is in progress.
+* Prevent client image caching: default: disabled In order to keep track of your position in a comic, the channel runs code when it serves a page to the client. If the client holds a cached copy it won't make a request to the server and we can't track what page you are on.
+Enable this option to get the client to download a new copy of the page every time it's viewed.
+If you don't have any issues with the resume features, you can leave this disabled to save bandwidth.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="plexmediaserver" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

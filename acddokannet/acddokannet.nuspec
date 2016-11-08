@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>acddokannet</id>
+    <version>1.6.2</version>
+    <owners>bcurran3</owners>
+    <title>ACD Dokan.NET (Install)</title>
+    <authors>Rambalac</authors>
+    <projectUrl>https://github.com/Rambalac/ACDDokanNet</projectUrl>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/Rambalac/ACDDokanNet/blob/master/licence.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Rambalac/ACDDokanNet/releases</projectSourceUrl>
+    <docsUrl>https://github.com/Rambalac/ACDDokanNet</docsUrl>
+    <bugTrackerUrl>https://github.com/Rambalac/ACDDokanNet/issues</bugTrackerUrl>
+    <tags>acddokannet amazon cloud drive dokan dokany admin</tags>
+    <summary>Dokan.NET based driver for Amazon Cloud Drive</summary>
+    <description>
+This is Dokan.NET based driver for Amazon Cloud Drive. In other words you can use Amazon Cloud Drive as real disk drive in Windows. Not just in Windows Explorer, but in any application.
+
+Starting from version 1.6.0 multiple clouds are supported, as example I added Microsoft OneDrive. As it's not ACD only I'm looking for better name. CloudHold?
+
+![Screenshot showing mounted ACD Dokan.NET cloud drive]	(https://github.com/Rambalac/ACDDokanNet/raw/master/images/Amazon%20Cloud%20Drive%20as%20real%20drive.png)
+
+####Amazon CloudDrive
+Login is done via default web browser, so application itself can not get your login and password, and if you already logged into Amazon Cloud Drive you don't need to enter anything, just click a button.
+
+####Info
+I spent a lot of time trying different cachings but without success. So I just added better UI and updated to Dokany 1.0.0.
+
+####Shell Extension
+![Screenshot of Explorer shell extention](https://github.com/Rambalac/ACDDokanNet/raw/master/images/Context%20Menu.png)
+
+Now you can get temp links in Windows Explorer for selected files or open temp link of one selected file in your app used for that file extension. Temp links will work for few days only, Amazon Cloud Drive does not provide any way to create permanent links to files.
+
+Also you can open folders in browser on Amazon Cloud Drive web site.
+
+####Pros
+
+Amazon Cloud Drive is presented as real drive working not only in Windows Explorer but in many other apps (with issues).
+Driver presents Amazon Cloud Drive as it is with folders and files. You will see the same content as on Amazon Cloud Drive web site.
+Driver does not create any special files on your Amazon Cloud Drive.
+Same Amazon Cloud Drive can be used on multiple PCs with this Driver or in Web simultaneously (with issues).
+
+####Issues
+
+Disk caching is done only for files with size less 20Mb. This can be changed, but be careful, Windows will try open all files you see in explorer. Big files are partially cached in memory and random access can be slow. Common video files are big and require random access to play. It's very unlikely you can play any video directly, but you can copy it to real drive first.
+Files cannot be opened for Read and Write if size is bigger than cached file size.
+Some applications can report some files cannot be opened. Still such files can be reopened later.
+Sometimes Explorer thumbnails get broken.
+There can be a conflict if you try to upload files with same name from different apps or web, only the first uploaded file will remain.
+There can be different problems if you try to mess with uploading files like rename or move.
+	</description>
+    <releaseNotes>changed dependency to newly approved dokany package</releaseNotes>
+    <dependencies>
+      <dependency id="dokany" version="1.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
