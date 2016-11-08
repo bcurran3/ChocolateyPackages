@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>tcc</id>
+    <version>13.0.3.20160416</version>
+    <title>[Deprecated] Total Command Console</title>
+    <authors>JP Software</authors>
+    <owners>alanstevens,bcurran3</owners>
+    <licenseUrl>http://jpsoft.com/license.html</licenseUrl>
+    <projectUrl>http://jpsoft.com/tccle_cmd_replacement.html</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+This package has been deprecated and replaced with tccle.
+</description>
+    <summary>TCC/LE is a replacement for the CMD command line (the default Windows command prompt).</summary>
+    <tags>tcc tccle</tags>
+    <dependencies>
+      <dependency id="tccle" version="14.0" />
+    </dependencies>
+  </metadata>
+</package>

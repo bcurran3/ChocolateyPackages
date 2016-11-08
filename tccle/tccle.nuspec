@@ -1,0 +1,48 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>tccle</id>
+    <version>14.0.0.920161009</version>
+    <title>Total Command Console/LE</title>
+    <authors>JP Software</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>http://jpsoft.com/license.html</licenseUrl>
+    <projectUrl>http://jpsoft.com/tccle_cmd_replacement.html</projectUrl>
+    <iconUrl>https://jpsoft.com/images/tcc-le.png</iconUrl>
+    <summary>TCC/LE Windows CMD Replacement Shell : Upgrade Your CMD Commands.</summary>
+    <docsUrl>https://jpsoft.com/help/tcc.htm</docsUrl>
+    <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
+    <copyright>Copyright © 2016, Rex Conn and JP Software Inc.</copyright>
+    <tags>tcc tccle cmd command prompt cli jpsoft</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of TCC LE] (https://jpsoft.com/images/screenshots/tccle.jpg)
+	
+TCC/LE is our free Windows command shell (formerly known as 4NT). TCC/LE is a replacement for the CMD command line (the default Windows command prompt). TCC/LE is a superset of CMD, with 111 internal commands (CMD has fewer than 40), 240 internal variables and functions, and hundreds of enhancements to existing CMD commands.
+
+TCC/LE works with your existing command line applications and batch files, but offers major improvements in command line and batch file capabilities, and adds thousands of new features to your command prompt windows.
+
+Benefits
+TCC/LE is a complete CMD replacement, and is compatible with your existing Windows command prompt and CMD batch files, while adding thousands of new features.
+The familiar environment means you are immediately more productive with your everyday tasks, and TCC/LE's consistent command syntax reduces your learning and development time.
+The comprehensive help speeds your development and reduces syntax errors.
+TCC/LE is available in English, French, German, Italian, Russian, and Spanish. (Online help is currently in English only.)
+
+Features
+The TCC/LE scripting language is a large superset of the default Windows CMD shell, with 111 commands, 140 functions and 97 internal variables.
+The scripting language includes a complete set of flow control structures including IF-Then-Else, DO and FOR loops, SWITCH, subroutines, etc.
+Almost all of the CMD commands (e.g. DIR, COPY, DEL, etc.) are substantially enhanced, with hundreds of additional options.
+TCC/LE includes multiple types of redirection, including redirecting and piping to STDERR, and TEE and Y pipe fittings.
+You can redefine your commands with aliases, and assign frequently used commands to a single keystroke.
+The enhanced command line editor provides command line and directory history, filename and directory completion, and advanced cut and paste options.
+The built-in text and binary file viewer includes bidirectional scrolling, advanced search, and print capabilities.
+Send keystrokes to any window (command prompt or GUI).
+Select or exclude files by date, time, size, and extended wildcards or regular expressions for extraordinary flexibility in file management.
+You can specify multiple filenames for most of the TCC/LE file processing commands (COPY, DEL, DIR, MOVE, etc.).
+Find and navigate to any directory on your system by entering only part of its name with extended directory searches.
+Create your own variables or commands with plugins, or choose from the many third-party plugin libraries available.
+PACKAGE NOTES: This should upgrade for all of v14. Install and Uninstall are pseudo-silent. Install pops up windows so fast you will probably not notice. Uninstall will pop up windows that take awhile but eventually go away. 
+    </description>
+    <releaseNotes>added checksums</releaseNotes>	
+  </metadata>
+</package>
