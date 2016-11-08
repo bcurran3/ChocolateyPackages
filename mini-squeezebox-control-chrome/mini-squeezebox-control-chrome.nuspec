@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mini-squeezebox-control-chrome</id>
+    <version>1.2</version>
+    <title>Mini Squeezebox Control for Chrome</title>
+    <authors>Ben Thomas</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/mini-squeezebox-control/emicaigjkpfbgljmoalhmmbheakjokhi?utm_source=chrome-app-launcher-info-dialog</projectUrl>
+    <iconUrl>https://lh4.googleusercontent.com/_fQ9LVgwOSnB5ywLeDTlXRvB2GOf5xY4Qe3zQt1ekmRpWx88iWJMP6ruyENlMfihq7Tv_JpnSQ=s26-h26-e365-rw</iconUrl>
+	<mailingListUrl>http://www.ben-thomas.org/2011/03/02/squeezebox-extension-for-google-chrome/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Mini Squeezebox Control Chrome extension.</summary>	
+    <description>
+###Adds a popup to your toolbar containing the mini SqueezeBox Server remote on the web interface (only tested with default gui).
+
+UPDATE: (version 1.2) Just some changes to comply with new chrome store updates.
+
+UPDATE: (version 1.1) Finally added a link to the full webpage. Sorry it took so long to get round to it!
+
+Mini Squeezebox Control is a Chrome extension to control the popular SqueezeBox music player.	
+
+I haven't created the interface for this, it's just the "mini" player available from the SqueezeBox Server web interface, packaged into an easily accessibly button on your toolbar!
+
+I made this mainly for myself, but thought I'd play around and upload my first extension to the web store while I was at it :) So go easy on me with any mistakes!
+
+I probably won't be able to change much (if anything!) with the interface, but if you have any problems getting it working, give me a shout and I'll see what I can do.
+
+There's also a simple options page if you don't run your Squeezebox Server on localhost, or if you use a non-standard port.
+
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <tags>squeezebox chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

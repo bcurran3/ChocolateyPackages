@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mfsr</id>
+    <title>MFS Reformatter (Portable)</title>
+    <version>1.0.0.2</version>
+    <authors>Greg J. Gieseke</authors>
+    <owners>bcurran3</owners>
+    <summary>test</summary>
+    <description>
+###**WARNING**
+
+1. This software is provided "as is" with absolutely no warranty of any kind.
+
+2. It is copyrighted and may NOT be used commercially.
+
+3. Opening your TiVo will void the manufacturer's warranty.
+
+4. While every effort has been made to prevent data loss, the ultimate responsibility is yours.
+
+###OVERVIEW:
+
+This is a Windows program designed to reformat large (4TB - 6TB) Roamio drives. I call it a reformatter because it depends on some variables from the original auto-format process even though it throws most of them out the window. It should run on XPSP3, but I have only tested it on Windows 7 and 8.1 so far.
+
+Edit: Support for Bolts and drives up to 8TB has been added. See post #2 for the latest version.
+
+###THE BASICS:
+
+Your Roamio must running 20.4.6 or later. Earlier versions go into an endless boot loop trying to format anything over 3TB.
+
+1. Put the drive in your Roamio and power it on. It will take about four minutes to auto-format the drive. When it gets to the first Guided Setup screen, power it off. The resulting drive will only use a fraction of the total capacity, but we will fix that in the next steps.
+
+2. Download mfsr and unzip it to somewhere on your computer.
+
+3. Connect the drive to your computer. USB 2.0 adapters will work, but are much slower than USB 3.0 or a SATA direct connection.
+
+4. Run mfsr with an account that's a member of the Administrators group or right-click it and choose Run as Administrator. Follow the instructions from there to reformat the drive to use its full capacity.
+
+5. Put the drive back in the TiVo and enjoy.
+
+###NOTES:
+
+If you run this program on an existing drive you will lose all of your settings and recordings. 
+
+It aligns the MFS file (application) and inode "zones" correctly for Advanced Format (4K) drives. That should improve performance and reduce wear and tear on the drive. This is something that I don't think has ever been addressed before.
+
+It works on 3TB drives as well. It will not run on 2TB or smaller drives. If there's enough interest in creating smaller drives that are fully AF aligned that can be addressed later.
+
+It only works on Roamios. If there is enough interest in a version for Premieres that can also be addressed in a later version.
+
+SPECIAL THANKS GO TO...
+
+jmbach, telemark, nooneuknow, and the original pioneers of MFS like Spike and comer.
+
+###FINAL NOTE:
+
+It took over 400 hours of development time, a new WD 6TB Red drive, and a new copy of Visual Studio 2013 Pro to get this far. If you save a few hundred dollars by using this program instead of buying a prepared drive, PLEASE donate to the cause.
+
+PACKAGING NOTE: There are newer versions out but they require a login to access and download. :( You can get to them via the Software Site/projectUrl.
+2016-02-21: Added version 1.0.0.3. It fixes a bug that ONLY affects Bolt drives over 4TB.
+2016-04-29: Version 1.0.0.4 works on 8TB drives.
+)
+    </description>
+    <projectUrl>http://tivocommunity.com/tivo-vb/showthread.php?t=528428</projectUrl>
+    <docsUrl>http://www.rosswalker.co.uk/tivo_upgrade/</docsUrl>
+    <tags>mfs reformatter tivo</tags>
+    <copyright>Copyright (C) Greg J. Gieseke</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mightytext-chrome</id>
+    <version>19.6</version>
+    <title>MightyText for Chrome</title>
+    <authors>MightyText</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/mightytext-sms-from-pc-te/dkfhfaphfkopdgpbfkebjfcblcafcmpi</projectUrl>
+    <iconUrl>https://lh4.googleusercontent.com/AMN5GKiaK5seLYspNTjcHndWMrhTBsAmm_HD-5_H2s_xc4VJPedKL0i8c_zC0p1AISKjIZYB=s26-h26-e365-rw</iconUrl>
+    <licenseUrl>https://mightytext.net/tos</licenseUrl>	
+	<mailingListUrl>http://mightytext.net/updates/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>MightyText - SMS from PC and Text from Computer</summary>	
+    <description>
+###SMS from PC or Mac using your Android #. Sync Text Messages, Calls, Notifications, Photos, Battery Status
+
+* Send and Receive SMS Text Messages on your PC or Mac
+* Uses your CURRENT Android Phone Number
+* 100% Free
+* Get started in less than 60 seconds
+* Sync your phone's photos and videos instantly to MightyText
+* See your Android app notifications on your Computer (from any app - not just your sms app)
+* Sync your phone's MMS Picture Messages to your computer
+* Get low battery alerts on your computer (when your phone has low battery)
+
+Step #1:  INSTALL ANDROID APP on your phone: https://market.android.com/details?id=com.texty.sms
+
+
+Note -  MightyText Chrome extension will work well only AFTER successfully installing the MightyText Android App on your phone.  You can get the MightyText Android App here: 
+
+https://play.google.com/store/apps/details?id=com.texty.sms
+
+Send and receive SMS text messages and MMS from Chrome using your current Android™ phone and number.
+
+You can still send/receive texts on your phone as you normally would.
+
+More features:
+
+* Get SMS Notifications on computer immediately when SMS hits phone
+* Missed call alert,call logs and SMS Popups
+* SMS Backup, MMS Backup
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <tags>mightytext sms text chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

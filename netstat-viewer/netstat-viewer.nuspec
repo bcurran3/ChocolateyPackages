@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>netstat-viewer</id>
+    <title>netstat-viewer (Portable)</title>
+    <version>1.0.20161009</version>
+    <authors>Mischel Internet Security</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>http://www.misec.net/freeware/</projectUrl>
+    <summary>Netstat Viewer is a handy GUI replacement for the command line application "netstat".</summary>
+    <description>
+![alt text](http://www.misec.net/i/netstatviewer.png)
+Netstat Viewer represents a graphical user interface for the netstat (network statistics) command-line tool, which displays incoming and outgoing network connections, network interfaces and network protocol statistics. The tool addresses power users, such as network administrators.
+
+This is a portable application, so you can run the executable file from any location on the computer. Since there is not installer included, you can save Netstat Viewer to a USB flash disk or similar storage unit and get network statistics on any workstation.
+
+An important aspect to take into account is that Netstat Viewer does not add new entries to the Windows registry or Start menu, as it usually happens with installers, so a basic file deletion is enough to remove all traces.
+
+The GUI is represented by a single window where network statistics are automatically listed at initialization. You can refresh this list any time by clicking the Update button.
+
+Shown details include the protocol, local address and port number, remote address and port, along with the status for each TCP connection. Sorting data is possible by clicking one of these columns to base it on.
+    </description>
+    <tags>netstat viewer tcp ip network util utility portable</tags>
+    <copyright>Copyright © 2002 Mischel Internet Security</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes>added checksum</releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
