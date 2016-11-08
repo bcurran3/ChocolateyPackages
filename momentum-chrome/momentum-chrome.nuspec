@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>momentum-chrome</id>
+    <version>0.91.6</version>
+    <title>Momentum for Chrome</title>
+    <authors>momentumdash.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/momentum/laookkfknpbbblfpciffpaejjkokdgca</projectUrl>
+	<docsUrl>http://help.momentumdash.com/</docsUrl>
+    <iconUrl>https://lh3.googleusercontent.com/JN1MwbErgQ_aepm_ln3cKM7WgJTg2iHk4Y8vSpM3IXPc4e1qES4SEp7vR25Qh0-mSG6Dh9htjQ=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###Replace new tab page with a personal dashboard featuring todo, weather, and inspiration.
+
+New Tab page gives you a moment of calm and inspires you to be more productive. Set a daily focus, track your to dos, and get inspired with a daily photo and quote. Eliminate distractions and beat procrastination with a reminder of your focus for the day on every new tab load. Join over 1 million users and get inspired to create the life you want to live.
+
+###Featured by Tim Ferriss, BuzzFeed, TheNextWeb, Lifehacker, Reddit, Product Hunt, TheDailyMuse! ☆☆☆
+
+* To do list
+* Weather
+* Set a daily goal/focus/intention
+* New inspirational photo and quote each day
+* Subtle custom links and search
+* Return to default Chrome Tab from Links
+* Customize the dashboard by showing/hiding widgets
+* Feel good and get things done!
+
+
+ABOUT PERMISSIONS
+
+Location – Automatic weather setup only
+Yahoo – Weather data only
+
+We recognize that location sharing is a concern for many people (ourselves included) and it is a responsibility that we take very seriously.	
+
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <copyright />
+    <tags>momentum chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

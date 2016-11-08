@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+        <id>network-inventory-advisor</id>
+    <title>Network Inventory Advisor (trial) (Install)</title>
+    <version>4.3.20161009</version>
+    <authors>ClearApps</authors>
+    <owners>bcurran3</owners>
+    <summary>Network devices inventory program.</summary>
+    <description>
+![alt text](http://www.network-inventory-advisor.com/images/screenshots/soft-hard-inventory.png)
+
+####Professional Network Inventory Software. Free trial.
+
+####Network Inventory
+Automatically collect all relevant data on all network devices and get detailed OS and devices statistics. Add custom data like service tags, inventory numbers, costs, locations and even create custom nodes. Track important changes in your network.
+
+####Software Inventory
+Network software inventory and licenses compliance audit are the key features of Network Inventory Advisor: you can easily track installations, software versions, licenses and services on all computers.
+
+####Hardware Inventory
+Scan for CPU, memory, system, audio and video, peripherals and other hardware details remotely. Easily plan mass upgrades, troubleshoot hardware problems, know the make and model of your company's equipment.
+
+####Free network inventory software!
+Network Inventory Advisor is free for everyone to test it out at 25-node networks within 2 weeks. Numerous expert-level features of our PC inventory software also include: reliable security software detection (based on customized algorithms); flexible export of any node or network report into CSV (for Excel), SQL (for MS Access, MS SQL, MySQL or other DB engines), HTML, PDF, XML or internal format; smart scanning; credentials center with multiple logins; 30 pre-defined device types; user-defined fields and extremely simple integration into an existing helpdesk or CMDB solution.
+    </description>
+    <projectUrl>http://www.network-inventory-advisor.com/pc-inventory.html</projectUrl>
+    <docsUrl>http://help.network-inventory-advisor.com/category/getting-started/</docsUrl>
+    <bugTrackerUrl>http://help.network-inventory-advisor.com/network-inventory-advisor-4-3-released/</bugTrackerUrl>
+    <tags>network inventory advisor scan trial admin</tags>
+    <copyright>1999 - 2016. © ClearApps.com</copyright>
+    <licenseUrl>http://help.network-inventory-advisor.com/end-user-license-agreement/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.network-inventory-advisor.com/uploads/submit/pia_icon.gif</iconUrl>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

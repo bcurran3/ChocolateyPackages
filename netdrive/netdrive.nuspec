@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>netdrive</id>
+    <version>2.6.12.928</version>
+    <owners>bcurran3</owners>
+    <title>NetDrive (Install)</title>
+    <authors>Bdrive Inc.</authors>
+    <projectUrl>https://www.netdrive.net/</projectUrl>
+    <iconUrl>https://netdrive.net/img/logo-netdrive2.png</iconUrl>
+    <copyright>Copyright © 2015 Bdrive Inc.</copyright>
+    <licenseUrl>https://www.netdrive.net/NetDrive-terms.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.netdrive.net/knowledgebase</docsUrl>
+    <bugTrackerUrl>http://www.netdrive.net/download/changelog.html</bugTrackerUrl>
+    <tags>netdrive net drive amazon box dropbox ftp google hubic onedrive openstack owncloud webdav owncloud android airdrive admin</tags>
+    <summary>NetDrive - The Network Drive for Windows</summary>
+    <description>
+![Screenshot of NetDrive](https://www.netdrive.net/images2/img3.jpg)
+
+##NetDrive - The Network Drive for Windows
+
+* Direct access to cloud storage from your desktop
+* Manage FTP, WebDAV and NAS servers as virtual drives
+* Connect Google Drive, Dropbox and more
+* Join more than 2 million users worldwide !
+
+###Cloud Storage Services Supported
+* Amazon Webservices
+* Amazon Drive
+* box
+* Cloud Storage
+* Dropbox
+* FTP
+* Google Drive
+* hubic
+* OneDrive
+* OneDrive for Business
+* openstack
+* ownCloud
+* WebDAV
+* ownCloud
+
+##Features:
+###Cloud storage as a virtual drive
+Managing your favorite cloud storage services could not be easier. Simply provide login information, and all your cloud storage will automatically appear as a virtual drive every time you start your PC.
+
+###NAS storage as a virtual drive
+You can connect to NAS servers by WebDAV or FTP. Many NAS vendors recommend NetDrive as a standard way to mount their NAS products. Share your NAS easily with anyone as virtual drive.
+
+###SFTP to securely transfer files
+NetDrive supports secure file transfer by SFTP (SSH File Transfer protocol) . Unlike standard File Transfer Protocol (FTP), SFTP encrypt both commands and data, preventing passwords and sensitive information from being transmitted in clear text over a network.
+
+###Works with AirDrive - Your Smartphone as a Disk Drive
+
+###System requirements
+Microsoft Windows 10, Windows 8, Windows 8.1, Windows 7, Windows Vista, Windows XP, Windows Server 2003/2008/2012.
+
+####You can freely download and install NetDrive on your computer for evaluation during the 30-day trial period.
+####Even after the trial period, you can continue using NetDrive but NetDrive will be limited to mount only one network drive, limited transfer speed and a banner will be displayed over the windows explorer indicating the trial is over.
+
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
