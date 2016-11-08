@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>irfanviewplugins</id>
+    <version>4.42.0.20161107</version>
+    <title>IrfanView All Plugins (Install)</title>
+    <authors>Irfan Skiljan</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
+    <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
+    <iconUrl>http://www.irfanview.com/images/kater_li_oben.gif</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###Available PlugIns and current versions:
+* AltaLux - (version 1.08): allows IrfanView to use AltaLux image effect
+* Ansi2Unicode - (version 0.2.7): allows IrfanView (32-bit) to read filenames with Unicode characters
+* AWD - (version 2.0.0.0): allows IrfanView to read Artweaver files
+* B3D - (version 4.22): allows IrfanView to read BodyPaint 3D files
+* BabaCAD4Image - (version 1.2): allows IrfanView to to read DXF and DWG CAD files
+* BURNING - (version 4.36): allows IrfanView to burn slideshow to a CD/DVD/BD (Windows XP SP3 or later required)
+* BURNINGOLD - (version 4.36): allows IrfanView (32-bit) to burn slideshow to a CD (Windows XP or later required, Nero option can burn Data DVD and VCD)
+* CADImage - (version 10.0.1.1): allows IrfanView to read DXF/DWG/HPGL/CGM/SVG files (Shareware, third party plugin)
+Newest versions under: http://www.cadsofttools.com/download/irfanviewplugins.zip 
+Newest 64-bit versions: http://www.cadsofttools.com/download/irfanviewplugins_x64.zip
+* CRW - (version 4.39): allows IrfanView to read Canon CRW/CR2 files (high resolution image version)
+Note: this PlugIn requires additional Canon DLLs. You can download these DLLs with the Canon ZoomBrowser program:
+http://www.canon.com/
+or try here:
+http://www.irfanview.info/plugins/canon_crw.zip (check "Readme.txt" for instructions and install!)
+* DICOM - (version 4.20): allows IrfanView to read Dicom formats (DCM, ACR, IMA)
+* DJVU - (version 4.42): allows IrfanView to read DJVU format
+* ECW - (version 4.42): allows IrfanView to read/write ECW files (Enhanced Compressed Wavelet)
+* EFFECTS - (version 4.42): contains image effects and allows IrfanView to load Adobe Photoshop 8BF filters
+Note: some nice (fixed menu) Adobe 8BF Plugins/effects can be downloaded/installed from:
+http://www.irfanview.net/plugins/irfanview_adobe_8bf_plugins.exe (Installer)
+or
+http://www.irfanview.net/plugins/irfanview_adobe_8bf_plugins.zip 
+Note: some older/special 8BFs may require additional system DLLs: Msvcrt10.dll and/or Plugin.dll. You can download these DLLs here:
+http://irfanview.tuwien.ac.at/plugins/8bf_tools.zip (check "Readme.txt" for instructions and install!)
+* EMAIL - (version 4.30): allows IrfanView to send images as emails
+* EXR - (version 4.22): allows IrfanView to read EXR files
+* FACEDETECT - (version 2.00): allows IrfanView to use the Face Detection feature from Thumbnails window
+If you have a modern graphic card which can be used for additional calculations, you can try the GPU version of the plugin: http://www.irfanview.info/plugins/facedetect_gpu.zip
+* FILTER_FACTORY - (version 4.37): allows IrfanView to use Filter Factory 8BF files (Photoshop PlugIns)
+* FLASH - (version 2.2.0.1): allows IrfanView to read Flash/Shockwave/FLV format
+* FORMATS - (version 4.42): allows IrfanView to read some rare image formats.
+(Formats: PSP, G3, RAS, IFF/LBM, BioRAD, Mosaic, XBM, XPM, GEM-IMG, SGI, RLE, WBMP, TTF, FITS, PIC, HDR, MAG, WAD, WAL, DNG, EEF, NEF, ORF, RAF, MRW, DCR, SRF/ARW, PEF, X3F, CAM, SFW, YUV, PVR, SIF and old/retro formats from Amiga, Atari, C64, ZX Spectrum etc.)
+* FPX - (version 4.36): allows IrfanView to read FlashPix files
+* FTP - (version 4.00): allows IrfanView to transfer files from Thumbnails window using FTP
+* FILTERS_UNLIMITED - (version 3.20): allows IrfanView (32-bit) to use Filters Unlimited files (Photoshop PlugIns and filters)
+* HDP - (version 4.33): allows IrfanView to read Jpeg-XR/HDP/WDP (Microsoft HD Photo) files
+* ICONS - (version 4.30): additional icons for IrfanView file associations
+
+###...and more! Full list at project URL.
+	</description>
+    <summary>Additional plugins for IrFanView</summary>
+    <copyright>© Irfan Skiljan</copyright>
+    <tags>irfanview image photo viewer plugin plugins admin</tags>
+    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/irfanview/</packageSourceUrl>
+    <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
+    <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
+    <dependencies>
+      <dependency id="irfanview" version="4.42" />	  	
+      <dependency id="chocolatey-fosshub.extension" version="0.2.0" />	  
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+</package>

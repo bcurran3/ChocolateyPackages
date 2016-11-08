@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ipwhoisflags-chrome</id>
+    <version>3.42</version>
+    <title>IP Whois and Flags Chrome and Websites Rating for Chrome</title>
+    <authors>myip.ms</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/ip-whois-flags-chrome-web/kmdfbacgombndnllogoijhnggalgmkon</projectUrl>
+    <iconUrl>https://lh6.googleusercontent.com/6Ak9zXqhi0W9i0xk_Wa3ChWYTAgLxiDqFHqfv9QwmuDTBy2iP8tm9V1ZN4OcB0IyGeXYMq2f=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###Display Website Country Flag. Shows how many Visitors are visiting website. Website Reviews. Alexa. Norton Antivirus Site Adviser.
+
+Full Information on Any Website -
+* Display Country Flag indicating Website Physical Location
+* Website Popularity (Live Visitor Statistics). Shows how many users are visiting any World Website per day
+* Website IPv4 Address
+* Website IPv6 Address
+* Website Location (Country with Flag, State, City)
+* Host Name
+* DNS Information
+* Nameservers
+* Whois Owner Information
+* Hosting Company
+* Website Server/Hosting Visual Diagram
+* Other Sites on this IP Address
+* IP Whois Lookup
+* Real-time visits analysis and Internet traffic stats 
+* Check you are visiting Websites for Viruses/Malware on Symantec Website (Norton Antivirus Safe Web SiteAdviser)
+* Website Popular Rating (Live Alexa Rank)
+
+- Supported registrars: GoDaddy, NetworkSolutions, Moniker, Dotster, 1and1, NameCheap, Register, Yahoo, HeartInternet, 123-Reg, FatCow, NetFirms, Daily, Flagg, Name, Enom, FastHosts, Registro.br and more domain registrators
+
+- Quick share button: Share your/other users website comments to Facebook, LinkedIn, Twitter, Pinterest, Wordpress, Blogger, Digg, Vkontakte, Odnoklassniki, LiveJournal and many more. 
+
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <copyright />
+    <tags>whois flags rating chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
