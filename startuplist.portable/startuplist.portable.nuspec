@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>startuplist.portable</id>
+    <title>StartupList (Portable)</title>
+    <version>2.02.20161009</version>
+    <authors>Merijn Bellekom</authors>
+    <owners>bcurran3</owners>
+    <summary>StartupList shows you what processes start automatically on your computer.</summary>
+    <description>
+![alt text](http://i.utdstc.com/screen/windows/thumb/startuplist-002.jpg)
+
+StartupList: A simple tool that lists all and every auto starting program on your system. You might be surprised what it finds, this is way better than Msconfig. Commonly used to troubleshoot malfunctioning systems, trojan/viral infections, new spyware/malware breed and the likes.
+Compatible with: All Windows versions	
+    </description>
+    <projectUrl>http://www.merijn.nu/programs.php#startuplist</projectUrl>
+    <tags>startuplist merijn system util utility startup list autoruns portable</tags>
+    <licenseUrl>http://www.merijn.nu/faq.php#a_me4</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.merijn.nu/images/startuplist_big.gif</iconUrl>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

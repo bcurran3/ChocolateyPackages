@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>seatools</id>
+    <title>SeaTools for Windows (Install)</title>
+    <version>1.4.0.420161008</version>
+    <authors>Seagate Technology</authors>
+    <owners>bcurran3</owners>
+    <summary>SeaTools for Windows does diagnostics on your Seagate brand hard drives.</summary>
+    <description>
+![alt text](http://www.seagate.com/files/www-content/services-software/_shared/images/seatools-947x556.JPG)
+
+
+###SeaTools for Windows
+
+
+SeaTools for Windows is completely data safe. It installs on your system. If the drive passes SeaTools for Windows, your troubleshooting can move to other areas.
+
+####PACKAGING NOTES: 
++ This package will most likely work with future updates to the program as it downloads a generically named setup file called SeaToolsforWindowsSetup.exe.
++ This program does not support silent uninstall. Use the Control Panel to uninstall.
+    </description>
+    <projectUrl>http://www.seagate.com/support/downloads/seatools/</projectUrl>
+    <docsUrl>http://www.seagate.com/staticfiles/support/downloads/seatools/docs/SeaTools%20for%20Windows.en-US.pdf</docsUrl>
+    <tags>seatools hdd hard disk diag diagnostics util utility admin</tags>
+    <copyright>Copyright (C) Seagate Technology 2007-2015 All rights reserved.</copyright>
+    <licenseUrl>http://www.seagate.com/support/downloads/item/seatools-win-master/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.seagate.com/www-content/investors/_shared/_images/seagate-stacked-pos-2015.jpg</iconUrl>
+    <releaseNotes>added checksums</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>serva-non-supporter.portable</id>
+    <version>3.0.0</version>
+    <title>[DEPRECATED] Serva PXE/BINL (Non-Supporter) (Portable)</title>
+    <authors>Patrick Masotta</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>http://www.vercot.com/~serva/eula.html</licenseUrl>
+    <projectUrl>http://www.vercot.com/~serva/</projectUrl>
+    <iconUrl>http://www.vercot.com/~serva/Imgs/serva_logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+serva-non-supporter.portable has been deprecated because of Chocolatey Community Naming Conventions. Community packages with an ID ending in .install/.portable are intended to indicate there are two possible methods for installing a program. If a user comes across one of these ID endings, it is expected an associated package with the corresponding ID ending also exists. The program Serva only provides a portable method so the simplest ID should be used.
+
+This package exists only for backward compatibility to provide a transitional, empty dummy package for existing users and scripts which may still use this package ID.
+
+
+</description>
+    <summary>replaced by Chocolatey package serva</summary>
+    <releaseNotes>DEPRECATED: replaced by serva package</releaseNotes>
+    <copyright>Copyright © 2010-2014 Patrick Masotta. All rights reserved.</copyright>
+    <tags>deprecated</tags>
+    <dependencies>
+      <dependency id="serva" version="" />
+    </dependencies>
+  </metadata>
+</package>

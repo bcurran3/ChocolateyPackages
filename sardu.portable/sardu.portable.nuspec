@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sardu.portable</id>
+	<version>3.1.1</version>
+    <title>[Deprecated] SARDU (Portable)</title>
+    <authors>Davide Costa</authors>
+	<owners>bcurran3</owners>
+    <licenseUrl>http://creativecommons.org/licenses/by-nc-nd/3.0/</licenseUrl>
+	<projectUrl>http://www.sarducd.it/</projectUrl>
+	<requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<description>This package has been deprecated and replaced with sardu to fit chocolatey naming conventions.</description>
+    <summary>Multiboot USB and DVD creator customized with rescue disk, utility, linux live, windows installer</summary>
+    <tags>sardu usb dvd builder creator multiboot util utility</tags>
+    <dependencies>
+      <dependency id="sardu" version="3.1.1" />
+    </dependencies>
+    <releaseNotes>This package has been deprecated and replaced with sardu to fit chocolatey naming conventions.</releaseNotes>
+  </metadata>
+</package>

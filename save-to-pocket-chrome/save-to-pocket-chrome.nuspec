@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>save-to-pocket-chrome</id>
+    <version>2.1.11</version>
+    <title>Save to Pocket for Chrome</title>
+    <authors>getpocket.com</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://getpocket.com/tos</licenseUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/save-to-pocket/niloccemoadcdkdjlinkgdfekeahmflj</projectUrl>
+    <iconUrl>https://lh5.googleusercontent.com/z37lhs8ft7tze3DXgg6en5gFlCEpyXxyFRk59bpACqvcEosNmaU_tde3w3Wk3VaZxh1__WFq4Q=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Save to Pocket Chrome Extension</summary>	
+    <description>
+###Pocket Extension for Chrome - The best way to save articles, videos and more
+
+When you find something in Chrome that you want to view later, put it in Pocket. It automatically syncs to your phone, tablet or computer so you can view it at any time, even without an internet connection.
+
+Extension Features:
+* One-click saving of any page with the toolbar button or keyboard shortcut
+* Right-click menu item to save any link, no need to load the page first
+* Quickly add tags
+* See related recommendations when you save to Pocket
+* See trending stories and topics when you open a new tab
+* Syncs across all devices – iPhone, iPad, Android and more
+* Completely free, upgrade anytime to Premium for a more powerful Pocket experience
+
+
+Get the Pocket App to see all the great things you’ve saved to Pocket! https://chrome.google.com/webstore/detail/jijgclgmgjipgefcnnnibgllfonlfdap
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+    </description>
+    <copyright>getpocket.com</copyright>
+    <tags>pocket chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
