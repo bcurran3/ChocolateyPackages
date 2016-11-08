@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mossawir-lan-messenger</id>
+    <version>2.5.4268.1</version>
+    <owners>bcurran3</owners>
+    <title>Mossawir LAN Messenger (Install)</title>
+    <authors>Mossawir Dot Ahmed</authors>
+    <projectUrl>https://sourceforge.net/projects/mossawirlm25/</projectUrl>
+    <copyright>Copyright © Mossawir Dot Ahmed</copyright>
+    <licenseUrl>https://sourceforge.net/directory/os:windows/license:afl/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/mossawirlm25/code/ref/master/</projectSourceUrl>
+    <mailingListUrl>https://sourceforge.net/p/mossawirlm25/discussion</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/mossawirlm25/tickets/</bugTrackerUrl>
+    <tags>mossawir lan messenger im chat admin</tags>
+    <summary>Mossawir Network Messenger is a LAN messaging and chat program which allows messages to be sent between users on a network peer-to-peer with no need for a server.</summary>
+    <description>
+![Screenshot of Mossawir LAN Messenger](https://a.fsdn.com/con/app/proj/mossawirlm25/screenshots/screenshot.png)
+
+###Description
+
+Mossawir Network Messenger is a simple, easy to use LAN messaging and chat application that allows messages to be sent between users on a network peer-to-peer with no need for a server.
+
+###Features
+
+* Addressing to User@Computer and user@ip-address (e.g. user: niazi on computer: userdesktop, address: user@userdesktop)
+* Support for 2 user chats
+* Spellchecking
+* Aero Glass Background on Windows Vista with Aero Enabled
+
+####PACKAGING NOTE: Uninstall is NOT silent.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

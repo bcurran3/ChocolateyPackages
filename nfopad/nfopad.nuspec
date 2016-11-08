@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>nfopad</id>
+    <version>1.71</version>
+    <owners>bcurran3</owners>
+    <title>NFOPad (Install)</title>
+    <authors>Anders Nivfors</authors>
+    <iconUrl>http://abload.de/img/new1bu8u.png</iconUrl>
+    <projectUrl>http://truehumandesign.se/s_nfopad.php</projectUrl>
+    <copyright>True Human Design 2016</copyright>
+    <licenseUrl>http://truehumandesign.se/s_nfopad.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>http://truehumandesign.se/subscribe.php</mailingListUrl>
+    <bugTrackerUrl>http://truehumandesign.se/forum.php</bugTrackerUrl>
+    <description>
+![Screenshot of NFOPad](http://truehumandesign.se/nfopad_sd1.png)
+	
+NFOPad is a small, fast and flexible combined nfo viewer and text editor. It is a clone of Microsoft's Notepad but much more customizable and with some additional features. Of course NFOPad also supports nfo files with ASCII art. The file extension is used to determine whether to use an ANSI or ASCII font. NFOPad also fully supports Unicode.
+
+Features:
+
+* Hyperlink and e-mail detection
+* Highly customizable (fonts, colors, app. settings)
+* Built in ASCII-fonts for nfo files
+* Localized (Brazilian Portuguese, Chinese, English, French, German, Hungarian, Italian, Korean, Polish, Portuguese, Russian, Slovak, Spanish, Swedish, Ukrainian)
+* Portable
+* Unicode support
+* Printing
+* Searching and replacing text
+* Window auto width
+* Improved word selection on double click and on CTRL selecting
+* Close on ESC key
+* Tab width setting
+* Shell integration
+* Extension determines font
+* File drag-n-drop
+* Open next/previous file in directory of the currently open file
+* Direct scrolling options
+* Copy on select option
+* Insert/overwrite mode
+* Recently opened files list
+* Go to line
+* Delete line
+* Alpha blend support
+* Always on top option
+* Word wrap option
+* MS Notepad's .LOG functionality
+	</description>
+    <releaseNotes></releaseNotes>
+    <tags>true human design nfopad nfo admin</tags>
+  </metadata>
+</package>

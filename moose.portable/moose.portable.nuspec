@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>moose.portable</id>
+    <title>Moose (Portable)</title>
+    <version>0.77.20161009</version>
+    <authors>Dr Lovegrove</authors>
+    <owners>bcurran3</owners>
+    <summary>Moose is an advanced Windows frontend client for controlling and providing information about units connected to Logitech's Squeezebox Server (Logitech Media Server).</summary>
+    <description>
+Moose is an advanced Windows frontend client for controlling and providing information about units connected to Logitech's Squeezebox Server.
+
+![alt text](http://www.rusticrhino.com/drlovegrove/nowplaying069t1.jpg)
+
+Moose uses CLI commands over a network to talk to the server, so works whatever platform your server runs on and doesn't need to be on the same PC as the server, although it can if you want.
+
+![alt text](http://www.rusticrhino.com/drlovegrove/moose060bsm.png)
+![alt text](http://www.rusticrhino.com/drlovegrove/moose060dsm.png)
+![alt text](http://www.rusticrhino.com/drlovegrove/moose060csm.png)
+![alt text](http://www.rusticrhino.com/drlovegrove/moose060esm.png)
+
+    </description>
+    <projectUrl>http://www.rusticrhino.com/drlovegrove/</projectUrl>
+    <docsUrl>http://www.rusticrhino.com/drlovegrove/setup.html</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/moosenews</mailingListUrl>
+    <bugTrackerUrl>http://www.rusticrhino.com/drlovegrove/</bugTrackerUrl>
+    <tags>moose squeezebox slimdevices slimserver logitech media server lms</tags>
+    <copyright>Copyright (c) 2005-12 Dr lovegrove</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="dotnet4.0" />
+      <dependency id="vcredist2010" />
+    </dependencies>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
