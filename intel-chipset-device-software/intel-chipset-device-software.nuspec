@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-chipset-device-software</id>
+    <version>10.1.1.14</version>
+    <owners>bcurran3</owners>
+    <title>Intel® Chipset Device Software (INF Update Utility) (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://downloadcenter.intel.com/download/20775/Intel-Chipset-Device-Software-INF-Update-Utility-</projectUrl>
+    <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
+    <copyright>Intel Corporation</copyright>
+    <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.intel.com/content/www/us/en/support/software/chipset-software/intel-chipset-software-installation-utility.html</docsUrl>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <bugTrackerUrl>https://downloadmirror.intel.com/20775/eng/readme.txt</bugTrackerUrl>
+    <tags>intel chipset driver update utility admin</tags>
+    <summary>Installs Windows 7/8/10 Intel INF files update.</summary>
+    <description>
+##Detailed Description
+	
+Not sure if this is the right driver or software for your component? Run Intel® Driver Update Utility to automatically detect driver or software updates.
+
+Running this easy-to-use Intel® Driver Update Utility tells you if you need to update your chipset INF file and will prompt you to install. This will save you a lot of time on your chipset download and common file downloads needed for your system.
+
+###Name changes
+Intel® Chipset Device Software is the new name for the Intel® Chipset Software Installation Utility; this name will be seen when running the installation package.
+
+###About this file/download
+The Intel® Chipset Device Software installs the Windows* INF files. An INF is a text file that provides the operating system with information about a piece of hardware on the system. In the case of the current Intel Chipset Device Software, that information is primarily the product name for the piece of hardware. This allows the operating system to show the correct name for that piece of hardware in Device Manager.
+
+###**Important**
+The Intel Chipset Device Software does not install drivers for AGP or USB. DO NOT DOWNLOAD THIS UTILITY IF YOUR DEVICE MANUFACTURER IS RECOMMENDING IT TO CORRECT AN "AGP DRIVER," "AGP GART," OR "USB DRIVER" ISSUE; IT WILL NOT CORRECT YOUR ISSUE.
+
+Please read attached Readme.txt and ReleaseNotes_10.1.1.14.htm files before installing.
+
+Keywords: 82801, ICH, MCH
+
+###About Intel® drivers
+The driver or software for your Intel® component might have been changed or replaced by the computer manufacturer. We recommend you work with your computer manufacturer before installing our driver so you don’t lose features or customizations. </description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

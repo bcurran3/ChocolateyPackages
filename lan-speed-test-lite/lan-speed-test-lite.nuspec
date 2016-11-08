@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lan-speed-test-lite</id>
+    <title>LAN Speed Test (Lite)</title>
+    <version>1.3.2.20161106</version>
+    <authors>TotuSoft</authors>
+    <owners>bcurran3</owners>
+    <summary>LAN speed benchmarkting utility.</summary>
+    <description>
+![Screenshot of LAN Speed Test (Lite)](http://totusoft.com/content/media/lanspeed1/lst_lite1.jpg)
+	
+LAN Speed Test (Lite) is a FREE utility designed from the ground up to be a simple but powerful tool for measuring file transfer, hard drive, USB Drive, and Local Area Network (LAN) speeds (wired and wireless). It does this by building a file in memory, then transfers it both ways (without effects of windows file caching) while keeping track of the time, and then does the calculations for you. Simple concept and easy to use. You’ll find that LAN Speed Test will quickly become one of your favorite network tools!
+
+Some of LAN Speed Test features include…
+
+Completely portable – No installation needed
+Compatible With all Windows versions 2000 and up (2000, XP, Vista, Win7, Server2003 and Server 2008)
+New! Now available for Mac users and soon Linux users
+Incredibly small (120KB Windows, 370KB Mac) and can run from a hard drive, USB Flash drives, etc.
+Very fast! Most tests are less than 1 minute
+Simple concept and easy to use
+This version is completely free. No nag screens, time limitations, etc.
+New! Ability to choose Network Interface Card for computers with multiple NICs
+New! Log window
+New! Cancel tests anytime throughout the process just by hitting
+Unlimited test packet sizes while taking a maximum of just 10 MB of RAM on your system
+Test packet sizes up to 9 GB while taking a maximum of just 10 MB of RAM on your system
+Can be used with LST Server for a more accurate ‘True’ network speed without hard drive limitations – Even test WAN (internet) speed with LST Server
+And much more!
+PACKAGE NOTES: Will most likely upgrade throughout the v1.3.x life as the author's website displays v1.3.1 as the latest version but this is v1.3.2 at time of packaging. Stand-alone package, no install.
+    </description>
+    <projectUrl>http://totusoft.com/lanspeed1/</projectUrl>
+    <mailingListUrl>http://www.homenetworkenabled.com/forums/forumdisplay.php?63-LAN-Speed-Test</mailingListUrl>
+    <bugTrackerUrl>http://totusoft.com/lanspeed1_history/</bugTrackerUrl>
+    <tags>lan speed test network benchmark utility </tags>
+    <copyright>(C) 2008-2015 Totusoft.com</copyright>
+    <licenseUrl>http://totusoft.com/about/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://img.informer.com/icons/png/48/5730/5730968.png</iconUrl>
+    <releaseNotes>screenshot and chucksums added </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

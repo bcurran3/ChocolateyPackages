@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lan-messenger</id>
+    <version>1.2.35</version>
+    <owners>bcurran3</owners>
+    <title>LAN Messenger (Install)</title>
+    <authors>Qualia Digital Solutions</authors>
+    <projectUrl>https://sourceforge.net/projects/lanmsngr/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/lanmsngr/icon</iconUrl>
+    <copyright>Copyright (C) 2010 - 2012 Qualia Digital Solutions.</copyright>
+    <licenseUrl>https://sourceforge.net/directory/os:windows/license:gplv3/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/lanmsngr/files/</projectSourceUrl>
+    <docsUrl>http://lanmsngr.sourceforge.net/faq.php</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/lanmsngr/forum/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/lanmsngr/tickets</bugTrackerUrl>
+    <tags>lan messenger im chat messenger admin</tags>
+    <summary>An intranet chat application that does not require a server.</summary>
+    <description>
+![Screenshot of LAN Messenger](http://lanmsngr.sourceforge.net/screenshots/1.2.25/lmc_1225_win7_1.jpg)
+
+###Description
+
+LAN Messenger is a p2p chat application for intranet communication and does not require a server. A variety of handy features are supported including notifications, personal and group messaging with encryption, file transfer and message logging.
+
+###Key features
+* Instant messaging
+Connect and chat with users on your network.
+* Secure messaging for privacy
+All messages are protected by AES encryption with RSA as the key exchange mechanism.
+* Broadcast messages
+Send notifications to all users or specified users.
+* File transfer
+Exchange files with others easily.
+* Organize contacts
+Arrange your contacts into groups for easier management.
+* Message logging
+Past conversations are logged and can be retreived at any time.
+* Serverless architecture
+A server does not need to be set up on the network for LAN Messenger to work.
+* No internet connection required
+As the name suggests, LAN Messenger works inside the local network and does not require internet access. This helps to minimize external threats.
+* Multilanguage user interface
+You can select the language for the user interface.
+* Cross-platform support
+All the features of this application are supported on Windows, Mac and Linux. The interface is fully integrated with the native environment of each platform.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
