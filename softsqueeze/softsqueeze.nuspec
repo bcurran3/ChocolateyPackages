@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>softsqueeze</id>
+    <title>softsqueeze</title>
+    <version>3.9.20161009</version>
+    <authors>Richard Titmuss</authors>
+    <owners>bcurran3</owners>
+    <summary>A software implementation of the Squeezebox.</summary>
+    <description>
+![Screenshot of softsqueeze](http://ftparmy.com/images/softsqueeze-02.jpg)
+	
+Softsqueeze is a music player for your PC that works with the Squeezebox Server (Logitech Media Server v7.4+) software. It complements the Boom, Duet, Transporter, Squeezebox and Slimp3 hardware music players developed by Slim Devices.
+
+
+Supports synchronization with hardware players and remote streaming over the Internet using ssh tunneling.
+
+
+Developed in Java, allowing this useful application to work with Windows PCs, OS X and Unix systems.
+
+
+Emulates most of the digital music players and uses the TCP based slim protocol, allowing use across the Internet and through firewalls/NAT routers.
+
+
+#####Features:
++ Audio Playback
+	Native playback of Flac, MP3, WAV and AIFF audio.
+	Support for Ogg Vorbis, WMA and AAC by transcoding in SqueezeCenter.
+	Gapless playback for most audio formats.
+	Synchronization with Squeezebox2, Squeezebox and Slimp3 (requires Java 1.5)
+	Pause, volume control and mute buttons.
+	Supports Windows Direct Sound on a Windows PC.
+
+
++ Squeezebox2 Graphics Support
+	Emulation of the new 320x32 graphic display.
+	Full support for all Squeezebox fonts.
+	Spectrum Analyzer, VU meters.
+
++ Skins
+	Slim Devices skin with horizontal or vertical remotes.
+	Excession and Excession Large skins.
+	LCD skin, designed for use on laptop computers.
+	Quick link to slim server web interface
+	Window snapping
+	Also supports headless operation
++ Music search and playlist editor
+
+
++ Emulation of Slim IR Remote control
+	Button auto repeat (for example press and hold pause stop's the player)
+	Keyboard shortcuts for common remote control functions (uses the same keys as winamp and xmms).
++ Slim Protocol
+	Supports Slim Server version 6.0 upwards.
+	Support for password encrypted servers.
+	Auto reconnection to Slim Server when connection is lost.
+	Built-in ssh tunneling support for remote connections.
+	Slim server discovery.
+
+There are versions of softsqueeze for OS X, Android, and iPhone. Together with Logitech Media Server you can control music playback to all your devices.
+
+"choco install logitech-media-server" to install the server software.
+
+####PACKAGING NOTES: This will download the program and make an icon on your desktop. It does not actually "install."  Version 3.9b2 02-24-2011 (latest - no final release)
+    </description>
+    <projectUrl>http://softsqueeze.sourceforge.net/index.html</projectUrl>
+    <projectSourceUrl>http://softsqueeze.cvs.sourceforge.net/viewvc/softsqueeze/softsqueeze3/</projectSourceUrl>
+    <docsUrl>http://softsqueeze.sourceforge.net/faq.html</docsUrl>
+    <mailingListUrl>http://softsqueeze.sourceforge.net/mailing.html</mailingListUrl>
+    <tags>softsqueeze logitech music server slim slimserver squeezebox music player admin</tags>
+    <copyright>(C) 2006 Richard Titmuss</copyright>
+    <licenseUrl>https://sourceforge.net/directory/os:windows/license:gpl/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://softsqueeze.sourceforge.net/softsqueeze.png</iconUrl>
+    <dependencies>
+      <dependency id="javaruntime" version="1.6" />
+     </dependencies>
+    <releaseNotes>added checksum and screenshot</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
