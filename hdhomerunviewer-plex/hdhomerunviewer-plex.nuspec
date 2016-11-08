@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hdhomerunviewer-plex</id>
+    <version>0.9.11</version>
+    <owners>bcurran3</owners>
+    <title>HDHomeRun Viewer for Plex</title>
+    <authors>zynine</authors>
+    <projectUrl>https://forums.plex.tv/discussion/101755/rel-hdhomerun-viewer</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://github.com/zynine-/HDHRViewerV2.bundle/blob/master/LICENSE</licenseUrl>
+    <projectSourceUrl>https://github.com/zynine-/HDHRViewerV2.bundle</projectSourceUrl>
+    <docsUrl>https://github.com/zynine-/HDHRViewerV2.bundle/blob/master/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/zynine-/HDHRViewerV2.bundle/issues</bugTrackerUrl>
+    <tags>hdhomerun viewer plex</tags>
+    <summary>Watch Live TV on Plex using HDHomeRun, at home or remotely.</summary>
+    <description>
+This plug-in was created for personal usage stream from my HDHomeRun PRIME to Roku 3. This allows up to 3 TV streams to be viewed by 3 different clients simultaneously. Due to Plex limitations with live streams, I  wouldn't recommend buying a HDHomeRun device solely to run with Plex and this Plug In. This plug-in should work with DLNA-enabled HDHomeRun (PRIME, PLUS, DUAL Gen 4).
+
+HDHomeRun Compatibility
+
+Compatible with HDHomeRun that have DLNA or HTTP streaming capabilities.
+Compatible
+HDHomeRun PRIME (HDHR3-CC)
+HDHomeRun 4DC (HDHR3-4DC)
+HDHomeRun DUAL (Gen4)
+HDHomeRun CONNECT (HDHR4-2US/2DT)
+HDHomeRun PLUS/EXTEND (HDTC-2US)
+HDHomeRun EXTEND (HDTC-2US-M)
+Not Compatible
+HDHomeRun DUAL (HDHR3-US/EU/DT)
+HDHomeRun DUAL (HDHR2-US/DT)
+HDHomeRun DUAL (HDHR-US/EU/DT)
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="plexmediaserver" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
