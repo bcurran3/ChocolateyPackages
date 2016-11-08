@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>xboot</id>
+    <version>1.0.14</version>
+    <owners>bcurran3</owners>
+    <title>XBoot (Portable)</title>
+    <authors>steve6375 and Iteil Y</authors>
+    <projectUrl>https://sites.google.com/site/shamurxboot/home</projectUrl>
+    <iconUrl>https://sites.google.com/site/shamurxboot/_/rsrc/1299991428774/config/customLogo.gif</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://sites.google.com/site/shamurxboot/tips-tricks</docsUrl>
+    <mailingListUrl>http://reboot.pro/forum/126-xboot/</mailingListUrl>
+    <bugTrackerUrl>https://sites.google.com/site/shamurxboot/download</bugTrackerUrl>
+    <tags>xboot multiboot usb iso utility portable</tags>
+    <summary>XBoot is a easy-to-use utility for creating Multiboot USB/ISO.</summary>
+    <description>
+XBoot is a easy-to-use utility for creating Multiboot USB/ISO.You may have seen many bootable ISO files like Linux live CDs , Antivirus rescue CDs etc. XBoot can combine these ISO files in to one Multiboot ISO file or create Multiboot USB in just few clicks.
+Simply Drag and drop ISO files in to XBoot and click Create ISO or Create USB button.
+
+
+Support for some ISO files have been added , support for some other ISO files will be added later on the request of users.If you want support for any language other than English then please request in Xboot forum.	
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

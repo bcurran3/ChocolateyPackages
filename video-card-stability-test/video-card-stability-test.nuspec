@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>video-card-stability-test</id>
+    <title>Video Card Stability Test (Install)</title>
+    <version>1.0.0.320161103</version>
+    <authors>FreeStone Group </authors>
+    <owners>bcurran3</owners>
+    <summary>Video Card Stability Test + 3D Benchmark + 3D Screensaver.</summary>
+    <description>
+![Screenshot of Video Card Stability Test](http://freestone-group.com/res/video-card-stability-test.jpg)
+Video Card Stability Test + 3D Benchmark + 3D Screensaver.
+ * Video Card Stress Testing!
+ * Benchmark the speed of your 3D graphics video card!
+ * Free 3D Screensaver!
+ * Current Cost: Zero!
+
+During the test, Video Card Stability Test as much as possible loads GPU (Graphics Processing Unit), this ability can be very useful for detection of frequencies on which the video card can stably work.
+Video Card Stability Test uses VertexShader and PixelShader if are supported by a video card.
+
+PACKAGING NOTES: Version 1.0.0.3 build 80416. Install is silent if DirectX9 is instlalled, not silent if DirectX9 is not installed. Uninstall is not silent.
+    </description>
+    <projectUrl>http://freestone-group.com/video-card-stability-test.htm</projectUrl>
+    <docsUrl>http://freestone-group.com/video-card-stability-test/frequently-asked-questions.html</docsUrl>
+    <mailingListUrl>http://freestone-group.com/video-card-stability-test.htm</mailingListUrl>
+    <bugTrackerUrl>http://freestone-group.com/video-card-stability-test.htm</bugTrackerUrl>
+    <tags>video card stability test system util utility graphics admin</tags>
+    <copyright>Copyright (c) 2005-2008 FreeStone Group</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://freestone-group.com/res/video-card-stability-test-100x100.gif</iconUrl>
+    <dependencies>
+      <dependency id="directx" />
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

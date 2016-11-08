@@ -1,0 +1,40 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+  <metadata>
+    <id>wot-firefox</id>
+    <version>20151208.0.20161009</version>
+    <title>Web of Trust for Firefox</title>
+    <authors>Timo Ala-Kleemola and Sami Tolvanen of mywot.com</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <projectUrl>https://www.mywot.com/</projectUrl>
+	<bugTrackerUrl>https://addons.mozilla.org/en-US/firefox/addon/wot-safe-browsing-tool/</bugTrackerUrl>
+    <iconUrl>https://www.mywot.com/sites/all/themes/wot/images/wot-flex/logo-head.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Find out which websites you can trust. WOT adds intuitive traffic light-style icons next to search results and URLs so you can decide whether to visit a site: Green – The site is trusted, Yellow – Be cautious, Red – Online threats detected </summary>
+    <description>
+![Screenshot of WOT](https://addons.cdn.mozilla.net/user-media/previews/full/169/169047.png)	
+
+###WOT OVERVIEW
+Web of Trust (aka WOT) is a known worldwide website reputation and rating service that helps you make informed decisions about whether to trust a website or not when you are searching, shopping or surfing online. WOT increases your personal online security and web safety. Web Of Trust is based on the Crowdsourcing Approach. Millions of users rate websites throughout the Internet and share their personal experience. This helps you avoid online threats that only real life experience can detect, such as scams, untrustworthy links, rogue web stores, etc.
+
+###HOW WEB OF TRUST WORKS
+The WOT add-on shows website reputations as traffic lights next to search results when you use Google, Yahoo!, Bing or any other search engine: green for good, red for bad, and yellow as a warning to be cautious. These icons are also visible next to links in social networking websites like Facebook and Twitter; Email services like Gmail and Yahoo!Mail; as well as popular websites like Wikipedia.
+By clicking the traffic light icon you can find details about a website’s reputation, safety information and users’ opinions. A green traffic light means users have rated the site as trusted and reliable, red warns about danger or potential online threats and yellow indicates that you need to be cautious when using a site.
+
+###WEB OF TRUST ADVANTAGES
+WOT ratings and reviews are powered by a global community of millions of users who rate websites based on their personal experiences. In addition, trusted third-party sources are used to warn you about malicious software and other online threats that you might encounter.
+You can share your experiences too by rating websites and help make the Internet a safer place for everyone.
+Web Of Trust (WOT) has been featured in the New York Times, CNET, PC World, Kim Komando show, Tech Republic, PC Welt and many other popular media.
+Install the WOT add-on for your Firefox browser! Check out website reputations and help us make a better Web for everyone!  
+
+####PACKAGING NOTE: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox.  Subsequent updates should be dealt with automatically by Firefox.
+</description>
+    <releaseNotes>added checksum and screenshot</releaseNotes>
+    <tags>wot web of trust reputation ratings firefox</tags>
+    <dependencies>
+      <dependency id="firefox" version="14.0"/>
+    </dependencies>
+  </metadata>
+</package>
