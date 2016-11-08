@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>futuremark-systeminfo</id>
+    <version>4.48</version>
+    <owners>bcurran3</owners>
+    <title>Futuremark SystemInfo (Install)</title>
+    <authors>Futuremark</authors>
+    <projectUrl>http://www.futuremark.com/support/systeminfo</projectUrl>
+    <iconUrl>http://www.futuremark.com/static/images/futuremark-ul-company-logo.png</iconUrl>
+    <copyright>© 2016 Futuremark Corporation</copyright>
+    <licenseUrl>http://www.futuremark.com/business</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.futuremark.com/support/systeminfo</docsUrl>
+    <mailingListUrl>https://community.futuremark.com/forum/</mailingListUrl>
+    <bugTrackerUrl>http://www.futuremark.com/support/systeminfo</bugTrackerUrl>
+    <tags>futuremark systeminfo admin</tags>
+    <summary>SystemInfo is a component used in many of our benchmarks to identify the hardware in your system.</summary>
+    <description>
+SystemInfo is a component used in many of our benchmarks to identify the hardware in your system. It does not collect any personally identifiable information. SystemInfo updates do not affect benchmark scores but you may need the latest version in order to obtain a valid score.
+
+The most recent versions of our currently supported benchmarks will prompt you to install new SystemInfo updates. Alternatively, you can update SystemInfo yourself from this page.
+
+Note that Windows XP, 3DMark06, and PCMark05 are no longer supported by Futuremark. SystemInfo functionality on Windows XP is provided as-is without guarantees. From version 4.29 onwards, SystemInfo requires Windows XP Service Pack 3. If you wish to run 3DMark06 and PCMark05 on Windows XP SP2 or older, you should use SystemInfo 4.28.	
+
+####All Futuremark benchmarks on Windows 10 require Futuremark SystemInfo 4.40 or later to be installed.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>flicflac</id>
+    <title>FlicFlac</title>
+    <version>1.03.20161106</version>
+    <authors>Danny Ben Shitrit</authors>
+    <owners>bcurran3</owners>
+    <summary>Tiny Portable Audio Converter for WAV MP3 FLAC OGG and APE</summary>
+    <description>
+![Screenshot of FlicFlac](http://www.sector-seven.net/assets/software/flicflac/screen.png)
+
+FlicFlac is a portable (no installation required) utility for converting WAV, FLAC, MP3, OGG and APE files to any of the other formats.
+
+You may drag files onto the FlicFlac interface, or convert files directly from the right click menu in Windows Explorer.
+
+Supported Conversions
+WAV to FLAC · WAV to MP3 · WAV to OGG · WAV to APE
+FLAC to WAV · FLAC to MP3 · FLAC to OGG · FLAC to APE
+MP3 to FLAC · MP3 to WAV · MP3 to MP3 (bitrate change) · MP3 to OGG · MP3 to APE
+OGG to FLAC · OGG to WAV · OGG to MP3 · OGG to APE
+APE to FLAC · APE to WAV · APE to MP3 · APE to OGG
+NOTE: This downloads a generically named .ZIP file. It will most likely work for future versions as well.
+    </description>
+    <projectUrl>http://www.sector-seven.net/software/flicflac</projectUrl>
+    <tags>flicflac audio converter wav flac mp3 ogg ape</tags>
+    <copyright>Copyright (c) 2008-2016 Danny Ben Shitrit</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.sector-seven.net/assets/software/flicflac/thumb.png</iconUrl>
+    <releaseNotes>checksums added</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
