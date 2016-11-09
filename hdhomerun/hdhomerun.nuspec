@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hdhomerun-view</id>
-    <version>2015.08.26</version>
+    <version>2016.11.07</version>
     <owners>bcurran3</owners>
     <title>HDHomeRun View (Install)</title>
     <authors>SiliconDust</authors>
@@ -34,7 +34,7 @@ Supported Hardware
 
 Also includes the HDHomeRun Setup and HDHomeRun Config programs.
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>new version</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
