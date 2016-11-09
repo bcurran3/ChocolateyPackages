@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-10-update-assistant</id>
-    <version>1.4.9200.17354</version>
+    <version>1.4.9200.17364</version>
     <owners>bcurran3</owners>
     <title>Windows 10 Update Assistant (Portable)</title>
     <authors>Microsoft</authors>
