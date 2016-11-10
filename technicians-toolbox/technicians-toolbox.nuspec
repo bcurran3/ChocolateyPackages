@@ -4,7 +4,7 @@
   <metadata>
     <id>technicians-toolbox</id>
     <version>1.2.0</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/technicians-toolbox</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/technicians-toolbox</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Technicians Toolbox Free/Pro (Install)</title>
     <authors>Shane Croft of Tweaking.com</authors>
@@ -15,9 +15,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://tweaking.com/files/technicians_toolbox_help/table_of_contents.htm</docsUrl>
     <bugTrackerUrl>http://www.tweaking.com/content/page/tweaking_com_technicians_toolbox.html</bugTrackerUrl>
-    <tags>tweaking.com technicians toolbox admin</tags>
+    <tags>tweaking.com technicians toolbox admin notsilent</tags>
     <summary>Tweaking.com - Technicians Toolbox is a collection of powerful tools to help both the technician and home users.</summary>
     <description>
+![Screenshot of Technicians Toolbox](https://1.bp.blogspot.com/-L0cWkSWF9IQ/VSX5tAVpMZI/AAAAAAAAANo/jubKRmMLCT4/s1600/Tweaking-Technicians-Toolbox.jpg)
+	
 Many of the tools have been built with making certain repair, cleanup and tasks easier, faster and better.
 
 More and more tools will be added to the program over time. Many of the tools have so many options, control and features that they could have been full programs on their own. But the goal was to have everything in one spot.
@@ -55,6 +57,8 @@ Here are just some of the tools in the program. Also note that the program has f
 * Drives Monitor
 * Memory Monitor
 * Network Monitor	
+
+PACKAGING NOTE: Uninstall is NOT silent.
 	</description>
     <releaseNotes></releaseNotes>
   </metadata>
