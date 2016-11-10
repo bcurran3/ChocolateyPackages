@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>change-dns-servers</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/change-dns-servers</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Tweaking.com - Change DNS Servers (Portable)</title>
+    <authors>Tweaking.com</authors>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <projectUrl>http://www.tweaking.com/content/page/tweaking_com_change_dns_servers.html</projectUrl>
+	<mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>tweaking.com change dns google opendns portable</tags>
+    <summary>A program to easily change your DNS to Google or OpenDNS.</summary>
+    <description>
+This program can be used to easily set your computers DNS servers.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
