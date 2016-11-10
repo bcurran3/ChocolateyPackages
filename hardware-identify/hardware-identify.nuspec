@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hardware-identify</id>
+    <version>2.1.1</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hardware-identify</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Tweaking.com - Hardware Identify (Install)</title>
+    <authors>Tweaking.com</authors>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <projectUrl>http://www.tweaking.com/content/page/tweaking_com_hardware_identify.html</projectUrl>
+	<mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
+	<bugTrackerUrl>http://www.tweaking.com/content/page/tweaking_com_hardware_identify.html</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>tweaking.com hardware identify driver drivers admin notsilent</tags>
+    <summary>A program to identify and give information about your drivers.</summary>
+    <description>
+Tweaking.com - Hardware Identify will help identify unknown hardware on your system. This program does not help you download drivers but helps let you know what the hardware is so you know what drivers to find.
+
+For example say you just reinstalled a computer and the device manager shows multiple unknown hardware with no drivers installed. Well you don't know what drivers to find since you don't know what the hardware is. Now with Tweaking.com - Hardware Identify you can see what that hardware is.
+
+The program also has a easy option to help improve the device database. Once you have all drivers installed you can have the program check for any hardware on the system that isn't in the database and submit it to Tweaking.com. With in a few days the database will be updated and the device list will grow with the help of users like you!
+
+PACKAGING NOTE: Uninstall is NOT silent.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
