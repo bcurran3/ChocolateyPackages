@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>remote-desktop-ip-monitor-and-blocker</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/remote-desktop-ip-monitor-and-blocker</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Remote Desktop IP Monitor and Blocker (Install)</title>
+    <authors>Tweaking.com</authors>
+    <projectUrl>http://www.tweaking.com/content/page/remote_desktop_ip_monitor_blocker.html</projectUrl>
+    <copyright>© 2016 Tweaking.com</copyright>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+	<mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>tweaking.com Remote Desktop IP Monitor Blocker admin notsilent</tags>
+    <summary>Tweaking.com - Remote Desktop IP Monitor and Blocker is a free tool to monitor any IP that tries to connect to the remote desktop.</summary>
+    <description>
+I made this program after seeing brute force attacks on a customers server who had remote desktop enabled and open to the internet. The attacks were trying to brute force the password for the administrator account.
+
+The Windows Event Viewer was not showing which IP address the connections were coming from. They were also coming from multiple locations and hitting at random times during the day and night. So tracking them down with the built in Windows tools was going nowhere.
+
+This that will monitor and log any IP that hits the remote desktop and to be able to block those IP's. 
+
+The program will monitor the remote desktop port using the Windows netstat API and keep them in a log for later viewing. The program has a built in block IP tool to easily block any IP address. It does this by using the built in Windows IP Security Policy (IPSec). The drawback is, theprogram can only block IP's, but can not unblock them. To unblock them I have included a guide here: How to remove IP's from the Windows IP Security (IPSec) Added by the Tweaking.com - Block IP Tool
+
+Even though this tool was built for watching the remote desktop port you can use it to watch any single port on the system. So if you have another kind of server running and the port open to the internet you can now log any IP that hits it.
+
+PACKAGING NOTE: Uninstall is NOT silent.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
