@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>kill-frozen-programs</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/change-dns-servers</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Tweaking.com - Kill Frozen Programs (Portable)</title>
+    <authors>Tweaking.com</authors>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <projectUrl>http://www.tweaking.com/content/page/kill_frozen_programs.html</projectUrl>
+	<mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>tweaking.com kill terminate frozen locked hung util utility system portable</tags>
+    <summary>A program to easily terminate frozen programs.</summary>
+    <description>
+This little program was made with fellow gamers in mind. There have many many games that I have played that will crash or lock up. The problem is when they would do this the game window would stay open, and you can't get back to the desktop. Nothing I did could get the desktop to come back, even ctrl + Alt + Delete wouldn't get the task manger to open. This is because the game was set to be on top of everything else. So the only option was restart the computer.
+
+Now with this tool I can hit the Global Keys on my keyboard I set, the program will loop through all the processes on the system killing any that are not responding. Now I can get back to the desktop when a game crashes, and no longer have to reboot.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
