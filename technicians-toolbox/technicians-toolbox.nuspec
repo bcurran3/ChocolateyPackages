@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>technicians-toolbox</id>
+    <version>1.2.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/technicians-toolbox</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Technicians Toolbox Free/Pro (Install)</title>
+    <authors>Shane Croft of Tweaking.com</authors>
+    <projectUrl>http://www.tweaking.com/content/page/tweaking_com_technicians_toolbox.html</projectUrl>
+    <iconUrl>http://www.tweaking.com/files/tt_logo.png</iconUrl>
+    <copyright>Copyright (c) 2011 - 2016 Tweaking.com - All Rights Reserved</copyright>
+    <licenseUrl>http://www.tweaking.com/articles/pages/tweaking_com_technicians_toolbox_buy_pro,1.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://tweaking.com/files/technicians_toolbox_help/table_of_contents.htm</docsUrl>
+    <bugTrackerUrl>http://www.tweaking.com/content/page/tweaking_com_technicians_toolbox.html</bugTrackerUrl>
+    <tags>tweaking.com technicians toolbox admin</tags>
+    <summary>Tweaking.com - Technicians Toolbox is a collection of powerful tools to help both the technician and home users.</summary>
+    <description>
+Many of the tools have been built with making certain repair, cleanup and tasks easier, faster and better.
+
+More and more tools will be added to the program over time. Many of the tools have so many options, control and features that they could have been full programs on their own. But the goal was to have everything in one spot.
+
+Instead of repeating all of the tools and what they can do, you can view the online help for the program. You can also view the tips and tricks section of the help file to see a few of the little extra features added to the program.
+Tweaking.com - Technicians Toolbox Online Help File
+
+Here are just some of the tools in the program. Also note that the program has full Unicode support!
+
+* Quick Tools (Windows Built-in Tools)
+* Take A Screen Shot
+* Check Disk (chkdsk) At Next Boot
+* Run As System Account
+* Netstat
+* Network Information
+* Static IPv4
+* TCP and UDP Stats
+* IP Subnet Calculator
+* IP Address Scanner
+* Manage Windows Users
+* Manage Users
+* Create New Windows User
+* User Account Properties
+* Manage Groups
+* Create New Windows Group
+* Group Properties
+* Bulk Manage Users Tool
+* Delete, Move Or Rename Locked Files At Bootup
+* Svchost.exe Lookup
+* Process Information
+* Windows Services
+* Windows Services Safe Mode
+* Windows Shutdown Timer
+* CPU Monitor
+* Drives Monitor
+* Memory Monitor
+* Network Monitor	
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
