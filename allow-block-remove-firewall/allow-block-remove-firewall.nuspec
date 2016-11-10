@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>allow-block-remove-firewall</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allow-block-remove-firewall</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Tweaking.com - (Right Click) Allow, Block or Remove - Windows Firewall (Portable)</title>
+    <authors>Tweaking.com</authors>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <projectUrl>http://www.tweaking.com/content/page/tweaking_com_(right_click)_allowblock_or_remove_windows_firewall.html</projectUrl>
+	<mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>tweaking.com windows firewall util utility</tags>
+    <summary>A program to easily add, block, or remove programs in Windows Firewall.</summary>
+    <description>
+The point of this program is to make adding/removing programs to/from your Windows firewall easier than ever.
+
+This program will add a right click option to all .exe and .com programs, allowing you to allow, block or remove a program from the Windows firewall in 1 click.
+
+But as the rest of my programs I have gone an extra step, "Shane" style if you will :-D
+
+When you add a program to the firewall, all rules that have the same file path will be removed first and then a new single rule is added.
+This can greatly help when a user has multiple different rules for a program and they don't realize it.
+A lot of times those rules can conflict and create problems.
+Now all those extra rules are removed during the process.
+
+Also when you allow a program through the firewall the settings in the rule are to allow any protocol, any port and allow edge transport.
+Basically the settings in the rule are to let the program be fully allowed through.
+
+Aside from allowing programs through you can also block them if need be.
+Same thing happens, all current rules that point to the same program are removed and a single new rule is added that blocks the program on every protocol and every port.
+
+And just for those users who like to keep things clean, there is also an option to remove all rules for a program from the firewall.
+Nice feature to have when you are uninstalling a game or program and don't want the rules in the firewall any more.
+
+All 3 of these options are just 1 click.
+
+You can also select multiple .exe and .com files at once to make things even faster. All done through Windows Explorer.
+
+
+How TO INSTALL:
+
+Extract all files from the zip folder. Make sure to save them in a folder that wont be moved or deleted. (Chocolatey will do this for you.)
+
+Once extracted run the Right_Click_Options.exe in the extracted folder and then in that program click on "Add Right Click Menu".
+
+That's it! That will add the right click menu options to all .exe and .com files. Nothing is installed or written anywhere else.
+
+To uninstall just run Right_Click_Options.exe again and click "Remove Right Click Menu" and then simply delete all the files in the program folder.
+
+If for any reason you move the files to a new folder you need to run the "Add Right Click Menu" option again so the registry keys will be updated with the new file paths.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
