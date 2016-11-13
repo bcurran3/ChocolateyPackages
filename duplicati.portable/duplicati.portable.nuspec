@@ -4,7 +4,7 @@
   <metadata>
     <id>duplicati.portable</id>
     <version>2.0.1.30</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/duplicati</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/duplicati.portable</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Duplicati (Portable)</title>
     <authors>Kenneth Skovhede and Rene Stach</authors>
