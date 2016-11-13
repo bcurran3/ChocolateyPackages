@@ -5,6 +5,7 @@
     <id>-plex</id>
     <version></version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
     <title> for Plex</title>
     <authors></authors>
     <projectUrl></projectUrl>
