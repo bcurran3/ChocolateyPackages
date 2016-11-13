@@ -7,6 +7,7 @@
     <title> for Firefox</title>
     <authors></authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
     <licenseUrl></licenseUrl>
     <projectUrl>https://addons.mozilla.org/en-US/firefox/addon/</projectUrl>
     <iconUrl></iconUrl>
