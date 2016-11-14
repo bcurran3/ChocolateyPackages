@@ -15,6 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.exclaimer.com/outlook-photos/videos</docsUrl>
     <mailingListUrl>https://www.exclaimer.com/outlook-photos/support</mailingListUrl>
+	<bugTrackerUrl>https://www.exclaimer.com/outlook-photos/version-history</bugTrackerUrl>
     <tags>exclaimer outlook photos ad active directory admin</tags>
     <summary>Get Peoples Pictures in Outlook, Sharepoint and Skype easily.</summary>
     <description>
@@ -47,6 +48,9 @@ Batch-Import - Whether it's a network folder, flash drive or some other containe
 No Changes Required - Outlook Photos is simply an import tool – we've packed in all kinds of capabilities and functionality we think you'll need, but we never ask you to make adjustments to Exchange, Outlook or any of your resources.
 	</description>
     <releaseNotes></releaseNotes>
+	<dependencies>
+	      <dependency id="dotnet3.5" />
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
