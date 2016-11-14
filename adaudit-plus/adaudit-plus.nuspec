@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>adaudit-plus</id>
+    <version>5.0.5010</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adaudit-plus</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>ManageEngine ADAudit Plus Free + Trial (Install)</title>
+    <authors>ZOHO Corp.</authors>
+    <projectUrl>https://www.manageengine.com/products/active-directory-audit/</projectUrl>
+    <iconUrl>https://www.manageengine.com/images/me-logo.png</iconUrl>
+    <copyright>(C) 2016 ZOHO Corp.</copyright>
+    <licenseUrl>https://www.manageengine.com/products/active-directory-audit/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.manageengine.com/products/active-directory-audit/document.html</docsUrl>
+    <mailingListUrl>https://www.manageengine.com/products/active-directory-audit/support.html</mailingListUrl>
+    <bugTrackerUrl>https://www.manageengine.com/products/active-directory-audit/adaudit-plus-release-notes.html</bugTrackerUrl>
+    <tags>manageengine adaudit plus ad active directory audit admin</tags>
+    <summary>Real-time Windows Active Directory auditor.</summary>
+    <description>
+##REAL-TIME WINDOWS ACTIVE DIRECTORY AUDITING
+
+In real-time, ensure critical resources in the network like the Domain Controllers are audited, monitored and reported with the entire information on AD objects - Users, Groups, GPO, Computer, OU, DNS, AD Schema and Configuration changes with 200+ detailed event specific GUI reports and email alerts.	
+
+###Insider Threats
+Unearth the telltale signs of an insider attack. For a given account, extract a consolidation of 3 audit trails -- user actions in AD, access reports, and permission change reports. The audit trail offers a context which makes spotting the insider easier. Also, you get to instantly learn which computers a user compromised and the changes.
+ 
+###User Logon
+Monitor user logon activity in real-time on Domain Controllers with pre-configured audit reports and email alerts. Audit reports ensure the administrator knows the reason behind users’ logon failures, login history, terminal services activity, and users’ recent logon activities across the Windows server network.
+ 
+###Compliance
+SMBs or Large organizations have to comply with industry specific Compliance Acts like SOX, HIPAA, GLBA, PCI-DSS, FISMA…. With our Compliance specific pre-configured reports and real-time alerts, we ensure your Windows network is under 24/7 audit with periodic security reports and email alerts as standard procedure.
+ 
+###Reports and Alerts
+Choose from the 200+ schedulable pre-configured audit reports; create custom reports, set profile based reports and report from archived data for forensics. In real-time, track Windows AD object changes (Users, OU, Groups, GPO, Computer, Schema, DNS and System) and get email alerts on unauthorized network access / modification events.
+ 
+###Data Archiving
+Run periodic archiving of audited events data to save on disk space. View reports from past events like Active Directory user logon history, password change history and more from the Active Directory archived audit data for computer forensics or compliance. The audited reports can be exported to xls, csv, pdf and excel formats.
+ 
+###GPO Settings
+Audit and Report on the GPO changes to the Windows Active Directory and Windows Servers; In-depth advanced tracking of the Group Policy Objects new and old values, configuration, password policy and settings changes and meet regulatory IT network security and various Compliance requirements.
+
+ManageEngine ADAudit Plus comes as a Single download file for all editions. When you install the product, the Professional Edition is installed, and will work for 30 days. After 30 days, it will automatically revert to Free Edition, unless the Standard or Professional Edition license is purchased. Check out the various editions of ADAudit Plus.
+
+###Free
+* Free edition never expires.
+* Complimentary 25 Workstations audit.
+* No fresh data will be collected after 30 days (excludes Workstations).
+* Reports generation from event log data collected during evaluation / license period.
+* 24x5 Live technical support.
+
+###Trial Edition
+* Fully functional for 30 days from the date of installation.
+* Event log data audited from: 5 Domain Controllers / 2 File Servers / 1 NetApp Filer / 10 Member Servers / 100 Workstations.
+* 24x5 Live technical support.
+
+###Standard Edition
+* Fully functional for the license term.
+* Event log data audited from licensed number of Domain Controllers / File Servers / Member Servers / NetApp Filers / Workstations.
+* 24x5 Live technical support.
+
+###Professional Edition
+* All Standard Edition features.
+* Group Policy Settings Audit.
+* Old and New Value of all Attribute Changes of AD Objects.
+* Old and New Value of Permission Changes for OU / Users / Group / Computer / GPO.
+* Support for MS SQL Server as backend database.
+* 24x5 Live technical support.
+
+PACKAGING NOTE: Uninstall is not silent.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
