@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>address-tagging-exchange</id>
+    <version>1.0.1</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/address-tagging-exchange</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Exclaimer Address Tagging for Exchange (Install)</title>
+    <authors>Exclaimer Limited</authors>
+    <projectUrl>https://www.exclaimer.com/address-tagging-for-exchange/</projectUrl>
+    <iconUrl>https://a8b03ffbc00ed4da54a1-0c6684360696717b63d89dbc0edb802c.ssl.cf1.rackcdn.com/exclaimer-logo_192x41.png</iconUrl>
+    <copyright>Copyright (C) 2001-2014 Exclaimer Ltd</copyright>
+    <licenseUrl>https://www.exclaimer.com/address-tagging-for-exchange/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.exclaimer.com/address-tagging-for-exchange/videos</docsUrl>
+    <mailingListUrl>https://www.exclaimer.com/address-tagging-for-exchange/support</mailingListUrl>
+    <tags>exclaimer address tagging exchange server disposable corporate email e-mail admin</tags>
+    <summary>Create and manage any number of disposable email addresses for free using unique tags in Exchange.</summary>
+    <description>
+![Screenshot example of using Address Tagging for Exchange](https://e1fb6cb20426c9f446d7-c189afbaf93f5496308e0de3fd0efbd4.ssl.cf1.rackcdn.com/eat-step-2_460x243.jpg)	
+
+Exclaimer Address Tagging for Exchange 2016/2013/2010/2007 is the only free software of its kind to allow users to create any number of disposable email addresses for Exchange.
+
+Add plus or dash tags to corporate email addresses to let users easily identify who they are giving their email to.
+
+When this unique address receives an email, the software removes the tag and processes the email via Exchange as normal.
+
+Users can create rules for any unsolicited email or simply delete the temporary address to stop receiving any more unwanted messages.
+
+Use temporary email addresses for web forms, making a purchase, service registrations and much more.
+
+Email addresses all use the same corporate domain, so important emails will not get caught in anti-spam filters.
+
+No need to utilize any free online tools to create disposable email addresses, which run the risk of including malware and viruses.	
+
+###Why would you need a temporary email address?
+
+All online purchases, products or services require a valid email address. This leaves your email inbox at risk of spam, marketing junk and unimportant messages that waste your time. Even worse, there’s a danger of receiving malware, viruses or becoming the victim of online abuse. Dedicated email address tagging software is perfect for when you:
+
+* Need to sign up to a website but you’re worried that your email address might get shared with third-party advertisers.
+* Are required to provide an email address to a mobile app that shouldn’t be sending you messages.
+* Make a one-off purchase on an e-commerce site and you don’t want to receive follow-up spam emails about their latest offers.
+* Publish your email address in a location like a forum where it could be picked up by address-harvesting spam bots or phishing software.
+* Give out your address to companies that are known for having poor levels of online security.
+* Effectively eliminate the threat of unsolicited emails from third parties and drastically reduce the quantity of junk emails your organization receives.
+
+###How does it work?
+1. A user purchases an item online from www.thinkboxart.com.
+2. At the checkout, they are asked to provide their email address, which is john.doe@mycompany.com.
+3. A unique tag is chosen to help easily identify the site that the user is giving their email address to e.g. “thinkboxart”.
+4. A tag can be made up of any combination of alphanumeric characters.
+5. The email address will now be either: john.doe+thinkboxart@mycompany.com or john.doe--thinkboxart@mycompany.com.
+
+###Stop spam dead in its tracks
+
+* Get total protection against all spam emails when you use Exclaimer Address Tagging for Exchange with Exclaimer Anti-spam.
+* Users will be able to stop any unsolicited email, while the Recurrent Pattern Detection® engine from CYREN® compares every email your organization receives via Exchange against the current global spam traffic trends.
+
+PACKAGING REMINDER: Will only install on Exchange Servers with Hub Transport, Edge Transport, or Mailbox Role installed.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+<!--   <dependency id="msexchange" /> -->
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
