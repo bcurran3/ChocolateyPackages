@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>exchange-reporter-plus</id>
+    <version>5.1.5170</version>
+    <packageSourceUrl>https://www.manageengine.com/products/exchange-reports/exchange-reporter-plus</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>ManageEngine Exchange Reporter Plus Free + Evaluation Edition (Install)</title>
+    <authors>ZOHO Corp.</authors>
+    <projectUrl>https://www.manageengine.com/products/active-directory-audit/</projectUrl>
+    <iconUrl>https://www.manageengine.com/images/me-logo.png</iconUrl>
+    <copyright>Copyright©2013 ZOHO Corp. All rights reserved</copyright>
+    <licenseUrl>https://www.manageengine.com/products/exchange-reports/license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.manageengine.com/products/exchange-reports/document.html</docsUrl>
+    <mailingListUrl>https://www.manageengine.com/products/exchange-reports/</mailingListUrl>
+    <bugTrackerUrl>https://www.manageengine.com/products/exchange-reports/release-notes.html</bugTrackerUrl>
+    <tags>manageengine exchange server reporter audit admin</tags>
+    <summary>An Exchange reporting tool.</summary>
+    <description>
+##What is Exchange Reporter Plus?
+
+FREE for 25 mailboxes.
+Evaluation Edition expires in 60 days for unrestricted amount of mailboxes.
+
+Microsoft Exchange Server is, by and large the most popular communication, collaboration and email messaging application today. Microsoft Exchange serves as the hub of all email communications in most corporate environments that use the Active Directory technology. It becomes a necessity to have an Exchange reporting tool that will equip an Exchange Administrator with precise, granular, comprehensive and actionable data on all aspects of the MS Exchange Server.
+
+ManageEngine Exchange Reporter Plus is a web-based analysis and reporting solution for Microsoft Exchange Servers. Exchange Reporter Plus is a comprehensive MS Exchange reporting software that provides over 100 different reports on every aspect of the Microsoft Exchange Server environment.
+
+###What problems does it solve?
+
+* Track incoming and outgoing email message, monitor mailbox size, perform Exchange traffic analysis and keep spam away from Active Directory mailboxes with Mailbox Traffic, Mailbox Content, and Mailbox Size Reports.
+* Access real-time monitoring reports on Exchange database and server; ensure Exchange health and smooth functionality of server roles.
+* Keep up with ActiveSync traffic in your organization by obtaining elaborate reports on ActiveSync usage, sync requests, policy details, status information and device details.
+* Keep a tab on the number of messages sent and received by each Exchange server using Server Traffic Reports.
+* Monitor the vital statistics of Exchange Server Public Folders with comprehensive Public Folder Reports.
+* Generate reports on Distribution Lists and also show the traffic for each distribution by running Distribution Lists Traffic Report!
+
+##What features does it offer?
+
+###Reporting
+* Mailbox Size Reports
+* Office 365 Reports
+* E-Mail Traffic Reports
+* Mailbox Content Reports
+* Outlook Web Access (OWA) Reports
+* Server Storage Reports
+* ActiveSync/Mobile Device Reports
+* Distribution List Reports
+
+###Monitoring
+* Service Monitoring
+* E-Mail Queue Monitoring
+* Client Access Connectivity (ActiveSync, OWA, POP, IMAP, etc.)
+* E-Mail flow Monitoring
+* Storage Monitoring (Mailboxes, Databases, and Drives)
+* DAG or High Availability Monitoring
+
+###Auditing
+* Real Time Change Auditing
+* Unauthorized Mailbox Logins
+* Mailbox Permission Changes
+* Mailbox Properties Changes
+* User Actions on Exchange Databases
+* Mailboxes Moved Report
+	
+###Real Time Change Auditing
+	
+Experience enhanced security and be informed about any unauthorized mailbox logon attempts or changes made to mailbox permissions with Exchange server audit reports.
+
+With the Exchange Server Auditing feature you can,
+
+* Monitor user logon patterns
+* Obtain reports on stores mounted or dismounted during a particular time frame
+* Probe into changes in mailbox permissions
+* Obtain complete list of access control entries values after and before the change in setting
+* Keep tabs on mailbox property changes such as quota changes, size restriction changes, activated mailboxes, deactivated ones and moved mailboxes.
+
+Exchange Reporter Plus presents these reports in an easily comprehensible format, that even technically naive users can create and interpret. In addition to generating these reports in the blink of an eye, one can also export these reports. The reports can be downloaded as xls, csv, pdf or html files for further activities. Try Exchange Reporter Plus hands-on in our Live Demo!
+
+##Exchange Monitoring – Storage, Email, Database, Service, and more…
+
+Retrieve data on health and status of components and functionality. Get one-stop overview of the entire Exchange organization.	
+
+PACKAGING NOTE: Uninstall is not silent.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="dotnet3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
