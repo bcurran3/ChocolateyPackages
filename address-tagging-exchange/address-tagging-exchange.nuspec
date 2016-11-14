@@ -15,6 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.exclaimer.com/address-tagging-for-exchange/videos</docsUrl>
     <mailingListUrl>https://www.exclaimer.com/address-tagging-for-exchange/support</mailingListUrl>
+    <bugTrackerUrl>https://www.exclaimer.com/address-tagging-for-exchange/version-history</bugTrackerUrl>	
     <tags>exclaimer address tagging exchange server disposable corporate email e-mail admin</tags>
     <summary>Create and manage any number of disposable email addresses for free using unique tags in Exchange.</summary>
     <description>
@@ -60,8 +61,10 @@ All online purchases, products or services require a valid email address. This l
 PACKAGING REMINDER: Will only install on Exchange Servers with Hub Transport, Edge Transport, or Mailbox Role installed.
 	</description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-<!--   <dependency id="msexchange" /> -->
+	<dependencies>
+<!--   <dependency id="msexchange" /> -->	
+      <dependency id="dotnet3.5" />	
+      <dependency id="dotnet4.5" />	
     </dependencies>
   </metadata>
   <files>
