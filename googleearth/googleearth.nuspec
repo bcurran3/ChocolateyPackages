@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>googleearth</id>
+    <version>7.1.7.2602</version>
+    <packageSourceUrl>https://www.manageengine.com/products/exchange-reports/googleearth</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Google Earth (Install)</title>
+    <authors>Google</authors>
+    <projectUrl>https://www.google.com/earth/explore/products/desktop.html</projectUrl>
+    <iconUrl>https://www.google.com/earth/images/products_desktop.png</iconUrl>
+    <copyright></copyright>
+    <licenseUrl>https://www.google.com/intl/en/policies/terms/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.google.com/earth/?hl=en#topic=4363013</docsUrl>
+    <mailingListUrl>https://plus.google.com/u/0/+GoogleEarth</mailingListUrl>
+    <bugTrackerUrl>https://support.google.com/earth/answer/40901</bugTrackerUrl>
+    <tags>googleearth google earth  maps admin</tags>
+    <summary>View satellite imagery, maps, terrain, 3D buildings, galaxies far in space, and the deepest depths of the ocean.</summary>
+    <description>
+##Google Earth
+
+Use Google Earth on the desktop to travel anywhere without leaving your desk. For additional advanced tools, use Google Earth Pro for no extra charge.
+
+Explore the world with Google Earth.
+
+* Explore rich geographical content
+* Zoom from outer space to street level
+* Search for business locations
+* Visualize your GPS tracks and share with others
+* Fly around cities (or the entire world) in 3D
+* Go back in time with historical imagery
+* Dive beneath the surface of the ocean	
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
