@@ -9,7 +9,7 @@ $packageArgs = @{
   url           = $url
   silentArgs   = '/SP- /VERYSILENT /SUPPRESSMSGBOXES /CLOSEAPPLICATIONS' 
   softwareName  = 'DriverMax*' 
-  checksum      = '80FB64567A25C1A2EF45F0FA4DD892AB887EB44131EC6D89B2E449906D7041AA'
+  checksum      = '5DF136266CD61ED8D85A6E343B0E7A6C64C5321823189CCC3D08FCAA4C111DE7'
   checksumType  = 'sha256'
   }
 Install-ChocolateyPackage @packageArgs
