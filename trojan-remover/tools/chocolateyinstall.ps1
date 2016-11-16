@@ -2,6 +2,7 @@
 $packageName    = 'trojan-remover'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://tremover.com/download/dl/trjsetup694.exe' 
+$checksum       = '2BC762252105B34EAE04A6000CBEDA65874D93345BD533B8E0128877E6DDCB3C'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
 $validExitCodes = @(0) 
 
@@ -13,7 +14,7 @@ $packageArgs = @{
   silentArgs    = $silentArgs  
   validExitCodes= $validExitCodes
   softwareName  = 'Trojan Remover*'
-  checksum      = '45077CA86B1B528AF7A65877A9431BC93957778E9BB472E0E5226D0CC84871C4'
+  checksum      = $checksum
   checksumType  = 'sha256'   
 }
 
