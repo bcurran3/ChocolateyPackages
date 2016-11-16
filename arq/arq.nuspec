@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.1.45</version>
+    <version>5.3.9</version>
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
     <authors>Haystack Software LLC</authors>
