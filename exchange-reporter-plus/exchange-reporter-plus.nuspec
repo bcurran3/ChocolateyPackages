@@ -4,7 +4,7 @@
   <metadata>
     <id>exchange-reporter-plus</id>
     <version>5.1.5170</version>
-    <packageSourceUrl>https://www.manageengine.com/products/exchange-reports/exchange-reporter-plus</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/exchange-reporter-plus</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>ManageEngine Exchange Reporter Plus Free + Evaluation Edition (Install)</title>
     <authors>ZOHO Corp.</authors>
