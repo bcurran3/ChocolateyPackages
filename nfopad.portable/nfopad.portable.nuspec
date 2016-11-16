@@ -3,7 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nfopad.portable</id>
-    <version>1.71</version>
+    <version>1.72</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nfopad.portable</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>NFOPad (Portable)</title>
     <authors>Anders Nivfors</authors>

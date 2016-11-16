@@ -2,18 +2,18 @@
 $packageName= 'nfopad'
 $installerType = 'exe'
 $silentArgs = '/S'
-$url        = 'http://truehumandesign.se/download/nfopad171.exe'
+$url        = 'http://truehumandesign.se/download/nfopad172.exe'
+$checksum   = 'A0ABA03BADFAE16A0D5DA0C5055591356F04768BBDAA31A4A817810E276D1AB4'
 $validExitCodes= @(0)
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 
 $packageArgs = @{
   packageName   = $packageName
-#  unzipLocation = $toolsDir
   fileType      = 'EXE' 
   url           = $url
   softwareName  = 'NFOPad*' 
-  checksum      = '977D05B371DBD9AE3455A445B2FA32E56117BC3334F731E9243C1A13FF6E9847'
+  checksum      = $checksum
   checksumType  = 'sha256'
   silentArgs    = $silentArgs
   validExitCodes= $validExitCodes
