@@ -1,15 +1,16 @@
 ﻿$packageName= 'plexpy' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://codeload.github.com/JonnyWong16/plexpy/zip/master'
+$url        = 'https://github.com/JonnyWong16/plexpy/archive/v1.4.15.zip'
+$checksum   = 'A9D44A3470FCACEF2373C2DE38A094608802DBC374D391459B912984E891C1B5'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = 'B904FA5526E1E2877DBF8A2210BF7FECA60BE633C5CD05805B8763C82579F6FB'
+  checksum      = $checksum
   checksumType  = 'sha256'   
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\PlexPy.lnk" -targetPath "$env:ChocolateyInstall\lib\$packageName\tools\plexpy-master\plexpy.py"
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\PlexPy.lnk" -targetPath "$env:ChocolateyInstall\lib\$packageName\tools\plexpy-1.4.15\plexpy.py"
