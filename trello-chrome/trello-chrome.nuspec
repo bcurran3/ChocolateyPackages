@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>trello-chrome</id>
+    <version>0.0.48</version>
+    <title>Trello for Chrome</title>
+    <authors>Trello, Inc.</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trello-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/trello/dmdidbedhnbabookbkpkgomahnocimke</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/ktNrjxSj1fHm2rd7hrls2Zl2IyJFNBzSA1ZSZ3r26JEbscLUTKYnnJWQSKj_Xanewo-jvrXwHxA=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###Quickly create Trello cards and access your Trello boards from the Omnibox.
+
+Create Trello cards directly from Chrome without ever going to Trello and hunting down the board and the list.
+
+Access your boards as easily as you can search Google. Go to the address bar, enter t followed by a space and then start typing the name of the board you want. Handy.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>Trello extension for Chrome</summary>
+    <tags>trello chrome extension admin</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
