@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>gsuite-sync-outlook</id>
+    <version>3.8.440.1250</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-sync-outlook</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>G Suite Sync for Microsoft Outlook (Install)</title>
+    <authors>Google</authors>
+    <projectUrl>https://tools.google.com/dlpage/gappssync</projectUrl>
+    <copyright>Google</copyright>
+    <licenseUrl>https://gsuite.google.com/terms/standard_terms.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.google.com/a/answer/150403</docsUrl>
+	<!--<docsUrl2>https://support.google.com/a/users/answer/153872</docsUrl2> -->
+    <mailingListUrl>https://productforums.google.com/forum/#!forum/apps</mailingListUrl>
+    <bugTrackerUrl>https://support.google.com/a/answer/153463</bugTrackerUrl>
+    <tags>gssmo gsuite gapps google migration sync outlook admin</tags>
+    <summary>Tool to migrate your Outlook data to G Suite (formerly GApps).</summary>
+    <description>
+##What is GSSMO?
+
+G Suite Sync for Microsoft Outlook is a Microsoft Outlook plug-in that lets you use Microsoft Outlook as a client for G Suite email, calendar, and contacts. Email, calendar events (including recurring meetings), and contacts are all synchronized between G Suite and Microsoft Outlook. Outlook Notes are synced with Google Docs. Outlook Tasks are synced with your Gmail task gadget. And your organization's global address list is automatically synchronized, as well. This includes your G Suite users, groups, shared contacts, and conference rooms, and provides contact look-up as well as free/busy information for users and conference rooms.
+
+Beta feature: Synchronizing Outlook Notes and Tasks with G Suite are currently Beta release features.
+
+Data synchronization occurs on the following schedule (and also each time you start Outlook):
+
+* Email: Every minute
+* Calendar: Immediately after you create or receive a meeting invitation, or every 10 minutes
+* Contacts: Every 20 minutes
+* Global address list: Every 24 hours
+* Notes:  Immediately after creating or changing a note, or every 60 minutes 
+* Tasks: Every 2 hours
+
+####Importing: 
+GSSMO also lets users import data from Outlook to G Suite—either when initially setting up their user profile in Outlook, or any time afterwards. When importing, people have the option to import directly from an Exchange account or from a PST file. Keep in mind that executables and attachments over 25 MB are not imported to Gmail, as per G Suite restrictions. See below for details.
+
+For information about which Microsoft Outlook features are supported and how using this service differs from using Microsoft Outlook with other mail systems such as Microsoft Exchange, see the GSSMO user help.
+
+####System requirements: 
+* Requires G Suite, G Suite for Education, or G Suite for Government
+* Windows XP (32 bit) SP3 
+* Windows Vista (32 bit) SP1 
+* Windows Vista (64 bit) SP1 
+* Windows 7 (32 and 64 bit) 
+* Windows 8 (32 and 64 bit) 
+* Windows 10 (32 and 64 bit)
+* Microsoft Outlook 2003® SP3 
+* Microsoft Outlook 2007® SP2 (or SP1 with hotfix) 
+* Microsoft Outlook 2010® (32 and 64 bit) 
+* Microsoft Outlook 2013® (32 and 64 bit) 
+* Microsoft Outlook 2016® (32 and 64 bit)
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
