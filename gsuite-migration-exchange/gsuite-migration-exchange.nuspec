@@ -6,7 +6,7 @@
     <version>5.0.30.10</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-migration-exchange</packageSourceUrl>	
     <owners>bcurran3</owners>
-    <title>Google Apps Migration for Microsoft Exchange (Install)</title>
+    <title>G Suite Migration for Microsoft® Exchange (Install)</title>
     <authors>Google</authors>
     <projectUrl>https://tools.google.com/dlpage/exchangemigration</projectUrl>
     <copyright>Google</copyright>
@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.google.com/support/enterprise/static/gapps/docs/admin/en/gapps_exchange_migration/index.html</docsUrl>
     <bugTrackerUrl>https://support.google.com/a/answer/162794</bugTrackerUrl>	
-    <tags>google gsuite gapps migration exchange server admin</tags>
+    <tags>gsmme google gsuite gapps migration exchange server admin</tags>
     <summary>Tool for migrating from Microsoft Exchange to G Suite (formerly GApps)</summary>
     <description>
 ##Google Apps Migration for Microsoft® Exchange
