@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>checkerplusforgmail-chrome</id>
+    <version>19.3.2.1</version>
+    <title>Checker Plus for Gmail™ for Chrome</title>
+    <authors>Jason Savard</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/checkerplusforgmail-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/checker-plus-for-gmail/oeopbcgkkoapgobdbedcemjljbihmemj?hl=en-US</projectUrl>
+    <iconUrl>https://lh4.googleusercontent.com/G39bQlsJZNO-LaQvUAGVqmlSO3FD5VHF0iGhC31zDRJ0EF5HU_xVBAas4CznBYyW1J4hwd2RM6s=s26-h26-e365-rw</iconUrl>
+	<bugTrackerUrl>https://jasonsavard.com/wiki/Checker_Plus_for_Gmail_changelog</bugTrackerUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://jasonsavard.com/wiki/Terms_of_Service</licenseUrl>
+    <description>
+###Get desktop notifications, read, listen or delete emails without opening Gmail or Inbox by Gmail and easily manage multiple accounts.
+• The fastest and easiest way to manage multiple email accounts
+• 5 star extension with great reviews!
+• Trusted developer of many extensions
+• 1 million satisfied users worldwide
+• Lots of features, options and updates
+• Extensive FAQs and personal tech support with very quick responses
+• Safer. Requires minimal permissions and only access to Google Mail's website
+• Can be used as an FVD Speed Dial widget
+Click "Website" or visit jasonsavard.com for more info.
+
+• Extra features are available upon contributing "any" amount.
+
+• Supports "Inbox by Gmail"
+
+• Uses Material Design
+
+• I'll add your suggestions
+
+• See the people emailing you just like in the Gmail chat notification, with an option to show their contact photos or your assigned photos for them.
+
+• Voice notification: If you get an email while you're busy watching a movie or cooking dinner this extension can optionally read it out loud ie. "Jason says, dinner at my place". It's great for the visually impaired.
+
+• Option to monitor any Gmail or custom labels
+
+• Option to run in this notifier in the background when Google Chrome is closed and still get new email alerts
+
+• Popup mail preview window to read, archive, mark as read or delete emails without leaving the current tab (or option to go directly to your Gmail tab)
+
+• Supports the offline view
+
+• Can also be used as a widget for the extension "Awesome New Tab Page" (ANTP) which supports multiple accounts
+
+• Desktop sound or voice notifications when new mail arrives (or add your own sounds)
+
+• Support for multiple Gmail and Google Apps accounts
+
+• You change the generated voice by adding TTS (text to speech) voice extensions
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>jasonsavard checker plus gmail chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
