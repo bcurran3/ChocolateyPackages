@@ -8,14 +8,16 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
     <projectUrl></projectUrl>
+    <bugTrackerUrl></bugTrackerUrl>	
     <iconUrl></iconUrl>
+    <licenseUrl></licenseUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
     <summary></summary>
-    <tags>chrome extension admin</tags>
+    <tags>chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>
