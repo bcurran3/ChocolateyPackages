@@ -2,14 +2,14 @@ $ErrorActionPreference = 'Stop'
 $packageName   = 'exchange-reporter-plus'
 $installerType = 'exe'
 $silentArgs    = ''
-$url           = 'https://download.manageengine.com/products/exchange-reports/54226/ManageEngine_ExchangeReporterPlus.exe' 
-$checksum      = 'C896F8AF8554CB49A12315FDFE155E4B1F101069F672CF0310B26A995038DF82'
-$url64         = 'https://download.manageengine.com/products/exchange-reports/54226/ManageEngine_ExchangeReporterPlus_64.exe' 
-$checksum64    = '989C133FE09E922236662858E4044B045EED9084A805D5FB669E7438E2952F12'
+$url           = 'https://www.manageengine.com/cgi-bin/download_exe?id=79-831-2016-11-14-09-48-54-97673' 
+$checksum      = '81653A29DC60862166366DC9B3F286D1B299DF381975C7C9F949E23FF75D1B7C'
+$url64         = 'https://www.manageengine.com/cgi-bin/download_exe?id=79-1245-2016-11-14-09-48-54-97673' 
+$checksum64    = 'EB44FD2E6D8EF63B06BDF3BC0C39DA8F5255832940CA6DFB09A060B59F6D6CA9'
 $validExitCodes= @(0)
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe        = 'AutoHotKey'
-$ahkFile       = Join-Path $toolsDir "ExchangeReporterPlusInstall.ahk"
+$ahkFile       = Join-Path $toolsDir "ERPInstall.ahk"
 
 Start-Process $ahkExe $ahkFile
 

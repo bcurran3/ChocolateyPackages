@@ -7,7 +7,7 @@ $checksum      = '15D08131DA54393BE4F875BE1B1ED159500A0F5B6B4DB45027C78D8C99358D
 $silentArgs    = ''
 $validExitCodes= @(0)
 $ahkExe        = 'AutoHotKey'
-$ahkFile       = Join-Path $toolsDir "GSMMOInstall.ahk"
+$ahkFile = Join-Path $toolsDir "GSMMOInstall.ahk"
 
 Start-Process $ahkExe $ahkFile
 
