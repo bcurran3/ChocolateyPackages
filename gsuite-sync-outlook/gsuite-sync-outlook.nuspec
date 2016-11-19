@@ -54,6 +54,9 @@ For information about which Microsoft Outlook features are supported and how usi
 * Microsoft Outlook 2016® (32 and 64 bit)
 	</description>
     <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

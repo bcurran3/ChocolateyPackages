@@ -45,6 +45,9 @@ Now you can migrate email, contacts and calendar data from Microsoft Outlook® p
 * Microsoft Outlook 2016® (32 and 64 bit)
 	</description>
     <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
