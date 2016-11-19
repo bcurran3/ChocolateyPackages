@@ -9,7 +9,7 @@ $checksum64    = 'BCFCA8B69A80CA6D071BC5BDCF9C01AB55C034CAC9F848B3B7F1ADB11C8CEF
 $validExitCodes= @(0)
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe        = 'AutoHotKey'
-$ahkFile       = Join-Path $toolsDir "ADAuditPlusInstall.ahk"
+$ahkFile = Join-Path $toolsDir "ADAPlusInstall.ahk"
 
 Start-Process $ahkExe $ahkFile
 

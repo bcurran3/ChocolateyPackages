@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>exchange-reporter-plus</id>
-    <version>5.1.5170</version>
+    <version>5.1.5171</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/exchange-reporter-plus</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>ManageEngine Exchange Reporter Plus Free + Evaluation Edition (Install)</title>
     <authors>ZOHO Corp.</authors>
-    <projectUrl>https://www.manageengine.com/products/active-directory-audit/</projectUrl>
+    <projectUrl>https://www.manageengine.com/products/exchange-reports/</projectUrl>
     <iconUrl>https://www.manageengine.com/images/me-logo.png</iconUrl>
     <copyright>Copyright©2013 ZOHO Corp. All rights reserved</copyright>
     <licenseUrl>https://www.manageengine.com/products/exchange-reports/license.html</licenseUrl>
@@ -88,6 +88,7 @@ PACKAGING NOTE: Uninstall is not silent.
     <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="dotnet3.5" />
+      <dependency id="autohotkey.portable" />	  
     </dependencies>
   </metadata>
   <files>
