@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>yakyak</id>
+    <version>1.3.3</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/yakyak</packageSourceUrl>		
+    <owners>bcurran3</owners>
+    <title>YakYak (Portable)</title>
+    <authors>Davide Bertola and Martin Algesten</authors>
+    <projectUrl>https://github.com/yakyak/yakyak</projectUrl>
+    <licenseUrl>https://github.com/yakyak/yakyak/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/yakyak/yakyak</projectSourceUrl>
+    <docsUrl>https://github.com/yakyak/yakyak/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/yakyak/yakyak/issues</bugTrackerUrl>
+    <tags>yakyak google hangouts coffeescript portable</tags>
+    <summary>Desktop client for Google Hangouts</summary>
+    <description>
+![Screenshot of YakYak](https://cloud.githubusercontent.com/assets/123929/16032313/cdba46c2-3204-11e6-912f-a72fef60563a.png)
+
+###What does it do:
+
+* Send/receive chat messages
+* Create/change conversations (rename, add people)
+* Leave/delete conversation
+* Notifications
+* Toggle notifications on/off
+* Drag-drop, copy-paste or attach-button for image upload.
+* Hangupsbot sync room aware (no bot name, proper user pics)
+* Show inline images
+* Send presence/focus/typing/activeclient to behave like a proper client
+* History scrollback
+* Video/audio integration (open in chrome)
+* Focus/typing indications (mainly a design issue. keep it clean)
+* Offer alternative color schemes
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
