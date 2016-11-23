@@ -2,10 +2,10 @@
 $packageName   = 'duplicati'
 $installerType = 'msi'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.31-2.0.1.31_canary_2016-11-03/duplicati-2.0.1.31_canary_2016-11-03-x86.msi' 
-$checksum      = '4C4A96656F6EF39514D8C49CD88E3EFF15AB81D3ACC6AF073D6770FC045204BD'
-$url64         = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.31-2.0.1.31_canary_2016-11-03/duplicati-2.0.1.31_canary_2016-11-03-x64.msi' 
-$checksum64    = '7401BA3B0A425B25E20B7E45A33A753E569D365F3A8D59AE10BEA96E8665FEB6'
+$url           = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.32-2.0.1.32_canary_2016-11-12/duplicati-2.0.1.32_canary_2016-11-12-x86.msi' 
+$checksum      = 'E6E8CE6DEB8C8331A15ACCED074F5569EFE292C851C9DC9ECBC4BE1BB6C90FC0'
+$url64         = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.32-2.0.1.32_canary_2016-11-12/duplicati-2.0.1.32_canary_2016-11-12-x64.msi' 
+$checksum64    = '01604C84828F14FBA9C24CF78C921EAB4C790D49F9294322566716FF9F1839F9'
 $silentArgs    = '/quiet /qn /norestart'
 $validExitCodes= @(0, 3010, 1641)
 
