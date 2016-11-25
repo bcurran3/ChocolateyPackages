@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>disk-wipe</id>
+    <version>1.7</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disk-wipe</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Disk Wipe (Portable)</title>
+    <authors>Wipe Soft</authors>
+    <projectUrl>http://www.diskwipe.org/</projectUrl>
+    <iconUrl>http://www.diskwipe.org/images/inset_b.gif</iconUrl>
+    <copyright>Copyright (C) 2009-2012 by Wipe Soft</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.diskwipe.org/user_guide.php</docsUrl>
+    <tags>disk wipe wiper util erase eraser DoD 5220 portable</tags>
+    <summary>Disk Wipe is Free, portable Windows application for permanent volume data destruction.</summary>
+    <description>
+![Screenshot of Disk Wipe](http://www.diskwipe.org/images/diskwipe_screen1.jpg)
+
+##What is Disk Wipe?
+
+Disk Wipe is Free, portable Windows application for permanent volume data destruction. With Disk Wipe you can erase all disk data and prevent recovery of those data. Formatting a hard drive with regular method leaves an open possibility to recover the data back. Many companies and users who just dumped their old hard drives in rubbish had found this the hard way. Disk Wipe solves this problem efficiently, using a powerful algorithms which fill the volume with useless rubbish binary data multiple times. The possibility of recovering information from drive formatted with Disk Wipe is almost non existent.
+
+Disk Wipe is released as Freeware under EULA Licence. Disk Wipe is free for personal or commercial use, without any restrictions. Disk Wipe does NOT contain adware or malware!
+
+Disk Wipe is free software, support it by telling others about it.
+
+##Features of Disk Wipe
+
+* Permanently wipes sensitive data on partitions and disk volumes.
+* Portable, no installation needed!
+* Uses several advanced shredding algorithms (Dod 5220-22.M, US Army, Peter Guttman) to securely wipe data.
+* Supports all popular Windows file systems, NTFS, Fat, Fat32.
+* It uses quick format prior to disk wiping for faster performance.
+* Works with USB sticks, SD cards and other portable memory devices.
+* Small, light, does not contain adware.
+* Respect the privacy of your information, does not try to connect to remote server and does not send any information over internet.	
+
+##About disk wiping technology
+
+Disk Drive is a device that stores digital data. Those data is stored on a surface of magnetic platters that rotates at a very high speeds. The magnetic property on a surface of a disk platter can be read or changed to either 1's or 0's. The entire information structure with all data on disk drive comes down to a large number of ones and zeros - the basic cell's of binary data. When you write a data on your disk drive (text, zip file, movie, whatever..) a row of 0's and 1's are written. That is your data. Now, when you delete the data those ones and zeros aren't deleted, merely a pointer to that data is being removed. That makes recovering such deleted data very easy.
+
+Ok, what about formatting? Unfortunately, formatting a disk drive can not help securing the permanent deletion either. Formatting a disk drive does not actually overwrite the data, and although it is way better than deleting the file from within Windows it is still very easy to retrieve data back from a formatted disk.
+
+The only real, and many times proven method of permanent data removal (without making a physical damage to a disk) is DISK WIPING technology. So, what is disk wiping and how it works? In order to permanently wipe a data from a disk all binary data, down to a basic 0's and 1's must be overwritten with a new data. So, contrary to what is's name implies disk wiping (or disk wipe method) doesn't really wipe, or delete the disk data, it actually replaces or overwrites the existing data with a new data. In it's simplest form the new data written could be all zero's, but more advanced algorithms use a combination of filling up a disk with random information plus multiple passes to ensure impossibility of retrieval from a wiped disk.
+
+Disk Wipe is a free software that does so, it wipes the disk using one of predefined advanced algorithms, by overwriting the existing disk data with a new, random meaningless data, and it does so multiple times, by users choice, to secure even higher level of safety.
+
+Disk Wipe works with ANY memory storage device such as USB memory stick, various SD, mini and micro SD cards and all other devices that can be used as a memory storage and are formatted with NTFS, Fat or Fat32 (some mp3 players and cameras etc.)
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
