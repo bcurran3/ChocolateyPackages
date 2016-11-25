@@ -3,9 +3,10 @@
   <metadata>
     <id>ultimate-settings-panel</id>
     <title>Ultimate Settings Panel</title>
-    <version>5.1</version>
+    <version>5.2</version>
     <authors>A.J. Armstrong</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>		
 	<language>en-us</language>
     <description>
 ![Screenshot of Ultimate Settings Panel](http://www.ultimatesettingspanel.co.uk/_/rsrc/1475327586819/screenshots/uspwin10.PNG)
