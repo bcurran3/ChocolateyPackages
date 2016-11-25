@@ -18,6 +18,7 @@
 	</description>
     <summary></summary>
     <tags>chrome extension</tags>
+    <releaseNotes></releaseNotes>	
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>
