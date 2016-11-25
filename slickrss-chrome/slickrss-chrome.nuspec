@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>slickrss-chrome</id>
+    <version>2.993</version>
+    <title>Slick RSS for Chrome</title>
+    <authors>Joshua Deltener</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/slickrss-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/slick-rss/ealjoljnibpdkocmldliaoojpgdkcdob</projectUrl>
+	<mailingListUrl>http://groups.google.com/group/slick-rss</mailingListUrl>
+    <iconUrl>https://lh5.googleusercontent.com/1vf6BAaZ3R4gOe6jNHCawojxCmd7X55uvFWMscOTQELg277UEswtGTrVqr0_1z9UnvEctOSY=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###A full featured RSS reader that's fully contained within the browser.
+
+I was tired of seeing extensions use other websites to do their work.  I wanted an RSS reader that was fully contained within Chrome and this is the result.
+
+Make adding feeds easy, use the Slick RSS Feed Finder Extension.
+
+Features: 
+ * Supports both RSS and Atom feeds
+ * Discovers both RSS and Atom feeds within pages (with finder installed)
+ * You can manage feeds manually or use a bookmark folder
+ * If you manage manually you can set a sort order and max items per feed
+ * Imports/Exports OPML files into the manager, or your bookmark folder
+ * Supports read later functionality (favorites)
+ * Supports custom date formats
+ * Can display read items as gray or title only
+ * Supports 1 to 4 columns.
+ * Supports blocking of objects, images and iframes in feeds
+ * Feed links always open in a new tab
+ * Slick, simple interface
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>Slick RSS is a RSS reader that works inside of Chrome.</summary>
+    <tags>Deltener slickrss rss atom reader feeds chrome extension</tags>
+    <releaseNotes>Proof of concept of installing Chrome extensions using Powershell to create the registry keys.</releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
