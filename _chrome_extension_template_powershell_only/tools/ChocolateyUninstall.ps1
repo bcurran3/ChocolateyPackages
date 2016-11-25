@@ -1,5 +1,7 @@
 $bits = Get-ProcessorBits
 $extensionID = ''
+$packageName = ''
+
 if ($bits -eq 64)
 {
 Remove-Item 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID' -Force -ErrorAction SilentlyContinue
