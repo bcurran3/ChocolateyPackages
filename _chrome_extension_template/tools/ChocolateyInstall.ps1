@@ -1,5 +1,7 @@
 ﻿$toolsPath   = (Split-Path $MyInvocation.MyCommand.Definition)
-$bits = Get-ProcessorBits
+$bits        = Get-ProcessorBits
+$packageName = ''
+
 if ($bits -eq 64)
 {
 regedit /s $toolsPath\install_x64.reg
