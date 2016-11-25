@@ -1,14 +1,17 @@
 ﻿$bits = Get-ProcessorBits
+$packageName = '-chrome'
 $extensionID = ''
-$packageName = ''
-
 if ($bits -eq 64)
-{
-New-Item -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Value “default value”
-New-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID\" -Name "update_url" -Value "https://clients2.google.com/service/update2/crx"
-}
-else
-{
-New-Item -Path "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" -Value “default value”
-New-ItemProperty -Path "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID\" -Name "update_url" -Value "https://clients2.google.com/service/update2/crx"
-}
+   {
+    if (Test-Path -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID")
+       {
+       Write-Host "Extension already installed." -foreground "magenta" –backgroundcolor "blue"
+       } else {
+         New-Item -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" 
+         New-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID\" -Name "update_url" -Value "https://clients2.google.com/service/update2/crx"
+         New-ItemProperty -Path "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID\" -Name "$packageName" -Value "installed with Chocolatey"		 
+         }
+    } else {
+      New-Item -Path "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" 
+      New-ItemProperty -Path "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID\" -Name "update_url" -Value "https://clients2.google.com/service/update2/crx"
+      }
