@@ -40,8 +40,6 @@ The latest official release of the application is version 2.44. This version sup
 ###e-Learning Videos
 For help in getting the most out of the application, we recomment that you look at the e-Learning Videos that are made available online. They are designed to attract both beginner and experienced users and are a great way to learn some of the most central features of the application.
 
-Known limitations
-
 ####General Limitations
 * Processes that are being debugged with Microsoft Developer Studio (or similar product) cannot be terminated while inside of a breakpoint (like when stepping through the code).
 * 16-bit applications run by wowexec.exe cannot be terminated directly. You will have to terminate the wowexec.exe process that houses the 16-bit application instead
