@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'amazondrive'
+$packageName   = 'amazondrive'
 $installerType = 'EXE'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://d29x207vrinatv.cloudfront.net/win/AmazonDriveSetup.exe' 
-$silentArgs = "-q"
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url           = 'https://d29x207vrinatv.cloudfront.net/win/AmazonDriveSetup.exe' 
+$checksum      = '7BB4FEC8E861E74E01E4BE954F9033117926D6157D6E21D5F500AD61C3844F4F'
+$silentArgs    = "-q"
 $validExitCodes= @(0)
 
 $packageArgs = @{
@@ -13,7 +14,7 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
   softwareName  = 'Amazon Drive*'
-  checksum      = 'A49DA4EFE299FF78C1359341AE6A1F512C118B09CA8F3E4D20615714D998DE13'
+  checksum      = $checksum
   checksumType  = 'sha256' 
 }
 
