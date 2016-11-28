@@ -1,5 +1,5 @@
 ﻿$packageName = 'irfanview'
-$softwareName = "$packageName *"
+$softwareName = "IrfanView*"
 $installerType = 'exe'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
