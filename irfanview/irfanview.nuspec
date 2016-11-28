@@ -2,15 +2,25 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanview</id>
-    <version>4.42.0.20161101</version>
+    <version>4.42.0.20161128</version>
     <title>IrfanView (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanview</packageSourceUrl>		
     <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>http://www.irfanview.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/04f6a6eaed68793bfdbf951606879239ec9aaa0a/icons/irfanview.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>IrfanView is a very fast, small, compact and innovative FREEWARE (for non-commercial use) graphic viewer.
+    <description>
+IrfanView is a very fast, small, compact and innovative FREEWARE (for non-commercial use) graphic viewer for Windows 9x, ME, NT, 2000, XP, 2003 , 2008, Vista, Windows 7, Windows 8, Windows 10. 
+
+It is designed to be simple for beginners and powerful for professionals.
+
+IrfanView seeks to create unique, new and interesting features, unlike some other graphic viewers, whose whole "creativity" is based on feature cloning, stealing of ideas and whole dialogs from ACDSee and/or IrfanView! (for example: XnView has been stealing/cloning features and whole dialogs from IrfanView, for 10+ years). 
+
+IrfanView was the first Windows graphic viewer WORLDWIDE with Multiple (animated) GIF support.
+One of the first graphic viewers WORLDWIDE with Multipage TIF support.
+The first graphic viewer WORLDWIDE with Multiple ICO support.
 
 [Features](http://www.irfanview.com/main_what_is_engl.htm)
 [Screenshots](http://www.irfanview.com/screenshot.htm)
@@ -28,16 +38,16 @@ The following package parameters may be passed directly to the program's install
 * `/folder=PATH` - destination folder; if not indicated: old IrfanView folder is used, if not found, the "Program Files" folder is used
 
 #### Package Specifics
-If no parameters are passed, the following is assumed: `--params '/assoc=0 /ini=%APPDATA%\IrfanView'`.</description>
+If no parameters are passed, the following is assumed: `--params '/assoc=0 /ini=%APPDATA%\IrfanView'`.
+</description>
     <summary>Fast and compact image viewer and converter</summary>
     <copyright>© Irfan Skiljan</copyright>
-    <tags>image viewer editor converter thumbnail admin</tags>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/irfanview/</packageSourceUrl>
+    <tags>irfan irfanview image viewer editor converter thumbnail admin</tags>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <dependencies>
       <dependency id="autohotkey.portable" />
-      <dependency id="chocolatey-fosshub.extension" version="0.2.0" />	  
+      <dependency id="chocolatey-fosshub.extension" />	  
       <dependency id="chocolatey-uninstall.extension" />
     </dependencies>
   </metadata>
