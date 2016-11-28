@@ -1,13 +1,14 @@
 ﻿$packageName= 'kmttg' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://iweb.dl.sourceforge.net/project/kmttg/kmttg_v2.2e.zip'
+$url        = 'http://iweb.dl.sourceforge.net/project/kmttg/kmttg_v2.2j.zip'
+$checksum   = 'A09A3D067F6B7E1D72093236946D276A22ACBA043EE5E0401B5812A1DC4D744D'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '9EEA40E7B2754BE207FE268CF0FF9E5AB6FF3BBEEBCD4DE4233042FBDEFB1FFD'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 
