@@ -1,14 +1,13 @@
-﻿$packageName = 'irfanview'
-$installerType = 'exe'
-$urlArray = @('https://www.fosshub.com/IrfanView.html/iview442_setup.exe','https://www.fosshub.com/IrfanView.html/iview442_x64_setup.exe')
-$url = $urlArray[0]
-$checksum = 'c56a5c248461f6e450aeca5b1240d572d751e58c44a8b8cb32d7c94714eeb182'
-$checksumType = 'sha256'
-$url64 = $urlArray[1]
-$checksum64 = '15c4cc272a6d1397a3788192a5c640cbe772c3991180dde3a0af846dc9dd3a9d'
+﻿$packageName    = 'irfanview'
+$installerType  = 'exe'
+$url            = 'https://www.fosshub.com/IrfanView.html/iview442_setup.exe'
+$checksum       = 'c56a5c248461f6e450aeca5b1240d572d751e58c44a8b8cb32d7c94714eeb182'
+$checksumType   = 'sha256'
+$url64          = 'https://www.fosshub.com/IrfanView.html/iview442_x64_setup.exe'
+$checksum64     = '15c4cc272a6d1397a3788192a5c640cbe772c3991180dde3a0af846dc9dd3a9d'
 $checksumType64 = 'sha256'
 $validExitCodes = @(0)
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $arguments = @{}
 $packageParameters = $env:chocolateyPackageParameters
@@ -91,13 +90,18 @@ Write-Debug 'Helper "Get-UrlFromFosshub" provided by "chocolatey-fosshub.extensi
 $url = Get-UrlFromFosshub $url
 $url64 = Get-UrlFromFosshub $url64
 
-Install-ChocolateyPackage -PackageName "$packageName" `
-                          -FileType "$installerType" `
-                          -SilentArgs "$silentArgs" `
-                          -Url "$url" `
-                          -Url64bit "$url64" `
-                          -ValidExitCodes $validExitCodes `
-                          -Checksum "$checksum" `
-                          -ChecksumType "$checksumType" `
-                          -Checksum64 "$checksum64" `
-                          -ChecksumType64 "$checksumType64"
+$packageArgs = @{
+  packageName   = $packageName
+  fileType      = $installerType
+  url           = $url
+  url64bit      = $url64
+  validExitCodes= $validExitCodes
+  silentArgs    = $silentArgs
+  softwareName  = 'IrfanView*'
+  checksum      = $checksum
+  checksumType  = $checksumType
+  Checksum64    = $checksum64
+  ChecksumType64= $checksumType64
+}
+
+Install-ChocolateyPackage @packageArgs 						  
