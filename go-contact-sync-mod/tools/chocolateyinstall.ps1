@@ -1,8 +1,8 @@
 ﻿$packageName= 'go-contact-sync-mod'
 $installerType = 'msi'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://pilotfiber.dl.sourceforge.net/project/googlesyncmod/Releases/3.10.13/SetupGCSM-3.10.13.msi' 
-$checksum   = 'E00F98E9D0F5D644DE4C0F981AE51A2BA95ADC91BB1DDEC0CCE75449AD26554F'
+$url        = 'http://kent.dl.sourceforge.net/project/googlesyncmod/Releases/3.10.14/SetupGCSM-3.10.14.msi' 
+$checksum   = '91C8B087A8AECDAA22101998326958D4AE4DC017A6DADD08155C5D5D0417F970'
 $silentArgs = '/quiet /qn /norestart'
 $validExitCodes= @(0, 3010, 1641)
 
