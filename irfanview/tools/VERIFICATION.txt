@@ -1,0 +1,7 @@
+﻿
+VERIFICATION
+
+Binaries included in this package were downloaded by the packager, bcurran3. SHA1 signatures were manually created and put in the package .nuspec file.
+
+Additionally checksums can be verified (assumably by the author) at https://www.fosshub.com/IrfanView.html/iview442_setup.exe
+
