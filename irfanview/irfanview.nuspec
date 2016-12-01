@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanview</id>
-    <version>4.42.0.20161128</version>
+    <version>4.42.0.20161201</version>
     <title>IrfanView (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -45,9 +45,9 @@ If no parameters are passed, the following is assumed: `--params '/assoc=0 /ini=
     <tags>irfan irfanview image viewer editor converter thumbnail admin</tags>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
+    <releaseNotes>This package includes binaries. This release will work forever.</releaseNotes>	
     <dependencies>
       <dependency id="autohotkey.portable" />
-      <dependency id="chocolatey-fosshub.extension" />	  
       <dependency id="chocolatey-uninstall.extension" />
     </dependencies>
   </metadata>
