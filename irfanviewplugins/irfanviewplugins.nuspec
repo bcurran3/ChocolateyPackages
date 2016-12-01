@@ -2,10 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.42.0.20161107</version>
+    <version>4.42.0.20161201</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>		
     <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
     <iconUrl>http://www.irfanview.com/images/kater_li_oben.gif</iconUrl>
@@ -56,12 +57,11 @@ If you have a modern graphic card which can be used for additional calculations,
     <summary>Additional plugins for IrFanView</summary>
     <copyright>© Irfan Skiljan</copyright>
     <tags>irfanview image photo viewer plugin plugins admin</tags>
-    <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/irfanview/</packageSourceUrl>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
+    <releaseNotes>This package includes binaries. This release will work forever.</releaseNotes>	
     <dependencies>
       <dependency id="irfanview" version="4.42" />	  	
-      <dependency id="chocolatey-fosshub.extension" version="0.2.0" />	  
       <dependency id="chocolatey-uninstall.extension" />
     </dependencies>
   </metadata>

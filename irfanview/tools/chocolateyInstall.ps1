@@ -1,15 +1,15 @@
-﻿$packageName    = 'irfanview'
+﻿#https://www.fosshub.com/IrfanView.html
+$packageName    = 'irfanview'
 $installerType  = 'exe'
-$url            = 'https://www.fosshub.com/IrfanView.html/iview442_setup.exe'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = "$toolsDir\iview442_setup.exe"
 $checksum       = 'c56a5c248461f6e450aeca5b1240d572d751e58c44a8b8cb32d7c94714eeb182'
 $checksumType   = 'sha256'
-$url64          = 'https://www.fosshub.com/IrfanView.html/iview442_x64_setup.exe'
+$url64          = "$toolsDir\iview442_x64_setup.exe"
 $checksum64     = '15c4cc272a6d1397a3788192a5c640cbe772c3991180dde3a0af846dc9dd3a9d'
 $checksumType64 = 'sha256'
 $validExitCodes = @(0)
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-
-$arguments = @{}
+$arguments      = @{}
 $packageParameters = $env:chocolateyPackageParameters
 
 Write-Debug "Default values for package parameters: 0=off, 1=on"
@@ -86,10 +86,6 @@ if ($ini) { $silentArgs += " /ini=" + $ini }
 if ($folder) { $silentArgs += " /folder=" + $folder }
 Write-Debug "Silent arguments Chocolatey will use are: $silentArgs"
 
-Write-Debug 'Helper "Get-UrlFromFosshub" provided by "chocolatey-fosshub.extension"'
-$url = Get-UrlFromFosshub $url
-$url64 = Get-UrlFromFosshub $url64
-
 $packageArgs = @{
   packageName   = $packageName
   fileType      = $installerType
@@ -104,4 +100,7 @@ $packageArgs = @{
   ChecksumType64= $checksumType64
 }
 
-Install-ChocolateyPackage @packageArgs 						  
+Install-ChocolateyPackage @packageArgs 	
+
+Remove-Item $url 
+Remove-Item $url64					  
