@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pxe-boot-tool</id>
+    <version>1.5</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pxe-boot-tool</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>AOMEI PXE Boot Tool (Install)</title>
+    <authors>AOMEI</authors>
+    <projectUrl>http://www.aomeitech.com/pxe/pxe-boot-software.html</projectUrl>
+    <iconUrl>http://www.aomeitech.com//partners/marketing-material/logo/aomeilogo-jpg.jpg</iconUrl>
+    <copyright>Copyright © AOMEI</copyright>
+    <licenseUrl>http://www.backup-utility.com/terms.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.backup-utility.com/help/pxe-boot.html</docsUrl>
+    <mailingListUrl>http://www.aomeitech.com/forum/</mailingListUrl>
+    <tags>aomei pxe boot tool admin</tags>
+    <summary>AOMEI PXE Boot Tool FREE</summary>
+    <description>
+![Screenshot of AOMEI PXE Boot Tool](http://www.backup-utility.com/help/images/pxe-boot/image002.jpg)
+
+##A free tool attached with AOMEI Backupper
+
+Boot multiple client computers within same LAN through the network
+booting from an image file on a server computer for system maintenance
+and optimization.	
+
+###Overview of AOMEI PXE Boot Tool
+
+The main function of AOMEI PXE Boot Tool is to boot your computers from an image file on network. It’s easy to use it. After installation, you just need a few clicks following the guide. Besides, it supports synchronous boot of multiple computers.
+
+###When to Use AOMEI PXE Boot Tool?
+
+* You need to maintain or install system for multiple computers and it’s impossible to insert CD or USB into these computers one by one.
+* Your computer cannot start normally already and it can’t boot through loading image file on inner hard drive.
+* You have a server and a lot of clients within LAN, but these clients may have no CD-ROM drive and USB ports.
+* Or the CD-ROM drive and USB ports are unavailable.
+* Or, you have no CD or USB image at hand to boot up the multiple clients.
+
+###Advantages of AOMEI PXE Boot Tool
+####Strong Compatibility
+Compared with other PXE boot tools, AOMEI PXE Boot Tool supports bootable micro-system created by you. Therefore, if you have a powerful Linux bootable ISO or Windows PE bootable ISO, you can easily maintain the computers within LAN through network with your micro-system.
+
+####Freeware
+AOMEI PXE Boot is a free software for personal and system manager, aims to provide users with a faster and easier method to build your PXE server and cheer users. So, please be assured use.
+
+####Easy Interaction
+Special designed for network boot, easy interaction and uses it in two steps:
+* Install AOMEI PXE Boot to a master computer, select an image file and start service.
+* For the client computers need to be maintained from network boot, set its BIOS boot mode as "Network boot".
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
