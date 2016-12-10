@@ -1,0 +1,16 @@
+﻿==================== Shark007's Advanced Codecs ====================
+
+FROM http://shark007.net/disclaimer.html
+
+ While Shark007 makes every effort to present accurate and reliable information or software on this Internet site, Shark007 does not endorse, approve or certify such information or software, nor does he guarantee the accuracy, completeness, efficacy, timeliness or correct sequencing of such information or software. Use of such information or software is voluntary and reliance on it should only be undertaken after an independent review of its accuracy, completeness, efficacy and timeliness. Reference herein to any specific commercial product, process or service by trade name, trademark, service mark, manufacturer or otherwise does not constitute or imply endorsement, recommendation or favoring by Shark007. The shark007.net Website does not solicit nor accepts copyright Material, Shark007 assumes no responsibility for consequences resulting from the use of the information or software herein, or in any respect for the content of such information or software, including (but not limited to) errors or omission, the accuracy or reasonableness of factual or scientific assumptions, studies or conclusions, the defamatory nature of statements, ownership of copyright or other intellectual property rights and the violation of property, privacy or personal rights of others. Shark007 is not responsible for, and expressly disclaims all liability for, damages of any kind arising out of use, reference to or reliance on such information or software. I also from time to time take the liberty to speculate without customary scientific evidence. I trust you to recognize such guesses and vague hypotheses when you see them.
+
+
+bcurran3 11/25/2016
+
+OF NOTE:
+1> "The shark007.net Website does not solicit nor accepts copyright Material" - therefore the software obtained from there (Advanced Codecs) is not copyrighted.
+2> "Shark007 assumes no responsibility for...ownership of copyright or other intellectual property rights" - further proof no copyright is claimed.
+3> The program is referred to as "public redistributable" on http://shark007.net/win7codecs.html
+4> A direct letter of permission is NOT going to happen as Shark007's website is "Webspace provided by MajorGeeks.com" - the only location Shark007 uploads the distributions.
+
+==================== Shark007's Advanced Codecs ====================

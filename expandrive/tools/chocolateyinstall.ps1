@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'expandrive' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v5-4-1_published_2016-09-28_at_15_16_01/ExpanDriveInstaller.exe' 
-$UnzippedMSI  = Join-Path $toolsDir 'ExpanDriveInstaller.msi'
+$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v5-4-2_published_2016-11-22_at_17_05_41/ExpanDriveInstaller.msi' 
+$checksum      = 'EE321782F1E27AF1C852BF61D044384824E0AAA6EEE999D9DE4386E811101B6D'
+$UnzippedMSI   = Join-Path $toolsDir 'ExpanDriveInstaller.msi'
 $installerType = 'MSI'
 $silentArgs    = '/passive /norestart ACCEPT=YES'
 $validExitCodes= @(0, 3010, 1641)
@@ -12,7 +13,7 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '32443133E36105FCBC2E858E9DBB4872CC99EBD8CD9F670527BFD66DE79D0458'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 
