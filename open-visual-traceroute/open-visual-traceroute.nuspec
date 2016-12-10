@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>open-visual-traceroute</id>
+    <version>1.6.4</version>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-visual-traceroute</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Open Visual Traceroute (Install)</title>
+    <authors>Leo Lewis</authors>
+    <projectUrl>http://visualtraceroute.net/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/openvisualtrace/icon</iconUrl>
+    <copyright>Copyright : Leo Lewis </copyright>
+    <licenseUrl>http://visualtraceroute.net/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/openvisualtrace/files/</projectSourceUrl>
+    <docsUrl>http://visualtraceroute.net/installation</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/openvisualtrace/discussion/</mailingListUrl>
+    <bugTrackerUrl>http://visualtraceroute.net/release-notes</bugTrackerUrl>
+    <tags>open visual traceroute java admin</tags>
+    <summary>Open source cross-platform Java Visual Networking tool</summary>
+    <description>
+![Video showing Open Visual Traceroute](https://youtu.be/bYsU1NC82MA)	
+
+##Features
+
+####Traceroute
+* Traceroute feature that allows to see on a World 3D map what path the data is taking to go from your computer to the target server.
+
+####Network packets sniffer
+* Network packets sniffer allows to see what data is being sent back and forth from the local system to the Internet. 
+
+####Whois
+* "Who is" feature allows to get public information about a domain.
+
+####3D/2D visualization
+* All data is vizualized in a 3D World map. Low end computers or exotic OS that would have issues with OpenGL drivers can run the program using the 2D map.
+
+####Free and Open source
+* The entire source code is fully available for download on Sourceforge.
+
+####Cross platform
+* The software is written in Java and runs on Windows, MacOS X, Ubuntu, OpenSUSE.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="javaruntime" />
+      <dependency id="winpcap" />	  
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
