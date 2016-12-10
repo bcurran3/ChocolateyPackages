@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>plexpy</id>
-    <version>1.4.15</version>
+    <version>1.4.16</version>
     <owners>bcurran3</owners>
     <title>PlexPy (Portable)</title>
     <authors>JohnyWong16</authors>
