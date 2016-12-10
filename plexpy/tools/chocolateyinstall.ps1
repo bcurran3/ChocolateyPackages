@@ -1,7 +1,7 @@
 ﻿$packageName= 'plexpy' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/JonnyWong16/plexpy/archive/v1.4.15.zip'
-$checksum   = 'A9D44A3470FCACEF2373C2DE38A094608802DBC374D391459B912984E891C1B5'
+$url        = 'https://github.com/JonnyWong16/plexpy/archive/v1.4.16.zip'
+$checksum   = '108AE27D975B8270ACD93278FE457EE1BB28A7D1A5434B4C744855124C592CF4'
 
 $packageArgs = @{
   packageName   = $packageName
