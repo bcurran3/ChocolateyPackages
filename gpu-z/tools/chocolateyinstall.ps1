@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName='gpu-z'
-$url        = 'http://us3-dl.techpowerup.com/SysInfo/GPU-Z/GPU-Z.1.12.0.exe' 
-$exeFile    = "GPU-Z.1.11.0.exe"
-$scriptDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$packageName      ='gpu-z'
+$url              = 'http://us3-dl.techpowerup.com/SysInfo/GPU-Z/GPU-Z.1.14.0.exe' 
+$checksum         = '3736EFCFF7B1C7AC541C20899C70603AA7F6DB74ED8AAA4532AE7128D051729D'
+$exeFile          = "GPU-Z.1.11.0.exe"
+$scriptDir        = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $installerPackage = Join-Path $scriptDir $exeFile
 
 $packageArgs = @{
@@ -11,7 +12,7 @@ $packageArgs = @{
   url           = $url
   FileFullPath  = $installerPackage
   softwareName  = 'GPU*'
-  checksum      = 'F564EB1B1E7AB2362F0FCE6D42B9AE7159F4855B85E5CB0B0DB3763E87C7AEB2'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 

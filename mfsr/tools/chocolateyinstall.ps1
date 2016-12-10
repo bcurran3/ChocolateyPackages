@@ -1,18 +1,18 @@
 ﻿$packageName= 'mfsr' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.rosswalker.co.uk/tivo_upgrade/mfsr.exe'
+#URL from http://www.tivocommunity.com/community/index.php?threads/mfs-reformatter-mfsr.528428/
+$url        = 'https://dl.dropboxusercontent.com/u/59367797/MFSR1004.zip'
+$checksum   = 'F18A28F5036409327A593BF8DFEC26A204AA95EC5E1D44BB23E95E88857F522D'
 $installerPackage = Join-Path $toolsDir "mfsr.exe"
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  fileFullPath  = $installerPackage
+  fileType      = 'ZIP'
   url           = $url
-  checksum      = 'B69B6E26C9FECB18D694F46B16A92FE60A541FD74308C5EA9D63A40505FDAFE9'
-  checksumType  = 'sha256'
+  checksum      = $checksum
+  checksumType  = 'sha256'  
 }
+ 
+Install-ChocolateyZipPackage @packageArgs
 
-#Get-ChocolateyWebFile $packageName $installerPackage $url 
-Get-ChocolateyWebFile @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$packageName.lnk" -targetPath "$env:ChocolateyInstall\lib\$packageName\tools\mfsr.exe"

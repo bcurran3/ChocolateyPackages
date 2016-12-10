@@ -1,0 +1,7 @@
+﻿==================== Shark007's Advanced Codecs ====================
+
+bcurran3 downloads and packages the executable for Shark007's Advanced Codecs from http://www.majorgeeks.com/files/details/win7codecs.html which is the only location where the author, Shark007, uploads the file. 
+
+Shark007's statement and current MD5 checksum can be found at http://shark007.net/win7codecs.html
+
+==================== Shark007's Advanced Codecs ====================
