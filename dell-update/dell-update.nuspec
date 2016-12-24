@@ -3,11 +3,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>1.9.5.0</version>
+    <version>1.9.8.0</version>
     <owners>bcurran3</owners>
     <title>Dell Update (Install)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=75FF5</projectUrl>
+    <projectUrl>http://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=TRR3F</projectUrl>
     <iconUrl>https://si.cdn.dell.com/images/global/brand/ui/logo-wt-bl.png</iconUrl>
     <copyright>(c) 2005-2015 Dell Inc.</copyright>
     <licenseUrl>https://software.dell.com/legal/license-agreements.aspx</licenseUrl>
@@ -15,7 +15,7 @@
     <tags>dell update admin</tags>
     <summary>This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</summary>
     <description>This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</description>
-    <releaseNotes>Dell's webpage shows v1.9.4.0, A10 but filename and app show v1.9.5.0</releaseNotes>
+    <releaseNotes>Dell's webpage shows v1.9.7.0, A00 but filename and app show v1.9.8.0</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
