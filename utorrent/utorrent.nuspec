@@ -2,12 +2,12 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>utorrent</id>
     <title>uTorrent (Install)</title>
-    <version>3.4.9</version>
+    <version>3.4.9.43085</version>
     <authors>BitTorrent, Inc.</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>		
     <summary>A (very) tiny BitTorrent client.</summary>
     <description>
 ![Screenshot of uTorrent] (https://d1hzrv37chit31.cloudfront.net/monthly_2016_06/screenshot.jpg.e3ec4b2d08d1094a62284ec4c67dd799.jpg)	
@@ -34,12 +34,12 @@ Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download
     <projectUrl>http://www.utorrent.com</projectUrl>
     <docsUrl>http://help.utorrent.com/</docsUrl>
     <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
-    <bugTrackerUrl>http://releasenotes.utorrent.com/</bugTrackerUrl>
+    <bugTrackerUrl>http://blog.utorrent.com/releases/windows/</bugTrackerUrl>
     <tags>utorrent bittorrent client admin</tags>
     <copyright>© 2016 BitTorrent, Inc.</copyright>
     <licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://gyre.wpengine.netdna-cdn.com/files/2012/10/UT-iOS-Icon-512.png</iconUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/en/9/9f/UTorrent_%28logo%29.png</iconUrl>
     <releaseNotes></releaseNotes>
       </metadata>
   <files>
