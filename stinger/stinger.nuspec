@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stinger</id>
-    <version>12.1.0.2153</version>
+    <version>12.1.0.2202</version>
     <owners>bcurran3</owners>
     <title>McAfee Stinger (Portable)</title>
     <authors>McAfee Labs</authors>
     <projectUrl>http://www.mcafee.com/us/downloads/free-tools/stinger.aspx</projectUrl>
     <iconUrl>https://www.mcafee.com/img/rwd/logo-intel-security-2.png</iconUrl>
-    <copyright>Copyright 2015 McAfee, Inc.</copyright>
+    <copyright>Copyright 2016 McAfee, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.mcafee.com/us/downloads/free-tools/how-to-use-stinger.aspx</docsUrl>
     <mailingListUrl>https://support.mcafee.com/ServicePortal</mailingListUrl>
