@@ -22,7 +22,7 @@ $packageArgs = @{
   silentArgs    = $silentArgs
   validExitCodes= $validExitCodes
   softwareName  = 'Intel® Driver Update Utility*'
-  checksum      = 'E126967DDFC1D4C016AAEC733CF710C8AC3392E383F6C3B98FED63737EE82181'
+  checksum      = 'C747911C465E860A23C0CB5E9CC76946C5FFB2892DF07A178247C92F7C7B0F66'
   checksumType  = 'sha256'
 }
 

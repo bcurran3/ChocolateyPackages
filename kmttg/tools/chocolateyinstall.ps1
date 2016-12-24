@@ -1,7 +1,7 @@
 ﻿$packageName= 'kmttg' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://iweb.dl.sourceforge.net/project/kmttg/kmttg_v2.2j.zip'
-$checksum   = 'A09A3D067F6B7E1D72093236946D276A22ACBA043EE5E0401B5812A1DC4D744D'
+$url        = 'http://iweb.dl.sourceforge.net/project/kmttg/kmttg_v2.2l.zip'
+$checksum   = '9791DE947BD6BFEFB3A6AA0D64725B2BE98CF49719DAB3A90AC7400A947D87EE'
 
 $packageArgs = @{
   packageName   = $packageName
