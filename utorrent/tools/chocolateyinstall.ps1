@@ -1,10 +1,11 @@
-﻿$packageName = 'utorrent'
-$installerType = 'exe'
-$url        = 'http://download.ap.bittorrent.com/track/stable/endpoint/utorrent/os/windows/uTorrent.exe'
-$silentArgs = '/S'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$packageName    = 'utorrent'
+$installerType  = 'exe'
+$url            = 'http://download.ap.bittorrent.com/track/stable/endpoint/utorrent/os/windows/uTorrent.exe'
+$checksum       = '4AC56C959E7148199CE93D5D6DCE482EDEB8A5EFDB45AA3CA0008D8CE215AEEF'
+$silentArgs     = '/S'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0,1)
-$softwareName = 'uTorrent*'
+$softwareName   = 'uTorrent*'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,7 +15,7 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
   softwareName  = $softwareName
-  checksum      = 'E1557810ADB59597366D167EFCD85A09D0AE2827F49EF6B8E6A459E56D6E1292'
+  checksum      = $checksum
   checksumType  = 'sha256' 
 }
 
