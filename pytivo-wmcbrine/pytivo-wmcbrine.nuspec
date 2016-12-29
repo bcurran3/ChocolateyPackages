@@ -4,7 +4,8 @@
   <metadata>
     <id>pytivo-wmcbrine</id>
     <title>PyTivo-wmcbrine (Install)</title>
-    <version>2016.10.23</version>
+    <version>2016.11.24</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pytivo-wmcbrine</packageSourceUrl>			
     <authors>pyTivo was created by Jason Michalski ("armooo"). Contributors include Kevin R. Keegan, William McBrine, and Terry Mound ("wgw").</authors>
     <owners>bcurran3</owners>
     <summary>pyTiVo lets you stream most videos from your PC to your unhacked TiVo.</summary>
@@ -21,7 +22,6 @@ Display Metadata about your video.
 Serve Music and Photos through the HMO protocol
 Support for Windows, Linux, and Mac	
 This is the wmcbrine fork.
-NOTE: PyTiVo requires Python 2.5 or greater but less than 3.0 to work. At this time the package does not have the dependency included.
     </description>
     <projectUrl>https://github.com/wmcbrine/pytivo</projectUrl>
     <projectSourceUrl>https://github.com/wmcbrine/pytivo</projectSourceUrl>
@@ -33,7 +33,7 @@ NOTE: PyTiVo requires Python 2.5 or greater but less than 3.0 to work. At this t
     <dependencies>
       <dependency id="python2" version="[2.5,3.0)" />
     </dependencies>
-    <releaseNotes>added checksum and screenshot</releaseNotes>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

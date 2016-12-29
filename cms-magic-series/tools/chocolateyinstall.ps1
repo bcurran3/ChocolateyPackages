@@ -1,11 +1,11 @@
-﻿$ErrorActionPreference = 'Stop'
-
-$packageName= 'cms-magic-series'
+﻿$packageName   = 'cms-magic-series'
 $installerType = 'msi'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS_3rg_2.0.1.6F-win32.msi' 
-$url64   = 'http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS_3rg_2.0.1.6F-win64.msi' 
-$silentArgs = '/quiet /qn /norestart'
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url           = 'http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS-2.0.1.8C-win32.msi' 
+$checksum      = 'DF60C984A122A61AFDDCB12B76A0E6C56691D3F63406C15790B2C48D9F6D1386'
+$url64         = 'http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS-2.0.1.8C-win64.msi' 
+$checksum64    = '951D3605EF24993387275CBA3A2C8E2B3A81C8CB4C76359D312A365E1D4A1754'
+$silentArgs    = '/quiet /qn /norestart'
 $validExitCodes= @(0, 3010, 1641)
 
 $packageArgs = @{
@@ -16,9 +16,9 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
   softwareName  = 'CMS'
-  checksum      = 'FE680E65566A8E79A5435D14526436D9A090D58566817A01000C8B2712AD44C2'
+  checksum      = $checksum
   checksumType  = 'sha256' 
-  checksum64    = '5A869F0863220B4EE270CC00CB3863D8ECD4B70937D3B66C21FA4F64F94144B9'
+  checksum64    = $checksum64
   checksumType64= 'sha256'
 }
 
