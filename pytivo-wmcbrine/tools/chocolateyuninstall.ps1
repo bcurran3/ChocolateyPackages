@@ -1,3 +1,3 @@
 ﻿$packageName = 'pytivo-wmcbrine'
 
-remove-item "$env:Public\Desktop\PyTiVo.lnk" -Force -ErrorAction 'SilentlyContinue'
+remove-item "$env:Public\Desktop\PyTiVo-wmcbrine.lnk" -Force -ErrorAction 'SilentlyContinue'

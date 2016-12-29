@@ -2,7 +2,7 @@
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installerType = 'exe'
 $url           = 'http://www.aomeisoftware.com/download/adb/BackupperFull.exe'
-$checksum      = 'B17302A623EAE14ACF58A88614B7127B6A959DE6FEF2315B805ECA35EF1D4FBF'
+$checksum      = '760CC8929E42888A49FEDEA859FBE14B9557A3A4C6F4F88A56916F3215B7A4D8'
 $silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 
 $packageArgs = @{

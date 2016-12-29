@@ -3,7 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.3.9</version>
+    <version>5.4.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/arq</packageSourceUrl>				
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
     <authors>Haystack Software LLC</authors>
