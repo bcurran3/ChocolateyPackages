@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>open-screenshot-chrome</id>
+    <version>24.0</version>
+    <title>Open Screenshot for Chrome</title>
+    <authors>openscreenshot.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-screenshot-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/open-screenshot/akgpcdalpfphjmfifkmfbpdmgdmeeaeo?utm_source=chrome-app-launcher-info-dialog</projectUrl>
+    <projectSourceUrl>https://github.com/Aminadav/OpenScreenshot</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Aminadav/OpenScreenshot/issues</bugTrackerUrl>	
+    <iconUrl>https://lh3.googleusercontent.com/UsEwLLRaLfTseNFPSMtquKtRAvOvPjEashZ0FXVKJNldjZnpc1M98uF5UteyQ5HpTKKTDEm1jA=s26-h26-e365-rw</iconUrl>
+    <licenseUrl>https://github.com/Aminadav/OpenScreenshot/blob/master/LICENSE.txt</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Open Screenshot](https://lh3.googleusercontent.com/ltnVppk82E64OJnrZJZluHE_0TLKxCMsYL2ODOjkkG3Jaifss32u6-fFiJkhjHJI0d2WXIVY8A=s640-h400-e365-rw)	
+	
+###The most powerful and freeware app for capture entire page, Save and Edit and Annotate and Print and Share
+
+【Webpage Screenshot】
+
+This is a open-source extension for taking screenshots. 
+
+This extension is able to capture 100% of both the vertical and horizontal content appearing on any webpage on the Internet. 
+It is very easy to save the captured file onto your computer or print it / or share it to any social network.
+
+You can host and share unlimited images forever for free.
+
+Github:
+https://github.com/aminag/openscreenshot
+
+Fork:
+https://github.com/aminag/openscreenshot/fork
+
+【Features】
+
+* Annotate it with rectangles, circles, arrows, lines and text.
+* Blur sensitive info by using the Spray.
+* Print the screenshot - It's awesome.
+* UNLIMITED STORAGE for storing your screenshot online!
+* Capture local files (ex: c:\)
+* Create PDF.
+* Create Thumbnails.
+* You can Save the screenshot on your computer as PNG file.
+* Attach the screenshot directly to Gmail messages..
+* Upload To Google Drive
+* Post to facebook.
+* You can EDIT THE PAGE before taking the screenshot (change any text, titles)
+* Create note in Evernote (Like Evernote Web Clipper, buy we are capture entire page.
+* Send captured image to any email address.
+* Twett to Twitter.
+* Post to VK.
+* Send the screenshot to your mobile (By using QR Code/QRCode).
+* Upload screenshot to WordPress gallery.
+* Post To Google+ (Google Plus)
+* Pin it to Pinterest.
+* Send to outlook (hotmail/bing)
+* Search the screen shot using TinEye service. (See if the image stoled from somewhere else).
+* Create new post at Blogger.
+* Post to Tumblr the screenshot.
+
+
+Usage of the Open Screenshot extension requires granting it permission to capture anonymized click stream data.  Anonymous usage and browsing activity may be collected for research purposes and may be shared in aggregate with third parties. No personally identifying information will be captured in connection with this data.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

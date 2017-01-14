@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hdhrfling</id>
+    <version>1.2.8.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdhrfling</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>HDHRFling (Trial)(Install)</title>
+    <authors>Andrew Duncan</authors>
+    <projectUrl>http://hdhrfling.com/</projectUrl>
+    <iconUrl>http://hdhrfling.com/content/theme/images/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://hdhrfling.com/how-to/</docsUrl>
+    <bugTrackerUrl>http://hdhrfling.com/download/</bugTrackerUrl>
+    <tags>hdhrfling dvr silicondust hdhomerun trial admin</tags>
+    <summary>DVR Software for SiliconDust HDHomeRun OTA ATSC streaming TV devices.</summary>
+    <description>
+![Screenshot of HDHRFling](http://hdhrfling.com/content/howto/settings-tab.jpg)
+
+(For SiliconDust HDHomeRun products: https://www.silicondust.com/)
+	
+##HDHRFling Features
+
+Are you ready to experience TV on your iOS, Android, Modern Web Browser and Roku? Then you need to try HDHRFling.
+
+####HDHRFling Features:
+* Try before you Buy! Simply download, install and if you like it, purchase a key for unlimited viewing.
+* Support for all HDHR devices that implement the HTTP API. HDTC models benefit from stream facilitation, AAC transcoding of audio (optional) and guide data with little to no CPU usage
+* You can now access your HDHRFling TV on Roku. (private channel) HDHRFling Roku
+* New improved menu feels more like a traditional set top box
+* Easy Setup and runs quietly in the back ground UPnP setup for Routers and Firewalls (beta)
+* Support for multiple devices from a single HDHRFling instance
+* Stream both inside your home and across the internet
+* TV Guide powered by Zap2it
+* Record your favorite TV programs and they'll be ready to stream instantly when you are
+* Stream local movies you may already own on demand
+* Support within most modern web browser via flash (beta)
+* iOS and Android supported (Andoird results may vary)
+* No additional iOS / Android application to install. Simply use your favorite web browser and navigate to your host server and your off... this will allow for even more flexibility in the future
+* Authentications to help secure and seperate your instance if viewing remotely
+* Remote management of your streams and view tuner statuses on the go	
+
+TRIAL VERSION: The service will stop after 10 minutes of use. You can restart as often as you like to test but to prevent this please consider purchasing a license. For $14.99 you get iOS, Android, Web, Roku and more... with Live TV. This is one time purchase and new capabilities will be included at no extra charge.
+	</description>
+    <releaseNotes>Looks like the download link is protected and this will fail.</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.0" />	
+      <dependency id="hdhomerun-view" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

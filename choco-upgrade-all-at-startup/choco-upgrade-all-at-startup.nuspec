@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-upgrade-all-at-startup</id>
+    <version>2017.01.10</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>choco upgrade all at startup (Script)</title>
+    <authors>Daniel Streefkerk</authors>
+    <projectUrl>https://daniel.streefkerkonline.com/2016/02/23/create-a-scheduled-task-to-keep-all-chocolatey-packages-up-to-date/</projectUrl>
+    <iconUrl>https://chocolatey.org/content/packageimages/chocolatey.0.10.3.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://gist.github.com/dstreefkerk/f3f0a3185aad754382bc#file-schedule-chocoupgradeall-ps1</projectSourceUrl>	
+    <docsUrl>https://daniel.streefkerkonline.com/2016/02/23/create-a-scheduled-task-to-keep-all-chocolatey-packages-up-to-date/</docsUrl>
+    <tags>choco upgrade startup admin</tags>
+    <summary>Powershell script to set choco upgrade all in scheduled tasks at computer startup.</summary>
+    <description>
+##Create a Scheduled Task to keep all Chocolatey Packages up-to-date
+
+FEBRUARY 23, 2016 / DANIEL S
+
+Rebuilding your PC is always a drag, even with useful utilities like Ninite.
+
+I recently created a PowerShell DSC script that I can use whenever I need to rebuild my PC. As part of that, I used the cChoco provider to automatically install applications using Chocolatey. I’ll be writing a blog post with more details shortly.
+
+That’s a great way to get the applications installed, but not for keeping them up-to-date. Chocolatey allows you to run ‘choco upgrade all’ manually to do this:
+
+![Screenshot of choco upgrade all](https://dstreefkerk.files.wordpress.com/2016/02/choco-upgrade-all.png?w=676)
+
+Rather than manually create the scheduled task to automate this, I created this short PowerShell script:
+
+$chocoCmd = Get-Command -Name 'choco' -ErrorAction SilentlyContinue -WarningAction SilentlyContinue | Select-Object -ExpandProperty Source
+if ($chocoCmd -eq $null) { break }
+$taskAction = New-ScheduledTaskAction –Execute $chocoCmd -Argument 'upgrade all -y'
+$taskTrigger = New-ScheduledTaskTrigger -AtStartup
+$taskUserPrincipal = New-ScheduledTaskPrincipal -UserId 'SYSTEM'
+$taskSettings = New-ScheduledTaskSettingsSet -Compatibility Win8
+$task = New-ScheduledTask -Action $taskAction -Principal $taskUserPrincipal -Trigger $taskTrigger -Settings $taskSettings
+Register-ScheduledTask -TaskName 'Run a Choco Upgrade All at Startup' -InputObject $task -Force
+
+The script will:
+
+* Locate the choco.exe binary (It’ll quit if it can’t find it in the path)
+* Set up a scheduled task that runs said binary at system startup
+
+Note that this script will only work on Windows 8 and newer machines, because it relies on the *-ScheduledTask cmdlets.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
