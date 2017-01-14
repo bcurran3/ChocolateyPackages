@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wot-chrome</id>
+    <version>3.2.1</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wot-chrome</packageSourceUrl>			
+    <title>Web of Trust for Chrome</title>
+    <authors>bcurran3</authors>
+    <owners>WOT Services LLC</owners>
+    <licenseUrl>https://www.mywot.com/en/terms</licenseUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/wot-web-of-trust-website/bhmmomiinigofkjcapegjjndpbikblnp?hl=en-US</projectUrl>
+    <iconUrl>https://lh6.googleusercontent.com/PVRWWt3pAFvBu-88w-tfP80XUtpD7xlmzm_FfPSDWxu87qDF7gJY-a62-U_E_L-69TlbO-Gq=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>The official Web of Trust Chrome Extension.</summary>	
+    <description>
+![Screenshots of WOT for Chrome](https://youtu.be/KtwamDprgWM)
+	
+Check out any website for reputation and safety information based on users’ experience. The official Web of Trust Chrome Extension.
+★★★★★ “Your new favorite add-on” - PCMag.com 
+
+Join millions of people in the WOT community to protect yourself from online threats that only humans can detect. Stay protected while shopping and surfing with this must-have addition to any antivirus solution (even if you don’t use one)! 
+
+***How it Works***
+
+*  WOT protects you while you browse, warning you when you visit dangerous sites, scams, malware, rogue web stores, dangerous links, and more 
+
+* Reputation icons are displayed next to search results, social media, email, and other popular sites to help you make informed decisions 
+Red indicates potential danger
+Yellow tells you to be careful
+Green means it’s a safe website
+
+*  Website reputations are calculated by combining advanced algorithms with millions of user reviews	
+
+***Features***
+
+*  Reputation Icons
+A small icon on your browser displays each site's rating and reputation 
+
+*  Warning Screen (optional)
+Get a warning popup when you land on a site with a poor reputation, giving you the option to proceed or go back to safety
+
+*  Check any site before visiting
+Use WOT scorecards to check reputation and reviews for any site before you visit. Find the site safety checker at https://mywot.com/ 
+
+*  Real-time Protection
+WOT has 2 modes: Real-time Protection and Manual Mode. Real-time Protection actively notifies you of online threats
+
+*  Site Reviews
+When visiting a site, users can give a rating and review based on their personal experiences
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <tags>wot web of trust chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
