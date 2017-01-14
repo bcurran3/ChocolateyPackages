@@ -1,7 +1,7 @@
 ﻿$packageName= 'pytivo-wmcbrine' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://github.com/wmcbrine/pytivo/archive/master.zip'
-$checksum   = 'FC1C16E587AD2A591287BF00B871DA362587D435903E6CF44D5FADAB989BF70E'
+$checksum   = '04B305C00B2C30793729864D2E495655A9678C0EF4F6E26BA427F8CD2E8719A3'
 
 $packageArgs = @{
   packageName   = $packageName
