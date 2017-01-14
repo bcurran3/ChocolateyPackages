@@ -1,6 +1,7 @@
 #NoEnv
 #NoTrayIcon
-WinWait, Snort 2_9_8_3 Setup, , 60
+WinWait, Snort 2.9.9.0 Setup, , 45
+
 WinActivate
 Send {Enter}
 
