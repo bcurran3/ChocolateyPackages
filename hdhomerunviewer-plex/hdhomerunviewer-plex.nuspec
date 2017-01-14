@@ -3,8 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hdhomerunviewer-plex</id>
-    <version>0.9.11</version>
+    <version>0.9.12</version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdhomerunviewer-plex</packageSourceUrl>
     <title>HDHomeRun Viewer for Plex</title>
     <authors>zynine</authors>
     <projectUrl>https://forums.plex.tv/discussion/101755/rel-hdhomerun-viewer</projectUrl>
