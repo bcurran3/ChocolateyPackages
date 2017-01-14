@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>google-cast-chrome</id>
+    <version>15.1120.0.4</version>
+    <title>Google Cast for Chrome</title>
+    <authors>Google</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-cast-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl=en-US</projectUrl>
+    <iconUrl>https://lh5.googleusercontent.com/wTHSuwQVFgzqT9zyYidzB7RbC_m-LHcvtNiMtqQjDyDIaba9wakZdoiy_8Mjp_3z6pDQvj4Tsu8=s26-h26-e365-rw</iconUrl>
+    <licenseUrl>https://www.google.com/intl/en/policies/</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Google Cast for Chrome](https://lh6.googleusercontent.com/Z_hmt4w2DkLvbC6XNBgs4i3O_pRYSZvTlpKvWcE6CNdi_-D30EL3Ix8Mou5r8P-6qKBoj9LY6-M=s640-h400-e365-rw)
+	
+##Send content to your Chromecast and other devices that support Google Cast.
+
+The Google Cast extension enables you to find and play content on your Chromecast device from your Chrome browser.
+
+When on Cast optimized sites like YouTube and Netflix, you'll see new options that let you play video on your TV via Chromecast - using your computer as a remote to browse for videos and to control playback.
+
+You can also cast any of your tabs in Chrome to your TV, letting you enjoy sites, photos, or even video from the best screen in your home.  Note that this feature is still in beta, and requires a fast computer and Wi-Fi network.
+
+Chromecast hardware is required to use this extension.  To find out more, visit http://google.com/chromecast.	
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
