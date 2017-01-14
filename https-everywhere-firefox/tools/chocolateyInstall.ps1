@@ -1,5 +1,6 @@
 $packageName = 'https-everywhere-firefox'
-$url = 'https://addons.mozilla.org/firefox/downloads/latest/229918/addon-229918-latest.xpi'
+$url         = 'https://addons.cdn.mozilla.net/user-media/addons/229918/https_everywhere-5.2.9-an+fx+sm+tb.xpi'
+$checksum    = '770668C7F296D6C0BDE3320354854781FC5E871FEDA345D2B22005EE33EACDAF'
 $extensionID = "https-everywhere@eff.org"
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
@@ -21,7 +22,7 @@ $packageArgs = @{
   unzipLocation = $extFolder 
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = 'E8E1E22F1E48E4F63F81A0E55CD9490003CACCCB5724F0AE1225AC57CAD67F8A'
+  checksum      = $checksum
   checksumType  = 'sha256' 	
 }
 	
