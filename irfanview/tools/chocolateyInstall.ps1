@@ -2,11 +2,11 @@
 $packageName    = 'irfanview'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\iview442_setup.exe"
-$checksum       = 'c56a5c248461f6e450aeca5b1240d572d751e58c44a8b8cb32d7c94714eeb182'
+$url            = "$toolsDir\iview444_setup.exe"
+$checksum       = '71B44CD3D14376BBB619B2FE8A632D29200385738DD186680E988CE32662B3D6'
 $checksumType   = 'sha256'
-$url64          = "$toolsDir\iview442_x64_setup.exe"
-$checksum64     = '15c4cc272a6d1397a3788192a5c640cbe772c3991180dde3a0af846dc9dd3a9d'
+$url64          = "$toolsDir\iview444_x64_setup.exe"
+$checksum64     = '38C9AC7B8C7C4342ECABD139E5CA4E9BD9460F0B541C00DFCD3E9D76CC125888'
 $checksumType64 = 'sha256'
 $validExitCodes = @(0)
 $arguments      = @{}
