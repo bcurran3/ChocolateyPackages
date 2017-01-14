@@ -4,7 +4,7 @@
   <metadata>
     <id>pytivo-wmcbrine</id>
     <title>PyTivo-wmcbrine (Install)</title>
-    <version>2016.11.24</version>
+    <version>2017.01.02</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pytivo-wmcbrine</packageSourceUrl>			
     <authors>pyTivo was created by Jason Michalski ("armooo"). Contributors include Kevin R. Keegan, William McBrine, and Terry Mound ("wgw").</authors>
     <owners>bcurran3</owners>
