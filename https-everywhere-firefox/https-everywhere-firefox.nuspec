@@ -3,7 +3,8 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>https-everywhere-firefox</id>
-    <version>5.2.6</version>
+    <version>5.2.9</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/https-everywhere-firefox</packageSourceUrl>		
     <title>HTTPS Everywhere for Firefox</title>
     <authors>EFF Technologists</authors>
     <owners>bcurran3</owners>

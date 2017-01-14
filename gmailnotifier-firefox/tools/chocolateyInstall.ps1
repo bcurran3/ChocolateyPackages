@@ -1,7 +1,7 @@
-$packageName = 'flagfox-firefox'
-$url         = 'https://addons.cdn.mozilla.net/user-media/addons/5791/flagfox-5.1.18-fx+sm.xpi'
-$checksum    = 'AE3D10F1CE119E700C624C373B9C6BAEA8FA7381006905E6795032D91A430094'
-$extensionID = "{1018e4d6-728f-4b20-ad56-37578a4de76b}"
+$packageName = 'gmailnotifier-firefox'
+$url         = 'https://addons.cdn.mozilla.net/user-media/addons/406178/gmailtm_notifier_restartless-0.7.0-fx.xpi'
+$checksum    = '56AA88AF5A2046CC29216575141B794E743DBE72046A1A9756FB7C952B46C4B0'
+$extensionID = "{ec8030f7-c20a-464f-9b0e-13a3a9e97384}"
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
 	$installDir = Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs | Select-Object -ExpandProperty Property

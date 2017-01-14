@@ -3,8 +3,8 @@ $packageName= 'winflector-client'
 $softwareName = 'Windows Driver Package - Era software*'
 $installerType = 'EXE'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://www.winflector.com/store/free-version/index/id/249' 
-$checksum   = '5FD4775ABDF69BA16E981EEA69E9217E45F74C3DB292632E03C437E8DF2A983B'
+$url        = 'http://www.winflector.com/store/free-version/index/id/265' 
+$checksum   = 'F693E561B1188CB2C3C0C08C2F081B2BC61B24EB61B4E1C0FE1DA8C06F90D877'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes= @(0, 3010, 1641)
 
