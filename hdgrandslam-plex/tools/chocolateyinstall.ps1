@@ -1,6 +1,7 @@
 ﻿$packageName      = 'hdgrandslam-plex' 
 $BundleName       = 'HDGrandSlam.bundle'
-$url              = 'https://codeload.github.com/jumpmanjay/HDGrandSlam.bundle/zip/v1.6'
+$url              = 'https://github.com/jumpmanjay/HDGrandSlam.bundle/archive/v1.6.2.zip
+$checksum         = 'D79FD30991832022DBEBE1FCD4EAA0FB210D92A5038623F6381B70C7CC8B31B6'
 $LocalAppDataPath = Get-ItemProperty -path "registry::hkey_current_user\software\Plex, Inc.\Plex Media Server" | select-object -expandproperty LocalAppDataPath
 
 if ($LocalAppDataPath -eq $null) {
@@ -18,7 +19,7 @@ $packageArgs = @{
   unzipLocation = $UnZipDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = 'C9ECCBAE8C56746A502BD1B13BA1E1FE6308B8781EBCBE37DC668E8C88350C54'
+  checksum      = $checksum 
   checksumType  = 'sha256'  
 }
 
@@ -40,5 +41,5 @@ If (Test-Path $strFileName){
   Write-Host "No previous version exists." -ForegroundColor green -BackgroundColor blue
 }
 
-Rename-Item "$UnZipDir\$BundleName-1.6" $BundleName
+Rename-Item "$UnZipDir\$BundleName-1.6.2" $BundleName
 Write-Host "You can ignore Only an exit code of non-zero will fail... messages." -ForegroundColor green -BackgroundColor blue

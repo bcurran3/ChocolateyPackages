@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winflector</id>
-    <version>3.9.2.0</version>
+    <version>3.9.3.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winflector</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Winflector (Install)</title>
@@ -40,6 +40,8 @@ A business application user needs to access applications and their functionality
 Remote desktop is a good solution when one wishes to remotely administrate the computer. In this case, it is efficient to use VNC software or single-user Terminal Services, which is included in the operating system.
 
 This is a fully functional version of Winflector software for two concurrent workstations for free.
+
+PACKAGING NOTE: Uninstall is not silent. Reboot required after uninstall before reinstalling.
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
