@@ -2,16 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mini-squeezebox-control-chrome</id>
-    <version>1.2</version>
+    <version>1.2.20170115</version>
     <title>Mini Squeezebox Control for Chrome</title>
     <authors>Ben Thomas</authors>
     <owners>bcurran3</owners>
-    <projectUrl>https://chrome.google.com/webstore/detail/mini-squeezebox-control/emicaigjkpfbgljmoalhmmbheakjokhi?utm_source=chrome-app-launcher-info-dialog</projectUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/mini-squeezebox-control/emicaigjkpfbgljmoalhmmbheakjokhi</projectUrl>
     <iconUrl>https://lh4.googleusercontent.com/_fQ9LVgwOSnB5ywLeDTlXRvB2GOf5xY4Qe3zQt1ekmRpWx88iWJMP6ruyENlMfihq7Tv_JpnSQ=s26-h26-e365-rw</iconUrl>
 	<mailingListUrl>http://www.ben-thomas.org/2011/03/02/squeezebox-extension-for-google-chrome/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Mini Squeezebox Control Chrome extension.</summary>	
     <description>
+![Screenshot of Mini Squeezebox Control for Chrome](https://lh3.googleusercontent.com/POzDAZsY6JwFI6hquDmbXcxaaKEPOP56erffektS9Mg9FYYEYkyAQnY39LEvT9HgdLV21bn3ow8=s640-h400-e365-rw)	
+	
 ###Adds a popup to your toolbar containing the mini SqueezeBox Server remote on the web interface (only tested with default gui).
 
 UPDATE: (version 1.2) Just some changes to comply with new chrome store updates.
@@ -31,6 +33,7 @@ There's also a simple options page if you don't run your Squeezebox Server on lo
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>squeezebox chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>momentum-chrome</id>
-    <version>0.91.6</version>
+    <version>0.92.2</version>
     <title>Momentum for Chrome</title>
     <authors>momentumdash.com</authors>
     <owners>bcurran3</owners>
@@ -10,7 +10,10 @@
 	<docsUrl>http://help.momentumdash.com/</docsUrl>
     <iconUrl>https://lh3.googleusercontent.com/JN1MwbErgQ_aepm_ln3cKM7WgJTg2iHk4Y8vSpM3IXPc4e1qES4SEp7vR25Qh0-mSG6Dh9htjQ=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Momentum Chrome extension</summary>	
     <description>
+![Screenshot of Momentum for Chrome](https://lh3.googleusercontent.com/RJ4jnr30NkOL3zFByvWdY0JNWH_q7F4Up2I0RsRxV0m-N25MHB0IlwWg5GzCy3w-XiCK6yy_UA=s640-h400-e365-rw)	
+	
 ###Replace new tab page with a personal dashboard featuring todo, weather, and inspiration.
 
 New Tab page gives you a moment of calm and inspires you to be more productive. Set a daily focus, track your to dos, and get inspired with a daily photo and quote. Eliminate distractions and beat procrastination with a reminder of your focus for the day on every new tab load. Join over 1 million users and get inspired to create the life you want to live.
@@ -37,8 +40,7 @@ We recognize that location sharing is a concern for many people (ourselves inclu
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
-    <copyright />
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>momentum chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

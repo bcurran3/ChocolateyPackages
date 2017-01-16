@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>pushbullet-chrome</id>
-    <version>336.0</version>
+    <version>336.0.20170115</version>
     <title>Pushbullet for Chrome</title>
     <authors>pushbullet.com</authors>
     <owners>bcurran3</owners>
@@ -11,6 +11,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<licenseUrl>https://www.pushbullet.com/tos</licenseUrl>
     <description>
+![Screenshot of Pushbullet Chrome extension](https://lh3.googleusercontent.com/Y7RXy25ZCVYJ7dRbEJkOeKsKSrxf4O9sAQoaKc6nbZia3QGgL7YLes2X0bdCFVu2RAysCsWiNw=s640-h400-e365-rw)
+	
 ###Bringing together your devices, friends, and the things you care about.
 
 Pushbullet is "the app you never knew you needed", according to CNET. Here's why:
@@ -42,7 +44,8 @@ See all the places Pushbullet is available: https://www.pushbullet.com/apps
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <summary>Pushbullet Chrome extension</summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>pushbullet chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

@@ -2,17 +2,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>checkerplusforgmail-chrome</id>
-    <version>19.3.2.1</version>
+    <version>19.3.8</version>
     <title>Checker Plus for Gmail™ for Chrome</title>
     <authors>Jason Savard</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/checkerplusforgmail-chrome</packageSourceUrl>		
-    <projectUrl>https://chrome.google.com/webstore/detail/checker-plus-for-gmail/oeopbcgkkoapgobdbedcemjljbihmemj?hl=en-US</projectUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/checker-plus-for-gmail/oeopbcgkkoapgobdbedcemjljbihmemj</projectUrl>
     <iconUrl>https://lh4.googleusercontent.com/G39bQlsJZNO-LaQvUAGVqmlSO3FD5VHF0iGhC31zDRJ0EF5HU_xVBAas4CznBYyW1J4hwd2RM6s=s26-h26-e365-rw</iconUrl>
 	<bugTrackerUrl>https://jasonsavard.com/wiki/Checker_Plus_for_Gmail_changelog</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<licenseUrl>https://jasonsavard.com/wiki/Terms_of_Service</licenseUrl>
     <description>
+![Screenshot of Checker Plus for Gmail for Chrome](https://lh3.googleusercontent.com/iTEM192OWh44epk97ZcL3v7rLXMeUahrYqalVjaq9uJ0dm6LS05uvP8RLxyt9NMhyDktg3hLWdQ=s640-h400-e365-rw)
+	
 ###Get desktop notifications, read, listen or delete emails without opening Gmail or Inbox by Gmail and easily manage multiple accounts.
 • The fastest and easiest way to manage multiple email accounts
 • 5 star extension with great reviews!
@@ -54,7 +56,8 @@ Click "Website" or visit jasonsavard.com for more info.
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
+    <summary>Checker Plus for Gmail Chrome extension</summary>
     <tags>jasonsavard checker plus gmail chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

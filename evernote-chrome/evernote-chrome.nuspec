@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>evernote-chrome</id>
-    <version>6.10</version>
+    <version>6.10.3</version>
     <title>Evernote Web Clipper for Chrome</title>
     <authors>evernote.com</authors>
     <owners>bcurran3</owners>
@@ -10,7 +10,10 @@
     <iconUrl>https://lh3.googleusercontent.com/SfbtXUyr3kSErDzbEMmmmr1qr61E5UP6y5w7znefoc1WWbqaVrgxhsBli3-ONnef7K3ZFZnbKMs=s26-h26-e365-rw</iconUrl>
 	<licenseUrl>https://evernote.com/legal/tos.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Evernote Chrome extension</summary>	
     <description>
+![Screenshot of Evernote for Chrome](https://lh3.googleusercontent.com/_yHyCCVqjjynQpJzLMbwbdKBAUfGZ3DpJMAseQvU5UlSWhJ-HlTZKAMO2nIIg03qIoCCbF318w=s640-h400-e365-rw)	
+	
 ###Use the Evernote extension to save things you see on the web into your Evernote account.
 
 Goodbye, bookmarks. Hello, Web Clipper!
@@ -33,7 +36,7 @@ CUSTOMIZE CLIPS
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>evernote web clipper chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />
