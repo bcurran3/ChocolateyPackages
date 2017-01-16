@@ -3,6 +3,7 @@
   <metadata>
     <id>momentum-chrome</id>
     <version>0.92.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/momentum-chrome</packageSourceUrl>		
     <title>Momentum for Chrome</title>
     <authors>momentumdash.com</authors>
     <owners>bcurran3</owners>

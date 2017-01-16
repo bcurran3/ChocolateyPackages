@@ -3,6 +3,7 @@
   <metadata>
     <id>chrome-remote-desktop-chrome</id>
     <version>0.85.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chrome-remote-desktop-chrome</packageSourceUrl>	
     <title>Chrome Remote Desktop for Chrome</title>
     <authors>Chrome.Devs</authors>
     <owners>bcurran3</owners>

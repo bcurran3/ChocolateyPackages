@@ -3,6 +3,7 @@
   <metadata>
     <id>pushbullet-chrome</id>
     <version>336.0.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pushbullet-chrome</packageSourceUrl>	
     <title>Pushbullet for Chrome</title>
     <authors>pushbullet.com</authors>
     <owners>bcurran3</owners>

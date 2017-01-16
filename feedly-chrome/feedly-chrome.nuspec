@@ -3,6 +3,7 @@
   <metadata>
     <id>feedly-chrome</id>
     <version>35.0.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/feedly-chrome</packageSourceUrl>	
     <title>feedly for Chrome</title>
     <authors>www.feedly.com</authors>
     <owners>bcurran3</owners>

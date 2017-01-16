@@ -3,6 +3,7 @@
   <metadata>
     <id>save-to-pocket-chrome</id>
     <version>2.1.17</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/save-to-pocket-chrome</packageSourceUrl>	
     <title>Save to Pocket for Chrome</title>
     <authors>getpocket.com</authors>
     <owners>bcurran3</owners>
