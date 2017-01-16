@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>amazon-music</id>
+    <version>5.3.3.1671</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazon-music</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Amazon Music  (Install)</title>
+    <authors>Amazon Digital Services LLC</authors>
+    <projectUrl>https://www.amazon.com/Amazon-Digital-Services-LLC-Music/dp/B00CTTEKJW</projectUrl>
+    <iconUrl>https://images-na.ssl-images-amazon.com/images/I/71VdVNOOaZL._SX425_.png</iconUrl>
+    <copyright>Amazon</copyright>
+    <licenseUrl>https://goo.gl/p9o41Q</licenseUrl>
+    <!--<licenseUrl>https://www.amazon.com/gp/help/customer/display.html/ref=footer_cou?ie=UTF8&nodeId=508088</licenseUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.amazon.com/gp/help/customer/display.html?nodeId=201377740</docsUrl>
+    <tags>amazon music streaming playre admin</tags>
+    <summary>Amazon Music for PC and Mac is a free desktop application you can use to play, download, and manage your digital music directly on your computer.</summary>
+    <description>
+###With the Amazon Music app, you can play and download your music, export downloads to iTunes and Windows Media Player, shop the Amazon Digital Music Store, and access Prime Music (if you're an eligible Prime member).
+
+* Any way you want it.
+* Amazon Music Unlimited: Stream tens of millions of songs, including new releases from today's most popular artists.
+* Prime Music: A growing selection of 2 million songs included with your Amazon Prime membership.
+* Play music on all your favorite devices and download to play offline.
+
+* Lets you play, manage and download all your music with ease and convenience.
+* With Prime Music, members can enjoy a growing selection of two million songs, playlists, and stations - always ad-free and included with your Prime membership.
+* With Amazon Music Unlimited – unlock even more. Listen to tens of millions of songs with weekly new releases.
+* Amazon Music for PC is fast. It'll get you from launch to play in seconds.
+* Amazon Music for PC detects and adds new music to your library even if you bought it from iTunes or ripped a CD. Your music library will always be organized and up-to-date.
+* System Requirements: Windows 7 and later
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
