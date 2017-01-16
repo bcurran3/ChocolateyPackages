@@ -1,9 +1,9 @@
 $bits = Get-ProcessorBits
-if ($bits -eq 64)
-{
-Remove-Item 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\hipbfijinpcgfogaopmgehiegacbhmob' -Force -ErrorAction SilentlyContinue
-}
-else
-{
-Remove-Item 'HKLM:\SOFTWARE\Google\Chrome\Extensions\hipbfijinpcgfogaopmgehiegacbhmob' -Force -ErrorAction SilentlyContinue
+$packageName = 'feedly-chrome'
+$extensionID = 'hipbfijinpcgfogaopmgehiegacbhmob'
+
+if ($bits -eq 64) {
+    Remove-Item "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
+   }else{
+    Remove-Item "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
 }

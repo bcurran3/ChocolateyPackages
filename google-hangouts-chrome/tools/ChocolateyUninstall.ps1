@@ -1,9 +1,9 @@
 $bits = Get-ProcessorBits
-if ($bits -eq 64)
-{
-Remove-Item 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\nckgahadagoaajjgafhacjanaoiihapd' -Force -ErrorAction SilentlyContinue
-}
-else
-{
-Remove-Item 'HKLM:\SOFTWARE\Google\Chrome\Extensions\nckgahadagoaajjgafhacjanaoiihapd' -Force -ErrorAction SilentlyContinue
+$packageName = 'google-hangouts-chrome'
+$extensionID = 'nckgahadagoaajjgafhacjanaoiihapd'
+
+if ($bits -eq 64) {
+    Remove-Item "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
+   }else{
+    Remove-Item "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
 }

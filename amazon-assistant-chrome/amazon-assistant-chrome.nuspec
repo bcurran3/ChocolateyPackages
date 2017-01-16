@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>amazon-assistant-chrome</id>
-    <version>10.1610.8.120</version>
+    <version>10.1610.8.1201</version>
     <title>Amazon Assistant for Chrome</title>
     <authors>amazon.com</authors>
     <owners>bcurran3</owners>
@@ -11,6 +11,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<licenseUrl>http://www.amazon.com/gp/BIT</licenseUrl>
     <description>
+![Screenshot of Amazon Assistant for Chrome](https://lh3.googleusercontent.com/8aPRcg1KAUrKehqgg77-L4_omRFijH3lCHFwUCTqmNDNkeOlUCdKmLPZN3nk_In9nqUA0CHgSUU=s640-h400-e365-rw)
+	
 ###Amazon's official browser extension. By installing you agree to the Conditions of Use at amazon.com/gp/BIT/TOU
 
 Amazon Assistant helps you make better decisions wherever you shop online by giving you access to: 
@@ -27,7 +29,8 @@ Learn more at www.amazon.com/gp/BIT.
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
+    <summary>Amazon Assistant Chrome extension</summary>
     <tags>amazon assistant chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

@@ -2,14 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>google-hangouts-chrome</id>
-    <version>2016.1026.1535.1</version>
+    <version>2016.1219.943.1</version>
     <title>Google Hangouts for Chrome</title>
     <authors>Google</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/google-hangouts/nckgahadagoaajjgafhacjanaoiihapd</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/2ywuhIgDHIeRRCgUncyhqjmvqnliGTWtBChGE7FiPhH8tQoFugbx1iJiHNl6HBfSHxAYHusG=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Google Hangouts Chrome Extension</summary>	
     <description>
+![Screenshot of Google Hangouts for Chrome](https://lh3.googleusercontent.com/bHrwV6XHVlKvSCi82rECje380b2I94Ka3Wn-sEQoK5Eze_iKDDxIQtQXhZGI7hFr__LeDC1SLDs=s640-h400-e365-rw)
+	
 ###Hangouts brings conversations to life with photos, emoji, and even group video calls for free.
 
 Use Hangouts to keep in touch. Message friends, start free video or voice calls, and hop on a conversation with one person or a group.
@@ -34,7 +37,7 @@ Notes:
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>	
     <tags>google hangouts chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

@@ -2,17 +2,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>quick-javascript-switcher-chrome</id>
-    <version>1.4.1</version>
+    <version>1.4.1.20170115</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/quick-javascript-switcher-chrome</packageSourceUrl>	
     <title>Quick Javascript Switcher for Chrome</title>
     <authors>Maxime Le Breton</authors>
     <owners>bcurran3</owners>
-    <projectUrl>https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje?utm_source=chrome-app-launcher-info-dialog</projectUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/quick-javascript-switcher/geddoclleiomckbhadiaipdggiiccfje</projectUrl>
     <projectSourceUrl>https://github.com/maximelebreton/quick-javascript-switcher</projectSourceUrl>	
     <iconUrl>https://lh5.googleusercontent.com/QhkT0PqNMQ5UWZhf6rCfkHMrdx7l3Jvkur2H6XK32B0x6Kzsaog-AJhae0aLxz9vCUg_hj_h0w=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/maximelebreton/quick-javascript-switcher/blob/master/license.txt</licenseUrl>	
+	<summary>Quick way to enable/disable Javascript in Chrome</summary>	
     <description>
+![Screenshot of Quick Javascript Switcher for Chrome](https://lh4.googleusercontent.com/6zi9lTCpjsLJ69lTOsmsPyAFRhilkgxBQS322CnZZfZgIMl5sey2AHb1aoLB3pBIYq_b27YN=s640-h400-e365-rw)	
+	
 Quick Javascript Switcher is a Chrome extension that enable / disable JavaScript on the fly by hostname, and subdomain.
 (unlike to Chris Pederick's "Web Developer" extension who globally disables javascript)
 
@@ -27,7 +30,7 @@ Works with Chrome 16+
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-	<summary>Quick way to enable/disable Javascript in Chrome</summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>disable javascript chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" version="16.0" />	  

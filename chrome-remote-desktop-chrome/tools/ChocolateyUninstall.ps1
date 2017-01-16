@@ -1,9 +1,9 @@
 $bits = Get-ProcessorBits
-if ($bits -eq 64)
-{
-Remove-Item 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\acfgckdadojoapmmjckgaknmljmaibei' -Force -ErrorAction SilentlyContinue
-}
-else
-{
-Remove-Item 'HKLM:\SOFTWARE\Google\Chrome\Extensions\acfgckdadojoapmmjckgaknmljmaibei' -Force -ErrorAction SilentlyContinue
+$packageName = 'chrome-remote-desktop-chrome'
+$extensionID = 'acfgckdadojoapmmjckgaknmljmaibei'
+
+if ($bits -eq 64) {
+    Remove-Item "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
+   }else{
+    Remove-Item "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
 }

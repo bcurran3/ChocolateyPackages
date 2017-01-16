@@ -2,14 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>speedtest-chrome</id>
-    <version>1.0.7</version>
+    <version>1.0.7.20170115</version>
     <title>Speedtest by Ookla for Chrome</title>
     <authors>speedtest.net</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/speedtest-by-ookla/pgjjikdiikihdfpoppgaidccahalehjh</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/GX4RKLVb8xWiL6_4gxNHKP8LTrelyM6tXTl5DRvZDci1S0y6Sr28EAP0Be5GT55-Wp3_SlhG=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Speedtest by Ooka Chrome extension</summary>	
     <description>
+![Screenshot of Speedtest by Ookla for Chrome](https://lh3.googleusercontent.com/La0PNQBGDFPRbsN6zDNMybQtCeFEdfS7lc8-lU-LGxvnO0K0SRbqKxE764yPm7AGGOUTto433A=s640-h400-e365-rw)	
+	
 ###Take a Speedtest directly from your toolbar to quickly test your internet performance without interruption.
 
 Take a Speedtest directly from your Google Chrome toolbar to quickly test your internet performance without interruption. Measure how fast the pages you visit load with Web Speed. 
@@ -21,7 +24,7 @@ Features:
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <copyright />
     <tags>speedtest ookla chrome extension</tags>
     <dependencies>

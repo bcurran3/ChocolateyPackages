@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>https-everywhere-chrome</id>
-    <version>2016.10.20</version>
+    <version>2016.12.19</version>
     <title>HTTPS Everywhere for Chrome</title>
     <authors>www.eff.org</authors>
     <owners>bcurran3</owners>
@@ -14,6 +14,8 @@
     <bugTrackerUrl>https://www.eff.org/files/Changelog.txt</bugTrackerUrl>	
     <summary>Automatically use HTTPS security on many sites.</summary>	
     <description>
+![Screenshot of HTTPS Everywhere for Chrome](https://lh3.googleusercontent.com/yQ7scbv7lPJF2R_4mmfnaKMLgBa3YGDViFQgoY3Yhv-HmIDPBMsAeFp-B0jgoikxe_ID0FWyDA=s640-h400-e365-rw)
+	
 ###Encrypt the Web! Automatically use HTTPS security on many sites.
 
 HTTPS Everywhere is an extension created by EFF and the Tor Project which automatically switches thousands of sites from insecure "http" to secure "https".  It will protect you against many forms of surveillance and account hijacking, and some forms of censorship.
@@ -21,6 +23,7 @@ HTTPS Everywhere is an extension created by EFF and the Tor Project which automa
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>https everywhere httpseverywhere eff chrome extension</tags>
 	<copyright>https://www.eff.org/copyright</copyright>
     <dependencies>
