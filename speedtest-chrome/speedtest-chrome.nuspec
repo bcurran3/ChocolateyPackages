@@ -3,6 +3,7 @@
   <metadata>
     <id>speedtest-chrome</id>
     <version>1.0.7.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/speedtest-chrome</packageSourceUrl>
     <title>Speedtest by Ookla for Chrome</title>
     <authors>speedtest.net</authors>
     <owners>bcurran3</owners>

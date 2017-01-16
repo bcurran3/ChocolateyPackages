@@ -3,6 +3,7 @@
   <metadata>
     <id>ipwhoisflags-chrome</id>
     <version>3.42.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ipwhoisflags-chrome</packageSourceUrl>	
     <title>IP Whois and Flags Chrome and Websites Rating for Chrome</title>
     <authors>myip.ms</authors>
     <owners>bcurran3</owners>

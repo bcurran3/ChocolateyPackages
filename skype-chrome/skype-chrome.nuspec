@@ -3,6 +3,7 @@
   <metadata>
     <id>skype-chrome</id>
     <version>8.5.0.91671</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/skype-chrome</packageSourceUrl>	
     <title>Skype for Chrome</title>
     <authors>skype.com</authors>
     <owners>bcurran3</owners>

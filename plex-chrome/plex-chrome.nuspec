@@ -3,6 +3,7 @@
   <metadata>
     <id>plex-chrome</id>
     <version>2.12.8</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plex-chrome</packageSourceUrl>	
     <title>Plex for Chrome</title>
     <authors>Plex, Inc.</authors>
     <owners>bcurran3</owners>

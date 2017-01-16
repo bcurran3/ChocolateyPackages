@@ -3,6 +3,7 @@
   <metadata>
     <id>mightytext-chrome</id>
     <version>19.6.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mightytext-chrome</packageSourceUrl>	
     <title>MightyText for Chrome</title>
     <authors>MightyText</authors>
     <owners>bcurran3</owners>

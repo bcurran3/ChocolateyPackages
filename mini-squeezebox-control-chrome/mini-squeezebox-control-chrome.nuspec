@@ -3,6 +3,7 @@
   <metadata>
     <id>mini-squeezebox-control-chrome</id>
     <version>1.2.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mini-squeezebox-control-chrome-chrome</packageSourceUrl>			
     <title>Mini Squeezebox Control for Chrome</title>
     <authors>Ben Thomas</authors>
     <owners>bcurran3</owners>

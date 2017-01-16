@@ -3,6 +3,7 @@
   <metadata>
     <id>ietab-chrome</id>
     <version>10.1.11.1</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ietab-chrome</packageSourceUrl>	
     <title>IE Tab for Chrome</title>
     <authors>ietab.net</authors>
     <owners>bcurran3</owners>
