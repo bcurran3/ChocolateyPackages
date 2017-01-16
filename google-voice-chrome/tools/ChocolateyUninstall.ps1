@@ -1,9 +1,9 @@
 $bits = Get-ProcessorBits
-if ($bits -eq 64)
-{
-Remove-Item 'HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\kcnhkahnjcbndmmehfkdnkjomaanaooo' -Force -ErrorAction SilentlyContinue
-}
-else
-{
-Remove-Item 'HKLM:\SOFTWARE\Google\Chrome\Extensions\kcnhkahnjcbndmmehfkdnkjomaanaooo' -Force -ErrorAction SilentlyContinue
+$packageName = 'google-voice-chrome'
+$extensionID = 'kcnhkahnjcbndmmehfkdnkjomaanaooo'
+
+if ($bits -eq 64) {
+    Remove-Item "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
+   }else{
+    Remove-Item "HKLM:\SOFTWARE\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
 }

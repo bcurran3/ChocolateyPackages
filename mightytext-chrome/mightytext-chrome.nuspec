@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>mightytext-chrome</id>
-    <version>19.6</version>
+    <version>19.6.20170115</version>
     <title>MightyText for Chrome</title>
     <authors>MightyText</authors>
     <owners>bcurran3</owners>
@@ -13,6 +13,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>MightyText - SMS from PC and Text from Computer</summary>	
     <description>
+![Screenshot of MightText for Chrome](https://lh6.googleusercontent.com/pR9wn__XWnYLDrqr3BBMTkCmXZEMN8rAkUHjclJ0otiGH1KmsCtloNHOSMTamirDkpDvXmoNU2s=s640-h400-e365-rw)	
+	
 ###SMS from PC or Mac using your Android #. Sync Text Messages, Calls, Notifications, Photos, Battery Status
 
 * Send and Receive SMS Text Messages on your PC or Mac
@@ -43,6 +45,7 @@ More features:
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>mightytext sms text chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

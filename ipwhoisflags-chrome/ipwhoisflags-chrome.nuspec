@@ -2,14 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>ipwhoisflags-chrome</id>
-    <version>3.42</version>
+    <version>3.42.20170115</version>
     <title>IP Whois and Flags Chrome and Websites Rating for Chrome</title>
     <authors>myip.ms</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/ip-whois-flags-chrome-web/kmdfbacgombndnllogoijhnggalgmkon</projectUrl>
     <iconUrl>https://lh6.googleusercontent.com/6Ak9zXqhi0W9i0xk_Wa3ChWYTAgLxiDqFHqfv9QwmuDTBy2iP8tm9V1ZN4OcB0IyGeXYMq2f=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>IP Whois and Flags Chrome extension</summary>	
     <description>
+![Screenshot of IP Whois and Flags and Websites Rating for Chrome](https://lh4.googleusercontent.com/lyFUahcHXel1YtZ5SgzcKpRj08-KorZCWl-wR08V8s_nTPny9Z0OhPxj8i2owVYedwcB-naWXA=s640-h400-e365-rw)	
+	
 ###Display Website Country Flag. Shows how many Visitors are visiting website. Website Reviews. Alexa. Norton Antivirus Site Adviser.
 
 Full Information on Any Website -
@@ -37,7 +40,7 @@ Full Information on Any Website -
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <copyright />
     <tags>whois flags rating chrome extension</tags>
     <dependencies>

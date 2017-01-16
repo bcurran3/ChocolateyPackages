@@ -2,14 +2,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>google-voice-chrome</id>
-    <version>2.4.4</version>
+    <version>2.4.4.20170115</version>
     <title>Google Voice (by Google) for Chrome</title>
     <authors>Google</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/google-voice-by-google/kcnhkahnjcbndmmehfkdnkjomaanaooo</projectUrl>
     <iconUrl>https://lh5.googleusercontent.com/_pgrttDIsxp32wu5xeBCPRUuDs-jH6kOYThblRrOPGAlxRVgAP6Pb6ds_tzt0CVyeCXNfTQb--M=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>###Make calls, send SMS, preview Inbox, and get notified of new messages. (US only)
+    <summary>Google Voice Chrome extension</summary>	
+    <description>
+![Screenshot of Google Voice for Chrome](https://lh4.googleusercontent.com/wBczU03AlxASeXKyucThUboVdWLUrWXv1ckaQsoXDp-0In-05YYy4mTQs_-EQnqzoKLFwZ6qug=s640-h400-e365-rw)	
+	
+###Make calls, send SMS, preview Inbox, and get notified of new messages. (US only)
 New:
 * Bug fixes.
 
@@ -33,9 +37,9 @@ Warning explained:
 When installing the extension it says "This extension will have access to all browsing history and private data on all websites" This is the default warning for any extension that needs content script access to all websites. This access is needed for detecting phone 	
 
 
-####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.</description>
-    <summary />
-    <copyright />
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+    </description>
+    <releaseNotes>updated to new install method</releaseNotes>	
     <tags>google voice chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

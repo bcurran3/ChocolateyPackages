@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>gsuite-training-chrome</id>
-    <version>1.8.7</version>
+    <version>1.8.11</version>
     <title>G Suite Training for Chrome</title>
     <authors>Google</authors>
     <owners>bcurran3</owners>
@@ -11,7 +11,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<licenseUrl>https://www.google.com/intl/en/policies/</licenseUrl>
 	<docsUrl>https://support.google.com/a/answer/7039472</docsUrl>
+    <summary>G Suite Training for Chrome extension</summary>	
     <description>
+![Screenshot of G Suite Training for Chrome](https://lh3.googleusercontent.com/y8VLrlrgBzlvQxJmC_H537_HwhmF-fhXXak8IGsJ3-WX4apCxg4Xzi_FQcLwJv19hjUt8kBr=s640-h400-e365-rw)	
+	
 ###Interactive training and walkthroughs, right within G Suite
 
 New to G Suite? G Suite Training is a Chrome extension that offers simple and interactive training lessons to get you up and running fast with G Suite (formerly Google Apps). 
@@ -32,7 +35,7 @@ By installing this item, you agree to the Google Terms of Service and Privacy Po
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>gsuite google apps suite calendar sheets slides docs training chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

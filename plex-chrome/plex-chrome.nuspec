@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>plex-chrome</id>
-    <version>2.10.7</version>
+    <version>2.12.8</version>
     <title>Plex for Chrome</title>
     <authors>Plex, Inc.</authors>
     <owners>bcurran3</owners>
@@ -12,6 +12,8 @@
 	<mailingListUrl>https://support.plex.tv/hc/en-us</mailingListUrl>
     <summary>Plex Chrome extension</summary>	
     <description>
+![Screenshot of Plex for Chrome](https://lh4.googleusercontent.com/tRGGUiuAcDKIWoCZ4NOuTIHHkFGF49GfyxQn3QJAeRVtwxliT4fpZFo1JGL-Ksz57ktyZbS-2tY=s640-h400-e365-rw)	
+	
 ###Easily organize and share your personal media and online content on all of your devices, no matter where you are.
 
 Plex organizes all of your personal media, wherever you keep it, so you can enjoy it on any device. With Plex, you can easily stream your videos, music, photos and home movies to your laptop or mobile device from your home computer running Plex Media Server (available for free at https://plex.tv).
@@ -30,6 +32,7 @@ With Plex, your media universe is constantly expanding. Getting up and running i
 
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>plex chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />

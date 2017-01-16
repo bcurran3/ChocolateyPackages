@@ -2,14 +2,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>office-online-chrome</id>
-    <version>1.5.0</version>
+    <version>1.5.0.20170115</version>
     <title>Microsoft Office Online for Chrome</title>
     <authors>Microsoft Corporation</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/office-online/ndjpnladcallmjemlbaebfadecfhkepb</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/wZMwJuLJFa8G-gituAAdM0ckm9tpYdj6fnmVtEg-Sdxu2a77auIvDOwt1PBGAYIIebDZr40=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Microsoft Office Online Chrome extension</summary>	
     <description>
+![Screenshot of Microsoft Office Online for Chrome](https://lh3.googleusercontent.com/S98w_v-qLUAr6OX6ZcfJbqqRTGd1J22L_fWSo55nUSgBMijVwX_9Ib_U7pfoHY8CNCJ5pSynKA=s640-h400-e365-rw)	
+	
 ###View, edit, and create Office files in your browser.
 
 Built for Chrome – Use Word, Excel, PowerPoint, OneNote, and Sway Online without needing Office installed.
@@ -28,7 +31,7 @@ Privacy Policy: http://aka.ms/privacy
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <releaseNotes>updated to new install method</releaseNotes>		
     <tags>microsoft office online chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />
