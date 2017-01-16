@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>amazon-music-chrome</id>
+    <version>1.4</version>
+    <title>Amazon Music for Chrome</title>
+    <authors>https://music.amazon.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazon-music-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/amazon-music/cfkfgcfgfpgmkogcnibdjcckkpdiajgp</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/v0d3lF7ZsFPI1-LUFXppJ6G15HQnIzP09HkZn16vCNje0QT0ZbX7_o0790X7ka66MC4gmX8W=s50-h50-e365-rw</iconUrl>
+    <licenseUrl>https://goo.gl/p9o41Q</licenseUrl>
+    <!--<licenseUrl>https://www.amazon.com/gp/help/customer/display.html/ref=footer_cou?ie=UTF8&nodeId=508088</licenseUrl>-->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Amazon Music for Chrome](https://lh3.googleusercontent.com/DPgCDD_wZNDV4LtWIf0KhfQ0Leeq6LoEeZ179xGb_2QIe0jx9Gdq5Ndb0MC4ZRdPyQy04XZ48w=s640-h400-e365-rw)
+
+###With the free Amazon Music player on the web, listen to your music collection anywhere you are.
+
+We’re changing the way you find and play the music you love.
+ 
+* Listen to tens of millions of songs with new releases from today’s most popular artists
+* Explore curated playlists and stations, always ad-free and with unlimited skips
+* Listen free with a Prime membership or get more with Amazon Music Unlimited
+
+####Amazon Music Unlimited
+* Choose from tens of millions of songs, thousands of curated playlists and stations, and get personalized recommendations
+* Listen to tens of millions of songs with new releases from today’s most popular artists
+* Download your favorite albums, songs, and playlists to your mobile device for offline listening. Your music is available anytime, anywhere
+* Exclusive Prime member pricing. Start your free trial
+ 
+####Prime Music
+* Enjoy a curated catalog of two million songs, playlists, and stations
+* Always ad-free and included with your Prime membership
+ 
+####Free Amazon Music Web Player
+* Listen to music you’ve purchased from Amazon – MP3 or AutoRip CDs/Vinyl. Your Amazon purchases are stored for free in the Amazon cloud
+* Import your iTunes music collection to the Amazon cloud with our desktop app and listen anywhere using our mobile and tablet apps. Download our apps at: https://www.amazon.com/musicapps
+* Mix songs from Amazon Music Unlimited, Prime Music, or purchased music to make the perfect playlist
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>amazon music player streaming chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
