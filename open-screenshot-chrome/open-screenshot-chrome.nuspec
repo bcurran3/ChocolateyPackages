@@ -7,7 +7,7 @@
     <authors>openscreenshot.com</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-screenshot-chrome</packageSourceUrl>		
-    <projectUrl>https://chrome.google.com/webstore/detail/open-screenshot/akgpcdalpfphjmfifkmfbpdmgdmeeaeo?utm_source=chrome-app-launcher-info-dialog</projectUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/open-screenshot/akgpcdalpfphjmfifkmfbpdmgdmeeaeo</projectUrl>
     <projectSourceUrl>https://github.com/Aminadav/OpenScreenshot</projectSourceUrl>
     <bugTrackerUrl>https://github.com/Aminadav/OpenScreenshot/issues</bugTrackerUrl>	
     <iconUrl>https://lh3.googleusercontent.com/UsEwLLRaLfTseNFPSMtquKtRAvOvPjEashZ0FXVKJNldjZnpc1M98uF5UteyQ5HpTKKTDEm1jA=s26-h26-e365-rw</iconUrl>

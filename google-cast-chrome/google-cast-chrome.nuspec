@@ -7,7 +7,7 @@
     <authors>Google</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-cast-chrome</packageSourceUrl>		
-    <projectUrl>https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl=en-US</projectUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/google-cast/boadgeojelhgndaghljhdicfkmllpafd?hl</projectUrl>
     <iconUrl>https://lh5.googleusercontent.com/wTHSuwQVFgzqT9zyYidzB7RbC_m-LHcvtNiMtqQjDyDIaba9wakZdoiy_8Mjp_3z6pDQvj4Tsu8=s26-h26-e365-rw</iconUrl>
     <licenseUrl>https://www.google.com/intl/en/policies/</licenseUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
