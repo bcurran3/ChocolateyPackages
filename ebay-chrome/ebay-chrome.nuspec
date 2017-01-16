@@ -3,6 +3,7 @@
   <metadata>
     <id>ebay-chrome</id>
     <version>4.2.25</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ebay-chrome</packageSourceUrl>	
     <title>eBay for Chrome</title>
     <authors>ebay.com</authors>
     <owners>bcurran3</owners>

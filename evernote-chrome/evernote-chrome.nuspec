@@ -3,6 +3,7 @@
   <metadata>
     <id>evernote-chrome</id>
     <version>6.10.3</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/evernote-chrome</packageSourceUrl>	
     <title>Evernote Web Clipper for Chrome</title>
     <authors>evernote.com</authors>
     <owners>bcurran3</owners>

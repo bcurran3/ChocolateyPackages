@@ -3,6 +3,7 @@
   <metadata>
     <id>office-online-chrome</id>
     <version>1.5.0.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/office-online-chrome</packageSourceUrl>	
     <title>Microsoft Office Online for Chrome</title>
     <authors>Microsoft Corporation</authors>
     <owners>bcurran3</owners>

@@ -3,6 +3,7 @@
   <metadata>
     <id>google-voice-chrome</id>
     <version>2.4.4.20170115</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-voice-chrome</packageSourceUrl>	
     <title>Google Voice (by Google) for Chrome</title>
     <authors>Google</authors>
     <owners>bcurran3</owners>

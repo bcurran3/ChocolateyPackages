@@ -3,6 +3,7 @@
   <metadata>
     <id>https-everywhere-chrome</id>
     <version>2016.12.19</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/https-everywhere-chrome</packageSourceUrl>	
     <title>HTTPS Everywhere for Chrome</title>
     <authors>www.eff.org</authors>
     <owners>bcurran3</owners>

@@ -3,6 +3,7 @@
   <metadata>
     <id>amazon-assistant-chrome</id>
     <version>10.1610.8.1201</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazon-assistant-chrome</packageSourceUrl>	
     <title>Amazon Assistant for Chrome</title>
     <authors>amazon.com</authors>
     <owners>bcurran3</owners>
