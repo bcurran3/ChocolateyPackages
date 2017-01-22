@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>back-to-backspace-chrome</id>
+    <version>1.3.0</version>
+    <title>Back to Backspace for Chrome</title>
+    <authors>J Delaney</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/back-to-backspace-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/back-to-backspace/cldokedgmomhbifmiiogjjkgffhcbaec</projectUrl>
+    <bugTrackerUrl>https://github.com/j-delaney/back-to-backspace/issues</bugTrackerUrl>	
+    <iconUrl>https://lh3.googleusercontent.com/pOrcsROLipZAtYpCLGi1f05F51k-mPYvxKEu2NGEdiEuSVUHQc9syxbgnhtTVRyyVlP1D6F8=s26-h26-e365-rw</iconUrl>
+    <projectSourceUrl>https://github.com/j-delaney/back-to-backspace</projectSourceUrl>	
+    <licenseUrl>https://github.com/j-delaney/back-to-backspace/blob/master/LICENSE.md</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>This Chrome extension re-enables the backspace key to go back a page.</summary>	
+    <description>
+###Use backspace to go back to the previous page you were on.
+
+Miss being able to use backspace to go back a page? This extension restores that ability. Just press the backspace key on any page and you'll go back to the previous page you were looking at. Note that this will not happen if you are currently filling out a form or typing into a textarea or input box.
+
+Special thanks to Google for the icon. Taken from https://design.google.com/icons/
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <tags>jdelaney back to backspace chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
