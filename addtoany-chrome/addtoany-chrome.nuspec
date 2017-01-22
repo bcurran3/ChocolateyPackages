@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>addtoany-chrome</id>
+    <version>3.0.4</version>
+    <title>AddToAny: Share Anywhere for Chrome</title>
+    <authors>www.addtoany.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/addtoany-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/addtoany-share-anywhere/ffpgijchhhkhnokafdeklpllijgnbche</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/n6kpA-xZE_0iEy9A8WkJpGT45XB6MEq09t9UdBoIrCfwIoBm3CA9gqI13AqbBN6yx7GwVDjx=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Chrome extension to add share options to MANY popular sites.</summary>	
+    <description>
+![Screenshot of AddToAny: Share Anywhere](https://lh3.googleusercontent.com/W5V5FWwVI_kbVs5akBuu2BAKdFpGpI7cd_9sVtd2GQtrsheysDSQuiBgqdmTR8hRoqdmaag_BA=s640-h400-e365-rw)
+	
+Share to Facebook, Twitter, Google+, email, and any other sharing or saving service quickly and easily with one share button.
+The AddToAny share button makes it easy and fast to share links to anyone anywhere using Facebook, Twitter, Google+, Pinterest, email, and many more sharing and social media services.
+
+Features:
+
+* AddToAny's Universal Share Button and Smart Menu
+* Personalized based on the services you probably already use
+* AddToAny "More" button lets you instantly access any other service anytime
+* Right-click to share from the context menu (optional)
+* Share to multiple services quickly while keeping the share popup open:
+* Just Ctrl+click or ⌘+click on a service, or
+* Click the middle mouse button
+* Large buttons with vector icons
+* Perfectly crisp on high PPI screens such as Retina displays or the Chromebook Pixel family
+
+Customizable:
+
+* Customize the services that appear in the sharing menu
+* Drag and drop to rearrange the order of services in the sharing menu
+* Toggle AddToAny in your context menu
+
+Fast and Secure:
+
+* Optimized to load instantly without slowing down Google Chrome
+* Directs to the HTTPS version of sites for privacy on shared networks
+* AddToAny never collects personal data
+
+Some of the services AddToAny supports:
+
+Facebook, Twitter, Pinterest, Telegram, Gmail, Google Plus, Pinboard, WordPress, WhatsApp, Google Classroom, Flipboard, AIM, AOL Mail, Allvoices, Amazon Wish List, Amazon Kindle, Pocket, App.net, Arto, Ask.com, Backflip, Balatarin, Bebo, BibSonomy, Blinklist, Blogger, Bookmarks.fr, Box.net, BuddyMarks, Buffer, Care2 News, CiteULike, Connotea, DZone, Delicious, Design Float, Diary.ru, Diaspora, Digg, Diglog, diHITT, Diigo, Email app, Evernote, Expression, Fark, Faves, Favoriten, Folkd, FunP, Google Bookmarks, Google Gmail, Google+, Hatena, Health Ranker, HelloTxt, Hemidemi, Hotmail, Hugg, Hyves, IWIW, Identi.ca, Imera Brazil, Instapaper, Jamespot, Jumptags, Khabbr, Kledy, LINE, LinkaGoGo, Linkatopia, LinkedIn, LiveJournal, Mail.ru, Maple, Mendeley, Meneame, MindBodyGreen, Mister-Wong, Mixx, Mozillaca, Multiply, MyLinkVault, MySpace, NUjij, Netlog, Netvibes Share, Netvouz, NewsTrust, NewsVine, NowPublic, Oknotizie, Oneview, Orkut, Outlook, Ping, PrintFriendly, Qzone, Read It Later, Reddit, Renren, Segnalo, Addthis, Shareaholic, Sharethis, Shoutwire, Simpy, SiteJot, Slashdot, social media, Squidoo, StumbleUpon, Stumpedia, Svejo, Tailrank, TechNet, Technorati, Technotizie, Tipd, Tumblr, Twiddla, TypePad, Viadeo, VK (vkontakte.ru), Wanelo, Yummly, and more!
+
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <tags>addtoany share social media chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
