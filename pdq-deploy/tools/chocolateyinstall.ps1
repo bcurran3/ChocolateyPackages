@@ -1,12 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'pdq-deploy'
-$softwareName = 'PDQ Deploy*'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www2.adminarsenal.com/download-pdqdeploy' 
-$checksum   = '2F20D0D186B2FFEC78BBA9B5EBE6215DC884C3A9441F5FF8D86216D99A4FBDE1'
-$silentArgs = '/S'
-$validExitCodes= @(0)
-$fileLocation = "$env:ChocolateyInstall\lib\$packageName\tools\PDQDeploy.11.2.0.0.exe"
+$packageName    = 'pdq-deploy'
+$softwareName   = 'PDQ Deploy*'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://www2.adminarsenal.com/download-pdqdeploy' 
+#https://aafiles.blob.core.windows.net/files/PDQDeploy_12_1_0_0_ca7e0a59-6b75-427e-9a38-2ca73ff56f8f.zip
+$checksum       = 'C483AA064770A2EC72F4E74C861CB7727DCCCF0C27B249BA8C80D5FA23537846'
+$silentArgs     = '/S'
+$validExitCodes = @(0)
+$fileLocation   = "$env:ChocolateyInstall\lib\$packageName\tools\PDQDeploy.12.1.0.0.exe"
 
 $packageArgs = @{
   packageName   = $packageName

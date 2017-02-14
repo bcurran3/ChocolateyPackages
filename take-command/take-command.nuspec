@@ -4,7 +4,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>20.0.25</version>
+    <version>20.11.39</version>
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
     <authors>JP Software</authors>
@@ -21,8 +21,6 @@
     <description>
 ![Screenshot of Take Command] (https://jpsoft.com/images/takecommand.jpg)
 
-###Take Command 20.0 build 17 Released 2016-09-05
-
 Take Command is a comprehensive interactive GUI and command line environment that makes using the Windows command prompt and creating batch files easy, fasterm and far more powerful. Take Command displays your command line applications in tabbed windows, with optional File Explorer-style integration for a visual look at your directories. Take Command includes hundreds of major enhancements to CMD commands such as COPY, DEL, DIR, and MOVE, and adds 170+ new commands, 640+ internal variables and functions, a batch file IDE / debugger, advanced command line editing and programmable tab completion, and thousands of other features.
 
 We're so convinced you'll find Take Command essential for all your command prompt windows that we offer a 90-day unconditional money-back guarantee.
@@ -35,7 +33,7 @@ Are you looking for a replacement command shell that provides an enhanced Window
 
 Take Command is our flagship product. For 25 years, JP Software has been helping programmers, system administrators, technical support professionals, and advanced users save time and beat their Windows command prompt frustrations. Take Command offers a new approach to working with Windows command line applications, bringing users the power of the command line and the ease of use of the GUI. Take Command is a complete Windows console and CMD replacement that provides you with a vastly better command prompt UI, a batch programming IDE (with syntax coloring and a powerful debugger), and thousands of additional features not available at the CMD command line.
 
-NOTE: If anyone would like older versions packaged because they bought the software and haven't upgraded yet, just make a request and I'll be glad to do it.
+PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 	</description>
     <releaseNotes>Psuedo silent install. Completely automated but progress windows will appear.</releaseNotes>
   </metadata>

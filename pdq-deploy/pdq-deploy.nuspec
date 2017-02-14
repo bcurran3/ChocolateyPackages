@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-deploy</id>
-    <version>11.2.0.0</version>
+    <version>12.1.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-deploy</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>PDQ Deploy (Trial) (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.adminarsenal.com/documentation/</docsUrl>
     <mailingListUrl>https://support.adminarsenal.com/hc/en-us</mailingListUrl>
-    <tags>admin arsenal pdq deploy patch deployment tool</tags>
+    <tags>admin arsenal pdq deploy patch deployment tool trial</tags>
     <summary>Deploy software quickly with PDQ Deploy</summary>
     <description>
 ![Screenshot of PDQ Deploy](http://cdn.adminarsenal.com/aa/img/choose%20targets.png)	
@@ -40,7 +40,7 @@ The challenge will be to determine the correct method to run it silently. The si
 We created the Package Library so that our users wouldn’t have to spend time with every Java or Flash update that comes down the pike. When you are a Pro or Enterprise mode customer you get access to the Package Library you can get common apps that are already in PDQ Packages, and are ready for deploying to all your computers. See the full list of ready-to-go silent installs.
 
 ###OS Requirements
-Windows Vista, 7, 8x, 10, Server 2008x, Server 2012x
+Windows Vista, 7, 8x, 10, Server (2008x, 2012x, 2016x)
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
