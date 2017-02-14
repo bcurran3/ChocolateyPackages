@@ -2,7 +2,7 @@
 $packageName= 'take-command'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://jpsoft.com/downloads/v20/tcmd.exe'
-$checksum   = 'D0ED94DB96C65EB726ABB5A3BE31B10817755326198921EE2DE6A6F1B582B964'
+$checksum   = '70FC72B7709821ABD1B3F810D8E2749BDE1B71A7E787952DB2F9297818FC8B30'
 
 
 $packageArgs = @{

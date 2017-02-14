@@ -3,10 +3,11 @@ $packageName= 'pdq-inventory'
 $softwareName = 'PDQ Inventory*'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'http://www2.adminarsenal.com/download-pdqinventory' 
-$checksum   = 'EC72A6004CD70B058896CFAF4F315457F1639D114E76E17DD250222FFEE9FD8D'
+#https://aafiles.blob.core.windows.net/files/PDQInventory_12_2_0_0_f86a994b-8c1e-479c-8888-5ab9a4e9a49e.zip
+$checksum   = '6293266F2A0F994E0731B437CE464B7AF9D9BE606D56365C949C0F038FF410B7'
 $silentArgs = '/S'
 $validExitCodes= @(0)
-$fileLocation = "$env:ChocolateyInstall\lib\$packageName\tools\PDQInventory.11.2.0.0.exe"
+$fileLocation = "$env:ChocolateyInstall\lib\$packageName\tools\PDQInventory.12.2.0.0.exe"
 
 $packageArgs = @{
   packageName   = $packageName

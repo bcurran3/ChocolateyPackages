@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-sync-outlook</id>
-    <version>3.8.440.1250</version>
+    <version>3.8.440.12501</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-sync-outlook</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>G Suite Sync for Microsoft Outlook (Install)</title>
@@ -53,7 +53,7 @@ For information about which Microsoft Outlook features are supported and how usi
 * Microsoft Outlook 2013® (32 and 64 bit) 
 * Microsoft Outlook 2016® (32 and 64 bit)
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>This mysteriously got a new checksum with no new release info. I think the installer got updated.</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>		
