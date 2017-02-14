@@ -4,7 +4,7 @@
   <metadata>
     <id>utorrent</id>
     <title>uTorrent (Install)</title>
-    <version>3.4.9.43085</version>
+    <version>3.4.9.43295</version>
     <authors>BitTorrent, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>		
@@ -29,7 +29,7 @@ Download your files as quickly and efficiently as possible without slowing down 
 Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download media directly from a variety of artists, bands, authors and filmmakers.
 
 
-####PACKAGING NOTES: This downloads the latest stable release and should work for upgrades, currently µTorrent Stable(3.4.8 build 42449) as of August 2, 2016.
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
     </description>
     <projectUrl>http://www.utorrent.com</projectUrl>
     <docsUrl>http://help.utorrent.com/</docsUrl>
