@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stinger</id>
-    <version>12.1.0.2202</version>
+    <version>12.1.0.2265</version>
     <owners>bcurran3</owners>
     <title>McAfee Stinger (Portable)</title>
     <authors>McAfee Labs</authors>
@@ -22,6 +22,8 @@
 McAfee Stinger is a standalone utility used to detect and remove specific viruses. It is not a substitute for full anti-virus protection, but a specialized tool to assist administrators and users when dealing with infected system. Details on new or enhanced signatures added with each Stinger build are listed in the Readme details.
 
 Stinger now includes Real Protect - a real-time behavior detection technology that monitors suspicious activity on an endpoint. Real Protect leverages machine learning and automated behavioral based classification in the cloud to detect zero-day malware in real-time.
+
+PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 	</description>
     <releaseNotes></releaseNotes>
   </metadata>

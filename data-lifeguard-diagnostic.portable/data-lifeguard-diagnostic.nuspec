@@ -4,9 +4,10 @@
   <metadata>
     <id>data-lifeguard-diagnostic.portable</id>
     <title>Western Digital Data Lifeguard Diagnostic for Windows (Install)</title>
-    <version>1.29.20161009</version>
+    <version>1.31</version>
     <authors>Western Digital</authors>
     <owners>bcurran3</owners>
+	    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/data-lifeguard-diagnostic.portable</packageSourceUrl>	
     <summary>Western Digital Data Lifeguard Diagnostic for Windows tests your Western Digital hard disks for errors.</summary>
     <description>
 ![alt text](http://support.wdc.com/images/kb/940_4.png)
@@ -34,10 +35,11 @@ Windows XP 32/64-bit versions
 * VIEW TEST RESULT - displays the latest test results.
 8. Select the test you wish to perform and click the Start button.
 9. When the test completes, you will be notified with a pass/fail message. Click the Close button.
+
 ####PACKAGING NOTE: If you want to install this program, you will find a setup program in the tools directory where this has been extracted. It does nothing more than copy the files to your Program Files directory and make the same icons. You will loose the ability to silenty uninstall the program.
     </description>
     <projectUrl>http://support.wdc.com/downloads.aspx?lang=en</projectUrl>
-    <bugTrackerUrl>http://support.wdc.com/download/notes/WinDLG_v1_29_Release_Notes.pdf</bugTrackerUrl>
+    <bugTrackerUrl>http://support.wdc.com/download/notes/WinDLG_v1_31_Release_Notes.pdf</bugTrackerUrl>
     <tags>western digital wd data lifeguard hdd diagnostic dlgdiag windlg admin</tags>
     <copyright>Copyright (C) 2002-2015, Western Digital</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

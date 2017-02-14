@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winflector-client</id>
-    <version>1.0.9.6</version>
+    <version>3.9.3.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winflector-client</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Winflector Client / Winflector Virtual Terminal(Install)</title>
@@ -43,7 +43,7 @@ This is a fully functional version of Winflector software for two concurrent wor
 
 PACKAGING NOTE: Uninstall from Control Panel.
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Switched to their published version number instead of actual program number.</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

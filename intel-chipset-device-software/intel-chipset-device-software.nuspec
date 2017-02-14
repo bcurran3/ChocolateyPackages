@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-chipset-device-software</id>
-    <version>10.1.1.14</version>
+    <version>10.1.1.42</version>
     <owners>bcurran3</owners>
     <title>Intel® Chipset Device Software (INF Update Utility) (Install)</title>
     <authors>Intel Corporation</authors>
@@ -38,7 +38,10 @@ Please read attached Readme.txt and ReleaseNotes_10.1.1.14.htm files before inst
 Keywords: 82801, ICH, MCH
 
 ###About Intel® drivers
-The driver or software for your Intel® component might have been changed or replaced by the computer manufacturer. We recommend you work with your computer manufacturer before installing our driver so you don’t lose features or customizations. </description>
+The driver or software for your Intel® component might have been changed or replaced by the computer manufacturer. We recommend you work with your computer manufacturer before installing our driver so you don’t lose features or customizations. 
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+</description>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
