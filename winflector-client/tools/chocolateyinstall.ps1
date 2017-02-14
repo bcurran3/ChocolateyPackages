@@ -1,12 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'winflector-client'
-$softwareName = 'Windows Driver Package - Era software*'
-$installerType = 'EXE'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.winflector.com/store/free-version/index/id/265' 
-$checksum   = 'F693E561B1188CB2C3C0C08C2F081B2BC61B24EB61B4E1C0FE1DA8C06F90D877'
-$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$validExitCodes= @(0, 3010, 1641)
+$packageName    = 'winflector-client'
+$softwareName   = 'Windows Driver Package - Era software*'
+$installerType  = 'EXE'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://www.winflector.com/store/free-version/index/id/273' 
+$checksum       = '7DB232454923BCBE66D11473ECE1FC20B3DA12549EE13B8B060976FD8DECF51E'
+$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$validExitCodes = @(0, 3010, 1641)
 
 $packageArgs = @{
   packageName   = $packageName
