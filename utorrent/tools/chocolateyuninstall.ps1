@@ -1,8 +1,8 @@
-﻿$packageName = 'utorrent'
-$installerType = 'EXE' 
-$silentArgs = '/uninstall /S'
+﻿$packageName    = 'utorrent'
+$installerType  = 'EXE' 
+$silentArgs     = '/uninstall /S'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
-$unpath = "${Env:AppData}\uTorrent\uTorrent.exe"
+$unpath         = "${Env:AppData}\uTorrent\uTorrent.exe"
 
 if((get-process "utorrent" -ea SilentlyContinue) -eq $Null){ 
     Write-Host "uTorrent currently NOT running." 

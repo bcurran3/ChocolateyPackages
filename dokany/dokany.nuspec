@@ -3,8 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dokany</id>
-    <version>1.0.1.1000</version>
+    <version>1.0.2</version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dokany</packageSourceUrl>		
     <title>dokany (Install)</title>
     <authors>Adrien J. and Maxime C.</authors>
     <projectUrl>https://github.com/dokan-dev/dokany</projectUrl>
