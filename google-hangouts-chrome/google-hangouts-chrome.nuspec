@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>google-hangouts-chrome</id>
-    <version>2016.1219.943.1</version>
+    <version>2017.110.418.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-hangouts-chrome</packageSourceUrl>	
     <title>Google Hangouts for Chrome</title>
     <authors>Google</authors>

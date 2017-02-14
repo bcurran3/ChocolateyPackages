@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-inventory</id>
-    <version>11.2.0.0</version>
+    <version>12.2.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>PDQ Inventory (Trial) (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.adminarsenal.com/documentation/</docsUrl>
     <mailingListUrl>https://support.adminarsenal.com/hc/en-us</mailingListUrl>
-    <tags>admin arsenal pdq inventory tool hardware software scanning</tags>
+    <tags>admin arsenal pdq inventory tool hardware software scanning trial</tags>
     <summary>PDQ Inventory allows Windows admins to know the software and hardware installed on their computers</summary>
     <description>
 ![Screenshot of PDQ Deploy](http://cdn.adminarsenal.com/wp-content/uploads/2015/12/reboot-required-300x187.png)	
