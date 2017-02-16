@@ -3,10 +3,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gpu-z</id>
-    <title>GPU-Z</title>
-    <version>1.16.0</version>
+    <title>GPU-Z (Portable)</title>
+    <version>1.17.0</version>
     <authors>W1zzard of TechPowerUp</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gpu-z</packageSourceUrl>			
     <summary>GPU-Z - the Graphics Card Information Utility</summary>
     <description>
 ![=Screenshot of GPU-Z](https://tpucdn.com/downloads/screenshots/2718_large.jpg)
@@ -24,17 +25,18 @@ GPU-Z is a lightweight utility designed to provide you with all information abou
 * Support for Windows XP / Vista / Windows 7 / Windows 8 / Windows 10 (both 32 and 64 bit versions are supported)
 * .. and yes, the author of CPU-Z has granted us permission to use a name similar to his product. Thanks Franck.
 
-NOTE: This will download the program and make an icon on your desktop. It does not actually "install." When you run GPU-Z it will give you the option to install or run stand-alone.
+PACKAGING NOTE 1: Binary is included. This package will make an icon on your desktop. It does not actually "install." When you run GPU-Z it will give you the option to install or run stand-alone.
+PACKAGING NOTE 2: GPU-Z is updated frequently. If installation fails due to a new version, please leave a comment on GitHub and I will get to it ASAP. 
     </description>
     <projectUrl>http://www.techpowerup.com/gpuz/</projectUrl>
-    <tags>gpu gpuz gpu-z techpowerup graphics card utility</tags>
-    <copyright>(c) 2007-2016 TechPowerUp</copyright>
+    <tags>gpu gpuz gpu-z techpowerup graphics card utility portable</tags>
+    <copyright>(c) 2007-2017 TechPowerUp</copyright>
     <docsUrl>http://www.techpowerup.com/gpuz/</docsUrl>
     <mailingListUrl>http://www.techpowerup.com/forums/forums/gpu-z.53/</mailingListUrl>
     <iconUrl>https://tpucdn.com/downloads/screenshots/f_15.jpg</iconUrl>
     <licenseUrl>http://www.techpowerup.com/gpuz/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>changed download URL</releaseNotes>
+    <releaseNotes>package now includes binary since URL DL is protected</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
