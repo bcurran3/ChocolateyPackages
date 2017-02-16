@@ -1,6 +1,6 @@
 ﻿VERIFICATION
 
-The binary included in this package was downloaded by the packager, bcurran3. SHA1 signatures were manually created and put in the package .nuspec file.
+The binary included in this package was downloaded by the packager, bcurran3. SHA1 signatures were manually created and put in the package .nuspec file. This same file can be found in my GitHub repo at https://github.com/bcurran3/ChocolateyPackages/tree/master/gpu-z.
 
 Additionally, checksums can be verified at https://www.techpowerup.com/download/techpowerup-gpu-z/ by clicking "Standard version" to download. 
 
