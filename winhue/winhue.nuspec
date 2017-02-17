@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>winhue</id>
+    <version>3.0.25</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
+    <owners>bcurran3</owners>
+    <title>WinHue (Install)</title>
+    <authors>Pascal Pharand</authors>
+    <projectUrl>https://hyrules.github.io/WinHue3/</projectUrl>
+    <iconUrl>http://www.usa.lighting.philips.com/b-dam/b2b-li/en_AA/support/tools/Philips%20Hue.png</iconUrl>	
+    <licenseUrl>https://creativecommons.org/licenses/by-nc/2.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Hyrules/WinHue3</projectSourceUrl>
+    <docsUrl>https://github.com/Hyrules/WinHue3/wiki/Basic%20Usage</docsUrl>
+    <bugTrackerUrl>https://github.com/Hyrules/WinHue3/issues</bugTrackerUrl>
+    <tags>hyrules winhue hue phillips light automation philips-hue-lighting
+philips-hue-lights admin</tags>
+    <summary>A program to control your Phillips Hue lights from Windows.</summary>
+    <description>
+![Screenshot of WinHue](https://hyrules.github.io/WinHue3/img/Main%20Window.png)
+
+WinHue is a windows desktop application to control the philips hue lighting system. It is was created for desktop pc using the microsoft .net framework. It is not intended to run on Windows phones and tablet and those plateforms will not be supported. WinHue also include a console version that comes with the installer.
+
+###Features :
+
+* Control the Philips Hue Lighting system via Microsoft Windows.
+* Create / Modify and delete : Groups, Schedules, Scenes and more.
+* Full control over lights / groups color, brightness, temperature, saturation, name.
+* Recurring Schedules and Timers !
+* Control your light from console.
+* Assign global keyboard shortcuts to your favorite actions and trigger them anywhere within windows.
+* Add rules or sensors.
+* IT'S FREE !	
+
+	</description>
+    <releaseNotes>actually WinHue v3 Beta 25</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5" />
+      <dependency id="vcredist2010" />
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
