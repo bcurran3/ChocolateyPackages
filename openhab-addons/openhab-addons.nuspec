@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>openhab-addons</id>
+    <version>2.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab-addons</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>openHAB Add-ons</title>
+    <authors>openHAB Community and the openHAB Foundation</authors>
+    <projectUrl>http://www.openhab.org/</projectUrl>
+    <iconUrl>http://www.openhab.org/assets/images/openhab-logo-square.png</iconUrl>
+    <copyright>Copyright © 2017 by the openHAB Community and the openHAB Foundation e.V.</copyright>
+    <licenseUrl>https://github.com/openhab/openhab-distro/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/openhab/openhab2-addons</projectSourceUrl>
+    <docsUrl>http://docs.openhab.org/</docsUrl>
+    <mailingListUrl>https://community.openhab.org/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/openhab/openhab2-addons/issues</bugTrackerUrl>
+    <tags>openhab addons extensions plugins home automation smart java portable admin</tags>
+    <summary>openHAB 2 Add-ons</summary>
+    <description>
+###openHAB 2 Add-ons
+	</description>
+    <releaseNotes>actually v2.0.0 beta 2</releaseNotes>
+    <dependencies>
+      <dependency id="openhab" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
