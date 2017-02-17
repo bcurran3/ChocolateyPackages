@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>openhab</id>
+    <version>2.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>openHAB (Portable)</title>
+    <authors>openHAB Community and the openHAB Foundation</authors>
+    <projectUrl>http://www.openhab.org/</projectUrl>
+    <iconUrl>http://www.openhab.org/assets/images/openhab-logo-square.png</iconUrl>
+    <copyright>Copyright © 2017 by the openHAB Community and the openHAB Foundation e.V.</copyright>
+    <licenseUrl>https://github.com/openhab/openhab-distro/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/openhab/openhab-distro</projectSourceUrl>
+    <docsUrl>http://docs.openhab.org/</docsUrl>
+    <mailingListUrl>https://community.openhab.org/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/openhab/openhab-distro/issues</bugTrackerUrl>
+    <tags>openhab home automation smart java portable admin</tags>
+    <summary>The open Home Automation Bus (openHAB, pronounced ˈəʊpənˈhæb) is an open source, technology agnostic home automation platform which runs as the center of your smart home!</summary>
+    <description>
+![Screenshot of openHAB](http://www.openhab.org/assets/images/ui/slide-desktop.png)
+	
+###Introduction
+
+More and more new cool devices and technologies arrive at our homes every day. But though they are all aimed at enhancing our lifestyle they all lack one important feature: a common language they could speak to each other to create a really automated and smart environment at home. The main goal of openHAB is to provide an integration platform to fix this issue.
+
+###What is openHAB?
+openHAB is a software for integrating different home automation systems and technologies into one single solution that allows over-arching automation rules and that offers uniform user interfaces.
+
+This means that openHAB
+
+* is designed to be absolutely vendor-neutral as well as hardware/protocol-agnostic
+* can run on any device that is capable of running a JVM (Linux, Mac, Windows)
+* lets you integrate an abundance of different home automation technologies into one
+* has a powerful rule engine to fulfill all your automation needs
+* comes with different web-based UIs as well as native UIs for iOS and Android
+* is fully open source
+* is maintained by a passionate and growing community
+* is easily extensible to integrate with new systems and devices
+* provides APIs for being integrated in other systems
+
+###Who is the Target Audience?
+
+openHAB is highly flexible and customizable, but this comes at a cost. You have to invest some time for learning its concepts and to set up an individual system tailored to your needs. Many parts of the setup require textual configuration, potentially accessing log files for debugging, etc. Therefore setting up openHAB is mainly a job for tech-savvy people - it is not a commercial off-the-shelf product that you plug in and that is ready to go.
+
+Nonetheless, this only applies to the setup and configuration of the system, which is usually done by a single person in the household, while all other family members are merely using the system. And here is where openHAB shines: It is very stable, has apps for all different end devices, allows voice interaction, etc, so once installed, it has a very high WAF.
+
+PACKAGING NOTE: You need to grant admin permissions for the current user at %programdata%\chocolatey\lib\openhab or the batch file will abort.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="javaruntime" version="8.0.101" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
