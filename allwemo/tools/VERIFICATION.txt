@@ -1,0 +1,8 @@
+﻿
+VERIFICATION
+
+Binaries included in this package were downloaded by the packager, bcurran3. SHA1 signatures were manually created and put in the package .nuspec file.
+
+Checksums are not provided by the developer.
+http://www.allware.com.mx/Software.aspx?Pr=AllWemo
+
