@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>bing-to-google-chrome</id>
+    <version>1.3.1</version>
+    <title>Bing To Google™ for Chrome</title>
+    <authors>niko109.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/bing-to-google-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/bing-to-google/klncmpknmcddjhglodllibbglcdmdmbi</projectUrl>
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/bing-to-google/klncmpknmcddjhglodllibbglcdmdmbi</bugTrackerUrl>	
+    <iconUrl>https://lh4.googleusercontent.com/pdSm59pybpN7UH3teKZMrHdjWbBx_0PuHP2EUJMP7qpd-I58tv6ofXDxBK71HgpeQF-4P-frJQ=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+##Redirects Bing to Google™
+
+Made for people who don't like Bing
+
+Opens links to Bing or Bing searches in Google™ instead of Bing, making web browsing better
+
+It will also redirect Cortana searches in Windows 10 to Google
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>Redirects Bing searches to Google searches</summary>
+    <tags>chrome extension bing google redirect search engine</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>edgedeflector</id>
+    <version>1.0.1.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/edgedeflector</packageSourceUrl>
+    <title>EdgeDeflector (Install)</title>
+    <authors>Daniel Aleksandersen</authors>
+    <projectUrl>https://github.com/da2x/EdgeDeflector/releases</projectUrl>
+    <iconUrl>https://github.com/da2x/EdgeDeflector/blob/master/EdgeDeflector/Icon.ico</iconUrl>
+    <copyright>Copyright © 2017 Daniel Aleksandersen</copyright>
+    <licenseUrl>https://github.com/da2x/EdgeDeflector/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/da2x/EdgeDeflector</projectSourceUrl>
+    <docsUrl>https://github.com/da2x/EdgeDeflector/blob/master/README.md</docsUrl>
+    <mailingListUrl>https://github.com/da2x/EdgeDeflector/releases.atom</mailingListUrl>
+    <bugTrackerUrl>https://github.com/da2x/EdgeDeflector/issues</bugTrackerUrl>
+    <tags>edgedeflector cortana edge chrome firefox opera admin</tags>
+    <summary>Change Windows 10's Cortana to use other browsers.</summary>
+    <description>
+###EdgeDeflector
+	
+EdgeDeflector is a small helper application that intercepts URIs that force-open web links in Microsoft Edge and redirects it to the system’s default web browser. This allows you to use Windows features like the Cortana assistant and built-in help links with the browser of your choice instead of being forced to use Microsoft Edge.
+
+You’ll never see EdgeDeflector ever again after installing it. It does its thing transparently in the background and only runs when a link needs to be deflected away from Microsoft Edge.
+
+System requirements: Windows 10, your favorite web browser	
+
+###Installation
+
+* Download the latest version of EdgeDeflector.exe from GitHub releases
+* Copy the downloaded executable to C:\Program Files\ or anywhere else it can be stored permanently
+* Run the program once to configure your system
+* Choose EdgeDeflector and Always use this app in the dialog
+
+You may need to repeat the above steps after installing major feature updates to Windows through Windows Update. You can subscribe to the AppCast feed to be notified of any new releases.
+
+If you dismiss the dialog, or choose the wrong app; you can apply the change in the Windows Settings app: Apps: Default apps: Choose default apps by protocol: microsoft-edge.
+
+If EdgeDeflector isn’t listed in either locations, try running it one more time; or lastly restarting your PC before you try again. (This last option actually helps if the System Registry is locked up or Windows is being suborn.)
+
+You don’t need to specify your browser of choice in EdgeDeflector. It will pick up on the system configured default from Windows Settings app: Apps: Default apps: Web browser.
+
+ARTICLES/REVIEWS:
+http://www.makeuseof.com/tag/force-cortana-use-chrome-google-windows-10/
+https://ctrl.blog/entry/edgedeflector-default-browser
+
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
