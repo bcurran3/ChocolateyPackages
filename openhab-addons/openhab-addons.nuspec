@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openhab-addons</id>
-    <version>2.0.0</version>
+    <version>2.0.0.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab-addons</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>openHAB Add-ons</title>
