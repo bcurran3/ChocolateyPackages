@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ntlite-free</id>
+    <version>1.2.0.4830</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
+    <title>NTLite (Free) (Install)</title>
+    <authors>Nlitesoft</authors>
+    <projectUrl>https://www.ntlite.com/</projectUrl>
+    <iconUrl>https://www.ntlite.com/wp-content/uploads/2014/10/72-web-logo.png</iconUrl>
+    <copyright>© 2014-2017 Nlitesoft</copyright>
+    <licenseUrl>https://www.ntlite.com/shop/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.ntlite.com/support/</docsUrl>
+    <mailingListUrl>https://www.ntlite.com/discussions/#/categories</mailingListUrl>
+    <bugTrackerUrl>https://www.ntlite.com/changelog/</bugTrackerUrl>
+    <tags>nlitesoft ntlite windows depoyment admin</tags>
+    <summary>Windows deployment tool</summary>
+    <description>
+![Screenshot of NTLite](https://www.ntlite.com/wp-content/uploads/screen_components.png)
+	
+##Welcome to NTLite  
+###For Windows IT Professionals and Enthusiasts	
+
+###Integrate and automate
+
+Integrate updates, drivers, automate Windows and application setup, speedup Windows deployment process and have it all set for the next time.
+
+###Reduce footprint
+
+Optionally remove Windows components, simplify your installation, reduce attack vectors and free up drive space.
+
+###In-place editing
+
+Next to editing images, you can also do the same actions on your existing Windows installation in-place, without reinstallation.
+*ISO creation only for existing images
+
+###MAIN FEATURES
+* LIVE INSTALL MODIFICATIONS
+* COMPONENT REMOVAL
+* HARDWARE TARGETING
+* DRIVER, UPDATE, LANGUAGE PACK AND APPLICATION INTEGRATION
+* TWEAKS
+* UNATTENDED SETUP
+* DISK PARTITIONING
+* APPLICATION INSTALLATION AUTOMATION
+* PENDING CHANGES OVERVIEW
+* AND MANY MORE
+
+More details at: https://www.ntlite.com/features/
+See license link for Free, Home, Professional, and Business version comparisons.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
