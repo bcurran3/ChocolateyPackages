@@ -9,6 +9,7 @@
     <title>AllWemo (Install)</title>
     <authors>Allware SA de CV</authors>
     <projectUrl>http://www.allware.com.mx/Software.aspx?Pr=AllWemo</projectUrl>
+    <iconUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/allwemo/AllWemo_icon.png</iconUrl>	
     <copyright>Allware SA de CV</copyright>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,7 +17,7 @@
     <tags>allware allwemo wemo smarthome home automation admin</tags>
     <summary>AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).</summary>
     <description>
-<!--[Screenshot of AllWemo](http://www.allware.com.mx/users/ImgSite.aspx?n=AllWemo2.jpg&t=Imagen)-->
+[Screenshot of AllWemo](http://www.allware.com.mx/users/ImgSite.aspx?n=AllWemo2.jpg&amp;t=Imagen)
 
 WEMO FOR PC
 
@@ -41,3 +42,4 @@ Please add your comments and suggestions in Allware Forums (look for the Wemo Ap
     <file src="tools\**" target="tools" />
   </files>
 </package>
+
