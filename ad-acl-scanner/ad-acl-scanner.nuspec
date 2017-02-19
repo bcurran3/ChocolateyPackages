@@ -19,6 +19,7 @@
     <tags>ad active directory acl scanner powershell server admin</tags>
     <summary>A tool with GUI used to create reports of access control lists (DACLs) and system access control lists (SACLs) in Active Directory .</summary>
     <description>
+![Screenshot of AD ACL Scanner](https://github.com/bcurran3/ChocolateyPackages/blob/master/ad-acl-scanner/ADACLScan4.7.jpg)	
 ####Features
 
 It has the following features:
@@ -62,6 +63,8 @@ It has the following features:
 * Powershell 2.0 or above
 * PowerShell using a single-threaded apartment
 * Some functions requires Microsoft .NET Framework version 4.0
+
+PACKAGING NOTE: Make sure your PowerShell ExecutionPolicy is set to at least RemoteSigned.
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>

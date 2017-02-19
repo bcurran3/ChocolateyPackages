@@ -7,6 +7,7 @@ $fileName     = 'ADACLScan.ps1'
 $shortcutName = 'AD ACL Scanner' 
 $FileFullpath = Join-Path $ToolsDir $fileName
 
+
 $packageArgs = @{
   packageName   = $packageName
   fileType      = ''
@@ -18,5 +19,5 @@ $packageArgs = @{
 
 Get-ChocolateyWebFile @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName.lnk" -targetPath $FileFullpath -WorkingDirectory "$toolsDir"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName.lnk" -targetPath $FileFullpath
+Install-ChocolateyShortcut -shortcutFilePath "$env:USERPROFILE\Desktop\$shortcutName.lnk" -targetPath $FileFullpath -WorkingDirectory "$toolsDir"
+
