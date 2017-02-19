@@ -1,7 +1,7 @@
 ﻿
 VERIFICATION
 
-Binaries included in this package were downloaded by the packager, bcurran3. SHA1 signatures were manually created and put in the package .nuspec file.
+MSI binary included in this package was originally downloaded and extracted from developers published ZIP file by the packager, bcurran3. SHA1 signature was manually created and put in the package .nuspec file.
 
 Checksums are not provided by the developer.
 http://www.allware.com.mx/Software.aspx?Pr=AllWemo
