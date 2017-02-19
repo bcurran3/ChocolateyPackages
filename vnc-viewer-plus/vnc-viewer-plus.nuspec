@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vnc-viewer-plus</id>
+    <version>1.2.9</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer-plus</packageSourceUrl>
+    <title>VNC Viewer Plus (Install)</title>
+    <authors>RealVNC Limited.</authors>
+    <projectUrl>https://www.realvnc.com/products/viewerplus/</projectUrl>
+    <iconUrl>https://www.realvnc.com/static/img/vnc-connect.svg</iconUrl>
+    <copyright>Copyright © 2002-2017 RealVNC Limited. All rights reserved.</copyright>
+    <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.realvnc.com/docs/</docsUrl>
+    <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
+    <tags>realvnc vnc connect viewer plus remote control admin</tags>
+    <summary>VNC Viewer Plus is used to remote control RealVNC and VNC Connect hosts.</summary>
+    <description>
+![Screen shot of VNC Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)
+
+##Your Intel Core vPro computer, when you need it
+
+###Game-changing technology
+
+VNC® Viewer Plus is the result of our unique collaboration with Intel that gives you VNC Server technology directly embedded onto the chipset of Intel® Core™ vPro™ computers with Intel AMT technology, for ‘lights out’ maintenance and diagnosis and repair of complex OS and boot failures. All the Intel AMT computer needs is a functioning network card and trickle power from a plug socket or battery.
+
+###Remote reboot, power management and image mounting
+
+VNC Viewer Plus can stay connected while rebooting so you can watch the boot sequence or configure the BIOS, remotely power the computer on and off to conserve energy, and share installation media in order to boot a new or repair an existing operating system from afar. More.
+
+###Still a standard VNC Viewer
+
+As soon as the Intel AMT computer is booted through to the login screen of a functioning operating system, VNC Viewer Plus gives you uninterrupted visual control of the desktop in the standard way for a VNC Viewer. And you can use it to connect to aftermarket VNC on non-AMT computers too, so you don’t need separate VNC Viewer apps.
+
+###Completely secure
+
+Take advantage of the security features built-in to Intel AMT out-of-the-box. With additional configuration, you can encrypt connections using TLS or Mutual TLS to defend against connection snooping, man-in-the-middle attacks, and packet-tampering. More.
+
+###Low cost of ownership
+
+A one-off licensing fee provides perpetual connectivity, with no hidden costs; connect as many times as you like, for as long as you need. You also get unlimited technical support and software updates for one year, a service you can renew for a competitive fee.
+
+###Intuitive to use
+
+VNC is simplicity itself. Connect to your Intel AMT computer and the embedded VNC Server automatically begins transmitting the display in real-time to VNC Viewer Plus, which sends back your mouse, keyboard and touch control events as you make them. It’s as though you were sitting in front of it.
+
+###Help when you need it
+
+There’s plenty of documentation, and we’re here by phone, chat, social media, and remote session whenever you need us.
+
+Reference: https://chocolatey.org/packages/realvnc and https://chocolatey.org/packages/vnc-connect/
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
