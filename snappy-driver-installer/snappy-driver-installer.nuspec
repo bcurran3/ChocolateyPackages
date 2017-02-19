@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>snappy-driver-installer</id>
+    <version>1.0.535</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snappy-driver-installer</packageSourceUrl>
+    <title>Snappy Driver Installer (Portable)</title>
+    <authors>Sam Bounce</authors>
+    <projectUrl>http://www.sdi-tool.org/</projectUrl>
+    <iconUrl>https://sourceforge.net/p/snappy-driver-installer/icon?1426233068</iconUrl>
+    <licenseUrl>https://sourceforge.net/p/snappy-driver-installer/code/HEAD/tree/branches/stable/resources/gpl-3.0.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/snappy-driver-installer/code/</projectSourceUrl>
+    <docsUrl>http://www.sdi-tool.org/settings/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/snappy-driver-installer/discussion/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/snappy-driver-installer/tickets/</bugTrackerUrl>
+    <tags>snappy driver installer drivers updater utility portable</tags>
+    <summary>Windows driver updater program.</summary>
+    <description>
+##INSTALL MISSING DRIVERS AND UPDATE OLD DRIVERS
+
+If you've lost your driver discs, you're unable to find drivers on the manufacturer's web site or Windows Update can't configure your hardware, use this tool to quickly find and install all missing drivers.
+
+If you're a PC technician, keep Snappy Driver Installer on your USB flash drive or external hard drive and take it with you wherever you go. In environments with no Internet access you can quickly get things working. No more searching for drivers after a clean install, just let Snappy Driver Installer do it's thing and your job will be done in no time.
+
+###Free
+No limitations. No premium features. No adware. No gotchas.
+
+###Portable
+Keep it on your USB flash drive and use it on the go. No installation is necessary.
+
+###Up-to-date
+You'll be notified about available updates and you'll be able to download them with the tool itself.
+
+###Safety
+Automatically creates a system restore point.
+
+###Supports all Windows
+Compatible with all versions of Windows, including server editions.
+
+###Customizable
+Pick any theme you like or make your own.
+
+###Accurate
+State of the art algorithms for finding the best matching drivers for any devices.
+
+###Open source
+Licensed under GNU GPL v3.0. You can review the source code and submit patches.
+
+###Multilingual
+Twenty seven languages are supported. Your language is probably among them.	
+
+###Supports: Windows 2K, XP, Vista, 7, 8, 8.1, 10
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
