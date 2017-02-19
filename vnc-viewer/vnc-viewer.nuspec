@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vnc-viewer</id>
+    <version>6.0.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer</packageSourceUrl>
+    <title>VNC Viewer (Install)</title>
+    <authors>RealVNC Limited.</authors>
+    <projectUrl>https://www.realvnc.com/products/vnc/</projectUrl>
+    <iconUrl>https://www.realvnc.com/static/img/vnc-connect.svg</iconUrl>
+    <copyright>Copyright © 2002-2017 RealVNC Limited. All rights reserved.</copyright>
+    <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.realvnc.com/docs/</docsUrl>
+    <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
+    <tags>realvnc vnc connect viewer remote control admin</tags>
+    <summary>VNC Viewer is used to remote control RealVNC and VNC Connect hosts.</summary>
+    <description>
+![Screen shot of VNC Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)
+
+VNC Viewer is used to remote control RealVNC and VNC Connect hosts.
+
+Reference: https://chocolatey.org/packages/realvnc and https://chocolatey.org/packages/vnc-connect/
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
