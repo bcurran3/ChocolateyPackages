@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ext2ifs</id>
+    <version>1.12</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ext2ifs</packageSourceUrl>
+    <title>Ext2 Installable File System For Windows (Install)</title>
+    <authors>Stephan Schreiber</authors>
+    <projectUrl>http://www.fs-driver.org/index.html</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.fs-driver.org/faq.html</docsUrl>
+    <bugTrackerUrl>http://www.fs-driver.org/extendeddl.html</bugTrackerUrl>
+    <tags>ext2ifs ext2 linux file system admin</tags>
+    <summary>Ext2 Installable File System For Windows</summary>
+    <description>
+![Screenshot of Ext2 Installable File System for Windows](http://www.fs-driver.org/images/ScreenExplorer.png)
+
+###What's unique about this software?
+
+It provides Windows NT4.0/2000/XP/Vista/7/8/8.1/Server 2003/2008/2008 R2/2012/2012 R2 with full access to Linux Ext2 volumes (read access and write access). This may be useful if you have installed both Windows and Linux as a dual boot environment on your computer.
+
+The "Ext2 Installable File System for Windows" software is freeware.
+
+If you currently have Windows running and you realize that you need some files for your work which you have stored on an Ext2 volume of your Linux installation, you no longer have to shut down Windows and boot Linux!
+
+Furthermore, Windows will now be able to handle USB memory sticks and floppy disks which have been formatted with an Ext2 file system.
+
+Linux Ext3 volumes can also be accessed. To do that, please read the FAQ section.
+
+It installs a pure kernel mode file system driver Ext2fs.sys, which actually extends the Windows operating system to include the Ext2 file system. Since it is executed on the same software layer at the Windows operating system core like all of the native file system drivers of Windows (for instance NTFS, FASTFAT, or CDFS for Joliet/ISO CD-ROMs), all applications can access directly to Ext2 volumes. Ext2 volumes get drive letters (for instance O:). Files, and directories of an Ext2 volume appear in file dialogs of all applications. There is no need to copy files from or to Ext2 volumes in order to work with them.
+
+###Features
+
+Detailed list of features:
+
+* Supports Windows NT 4.0, Windows 2000, Windows XP, Windows Vista, Windows 7, Windows 8, Windows 8.1, Windows Server 2003, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2.
+* Supports both the 32 bit x86 and the 64 bit x64 platform. Supports the 64 bit Itanium Processor Family (IPF) as well.
+* Includes drivers with a digital signature for Windows Vista x64 or higher.
+* All operations you would expect: Reading and writing files, listing directories, creating, renaming, moving and deleting files or directories, querying and modifying the volume's label.
+* Has trim support for solid state drives (SSD) on Windows 7/Server 2008 R2 or higher.
+* UTF-8 encoding.
+* Large inodes.
+* Supports block sizes up to 64KB.
+* Files larger than 2 GBytes. (Please read the FAQ section, too.)
+* Supports hash indexed (htree) directories (utilizes the so-called dir_index feature of Ext3).
+* Supports some Ext4 features: dir_nlink feature, huge_file feature, and the uninit_bg feature which includes group descriptor checksums.
+* Implements the Ext4 Multiblock Allocator which improves the performance on Ext2 or Ext3 as well by a superior efficiency upon block allocation and by minimizing fragmentation of the volume.
+* Full plug-n-play functionality. When a drive is removed, the corresponding drive letter is deleted.
+* Supports use of the Windows mountvol utility to create or delete drive letters for Ext2 volumes (except on Windows NT 4.0). This is useful for scripts. (Please read the FAQ section, too.)
+* A global read-only option is provided.
+* File names that start with a dot "." character or end with "~" are treated as hidden.
+* Supports GPT disks if the Windows version used also does.
+* Paging files are supported. (A paging file is a file "pagefile.sys", which Windows swaps virtual memory to.) Users may create paging files using the Windows control panel for Ext2 volumes.
+(and more)
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

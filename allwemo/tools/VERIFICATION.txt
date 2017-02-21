@@ -1,7 +1,13 @@
 ﻿
 VERIFICATION
 
-MSI binary included in this package was originally downloaded and extracted from developers published ZIP file by the packager, bcurran3. SHA1 signature was manually created and put in the package .nuspec file.
+The included MSI binary included in this package went through through the following process to be obtained:
+* AllWemo_2_14_setup.zip with SHA1 of AE76793F9405F3B0CAE81D0DD42A463D6C8C1014E410D4010AD0DC377878DF4D was  originally downloaded from developers site at http://www.allware.com.mx/Doc.aspx?D=177&dn=AllWemo_2_14_setup.zip 
+* DISK1\setup.exe with SHA1 of DD62A35BBEF56C9039F9DD99EB49CA0201BFB2F3993B3A935B6044CF42E11741 was extracted from AllWemo_2_14_setup.zip.
+* setup.exe was checked for silent install options. Running setup.exe /? shows silent install options but they don't function. It is assumed by the packager that those are being shown by the underlying MSI package but not passed through by the wrapper.
+* setup.exe was run and the AllWemo.msi with SHA1 466FC0B3474E978B6C515C9A44F30DCC627D25FE0E5799AE12B84B70CDDCA2F2 was copied from the temp dir mid-process to then be included in this package.
+* AllWemo.msi installs silently perfectly fine using normal MSI install functions.
+* AllWemo distribution rights (allowed) are covered in LICENSE.txt
 
 Checksums are not provided by the developer.
 http://www.allware.com.mx/Software.aspx?Pr=AllWemo

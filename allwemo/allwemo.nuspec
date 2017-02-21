@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>allwemo</id>
-    <version>2.14</version>
+    <version>2.14.6249.29697</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allwemo</packageSourceUrl>
     <title>AllWemo (Install)</title>
@@ -17,7 +17,7 @@
     <tags>allware allwemo wemo smarthome home automation admin</tags>
     <summary>AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).</summary>
     <description>
-[Screenshot of AllWemo](http://www.allware.com.mx/users/ImgSite.aspx?n=AllWemo2.jpg&amp;t=Imagen)
+![Screenshot of AllWemo](http://www.allware.com.mx/users/ImgSite.aspx?n=AllWemo2.jpg&amp;t=Imagen)
 
 WEMO FOR PC
 
