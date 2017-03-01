@@ -4,7 +4,7 @@
   <metadata>
     <id>kmttg</id>
     <title>kmttg</title>
-    <version>2.2.15</version>
+    <version>2.2.17</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/kmttg</packageSourceUrl>			
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
@@ -41,7 +41,7 @@ Also has ability to capture video output directly from Slingbox Pro or later mod
     <dependencies>
       <dependency id="javaruntime" />
     </dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>now runs icacls to give full permissions to the toolsdir for the current user so that extra files can download and configuration can be set</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
