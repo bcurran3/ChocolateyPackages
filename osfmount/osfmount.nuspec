@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>osfmount</id>
+    <version>1.5.1015</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/osfmount</packageSourceUrl>
+    <title>OSFMount (Install)</title>
+    <authors>PassMark® Software Pty Ltd</authors>
+    <projectUrl>http://www.osforensics.com/tools/mount-disk-images.html</projectUrl>
+    <iconUrl>http://www.osforensics.com/images/osfmount-banner.jpg</iconUrl>
+    <copyright>Copyright (C) 2010-2014 PassMark Software</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>http://www.passmark.com/forum/osforensics-osfmount-osfclone</mailingListUrl>
+    <bugTrackerUrl>http://www.osforensics.com/tools/mount-disk-images.html</bugTrackerUrl>
+    <tags>osfmount virtual disk mount img dd bin iso oon nrg sdi aff afm afd vmdk e01 s01 vhd admin</tags>
+    <summary>Mount dd image files in Windows</summary>
+    <description>
+![Screenshot of OSFMount](http://www.osforensics.com/images/osfmount-mainscreenshot.png)
+
+OSFMount is a free utility designed for use with PassMark OSForensics™
+
+##Overview
+
+OSFMount allows you to mount local disk image files (bit-for-bit copies of a disk partition) in Windows with a drive letter. You can then analyze the disk image file with PassMark OSForensics™ by using the mounted volume's drive letter. By default, the image files are mounted as read only so that the original image files are not altered.
+
+OSFMount also supports the creation of RAM disks, basically a disk mounted into RAM. This generally has a large speed benefit over using a hard disk. As such this is useful with applications requiring high speed disk access, such a database applications, games (such as game cache files) and browsers (cache files). A second benefit is security, as the disk contents are not stored on a physical hard disk (but rather in RAM) and on system shutdown the disk contents are not persistent.
+
+OSFMount supports mounting images of CDs in .ISO format , which can be useful when a particular CD is used often and the speed of access is important.	
+
+##Supported File Extensions:
+(all Read, some Write - see product page for further details)
+* Raw Image (.IMG, .DD)
+* Raw CD Image (.ISO, .BIN)	
+* Split Raw Image (.00n)
+* Nero Burning ROM Image (.NRG)	
+* System Deployment Image (.SDI)	
+* Advanced Forensics Format Images* (AFF)
+* Advanced Forensics Format Images w/ meta data* (AFM)
+* Advanced Forensics Format Directories* (AFD)	
+* VMWare Image (.VMDK)	
+* EnCase EWF (.E01)	
+* SMART EWF (.S01)	
+* VHD Image (.VHD)
+
+##System requirements
+
+Windows XP, Vista, Win 7, Win 8, and Win 10
+Windows Server 2000, 2003, 2008
+32bit and 64bit support
+It is recommended that 64-bit Windows is used when large disk image files are to be mounted. The 32-bit version can only be used on 32-bit Windows. The 64-bit version can only be used on 64-bit Windows. 
+Users must have administrator privileges.
+RAM: 1GB. When mounting large disk images, the more RAM the better.
+Disk space: 1 MB of free hard disk space for the installation files.
+
+##Price
+
+OSFMount is a free utility.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
