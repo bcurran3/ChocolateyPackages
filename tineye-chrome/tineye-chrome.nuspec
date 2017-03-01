@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>tineye-chrome</id>
+    <version>1.1.5</version>
+    <title>for Chrome</title>
+    <authors>TinEye</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tineye-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/tineye-reverse-image-sear/haebnnbpedcbhciplfhjjkbafijpncjl</projectUrl>
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/tineye-reverse-image-sear/haebnnbpedcbhciplfhjjkbafijpncjl</bugTrackerUrl>	
+    <iconUrl>https://tineye.com/images/press/TinEyeLogo_WordMark.jpg</iconUrl>
+    <licenseUrl>https://tineye.com/terms</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Example picture of TinEye Chrome extension in use](https://tineye.com/images/extension-chrome-example.jpg)
+
+##This is the official TinEye Chrome extension. Find out where an image came from, how it's used, or find higher resolution versions.	
+
+###ABOUT TINEYE
+
+TinEye is the first image search engine on the web to use image identification technology, instead of using keywords, metadata or watermarks. When you submit an image to be searched, TinEye creates a unique and compact digital signature or 'fingerprint' for it, then compares this fingerprint to every other image in our index to retrieve matches. TinEye does not typically find similar images; it finds exact matches including those that have been cropped, edited or resized.
+
+TinEye adds tens of millions of new images to its database every week.
+Follow our image updates here: https://tineye.com/releases
+
+For the latest updates you can also:
+
+- [Read the TinEye blog:](http://blog.tineye.com/)
+- [Become a fan on Facebook:](https://www.facebook.com/tineye)
+- [Follow us on Twitter:](https://twitter.com/tineye)
+
+---
+
+HOW TO USE THIS EXTENSION
+
+To use the extension, simply right-click on any web image and select "Search Image on TinEye" from the context menu. Results are displayed for you at tineye.com.
+
+To set extension preferences go to Tools > Extensions in the Chrome menu bar. Locate 'TinEye Reverse Image search' in the extensions list and click the 'Options' link. From here you can:
+
+ Set sort order preference
+- Open searches in background, foreground or current tab
+
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>TinEye for Chrome lets you search for other instances of pictures on the Internet.</summary>
+    <tags>tineye photo search chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

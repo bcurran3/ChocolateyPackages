@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>readyshare-vault-software-utility</id>
+    <version>1.0.50.500</version>
+    <title>NETGEAR ReadySHARE Vault (Install)</title>
+    <authors>NETGEAR, Inc.</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readyshare-vault-software-utility</packageSourceUrl>	
+    <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
+    <projectUrl>https://www.netgear.com/support/product/ReadySHARE_Vault.aspx</projectUrl>
+    <iconUrl>https://www.netgear.com/images/LandingPagesandEvents/Newsletter/GearupforSpring/gear-up-for-spring-netgear-logo-large.jpg</iconUrl>
+    <bugTrackerUrl>http://kb.netgear.com/25411/ReadySHARE-Vault-Software-Utility-Version-1-0-50-500</bugTrackerUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of NETGEAR ReadySHARE Vault](http://www.downloads.netgear.com/files/answer_media/images/Vault/img3.png)
+	
+Provides free, automatic continuous/scheduled backup for your Windows PCs on your home network.
+
+[Supported Routers](http://kb.netgear.com/29848/Router-Apps)
+    </description>
+    <summary>ReadyCLOUD gives you remote access over the Internet to a USB storage device that is connected to your router's USB port.</summary>
+    <releaseNotes />
+    <copyright>(C) 2016 NETGEAR, Inc.</copyright>
+    <tags>netgear readyshare vault backup nas router admin</tags>
+    <docsUrl>http://www.downloads.netgear.com/files/GDC/ReadySHARE_Apps/ReadySHARE_Vault_UM_19Aug2015.pdf</docsUrl>
+    <mailingListUrl>https://community.netgear.com/</mailingListUrl>
+  </metadata>
+</package>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>readycloud</id>
+    <version>1.15.1292.517</version>
+    <title>NETGEAR ReadyCLOUD (Install)</title>
+    <authors>NETGEAR, Inc.</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
+    <projectUrl>http://kb.netgear.com/29786/What-is-the-ReadyCLOUD-Desktop-App</projectUrl>
+    <iconUrl>https://www.netgear.com/images/support/CategoryIcons/icon-readynas-software.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>![Screenshot of NETGEAR ReadyCLOUD](http://www.downloads.netgear.com/files/answer_media/images/readycloud/downloadlink5.png)
+
+##ReadyCLOUD
+
+###Easily add a personal cloud to your home network
+
+ReadyCLOUD is a free service that allows you to access files on your ReadyNAS or on storage connected to your Nighthawk anytime, anywhere, or from any web-enabled device.
+
+Which solution is right for you?	Router*	ReadyNAS
+No monthly fees	                       ✔	✔
+Anywhere access to your files	       ✔	✔
+Additional storage for your devices	   ✔	✔
+Easy file sharing	                   ✔	✔
+Automatic Backup &amp; Sync		                ✔
+5 levels of file protection		            ✔
+Movie &amp; music streaming		                ✔
+
+*Requires an attached USB storage device</description>
+    <summary>ReadyCLOUD gives you remote access over the Internet to a USB storage device that is connected to your router's USB port.</summary>
+    <releaseNotes />
+    <copyright>(C) 2016 NETGEAR, Inc.</copyright>
+    <tags>netgear readycloud nas router nighthawk remote access file sharing admin</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readycloud</packageSourceUrl>
+    <docsUrl>http://kb.netgear.com/29785/ReadyCLOUD-FAQ</docsUrl>
+    <mailingListUrl>https://community.netgear.com/</mailingListUrl>
+  </metadata>
+</package>
