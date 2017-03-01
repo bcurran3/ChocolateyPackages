@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>readynas-remote</id>
+    <version>1.7.6.28</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readynas-remote</packageSourceUrl>
+    <title>ReadyNAS Remote (Install)</title>
+    <authors>NETGEAR, Inc.</authors>
+    <projectUrl>https://remote.readynas.com/</projectUrl>
+    <iconUrl>https://www.netgear.com/images/support/storage/Readynas/ReadyNAS%20Remote.png</iconUrl>
+    <copyright>Copyright (c) 2010 NETGEAR.  All rights reserved.</copyright>
+    <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.downloads.netgear.com/files/ReadyNAS/RN%20Remote%20UM_13Jun2013.pdf?cid=wmt_netgear_organic</docsUrl>
+    <mailingListUrl>https://community.netgear.com/</mailingListUrl>
+    <tags>netgear readynas remote nas remote access file sharing admin</tags>
+    <summary>ReadyNAS Remote lets you access your storage system anywhere you have Internet access. </summary>
+    <description>
+![Screenshot of ReadyNAS Remote](https://ejquo23388.i.lithium.com/t5/image/serverpage/image-id/12834iFF52E42A14269D3D/image-size/original?v=1.0&amp;px=-1)	
+
+ReadyNAS Remote lets you access your storage system anywhere you have Internet access.
+With ReadyNAS Remote, you can drag and drop files between your ReadyNAS system and your
+computer or smartphone as though they were on the same LAN.
+
+Data transmission over the Internet goes through an encrypted tunnel, so your data stays private
+as it transfers to and from your ReadyNAS system.	
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
