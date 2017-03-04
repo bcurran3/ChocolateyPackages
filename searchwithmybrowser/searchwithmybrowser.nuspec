@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>searchwithmybrowser</id>
+    <version>1.0.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/searchwithmybrowser</packageSourceUrl>
+    <title>SearchWithMyBrowser (Install)</title>
+    <authors>Charles Milette</authors>
+    <projectUrl>https://github.com/charlesmilette/SearchWithMyBrowser</projectUrl>
+    <iconUrl>https://github.com/charlesmilette/SearchWithMyBrowser/blob/master/Resources/SetupHeader.bmp</iconUrl>
+    <copyright>Copyright © 2017 Charles Milette</copyright>
+    <licenseUrl>https://github.com/charlesmilette/SearchWithMyBrowser/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/charlesmilette/SearchWithMyBrowser</projectSourceUrl>
+    <docsUrl>https://github.com/charlesmilette/SearchWithMyBrowser/blob/master/ReadMe.md</docsUrl>
+    <bugTrackerUrl>https://github.com/charlesmilette/SearchWithMyBrowser/issues</bugTrackerUrl>
+    <tags>searchwithmybrowser cortana bing protocol browser firefox edge google duckduckgo chrome yahoo url uri admin</tags>
+    <summary></summary>
+    <description>
+##SearchWithMyBrowser
+
+Since April 28ᵗʰ, Cortana opens searches only in Microsoft Edge to prevent users from using another search engine than Bing.
+SearchWithMyBrowser is a little utility that associates itself with the microsoft-edge: protocol, used by Cortana to open Edge. After parsing the request to make sure it's a valid URL, it will redirect it to your default browser.	
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
