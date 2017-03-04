@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
-    <id>readyshare-vault</id>
-    <version>3.0</version>
-    <title>NETGEAR ReadySHARE Vault (Install)</title>
+    <id>readynasvault</id>
+    <version>5.8.9</version>
+    <title>ReadyNASVault (Install)</title>
     <authors>NETGEAR, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readyshare-vault-software-utility</packageSourceUrl>	
@@ -27,5 +27,3 @@ Provides free, automatic continuous/scheduled backup for your Windows PCs on you
     <mailingListUrl>https://community.netgear.com/</mailingListUrl>
   </metadata>
 </package>
-
-NEEDS UPDATING - check all links
