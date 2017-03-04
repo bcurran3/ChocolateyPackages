@@ -1,1 +1,1 @@
-﻿SchTasks /Delete /TN “choco upgrade all at 7pm”
+﻿SchTasks /Delete /TN “choco upgrade all at 7pm” /F
