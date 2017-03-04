@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-upgrade-all-at-8pm</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-8pm</packageSourceUrl>
+    <title>choco upgrade all at 8pm (Script)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-8pm</projectUrl>
+    <iconUrl>https://chocolatey.org/content/packageimages/chocolatey.0.10.3.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>choco upgrade 8pm script</tags>
+    <summary>This will create a Windows Scheduled Task to upgrade Chocolatey on a daily basis at the specified time.</summary>
+    <description>
+###This is not a program. This is just a configuration script.
+
+This script simply sets up a Windows Scheduled Task to run run "choco upgrade all" every day at a predefined time (see package name for time).
+
+Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. The use of the [Elavate tool](https://chocolatey.org/packages/elevate) means that it gets around that UAC problem you had when you tried to do it before. ! :)
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="elevate" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
