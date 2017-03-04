@@ -1,8 +1,9 @@
-﻿$packageName = 'intel-driver-update-utility'
+﻿$packageName   = 'intel-driver-update-utility'
 $installerType = 'exe'
-$url = 'https://downloadmirror.intel.com/24345/a08/Intel%20Driver%20Update%20Utility%20Installer.exe'
-$toolsDir   = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$silentArgs = '-norestart -silent'
+$url           = 'https://downloadmirror.intel.com/24345/a08/Intel%20Driver%20Update%20Utility%20Installer.exe'
+$checksum      = '613D5F632AAE16CA7351781EE555AA5B57BBC76790B85C0C93511F9BF9470DFE'
+$toolsDir      = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$silentArgs    = '-norestart -silent'
 $validExitCodes= @(0)
 
 $ahkExe = 'AutoHotKey'
@@ -22,7 +23,7 @@ $packageArgs = @{
   silentArgs    = $silentArgs
   validExitCodes= $validExitCodes
   softwareName  = 'Intel® Driver Update Utility*'
-  checksum      = 'C747911C465E860A23C0CB5E9CC76946C5FFB2892DF07A178247C92F7C7B0F66'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 
