@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName = 'readycloud' 
+$packageName = 'drobo-dashboard' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'http://readycloud.netgear.com/client/install/ReadyCloudSetup.exe'
-$checksum    = '49B573C525538F9653A25673982EA2040FA79041FE8C10D9E025B5508D84ADDD'
+$url         = 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.0.0.exe'
+$checksum    = '6E059B0F8311DDCF29573D8A33C054284585858C3CEE892E1C94C6976CC0D31F'
 
 $ahkExe = 'AutoHotKey'
-$ahkFile = Join-Path $toolsDir "ReadyCLOUDinstall.ahk"
+$ahkFile = Join-Path $toolsDir "DDinstall.ahk"
 $ahkProc = Start-Process -FilePath $ahkExe `
                          -ArgumentList $ahkFile `
                          -PassThru
@@ -21,7 +21,7 @@ $packageArgs = @{
   url           = $url
   checksum      = $checksum
   checksumType  = 'sha256'  
-  silentArgs    = ''
-  softwareName  = 'ReadyCLOUD' 
+  silentArgs    = '/S /v /qn'
+  softwareName  = 'Drobo Dashboard' 
   }
 Install-ChocolateyPackage @packageArgs

@@ -2,8 +2,17 @@
 $packageName= 'ost2' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'http://d.4team.biz/files/ost2_setup.exe'
-$checksum   = 'CA08D9C2822614FBA2A92DC358FFF2D2DCE67A40C8F235939A7F7AE9DA9C8DC4'
-$silentArgs = '/S' 
+$checksum   = 'D8F77462BA843DC890DC6BECD5BC93EF252F2CCCF649CC36D0A19993F3ED3437'
+
+$ahkExe = 'AutoHotKey'
+$ahkFile = Join-Path $toolsDir "OST2install.ahk"
+$ahkProc = Start-Process -FilePath $ahkExe `
+                         -ArgumentList $ahkFile `
+                         -PassThru
+
+$ahkId = $ahkProc.Id
+Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "Process ID:`t$ahkId"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +21,7 @@ $packageArgs = @{
   url           = $url
   checksum      = $checksum
   checksumType  = 'sha256'  
-  silentArgs    = $silentArgs
+  silentArgs    = ''
   softwareName  = 'OST2*' 
   }
 Install-ChocolateyPackage @packageArgs

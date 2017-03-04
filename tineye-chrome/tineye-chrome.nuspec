@@ -3,7 +3,7 @@
   <metadata>
     <id>tineye-chrome</id>
     <version>1.1.5</version>
-    <title>for Chrome</title>
+    <title>TinEye for Chrome</title>
     <authors>TinEye</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tineye-chrome</packageSourceUrl>		
