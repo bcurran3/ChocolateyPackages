@@ -8,4 +8,4 @@ if ($PassedParameter) {
 	  }
 
 Write-Host "Now configured to run choco upgrade all at $Runtime every day."
-SchTasks /Create /SC DAILY /RU SYSTEM /RL HIGHEST /TN "choco upgrade all at" /TR "choco upgrade all" /ST $RunTime /F
+SchTasks /Create /SC DAILY /RU SYSTEM /RL HIGHEST /TN "choco upgrade all at" /TR "choco upgrade all --confirm" /ST $RunTime /F
