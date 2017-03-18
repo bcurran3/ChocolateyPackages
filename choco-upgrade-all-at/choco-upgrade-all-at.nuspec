@@ -20,7 +20,7 @@
 
 This script simply sets up a Windows Scheduled Task to run run "choco upgrade all" every day at a predefined time (see package name for time).
 
-Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. The use of the [Elavate tool](https://chocolatey.org/packages/elevate) means that it gets around that UAC problem you had when you tried to do it before. ! :)
+Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. :)
 	</description>
     <releaseNotes></releaseNotes>
   </metadata>
