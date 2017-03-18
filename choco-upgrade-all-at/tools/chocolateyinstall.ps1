@@ -1,7 +1,7 @@
 ﻿$PassedParameter = $env:chocolateyPackageParameters
 
 if ($PassedParameter) {
-    $RunTime = $PassedParameter
+    $RunTime = $($PassedParameter)
 	} else {
 	  Write-Host "No time specified, defaulting to midnight."
 	  $RunTime         = '00:00'
