@@ -20,12 +20,17 @@
 
 This script simply sets up a Windows Scheduled Task to run run "choco upgrade all" every day at a predefined time (see package name for time).
 
-Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. The use of the [Elavate tool](https://chocolatey.org/packages/elevate) means that it gets around that UAC problem you had when you tried to do it before. ! :)
+Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. :)
+	    
+### Package Specific
+
+#### Package Parameters
+This package accepts a single optional parameter to specify the time the daily task should run.  This should be in the 24-hour format with a colon separating the hour and minute (ex. 15:30).
+
+This parameter can be passed to the installer with the use of `--params`.
+For example: `choco install choco-upgrade-all-at --params '"20:15"'`.
 	</description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="elevate" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
