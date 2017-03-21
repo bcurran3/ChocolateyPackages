@@ -14,6 +14,7 @@ $packageArgs = @{
   packageName   = $packageName
   fileType      = $installerType
   url           = $url
+  url64bit      = $url64
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
   softwareName  = ''
