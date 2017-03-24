@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pcmark8</id>
-    <version>2.7.613</version>
+    <version>2.7.613.20170322</version>
     <owners>bcurran3</owners>
     <title>PCMark 8 Basic Edition (Install)</title>
     <authors>Futuremark Corporation</authors>
@@ -53,7 +53,7 @@ Storage:   30 GB free hard disk space
 
 #####PACKAGING NOTE: This is a ~3 GB file. It may take about 10 minutes to download and a few more to install! Make sure you have ~9 GB free space to cover the .ZIP download, the extraction, and the install. (You may need to change your --execution-timeout setting.)
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>new download link as old one changed to temporary links</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
 	  <dependency id="futuremark-systeminfo" />
