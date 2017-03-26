@@ -4,7 +4,7 @@
   <metadata>
     <id>drivermax</id>
     <title>DriverMax (Install)</title>
-    <version>9.17.0.75</version>
+    <version>9.25</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>			
     <authors>Innovative Solutions</authors>
     <owners>bcurran3</owners>
@@ -53,11 +53,9 @@ DriverMax finds and downloads the best drivers for your PC for:
 
 
 ### PACKAGING NOTES: 
-* It is recommended you install with the "--ignore-checksum" option (choco install drivermax --ignore-checksum) to ignore checksums.
-* DriverMax is updated very frequently (sometimes every couple of days). The downloaded installer is always the filename, but has a new checksum with each new release. The package will fail on checksums when the checksums in the package are out of date. If you use the "--ignore-checksum" option you will always get the latest release.
+* DriverMax is updated VERY frequently. This package will likely fail, based on checksums, within a few days. It is recommended you install with the "--ignore-checksum" option (choco install drivermax --ignore-checksum) to ignore the checksums so the latest version of DriverMax will install even if this package is out of date.
 * The uninstall is 99% silent. When DriverMax uninstalls it will open your default browser and give you an opportunity to buy the PRO version at a reduced rate. There seems to be no way around it. 
-* Please post a DISQUS comment and I will upload a new package with the new checksum.
-* I will work on an automatic package updater in the future to solve this.
+* Please post a DISQUS comment or on GitHub if you find this package out of date and I will upload a new package with the new checksum.
     </description>
     <projectUrl>http://www.drivermax.com/</projectUrl>
     <tags>drivermax drivers updater system utility admin</tags>

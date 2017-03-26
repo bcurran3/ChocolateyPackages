@@ -1,9 +1,10 @@
-﻿$packageName= 'netdrive'
-$installerType = 'EXE'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://files.netdrive.net/build/NetDrive2_Setup_2_6_12_928.exe' 
-$silentArgs = "/S"
-$validExitCodes= @(0,1223)
+﻿$packageName    = 'netdrive'
+$installerType  = 'EXE'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://files.netdrive.net/build/NetDrive2_Setup_2_6_13_938.exe' 
+$checksum       = 'F4C24294EBDB7C34FC7BD43220026F35DEC9E2AC20B8AD46141D64FE4499B8C1'
+$silentArgs     = "/S"
+$validExitCodes = @(0,1223)
 
 $packageArgs = @{
   packageName   = $packageName
@@ -12,7 +13,7 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
   softwareName  = 'NetDrive2*'
-  checksum      = 'C8EB7D16413DFE189697C05B0DD1A0D8F1DB5D9634A54B4FEFBA2FDFEE0AD125'
+  checksum      = $checksum
   checksumType  = 'sha256' 
 }
 

@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName   = 'duplicati'
-$installerType = 'msi'
-$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.47-2.0.1.47_canary_2017-02-14/duplicati-2.0.1.47_canary_2017-02-14-x86.msi' 
-$checksum      = '124305080CA683036905AFBABC7669D5D3773079D6CFEE181ECC47792575A27D'
-$url64         = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.47-2.0.1.47_canary_2017-02-14/duplicati-2.0.1.47_canary_2017-02-14-x64.msi' 
-$checksum64    = 'DA505CDED19A2C5F10698251104E406D3BB33E58760B0D679E1757F16C974FDD'
-$silentArgs    = '/quiet /qn /norestart'
-$validExitCodes= @(0, 3010, 1641)
+$packageName    = 'duplicati'
+$installerType  = 'msi'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.53-2.0.1.53_experimental_2017-03-13/duplicati-2.0.1.53_experimental_2017-03-13-x86.msi' 
+$checksum       = '388CDE155D025D8BC174E825605EB1AEC8F26D3C455412A966B5B3F4CBA1E0A5'
+$url64          = 'https://github.com/duplicati/duplicati/releases/download/v2.0.1.53-2.0.1.53_experimental_2017-03-13/duplicati-2.0.1.53_experimental_2017-03-13-x64.msi' 
+$checksum64     = '4E07C9B626EE3D99C3DB94D79AD565DE7B120F3E79D5C1308F0DC3116FCDE226'
+$silentArgs     = '/quiet /qn /norestart'
+$validExitCodes = @(0, 3010, 1641)
 
 $packageArgs = @{
   packageName   = $packageName
