@@ -3,11 +3,11 @@ $packageName    = 'winhue'
 $softwareName   = 'WinHue*'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/Hyrules/WinHue3/releases/download/beta_25/WinHue.3.BETA.25.Setup.zip' 
-$checksum       = 'A4DFDE20FFD7C50FA43A12C7DA2638325582A85634186DC9EBCA787605FDF31F'
+$url            = 'https://github.com/Hyrules/WinHue3/releases/download/beta_27/WinHue.3.BETA.27.Setup.zip' 
+$checksum       = '424978E4DB99A2862AFC7CEA99F6526625C7C00506B977D98ED7F842A82071DF'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
-$fileLocation   = "$env:ChocolateyInstall\lib\$packageName\tools\WinHue 3 BETA 25 Setup.exe"
+$fileLocation   = "$env:ChocolateyInstall\lib\$packageName\tools\WinHue 3 BETA 27 Setup.exe"
 
 $packageArgs = @{
   packageName   = $packageName
