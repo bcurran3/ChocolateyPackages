@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.25</version>
+    <version>3.0.27</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
     <authors>Pascal Pharand</authors>
     <projectUrl>https://hyrules.github.io/WinHue3/</projectUrl>
-    <iconUrl>http://www.usa.lighting.philips.com/b-dam/b2b-li/en_AA/support/tools/Philips%20Hue.png</iconUrl>	
+    <iconUrl>http://www.philips.ca/c-dam/corporate/homepage-articles/master/HUE/hue_still.jpg</iconUrl>	
     <licenseUrl>https://creativecommons.org/licenses/by-nc/2.0/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Hyrules/WinHue3</projectSourceUrl>
@@ -39,10 +39,11 @@ WinHue is a windows desktop application to control the philips hue lighting syst
     <dependencies>
       <dependency id="dotnet4.5" />
       <dependency id="vcredist2010" />
-      <dependency id="chocolatey-uninstall.extension" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
+
+

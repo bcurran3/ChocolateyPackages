@@ -1,4 +1,4 @@
-﻿#http://files2.majorgeeks.com/37f65c068b7723cd7809ee2d31d7861c/multimedia/ADVANCED_Codecs_v722.exe
+﻿#http://files1.majorgeeks.com/54ebdfbbfe6c31c39aaba9a1ee83860a/multimedia/ADVANCED_Codecs_v733.exe
 
 $packageName   = 'advanced-codecs' 
 $installerType = 'EXE'
@@ -6,8 +6,8 @@ $silentArgs    = '/S /v/qn'
 $validExitCodes= @(0, 3010, 1641)
 $softwareName  = 'Shark007 ADVANCED Codecs*'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = "$toolsDir\ADVANCED_Codecs_v722.exe"
-$checksum      = 'FB0ED173803C4E73619DDF93CF9FA88E2B20FA7FA9AE455AA6FD2E0B2B506375'
+$url           = "$toolsDir\ADVANCED_Codecs_v733.exe"
+$checksum      = '76C5210A2D39C0E9190B79290192307C9799AF0D92891EA0628DDBF0BBC12B85'
 
 $packageArgs = @{
   packageName   = $packageName
