@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>logitech-options</id>
+    <version>6.50.60</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
+    <title>Logitech Options (Install)</title>
+    <authors>Logitech</authors>
+    <projectUrl>http://support.logitech.com/en_us/software/options</projectUrl>
+    <iconUrl>https://secure.logitech.com/assets/64869/options-icon.png</iconUrl>
+    <copyright>© 2017 Logitech. All rights reserved</copyright>
+    <licenseUrl>https://secure.logitech.com/en-us/footer/terms-of-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>logitech options keyboard utility admin</tags>
+    <summary>Logitech Options software lets you customize your device settings.</summary>
+    <description>
+Logitech Options software lets you customize your device's settings as follows:
+
+* Change function key shortcuts
+* Customize mouse buttons
+* Adjust point and scroll behavior
+* Enable and disable touchpad gestures
+* Get on-screen notifications when your device's battery runs low or when you press a lock key	
+
+Works with these products:
+* Bluetooth Multi-Device Keyboard K480
+* Connect Kit with Intel NUC
+* GROUP Kit with Intel NUC
+* Illuminated Living-Room Keyboard K830
+* K375s Multi-Device Wireless Keyboard
+* K380 Multi-Device Bluetooth Keyboard
+* K780 Multi-Device Wireless Keyboard
+* M220 SILENT
+* M330 SILENT PLUS
+* M331 SILENT PLUS
+* M535 Bluetooth Mouse
+* M720 Triathlon Multi-Device Mouse
+* MK235 Wireless Keyboard and Mouse Combo
+* MK850 Performance Wireless Keyboard and Mouse Combo
+* MX Anywhere 2
+* MX Master Wireless Mouse
+* Wireless Mini Mouse M187
+* Wireless Mouse M185
+* Wireless Mouse M235
+* Wireless Mouse M320
+* Wireless Mouse M335
+* Wireless Mouse M510
+* Wireless Touch Keyboard K400 Plus
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

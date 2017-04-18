@@ -1,13 +1,17 @@
-﻿#http://files1.majorgeeks.com/54ebdfbbfe6c31c39aaba9a1ee83860a/multimedia/ADVANCED_Codecs_v733.exe
+﻿#http://www.majorgeeks.com/index.php?ct=files&action=download&
 
-$packageName   = 'advanced-codecs' 
-$installerType = 'EXE'
-$silentArgs    = '/S /v/qn'
-$validExitCodes= @(0, 3010, 1641)
-$softwareName  = 'Shark007 ADVANCED Codecs*'
-$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = "$toolsDir\ADVANCED_Codecs_v733.exe"
-$checksum      = '76C5210A2D39C0E9190B79290192307C9799AF0D92891EA0628DDBF0BBC12B85'
+$packageName    = 'advanced-codecs' 
+$installerType  = 'EXE'
+$silentArgs     = '/S /v/qn'
+$validExitCodes = @(0, 3010, 1641)
+$softwareName   = 'Shark007 ADVANCED Codecs*'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = "$toolsDir\ADVANCED_Codecs_v741.exe"
+$checksum       = '710D90C1D1258EFA95296CB6208914CFBE5545D4FEBF55847643244C3DA255D2'
+$ahkExe         = 'AutoHotKey'
+$ahkFile        = Join-Path $toolsDir "ACinstall.ahk"
+
+Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName   = $packageName
