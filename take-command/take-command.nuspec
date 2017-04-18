@@ -4,13 +4,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>20.11.39</version>
+    <version>20.11.46</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
     <authors>JP Software</authors>
     <iconUrl>https://jpsoft.com/images/take-command.png</iconUrl>
     <projectUrl>https://jpsoft.com/</projectUrl>
-    <copyright>Copyright © 2016 JP Software, All Rights Reserved</copyright>
+    <copyright>Copyright © 2017 JP Software, All Rights Reserved</copyright>
     <licenseUrl>https://jpsoft.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://jpsoft.com/help/index.htm?overview.htm</docsUrl>
@@ -25,7 +26,7 @@ Take Command is a comprehensive interactive GUI and command line environment tha
 
 We're so convinced you'll find Take Command essential for all your command prompt windows that we offer a 90-day unconditional money-back guarantee.
 
-New copy $79.95 Upgrade $39.95
+New copy $99.95 Upgrade $49.95
 
 ###WINDOWS COMMAND LINE PROMPTS AND WINDOWS CONSOLES
 
@@ -33,7 +34,7 @@ Are you looking for a replacement command shell that provides an enhanced Window
 
 Take Command is our flagship product. For 25 years, JP Software has been helping programmers, system administrators, technical support professionals, and advanced users save time and beat their Windows command prompt frustrations. Take Command offers a new approach to working with Windows command line applications, bringing users the power of the command line and the ease of use of the GUI. Take Command is a complete Windows console and CMD replacement that provides you with a vastly better command prompt UI, a batch programming IDE (with syntax coloring and a powerful debugger), and thousands of additional features not available at the CMD command line.
 
-PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
 	</description>
     <releaseNotes>Psuedo silent install. Completely automated but progress windows will appear.</releaseNotes>
   </metadata>
