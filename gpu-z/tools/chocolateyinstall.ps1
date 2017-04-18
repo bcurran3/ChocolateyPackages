@@ -1,11 +1,11 @@
-﻿#http://us2-dl.techpowerup.com/files/eCkLKAGjgHgutFGViLjHAg/1490377969/GPU-Z.1.18.0.exe
+﻿#http://us2-dl.techpowerup.com/files/8fWWgOHEaELfS-laFY8IrA/1492513531/GPU-Z.1.20.0.exe
 
 $packageName      = 'gpu-z'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url              = "$toolsDir\GPU-Z.1.18.0.exe"
-$checksum         = '73AA057194D35FF17025B3B5018D2DFEBE48C9E3E31CC4587AD8988FA6C4B881'
+$exeFile          = "GPU-Z.1.20.0.exe"
+$url              = "$toolsDir\GPU-Z.1.20.0.exe"
+$checksum         = 'E32C5A4D5D65E32150D51A92D5A09ADD76FD3857BA1F9DB2CFAE55014D3B8184'
 $scriptDir        = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$exeFile          = "GPU-Z.1.18.0.exe"
 $installerPackage = Join-Path $scriptDir $ExeFile
 
 $packageArgs = @{
