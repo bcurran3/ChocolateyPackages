@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>6.0.2</version>
+    <version>6.0.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
@@ -67,7 +67,7 @@ Support business and compliance objectives with audit and security functionality
 * PROFESSIONAL = $40/year
 * ENTERPRISE = $55/year
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Fixed wrong softwareName to uninstall found in intial release - OOOOPS!</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
