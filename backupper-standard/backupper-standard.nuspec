@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>backupper-standard</id>
-    <version>4.0.2</version>
+    <version>4.0.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/backupper-standard</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>AOMEI Backupper Standard (Install)</title>
@@ -35,6 +35,8 @@ To avoid data loss or recover crashed system, you need to make images of them be
 * NEW:Support to choose a network mapped drive as the destination, and simultaneously choose multiple files on the network drive as the backup source.
 
 For a complete list of features, please see http://www.aomeitech.com/ab/standard.html
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
 	</description>
     <releaseNotes></releaseNotes>
   </metadata>
