@@ -1,7 +1,7 @@
 ﻿$packageName  = 'yakyak' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'https://github.com/yakyak/yakyak/releases/download/v1.4.2/yakyak-1.4.2-win32-x64.zip'
-$checksum     = 'F82BAD833A441FC984D4BF173D43C673028AF57931873D12ABAFD863FBE1EA73'
+$checksum     = 'F5FB390F1AEA1397A2797E4332297426CC49F380BE7176A88B657520A528D70A'
 
 $packageArgs = @{
   packageName   = $packageName

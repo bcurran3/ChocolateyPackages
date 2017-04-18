@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName     = 'snappy-driver-installer' 
 $toolsDir        = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url             = 'http://www.sdi-tool.org/releases/SDI_R535.zip' 
-$checksum        = '08D439A3A94095BF78C27F461D1DA00E71892AC94E51667A597699A3534C4A39'
-$fileName32      = 'SDI_R535.exe'
-$fileName64      = 'SDI_x64_R535.exe'
+$url             = 'http://www.sdi-tool.org/releases/SDI_R1742.zip' 
+$checksum        = '6A072DB13655236F25F884532BC7FD896EBEB238DC31379CB6941CB675A1AE89'
+$fileName32      = 'SDI_R1742.exe'
+$fileName64      = 'SDI_x64_R1742.exe'
 $FileFullpath32  = Join-Path $ToolsDir $fileName32
 $FileFullpath64  = Join-Path $ToolsDir $fileName64
 $shortcutName    = 'Snappy Driver Installer' 

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yakyak</id>
-    <version>1.4.2</version>
+    <version>1.4.2.20170402</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/yakyak</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>YakYak (Portable)</title>
@@ -35,7 +35,7 @@
 * Focus/typing indications (mainly a design issue. keep it clean)
 * Offer alternative color schemes
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>checksum changed but release version didn't</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
