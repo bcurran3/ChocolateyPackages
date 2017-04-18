@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-viewer-plus</id>
-    <version>1.2.9</version>
+    <version>1.2.10</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer-plus</packageSourceUrl>
     <title>VNC Viewer Plus (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.realvnc.com/docs/</docsUrl>
     <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
-    <tags>realvnc vnc connect viewer plus remote control admin</tags>
+    <tags>realvnc vnc connect viewer plus remote control trial admin</tags>
     <summary>VNC Viewer Plus is used to remote control RealVNC and VNC Connect hosts.</summary>
     <description>
 ![Screen shot of VNC Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)
@@ -51,8 +51,10 @@ VNC is simplicity itself. Connect to your Intel AMT computer and the embedded VN
 There’s plenty of documentation, and we’re here by phone, chat, social media, and remote session whenever you need us.
 
 Reference: https://chocolatey.org/packages/realvnc and https://chocolatey.org/packages/vnc-connect/
+
+Purchase price is $112.
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>Fixed wrong softwareName to uninstall found in intial release - OOOOPS!</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
