@@ -4,13 +4,13 @@
   <metadata>
     <id>utorrent</id>
     <title>uTorrent (Install)</title>
-    <version>3.4.9.43295</version>
+    <version>3.5.0.43580</version>
     <authors>BitTorrent, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>		
     <summary>A (very) tiny BitTorrent client.</summary>
     <description>
-![Screenshot of uTorrent] (https://d1hzrv37chit31.cloudfront.net/monthly_2016_06/screenshot.jpg.e3ec4b2d08d1094a62284ec4c67dd799.jpg)	
+![Screenshot of uTorrent](https://remote.utorrent.com/static/images/win_ut_toolbar.png)	
 
 ##The #1 torrent download client on desktops worldwide.
 

@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName   = 'ntlite-free'
-$installerType = 'exe'
-$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'http://downloads.ntlite.com/files/NTLite_setup_x86.exe' 
-$checksum      = '0db1b1961c351e05d10366852391a2b011b57816'
-$url64         = 'http://downloads.ntlite.com/files/NTLite_setup_x64.exe' 
-$checksum64    = '3e5e64a4349deb059b22248fbc796a9561088470'
-$silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$validExitCodes= @(0)
+$packageName    = 'ntlite-free'
+$installerType  = 'exe'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://downloads.ntlite.com/files/NTLite_setup_x86.exe' 
+$checksum       = '62CC8A837EF3B483971C321DBCADF4A7898BBB2EC2D1013ACA3004F791790150'
+$url64          = 'http://downloads.ntlite.com/files/NTLite_setup_x64.exe' 
+$checksum64     = '17C4B88846BBFD2CA22D983C03475E60A2D36FBDD12A8EDCF1DD767846CFF689'
+$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$validExitCodes = @(0)
 
 $packageArgs = @{
   packageName   = $packageName

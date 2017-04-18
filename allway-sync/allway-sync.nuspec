@@ -4,9 +4,10 @@
   <metadata>
     <id>allway-sync</id>
     <title>allway-sync (Install)</title>
-    <version>16.0.1.20161008</version>
+    <version>17.1.3</version>
     <authors>Botkind, Inc.</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allway-sync</packageSourceUrl>		
     <summary>File synchronization that works.</summary>
     <description>
 ![Screenshot of Allway Sync](http://allwaysync.com/content/img/screenshots/sync.png)

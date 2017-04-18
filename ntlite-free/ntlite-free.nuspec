@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntlite-free</id>
-    <version>1.2.0.4830</version>
+    <version>1.2.1.4984</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
     <title>NTLite (Free) (Install)</title>
@@ -51,16 +51,10 @@ Next to editing images, you can also do the same actions on your existing Window
 
 More details at: https://www.ntlite.com/features/
 See license link for Free, Home, Professional, and Business version comparisons.
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 	</description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-uninstall.extension" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
