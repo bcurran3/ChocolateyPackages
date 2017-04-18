@@ -1,6 +1,6 @@
 $packageName = 'https-everywhere-firefox'
-$url         = 'https://addons.cdn.mozilla.net/user-media/addons/229918/https_everywhere-5.2.9-an+fx+sm+tb.xpi'
-$checksum    = '770668C7F296D6C0BDE3320354854781FC5E871FEDA345D2B22005EE33EACDAF'
+$url         = 'https://addons.mozilla.org/firefox/downloads/latest/https-everywhere/addon-229918-latest.xpi'
+$checksum    = '1A0F30E3BBC26720B8C99317C9DF9955F286CF944B0D3B2F9F6AE1C3C572F145'
 $extensionID = "https-everywhere@eff.org"
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
