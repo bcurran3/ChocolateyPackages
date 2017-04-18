@@ -2,8 +2,8 @@
 $packageName   = 'googleearth'
 $installerType = 'EXE'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://dl.google.com/earth/client/GE7/release_7_1_7/googleearth-win-bundle-7.1.7.2602.exe' 
-$checksum      = '677483CCCC9C905C982821B9C997C38A9BF6D266FD14048F9CB0A80BAC239B04'
+$url           = 'https://dl.google.com/earth/client/GE7/release_7_1_8/googleearth-win-7.1.8.3036.exe' 
+$checksum      = 'B64FFC6F31E3E42F154E7D19DFA301376DE987403A9C50B575DAC04022E06576'
 $silentArgs    = ''
 $validExitCodes= @(0)
 $ahkExe        = 'AutoHotKey'
@@ -24,3 +24,12 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs 
   
+Start-Sleep -s 20
+
+if((get-process "googleearth" -ea SilentlyContinue) -eq $Null){ 
+    Write-Host "googleearth currently NOT running." 
+  }else{ 
+    Write-Host "Stopping googleearth process..."
+    Stop-Process -processname "googleearth" -force
+  }
+ 
