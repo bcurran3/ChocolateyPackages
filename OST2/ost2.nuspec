@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ost2</id>
-    <version>1.3.0168.20170302</version>
+    <version>1.41.0178</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ost2</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>OST2 Free (Install)</title>
@@ -52,6 +52,8 @@ OST to PST conversion can be a solution of problems caused by Exchange Server. I
 * Convert OST files of any Exchange version to PST files of any Outlook version.
 
 *These features are only available with Enterprise Edition.
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 	</description>
     <releaseNotes></releaseNotes>
 	<dependencies>
