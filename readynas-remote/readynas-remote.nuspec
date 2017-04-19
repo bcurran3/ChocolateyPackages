@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.downloads.netgear.com/files/ReadyNAS/RN%20Remote%20UM_13Jun2013.pdf?cid=wmt_netgear_organic</docsUrl>
     <mailingListUrl>https://community.netgear.com/</mailingListUrl>
-    <tags>netgear readynas remote nas remote access file sharing admin</tags>
+    <tags>netgear readynas remote nas remote access file sharing not silent admin</tags>
     <summary>ReadyNAS Remote lets you access your storage system anywhere you have Internet access. </summary>
     <description>
 ![Screenshot of ReadyNAS Remote](https://ejquo23388.i.lithium.com/t5/image/serverpage/image-id/12834iFF52E42A14269D3D/image-size/original?v=1.0&amp;px=-1)	
@@ -26,8 +26,13 @@ computer or smartphone as though they were on the same LAN.
 
 Data transmission over the Internet goes through an encrypted tunnel, so your data stays private
 as it transfers to and from your ReadyNAS system.	
+
+PACKAGING NOTES: Uninstall is not silent (requires clicking finish). This package will NOT upgrade or reinstall well as it uninstalls the previous version first and the package is not currently scripted to handle that. Not compatible with ReadyCLOUD package (ReadyNAS Remote will uninstall ReadyCLOUD and this is not scripted to handle it).
 	</description>
     <releaseNotes></releaseNotes>
+	<dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

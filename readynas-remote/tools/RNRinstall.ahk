@@ -4,11 +4,13 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;BlockInput On 
-WinWaitActive, ReadyCLOUD Setup, Welcome to the ReadyCLOUD Setup Wizard, 300
+WinWaitActive, ReadyNAS Remote Setup, Welcome to the ReadyNAS Remote Setup Wizard, 300
 WinActivate
 Send !n
-Send !a
-WinWaitActive, ReadyCLOUD Setup, Completing the ReadyCLOUD Setup Wizard, 300
+Send {Enter}
+Send !n
+Send !i
+WinWaitActive, ReadyNAS Remote Setup, Completing the ReadyNAS Remote Setup Wizard, 300
 WinActivate
 Send !r
 Send !f

@@ -1,12 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'readyshare-printer-utility' 
+$packageName    = 'readyshare-vault' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://www.downloads.netgear.com/files/GDC/R6300/ReadySharePrinter_setup_v1.36.zip'
-$checksum       = '4C7187D49CD302120EC7EB0A4928E920A57691DBE0651C2862225DBEBF5DDB4A'
-$silentArgs     = '/s /v"/qb' 
+$url            = 'http://www.downloads.netgear.com/files/GDC/R7000/ReadySHAREVault-install-v1.0.50.500.zip'
+$checksum       = '26658D4C6CB3C42360305AEE8D00E0FFACA6964BD7D7CE0FE28B37E85E153071'
+$silentArgs     = '/S' 
 $validExitCodes = @(0)
-$fileLocation   = Join-Path $toolsDir "ReadySharePrinter_setup_v1.36.exe"
-#above line updated for NEXT release
+$fileLocation   = Join-Path $toolsDir "ReadySHAREVault-install.exe"
+$ahkExe         = 'AutoHotKey'
+$ahkFile        = Join-Path $toolsDir "RSVaultInstall.ahk"
+
+Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName   = $packageName
@@ -25,7 +28,7 @@ $packageArgs = @{
   file          = $fileLocation
   silentArgs    = $silentArgs
   validExitCodes= $validExitCodes
-  softwareName  = 'NETGEAR USB Control Center'
+  softwareName  = 'ReadySHARE Vault'
 }
  
 Install-ChocolateyInstallPackage @packageArgs

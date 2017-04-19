@@ -6,6 +6,7 @@
     <title>NETGEAR ReadyCLOUD (Install)</title>
     <authors>NETGEAR, Inc.</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readycloud</packageSourceUrl>	
     <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
     <projectUrl>http://kb.netgear.com/29786/What-is-the-ReadyCLOUD-Desktop-App</projectUrl>
     <iconUrl>https://www.netgear.com/images/support/CategoryIcons/icon-readynas-software.png</iconUrl>
@@ -46,7 +47,6 @@ PACKAGING NOTES: Uninstall is not silent (requires clicking finish). This packag
     </dependencies>	
     <copyright>(C) 2016 NETGEAR, Inc.</copyright>
     <tags>netgear readycloud nas router nighthawk remote access file sharing not silent admin</tags>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readycloud</packageSourceUrl>
     <docsUrl>http://kb.netgear.com/29785/ReadyCLOUD-FAQ</docsUrl>
     <mailingListUrl>https://community.netgear.com/</mailingListUrl>
   </metadata>
