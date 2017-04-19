@@ -1,18 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'ost2' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://d.4team.biz/files/ost2_setup.exe'
-$checksum   = 'D8F77462BA843DC890DC6BECD5BC93EF252F2CCCF649CC36D0A19993F3ED3437'
+$packageName    = 'ost2' 
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://d.4team.biz/files/ost2_setup.exe'
+$checksum       = 'BCCC9433994CC183F2775CBC88666541C30B7B29442744B73C1B2D9CDB7B503A'
+$validExitCodes = @(0,2)
+$ahkExe         = 'AutoHotKey'
+$ahkFile        = Join-Path $toolsDir "OST2install.ahk"
 
-$ahkExe = 'AutoHotKey'
-$ahkFile = Join-Path $toolsDir "OST2install.ahk"
-$ahkProc = Start-Process -FilePath $ahkExe `
-                         -ArgumentList $ahkFile `
-                         -PassThru
-
-$ahkId = $ahkProc.Id
-Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
-Write-Debug "Process ID:`t$ahkId"
+Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName   = $packageName
@@ -21,7 +16,9 @@ $packageArgs = @{
   url           = $url
   checksum      = $checksum
   checksumType  = 'sha256'  
-  silentArgs    = ''
+  silentArgs    = '/S'
+  validExitCodes=$validExitCodes
   softwareName  = 'OST2*' 
   }
+  
 Install-ChocolateyPackage @packageArgs
