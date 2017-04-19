@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>active-directory-photos</id>
+    <title>Code Two Active Directory Photos (free) (Install)</title>
+    <version>1.2.1.0</version>
+    <authors>CODE TWO</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/active-directory-photos</packageSourceUrl>		
+    <summary>Add photos to Active Directory and manage them in an easy way</summary>
+    <description>
+CodeTwo Active Directory Photos will let you upload photographs to Active Directory and manage them easily using a light and super-intuitive user interface. This freeware application has been designed to make managing scores of users' images straightforward and ultra-fast. Setting up thousands of Active Directory users' photographs is just a matter of cooking soft boiled eggs, which really makes this program stand out in the crowd.
+
+![alt text](http://www.codetwo.com/media/images/thumb_600_352/media/images/adp01-3.png)
+
+####Why would I need it to add photos to Active Directory?
+
+You may need to add photographs to Active Directory to show them in internal Outlook messages, display in Outlook's contacts and Global Address List (GAL), or to add them to internal or outbound email. Letting people see each other's faces while corresponding adds more human touch to the communication. Sometimes it seems to be the only way for some people to know who is who in their own company. What is more, adding users' images to external messages makes your mail look more professional and also lets your customers see who they are corresponding with.
+
+####Key features
+
+* Fluent management of thousands of users' pictures in Active Directory
+* Ability to import and export Active Directory photos
+* Single or bulk photo actions
+* Resizing photographs
+* Automatic photo size adjustment to 100kb (or less) to comply with Active Directory requirements
+* Lets you display Active Directory photos in Outlook 2016, 2013 and 2010 emails, contacts and GALs
+* Compatible with CodeTwo Exchange Rules Pro. See how to add images from Active * Directory to automatic email signatures in Exchange
+
+####Supported platforms
+
+####Can be installed on
+Windows Server 2012 / 2008 / 2003 / SBS 2008
+Windows 10* / 8 / 7 / Vista / XP (SP3)
+
+Support for 32 / 64 bit platforms.
+
+*In the case the program does not work after upgrading to Windows 10 from Windows 7 or 8.1 please reinstall it.
+
+####Requires
+.NET Framework 2.0
+Access to Active Directory Domain Services
+
+on Windows 10 / 8 / Windows Server 2012: Install .NET Framework 3.5 manually via Turn Windows features on or off in Control Panel
+    </description>
+    <projectUrl>http://www.codetwo.com/freeware/active-directory-photos/</projectUrl>
+    <docsUrl>http://www.codetwo.com/freeware/active-directory-photos/userguide/</docsUrl>
+    <mailingListUrl>http://www.codetwo.com/signup/active-directory-photos/</mailingListUrl>
+    <bugTrackerUrl>http://www.codetwo.com/freeware/active-directory-photos-version-history</bugTrackerUrl>
+    <tags>codetwo-active-directory-photos admin SPACE_SEPARATED</tags>
+    <copyright>(C)2016 Code Two</copyright>
+    <licenseUrl>http://codetwo.com/regulations/order-terms?ref=f</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.codetwo.com/media/images/frh-icon-activedirectoryphotos-66x90.png</iconUrl>
+    <dependencies>
+      <dependency id="dotnet3.5" />
+      <dependency id="autohotkey.portable" />	  
+    </dependencies>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

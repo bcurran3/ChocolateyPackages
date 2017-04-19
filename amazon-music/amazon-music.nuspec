@@ -18,7 +18,9 @@
     <tags>amazon music streaming playre admin</tags>
     <summary>Amazon Music for PC and Mac is a free desktop application you can use to play, download, and manage your digital music directly on your computer.</summary>
     <description>
-###With the Amazon Music app, you can play and download your music, export downloads to iTunes and Windows Media Player, shop the Amazon Digital Music Store, and access Prime Music (if you're an eligible Prime member).
+####With the Amazon Music app, you can play and download your music, export downloads to iTunes and Windows Media Player, shop the Amazon Digital Music Store, and access Prime Music (if you're an eligible Prime member).
+
+#music
 
 * Any way you want it.
 * Amazon Music Unlimited: Stream tens of millions of songs, including new releases from today's most popular artists.
@@ -33,6 +35,9 @@
 * System Requirements: Windows 7 and later
 	</description>
     <releaseNotes></releaseNotes>
+	<dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
