@@ -33,6 +33,8 @@
 * Amazon Music for PC is fast. It'll get you from launch to play in seconds.
 * Amazon Music for PC detects and adds new music to your library even if you bought it from iTunes or ripped a CD. Your music library will always be organized and up-to-date.
 * System Requirements: Windows 7 and later
+
+PACKAGING NOTE: Uninstall is not silent.
 	</description>
     <releaseNotes></releaseNotes>
 	<dependencies>

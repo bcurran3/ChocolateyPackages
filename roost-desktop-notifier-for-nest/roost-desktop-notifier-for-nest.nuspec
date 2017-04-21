@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>roost-desktop-notifier-for-nest</id>
+    <title>Roost Desktop Notifier for Nest (Install)</title>
+    <version>0.9.8.155</version>
+    <authors>Richard Everett</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/roost-desktop-notifier-for-nest</packageSourceUrl>	
+    <summary>Roost is a free Windows desktop app that keeps you connected to your Nest Learning Thermostat™ and Nest Protect™ devices when you're at your PC.</summary>
+    <description>
+![Screenshot of Roose Desktop Notifier](https://richardeverett.com/Content/Nest/Popups/popup-thermostat-1.png)	![Screenshot of Roose Desktop Notifier](https://richardeverett.com/Content/Nest/Popups/popup-protect-1.png)	
+
+What is Roost?
+
+A free Windows desktop app that keeps you connected to your Nest Learning Thermostat™ and Nest Protect™ devices when you're at your PC.
+
+It shows icons for your Nest devices in the notification area of your taskbar, down by the clock, normally in the bottom-right corner of your screen. Each Nest Learning Thermostat gets its own icon, while Nest Protects get one icon per home. The icons gently fade and transition to let you know what's going on.
+
+You get a discrete notification when a thermostat notices an interesting change (such as your heating turning on) or an alert if a Nest Protect detects smoke or carbon monoxide (subject to the Terms of Service, please read those, right?).
+
+Roost Desktop Notifier supports the Nest Learning Thermostat in Heat, Cool and Heat • Cool modes. Temperatures are shown in Celsius or Fahrenheit, depending on your Nest settings. It will work nicely if you have just one Nest Thermostat, a single Nest Protect or lots of both in one or two homes!
+
+PACKAGING NOTE: This packaging might only work on Windows 10. Uninstall not silent
+    </description>
+    <projectUrl>http://richardeverett.com/Nest</projectUrl>
+    <iconUrl>https://richardeverett.com/Content/Nest/works-with-nest.png</iconUrl>	
+    <docsUrl>http://richardeverett.com/Nest</docsUrl>
+    <tags>roost google nest thermostat smarthome admin</tags>
+    <copyright>Copyright (C) 2014 - 2016 Richard Everett</copyright>
+    <licenseUrl>http://richardeverett.com/Nest</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+      <dependency id="dotnet4.5.2" />
+    </dependencies>
+    <releaseNotes>pre-release; I believe I need a differnet AHK file for OSes before Windows 10</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

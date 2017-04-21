@@ -19,6 +19,7 @@ $packageArgs = @{
   checksumType  = 'sha256' 
   silentArgs    = $silentArgs
   softwareName  = 'CodeTwo Active Directory Photos*' 
+  validExitCodes= $validExitCodes
   }
   
 Install-ChocolateyPackage @packageArgs
