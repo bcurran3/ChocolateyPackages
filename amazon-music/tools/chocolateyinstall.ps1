@@ -21,5 +21,5 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
 }
 
-Write-Host "It's normal to get warnings after the install is finished." -foreground "magenta" –backgroundcolor "blue"
 Install-ChocolateyPackage @packageArgs 
+Write-Host "It's normal to get warnings after the install is finished." -foreground "magenta" –backgroundcolor "blue"
