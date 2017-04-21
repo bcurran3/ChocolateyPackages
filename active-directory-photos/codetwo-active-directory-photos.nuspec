@@ -48,7 +48,7 @@ on Windows 10 / 8 / Windows Server 2012: Install .NET Framework 3.5 manually via
     <docsUrl>http://www.codetwo.com/freeware/active-directory-photos/userguide/</docsUrl>
     <mailingListUrl>http://www.codetwo.com/signup/active-directory-photos/</mailingListUrl>
     <bugTrackerUrl>http://www.codetwo.com/freeware/active-directory-photos-version-history</bugTrackerUrl>
-    <tags>codetwo-active-directory-photos admin SPACE_SEPARATED</tags>
+    <tags>codetwo active directory AD photos admin</tags>
     <copyright>(C)2016 Code Two</copyright>
     <licenseUrl>http://codetwo.com/regulations/order-terms?ref=f</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
