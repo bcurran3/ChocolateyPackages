@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>rocketdock</id>
+    <version>1.3.5.20170424</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/rocketdock</packageSourceUrl>		
+    <owners>bcurran3</owners>	
+    <title>RocketDock (Install)</title>
+    <authors>Punk Software</authors>
+    <projectUrl>http://rocketdock.com/</projectUrl>
+    <iconUrl>https://rocketdock.com/assets/templates/v2/assets/images/RocketDock-150x150.png</iconUrl>	
+    <copyright>PunkSoftware (c) 2005-2007</copyright>	
+    <licenseUrl>http://creativecommons.org/licenses/by-nc-sa/3.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://rocketdock.com/Help/English/</docsUrl>	
+    <tags>rocketdock application launcher shortcuts dock taskbar admin</tags>	
+    <summary>RocketDock is a smoothly animated, alpha blended application launcher.</summary>	
+    <description>
+[Video showing RocketDock](https://youtu.be/d6UVb15it6A)
+
+###What is it?
+RocketDock is a smoothly animated, alpha blended application launcher. It provides a nice clean interface to drop shortcuts on for easy access and organization. With each item completely customizable there is no end to what you can add and launch from the dock.
+Now with added Taskbar support your minimized windows can appear as icons on the dock. This allows for better productivity and accessibility.	
+
+###Features:
+* Minimize windows to the dock
+* Real-time window previews in Vista
+* Running application indicators
+* Simple drag-n-drop interface
+* Multi-monitor support
+* Supports alpha-blended PNG and ICO icons
+* Icons zoom and transition smoothly
+* Auto-hide and Popup on mouse over
+* Positioning and layering options
+* Fully customizable
+* Completely Portable
+* ObjectDock Docklet support
+* Compatible with MobyDock, ObjectDock, RK Launcher, and Y'z Dock skins
+* Runs great on slower computers
+* Unicode compliant
+* Supports many languages and can easily be translated
+* A friendly community :)
+* And best of all... its FREE!!!
+
+[Addons can be downloaded here](https://rocketdock.com/addons/all/popular)
+    </description>
+    <releaseNotes>Updated to newer Chocolatey standards by new maintainer, me</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
+</package>
