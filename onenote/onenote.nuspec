@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>onenote</id>
+    <version>16.0.7870.2031</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/onenote</packageSourceUrl>
+    <title>Microsoft OneNote 2016 (Install)</title>
+    <authors>Microsoft.com</authors>
+    <projectUrl>https://www.onenote.com/</projectUrl>
+    <iconUrl>https://videocontent.osi.office.net/content-9fd3686c-a677-4353-9ac9-72db4e80f230/OneNoteThumbnail.jpg</iconUrl>
+    <copyright>Microsoft.com</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.office.com/en-us/onenote</docsUrl>
+    <mailingListUrl>https://answers.microsoft.com/en-us/msoffice/forum/msoffice_onenote?auth=1</mailingListUrl>
+    <tags>microsoft office onenote notsilent note notes soaas admin</tags>
+    <summary>Microsoft OneNote Online Desktop Client</summary>
+    <description>
+![Screenshot of Microsoft OneNote](https://site-cdn.onenote.net/1681211550_Images/home/new/Create_4x3.png)	
+
+###Ideas take shape in OneNote
+
+##Create your way
+Do you scribble great ideas on napkins and sticky notes? Is precise filing more your style? OneNote's got you covered whatever way you shape your thoughts. Type, write or draw with the free form feel of pen to paper. Search and clip from the web to picture ideas.
+
+##Collaborate with anyone
+Your team is conquering the idea of the century. Your family is planning the menu for a big reunion. Stay on the same page and in sync wherever you are.
+
+##Think with ink
+Ready. Set. Draw. A stylus or fingertip is the only tool you need. Take handwritten notes and convert them to typed text later. Highlight what's important and express ideas with colors or shapes.
+
+##Access from anywhere
+Take note. It's easy to pull up your content from anywhere, even if you're offline. Start on your laptop then update notes on your phone. OneNote works on any device or platform.
+
+PACKAGING NOTE: This program has a non-standard installer. AHK is used to kludge the install. Successful installation has everything to do with your computer and Internet speed as installation is all a trick of timing. OneNote will download and install, then you have three minutes from start until the Window will close. If it finishes and you don't want to wait, feel free to click Close. I check if the window is open or not before sending Alt-C to close it.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
