@@ -6,8 +6,8 @@ $silentArgs     = '/S /v/qn'
 $validExitCodes = @(0, 3010, 1641)
 $softwareName   = 'Shark007 ADVANCED Codecs*'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\ADVANCED_Codecs_v741.exe"
-$checksum       = '710D90C1D1258EFA95296CB6208914CFBE5545D4FEBF55847643244C3DA255D2'
+$url            = "$toolsDir\ADVANCED_Codecs_v745.exe"
+$checksum       = 'C39ED648D828C5036701FED5A753BC5A0144C7BDB364F6E174E013FC2429E243'
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "ACinstall.ahk"
 
