@@ -1,6 +1,6 @@
 ﻿$packageName      = 'hdgrandslam-plex' 
 $BundleName       = 'HDGrandSlam.bundle'
-$url              = 'https://github.com/jumpmanjay/HDGrandSlam.bundle/archive/v1.6.2.zip
+$url              = 'https://github.com/jumpmanjay/HDGrandSlam.bundle/archive/v1.6.2.zip'
 $checksum         = 'D79FD30991832022DBEBE1FCD4EAA0FB210D92A5038623F6381B70C7CC8B31B6'
 $LocalAppDataPath = Get-ItemProperty -path "registry::hkey_current_user\software\Plex, Inc.\Plex Media Server" | select-object -expandproperty LocalAppDataPath
 

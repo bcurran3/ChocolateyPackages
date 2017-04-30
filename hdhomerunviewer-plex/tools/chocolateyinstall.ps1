@@ -1,7 +1,7 @@
 ﻿$packageName      = 'hdhomerunviewer-plex' 
 $BundleName       = 'HDHRViewerV2.bundle'
-$url              = 'https://github.com/zynine-/HDHRViewerV2.bundle/archive/0.9.12.zip'
-$checksum         = 'C32E05576012DFBCDA1CB751B49EDB2E2AFC91E29642B0A77790A3FC67D9D4F5'
+$url              = 'https://github.com/zynine-/HDHRViewerV2.bundle/releases/download/1.0.2/HDHRViewerV2.bundle.zip'
+$checksum         = 'D26B13642FDFD38FF9F6368C6B9FB225A6D6E70254450305D070E7A0BDDE8E21'
 $LocalAppDataPath = Get-ItemProperty -path "registry::hkey_current_user\software\Plex, Inc.\Plex Media Server" | select-object -expandproperty LocalAppDataPath
 
 if ($LocalAppDataPath -eq $null) {
@@ -41,5 +41,5 @@ If (Test-Path $strFileName){
   Write-Host "No previous version exists." -ForegroundColor green -BackgroundColor blue
 }
 
-Rename-Item "$UnZipDir\$BundleName-0.9.12" $BundleName
-Write-Host "You can ignore Only an exit code of non-zero will fail... messages." -ForegroundColor green -BackgroundColor blue
+#(old) Rename-Item "$UnZipDir\$BundleName-0.9.12" $BundleName
+#(old) Write-Host "You can ignore Only an exit code of non-zero will fail... messages." -ForegroundColor green -BackgroundColor blue

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hdgrandslam-plex</id>
-    <version>1.6.2</version>
+    <version>1.6.2.20170427</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdgrandslam-plex</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>HDGrandSlam for Plex</title>
