@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.27</version>
+    <version>3.0.28</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
@@ -34,8 +34,9 @@ WinHue is a windows desktop application to control the philips hue lighting syst
 * Add rules or sensors.
 * IT'S FREE !	
 
+PACKAGING NOTE: v3 RC1
 	</description>
-    <releaseNotes>actually WinHue v3 Beta 25</releaseNotes>
+    <releaseNotes>v3 RC1</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
       <dependency id="vcredist2010" />

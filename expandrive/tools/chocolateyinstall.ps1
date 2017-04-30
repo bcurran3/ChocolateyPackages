@@ -1,8 +1,8 @@
 ﻿$packageName   = 'expandrive' 
-$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v5-4-5_published_2017-02-03_at_21_38_25/ExpanDriveInstaller.msi' 
-$checksum      = '1A80A948D9E3D1E9683BC179E95A07EE67908E5FEA1D65EB4770B2A59233668A'
+$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v5-4-6_published_2017-04-25_at_18_34_01/ExpanDriveInstaller.msi' 
+$checksum      = 'DFE6292CE4458874A5CCB2B779031EDC2ABDFB59FE755F26740B7065C219E625'
 $installerType = 'MSI'
-$silentArgs = '/quiet /qn /norestart'
+$silentArgs    = '/quiet /qn /norestart'
 $validExitCodes= @(0, 3010, 1641)
 
 $packageArgs = @{

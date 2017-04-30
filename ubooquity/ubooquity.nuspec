@@ -3,42 +3,40 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ubooquity</id>
-    <title>Ubooquity</title>
-    <version>1.10.1.20161008</version>
-    <authors>Tom</authors>
+    <title>Ubooquity (Portable)</title>
+    <version>2.0.2</version>
+    <authors>Vae Mendis Software</authors>
     <owners>bcurran3</owners>
-    <summary>Home server for comics and ebooks</summary>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ubooquity</packageSourceUrl>	
+    <summary>Ubooquity is a home server for comics and ebooks</summary>
     <description>
-![Screenshot of Ubooquity Server](http://vaemendis.net/ubooquity/data/images/screenshots/main_window.jpg)
+![Screenshot of Ubooquity Server](http://vaemendis.net/ubooquity/data/images/V2-desktop-UI.png)
 
-Ubooquity is a free, lightweight and easy-to-use home server for your comics and ebooks. Use it to access your files from anywhere, with a tablet, an e-reader, a phone or a computer.
+###Ubooquity is a free home server for your comics and ebooks library. Read your ebooks and comics on your favorite device, wherever you go.
 
-Main features
-Simple graphical interface to configure your server in a few minutes
+###Versatile
+Ubooquity supports many types of files, with a preference for ePUB, CBZ, CBR and PDF files.
+Metadata from library management software Calibre and ComicRack are also supported.
 
-Web administration page available if you prefer to do everything through your browser
+###Lightweight and multi-platform
+Ubooquity can be installed on any OS supporting Java (Windows, Linux, Mac OS...) and on a wide range of hardware (desktop computer, server, NAS...).
 
-User management with secured access, to decide who can see what
-
-Online comic reader to read your comics without downloading huge files
-
-Compatible with Calibre metadata, for better ebooks collection management
-
-Can be installed on any OS supporting Java (Windows, Linux, Mac OS...) and on a wide range of hardware (desktop computer, server, NAS...)
-
-Supports many types of files, with a preference for epub, cbz, cbr and PDF files    </description>
+###Secure
+Ubooquity lets you create user accounts and set access rights for each shared folder.
+Connections can be protected (HTTPS) using your own certificate.
+</description>
     <projectUrl>http://vaemendis.net/ubooquity/</projectUrl>
-    <tags>ubooquity comic comicbook ebook server comicrack java</tags>
+    <tags>ubooquity comic comicbook ebook server calibre comicrack java portable</tags>
     <copyright>Vae Mendis Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://vaemendis.net/ubooquity/wiki/lib/tpl/dokuwiki/images/logo.png</iconUrl>
-    <docsUrl>http://vaemendis.net/ubooquity/static14/help</docsUrl>
+    <iconUrl>https://ubooquity.userecho.com/s/cache/c9/4b/c94b3a69bb89d450f9076a747ba4a64d.png</iconUrl>
+    <docsUrl>https://vaemendis.github.io/ubooquity-doc/</docsUrl>
     <mailingListUrl>http://ubooquity.userecho.com/</mailingListUrl>
     <licenseUrl>http://vaemendis.net/ubooquity/static12/license</licenseUrl>
     <dependencies>
       <dependency id="javaruntime" version="" />
     </dependencies>
-    <releaseNotes>checksums added</releaseNotes>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

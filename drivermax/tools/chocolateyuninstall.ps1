@@ -1,9 +1,9 @@
-﻿$packageName = 'drivermax'
-$softwareName = 'DriverMax*'
-$installerType = 'EXE' 
-$silentArgs = '/VERYSILENT'
+﻿$packageName    = 'drivermax'
+$softwareName   = 'DriverMax*'
+$installerType  = 'EXE' 
+$silentArgs     = '/VERYSILENT'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)
-$processor = Get-WmiObject Win32_Processor
+$processor      = Get-WmiObject Win32_Processor
 
 $is64bit = $processor.AddressWidth -eq 64
 if ($is64bit) {
