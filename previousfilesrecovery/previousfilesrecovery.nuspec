@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>previousfilesrecovery</id>
+    <version>1.00</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/previousfilesrecovery</packageSourceUrl>
+    <title>PreviousFilesRecovery (Portable)</title>
+    <authors>Nir Sofer</authors>
+    <projectUrl>http://www.nirsoft.net/utils/previous_files_recovery.html</projectUrl>
+    <iconUrl>http://www.nirsoft.net/utils/previousfilesrecovery_icon.png</iconUrl>
+    <copyright>Copyright (c) 2016 Nir Sofer</copyright>
+    <licenseUrl>http://www.nirsoft.net/utils/previous_files_recovery.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.nirsoft.net/utils/previous_files_recovery.html</docsUrl>
+    <tags>nirsoft previousfilesrecovery admin filesystem unerase recovery portable</tags>
+    <summary>PreviousFilesRecovery - undelete files from shadow copies.</summary>
+    <description>
+![Screenshot of PreviousFilesRecovery](http://www.nirsoft.net/utils/previousfilesrecovery.png)
+
+PreviousFilesRecovery is a simple tool for Windows 10/8/7/Vista that allows you to scan the shadow copies of your local hard drive and find deleted files as well as older versions of existing files. If the file you need is found in the shadow copies of Windows, you can easily recover it by copying it into existing folder on your drive.
+
+###System Requirements
+
+This utility works on any version of Windows, starting from Windows Vista, and up to Windows 10. Windows XP is not supported. In order to use PreviousFilesRecovery on 64-bit systems, you must download and use the 64-bit version of this tool.
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

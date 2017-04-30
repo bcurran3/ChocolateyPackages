@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>advancedrun</id>
+    <version>1.05</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advancedrun</packageSourceUrl>
+    <title>AdvancedRun (Portable)</title>
+    <authors>Nir Sofer</authors>
+    <projectUrl>http://www.nirsoft.net/utils/advanced_run.html</projectUrl>
+    <iconUrl>http://www.nirsoft.net/utils/advancedrun_icon.png</iconUrl>
+    <copyright>Copyright (c) 2015 - 2016 Nir Sofer</copyright>
+    <licenseUrl>http://www.nirsoft.net/utils/advanced_run.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.nirsoft.net/utils/advanced_run.html</docsUrl>
+    <tags>nirsoft advancedrun commandline admin portable</tags>
+    <summary>AdvancedRun - configure and save settings for how programs run.</summary>
+    <description>
+![Screenshot of AdvancedRun](http://www.nirsoft.net/utils/advancedrun.png)
+
+AdvancedRun is a simple tool for Windows that allows you to run a program with different settings that you choose, including - low or high priority, start directory, main window state (Minimized/Maximized), run the program with different user or permissions, Operating system compatibility settings, and environment variables. You can also save the desired settings into a configuration file and then run the program automatically from command-line with the desired settings.
+
+###Examples of what you can do with AdvancedRun
+
+* Run the RegEdit of Windows as normal user on Windows 10/8/7/Vista, without elevation. In this mode, you'll not be able to access or modify Registry keys that require admin rights.
+* Run the RegEdit of Windows as SYSTEM user on Windows 10/8/7/Vista. In this mode, you'll be able to access the HKEY_LOCAL_MACHINE\SECURITY key.
+* Run a program with a user of another running process.
+* Run a program in high priority.
+* Run a specific instance of program in Windows XP compatibility mode, without making global changes in the Registry.
+* Run a specific instance of program with different PATH environment string, but without modifying the PATH string of the entire system and without using batch files or command prompt window.
+* Run a program with a full set of environment variables you choose, ignoring the system environment variables completely.
+
+###System Requirements
+
+This utility works on any version of Windows, starting from Windows XP and up to Windows 10. Both 32-bit and 64-bit systems are supported. Some of the features, like 'Run As SYSTEM User' and 'Run As user of selected process' are not supported on Windows XP.
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
