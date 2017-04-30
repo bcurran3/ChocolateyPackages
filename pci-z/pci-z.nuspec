@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pci-z</id>
+    <version>1.3</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pci-z</packageSourceUrl>
+    <title>PCI-Z (Portable)</title>
+    <authors>Bruno Banelli</authors>
+    <projectUrl>https://www.pci-z.com/</projectUrl>
+	<iconUrl>http://www.start64.com/images/win64/system/pci-z.gif</iconUrl>
+    <licenseUrl>https://www.pci-z.com/devel/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.pci-z.com/#usage</docsUrl>
+	<bugTrackerUrl>https://www.pci-z.com/#download</bugTrackerUrl>
+    <tags>pciz pci-z pci system utility portable</tags>
+    <summary>PCI-Z is a system utility to show PCI information.</summary>
+    <description>
+![Screenshot of PCI-Z](https://www.pci-z.com/img/PCI-Z-ScreenShotWin7x64.png)
+
+PCI-Z is a freeware lightweight system utility designed to provide information about (unknown) PCI (PCI-E, PCI-X...) devices and helps you find appropriate device drivers.
+
+PCI-Z is designed for detecting unknown hardware on your Windows based PC. It will help you determine vendor, device and certain details about device even if you don't have drivers installed. Software uses The PCI ID Repository, a public repository of all known ID's used in PCI devices: ID's of vendors, devices, subsystems and device classes. It is used in various programs (e.g. The PCI Utilities) to display full human-readable names instead of cryptic numeric codes. It is almost similar to lspci Linux command but with full Windows support.
+
+You can find drivers for your operating system without a problem! Find drivers for your WiFi cards, audio cards, network cards or any other PCI peripheral.
+
+Both 32 bit (x86) and 64 bit (x64) Windows versions are fully supported, where applicable. Both i386 and amd64 kernels of Windows PE are supported as well. PCI-Z also works on Bart PE/Reatogo, "live CD" of Windows XP. In addition, you can run PCI-Z on ReactOS in full functionality. ReactOS is a free open source operating system based on the best design principles found in the Windows NT architecture - providing completely and in all ways legal and free platform for running PCI-Z without any Windows licenses necessary. Software will NOT run on Windows 95, 98 or ME.
+
+It does not require any library but default Windows ones. No Visual Studio C++ redistributed, no .NET platform, no Java. Windows components such as WMI (Windows Management Instrumentation) are also not required.
+
+From January 2015 PCI-Z is digitally signed for your protection (version 1.3). New version 1.4 will also have digital signature.
+
+There is no installation or configuration! Simply run the file and wait until you get the report. Afterwards, right click on the line to get options (copy all data or just a segment) or export the whole list.
+
+The author of CPU-Z has granted me permission to use a name similar to his product. Thanks Franck!	
+
+###Key features
+* detects all PCI/PCI-X/PCI-E cards, even if your device manager doesn't recognizes them
+* one file only needed for running - 100% portable, no installation needed, no Internet connection needed
+* "lspci for Windows" - familiar lspci-like tool from Linux in both GUI and CLI form on Windows
+* helps you find drivers for your PCI devices on Windows
+* reports devices with drivers issues
+* daily updates with PCI ID database
+* small size, small memory footprint
+* spyware/malware free - VirusTotal report and Malwr for x86 version, VirusTotal report and Malwr for x64 version
+* freeware!
+
+Software is free for both commercial and non commercial usage.
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
