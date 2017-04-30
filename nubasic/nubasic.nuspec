@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>nubasic</id>
+    <version>1.47</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nubasic</packageSourceUrl>
+    <title>nuBASIC (Install)</title>
+    <authors>Antonino Calderone</authors>
+    <projectUrl>http://www.nubasic.eu/</projectUrl>
+    <iconUrl>http://www.nubasic.eu/_/rsrc/1468855535525/config/customLogo.gif</iconUrl>
+    <copyright>(c) Antonino Calderone 2014 - 2017</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/eantcal/nubasic</projectSourceUrl>
+    <docsUrl>http://www.nubasic.eu/syntax-highlighting-editor</docsUrl>
+    <mailingListUrl>https://sourceforge.net/projects/nubasic/support</mailingListUrl>
+    <bugTrackerUrl>https://github.com/eantcal/nubasic/issues</bugTrackerUrl>
+    <tags>nubasic basic interpreter programming language ide notsilent admin</tags>
+    <summary>BASIC language interpreter for Linux and Windows</summary>
+    <description>
+![Screenshot of NuBASIC](https://80b4f219-a-62cb3a1a-s-sites.googlegroups.com/site/nubasiclanguageinterpreter/home/screenshot/screens.png?attachauth=ANoY7crUoy1Td8EGw3NwWHPxt2irw7BR2B7eyRTm-ZQOErPNNXB0EjrNm_8lYz2dBWUwgtxeN0_nwpjRSEmZHnVlFMku3oZY2s1RMrjxHi-jB8YoLNAe7xqnXfNZiJDddftxWycsJQlPZPho7xMbfzGYYPfzgQED2eG_L16i0Zhp4lNSRqxGIJbaJfmF7k1H--qP30x4DdaszpvcpKkV-O1W_mNrxJLPDp6hnyUhLZs5kntT5fT9LvD6ORPKcpD_bV4Vtuq_ozkN)	
+
+nuBASIC has been designed by the author, Antonino Calderone, mainly for educational purposes both for C++ developers that can deal with a non-trivial example of C++11 programming and for beginners, which may get hooked on programming. 
+It is suitable for simple games, educational or small business programs.
+
+Anyone who has previously worked with other BASIC languages will quickly become accustomed to nuBASIC.
+Large sections of the basic constructs of nuBASIC are compatible with other BASIC dialects.
+
+nuBASIC is also very simple. It is an excellent tool for teaching programming to a complete beginner, despite this, it has all the features of a modern programming language.
+
+It allows you to write both classic BASIC programs (which use line numbers and GoTo or GoSub control structures) and procedure oriented programs, based on procedural programming paradigm.
+
+Features
+* Free and Open Source (distributed under GPLv2 License)
+* Easy to use and simple enough for 8-year-old-child to understand
+* Fully-developed procedural programming language
+* Multiplatform. Runs on 32-bit and 64-bit Linux/Windows x86/amd64
+* Built-in help
+* Documented (English and Italian Guides)
+* IDE for Windows
+* Examples include Tetris, Mine Hunter, Breakout, Calculator, TicTacToe
+* Tiny version is suitable for embedded systems
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />	
+      <dependency id="vcredist2015" version="14.0.23026" />	  
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
