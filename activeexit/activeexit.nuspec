@@ -47,6 +47,9 @@ This is a powerful feature of ActiveExit that you should consider carefully. Nor
 After the last user has logged off, if no one logs back on to the computer during the interval of your choosing, ActiveExit can shut the computer down, sleep, or hibernate it.	
 	</description>
     <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
