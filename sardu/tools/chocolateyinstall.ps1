@@ -1,8 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName= 'sardu' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.sarducd.it/download/SARDU_320.zip'
-$checksum   = '0B523F111BCFCAE011B8DA2148BF731401B41EC1BCBFB1720A4245B11FF4F051'
+﻿$packageName  = 'sardu' 
+$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url          = 'http://www.sarducd.it/download/SARDU_321.zip'
+$checksum     = '88CF9D20C0B691217F1029F241539D3A3BE47442A72213657509CFC7A904BBB7'
+$shortcutName = 'SARDU.lnk'
+$workingDir   = 'SARDU_321'
+$exe          = 'sardu_3.exe'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,5 +16,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\SARDU.lnk" -targetPath "$toolsDir\SARDU_320\sardu_3.exe" -WorkingDirectory "$toolsDir\SARDU_320"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\SARDU.lnk" -targetPath "$toolsDir\SARDU_320\sardu_3.exe" -WorkingDirectory "$toolsDir\SARDU_320"
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$workingDir\$exe" -WorkingDirectory "$toolsDir\$workingDir"
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$workingDir\$exe" -WorkingDirectory "$toolsDir\$workingDir"
