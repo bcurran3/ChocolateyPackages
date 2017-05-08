@@ -1,8 +1,8 @@
 ﻿$packageName    = 'vnc-connect'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-6.0.3-Windows.exe'
-$checksum       = '47D773EB67F48FBD3BF1E21347032072D00BB32DB6F0FD16FB5411C90C2983CC'
+$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-6.1.0-Windows.exe'
+$checksum       = 'E03B52B186F4F56A6521F9EAAA5E433E9270B73C7CF50A112054C264ABE726B3'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0, 3010, 1641)
 
