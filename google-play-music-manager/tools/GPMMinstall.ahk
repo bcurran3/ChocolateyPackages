@@ -4,11 +4,11 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
  
-WinWait,Music Manager,Welcome to Google Play Music Manager , 60
+WinWait, Music Manager , , 120
 WinActivate
 ;BlockInput On
 Send {Enter}
-Sleep, 100
+Sleep, 10000
 Send !{f4}
 Sleep, 100
 Send {Left}
