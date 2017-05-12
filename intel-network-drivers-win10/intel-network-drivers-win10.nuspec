@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-network-drivers-win10</id>
+    <version>22.3</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-network-drivers-win10</packageSourceUrl>
+    <title>Intel® Network Adapter Driver for Windows® 10 (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://downloadcenter.intel.com/download/25016/Intel-Network-Adapter-Driver-for-Windows-10?product=36773</projectUrl>
+    <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <bugTrackerUrl>https://downloadmirror.intel.com/25016/eng/readme.txt</bugTrackerUrl>
+    <tags>intel network adapter nic driver drivers windows win10 admin</tags>
+    <summary>Intel® Network Adapter Driver for Windows® 10</summary>
+    <description>
+##Detailed Description
+
+###Overview
+
+The 22.1 SW release re-enables both teaming and VLANS by performing a check on the OS version to ensure the update has been applied before allowing the feature to be enabled.
+
+Latest OS update required for teams and VLANs on Microsoft Windows® 10*.
+
+You must install the latest Microsoft Windows® 10* updates before you can create Intel® Advanced Network Services (Intel® ANS) teams and VLANs on Windows® 10* systems. Any Intel ANS teams or VLANs created with release 20.1, 20.2, or 20.3 on a Windows 10 system will be corrupted and cannot be upgraded. The installer will remove these existing teams and VLANs. Team members that are not Intel devices will not be renamed back to their original names. This is cosmetic only and does not change their functionality. Reinstall their drivers to get the original names back.
+
+Note: Intel® ANS is only supported on the Windows 10 Anniversary Update* (Windows 10 Version 1607, build 10.0.14393) branch, and may not be supported on future versions.
+
+ 
+
+###Purpose
+
+This download installs base drivers, Intel® PROSet for Windows* Device Manager, advanced networking services for teaming and VLANs (ANS), and SNMP for Intel® Network Adapters with Windows 10.
+
+Note: The drivers contained in this download are not compatible with Windows Server 2016*.	
+
+##Supported devices
+
+This software may also apply to Intel® Ethernet Controllers. Support for built-in network connections is provided by the system or board manufacturer.
+
+###This download is valid for the product(s) listed below.
+* Intel® 82579LM Gigabit Ethernet PHY
+* Intel® 82599ES 10 Gigabit Ethernet Controller
+* Intel® 82599EB 10 Gigabit Ethernet Controller
+* Intel® Ethernet Connection I217-LM
+* Intel® Ethernet Controller I350-AM4
+* Intel® 82579V Gigabit Ethernet PHY
+* Intel® Ethernet Converged Network Adapter X540-T1
+* Intel® Ethernet Controller I211-AT
+* Intel® 82599EN 10 Gigabit Ethernet Controller
+* Intel® Ethernet Controller I210-AS
+* Intel® Ethernet Controller I350-AM2
+* Intel® Ethernet Controller I210-IT
+* Intel® Ethernet Connection I217-V
+* Intel® Ethernet Connection I218-LM
+* Intel® Ethernet Controller I350-BT2
+* Intel® Ethernet Connection I218-V
+* Intel® Ethernet Converged Network Adapter X550-T2
+* Intel® Ethernet Controller I210-CS
+* Intel® Ethernet Controller X550-AT
+* Intel® Ethernet Controller X550-AT2
+* Intel® Ethernet Server Adapter I350-T2V2
+* Intel® Ethernet Server Adapter I350-T4V2
+* Intel® Ethernet Converged Network Adapter X550-T1
+* Intel® Ethernet Converged Network Adapter X540-T2
+* Intel® Ethernet Controller I210-IS
+* Intel® Ethernet Server Adapter I210-T1
+* Intel® Ethernet Connection I219-LM
+* Intel® Ethernet Server Adapter I350-T2
+* Intel® Ethernet Server Adapter I350-T4
+* Intel® Ethernet Controller X540-BT2
+* Intel® Ethernet Controller X540-AT2
+* Intel® Ethernet Controller I210-AT
+* Intel® Ethernet Connection I219-V
+* Intel® Ethernet Controller X550-BT2
+
+PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
