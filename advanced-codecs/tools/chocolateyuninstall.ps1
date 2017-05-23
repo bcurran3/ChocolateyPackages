@@ -1,27 +1,28 @@
-﻿#work in progress - need to add AHK script
-
-$packageName    = 'advanced-codecs'
+﻿$packageName    = 'advanced-codecs'
+$softwareName   = 'Shark007 ADVANCED Codecs*'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installerType  = 'EXE' 
 $silentArgs     = '/SILENT'
 $silentArgs2    = 'uninstall'
 $validExitCodes = @(0)
-$softwareName   = 'Shark007 ADVANCED Codecs*'
-$unpath         = '${Env:ProgramFiles}\Shark007\unins000.exe'
-$processor      = Get-WmiObject Win32_Processor
+$unpath         = "${Env:ProgramFiles}\Shark007\unins000.exe"
+$bits           = Get-ProcessorBits
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "ACUninstall.ahk"
 
-Start-Process $ahkExe $ahkFile
-
-$is64bit = $processor.AddressWidth -eq 64
-if ($is64bit) {
-$unpath2 = '${Env:ProgramFiles(x86)}\Shark007\Advanced\Tools\Settings32.exe'
+if ($bits -eq 64)
+  {
+   $unpath2 = "${Env:ProgramFiles(x86)}\Shark007\Advanced\Tools\Settings32.exe"  
   } else {
-$unpath2 = '${Env:ProgramFiles}\Shark007\Advanced\Tools\Settings32.exe'
+   $unpath2 = "${Env:ProgramFiles}\Shark007\Advanced\Tools\Settings32.exe"
   }
 
+Start-Process $ahkExe $ahkFile
+
+If (Test-Path $unpath){
 Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs -File $unpath -validExitCodes $validExitCodes
+}Else{
+}
+
 Uninstall-ChocolateyPackage -PackageName $packageName -FileType $installerType -SilentArgs $silentArgs2 -File $unpath2 -validExitCodes $validExitCodes
 
-
-#cmd /c start /D"C:\Program Files (x86)\Shark007\Advanced\Tools" Settings32.exe uninstall
