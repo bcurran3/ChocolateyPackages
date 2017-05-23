@@ -1,20 +1,14 @@
-﻿$packageName   = 'intel-driver-update-utility'
-$installerType = 'exe'
-$url           = 'https://downloadmirror.intel.com/24345/a08/Intel%20Driver%20Update%20Utility%20Installer.exe'
-$checksum      = '69CBC28DFA9582A536018BB994EB65117F099632498B1244EAE32DD44D5B1743'
-$toolsDir      = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$silentArgs    = '-norestart -silent'
-$validExitCodes= @(0)
+﻿$packageName    = 'intel-driver-update-utility'
+$installerType  = 'exe'
+$url            = 'https://downloadmirror.intel.com/24345/a08/Intel%20Driver%20Update%20Utility%20Installer.exe'
+$checksum       = '046BBC1E7DE60776C3690361DB19C85BE70784270FC317BDBCDD06C9293013BB'
+$toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$silentArgs     = '/q /norestart'
+$validExitCodes = @(0)
+$ahkExe         = 'AutoHotKey'
+$ahkFile        = Join-Path $toolsDir "DUUinstall.ahk"
 
-$ahkExe = 'AutoHotKey'
-$ahkFile = Join-Path $toolsDir "DUUinstall.ahk"
-$ahkProc = Start-Process -FilePath $ahkExe `
-                         -ArgumentList $ahkFile `
-                         -PassThru
-
-$ahkId = $ahkProc.Id
-Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
-Write-Debug "Process ID:`t$ahkId"
+Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName   = $packageName
