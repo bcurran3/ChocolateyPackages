@@ -1,8 +1,8 @@
 ﻿$packageName    = 'edgedeflector'
 $installerType  = 'exe'
-$url            = 'https://github.com/da2x/EdgeDeflector/releases/download/v1.0.1.0/EdgeDeflector.exe' 
-$checksum       = '260477DE37DFD2CC94B09DB411943E6626EA99B06F1DE28136ABC26B6EC76DD9'
-$silentArgs     = ''
+$url            = 'https://github.com/da2x/EdgeDeflector/releases/download/v1.0.1.0/EdgeDeflector_install.exe' 
+$checksum       = 'BF01F9051FB6B233997370C97FA70F4D406D31154EE90EC54EEE9B1C803219EB'
+$silentArgs     = '/S'
 $validExitCodes = @(0)
 
 $packageArgs = @{
@@ -11,7 +11,7 @@ $packageArgs = @{
   url           = $url
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
-  softwareName  = ''
+  softwareName  = 'EdgeDeflector'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }

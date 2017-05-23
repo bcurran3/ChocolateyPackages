@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>edgedeflector</id>
-    <version>1.0.1.0</version>
+    <version>1.0.1.20170519</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/edgedeflector</packageSourceUrl>
     <title>EdgeDeflector (Install)</title>
