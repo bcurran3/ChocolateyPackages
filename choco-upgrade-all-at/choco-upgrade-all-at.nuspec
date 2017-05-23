@@ -13,18 +13,23 @@
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>choco upgrade all config unofficial schtasks scheduled task</tags>
+    <tags>choco upgrade all cup config unofficial schtasks scheduled task</tags>
     <summary>This will create a Windows Scheduled Task to upgrade Chocolatey on a daily basis at the specified time.</summary>
     <description>
-###This is not a program. This is just a configuration script that creates a Windows Scheduled Task.
-
-This script simply sets up a Windows Scheduled Task to run "choco upgrade all" every day at a predefined time. You can set the time by running "choco install choco-upgrade-all-at --params HH:MM" where HH:MM equals hours and minutes in 24 hour format.
+	
+##This script sets up a Windows Scheduled Task to run "choco upgrade all" every day at a predefined time. 
 
 If you don't set a time, it defaults to midnight.
 
-Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. The use of the [Elavate tool](https://chocolatey.org/packages/elevate) means that it gets around that UAC problem you had when you tried to do it before. ! :)
+You can set the time by running **choco install choco-upgrade-all-at --params "'/Time:X'"** where X equals an hour of the day.
+
+###INSTALL EXAMPLES
+* **choco install choco-upgrade-all-at --params "'/Time:1'"** - runs choco upgrade all at 1 AM
+* **choco install choco-upgrade-all-at --params "'/Time:5'"** - runs choco upgrade all at 5 AM
+* **choco install choco-upgrade-all-at --params "'/Time:13"** - runs choco upgrade all at 1 PM
+* **choco install choco-upgrade-all-at --params "'/Time:18"** - runs choco upgrade all at 6 PM
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>first working release</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />	  
     </dependencies>
