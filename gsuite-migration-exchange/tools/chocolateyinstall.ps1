@@ -3,7 +3,7 @@ $packageName   = 'gsuite-migration-exchange'
 $installerType = 'msi'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://dl.google.com/exchangemigration/GoogleAppsMigration.msi' 
-$checksum      = 'E316A97A626C045E4579CDD7F6513C2890AA184054BC3D3AB171ED909EC00438'
+$checksum      = '18E9548BD1AD8E0E4DE73D5A983AB01CD39EA6B9513E1DA68FCE6DEFB27EF66B'
 $silentArgs    = '/quiet /qn /norestart'
 $validExitCodes= @(0, 3010, 1641)
 
