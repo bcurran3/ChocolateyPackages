@@ -1,50 +1,104 @@
-$arguments = @{}
-$packageParameters = Get-PackageParameters
+$packageName = 'choco-upgrade-all-at'
+$pp = Get-PackageParameters
+$RunTime = ''
 
- if ($packageParameters) {
-      $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
-      $option_name = 'option'
-      $value_name = 'value'
-
-      if ($packageParameters -match $match_pattern ){
-          $results = $packageParameters | Select-String $match_pattern -AllMatches
-          $results.matches | % {
-            $arguments.Add(
-                $_.Groups[$option_name].Value.Trim(),
-                $_.Groups[$value_name].Value.Trim())
-        }
-      }
-      else
-      {
-          Throw "Package Parameters were found but were invalid (REGEX Failure)"
-      }
-
-      if ($arguments.ContainsKey("Time")) {
-          Write-Host "Time argument found."
-          $RunTime = $arguments["Time"]
-      }
-  } else {
-      Write-Debug "No Package Parameters Passed"
-  }
-  
-
-#if ($PassedParameter["Time"] -eq $null -or $PassedParameter["Time"] -eq '') 
-#  { 
-#    $PassedParameter["Time"] = '00:00' 
-#	}
-	
-Write-Host pp is $packageParameters["Time"]
-Write-Host runtime is $RunTime
-Write-Host arguments time $arguments["Time"]
-Write-Host time is $Time
-
-
-if ($packageParameters) {
-    $RunTime = $($packageParameters["Time"])
-	} else {
-	  Write-Host "No time specified, defaulting to midnight."
-	  $RunTime         = '00:00'
-	  }
+if ($pp["Time"] -eq $null -or $pp["Time"] -eq '')
+    { 
+     $RunTime = '00:00' 
+     Write-Host "No time specified, defaulting to midnight."
+    }
+if ($pp["Time"] -eq '1')                            
+    { 
+     $RunTime = '01:00' 
+    }
+if ($pp["Time"] -eq '2')
+    {
+     $RunTime = '02:00'
+    }
+if ($pp["Time"] -eq '3')
+    {
+     $RunTime = '03:00'
+    }
+if ($pp["Time"] -eq '4')
+    {
+     $RunTime = '04:00'
+    }
+if ($pp["Time"] -eq '5')
+    {
+     $RunTime = '05:00'
+    }
+if ($pp["Time"] -eq '6')
+    {
+     $RunTime = '06:00'
+    }
+if ($pp["Time"] -eq '7')
+    {
+     $RunTime = '07:00'
+    }
+if ($pp["Time"] -eq '8')
+    {
+     $RunTime = '08:00'
+    }
+if ($pp["Time"] -eq '9')
+    {
+     $RunTime = '09:00'
+    }
+if ($pp["Time"] -eq '10')
+    {
+     $RunTime = '10:00'
+    }
+if ($pp["Time"] -eq '11')
+    {
+     $RunTime = '11:00'
+    }
+if ($pp["Time"] -eq '12')
+    {
+     $RunTime = '12:00'
+    }
+if ($pp["Time"] -eq '13')                            
+    { 
+     $RunTime = '13:00' 
+    }
+if ($pp["Time"] -eq '14')
+    {
+     $RunTime = '14:00'
+    }
+if ($pp["Time"] -eq '15')
+    {
+     $RunTime = '15:00'
+    }
+if ($pp["Time"] -eq '16')
+    {
+     $RunTime = '16:00'
+    }
+if ($pp["Time"] -eq '17')
+    {
+     $RunTime = '17:00'
+    }
+if ($pp["Time"] -eq '18')
+    {
+     $RunTime = '18:00'
+    }
+if ($pp["Time"] -eq '19')
+    {
+     $RunTime = '19:00'
+    }
+if ($pp["Time"] -eq '20')
+    {
+     $RunTime = '20:00'
+    }
+if ($pp["Time"] -eq '21')
+    {
+     $RunTime = '21:00'
+    }
+if ($pp["Time"] -eq '22')
+    {
+     $RunTime = '22:00'
+    }
+if ($pp["Time"] -eq '23')
+    {
+     $RunTime = '23:00'
+    }
 
 Write-Host "Now configured to run choco upgrade all at '$RunTime' every day."
 SchTasks /Create /SC DAILY /RU SYSTEM /RL HIGHEST /TN "choco upgrade all at" /TR "choco upgrade all --confirm" /ST $RunTime /F
