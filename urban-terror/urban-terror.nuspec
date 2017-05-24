@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>urban-terror</id>
+    <version>4.3.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/urban-terror</packageSourceUrl>
+    <title>Urban Terror (Portable)</title>
+    <authors>Frozensand Games</authors>
+    <projectUrl>http://www.urbanterror.info</projectUrl>
+    <iconUrl>http://www.urbanterror.info/files/static/images/pages/0001.png</iconUrl>
+    <copyright>Copyright © 1999-2017 Frozensand Games Limited</copyright>
+    <licenseUrl>https://www.urbanterror.info/downloads/contract/terms-of-service</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.urbanterror.info/support/manual/game/</docsUrl>
+    <mailingListUrl>http://www.urbanterror.info/forums/</mailingListUrl>
+    <bugTrackerUrl>http://www.urbanterror.info</bugTrackerUrl>
+    <tags>urban terror game quake3 shooter portable</tags>
+    <summary>Urban Terror is a free 3D shooter game.</summary>
+    <description>
+![Screenshot of Urban Terror](http://www.urbanterror.info/files/static/images/pics/presentation/shot0015.jpg)
+	
+###Welcome to Urban Terror
+
+Urban Terror™ is a free multiplayer first person shooter developed by FrozenSand, that will run on any Quake III Arena compatible engine. It is available for Windows, Linux and Macintosh.	
+
+Urban Terror can be described as a Hollywood tactical shooter; somewhat realism based, but the motto is «fun over realism». This results in a very unique, enjoyable and addictive game.
+
+No registration required: Download, install, play!	
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
