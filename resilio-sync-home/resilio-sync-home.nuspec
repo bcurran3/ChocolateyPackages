@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>resilio-sync-home</id>
+    <version>2.5.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-home</packageSourceUrl>
+    <title>Resilio Sync Home (Install)</title>
+    <authors>Resilio, Inc.</authors>
+    <projectUrl>https://www.resilio.com/individuals/</projectUrl>
+    <iconUrl>https://blog.resilio.com/wp-content/uploads/2016/06/SyncSymbol-260x260px.png</iconUrl>
+    <copyright>© Resilio, Inc.</copyright>
+    <licenseUrl>https://www.resilio.com/legal/eula/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://forum.resilio.com/</mailingListUrl>
+    <tags>resilio sync btsync bittorrent backup</tags>
+    <summary>A fast, reliable, and simple file sync and share solution.</summary>
+    <description>
+###Have Your Files Anywhere
+
+Sync any folder to all your devices. Sync photos, videos, music, PDFs, docs or any other file types to/from your mobile phone, laptop, or NAS.	
+
+###Keep Your Files Safe
+
+Backup your files automatically to another device you own. Create your own Disaster Recovery site.
+
+Setup your phone to backup all photos to your laptop, or backup all your documents from your laptop to your NAS.  Protect yourself from losing information on a crashed or misplaced device.
+
+###Send Large Files Fast
+
+Sync skips the cloud and finds the shortest path between devices when transferring data.
+
+No size limits. Easily sync and share folders that contain gigabytes (or terabytes) of data.
+
+###Access Files On The Go
+
+Sync photos, videos, music, PDFs, docs or any other file types to/from your mobile phone or tablet. Using 'Selective Sync', you can choose to sync only the files you need, whenever you need them.
+
+###Use on Any Device
+
+Keep folders synced between multiple platforms and operating systems. Sync is available for OS X, Windows, Linux, iOS, Android, all major NAS devices, and more.
+
+**PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
