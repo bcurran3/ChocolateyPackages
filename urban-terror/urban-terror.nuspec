@@ -28,6 +28,8 @@ Urban Terror™ is a free multiplayer first person shooter developed by FrozenSa
 Urban Terror can be described as a Hollywood tactical shooter; somewhat realism based, but the motto is «fun over realism». This results in a very unique, enjoyable and addictive game.
 
 No registration required: Download, install, play!	
+
+PACKAGING NOTE: Due to the downloaded ZIP being >500MB, you need to install using **choco install urban-terror --skip-virus-check***
 	</description>
     <releaseNotes></releaseNotes>
   </metadata>
