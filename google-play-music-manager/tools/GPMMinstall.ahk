@@ -4,17 +4,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
  
-WinWait, Music Manager , , 120
+WinWait, Music Manager Installer , Installation complete. , 120
 WinActivate
-;BlockInput On
+Send {Tab}
 Send {Enter}
-Sleep, 10000
-Send !{f4}
-Sleep, 100
-Send {Left}
-Send {Enter}
-Sleep, 100
-Send {Enter}
-;BlockInput Off
+
 
 
