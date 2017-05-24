@@ -1,25 +1,32 @@
 ﻿$packageName    = 'onenote'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=OneNoteFreeRetail&platform=x86&language=en-US&version=O16GA&Source=O16ONF' 
-$checksum       = '04DA8A36108F736597727B8DABF0290D8164E654ED2F5DD18F92FED0A3E282DA'
-$url64          = 'https://c2rsetup.officeapps.live.com/c2r/download.aspx?productReleaseID=OneNoteFreeRetail&platform=x86&language=en-US&version=O16GA&Source=O16ONF'
-$checksum64     = '699DA27776D2C586A6FA2FE045D07FC2FD81A66A9EFCD8C98082EBD576BE33B8'
+$url            = 'https://www.onenote.com/download/win32/x86/en-US' 
+$checksum       = '4621396997A72B6A13C402390D35F32176B7951B876F73BED382BCD944FCC014'
+$url64          = 'https://www.onenote.com/download/win32/x64/en-US'
+$checksum64     = 'B7F5F676507ECDAFA4E54E6F790A18E074EB6A83A15011D6BF353326D89C24B3'
 $silentArgs     = ''
 $validExitCodes = @(0)
-$ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "OneNoteInstall.ahk"
-
-Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'EXE' 
-  url           = $url
-  softwareName  = 'Microsoft OneNote Hom and Student 2016*' 
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
+  packageName    = $packageName
+  fileType       = 'EXE' 
+  url            = $url
+  url64          = $url64
+  softwareName   = 'Microsoft OneNote Home and Student 2016*' 
+  checksum       = $checksum
+  checksum64     = $checksum64
+  checksumType   = 'sha256'
+  checksumType64 = 'sha256'  
+  silentArgs     = $silentArgs
+  validExitCodes = $validExitCodes
 }
 
 Install-ChocolateyPackage @packageArgs 
+
+if((get-process "OfficeC2RClient" -ea SilentlyContinue) -eq $Null){ 
+    Write-Host "OfficeC2RClient currently NOT running." 
+  }else{ 
+    Write-Host "Stopping OfficeC2RClient process..."
+    Stop-Process -processname "OfficeC2RClient"
+  }
+
