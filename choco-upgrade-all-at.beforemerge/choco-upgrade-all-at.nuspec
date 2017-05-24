@@ -3,38 +3,30 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at</id>
-    <version>0.0.2</version>
+    <version>0.0.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</packageSourceUrl>
     <title>choco (unofficial) upgrade all at (midnight?) (Task)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-upgrade-all-at/choco-upgrade-all-at_logo.png</iconUrl>
-	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>choco upgrade all cup config unofficial schtasks scheduled task</tags>
+    <tags>choco upgrade all config unofficial schtasks scheduled task</tags>
     <summary>This will create a Windows Scheduled Task to upgrade Chocolatey on a daily basis at the specified time.</summary>
     <description>
-####This package sets up a Windows Scheduled Task to run "choco upgrade all" every day at a predefined time. 
+###This is not a program. This is just a configuration script that creates a Windows Scheduled Task.
 
+This script simply sets up a Windows Scheduled Task to run "choco upgrade all" every day at a predefined time. You can set the time by running "choco install choco-upgrade-all-at --params HH:MM" where HH:MM equals hours and minutes in 24 hour format.
 
 If you don't set a time, it defaults to midnight.
 
-You can set the time by running **choco install choco-upgrade-all-at --params "'/Time:X'"** where X equals an hour of the day or hour and a half of the day **with no colon**. Please see examples.
-
-###INSTALL EXAMPLES
-* **choco install choco-upgrade-all-at --params "'/Time:1'"**   - runs choco upgrade all at 1 AM
-* **choco install choco-upgrade-all-at --params "'/Time:330'"** - runs choco upgrade all at 3:30 AM
-* **choco install choco-upgrade-all-at --params "'/Time:22"**   - runs choco upgrade all at 10 PM
-* **choco install choco-upgrade-all-at --params "'/Time:2330"** - runs choco upgrade all at 11:30 PM
-
-chocolateyinstall.ps1 is easy to read and shows supported times. A future release will have precise minute parsing.
+Is this miraculous? No. Is this something you could have just done yourself in a minute or two? Yes. Why bother? Because it helps you keep your software up to date easily and you can throw it in a batchfile with the rest of your programs that you use Chocolatey to install. The use of the [Elavate tool](https://chocolatey.org/packages/elevate) means that it gets around that UAC problem you had when you tried to do it before. ! :)
 	</description>
-    <releaseNotes>official initial working release</releaseNotes>
+    <releaseNotes></releaseNotes>
     <dependencies>
+      <dependency id="elevate" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />	  
     </dependencies>
   </metadata>
