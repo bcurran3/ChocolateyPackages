@@ -4,7 +4,7 @@
   <metadata>
     <id>streambaby</id>
     <title>streambaby (Install)</title>
-    <version>0.53</version>
+    <version>0.54</version>
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
     <summary>A TiVo HME application for streaming videos</summary>
@@ -19,18 +19,23 @@ NOTE: This is a revival of the original streambaby project on Google Code which 
 * Ability to transcode and stream video that is not inherently TiVo compatible. Supports most files that TiVo and/or ffmpeg can handle. Preview mode and random-positioning work with most transcoded files. 
 Remembers your position in the video when you stop watching and automatically starts at that position next time you watch. Works even when exiting playing via the "TiVo" button.
 
-PACKAGER NOTES: READ the documentation and edit your streambaby.ini file to get started. You have to run as admin for streambaby to download additional support files.
-Version 0.53 (Aug 7th, 2016)
+###Requirements
+* Requires Java 1.6 or above to be installed.
+* Uses ffmpeg binary executable for transcoding. MPG/MP4 streaming is built-in
+* Uses ffmpeg to generate "preview" views on the fly.
+
+**PACKAGING NOTES:** Read the documentation and edit your streambaby.ini file to get started.
     </description>
     <projectUrl>https://sourceforge.net/projects/streambaby/</projectUrl>
     <projectSourceUrl>https://sourceforge.net/p/streambaby/code/HEAD/tree/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/streambaby/wiki/Home/</docsUrl>	
     <mailingListUrl>https://sourceforge.net/p/streambaby/discussion/general/</mailingListUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/streambaby/tickets/?source=navbar</bugTrackerUrl>
-    <tags>streambaby TiVo tivo HME stream streaming video server java admin</tags>
+    <bugTrackerUrl>https://sourceforge.net/p/streambaby/tickets/</bugTrackerUrl>
+    <tags>streambaby tivo hme stream streaming video server java admin</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-       <dependency id="jre8" />
+      <dependency id="jre8" version="1.6" />	   
+      <dependency id="ffmpeg" />	   
     </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
