@@ -4,7 +4,8 @@
   <metadata>
     <id>google-shortcuts-firefox</id>
     <title>Google Shortcuts for Firefox (Install)</title>
-    <version>1.1.6</version>
+    <version>1.1.7</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-shortcuts-firefox</packageSourceUrl>		
     <authors>belav</authors>
     <owners>bcurran3</owners>
     <summary>Shortcuts of Google Products in Firefox Navbar (Install)</summary>
@@ -57,7 +58,10 @@ List of selected Google products (total is 101 products):
 33. Google Music Google Play gives you one place to find, enjoy, and share Apps, Music, Movies and Books instantly anywhere across the web
 34. Google Analytics Google Analytics lets you measure your advertising ROI as well as track your Flash, video and social networking sites and applications
 35. Google Dashboard Google Dashboard offers transparency and control over the data associated with your Google Account
-PACKAGING NOTE: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. The package should always install the latest version, independent of the package version. Subsequent updates should be dealt with automatically by Firefox.
+
+####PACKAGING NOTES: 
+* This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. 
+* The package will install v1.1.7 via a static link. Subsequent updates should be dealt with automatically by Firefox.
     </description>
     <projectUrl>http://add0n.com/google-shortcuts.html</projectUrl>
     <projectSourceUrl>https://addons.mozilla.org/en-US/firefox/files/browse/423779/</projectSourceUrl>
@@ -68,9 +72,9 @@ PACKAGING NOTE: This addon will be installed for all profiles. You can not remov
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://addons.cdn.mozilla.net/user-media/addon_icons/429/429266-64.png</iconUrl>
     <dependencies>
-      <dependency id="firefox" version="38.0"/>
+      <dependency id="firefox" version="48.0"/>
     </dependencies>
-    <releaseNotes>added checksum</releaseNotes>
+    <releaseNotes> new version, changed download link from latest version to a static version</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

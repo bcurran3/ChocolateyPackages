@@ -1,7 +1,8 @@
 ﻿$packageName = 'google-shortcuts-firefox'
 $extensionID = "jid1-SVJwkBGCTt4PyQ@jetpack"
-$AddOnID = 429266
-$url = 'https://addons.mozilla.org/firefox/downloads/latest/429266/addon-429266-latest.xpi'
+$AddOnID     = 429266
+$url         = 'https://addons.mozilla.org/firefox/downloads/latest/429266/shortcuts_for_googletm_products-1.1.7-an+fx.xpi'
+$checksum    = '468CC5D8FD8F44F786F004F077C2C48DD6A67D8FDFEA582CC532621BE5534D33'
 
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
@@ -20,7 +21,7 @@ $packageArgs = @{
   unzipLocation = $extFolder
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '8780E723B18A9B050CBC4138D6F2F51F04ED364A6505027581C568AB30A8ED68'
+  checksum      = $checksum
   checksumType  = 'sha256' 
 }
 

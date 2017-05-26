@@ -1,16 +1,16 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName= 'mossawir-lan-messenger' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://master.dl.sourceforge.net/project/mossawirlm25/MossawirLanMessegner2.5.exe'
+﻿$packageName = 'mossawir-lan-messenger' 
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = 'https://downloads.sourceforge.net/project/mossawirlanmsg/MossawirLanMessenger3.exe'
+$checksum    = 'E20BBC45AA7760E27176D3767F7B351D05B5639A753842B596EDC39FE70EDE93'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'exe' 
   url           = $url
-  silentArgs   = '/S' 
-  softwareName  = 'Mossawir LAN Messenger*' 
-  checksum      = 'F951520D14304CD8DCF1F30B6B8364DF84CA19C4273BC52D97300CD63058EF65'
+  silentArgs    = '/S' 
+  softwareName  = 'Mossawir LAN Messenger 3*' 
+  checksum      = $checksum
   checksumType  = 'sha256'  
   }
 Install-ChocolateyPackage @packageArgs

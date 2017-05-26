@@ -3,32 +3,36 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mossawir-lan-messenger</id>
-    <version>2.5.4268.1</version>
+    <version>3.0</version>
     <owners>bcurran3</owners>
     <title>Mossawir LAN Messenger (Install)</title>
-    <authors>Mossawir Dot Ahmed</authors>
-    <projectUrl>https://sourceforge.net/projects/mossawirlm25/</projectUrl>
+    <authors>Mossawir Ahmed</authors>
+    <projectUrl>https://sourceforge.net/projects/mossawirlanmsg/</projectUrl>
     <copyright>Copyright © Mossawir Dot Ahmed</copyright>
     <licenseUrl>https://sourceforge.net/directory/os:windows/license:afl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/mossawirlm25/code/ref/master/</projectSourceUrl>
-    <mailingListUrl>https://sourceforge.net/p/mossawirlm25/discussion</mailingListUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/mossawirlm25/tickets/</bugTrackerUrl>
-    <tags>mossawir lan messenger im chat admin</tags>
+    <projectSourceUrl>https://sourceforge.net/p/mossawirlanmsg/code/ref/master/</projectSourceUrl>
+    <mailingListUrl>https://sourceforge.net/p/mossawirlanmsg/discussion/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/mossawirlanmsg/tickets/</bugTrackerUrl>
+    <tags>mossawir lan messenger im chat notsilent admin</tags>
     <summary>Mossawir Network Messenger is a LAN messaging and chat program which allows messages to be sent between users on a network peer-to-peer with no need for a server.</summary>
     <description>
-![Screenshot of Mossawir LAN Messenger](https://a.fsdn.com/con/app/proj/mossawirlm25/screenshots/screenshot.png)
+![Screenshot of Mossawir LAN Messenger](https://fsdn.com/con/app/proj/mossawirlanmsg/screenshots/s1.jpg)
 
 ###Description
 
-Mossawir Network Messenger is a simple, easy to use LAN messaging and chat application that allows messages to be sent between users on a network peer-to-peer with no need for a server.
+Mossawir Lan Messegner 3.0 is peer-to-peer messaging application for intra-network communication and does not require a server.
 
 ###Features
 
-* Addressing to User@Computer and user@ip-address (e.g. user: niazi on computer: userdesktop, address: user@userdesktop)
-* Support for 2 user chats
-* Spellchecking
-* Aero Glass Background on Windows Vista with Aero Enabled
+* Chatting
+* File Transfering
+* Grouping
+* Private Messege Sending
+* Automatically Detecting On LAN (User Discovery)
+* Availability Status Update
+* Maintain History
+* and many more
 
 ####PACKAGING NOTE: Uninstall is NOT silent.
 	</description>
