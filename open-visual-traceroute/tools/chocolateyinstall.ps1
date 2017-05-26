@@ -1,9 +1,9 @@
 ﻿$packageName = 'open-visual-traceroute' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'http://pilotfiber.dl.sourceforge.net/project/openvisualtrace/1.6.4/OpenVisualTraceroute1.6.4.exe'
-$checksum    = '1E53BF068D947C628AA92344CCD3B1BDAF8BCE57CDECCC3FD2D2881B436E892A'
-$ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "OVTInstall.ahk"
+$url         = 'https://downloads.sourceforge.net/project/openvisualtrace/1.6.5/OpenVisualTraceroute1.6.5.exe'
+$checksum    = '414D1CF8355D7D5934618092BBCC278F9363F515F2718D5514B0E5C2423BBECA'
+$ahkExe      = 'AutoHotKey'
+$ahkFile     = Join-Path $toolsDir "OVTInstall.ahk"
 
 Start-Process $ahkExe $ahkFile
 

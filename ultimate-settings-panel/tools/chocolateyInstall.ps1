@@ -1,10 +1,10 @@
-$packageName   = 'ultimate-settings-panel'
-$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://downloads.sourceforge.net/project/ultimatesettingspanelpro/v5.6/UltimateSettingsPanel.zip'
-$checksum      = 'C067CE8F98363A0A8D0315F83D6404CE37B17AECD01E939C3D400D2FB4194E75'
-$silentArgs    = '/quiet /qn /norestart'
-$validExitCodes= @(0)
-$osBits        = Get-ProcessorBits
+$packageName    = 'ultimate-settings-panel'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'https://downloads.sourceforge.net/project/ultimatesettingspanelpro/v5.7/UltimateSettingsPanel.zip'
+$checksum       = '5C1B5A98C40E1A73306799E09B8B0BD55CF1B2242ACB45717E2A4F7364DA8C0C'
+$silentArgs     = '/quiet /qn /norestart'
+$validExitCodes = @(0)
+$osBits         = Get-ProcessorBits
 
 $packageArgs = @{
   packageName   = $packageName
@@ -19,11 +19,11 @@ Install-ChocolateyZipPackage @packageArgs
 
   if ($osBits -eq 64) 
     {
-    $UnzippedEXE  = Join-Path $toolsDir 'x64\Ultimate Settings Panel.msi'
+    $UnzippedEXE  = Join-Path $toolsDir 'Installers\x64\Ultimate Settings Panel x64.msi'
     }
   else
     {
-    $UnzippedEXE  = Join-Path $toolsDir 'x86\Ultimate Settings Panel.msi'
+    $UnzippedEXE  = Join-Path $toolsDir 'Installers\x86\Ultimate Settings Panel.msi'
     }
 
 $packageArgs = @{

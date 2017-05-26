@@ -35,9 +35,6 @@ HDHomeRun DUAL (HDHR2-US/DT)
 HDHomeRun DUAL (HDHR-US/EU/DT)
 	</description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="plexmediaserver" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

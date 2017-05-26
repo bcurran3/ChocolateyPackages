@@ -46,9 +46,6 @@ Known Incompatible Clients:
 Download this repo and install as a Plug-in.
 	</description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="plexmediaserver" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
