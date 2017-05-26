@@ -2,31 +2,52 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>ultimate-settings-panel</id>
-    <title>Ultimate Settings Panel</title>
-    <version>5.6</version>
+    <title>Ultimate Settings Panel (Install)</title>
+    <version>5.7.1</version>
+    <owners>bcurran3</owners>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>	
     <authors>A.J. Armstrong</authors>
-    <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>		
-	<language>en-us</language>
+    <copyright>A.J. Armstrong / techygeekshome.info</copyright>
+    <projectUrl>http://usp.blog.techygeekshome.info/</projectUrl>	
+    <docsUrl>http://usp.blog.techygeekshome.info/2017/03/instructions/</docsUrl>
+    <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/ultimate-settings-panel/UltimateSettingsPanel.png</iconUrl>	
+    <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>	
     <description>
-![Screenshot of Ultimate Settings Panel](http://www.ultimatesettingspanel.co.uk/_/rsrc/1475327586819/screenshots/uspwin10.PNG)
+![Screenshot of Ultimate Settings Panel](http://i0.wp.com/usp.blog.techygeekshome.info/wp-content/uploads/sites/7/2017/04/Windows10.png)
 
-Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager. The latest release now has 13 different configuration tabs including Windows 8.1 and a total of 238 configuration items spanning across all versions of Windows, Powershell, Outlook, Server Administration and Configuration Manager. 
-
-The latest release is now also compatible with Windows 10 operating systems.
+An all in one settings solution for a multitude of configuration options in Windows, Office, Powershell and popular internet browsers amongst others. This release now has 15 different configuration tabs including Windows 10 and a total of 283 configuration items spanning across all versions of Windows, Powershell, Outlook, Server Administration, Google Chome, Firefox and Internet Explorer. Ultimate Settings Panel is a panel based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a panel and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
 
 Ultimate Settings Panel is a tab based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a tab and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
+
+###Features
+* Windows Admin Tab
+* General Admin Tab
+* Windows 10 Admin Tab
+* Outlook Admin Tab
+* Server Admin Tab
+* Windows 8 Tab
+* Google Chrome Tab
+* Internet Explorer Tab
+* Firefox Tab
+* Advanced Tab
+* Windows 7, 8.1 and 10 Compatibility
+* Windows 7 Tab
+* Theme and Colour Scheme Changer
+* CPU Information
+* RAM Information
+* Battery Information
+
+**PACKAGING NOTE:** v5.7.1 per author's site, but executables still show 5.7
     </description>
-    <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>
-	<copyright>A.J. Armstrong</copyright>
-    <projectUrl>http://www.ultimatesettingspanel.co.uk/home</projectUrl>
     <tags>ultimate settings panel system utility configuration control admin</tags>
-    <licenseUrl>https://sourceforge.net/directory/os:windows/license:other/</licenseUrl>
-    <docsUrl>http://www.ultimatesettingspanel.co.uk/instructions</docsUrl>
-    <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
-    <bugTrackerUrl>http://www.ultimatesettingspanel.co.uk/version-log</bugTrackerUrl>	
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.ultimatesettingspanel.co.uk/_/rsrc/1441024630341/screenshots/1.PNG</iconUrl>
-	<releaseNotes></releaseNotes>	
+	<releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5" />
+    </dependencies>	
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>

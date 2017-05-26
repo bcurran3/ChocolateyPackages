@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>open-visual-traceroute</id>
-    <version>1.6.4.20170428</version>	
+    <version>1.6.5</version>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-visual-traceroute</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Open Visual Traceroute (Install)</title>
