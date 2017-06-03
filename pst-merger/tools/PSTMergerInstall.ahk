@@ -3,11 +3,12 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-WinWaitActive, 4Team PST Merger - InstallShield Wizard, , 300
+WinWaitActive, 4Team PST Merger - InstallShield Wizard, Welcome to, 300
 WinActivate
 Send !n
 Send !a
 Send !n
-WinWaitActive, 4Team PST Merger - InstallShield Wizard, The InstallShield Wizard has successfully installed 4Team PST Merger. , 300
+WinWaitActive, 4Team PST Merger - InstallShield Wizard, InstallShield Wizard Completed , 300
+Send !f
 
 
