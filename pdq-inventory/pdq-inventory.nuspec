@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-inventory</id>
-    <version>12.2.0.0</version>
+    <version>12.4.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>PDQ Inventory (Trial) (Install)</title>
@@ -65,12 +65,18 @@ For some scans you may just want to have a quick scan and not wait for everythin
 * Windows Features	
 * Windows Task Schedules
 
-###OS Requirements
-Windows Vista, 7, 8x, 10, Server 2008x, 2012x
+###System Requirements
+Windows 10, 8x, 7, Server 2008x - 2016x
+###NOT SUPPORTED:
+Windows Vista, XP, and Home editions, Windows 10 LTSB
+####4 GB RAM, 8 GB recommended
+####Installing on a Domain Controller or Microsoft Exchange Server is not recommended
+
+**PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.0" />
+      <dependency id="dotnet4.6" />
     </dependencies>
   </metadata>
   <files>

@@ -1,6 +1,6 @@
 ﻿$packageName = 'font-awesome-font'
 $url         = 'http://fontawesome.io/assets/font-awesome-4.7.0.zip'
-$checksum    = '8DD560347F1850AE2BB9AE13AE33FDBB44B7AF00427FA15A4ED55A1A08AF30BB'
+$checksum    = '4E22A3FB2BB157269261FB7DB1444845192426874DB43E24087B4A4D2A7739D4'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $destination = Join-Path $toolsDir 'font-awesome-4.7.0'
 

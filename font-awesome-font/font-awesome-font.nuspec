@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>font-awesome-font</id>
-    <version>4.7.0</version>
+    <version>4.7.0.20170606</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/font-awesome-font</packageSourceUrl>
     <title>Font Awesome (Font) (Install)</title>
@@ -58,7 +58,7 @@ To use on the desktop or for a complete set of vectors, check out the cheatsheet
 
 Font Awesome loves screen readers and helps make your icons accessible on the web.	
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>version didn't change but checksum did from site</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

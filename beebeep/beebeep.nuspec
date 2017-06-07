@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>beebeep</id>
-    <version>3.0.9</version>
+    <version>4.0.0</version>
     <owners>bcurran3</owners>
     <title>beeBEEP (Portable)</title>
     <authors>Marco Mastroddi</authors>
@@ -16,7 +16,7 @@
     <tags>beebeep IM chat messenger portable</tags>
     <summary>BeeBEEP is an open source, peer to peer, secure LAN messenger.</summary>
     <description>
-![Screenshot of beeBEEP](http://beebeep.sourceforge.net/images/beebeep_screen_1.jpg)
+![Screenshot of beeBEEP](https://fsdn.com/con/app/proj/beebeep/screenshots/beebeep-screenshot-1.jpg)
 
 ###What is BeeBEEP?
 
