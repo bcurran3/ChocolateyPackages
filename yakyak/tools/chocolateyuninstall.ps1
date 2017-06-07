@@ -1,3 +1,5 @@
-﻿$packageName = 'yakyak'
+﻿$packageName  = 'yakyak'
+$ShortcutName = 'yakyak'
 
-remove-item "$env:Public\Desktop\YakYak.lnk" -Force -ErrorAction 'SilentlyContinue'
+remove-item "$env:Public\Desktop\$ShortcutName.lnk" -Force -ErrorAction 'SilentlyContinue'
+remove-item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -Force -ErrorAction 'SilentlyContinue'

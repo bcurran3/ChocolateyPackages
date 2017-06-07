@@ -4,7 +4,8 @@
   <metadata>
     <id>trojan-remover</id>
     <title>Trojan Remover (Install)</title>
-    <version>6.9.4.2947</version>
+    <version>6.9.5.2952</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trojan-remover</packageSourceUrl>		
     <authors>Simply Super Software</authors>
     <owners>bcurran3</owners>
     <summary>Trojan Remover aids in the removal of Malware - Trojan Horses, Worms, Adware, Spyware - when standard anti-virus software either fails to detect them or fails to effectively eliminate them. Standard antivirus programs are good at detecting this Malware, but not always so good at effectively removing it.</summary>
@@ -49,7 +50,7 @@ This essential security utility is available for you to try out FREE. Download a
     <copyright>Copyright (C) 1999-2016 Simply Super Software All Rights Reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.simplysup.com/tremover/images/tricon_256_stretched.jpg</iconUrl>
-    <releaseNotes>added checksum</releaseNotes>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

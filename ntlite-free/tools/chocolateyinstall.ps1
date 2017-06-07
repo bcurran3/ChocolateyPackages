@@ -3,9 +3,9 @@ $packageName    = 'ntlite-free'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://downloads.ntlite.com/files/NTLite_setup_x86.exe' 
-$checksum       = '62CC8A837EF3B483971C321DBCADF4A7898BBB2EC2D1013ACA3004F791790150'
+$checksum       = 'BB3C5C25528E16E7FC2C70D395DCDDA5574E43414A80DD3CD1C8D3ABB7E44749'
 $url64          = 'http://downloads.ntlite.com/files/NTLite_setup_x64.exe' 
-$checksum64     = '17C4B88846BBFD2CA22D983C03475E60A2D36FBDD12A8EDCF1DD767846CFF689'
+$checksum64     = '63464731203F6B2A1E769A7A4D8E5FE2C188A79C854F0263922B8F5F13B02C98'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
 
