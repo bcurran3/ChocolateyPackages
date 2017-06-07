@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'pdq-inventory'
-$softwareName = 'PDQ Inventory*'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www2.adminarsenal.com/download-pdqinventory' 
-#https://aafiles.blob.core.windows.net/files/PDQInventory_12_2_0_0_f86a994b-8c1e-479c-8888-5ab9a4e9a49e.zip
-$checksum   = '6293266F2A0F994E0731B437CE464B7AF9D9BE606D56365C949C0F038FF410B7'
-$silentArgs = '/S'
-$validExitCodes= @(0)
-$fileLocation = "$env:ChocolateyInstall\lib\$packageName\tools\PDQInventory.12.2.0.0.exe"
+$packageName    = 'pdq-inventory'
+$softwareName   = 'PDQ Inventory*'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://www2.adminarsenal.com/download-pdqinventory' 
+#https://aafiles.blob.core.windows.net/files/PDQInventory_12_4_0_0_b7bd8513-1b50-43a3-8b18-b6db5fb59bc7.zip
+$checksum       = 'CBF39265C33D90B206B40FA3CC0B604CFCA9866A2CA5159800AC0289816B74B1'
+$silentArgs     = '/S'
+$validExitCodes = @(0)
+$fileLocation   = "$toolsDir\PDQInventory.12.4.0.0.exe"
 
 $packageArgs = @{
   packageName   = $packageName

@@ -1,9 +1,9 @@
 ﻿$packageName  = 'beebeep' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://downloads.sourceforge.net/project/beebeep/Windows/beebeep-3.0.9.zip'
-$checksum     = 'F8D23D12CA602A72BE9F3EB1901E8375D047BDE75A6B1D181F453E8FBC82BB88'
+$url          = 'https://downloads.sourceforge.net/project/beebeep/Windows/beebeep-4.0.0.zip'
+$checksum     = '75DAC37FF7C77213EDF2FCFDFAF928B1E5FE35C3ED052581B01455A93A32D60D'
 $ShortcutName = 'beeBEEP'
-$unzipDir     = 'beebeep-3.0.9'
+$unzipDir     = 'beebeep-4.0.0'
 $exe          = 'beeBEEP.exe'
 
 $packageArgs = @{

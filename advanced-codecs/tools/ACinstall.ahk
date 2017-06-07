@@ -15,4 +15,9 @@ If WinExist("Advanced")
   WinActivate
   Send !n
  }
- 
+sleep 1000
+If WinExist("Advanced")
+ {
+  WinActivate
+  Send !n
+ }
