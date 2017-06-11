@@ -1,9 +1,9 @@
 ﻿$packageName  = 'sardu' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'http://www.sarducd.it/download/SARDU_321.zip'
-$checksum     = '88CF9D20C0B691217F1029F241539D3A3BE47442A72213657509CFC7A904BBB7'
+$url          = 'https://www.sarducd.it/download/SARDU_322.zip'
+$checksum     = 'D429DBAA0F93A0995D15B301E8270AEC7F55D7AEB814AA3F46E9FFD1D185A93B'
 $shortcutName = 'SARDU.lnk'
-$workingDir   = 'SARDU_321'
+$workingDir   = 'SARDU_322'
 $exe          = 'sardu_3.exe'
 
 $packageArgs = @{
