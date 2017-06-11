@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>save-to-tonido-chrome</id>
+    <version>1.1.0</version>
+    <title>Save to Tonido for Chrome</title>
+    <authors>FileCloud (CodeLathe)</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/save-to-tonido-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/save-to-tonido/bmdhmfngbomlgkjhjejencagkcjjapif</projectUrl>
+    <iconUrl>http://www.tonido.com/images/app_screenshot_default.png</iconUrl>
+    <licenseUrl>http://www.tonido.com/tos/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+##Save images, web content and screen capture to Tonido
+
+Save to Tonido chrome extension allows users to right click any file (documents, images, audio and video) and save to Tonido personal cloud running on your PC, Mac or Linux.  One can take screenshots of entire page and save to their Tonido Personal Cloud. Users can also choose the target folder where one want to store the files.
+
+
+------ Access, Share and Sync from Anywhere ------------------------
+
+Your Own Personal Cloud
+
+Tonido is an ultra simple personal cloud server software that allows you to access and share your documents, photos, music through a web browser without uploading or worrying about storage limits. Share files, music, photos and videos straight from your PC.
+
+How It Works?
+
+1. Download and Install Tonido Server software on your computer.
+
+2. Create a Tonido account. The account becomes part of the URL for your computer
+http://username.tonidoID.com
+
+3. Access your computer using this URL
+
+Benefits
+
+SECURE ACCESS, FILE SHARING AND SYNC
+Access your files from anywhere. Share large files and folders with family, friends and colleagues. Setup public direct links so anyone can access the content or create a secure private share that only authorized people are allowed to access them.
+
+ENJOY YOUR PHOTOS, MUSIC AND VIDEOS FROM ANYWHERE
+Ultra Fast, High Performance Media Organization. Quickly stream your entire media collection to any device.You are no longer limited by your phone's or tablet's capacity.
+
+WORKS UNIVERSALLY
+Works on Windows, Linux, Mac and all major mobile phones and tablets including iPhone, iPad, Android, Windows Phone 8 and Blackberry. Works on Raspberry Pi.
+
+AUTOMATICALLY BACKUP PHOTOS FROM YOUR PHONE
+Automatically backup photos/video from Android/iPhone to your Personal Cloud without user intervention.
+
+HAVE YOUR OWN LOGO, BRANDING, IDENTITY
+You can customize the branding to what you want to make the Tonido space your own. You can even run the service using your own custom domain name.
+
+PRIVATE AND SECURE
+By providing direct access to your files on your computer, you can rest assured that your data stays with you, providing complete privacy and control.
+
+Tonido is the # Personal Cloud server used by millions of users around the world.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>Save to Tonido allows you to save documents to your Tonido server from the Chrome browser.</summary>
+    <tags>tonido sync cloud chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
