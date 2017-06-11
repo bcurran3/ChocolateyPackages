@@ -1,10 +1,14 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-#NoTrayIcon
+;#NoTrayIcon
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;BlockInput On 
-WinWaitActive, Drobo Dashboard - InstallShield Wizard, Welcome to the InstallShield Wizard for Drobo Dashboard, 60
+;TrayTip, DROBO DASHBOARD INSTALL VIA CHOCOLATEY, Wait a minute... checking if fresh install or not.
+;Sleep, 60000
+WinWaitActive, Drobo Dashboard - InstallShield Wizard, Select the language for the installation from the choices below.
+WinActivate
+Send !o
+WinWaitActive, Drobo Dashboard - InstallShield Wizard , Welcome to the InstallShield Wizard , 60
 WinActivate
 Send !n
 Send !n
@@ -18,5 +22,5 @@ WinActivate
 Send {Tab}
 Send {Space}
 Send !f
-;BlockInput Off
+
 
