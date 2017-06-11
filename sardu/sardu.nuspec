@@ -4,7 +4,7 @@
   <metadata>
     <id>sardu</id>
     <title>SARDU (Portable)</title>
-    <version>3.2.1</version>
+    <version>3.2.2</version>
     <authors>Davide Costa</authors>
     <owners>bcurran3</owners>
     <summary>Multiboot USB and DVD creator customized with rescue disk, utility, linux live, windows installer</summary>

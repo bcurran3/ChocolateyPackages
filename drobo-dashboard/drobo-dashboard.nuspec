@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>drobo-dashboard</id>
-    <version>3.0.0.88901</version>
+    <version>3.1.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drobo-dashboard</packageSourceUrl>
     <title>Drobo Dashboard (Install)</title>
@@ -15,8 +15,8 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://myproducts.drobo.com/AA-00903</docsUrl>
     <mailingListUrl>http://www.drobospace.com/forums/</mailingListUrl>
-    <bugTrackerUrl>http://files.drobo.com/webrelease/dashboard/Release-Notes-dashboard-3.0.0.pdf</bugTrackerUrl>
-    <tags>drobo dashboard nas admin</tags>
+    <bugTrackerUrl>http://files.drobo.com/webrelease/dashboard/Release-Notes-dashboard-3.1.1.pdf</bugTrackerUrl>
+    <tags>drobo dashboard nas notsilent admin</tags>
     <summary>Drobo Dashboard is a monitoring and management utility for Drobo NAS storage products.</summary>
     <description>
 ![Screenshot of Drobo Dashboard](http://www.droboworks.com/images/Drobo-Dashboard/dd_main.png)
@@ -29,6 +29,8 @@ SUPPORTED OPERATING SYSTEMS
 
 * Mac OS: 10.10.x, 10.11.x, 10.12.x
 * Windows: Win7, Win8, Win10, Win2008, Win2012
+
+**PACKAGING NOTE:** This package will not upgrade or uninstall silently.
 	</description>
     <releaseNotes></releaseNotes>
 	<dependencies>
