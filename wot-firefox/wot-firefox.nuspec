@@ -3,38 +3,67 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>wot-firefox</id>
-    <version>20151208.0.20161009</version>
+    <version>20170206.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wot-firefox</packageSourceUrl>		
     <title>Web of Trust for Firefox</title>
-    <authors>Timo Ala-Kleemola and Sami Tolvanen of mywot.com</authors>
+    <authors>WOT Services</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <projectUrl>https://www.mywot.com/</projectUrl>
 	<bugTrackerUrl>https://addons.mozilla.org/en-US/firefox/addon/wot-safe-browsing-tool/</bugTrackerUrl>
-    <iconUrl>https://www.mywot.com/sites/all/themes/wot/images/wot-flex/logo-head.png</iconUrl>
+    <iconUrl>https://www.mywot.com/wp-content/themes/wot/assets/images/logo-head.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Find out which websites you can trust. WOT adds intuitive traffic light-style icons next to search results and URLs so you can decide whether to visit a site: Green – The site is trusted, Yellow – Be cautious, Red – Online threats detected </summary>
     <description>
-![Screenshot of WOT](https://addons.cdn.mozilla.net/user-media/previews/full/169/169047.png)	
 
-###WOT OVERVIEW
-Web of Trust (aka WOT) is a known worldwide website reputation and rating service that helps you make informed decisions about whether to trust a website or not when you are searching, shopping or surfing online. WOT increases your personal online security and web safety. Web Of Trust is based on the Crowdsourcing Approach. Millions of users rate websites throughout the Internet and share their personal experience. This helps you avoid online threats that only real life experience can detect, such as scams, untrustworthy links, rogue web stores, etc.
+##Instantly know which websites to trust! WOT protects you while you browse, warning you against dangerous sites that host malware, phishing, and more.
 
-###HOW WEB OF TRUST WORKS
-The WOT add-on shows website reputations as traffic lights next to search results when you use Google, Yahoo!, Bing or any other search engine: green for good, red for bad, and yellow as a warning to be cautious. These icons are also visible next to links in social networking websites like Facebook and Twitter; Email services like Gmail and Yahoo!Mail; as well as popular websites like Wikipedia.
-By clicking the traffic light icon you can find details about a website’s reputation, safety information and users’ opinions. A green traffic light means users have rated the site as trusted and reliable, red warns about danger or potential online threats and yellow indicates that you need to be cautious when using a site.
+![Screenshot of WOT](https://www.mywot.com/wp-content/uploads/2017/04/how-3.png)	
 
-###WEB OF TRUST ADVANTAGES
-WOT ratings and reviews are powered by a global community of millions of users who rate websites based on their personal experiences. In addition, trusted third-party sources are used to warn you about malicious software and other online threats that you might encounter.
-You can share your experiences too by rating websites and help make the Internet a safer place for everyone.
-Web Of Trust (WOT) has been featured in the New York Times, CNET, PC World, Kim Komando show, Tech Republic, PC Welt and many other popular media.
-Install the WOT add-on for your Firefox browser! Check out website reputations and help us make a better Web for everyone!  
+###About this Add-on
+* Real-time protection from dangerous links and websites
+* Must-have addition to your antivirus
+
+WOT protects you while you browse, warning you against dangerous links, websites, scams, malware, phishing, and more.
+
+####How it works
+
+* WOT displays donuts that show website safety ratings on every site you visit, and next to links to other sites.
+* Red indicates potential danger
+* Yellow tells you to be careful
+* Green means it’s a safe website
+
+☞ See safety ratings as you search Google, browse social media and check your email, and avoid clicking on dangerous links.
+
+☞ Every site has a WOT Scorecard, which shows details about each rating and comments from other WOT users.
+
+☞ WOT offers an additional layer of protection with Warning Screens, which offer you to “go back” before you land on a dangerous site. And you can turn off these warnings if you prefer not to see them.
+
+☞ Real-time Protection
+WOT has 2 modes: Real-time Protection and Manual Mode. Real-time Protection allows you to safe search the internet, enhancing your web security by actively notifying you of online security threats such as scams, malware, and phishing
+
+####Where do the safety ratings come from?
+Millions of WOT users rate websites for trustworthiness and safety. These ratings are processed by our unique algorithms and used to calculate each site’s Trust Score.
+
+####Can you contribute to WOT ratings?
+Yes. Download WOT and create an account to leave comments on each site’s scorecard. Read more
+
+
+###Important Note
+
+Your Privacy is important:
+We respect your privacy and do everything we can to shield you.
+
+To enable real-time protection and allow us to fully understand website reputations, WOT requires the collection of browsing data, as described in our Privacy Policy. We will never license or share this data with any third parties for the purposes of direct marketing or identifying or targeting of individual users.
+By installing and/or using the WOT extension, you agree to the terms of our Privacy Policy: https://www.mywot.com/en/privacy/privacy_policy
+
 
 ####PACKAGING NOTE: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox.  Subsequent updates should be dealt with automatically by Firefox.
 </description>
-    <releaseNotes>added checksum and screenshot</releaseNotes>
+    <releaseNotes></releaseNotes>
     <tags>wot web of trust reputation ratings firefox</tags>
     <dependencies>
-      <dependency id="firefox" version="14.0"/>
+      <dependency id="firefox" version="45.0"/>
     </dependencies>
   </metadata>
 </package>
