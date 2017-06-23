@@ -1,1 +1,0 @@
-﻿SchTasks /Create /SC DAILY /TN "choco upgrade all at 3am" /TR "el choco upgrade all" /ST 03:00
