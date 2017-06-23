@@ -1,6 +1,7 @@
 $packageName = 'wot-firefox'
-$url = 'https://addons.mozilla.org/firefox/downloads/latest/3456/addon-3456-latest.xpi'
 $extensionID = "{a0d7ccb3-214d-498b-b4aa-0e8fda9a7bf7}"
+$url         = 'https://addons.mozilla.org/firefox/downloads/file/586124/web_of_trust_mywotwot_website_reputation_rating-20170206-fx+sm.xpi'
+$checksum    = 'F1522B9FB9B815A70601706580F8CE2A287F8A0B5A59020F368A5DEE29625D16'
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
 	$installDir = Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs | Select-Object -ExpandProperty Property
@@ -18,7 +19,7 @@ $packageArgs = @{
   unzipLocation = $extFolder 
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = 'D8400717222EE723621F8BF83F77CC94BC2164BF75C321F8BB3FEE6B6F915B17'
+  checksum      = $checksum
   checksumType  = 'sha256' 
 }
 

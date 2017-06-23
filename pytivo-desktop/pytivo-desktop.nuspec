@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pytivo-desktop</id>
+    <version>1.6.7</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pytivo-desktop</packageSourceUrl>
+    <title>pyTivo Desktop (Install)</title>
+    <authors>Dan Haddix</authors>
+    <projectUrl>http://www.pytivodesktop.com/</projectUrl>
+    <iconUrl>http://www.pytivodesktop.com/assets/img/logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://pytivo.sourceforge.io/forum/pytivo-desktop-t3090.html#19223</mailingListUrl>
+    <bugTrackerUrl>http://www.pytivodesktop.com/windows.html</bugTrackerUrl>
+    <tags>pytivo wmcbrine tivo home theatre video streaming server haddix admin</tags>
+    <summary></summary>
+    <description>
+![Screenshot of pyTivo Desktop](http://www.pytivodesktop.com/assets/img/transfer_new.png)
+	
+##pyTivo Desktop
+
+###Download shows from, and share music, photos and videos with, your TiVo© DVR	
+
+I hope wmcbrine doesn't mind me posting this here. My name is Dan and I'm a moderator over on TiVo Community as well as a software developer for VideoReDo. I have recently forked wmcbrine's version of pyTivo and built it into a Windows install package that includes a more user friendly UI and does NOT require python to be installed on the users machine. Everything in the package is compiled into standard exe files. I've used pyinstaller for the python code and electron for my Angular based UI. If anyone is interested it can be downloaded for free here.. 
+
+**PACKAGING NOTES:** I had to take some liberties with this install. The MAK address for your TiVos has been entered as 1234567890, you will need to change it. The defaul to save/send video files is set to C:\TEMP, change it to what you want.
+	</description>
+    <releaseNotes>pyTivo Desktop allows you to transfer video files back and forth between your computer and TiVo.</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
