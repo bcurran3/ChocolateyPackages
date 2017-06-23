@@ -3,23 +3,40 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>raidar</id>
-    <version>6.2</version>
+    <version>6.3</version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/raidar</packageSourceUrl>				
     <title>RAIDar (Portable)</title>
     <authors>NETGEAR</authors>
     <projectUrl>http://kb.netgear.com/app/answers/detail/a_id/20684</projectUrl>
-    <iconUrl>http://kb.netgear.com/euf/assets/ui2016/images/netgear-logo.png</iconUrl>
-    <copyright>Copyright 1996-2015 NETGEAR</copyright>
+    <iconUrl>https://kb.netgear.com/resource/1495694569000/kbchat/images/netgear-logo.png</iconUrl>
+    <copyright>Copyright NETGEAR</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://kb.netgear.com/app/answers/detail/a_id/22765/~/basic-setup-with-raidar</docsUrl>
-    <bugTrackerUrl>http://kb.netgear.com/app/answers/detail/a_id/31288</bugTrackerUrl>
-    <tags>netgear nas raidar admin</tags>
+    <bugTrackerUrl>https://kb.netgear.com/000038668/ReadyNAS-RAIDar-6-3</bugTrackerUrl>
+    <tags>netgear nas raidar portable admin</tags>
     <summary>RAIDar is used to discover NETGEAR Storage on your local network.</summary>
     <description>
-![Screenshot of NETGEAR RAIDar] (http://www.downloads.netgear.com/files/answer_media/images/raidar/raidar6.png)
 
-RAIDar is used to discover NETGEAR Storage devices on your local network.
+RAIDar is a software application that you use to discover ReadyDATA systems on the network. RAIDar is included on the Resource CD that came with your system. It includes versions for Windows, Mac, and Linux operating systems. RAIDar is also available at www.netgear.com/readydata.
+
+RAIDar displays the discovered ReadyDATA units with their status LED icons. The volume, disk, UPS, and fan LED icons are not operational for the ReadyDATA.
+
+![Screenshot of NETGEAR RAIDar] (http://www.downloads.netgear.com/files/answer_media/media/images/ReadyDATA%20OS%201%20SW/RAIDarII%20Mod.PNG)
+
+You can use the following buttons to learn more about the ReadyDATA units on the network:
+
+* Setup. Launches Dashboard for the highlighted ReadyDATA.
+* Browse. Displays the shares available on the highlighted system (LUNs are not displayed). This feature works on a Windows platform only.
+* Rescan. Updates the list of ReadyDATA systems on the network, and updates the status of each system that is discovered.
+* Locate. Nonfunctional button.
+* About. Displays RAIDar information.
+* Help. Displays the help screen.
+* Exit. Closes RAIDar.
 	</description>
+    <dependencies>
+      <dependency id="javaruntime" />
+     </dependencies>	
     <releaseNotes></releaseNotes>
   </metadata>
   <files>
