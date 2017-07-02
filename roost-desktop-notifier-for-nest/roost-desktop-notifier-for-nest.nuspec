@@ -22,20 +22,20 @@ You get a discrete notification when a thermostat notices an interesting change 
 
 Roost Desktop Notifier supports the Nest Learning Thermostat in Heat, Cool and Heat • Cool modes. Temperatures are shown in Celsius or Fahrenheit, depending on your Nest settings. It will work nicely if you have just one Nest Thermostat, a single Nest Protect or lots of both in one or two homes!
 
-PACKAGING NOTE: This packaging might only work on Windows 10. Uninstall not silent
+PACKAGING NOTE: Uninstall not silent, use Control Panel.
     </description>
     <projectUrl>http://richardeverett.com/Nest</projectUrl>
     <iconUrl>https://richardeverett.com/Content/Nest/works-with-nest.png</iconUrl>	
     <docsUrl>http://richardeverett.com/Nest</docsUrl>
-    <tags>roost google nest thermostat smarthome admin</tags>
-    <copyright>Copyright (C) 2014 - 2016 Richard Everett</copyright>
+    <tags>roost google nest thermostat smarthome notsilent admin</tags>
+    <copyright>Copyright (C) Richard Everett</copyright>
     <licenseUrl>http://richardeverett.com/Nest</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="autohotkey.portable" />
       <dependency id="dotnet4.5.2" />
     </dependencies>
-    <releaseNotes>pre-release; I believe I need a differnet AHK file for OSes before Windows 10</releaseNotes>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
