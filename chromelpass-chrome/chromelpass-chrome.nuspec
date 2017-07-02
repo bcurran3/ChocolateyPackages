@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chromelpass-chrome</id>
+    <version>2.8.1</version>
+    <title>chromeIPass for Chrome</title>
+    <authors>Perry Nguyen</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromelpass-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/chromeipass/ompiailgknfdndiefoaoiligalphfdae</projectUrl>
+    <iconUrl>http://keepass.info/help/images/plockb_64.png</iconUrl>
+	<docsUrl>https://github.com/pfn/passifox/blob/master/documentation/chromeIPass.md#2-installation</docsUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of chromelpass](https://lh3.googleusercontent.com/kIQanVjID-0As07I4exLsZB9CRxQwd0C-Wasgg4twqe9A-gha49g3j7WlkVmtoQHjWIwAbmE6w=s640-h400-e365-rw)
+
+###KeePass integration for browser Chrome using KeePassHttp
+
+Like chromeIPass? Use Android? Checkout KeepShare in the Play store https://play.google.com/store/apps/details?id=com.hanhuy.android.keepshare
+
+KeePass integration for browser Chrome using KeePassHttp
+
+chromeIPass brings KeePass integration to the Google Chrome browser!
+
+Please visit us on https://github.com/pfn/passifox for detailed and illustrated documentation.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>KeePass integration for Chrome using KeePassHttp</summary>
+    <tags>chromelpass chromeipass keepass keepasshttp chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+      <dependency id="keepass" />
+      <dependency id="keepass-keepasshttp" />
+    </dependencies>
+  </metadata>
+</package>
