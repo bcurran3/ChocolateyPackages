@@ -36,6 +36,9 @@ Access your Tonido server files like you would access any other files your hard 
 **PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the new version in Disquss or create an issue on GitHub.
 	</description>
     <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
