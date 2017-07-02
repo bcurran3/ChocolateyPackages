@@ -7,6 +7,8 @@ $validExitCodes = @(0)
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "TDInstall.ahk"
 
+Start-Process $ahkExe $ahkFile
+
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dell-platform-tags-utility</id>
+    <version>4.0.25.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-platform-tags-utility</packageSourceUrl>
+    <title>Dell Platform Tags Utility (Portable)</title>
+    <authors>Dell Inc.</authors>
+    <projectUrl>http://www.dell.com/support/home/us/en/04/Drivers/DriversDetails?driverId=T3JYG</projectUrl>
+    <iconUrl>https://si.cdn.dell.com/images/global/brand/ui/logo-wt-bl.png</iconUrl>
+    <copyright>(C) Copyright 1993-2016 Dell Inc.</copyright>
+    <licenseUrl>http://www.dell.com/learn/us/en/uscorp1/legal~terms-conditions~en/documents~dell-emc-sw-eula.pdf</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>dell platform tags utility system asset management portable</tags>
+    <summary></summary>
+    <description>
+This package provides Dell Platform Tags Utility and is supported on OptiPlex, XPS Notebook, Tablet, Precision and Latitude running the following Operating Systems: Windows 7, Windows 8, Windows 8.1, Windows10 and DOS	
+	</description>
+    <releaseNotes>Dell Platform Tags Utility allows you to view and edit Owner and System asset tags on Dell computers.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

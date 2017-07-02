@@ -4,7 +4,7 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 sleep 60000
-IfWinExist, Windows Security, Would you like to install this device software?
+IfWinExist, Windows Security, 
  {
   WinActivate
   Send !i

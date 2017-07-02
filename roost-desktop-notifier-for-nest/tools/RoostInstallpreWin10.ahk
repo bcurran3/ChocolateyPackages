@@ -3,15 +3,16 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-;pre WINDOWS 10
-BlockInput On
-WinWaitActive, Open File - Security Warning, Do you want to run this file? , 120
+;pre WINDOWS 10 (8)
+Sleep 30000
+If WinExist, ahk_class #32770 , , ,
 WinActivate
-Send !r
-WinWaitActive, Application Install - Security Warning, , 30
+Send !a
+WinWaitActive, Application Install - Security Warning, Do you want to install this application?, 120
 WinActivate
-Send {I}
-;WinWaitActive, Roost Desktop Notifier - Connect to my Nest account, , 60
-;Send !f4
-;BlockInput Off
+Send !i
+WinWaitActive, Open File, , 90
+WinActivate
+Send !{F4}
+
 
