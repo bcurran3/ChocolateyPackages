@@ -1,8 +1,8 @@
-﻿#http://files1.majorgeeks.com/4c5d7817598156fef6b6bd84133041270db3ecdc/multimedia/ADVANCED_Codecs_v777.exe
+﻿#http://files1.majorgeeks.com/fa2b37434ccdbb6d86e21eb7db38a4f311ad2248/multimedia/ADVANCED_Codecs_v780.exe
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'advanced-codecs' 
-$url            = "$toolsDir\ADVANCED_Codecs_v777.exe"
-$checksum       = '7AF2D4BF0B6ABD96EEFBA2472C726621CA65134C225B57A2A2AA07B2A2F0E578'
+$url            = "$toolsDir\ADVANCED_Codecs_v780.exe"
+$checksum       = '7939B908013835277141D6C7469CBDDCC783893E1846A3C5199669955B01B436'
 $installerType  = 'EXE'
 $silentArgs     = '/S /v/qn'
 $validExitCodes = @(0, 3010, 1641)
