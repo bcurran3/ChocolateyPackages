@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>astromenace</id>
+    <version>1.3.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/astromenace</packageSourceUrl>
+    <title>AstroMenace (Install)</title>
+    <authors>Viewizard</authors>
+    <projectUrl>http://www.viewizard.com/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/openastromenace/icon</iconUrl>
+    <copyright>Copyright © 2000-2017 Viewizard</copyright>
+    <licenseUrl>https://sourceforge.net/p/openastromenace/code/HEAD/tree/License.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/openastromenace/code/HEAD/tree/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/openastromenace/bugs/</bugTrackerUrl>
+    <tags>viewizard astromenace game shooter arcade admin</tags>
+    <summary>Hardcore 3D space shooter with spaceship upgrade possibilities.</summary>
+    <description>
+![Screenshot of AstroMenace](http://www.viewizard.com/astromenace/am3.jpg)
+	
+Space is a vast area, an unbounded territory where it seems there is a room for everybody, but reversal of fortune put things differently. The hordes of hostile creatures crawled out from the dark corners of the universe, craving to conquer your homeland. AstroMenace Their force is compelling, their legions are interminable. However, humans didn’t give up without a final showdown and put their best pilot to fight back. These malicious invaders chose the wrong galaxy to conquer and you are to prove it! Go ahead and make alien aggressors regret their insolence.
+ 
+AstroMenace AstroMenace stands out for a hardcore gameplay that absorbs you completely as you repel the relentless attacks of diverse adversaries and dodge hails of projectiles. During the game, you will face many cunning opponents, having unique tactics and strategies and trying to give you a rough time in their own peculiar way, so you’ll need all your quick-wits to evade their attacks.
+ 
+AstroMenace To demonstrate the pre-eminence against growing forces of evil you will have to constantly improve your ship and armaments. The game offers you to collect money during the battle, so you can purchase new weaponry and equipment, choosing from a diverse list. You can carry out the destruction with your favorite guns, switching between them whenever you want.
+ 
+AstroMenace What’s more, brave pilots can select between arcade and simulation control styles and choose one of the 22 unique space ships to control, each with its own features.
+ 
+AstroMenace is graphically unique. The quality of animation along with special effects is stunning, and with all its picturesque backgrounds adding brilliance to the visuals, the game is a true eye-candy. The process of causing total annihilation has never looked so fascinating!
+ 
+With AstroMenace you will get the most vivid experience from a non-stop arcade fun, enjoying a hardcore gameplay and wonderfully crafted 3d graphics. Give a crushing rebuff to the overwhelming alien’s forces and become a space hero, now!
+
+###Features
+* 22 playable ships with unique characteristics.
+* 19 unique weapons with the easy drag-and-drop weapon mount mode.
+* 15 missions with 100+ unique enemies and 40+ space objects.
+* Simulative and arcade ship control mode.
+* Flexible difficulty control.
+	</description>
+    <releaseNotes>http://www.viewizard.com/changelog.php</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
