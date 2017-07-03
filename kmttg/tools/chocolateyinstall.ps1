@@ -1,7 +1,7 @@
 ﻿$packageName = 'kmttg' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://svwh.dl.sourceforge.net/project/kmttg/kmttg_v2.2t.zip'
-$checksum    = '25D8995E7CEA4B74348B3C0B672C5D40D56DF2083F79D35608B4766F3C149D8D'
+$url         = 'https://downloads.sourceforge.net/project/kmttg/kmttg_v2.2u.zip'
+$checksum    = 'DD852FDBDB836F7A3802E5C8E66C9C0B8B32834FA8304A648208ECD33F58EFB1'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +13,9 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\kmttg.lnk" -targetPath "$env:ChocolateyInstall\lib\kmttg\tools\kmttg.jar"
+
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\kmttg.lnk" -targetPath "$toolsDir\kmttg.jar" -WorkingDirectory $toolsDir -IconLocation "$toolsDir\kmttg.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\kmttg.lnk" -targetPath "$toolsDir\kmttg.jar" -WorkingDirectory $toolsDir -IconLocation "$toolsDir\kmttg.ico"
 
 $WhoAmI=whoami
-icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T
+icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null
