@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>blocktality</id>
+    <title>Blocktality (Install)</title>
+    <version>1.0.1</version>
+    <authors> Mike Cook, Joe Flint, and Max Lazaroff</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>http://blocktality.sourceforge.net/</projectUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/blocktality</packageSourceUrl>	
+	<projectSourceUrl>https://sourceforge.net/p/blocktality/code/HEAD/tree/trunk/blocktality/</projectSourceUrl>
+    <summary>Blocktality is a top-down shooter.</summary>
+    <description>
+![Screenshot of Blocktality](http://blocktality.sourceforge.net/images/screenshot.jpg)
+
+###What is Blocktality?
+
+Blocktality is a top-down shooter in which the main character 'Sphero' is fighting against the cuboids for the freedom of his people.  The game play involves fast-paced combat interspersed with interesting physics puzzles.
+    </description>
+    <mailingListUrl>https://sourceforge.net/p/blocktality/discussion/</mailingListUrl>
+    <tags>blocktality game arcade shooter admin</tags>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://sourceforge.net/p/blocktality/news/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
