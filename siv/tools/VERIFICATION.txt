@@ -1,0 +1,7 @@
+﻿==================== SIV - System Information Viewer ====================
+
+bcurran3 downloads and packages the executables (distributed inside a .ZIP file) for SIV - System Information Viewer from http://www.filecroco.com/download-system-information-viewer which is one of four mirrors the author, Ray Hinchliffe, uploads the program to.
+
+The MD5 checksum can be found on the above mentioned website.
+
+==================== SIV - System Information Viewer ====================
