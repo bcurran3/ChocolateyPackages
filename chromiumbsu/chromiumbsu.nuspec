@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chromiumbsu</id>
+    <version>0.9.16.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromiumbsu</packageSourceUrl>
+    <title>Chromium B.S.U. (Install)</title>
+    <authors>Mark B. Allan</authors>
+    <projectUrl>http://chromium-bsu.sourceforge.net/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/chromium-bsu/icon</iconUrl>
+    <copyright>Copyright (c) 2000 Mark B. Allan</copyright>
+    <licenseUrl>http://chromium-bsu.sourceforge.net/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/chromium-bsu/files/Chromium%20B.S.U.%20source%20code/</projectSourceUrl>
+    <docsUrl>http://chromium-bsu.sourceforge.net/info.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/chromium-bsu/discussion/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/chromium-bsu/bugs/</bugTrackerUrl>
+    <tags>chromium game shooter arcade admin</tags>
+    <summary>Chromium B.S.U. is a fast paced, arcade-style, top-scrolling space shooter.</summary>
+    <description>
+![Screenshot of Chromium B.S.U.](https://a.fsdn.com/con/app/proj/chromium-bsu/screenshots/123935.jpg)
+
+You are captain of the cargo ship Chromium B.S.U., responsible for delivering supplies to our troops on the front line. Chromium B.S.U. is a fast paced, arcade-style, top-scrolling shooter. It uses OpenGL for graphics, and OpenAL for sound effects.	
+	</description>
+    <releaseNotes>https://sourceforge.net/p/chromium-bsu/news/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
