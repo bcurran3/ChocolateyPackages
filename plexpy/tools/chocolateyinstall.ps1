@@ -1,7 +1,8 @@
 ﻿$packageName= 'plexpy' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://github.com/JonnyWong16/plexpy/archive/v1.4.16.zip'
-$checksum   = '108AE27D975B8270ACD93278FE457EE1BB28A7D1A5434B4C744855124C592CF4'
+$url        = 'https://github.com/JonnyWong16/plexpy/archive/v1.4.21.zip'
+$checksum   = '41AA076E77293659EAE27CB9D56AA44866782F7B5791BBD6325B9017BA08D212'
+$extractDir = 'plexpy-1.4.21'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,4 +14,9 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\PlexPy.lnk" -targetPath "$env:ChocolateyInstall\lib\$packageName\tools\plexpy-1.4.15\plexpy.py"
+
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\PlexPy.lnk" -targetPath "$toolsDir\$extractDir\plexpy.py" -WorkingDirectory "$toolsDir\$extractDir" -IconLocation "$toolsDir\$extractDir\data\interfaces\default\images\favicon.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\PlexPy.lnk" -targetPath "$toolsDir\$extractDir\plexpy.py" -WorkingDirectory "$toolsDir\$extractDir" -IconLocation "$toolsDir\$extractDir\data\interfaces\default\images\favicon.ico"
+
+$WhoAmI=whoami
+icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null

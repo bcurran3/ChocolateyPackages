@@ -4,7 +4,7 @@
   <metadata>
     <id>kmttg</id>
     <title>kmttg</title>
-    <version>2.2.20</version>
+    <version>2.2.21</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/kmttg</packageSourceUrl>			
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
@@ -27,21 +27,20 @@ Also has ability to capture video output directly from Slingbox Pro or later mod
 * Also now has capabilty to backup/restore Thumbs ratings
 * Slingbox video output capture capability
 * Use AutoSkip functionality for hands free commercial skipping for your TiVos
-
-####PACKAGING NOTE: After install, you need to edit permissions for \ProgramData\chocolatey\lib\kmttg\tools so that the program can create/write data.
     </description>
     <projectUrl>https://sourceforge.net/projects/kmttg/</projectUrl>
+    <iconUrl>https://fsdn.com/allura/p/kmttg/icon</iconUrl>	
     <projectSourceUrl>https://sourceforge.net/p/kmttg/code/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/kmttg/wiki/Home/</docsUrl>
     <licenseUrl>https://sourceforge.net/p/kmttg/code/HEAD/tree/trunk/LICENSE</licenseUrl>
     <mailingListUrl>https://sourceforge.net/p/kmttg/discussion/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/kmttg/tickets/</bugTrackerUrl>
-    <tags>tivo tivotogo kmttg java</tags>
+    <tags>kmttg tivo tivotogo java</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="javaruntime" />
     </dependencies>
-    <releaseNotes>now runs icacls to give full permissions to the toolsdir for the current user so that extra files can download and configuration can be set</releaseNotes>
+    <releaseNotes>https://sourceforge.net/p/kmttg/wiki/release_notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
