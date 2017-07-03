@@ -1,5 +1,4 @@
-﻿$packageName= 'openhab'
-$ExeFile      = 'start.bat'
+﻿$packageName  = 'openhab'
 $ShortcutName = 'openHAB'
 
 remove-item "$env:Public\Desktop\$ShortcutName.lnk" -Force -ErrorAction 'SilentlyContinue'

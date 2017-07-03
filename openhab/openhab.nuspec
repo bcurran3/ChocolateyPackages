@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openhab</id>
-    <version>2.0.0</version>
+    <version>2.1.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab</packageSourceUrl>	
     <owners>bcurran3</owners>
-    <title>openHAB (Portable)</title>
+    <title>openHAB</title>
     <authors>openHAB Community and the openHAB Foundation</authors>
     <projectUrl>http://www.openhab.org/</projectUrl>
     <iconUrl>http://www.openhab.org/assets/images/openhab-logo-square.png</iconUrl>
@@ -17,7 +17,7 @@
     <docsUrl>http://docs.openhab.org/</docsUrl>
     <mailingListUrl>https://community.openhab.org/</mailingListUrl>
     <bugTrackerUrl>https://github.com/openhab/openhab-distro/issues</bugTrackerUrl>
-    <tags>openhab home automation smart java portable admin</tags>
+    <tags>openhab home automation smart java</tags>
     <summary>The open Home Automation Bus (openHAB, pronounced ˈəʊpənˈhæb) is an open source, technology agnostic home automation platform which runs as the center of your smart home!</summary>
     <description>
 ![Screenshot of openHAB](http://www.openhab.org/assets/images/ui/slide-desktop.png)
@@ -47,9 +47,9 @@ openHAB is highly flexible and customizable, but this comes at a cost. You have 
 
 Nonetheless, this only applies to the setup and configuration of the system, which is usually done by a single person in the household, while all other family members are merely using the system. And here is where openHAB shines: It is very stable, has apps for all different end devices, allows voice interaction, etc, so once installed, it has a very high WAF.
 
-PACKAGING NOTE: You need to grant admin permissions for the current user at %programdata%\chocolatey\lib\openhab or the batch file will abort.
+[Facebook](https://www.facebook.com/openHAB-153141161476518/) [Twitter](https://twitter.com/openHAB) [Google+](https://plus.google.com/u/0/+OpenhabOrg) [YouTube](https://www.youtube.com/playlist?list=PLGlxCdrGUagz6lfgo9SlNLhdwI4la_VSv)
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/openhab/openhab-distro/releases</releaseNotes>
     <dependencies>
       <dependency id="javaruntime" version="8.0.101" />
     </dependencies>
