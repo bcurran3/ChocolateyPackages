@@ -2,8 +2,8 @@
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = ''
 $checksum       = ''
-$url64          = 'https://downloads.sourceforge.net/project/nubasic/binary/Windows/nubasic-ide-1.47-setup_x64.zip'
-$checksum64     = '613718149246AFFF39E63F9F9B41AAF17A0BC1B79DBED1FC10695F020DBCB108'
+$url64          = 'https://downloads.sourceforge.net/project/nubasic/binary/Windows/nubasic-ide-1.48-setup_x64.zip'
+$checksum64     = '0FBBF1F68FA0778AC0176CDA9621AF350F957569E57C84C69061B76AC405F568'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)
 $bits           = Get-ProcessorBits
@@ -43,6 +43,7 @@ $packageArgs = @{
  
 Install-ChocolateyInstallPackage @packageArgs
 
+remove-item $fileLocation -Force -ErrorAction 'SilentlyContinue'
 
   
 

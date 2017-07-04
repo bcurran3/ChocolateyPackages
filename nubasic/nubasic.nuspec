@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nubasic</id>
-    <version>1.47</version>
+    <version>1.48</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nubasic</packageSourceUrl>
     <title>nuBASIC (Install)</title>
@@ -14,7 +14,7 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/eantcal/nubasic</projectSourceUrl>
-    <docsUrl>http://www.nubasic.eu/syntax-highlighting-editor</docsUrl>
+    <docsUrl>http://www.nubasic.eu/user-guide</docsUrl>
     <mailingListUrl>https://sourceforge.net/projects/nubasic/support</mailingListUrl>
     <bugTrackerUrl>https://github.com/eantcal/nubasic/issues</bugTrackerUrl>
     <tags>nubasic basic interpreter programming language ide notsilent admin</tags>
@@ -43,7 +43,7 @@ Features
 * Examples include Tetris, Mine Hunter, Breakout, Calculator, TicTacToe
 * Tiny version is suitable for embedded systems
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/eantcal/nubasic/releases/</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" />	
       <dependency id="vcredist2015" version="14.0.23026" />	  
