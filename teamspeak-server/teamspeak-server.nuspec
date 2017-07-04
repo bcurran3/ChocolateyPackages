@@ -9,7 +9,7 @@
     <title>TeamSpeak Server</title>
     <authors>TeamSpeak Systems GmbH</authors>
     <projectUrl>http://www.teamspeak.com/</projectUrl>
-    <iconUrl>https://www.teamspeak.com/assets/images/logos/teamspeak_small.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/teamspeak-server/TeamSpeak.png</iconUrl>
     <copyright>© 2017 TeamSpeak Systems GmbH. All rights reserved.</copyright>
     <licenseUrl>http://www.teamspeak.com/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
