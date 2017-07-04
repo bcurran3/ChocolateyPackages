@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>vnc-viewer-chrome</id>
+    <version>1.2.2.15132</version>
+    <title>VNC® Viewer for Google Chrome™</title>
+    <authors>RealVNC Limited</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla</projectUrl>
+    <iconUrl>http://attach.en.miui.com/forum/201509/05/070938hw44240q4hb0wk90.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###Connects to your computers anywhere in the world and lets you take control.
+
+
+VNC® Viewer is the only remote access app you’ll need. Why? Because…
+
+* It’s from RealVNC®, the inventors of VNC remote access and control technology.
+* We’ve 20 years’ experience making the remote control experience as good as it gets.
+* There’s no limit to the number of computers you can access, nor how long you can connect in for.
+* We support the widest range of platforms in the business: www.realvnc.com/products/vnc/tech-specs/#platforms
+* It’s free to use whether you’re connecting locally or over the Internet (and you won’t see an advert, either).
+
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/realvnc) | [Twitter](https://twitter.com/realvnc) | [Linkedin](https://www.linkedin.com/company/realvnc) | [YouTube](https://www.youtube.com/user/RealVNCLtd)
+
+**VNC SERVER SOFTWARE:**
+[VNC Connect](https://chocolatey.org/packages/vnc-connect)
+
+**OTHER VNC CLIENT SOFTARE:**
+[Windows Client](https://chocolatey.org/packages/vnc-viewer) | [Android App](http://play.google.com/store/apps/details?id=com.realvnc.viewer.android) | [iOS App](https://itunes.apple.com/us/app/vnc-viewer/id352019548?mt=8) | [macOS Client](https://www.realvnc.com/download/viewer/macos/) | [Linux Client](https://www.realvnc.com/download/viewer/linux/)
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary></summary>
+    <tags>vnc realvnc vncconnect vnc-connect remote control chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
