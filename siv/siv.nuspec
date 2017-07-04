@@ -9,14 +9,14 @@
     <title>SIV - System Information Viewer (Portable)</title>
     <authors>Ray Hinchliffe</authors>
     <projectUrl>http://rh-software.com/</projectUrl>
-    <iconUrl>http://cdn.lo4d.com/t/icon/100/system-information-viewer.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/siv/system-information-viewer.png</iconUrl>
 	<docsUrl>http://rh-software.com/</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>http://rh-software.com/index_arc.html</bugTrackerUrl>
-    <tags>siv system information viewer portable</tags>
+    <tags>siv system information viewer cpuz cpu-z gpuz gpu-z pciz pci-z portable</tags>
     <summary>System Information Viewer</summary>
     <description>
-![Screenshot of SIV](http://rh-software.com/siv_rey.png)
+![Screenshot of SIV](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/siv/SIV_Screenshot.png)
 	
 SIV by Ray Hinchliffe. 'System Information Viewer' is a general Windows utility for displaying lots of useful Windows, Network and hardware info - CPU info, PCI info, PCMCIA info, USB info SMBus info, SPD info, ACPI methods, Machine info, Hardware Sensors, Networked computers, Operating System Information and more. SIV is designed for Windows 10, 8.1, 8.0, 7, Vista, XP, 2016, 2012, 2008, 2003, 2000 and NT4. Windows 95, 98 and Me are also supported. Uses pcidevs.txt for the PCI devices, usbdevs.txt for the USB devices, mondevs.txt for monitor descriptions and pcmdevs.txt for PCMCIA device descriptions.
 	</description>
