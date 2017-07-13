@@ -7,8 +7,9 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netstress</packageSourceUrl>
     <title>NetStress (Install)</title>
-    <authors>Nuts About Nets, LLC</authors>
+    <authors>Nuts About Nets LLC</authors>
     <projectUrl>http://nutsaboutnets.com/netstress/</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/netstress/NetStress_icon.png</iconUrl>
 	<docsUrl>https://nutsaboutnets-documentation.s3.amazonaws.com/NetStress/NetStress.htm</docsUrl>
     <copyright>Copyright 2010 Nuts About Nets, LLC</copyright>
 	<licenseUrl>https://nutsaboutnets-documentation.s3.amazonaws.com/NetStress/NetStress.htm</licenseUrl>

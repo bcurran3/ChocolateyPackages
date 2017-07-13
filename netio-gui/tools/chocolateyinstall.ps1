@@ -1,11 +1,11 @@
-﻿$packageName    = 'netstress'
+﻿$packageName    = 'io-gui'
 $installerType  = 'exe'
-$url            = 'https://nutsaboutnets-downloads.s3.amazonaws.com/NetStress-Setup.exe'
-$checksum       = 'A298B42B4C11209E3BD6DB71E1C6E718F2223807A1CFAC6A3640A3735028EA1B'
+$url            = 'https://downloads.sourceforge.net/project/netiogui/netio-gui_v1.0.4_setup.exe'
+$checksum       = '9BD98871D1C000F4179F2561071C3B8A7AB7C49537C18ACF6CD65D296B40C1D8'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0)
-$softwareName   = 'NetStress*'
+$softwareName   = '1.0.2'
 
 $packageArgs = @{
   packageName   = $packageName
