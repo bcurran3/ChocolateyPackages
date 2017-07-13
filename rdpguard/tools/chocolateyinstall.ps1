@@ -1,11 +1,11 @@
-﻿$packageName    = 'netstress'
+﻿$packageName    = 'rdpguard'
 $installerType  = 'exe'
-$url            = 'https://nutsaboutnets-downloads.s3.amazonaws.com/NetStress-Setup.exe'
-$checksum       = 'A298B42B4C11209E3BD6DB71E1C6E718F2223807A1CFAC6A3640A3735028EA1B'
+$url            = 'https://rdpguard.com/download/rdpguard-4-2-5.exe'
+$checksum       = 'C345C049E2EF79A817C3A875995A782EC1FE87BD891B770E3180FAB425DDFB11'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0)
-$softwareName   = 'NetStress*'
+$softwareName   = 'RdpGuard*'
 
 $packageArgs = @{
   packageName   = $packageName

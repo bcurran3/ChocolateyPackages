@@ -1,11 +1,11 @@
-﻿$packageName    = 'netstress'
+﻿$packageName    = 'performancetest'
 $installerType  = 'exe'
-$url            = 'https://nutsaboutnets-downloads.s3.amazonaws.com/NetStress-Setup.exe'
-$checksum       = 'A298B42B4C11209E3BD6DB71E1C6E718F2223807A1CFAC6A3640A3735028EA1B'
+$url            = 'https://www.passmark.com/ftp/petst.exe'
+$checksum       = 'BEA418430AC18D4C59404E972E5B80AF1A5E65E732E422324C55E181986D8965'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0)
-$softwareName   = 'NetStress*'
+$softwareName   = 'PerformanceTest*'
 
 $packageArgs = @{
   packageName   = $packageName

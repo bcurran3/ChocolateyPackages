@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>netio-gui</id>
+    <version>1.0.4</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netio-gui</packageSourceUrl>
+    <title>NetIO-GUI (Install)</title>
+    <authors>Markus Busche</authors>
+    <projectUrl>https://sourceforge.net/projects/netiogui/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/netiogui/icon?1478017571</iconUrl>
+    <copyright>(c) 2012 M. Busche</copyright>
+    <licenseUrl>https://sourceforge.net/projects/netiogui/files/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/netiogui/code/HEAD/tree/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/netiogui/tickets/</bugTrackerUrl>
+    <tags>netio netio-gui netiogui networking benchmark benchmarking icmp admin</tags>
+    <summary>NetIO-GUI measures network speed between two peers</summary>
+    <description>
+![Screenshot of NetIO-GUI](https://a.fsdn.com/con/app/proj/netiogui/screenshots/Client_with_results.png)	
+NetIO-GUI is a Windows frontend for the multiplatform commandline utility 'netio'.
+
+It measures ICMP respond times and network transfer rates for different packet sizes and protocols.
+
+All results are stored in a SQLite database file and can easily be compared.
+
+NetIO-GUI is preferred to rate the quality of peer-to-peer connections like VPN.
+
+Download as portable 7-Zip or as setup file.	
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
