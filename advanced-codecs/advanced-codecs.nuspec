@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>7.8.0</version>
+    <version>7.8.4</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>	
@@ -15,7 +15,7 @@
 ##Shark007's FREE Codec solutions.
 
 Current releases introduce 3D decoding of files, ISO's and disks
-When the 3D decoder is active, LAV Video will report, Active Decoder: msdk mvc
+3D decoding is reported by LAV Video as, Active Decoder: msdk mvc
 
 Enjoy HD audio and HD video playback, the easy way. 
 
@@ -27,7 +27,7 @@ The ADVANCED release contains a full suite of decoders with a GUI controller for
 The STANDARD codec release only contains LAV filters and xy-VSFilter with a GUI giving full control.
 The following filetypes are enabled and SUPPORTED by the installation of Shark's Codec Solutions.
 All of the above filetypes can be queued to the Windows Media Player Playlist using a right-click.
-amr | mpc | ofr | divx | mka | ape | flac | evo | flv | m4b | mkv | ogg | ogv | ogm | rmvb | 
+amr | mpc | ofr | divx | mka | ape | flac | evo | flv | m4b | mkv | ogg | ogv | ogm | rmvb | xvid | y4m
 
 ^^ over 15 million readers ^^
 and over 16,000 registered forum members
@@ -65,12 +65,12 @@ Things the Shark pack does that other packs cannot do . . .
     <projectUrl>http://shark007.net/win7codecs.html</projectUrl>
     <docsUrl>http://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
     <mailingListUrl>http://shark007.net/forum/</mailingListUrl>
-    <tags>advanced codecs video multimedia shark007 notsilent admin</tags>
+    <tags>shark007 advanced codecs codec audio video multimedia k-lite klite cccp ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m notsilent admin</tags>
     <copyright></copyright>
     <licenseUrl>http://shark007.net/disclaimer.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://shark007.net/images/shark.gif</iconUrl> 
-	<releaseNotes>added handling of new version prompt (untested until next week)</releaseNotes>
+	<releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>		
