@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>bulk-ad-users</id>
+    <version>1.0.3267.32645</version>
+    <packageSourceUrl>https://www.manageengine.com/products/exchange-reports/bulk-ad-users</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Bulk AD Users (Portable)</title>
+    <authors>David Wiseman</authors>
+    <projectUrl>http://www.wisesoft.co.uk/software/bulkadusers/default.aspx</projectUrl>
+    <iconUrl></iconUrl>
+    <copyright>Wisesoft</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <bugTrackerUrl>http://www.wisesoft.co.uk/forum/forum19-bulk-ad-users--bugs.aspx</bugTrackerUrl>
+	<mailinglistUrl>http://www.wisesoft.co.uk/forum/forum18-bulk-ad-users.aspx</mailinglistUrl>
+    <tags>wisesoft bulk ad users active directory util utility admin portable</tags>
+    <summary>Bulk AD Users - A tool that allows bulk updates to Active Directory User Attributes</summary>
+    <description>
+![Screenshot of Bulk AD Users](http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_main.png) ![Screenshot2 of Bulk AD Users](http://www.wisesoft.co.uk/userdata/admin/BulkADUsers_BulkModify.png)
+
+###Introduction
+
+WiseSoft Bulk AD Users is a tool that makes it easy to perform bulk updates to Active Directory User account attributes.  Previously you might have wrote scripts to perform these types of updates or gone through a very tedious process of performing these updates one at a time via the ADU&C interface.  Bulk AD Users makes this process much simpler and also provides an XML log file that allows you to undo any unwanted updates. The application has powerful query capabilities that allow you to target updates to only the required user accounts and number of methods are available for updating user account data depending on your specific requirements. 
+
+The [Bulk Modify](http://www.wisesoft.co.uk/software/bulkadusers/bulkmodify.aspx) dialog will seem familiar to anyone that has used Active Directory Users & Computers.  The interface is modeled on the user dialog, but the updates can apply to many user accounts.  The XML Placeholders feature extends the flexibility of the Bulk Modify dialog by allowing you to base updates on existing attributes.  You could update the display name format to "surname, firstname" or change the username format to "firstname.surname" for example.  The Bulk Modify dialog is great for situations where the update can be based on existing attributes or a single value is required for all users. 
+
+The CSV update feature allows you to update user account attributes from a CSV file, making it suitable for updates where a different value is required for each user account.  A CSV file could be produced from your HR database and then used to update employee information stored in Active Directory.  It's also possible to export existing account data from Active Directory to CSV file, use a 3rd party application to manipulate the data and then re-import using the CSV Update tool. 
+
+Bulk AD Users allows you to edit user account data in Microsoft Excel with the [Edit In Excel](http://www.wisesoft.co.uk/software/bulkadusers/edit_in_excel.aspx) feature.  Microsoft Excel is a very powerful tool for data manipulation allowing you to update user attributes using a combination of manual updates and formulas.  It's very easy to write a formula in Excel to update the user principal name format to 'firstname.surname@domainname.com' for example.  In this case, you could also choose the Bulk Modify feature to perform the update, but in other situations the formulas will be to complicated to convert into XML Placeholders.
+
+For quick updates to a small number of accounts, the edit in grid feature can be used.  The application also supports moving user accounts to a new container, reseting passwords and has quick options for enabling/disabling user accounts.  Additional account options (logon hours, password never expires, force password change at next logon etc) can be manipulated through the Bulk Modify dialog.   
+
+**[MUCH MORE INFO ON THE WEBSITE](http://www.wisesoft.co.uk/software/bulkadusers/default.aspx)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
