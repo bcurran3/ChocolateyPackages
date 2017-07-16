@@ -2,9 +2,9 @@
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://download-cdn.resilio.com/stable/windows/Resilio-Sync.exe'
-$checksum       = '17CEA15B43A19CBC7027D6DBAE43477315AA3A6F1080584F551C77BB8DF05016'
+$checksum       = '83D388276BA3EFE5F3495D3E02923D598A31D19810E30AE4E9BD5A9B873B0F68'
 $url64          = 'https://download-cdn.resilio.com/stable/windows64/Resilio-Sync_x64.exe'
-$checksum64     = 'A408A398B5EAF90BB9E697C7FDBD948F69E58475321998DAD2AA2E4215242A1C'
+$checksum64     = '1BDD8296699B5B7B3151B7CC8346446DBF300AD6F06B8C93DF6F9B4D70C40819'
 $silentArgs     = '/S'
 $validExitCodes = @(0, 1)
 

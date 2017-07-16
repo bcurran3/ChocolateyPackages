@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>resilio-sync-business</id>
+    <version>2.5.6.1043</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-business</packageSourceUrl>
+    <title>Resilio Sync Business (Install)</title>
+    <authors>Resilio, Inc.</authors>
+    <projectUrl>https://www.resilio.com/sync-business/</projectUrl>
+    <iconUrl>https://blog.resilio.com/wp-content/uploads/2016/06/SyncSymbol-260x260px.png</iconUrl>
+    <copyright>© Resilio, Inc.</copyright>
+    <licenseUrl>https://www.resilio.com/legal/eula/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://forum.resilio.com/</mailingListUrl>
+    <tags>resilio sync business btsync bittorrent backup trial admin</tags>
+    <summary>A fast, reliable, and simple file sync and share solution.</summary>
+    <description>
+###Make Sure Sensitive Data Stays In Your Control
+
+Protect your work with two-step authentication, decide who has permission to edit and view files, share your folders using expiring links.
+No cloud or any 3rd party servers. Just your private cloud.
+
+###Collaborate On Large Files
+
+Share files of all types and sizes.  Synchronize folders. Move data as fast as your network allows - several times faster than any cloud based solution.
+
+###Access Files From Anywhere
+
+Use any device to access your folders.  Sync supports all desktop, mobile, and NAS operating systems. Easily create an automated backup.
+
+###One Time Send
+
+The fastest way to send files around the office.  Send one or more files to multiple recipients without sharing the whole folder or creating a permanent sync connection.  Send design documents, video files, VMs, logs, memory dumps, or any other large file. Peer-to-peer, secure, and cloud free.
+
+###14 Day free trial.
+
+Resilio Sync Business Plus is $79/mo for up to 20 users, Premium is $199/mo for up to 60 users.
+
+**SOCIAL MEDIA:**
+[Facebook](https://business.facebook.com/resilioinc/) | [Twitter](https://twitter.com/ResilioInc) | [Instagram](https://www.instagram.com/resilioinc/) | [Linkedin](https://www.linkedin.com/company/resilio-inc.) | [Blog](https://www.resilio.com/blog/)
+
+**CLIENT SOFTWARE:**
+[Android App](https://play.google.com/store/apps/details?id=com.resilio.sync) | [iOS App](https://itunes.apple.com/us/app/id1126282325) | [Windows App](https://www.microsoft.com/en-us/store/p/resilio-sync/9wzdncrdmw96?rtc=1)  
+
+**PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
