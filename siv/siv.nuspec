@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>siv</id>
-    <version>5.20</version>
+    <version>5.21</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/siv</packageSourceUrl>
     <title>SIV - System Information Viewer (Portable)</title>
@@ -13,8 +13,8 @@
 	<docsUrl>http://rh-software.com/</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>http://rh-software.com/index_arc.html</bugTrackerUrl>
-    <tags>siv system information viewer cpuz cpu-z gpuz gpu-z pciz pci-z portable</tags>
-    <summary>System Information Viewer</summary>
+    <tags>siv system information viewer cpuz cpu-z gpuz gpu-z pciz pci-z binary portable</tags>
+    <summary>SIV (System Information Viewer) - is a general Windows utility for displaying lots of useful Windows, Network and hardware info.</summary>
     <description>
 ![Screenshot of SIV](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/siv/SIV_Screenshot.png)
 	
