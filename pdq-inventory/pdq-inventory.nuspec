@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-inventory</id>
-    <version>12.4.0.0</version>
+    <version>13.2.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
     <owners>bcurran3</owners>
-    <title>PDQ Inventory (Trial) (Install)</title>
+    <title>PDQ Inventory (Install)</title>
     <authors>Admin Arsenal</authors>
     <projectUrl>http://www.adminarsenal.com/pdq-inventory/</projectUrl>
     <iconUrl>http://cdn.adminarsenal.com/aa/img/logo-inventory.png</iconUrl>
@@ -15,18 +15,14 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.adminarsenal.com/documentation/</docsUrl>
     <mailingListUrl>https://support.adminarsenal.com/hc/en-us</mailingListUrl>
-    <tags>admin arsenal pdq inventory tool hardware software scanning trial</tags>
+    <tags>arsenal pdq inventory tool software hardware scanning trial admin</tags>
     <summary>PDQ Inventory allows Windows admins to know the software and hardware installed on their computers</summary>
     <description>
-![Screenshot of PDQ Deploy](http://cdn.adminarsenal.com/wp-content/uploads/2015/12/reboot-required-300x187.png)	
+![Screenshot of PDQ Inventory](http://cdn.adminarsenal.com/wp-content/uploads/2015/12/reboot-required-300x187.png)
 
-###PDQ Inventory scans your computers and collects hardware, software, and Windows configurations. In addition, PDQ Inventory allows you to run scan inventory reports, boot machines from Wake-On LAN, execute commands and remote desktop on target machines, and many other features.
+##Take an Inventory of your Company’s Network
 
-* Scans for installed software and hardware on each computer
-* Creates reports on what’s installed on your network
-* Organizes computers into collections that make sense to you
-* Really cool admin tools allow you to perform tasks on your computers
-* Integrates with PDQ Deploy
+###PDQ Inventory scans your computers and collects hardware, software, and Windows configurations. In addition, PDQ Inventory allows you to run scan inventory reports, boot machines from Wake-On LAN, execute commands and remote desktop on target machines, and [many other features](https://www.pdq.com/compare/).
 
 ###Seeing what’s installed
 PDQ Inventory initiates a scan on all of your computers that will collect the installed software, hardware, and certain configurations within Windows.
@@ -41,38 +37,23 @@ A window will open where you can type in the name(s) of the computers to manage,
 Group computers the way that makes sense for you. Computers can belong to any number of collections.
 There are two types of collections; Dynamic and Static. Dynamic collections are populated automatically when a computer matches criteria that you define. Static collections are populated manually by dragging the computer object into the collection.
 
+Group computers the way that makes sense for you. Computers can belong to any number of collections.
+
 ###Create Scan Profiles
 Scan profiles are used to determine what information a particular scanner will collect. For instance, PDQ Inventory has scan profiles that collect installed applications, or hot fixes, or registry values.
 For some scans you may just want to have a quick scan and not wait for everything to be collected. For instance, if you just deployed an application and you wanted PDQ Inventory to reflect the new install, you could create a scan profile that just scanned for Applications and Computer Details. If you have hundreds (or thousands) of computers then you could cut down your scan time considerably.
 
 ###PDQ Inventory Scanners in Inventory
-* Active Directory	
-* Applications	
-* Computer Details	
-* Disks
-* Displays	
-* Environment Variables	
-* Files	
-* Hardware Devices
-* Hot Fixes	
-* Memory Modules	
-* Network Adapters	
-* Printers
-* Registry	
-* Services	
-* Shares	 
-* Users and Groups
-* Windows Features	
-* Windows Task Schedules
+Active Directory, Applications,	Computer Details, Disks, Displays, Environment Variables, Files, Hardware Devices, Hot Fixes, Memory Modules, Network Adapters,	Printers, Registry	Services	Shares	Users and Groups, Windows Features	Windows Task Schedules, 
 
-###System Requirements
-Windows 10, 8x, 7, Server 2008x - 2016x
-###NOT SUPPORTED:
-Windows Vista, XP, and Home editions, Windows 10 LTSB
-####4 GB RAM, 8 GB recommended
-####Installing on a Domain Controller or Microsoft Exchange Server is not recommended
+**Memory Requirements:** 4 GB
 
-**PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**OS Requirements:** Windows 7, 8x, 10, or Server (2008x, 2012x, 2016x)
+
+[Comparison of PDQ Inventory Free/Pro/Enterprise](https://www.pdq.com/compare/)
+
+**SOCIAL MEDIA:**
+[Twitter](https://twitter.com/AdmArsenal) | [YouTube](https://www.linkedin.com/company/pdq.com) | [Linkedin](https://www.linkedin.com/company/pdq.com) | [spiceworks](https://community.spiceworks.com/pages/pdq)
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
