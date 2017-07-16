@@ -8,3 +8,13 @@ Find them useful?
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4ECL3UCG5CGB6)
 
+Yes, I package requests. 
+
+SPECIALTIES / TOP PRIORITY:
+* Technican tools
+* Amazon
+* Dell
+* Google
+* Intel
+* Microsoft
+
