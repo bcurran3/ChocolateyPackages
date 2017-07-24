@@ -2,38 +2,45 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-        <id>network-inventory-advisor</id>
-    <title>Network Inventory Advisor (trial) (Install)</title>
-    <version>4.3.20161009</version>
+    <id>network-inventory-advisor</id>
+    <title>Network Inventory Advisor (Install)</title>
+    <version>5.0.87</version>
     <authors>ClearApps</authors>
     <owners>bcurran3</owners>
-    <summary>Network devices inventory program.</summary>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/network-inventory-advisor</packageSourceUrl>	
+    <summary>Network Inventory Advisor runs precise software and hardware analysis of your machines and scans all devices in your network.</summary>
     <description>
 ![alt text](http://www.network-inventory-advisor.com/images/screenshots/soft-hard-inventory.png)
 
-####Professional Network Inventory Software. Free trial.
+###Free Asset Management Software!
 
-####Network Inventory
-Automatically collect all relevant data on all network devices and get detailed OS and devices statistics. Add custom data like service tags, inventory numbers, costs, locations and even create custom nodes. Track important changes in your network.
+**Network Inventory Advisor is free for everyone to test it out at 25-node networks within 2 weeks.** Numerous expert-level features of our PC inventory software also include additional features. [Pricing](https://www.network-inventory-advisor.com/pricing.html) starts at $89 for 25 nodes - $989 for Unlimited nodes.
 
-####Software Inventory
-Network software inventory and licenses compliance audit are the key features of Network Inventory Advisor: you can easily track installations, software versions, licenses and services on all computers.
+###Software and hardware inventory
 
-####Hardware Inventory
-Scan for CPU, memory, system, audio and video, peripherals and other hardware details remotely. Easily plan mass upgrades, troubleshoot hardware problems, know the make and model of your company's equipment.
+In-depth network inventory is simpler with our agent-free solution. Network Inventory Advisor generates flexible reports for effective hardware &amp; software inventory of networks that include Windows, Macs, Linux and other network and standalone devices.
 
-####Free network inventory software!
-Network Inventory Advisor is free for everyone to test it out at 25-node networks within 2 weeks. Numerous expert-level features of our PC inventory software also include: reliable security software detection (based on customized algorithms); flexible export of any node or network report into CSV (for Excel), SQL (for MS Access, MS SQL, MySQL or other DB engines), HTML, PDF, XML or internal format; smart scanning; credentials center with multiple logins; 30 pre-defined device types; user-defined fields and extremely simple integration into an existing helpdesk or CMDB solution.
+Our computer inventory software perfectly scans networks of any size reporting on all software &amp; allows to view devices on network. All collected data is stored in a central place that can be easily shared, exported or transferred.
+
+###All-in-one network inventory
+
+All your PC inventory reports are in one place now! [Network scanning tool](https://www.network-inventory-advisor.com/network-inventory-scanner.html) features several types of scanning to ensure fast &amp; reliable computer inventory: agent-free scan using WMI, special agent utility &amp; Logon Script integration. Our PC inventory software uses unique [network discovery](https://www.network-inventory-advisor.com/network-discovery-tool.html) techniques to automatically find all your Windows nodes, Macs, Linux machines &amp; SNMP network devices (v1/v2c supported).
+
+With every scan your network is analyzed &amp; summarized in detailed report with statistics on OS, devices, storage, etc. Network Inventory Advisor is the perfect all-in-one network inventory tool for configuration, IT accounting and network security management.
+
+[MORE INFO ON WEBSITE](https://www.network-inventory-advisor.com/pc-inventory.html)
+
+**PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
     </description>
     <projectUrl>http://www.network-inventory-advisor.com/pc-inventory.html</projectUrl>
     <docsUrl>http://help.network-inventory-advisor.com/category/getting-started/</docsUrl>
     <bugTrackerUrl>http://help.network-inventory-advisor.com/network-inventory-advisor-4-3-released/</bugTrackerUrl>
-    <tags>network inventory advisor scan trial admin</tags>
-    <copyright>1999 - 2016. © ClearApps.com</copyright>
-    <licenseUrl>http://help.network-inventory-advisor.com/end-user-license-agreement/</licenseUrl>
+    <tags>network inventory advisor scan network license management trial admin</tags>
+    <copyright>1999 - 2017. © ClearApps.com</copyright>
+    <licenseUrl>https://www.network-inventory-advisor.com/help/end-user-license-agreement/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.network-inventory-advisor.com/uploads/submit/pia_icon.gif</iconUrl>
-    <releaseNotes>added checksum</releaseNotes>
+    <iconUrl>https://www.network-inventory-advisor.com/help/wp-content/uploads/2012/07/nia_395.jpg</iconUrl>
+    <releaseNotes>https://www.network-inventory-advisor.com/help/network-inventory-advisor-5-released/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
