@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-network-drivers-win10</id>
-    <version>22.3</version>
+    <version>22.4.01</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-network-drivers-win10</packageSourceUrl>
     <title>Intel® Network Adapter Driver for Windows® 10 (Install)</title>
@@ -21,7 +21,7 @@
 
 ###Overview
 
-The 22.1 SW release re-enables both teaming and VLANS by performing a check on the OS version to ensure the update has been applied before allowing the feature to be enabled.
+The 22.3 SW release re-enabled both teaming and VLANS by performing a check on the OS version to ensure the update has been applied before allowing the feature to be enabled.
 
 Latest OS update required for teams and VLANs on Microsoft Windows® 10*.
 
@@ -79,7 +79,9 @@ This software may also apply to Intel® Ethernet Controllers. Support for built-
 
 PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 	</description>
-    <releaseNotes></releaseNotes>
+	<dependencies>
+      <dependency id="autohotkey.portable" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

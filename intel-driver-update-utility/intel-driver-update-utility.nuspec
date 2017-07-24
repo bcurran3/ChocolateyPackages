@@ -3,19 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-driver-update-utility</id>
-    <version>2.8.0.7</version>
+    <version>2.8.2.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-driver-update-utility</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Intel® Driver Update Utility (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Update-Utility</projectUrl>
-    <iconUrl>http://www.intel.com/content/dam/support/global/images/icon/iduu-icon@x2.png</iconUrl>
+    <iconUrl>https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/intel-128.png</iconUrl>
     <copyright>Intel Corporation</copyright>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.intel.com/content/www/us/en/support/software/chipset-software/intel-chipset-software-installation-utility.html</docsUrl>
     <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
-    <bugTrackerUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Update-Utility</bugTrackerUrl>
     <tags>duu intel chipset driver update utility admin</tags>
     <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
     <description>
@@ -33,7 +32,7 @@ Required to install and use utility
 
 PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
 </description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://downloadcenter.intel.com/download/24345/Intel-Driver-Update-Utility</releaseNotes>
 	<dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>

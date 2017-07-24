@@ -57,7 +57,7 @@ Active Directory, Applications,	Computer Details, Disks, Displays, Environment V
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.6" />
+      <dependency id="dotnet4.0" />
     </dependencies>
   </metadata>
   <files>

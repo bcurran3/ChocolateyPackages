@@ -1,11 +1,15 @@
 ﻿$packageName    = 'intel-network-drivers-win10' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = '73366E31F83EB789269E519BF14B31C408BAA71BAB7EBE9C60EAF1FE352C8093'
+$checksum       = 'A5654527E3C8FEC3BD112E7005AB7BF51491607D068ABC3C35078EA7C37875C3'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = '724C5D98C68919A1B7BD971032EEE11F8CADF9B28856D56B72FB0B9F3B3206BB'
+$checksum64     = 'CAD05400F61D42D5B5A2ADF57F1BB1DACE9042494524ECD45B723CA893CBFAA2'
+$silentArgs     = ''
 $validExitCodes = @(0)
 $bits           = Get-ProcessorBits
+$ahkExe         = 'AutoHotKey'
+$ahkFile        = Join-Path $toolsDir "INDInstall.ahk"
+
 
 $packageArgs = @{
   packageName    = $packageName
@@ -27,9 +31,9 @@ if ($bits -eq 64)
    } else {
 	$url = Join-Path $toolsDir 'APPS\SETUP\SETUPBD\Win32\SetupBD.EXE'
    }
-   
-#Set-Location -Path $toolsDir
-	
+
+Start-Process $ahkExe $ahkFile
+
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
@@ -39,3 +43,14 @@ $packageArgs = @{
   softwareName   = 'Intel(R) Network Connections*'
 }
  
+Install-ChocolateyInstallPackage @packageArgs
+
+Start-Sleep -s 10
+
+Remove-Item "$toolsDir\APPS" -recurse | out-null
+Remove-Item "$toolsDir\DOCS" -recurse | out-null
+Remove-Item "$toolsDir\PRO40GB" -recurse | out-null
+Remove-Item "$toolsDir\PRO100" -recurse | out-null
+Remove-Item "$toolsDir\PRO1000" -recurse | out-null
+Remove-Item "$toolsDir\PROXGB" -recurse | out-null
+
