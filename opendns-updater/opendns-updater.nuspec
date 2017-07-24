@@ -4,7 +4,7 @@
   <metadata>
     <id>opendns-updater</id>
     <title>OpenDNS Updater (Install)</title>
-    <version>2.2.1.20161009</version>
+    <version>2.2.1.20170716</version>
     <authors>OpenDNS.com</authors>
     <owners>bcurran3</owners>
     <summary>This is the officially supported OpenDNS Windows client, which sends your network's new IP Address to OpenDNS whenever it should change.</summary>
@@ -14,7 +14,8 @@
 OpenDNS Updater is useful if you have a dynamic IP address. It detects changes to your IP address and notifies OpenDNS service about the change so that your OpenDNS settings continue to be applied to your network.
 
 ###[Click here for more information about OpenDNS services.](https://www.OpenDNS.com "OpenDNS's Homepage")
-#### PACKAGING NOTE: The uninstall is pseudo-silent. It will open up a feedback request page in your default browser.
+
+**PACKAGING NOTE:** The uninstall is pseudo-silent. It will open up a feedback request page in your default browser.
     </description>
     <projectUrl>https://support.opendns.com/entries/23218654-Where-do-I-download-an-OpenDNS-Dynamic-IP-updater-client-</projectUrl>
     <docsUrl>https://opendns.zendesk.com/entries/25977260-Dynamic-IP-Windows-Updater-Documentation</docsUrl>
@@ -22,8 +23,7 @@ OpenDNS Updater is useful if you have a dynamic IP address. It detects changes t
     <tags>opendns updater dynamic dns admin</tags>
     <licenseUrl>https://www.opendns.com/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://www.opendns.com/wp-content/themes/opendns/img/logo-opendns.png</iconUrl>
-    <releaseNotes>added checksum and screenshot</releaseNotes>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/opendns-updater/OpenDNSUpdater_icon.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
