@@ -3,30 +3,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-deploy</id>
-    <version>12.1.0.0</version>
+    <version>13.3.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-deploy</packageSourceUrl>
     <owners>bcurran3</owners>
-    <title>PDQ Deploy (Trial) (Install)</title>
+    <title>PDQ Deploy (Install)</title>
     <authors>Admin Arsenal</authors>
     <projectUrl>http://www.adminarsenal.com/pdq-deploy/</projectUrl>
     <iconUrl>http://cdn.adminarsenal.com/aa/img/logo-deploy.png</iconUrl>
-    <copyright>Copyright (C) 2016 Admin Arsenal Inc</copyright>
+    <copyright>Copyright (C) 2017 Admin Arsenal Inc</copyright>
     <licenseUrl>http://www.adminarsenal.com/licensing/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://www.adminarsenal.com/documentation/</docsUrl>
+    <docsUrl>https://www.pdq.com/getting-started-pdq-deploy/</docsUrl>
     <mailingListUrl>https://support.adminarsenal.com/hc/en-us</mailingListUrl>
-    <tags>admin arsenal pdq deploy patch deployment tool trial</tags>
+    <tags>arsenal pdq deploy patch deployment tool trial admin</tags>
     <summary>Deploy software quickly with PDQ Deploy</summary>
     <description>
 ![Screenshot of PDQ Deploy](http://cdn.adminarsenal.com/aa/img/choose%20targets.png)	
 
-###Use PDQ Deploy to install applications and patches to all the computers in your company. Pro and Enterprise mode customers have access to pre-made packages ready to deploy. NOTE: Trial users have access to up to three applications to deploy. Full access to the library is not provided during your trial.
-
-* Integrates with Active Directory, Spiceworks, PDQ Inventory, and more
-* Installs to multiple computers simultaneously
-* Shows real-time status
-* Installs just about anything
-* Agentless	
+##What Can PDQ Deploy Do?
 
 ###Install MSIs to Multiple Computers
 Need to install an MSI? Just create a new PDQ Package and point it to the MSI. If the installation has more than a single MSI file, be sure to check the “Include Entire Directory” checkbox.
@@ -39,8 +33,24 @@ The challenge will be to determine the correct method to run it silently. The si
 ###Ready-to-Deploy Installs in the Package Library
 We created the Package Library so that our users wouldn’t have to spend time with every Java or Flash update that comes down the pike. When you are a Pro or Enterprise mode customer you get access to the Package Library you can get common apps that are already in PDQ Packages, and are ready for deploying to all your computers. See the full list of ready-to-go silent installs.
 
-###OS Requirements
-Windows Vista, 7, 8x, 10, Server (2008x, 2012x, 2016x)
+###Customize Your Installs
+With PDQ Deploy you can install just about any application or patch just by pointing a PDQ Deploy package to an EXE or MSI. You can also make changes to the packages that you downloaded from the Package Library.
+
+###What if my Installation has more files than just an MSI or EXE?
+Many installations require more than a single install file.
+
+To be sure that these files are used during the installation, be sure to check the “Include Entire Directory” checkbox when you point the PDQ Package to the MSI or EXE.
+
+**Memory Requirements:** 4 GB
+
+**OS Requirements:** Windows 7, 8x, 10, or Server (2008x, 2012x, 2016x)
+
+[MORE INFO ON WEBSITE](https://www.pdq.com/pdq-deploy/)
+
+[Comparison of PDQ Deploy Free/Pro/Enterprise](https://www.pdq.com/compare/)
+
+**SOCIAL MEDIA:**
+[Twitter](https://twitter.com/AdmArsenal) | [YouTube](https://www.linkedin.com/company/pdq.com) | [Linkedin](https://www.linkedin.com/company/pdq.com) | [spiceworks](https://community.spiceworks.com/pages/pdq)
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>

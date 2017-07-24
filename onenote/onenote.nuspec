@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>onenote</id>
-    <version>16.0.8067.2115</version>
+    <version>16.0.8201.2102</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/onenote</packageSourceUrl>
     <title>Microsoft OneNote 2016 (Install)</title>
@@ -38,7 +38,6 @@ Take note. It's easy to pull up your content from anywhere, even if you're offli
 **PACKAGING NOTE 2:** If you have Office 32-bit installed and install the 64-bit version of OneNote, you will be prompted and it will break the silent install.
 **PACKAGING NOTE 3:** Uninstall is not silent, use the Control Panel.
 	</description>
-    <releaseNotes>fixed hanging window problem in this package release</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
