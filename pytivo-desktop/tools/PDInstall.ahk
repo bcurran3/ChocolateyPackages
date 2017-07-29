@@ -9,6 +9,13 @@ Send !n
 Send !n
 Send {SPACE}
 Send !n
+; ---------------- need for upgrade
+; WinWaitActive, Setup - pyTivo, Which additional tasks should be performed?, 300
+; Send !n
+; Send !n
+; Send !i
+; then jump to Setup has finished...
+; ---------------- need for upgrade
 WinWaitActive, Setup - pyTivo, Set options for ToGo functions, 60
 WinActivate
 Send 1234567890

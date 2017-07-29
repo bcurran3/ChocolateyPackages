@@ -1,11 +1,34 @@
 ﻿$packageName    = 'pytivo-desktop'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://www.pytivodesktop.com/win32/pyTivo_1.6.10.exe'
-$checksum       = '5937A21E1336CD23A6896D2366FD18945F93FEB188562648DE82E5941DA5787F'
+$url            = 'http://www.pytivodesktop.com/win32/pyTivo_1.6.12.exe'
+$checksum       = 'ABA0E42CF92BE9A225E02059EB652DEE5777ED6405DB7D181EFD8E5E9885AE4D'
 $validExitCodes = @(0)
 $bits           = Get-ProcessorBits
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "PDInstall.ahk"
+
+if((get-process "PyTivoTray" -ea SilentlyContinue) -eq $Null){ 
+    Write-Host "PyTivoTray currently NOT running." 
+  }else{ 
+    Write-Host "Stopping PyTivoTray process(es)..."
+    Stop-Process -processname PyTivoTray -force
+  }
+
+
+if((get-process "PyTivo" -ea SilentlyContinue) -eq $Null){ 
+    Write-Host "PyTivo currently NOT running." 
+  }else{ 
+    Write-Host "Stopping PyTivo process(es)..."
+    Stop-Process -processname PyTivo -force
+  }
+
+if((get-process "PyTivoDesktop" -ea SilentlyContinue) -eq $Null){ 
+    Write-Host "PyTivoDesktop currently NOT running." 
+  }else{ 
+    Write-Host "Stopping PyTivoDesktop process(es)..."
+    Stop-Process -processname PyTivoDesktop -force
+  }
+  
 
 
 Start-Process $ahkExe $ahkFile
