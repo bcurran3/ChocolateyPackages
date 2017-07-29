@@ -77,10 +77,10 @@ This software may also apply to Intel® Ethernet Controllers. Support for built-
 * Intel® Ethernet Connection I219-V
 * Intel® Ethernet Controller X550-BT2
 
-PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-network-drivers-win10/readme.md)**
 	</description>
 	<dependencies>
-      <dependency id="autohotkey.portable" />
+      <dependency id="autohotkey" />
     </dependencies>		
   </metadata>
   <files>

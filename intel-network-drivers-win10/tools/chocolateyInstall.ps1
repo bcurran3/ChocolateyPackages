@@ -10,10 +10,11 @@ $bits           = Get-ProcessorBits
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "INDInstall.ahk"
 
+New-Item $fileLocation -type directory | out-null
 
 $packageArgs = @{
   packageName    = $packageName
-  unzipLocation  = $toolsDir
+  unzipLocation  = "$toolsDir\unzippedfiles"
   fileType       = 'ZIP' 
   url            = $url
   checksum       = $checksum
@@ -27,9 +28,9 @@ Install-ChocolateyZipPackage @packageArgs
 
 if ($bits -eq 64)
    {
-	$url = Join-Path $toolsDir 'APPS\SETUP\SETUPBD\Winx64\SetupBD.EXE'
+	$url = "$toolsDir\unzippedfiles\APPS\SETUP\SETUPBD\Winx64\SetupBD.EXE"
    } else {
-	$url = Join-Path $toolsDir 'APPS\SETUP\SETUPBD\Win32\SetupBD.EXE'
+	$url = "$toolsDir\unzippedfiles\APPS\SETUP\SETUPBD\Win32\SetupBD.EXE"
    }
 
 Start-Process $ahkExe $ahkFile
@@ -47,10 +48,6 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Start-Sleep -s 10
 
-Remove-Item "$toolsDir\APPS" -recurse | out-null
-Remove-Item "$toolsDir\DOCS" -recurse | out-null
-Remove-Item "$toolsDir\PRO40GB" -recurse | out-null
-Remove-Item "$toolsDir\PRO100" -recurse | out-null
-Remove-Item "$toolsDir\PRO1000" -recurse | out-null
-Remove-Item "$toolsDir\PROXGB" -recurse | out-null
+Remove-Item "$toolsDir\unzippedfiles" -recurse | out-null
+
 
