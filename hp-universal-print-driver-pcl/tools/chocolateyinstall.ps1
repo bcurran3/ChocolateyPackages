@@ -1,9 +1,9 @@
 ﻿$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$packageName    = 'hp-universal-print-driver-ps' 
-$url            = 'http://ftp.hp.com/pub/softlib/software13/COL40842/ds-99375-14/upd-ps-x32-6.4.1.22169.exe'
-$checksum       = 'EE3585716C5883FCB17241C49311F5232C85072D72448A4FA4F11B54892D237E'
-$url64          = 'http://ftp.hp.com/pub/softlib/software13/COL40842/ds-99376-14/upd-ps-x64-6.4.1.22169.exe'
-$checksum64     = '4B3278D77335E5B76339AE775CE1324274796945DEDC3A4424D31057279D0C68'
+$packageName    = 'hp-universal-print-driver-pcl' 
+$url            = 'http://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-14/upd-pcl6-x32-6.4.1.22169.exe'
+$checksum       = '126D541656C94DA2B3CD3FD9EF0BEB91C876393FC16308CA4D98202A5F1D4A9A'
+$url64          = 'http://ftp.hp.com/pub/softlib/software13/COL39348/lj-95981-14/upd-pcl6-x64-6.4.1.22169.exe'
+$checksum64     = '9C82B48D511E8F05144387662E6B8EC8EC834B20314B6C00B173B37C9A7512E0'
 $installerType  = 'ZIP'
 $silentArgs     = '/dm /nd /npf /q /h'
 $validExitCodes = @(0, 3010, 1641)
