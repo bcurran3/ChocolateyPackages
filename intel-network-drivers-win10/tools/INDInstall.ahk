@@ -4,10 +4,10 @@ SendMode Input  ; Recommended for new scripts due to its superior speed and reli
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 ;BlockInput On 
-WinWaitActive, Installing Drivers , OK , 900
+WinWaitActive, Installing Drivers , OK , 1500
 WinActivate
 Send {ENTER}
 Sleep 15000
-WinWaitActive, Installing Drivers , Close , 600
+WinWaitActive, Installing Drivers , Close , 1500
 WinActivate
 Send {ENTER}
