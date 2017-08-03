@@ -1,7 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the proram released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
-* At some point in the future this package will be setup for creation by Auto Update (when I figure it out) which will solve this problem.
+* If you have Office 32-bit installed and install the 64-bit version of OneNote, you will be prompted and it will break the silent install.
+* Uninstall is not silent, use the Control Panel.
 
 Like my packages? 
 
