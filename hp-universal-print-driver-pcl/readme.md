@@ -6,7 +6,7 @@
 * Future versions of this package might be updated to parse all the options available when installed by chocolatey and use my defaults if no parameters are passed. If you'd like to see this, create a GitHub Issue so I know it's desired.
 * Uninstalling this package DOES NOT uninstall the drivers. You have to delete the printer driver in Control Panel\All Control Panel Items\Devices and Printers.
 
-Like my packages? 
+Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
 
