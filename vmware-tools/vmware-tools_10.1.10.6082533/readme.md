@@ -5,7 +5,7 @@
 * This package downloads via a static link that should never fail.
 * This version of VMware Tools is intended to be used with Windows Guest OSes running under VSphere v5.5 and later.
 
-Like my packages? 
+Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
 
@@ -13,3 +13,4 @@ Find them useful?
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4ECL3UCG5CGB6)
 
+If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions. 
