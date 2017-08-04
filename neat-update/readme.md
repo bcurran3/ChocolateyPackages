@@ -2,6 +2,7 @@
 
 * This package is an UPGRADE ONLY, you must have the Neat software already installed. SEE: https://chocolatey.org/packages/neat/5.4.1.273
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* Uninstall is not silent. Chocolatey will start the uninstaller, but you will be prompted.
 * I personally use and endorse this program.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
