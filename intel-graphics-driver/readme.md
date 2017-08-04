@@ -8,13 +8,14 @@
 * If you are using computer manufacturer "customized" drivers (Dell/HP/others) and getting a "These drivers are Intel generic drivers. They do not include customizations that your manufacturer might have added to optimize your computing experience." and you wish to use these "generic" drivers, here's the way to do it:
 
 ONCE you have to:
-1> Download the driver install program from Intel (look at chocolateyInstall.ps1 for link)
-2> Unzip the install program to a directory (it's a self-extracting/executing ZIP)
-3> Locate the .INF file for the driver (Graphics\igdlh64.inf), right click and choose to install it
-4> You might have to wait a bit for it to complete - it will notify you
-5> Uninstall your current Intel display driver from Device Manager and DO NOT reboot.
-6> In Device Manager tell it to search for updated hardware, it should find and use the new one.
-7> After finding the Intel graphics driver, check to make sure it's the new version. (Worked for me on first go.) Change it if not.
+
+1. Download the driver install program from Intel (look at chocolateyInstall.ps1 for link)
+2. Unzip the install program to a directory (it's a self-extracting/executing ZIP)
+3. Locate the .INF file for the driver (Graphics\igdlh64.inf), right click and choose to install it
+4. You might have to wait a bit for it to complete - it will notify you
+5. Uninstall your current Intel display driver from Device Manager and DO NOT reboot.
+6. In Device Manager tell it to search for updated hardware, it should find and use the new one.
+7. After finding the Intel graphics driver, check to make sure it's the new version. (Worked for me on first go.) Change it if not.
 
 Once you've done this, the drivers can be updated regularly via the Intel® Graphics Driver for Windows installation program, and Chocolatey of course!
 
