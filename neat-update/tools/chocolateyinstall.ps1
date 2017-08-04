@@ -7,7 +7,7 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0, 3010, 1641)
 $softwareName   = 'Neat*'
 $unzipLocation  = "$toolsDir\unzipped"
-$realInstaller  = "Neat v5.7.1 FULL.exe"
+$realInstaller  = "Neat v5.7.1 UPDATE.exe"
 
 New-Item $unzipLocation -type directory | out-null
 
