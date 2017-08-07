@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* Uninstall is NOT silent, it will prompt you.
 
 Like my packages? 
 
