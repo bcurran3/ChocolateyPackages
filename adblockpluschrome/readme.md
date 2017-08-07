@@ -2,7 +2,7 @@
 
 * I personally use and endorse this. I install it on every instance of Chrome I find no matter who's computer it is!
 
-Like my packages? 
+Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
 
