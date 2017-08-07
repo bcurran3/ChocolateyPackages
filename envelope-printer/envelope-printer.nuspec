@@ -10,11 +10,11 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/envelope-printer</packageSourceUrl>		
     <summary>Tweaking.com - Envelope Printer</summary>
     <description>
-![Screenshot of Envelope Printer](http://www.tweaking.com/index.php?ct=content&action=file&id=157)	
+![Screenshot of Envelope Printer](http://www.tweaking.com/index.php?ct=content&amp;action=file&amp;id=157)	
 
 ###Tweaking.com - Envelope Printer
 
-For Windows XP, 2003, Vista, 2008, 7, 8, 8.1, 2012, 10 (32 & 64 Bit)
+For Windows XP, 2003, Vista, 2008, 7, 8, 8.1, 2012, 10 (32 &amp; 64 Bit)
 
 Tweaking.com - Envelope Printer is a program I made for myself by decided to put it on Tweaking.com for free and available for everyone.
 
@@ -33,11 +33,11 @@ While I could have used MS Office Word and other 3rd party programs to print out
     </description>
     <projectUrl>http://www.tweaking.com/content/page/tweaking_com_envelope_printer.html</projectUrl>
     <mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
-    <tags>tweaking.com envelope printer admin</tags>
+    <tags>tweaking.com envelope printer notsilent admin</tags>
     <copyright>Tweaking LLC</copyright>
     <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/envelope-printer/EnvelopePrinter_icon.png</iconUrl>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />
