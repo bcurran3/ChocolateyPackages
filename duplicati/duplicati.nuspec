@@ -17,7 +17,7 @@
     <mailingListUrl>https://groups.google.com/forum/#!forum/duplicati</mailingListUrl>
     <bugTrackerUrl>https://github.com/duplicati/duplicati/issues</bugTrackerUrl>
     <tags>duplicati cloud backup admin</tags>
-    <summary>Free backup software to store encrypted backups online</summary>
+    <summary>Duplicati - Free backup software to store encrypted backups online.</summary>
     <description>
 ![Screenshot of Duplicati](http://www.duplicati.com/images/news/2016-03-20-New-UI.jpg)
 
@@ -73,7 +73,7 @@ Duplicati was designed for online backups from scratch. It is not only data effi
 ###Web-based user interface
 Duplicati is configured by a web interface that runs in any browser (even mobile) and can be accessed - if you like - from anywhere. This also allows to run Duplicati on headless machines like a NAS (network attached storage).	
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/duplicati/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/duplicati/README.MD)**
 	</description>
     <releaseNotes>https://github.com/duplicati/duplicati/blob/master/changelog.txt</releaseNotes>
     <dependencies>
