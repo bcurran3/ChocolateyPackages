@@ -1,6 +1,6 @@
 ![](https://camo.githubusercontent.com/4fe59e7d6a53105f25607ec8bdb42b7a0a7ed180/68747470733a2f2f696d672e736869656c64732e696f2f6d61696e74656e616e63652f7965732f323031372e737667)
 
-Like my packages? 
+Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
 
@@ -15,4 +15,5 @@ SPECIALTIES / TOP PRIORITY:
 * Technican Tools: Admin Tools, Diagnostic Tools, Network Tools, Security Tools, System Management
 * BIG guys: Amazon, Dell, Google, HP, Intel, Microsoft
 * Smart Home/Multimedia: Hue, Plex, Insteon, Nest, Squeezebox, TiVo, WeMo
+* Anything Android on Windows.
 
