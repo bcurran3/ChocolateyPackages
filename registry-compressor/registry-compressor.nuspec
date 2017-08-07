@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>registry-compressor</id>
+    <title>Tweaking.com - Registry Compressor (Install)</title>
+    <version>1.1.0</version>
+    <authors>Tweaking.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/registry-compressor</packageSourceUrl>		
+    <summary>Tweaking.com - Registry Compressor</summary>
+    <description>
+![Screenshot of Registry Compressor](http://www.tweaking.com/index.php?ct=content&amp;action=file&amp;id=102)	
+
+###Tweaking.com - Registry Compressor
+
+For Windows XP, 2003, Vista, 2008, 7, 8, 8.1, 2012, 10 (32 &amp; 64 Bit)
+
+First and foremost, this program does NOT remove or add anything to the registry. This is not a registry cleaner or scanner.
+
+The Windows Registry is a hierarchical database that stores 
+configuration settings and options on Microsoft Windows operating 
+systems.
+
+Just like databases the registry can become bloated and large when 
+there has been a lot of additions and deletions from the registry. When 
+this happens the system can become slower and use more CPU as 
+programs and the operating system take longer to read and write to the 
+registry, just like any other database.
+
+This program does NOT remove or add anything to the registry. What it 
+does is it rebuilds the registry to new files, when this happens all the 
+overhead is gone and the registry is smaller and faster.
+
+Microsoft offers a manual way to do this:
+How to Compress "Bloated" Registry Hives
+http://support.microsoft.com/kb/2498915
+
+Thanks to this program you can now do it with one click. :-)
+
+**SOCIAL MEDIA:**
+[FACEBOOK](https://www.facebook.com/tweakingdotcom) | [TWITTER](https://twitter.com/tweaking_com)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/registry-compressor/readme.md)**
+    </description>
+    <projectUrl>http://www.tweaking.com/content/page/tweaking_com_registry_compressor.html</projectUrl>
+    <mailingListUrl>http://www.tweaking.com/forums/</mailingListUrl>
+    <tags>tweaking.com registry compressor notsilent admin</tags>
+    <copyright>Tweaking LLC</copyright>
+    <licenseUrl>http://www.tweaking.com/core/termsofuse/index.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/registry-compressor/RegistryCompressor_icon.png</iconUrl>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
