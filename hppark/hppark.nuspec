@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hppark</id>
+    <version>1.8.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hppark</packageSourceUrl>
+    <title>HP Printer Administrator Resource Kit (Portable)</title>
+    <authors>HP Inc.</authors>
+    <projectUrl>https://support.hp.com/us-en/drivers/selfservice/swdetails/UPD/4157320/model/4157320/swItemId/ds-99433-19</projectUrl>
+    <iconUrl>https://support.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/hp-logo-modal.gif</iconUrl>
+    <copyright>HP Inc.</copyright>
+    <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>hp admin printer resource kit park portable</tags>
+    <summary>HP Printer Administrator Resource Kit (PARK) is a collection of tools, scripts and documentation to help print administrators install, deploy, configure and manage the HP Universal Print Driver.</summary>
+    <description>
+The HP Printer Administrator Resource Kit (PARK) is a collection of tools, scripts and documentation to help print administrators install, deploy, configure and manage the HP Universal Print Driver. The PARK contains both supported and unsupported software tools, scripts and documentation. Supported tools include:
+* HP Driver Configuration Utility
+* HP Driver Deployment Utility
+* HP Managed Printing Administrator
+* HP UPD Active Directory Administrative template
+* AutoUpgradeUPD	
+* PRNCon
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hppark/readme.md)**
+	</description>
+    <releaseNotes>https://support.hp.com/soar-attachment/597/col40860-park_1.8.2_releasenotes.htm</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
