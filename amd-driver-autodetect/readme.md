@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-******** FIRST VERSION OF PACKAGE -> UNTESTED! <-
+* THIS PACKAGE IS A WORK IN PROGRESS - IT WILL CONTINUE TO EVOLVE. IT IS NOT READY FOR PRIME TIME YET.
 * This package downloads the program file via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
