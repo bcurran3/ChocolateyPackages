@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>amd-driver-autodetect</id>
+    <version>17.7.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amd-driver-autodetect</packageSourceUrl>
+    <title>AMD Driver Autodetect (Install)</title>
+    <authors>Advanced Micro Devices, Inc.</authors>
+    <projectUrl>https://support.amd.com/en-us/download/auto-detect-tool</projectUrl>
+    <iconUrl>https://www.pcgamesn.com/sites/default/files/styles/game_tile/public/games/tiles/AMD_wide.png</iconUrl>
+    <copyright>Advanced Micro Devices, Inc.</copyright>
+    <licenseUrl>https://www.amd.com/en-us/who-we-are/copyright</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.amd.com/en-us/kb-articles/Pages/GPU131ObtainGPUDriversAuto.aspx</docsUrl>
+    <tags>amd driver autodetect ati radeon video drivers admin</tags>
+    <summary>Automatically Detect and Install Your AMD Radeon Driver</summary>
+    <description>
+The AMD Driver Autodetect tool is designed to detect the model of graphics card and version of operating system installed in your computer. Our Autodetect tool can only be used on systems running the Microsoft® Windows operating system and/or AMD Radeon™ graphics. It does not work on Linux® systems, Apple Boot Camp systems or AMD FirePro™ graphics products.
+
+If a new driver is available, the tool is designed to help you download it. After you download the driver, simply click “Install” to start your installation.​
+
+NOTE: This tool is designed to provide the latest official AMD Radeon Software graphics driver for systems running Microsoft Windows. If your system is not running Microsoft Windows or you are looking for an earlier driver or the latest beta driver, you can manually search for a driver from the [AMD Graphics and Driver download page](https://support.amd.com/en-us/download).	
+
+For instructions on how to use the AMD Driver Autodetect Tool, please see:
+[How to obtain the latest drivers for a graphics card using the AMD Driver Autodetect Utility](https://support.amd.com/en-us/kb-articles/Pages/GPU131ObtainGPUDriversAuto.aspx)
+
+For recommendations if the AMD Driver Autodetect Tool does not find a compatible driver for your AMD graphics product or operating system, please see:
+[Unable to find my graphics card or operating system listed on the AMD Graphics Drivers &amp; Software Page](https://support.amd.com/en-us/kb-articles/Pages/GPU125GPUorOSNotFound.aspx)
+
+For instructions on how to manually search for compatible AMD Radeon Software drivers, please see:
+[How to find the latest drivers for an AMD graphics card](https://support.amd.com/en-us/kb-articles/Pages/HowtofindthelatestdriversforanATIgraphicscard.aspx)
+
+To learn how to manually identify your AMD graphics card, please see:
+[How to identify the model of ​an AMD graphics card](https://support.amd.com/en-us/kb-articles/Pages/HowtoidentifythemodelofanATIgraphicscard.aspx)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/amd-driver-autodetect/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
