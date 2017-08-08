@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>captureflux</id>
-    <version>5.2.3</version>
+    <version>6.0.5</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/captureflux</packageSourceUrl>
     <title>CaptureFlux (Portable)</title>
@@ -31,7 +31,6 @@ A software to preview a live video stream, record it in direct-to-disk or grab i
 
 PACKAGING NOTE: Works with Windows 10!	
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
