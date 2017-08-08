@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.7.35</version>
+    <version>5.9.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/arq</packageSourceUrl>				
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
@@ -56,7 +56,10 @@ You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Clou
 
 ####30-day free trial. $49.99 to purchase v5 or $79.98 for lifetime upgrades.
 
-PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**SOCIAL MEDIA:**
+[Twitter](https://twitter.com/arqbackup) | [Blog](https://www.arqbackup.com/blog/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/envelope-printer/readme.md)**
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
