@@ -1,9 +1,9 @@
 ﻿$packageName  = 'captureflux' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'http://paul.glagla.free.fr/fichiers/captureflux_52en.zip'
-$checksum     = '67A07DD6F8EA8E3EB74F4142F8BCA9616E91076FB7CF309CE35A59CE5FF5394B'
+$url          = 'http://paul.glagla.free.fr/fichiers/captureflux_60en.zip'
+$checksum     = '5CBD61413D72F15446B980F7A8AE5AC0D572A93BD3C103F11CC78032DC32F49C'
 $shortcutName = 'CaptureFlux.lnk'
-$exe          = 'CaptureFlux_52en.exe'
+$exe          = 'CaptureFlux_60en.exe'
 
 
 $packageArgs = @{
