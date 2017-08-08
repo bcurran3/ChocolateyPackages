@@ -7,6 +7,17 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0,1)
 $softwareName   = ''
 
+$card = wmic path win32_VideoController get name
+if ($card -match "AMD")
+  {
+   write-host    
+   write-host "You've got $card!" -foreground "green" –backgroundcolor "blue"
+  } else {
+   write-host  
+   write-host "No AMD display adapters found. Aborting." -foreground "red" –backgroundcolor "blue"
+   throw
+   }
+
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir  
@@ -17,6 +28,11 @@ $packageArgs = @{
   softwareName  = $softwareName
   checksum      = $checksum
   checksumType  = 'sha256' 
+  Options = @{
+    Headers = @{
+      referer = "https://support.amd.com/en-us/download/auto-detect-tool"
+    }
+  }  
 }
 
 Install-ChocolateyPackage @packageArgs
