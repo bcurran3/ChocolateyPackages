@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ubooquity</id>
-    <title>Ubooquity (Portable)</title>
-    <version>2.0.2</version>
+    <title>Ubooquity</title>
+    <version>2.1.0</version>
     <authors>Vae Mendis Software</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ubooquity</packageSourceUrl>	
@@ -24,19 +24,21 @@ Ubooquity can be installed on any OS supporting Java (Windows, Linux, Mac OS...)
 ###Secure
 Ubooquity lets you create user accounts and set access rights for each shared folder.
 Connections can be protected (HTTPS) using your own certificate.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ubooquity/readme.md)**
 </description>
     <projectUrl>http://vaemendis.net/ubooquity/</projectUrl>
     <tags>ubooquity comic comicbook ebook server calibre comicrack java portable</tags>
     <copyright>Vae Mendis Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://ubooquity.userecho.com/s/cache/c9/4b/c94b3a69bb89d450f9076a747ba4a64d.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/ubooquity/ubooquity_icon.png</iconUrl>
     <docsUrl>https://vaemendis.github.io/ubooquity-doc/</docsUrl>
     <mailingListUrl>http://ubooquity.userecho.com/</mailingListUrl>
     <licenseUrl>http://vaemendis.net/ubooquity/static12/license</licenseUrl>
     <dependencies>
-      <dependency id="javaruntime" version="" />
+      <dependency id="javaruntime" version="8.0" />	  
     </dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://vaemendis.net/ubooquity/categorie2/release</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
