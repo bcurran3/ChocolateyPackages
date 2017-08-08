@@ -1,7 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the .ZIP file via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* There is a lot of information and programs in PARK, open your \programdata\chocolatey\lib\hppark\tools\park-vx.x.x folder and explore!
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
