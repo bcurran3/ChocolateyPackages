@@ -8,7 +8,7 @@
 # Possibly compile to a proper executable program
 # Open to suggestions - open a GitHub issue please.
 
-# Toggle True/False if you want to backup to the locations below
+# Toggle True/False if you want to backup/not backup to the locations below
 $UseDocuments   = "True"
 $UseDropbox     = "True"
 $UseGoogleDrive = "True"
@@ -67,7 +67,9 @@ if ($UseGoogleDrive -match "True" -and (Test-Path "$Env:USERPROFILE\Google Drive
    }   
    
 # Backup Chocolatey package names on local computer to packages.config file on your HOMESHARE directory if it exists
-if ($UseHomeShare -match "True" -and (Test-Path "$Env:HOMESHARE"))
+#if ($UseHomeShare -match "True" -and (Test-Path "$Env:HOMESHARE" -eq "True"))
+$ExistHomeShare = (Test-Path "Env:HOMESHARE")
+if ($UseHomeShare -match "True" -and $ExistHomeShare -match "True")   
    {
     $SavePath = "$Env:HOMESHARE\$SaveFolderName\$Env:ComputerName"   
     Write-PackageConfig
