@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-package-list-backup</id>
+    <version>2017.08.08</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
+    <title>Choco Package List Backup to Cloud and Local (Script)</title>
+    <authors>Bill Curran</authors>
+    <iconUrl></iconUrl>
+    <copyright>Bill Curran</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl></projectSourceUrl>
+    <bugTrackerUrl></bugTrackerUrl>
+    <tags> admin</tags>
+    <summary></summary>
+    <description>
+	
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
