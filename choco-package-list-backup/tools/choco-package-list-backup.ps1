@@ -5,7 +5,7 @@
 # Put the checking of save locations in a loop
 # Add other cloud services support by request
 # Add ability to use a different source other than the Chocolatey public repository
-# Possibly compile to an executable program instead of script
+# Possibly compile to a proper executable program
 # Open to suggestions - open a GitHub issue please.
 
 # Toggle True/False if you want to backup to the locations below
@@ -15,6 +15,7 @@ $UseGoogleDrive = "True"
 $UseHomeShare   = "True"  # Domain joined computers HOMEDRIVE support
 $UseOneDrive    = "True"
 $UseReadyCLOUD  = "True"
+$UseResilioSync = "True"
 $UseTonidoSync  = "True"
 $UseVersions    = "False" # Specify if you want to save specific version info or not
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
@@ -86,6 +87,13 @@ if ($UseReadyCLOUD -match "True" -and (Test-Path $Env:USERPROFILE\ReadyCLOUD))
     Write-PackageConfig
    }
 
+# Backup Chocolatey package names on local computer to packages.config file in Resilio Sync directory if it exists
+if ($UseReadyCLOUD -match "True" -and (Test-Path "$Env:USERPROFILE\Resilio Sync"))
+   {
+    $SavePath = "$Env:USERPROFILE\Resilio Sync\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   }   
+   
 # Backup Chocolatey package names on local computer to packages.config file in TonidoSync directory if it exists
 if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\TonidoSync))
    {
@@ -94,7 +102,7 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
    }
 
 Write-Host "To re-install your Chocolatey packages:" -ForegroundColor magenta 
-Write-Host "Go to the saved packages.config location and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
+Write-Host "Go to the location of your saved packages.config file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
 
 
 
