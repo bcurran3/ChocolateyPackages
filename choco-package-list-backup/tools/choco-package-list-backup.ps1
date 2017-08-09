@@ -103,7 +103,7 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
     Write-PackageConfig
    }
 
-Write-Host "To re-install your Chocolatey packages:" -ForegroundColor magenta 
+Write-Host "TO RE-INSTALL YOUR CHOCOLATEY PACKAGES:" -ForegroundColor magenta 
 Write-Host "Go to the location of your saved packages.config file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
 
 

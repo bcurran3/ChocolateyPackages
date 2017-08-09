@@ -8,7 +8,7 @@ ROADMAP:
 * Put the checking of save locations in a loop
 * Add other cloud services support by request
 * Add ability to use a different source other than the Chocolatey public repository
-* Create a scheduled task to run daily/weekly/monthly/whatever
+* Create a scheduled task to run daily/weekly/monthly/whenever
 * Possibly compile to a proper executable program
 * I'm open to suggestions - open a GitHub issue please.
 
