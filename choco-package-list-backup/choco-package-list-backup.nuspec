@@ -18,6 +18,8 @@
     <tags>choco unofficial package packages.config backup script admin</tags>
     <summary>Choco (unofficial) Package List Backup to Cloud and Local - a PowerShell script to backup your Chocolatey packages list for easy re-installation</summary>
     <description>
+![Screenshot of Choco (unofficial) Package List Backup to Cloud and Local (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
+	
 ##choco-package-list-backup.ps1 solves your personal Chocolatey migration and package re-installation problems!
 
 **choco-package-list-backup.ps1** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a packages.config file. You can then use that packages.config file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the packages.config file?" Thanks for asking! **choco-package-list-backup.ps1** saves locally and to the cloud!
@@ -43,6 +45,8 @@
 * configure which locations you want or don't want to save to (default=all the locations found)
 * configure to save package version information or not (default=False)
 * configure what subfolder to save to (default=ChocolateyPackageListBackup)
+
+**choco-package-list-backup.ps1** is saved to the Chocolatey's bin folder (\ProgramData\chocolatey\bin), so it's in your path and you can run it from anywhere.
 
 **choco-package-list-backup.ps1** instructions:
 
