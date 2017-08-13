@@ -5,7 +5,7 @@
 * Installation of Grub2Win will default to C:, if your boot drive is not C:, don't use this package.
 * Uninstall is not silent: Run Grub2Win and use the Uninstall button then run CHOCO UNINSTALL GRUB2WIN
 * This package can not be re-installed, uninstall the program first (see above).
-* It's ironic that I'm using AutoHotkey to manage the installation a program that uses AutoIt to install.
+* It's ironic that I'm using AutoHotkey to manage the installation of a program that uses AutoIt to install.
 * I started this package a year and a half ago, shelved it, and came back to it. Finally off the TDL!
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 

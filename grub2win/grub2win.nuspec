@@ -9,18 +9,17 @@
     <title>Grub2Win (Install)</title>
     <authors>Dave Pickens</authors>
     <projectUrl>https://sourceforge.net/projects/grub2win/</projectUrl>
-    <iconUrl>https://a.fsdn.com/allura/p/grub2win/icon</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/grub2win/grub2win_icon.png</iconUrl>
     <copyright>(C) 2010 - 2017, Dave Pickens</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/grub2win/code/ref/master/</projectSourceUrl>
+    <projectSourceUrl>https://sourceforge.net/projects/grub2win/files/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/projects/grub2win/files</docsUrl>
-    <mailingListUrl>https://sourceforge.net/projects/grub2win/</mailingListUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/grub2win/tickets</bugTrackerUrl>
+    <mailingListUrl>https://sourceforge.net/p/grub2win/discussion/</mailingListUrl>
     <tags>grub2win grub boot notsilent admin</tags>
     <summary>Grub2Win allows you to safely dual boot Windows and Linux.</summary>
     <description>
-![Screenshot of Grub2Win] (https://a.fsdn.com/con/app/proj/grub2win/screenshots/Install%201B.jpg)
+![Screenshot of Grub2Win] (https://fsdn.com/con/app/proj/grub2win/screenshots/Install%201V.jpg)
 	
 Grub2Win supports 64 and 32 bit EFI and BIOS on Windows 10, 8, 7, Vista and XP.
 
