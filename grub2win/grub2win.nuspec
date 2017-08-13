@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>grub2win</id>
+    <version>0.9.7.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/grub2win</packageSourceUrl>	
+    <title>Grub2Win (Install)</title>
+    <authors>Dave Pickens</authors>
+    <projectUrl>https://sourceforge.net/projects/grub2win/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/grub2win/icon</iconUrl>
+    <copyright>(C) 2010 - 2017, Dave Pickens</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/grub2win/code/ref/master/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/projects/grub2win/files</docsUrl>
+    <mailingListUrl>https://sourceforge.net/projects/grub2win/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/grub2win/tickets</bugTrackerUrl>
+    <tags>grub2win grub boot notsilent admin</tags>
+    <summary>Grub2Win allows you to safely dual boot Windows and Linux.</summary>
+    <description>
+![Screenshot of Grub2Win] (https://a.fsdn.com/con/app/proj/grub2win/screenshots/Install%201B.jpg)
+	
+Grub2Win supports 64 and 32 bit EFI and BIOS on Windows 10, 8, 7, Vista and XP.
+
+Safely dual boot Windows and Linux.
+
+Grub2Win boots native, open source GNU grub version 2.02 code. Everything is contained in a single 14 MB directory on your Windows C: drive. On EFI systems a few small modules (about one half MB total) will be installed to your EFI partition.
+
+Using the simple Windows GUI and instructions you can install Grub2Win quickly and safely. Boot time messages and help can be displayed in your native language.
+
+Select from a nearly unlimited number of OS choices. Samples for Remix, Android, Ubuntu, Debian, Suse, Fedora, Mint, BSD and Windows are included.
+
+You can enter your own custom commands for each menu entry.
+
+Grub2Win started in 2010. It is now used in 180 countries worldwide and has been downloaded more than 300,000 times.
+
+If you find Grub2Win useful, please consider making a small donation to be used for hardware and testing.
+
+###Features
+* 64 and 32 bit EFI and BIOS firmware support
+* Installs to Windows 10, 8, 7, Vista and XP
+* Requres just one directory on the Windows C: drive, about 14 MB disk space
+* Simple Windows GUI easily sets up Grub2Win in seconds
+* Lets you set your EFI firmware boot order from within Windows
+* Preview and select boot themes and animations during the install
+* Grub boot messages and help can be displayed in 27 major languages worldwide
+* Works with all filesystems including Mac hfs and Btrfs
+* Can search for and boot a partition by it's label. Supports advanced scripting
+* Works with both MBR and GPT disks - up to 128 primary partitions per drive
+* Supports extremely large (over 4 TB) disks and partitions
+* No registry changes
+* Safely multiboot Windows, Remix, Android, Ubuntu, Debian, Suse, Fedora, Mint and more
+* Grub customization is done from Windows - Configuration in Linux is not required
+* Runs open source GNU Grub 2.02 code. Frequent releases and enhancements
+* No adware or spyware - No hassles... It just works
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/grub2win/readme.md)**
+	</description>
+    <releaseNotes>https://sourceforge.net/projects/grub2win/files/changelog.txt/download</releaseNotes>
+	<dependencies>
+      <dependency id="autohotkey" />
+    </dependencies>		
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
