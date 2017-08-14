@@ -17,15 +17,15 @@
     <tags>forceps powershell utility portable</tags>
     <summary>ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.</summary>
     <description>
-##No more "File PSscript.ps1 cannot be loaded because running scripts is disabled on this system."
+##ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.
 
-###ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.
+##No more "File PSscript.ps1 cannot be loaded because running scripts is disabled on this system." messages!
 
 ####"Laziness is the mother of invention."
 
-I wrote ForcePS because I was lazy and didn't want to keep changing my Windows PowerShell Script Execution Policy back and forth between RemoteSigned (Restricted is safer!) and Unrestricted to run scripts I've either downloaded or wrote. So I made a little one line batch file that would call PowerShell with the appropriate parameters to bypass the execution policy. Now I've added some error checking, compiled it, and am releasing it to the world for others who honestly can't remember or don't want to have to type "Set-ExecutionPolicy Unrestricted" and "Set-ExecutionPolicy Restricted" infrequently. Now you can just run ForcePS from the Command Prompt followed by the name of a PowerShell script and... Walah! The PS script will run without hassle, all without you having to change any settings. Elevated Command Prompt required for some small sense of security.
+I wrote ForcePS because I was lazy and didn't want to keep changing my Windows PowerShell Script Execution Policy back and forth to run scripts. So I made a little one line batch file that would call PowerShell with the appropriate parameters to bypass the execution policy. Now I've added some error checking, compiled it, and have released it to the world for others who can't remember or don't want to have to type "Set-ExecutionPolicy Unrestricted" and "Set-ExecutionPolicy Restricted" repeatedly. Now you can just run ForcePS from the Command Prompt followed by the name of a PowerShell script and... Walah! The PS script will run without hassle, all without you having to change any settings. Elevated Command Prompt required for some small sense of security.
 
-Chocolatey will download ForcePS to the package's tools directory and shim it so its available for global use.
+Chocolatey will download ForcePS to the package's tools directory and shim it so that its available for global use.
 
 USAGE: ForcePS PSscript.ps1 parameter2 parameter3
 
