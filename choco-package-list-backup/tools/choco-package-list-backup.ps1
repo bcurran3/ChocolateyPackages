@@ -1,4 +1,4 @@
-# choco-package-list-backup.ps1 (to local and cloud) by Bill Curran v2017.08.08
+# choco-package-list-backup.ps1 (to local and cloud) by Bill Curran
 # I couldn't have done this without the list parsing from Ammaar Limbada found at https://gist.github.com/alimbada/449ddf65b4ef9752eff3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # ROADMAP:
@@ -20,6 +20,7 @@ $UseTonidoSync  = "True"
 $UseVersions    = "False" # Specify if you want to save specific version info or not
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $ConfigFile     = "packages.config"
+$CPLBver        = "2017.08.08" # latest version of the script
 
 # Check the path to save packages.config and create if it doesn't exist
 Function Check-SaveLocation{
@@ -45,6 +46,9 @@ Function Write-PackageConfig{
 	Write-Host "$SavePath\$ConfigFile SAVED!" -ForegroundColor green 
     }
 
+Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list locally and to the cloud
+Write-Host "Copyleft 2017 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use"
+	
 # Backup Chocolatey package names on local computer to packages.config file in the Documents folder
 if ($UseDocuments -match "True" -and (Test-Path $Env:USERPROFILE\Documents))
    {
