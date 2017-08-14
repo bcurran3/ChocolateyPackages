@@ -1,0 +1,11 @@
+﻿==================== ForcePS ====================
+
+ForcePS is free and Copylefted by Bill Curran.
+
+SEE:
+https://www.gnu.org/licenses/copyleft.en.html
+https://www.gnu.org/licenses/gpl.html
+
+bcurran3 08/13/2017
+
+==================== ForcePS ====================
