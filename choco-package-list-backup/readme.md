@@ -1,17 +1,14 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* If you need to change your PowerShell Execution Policy, read [this](https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.Core/about_Execution_Policies?view=powershell-5.1) or type "Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser" into PowerShell.
-
-
+* If you have problems running this due to your Windows PowerShell Script Execution Policy, [ForcePS](https://chocolatey.org/packages/forceps) can make your life easier.
 
 ROADMAP:
 * Put the checking of save locations in a loop
 * Add other cloud services support by request
 * Add ability to use a different source other than the Chocolatey public repository
 * Create a scheduled task to run daily/weekly/monthly/whenever
-* digitally sign the script
-* Possibly compile to a proper executable program
+* ~~digitally sign the script~~
 * I'm open to suggestions - open a GitHub issue please.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
