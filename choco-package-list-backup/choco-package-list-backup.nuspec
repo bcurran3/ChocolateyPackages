@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2017.08.08</version>
+    <version>2017.08.16</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
-    <title>Choco (unofficial) Package List Backup to Cloud and Local (Script)</title>
+    <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.png</iconUrl>
@@ -18,20 +18,20 @@
     <tags>choco unofficial package packages.config backup script admin</tags>
     <summary>Choco (unofficial) Package List Backup to Cloud and Local - a PowerShell script to backup your Chocolatey packages list for easy re-installation</summary>
     <description>
-![Screenshot of Choco (unofficial) Package List Backup to Cloud and Local (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
+![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
 	
 ###choco-package-list-backup.ps1 solves your personal Chocolatey migration and package re-installation problems!
 
-**choco-package-list-backup.ps1** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a packages.config file. You can then use that packages.config file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the packages.config file?" Thanks for asking! **choco-package-list-backup.ps1** saves locally and to the cloud!
+**choco-package-list-backup.ps1** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a packages.config file. You can then use that packages.config file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the packages.config file?" Thanks for asking! **choco-package-list-backup.ps1** saves locally and to multiple cloud services!
 
 ####Features:
 
-**choco-package-list-backup.ps1** supports saving packages.config to:
+**choco-package-list-backup.ps1** supports saving packages.config to all of the following:
 
 * your local Documents folder
+* your Active Directory assigned HOMESHARE
 * Dropbox
 * Google Drive
-* your Active Directory assigned home share
 * Microsoft OneDrive
 * NETGEAR ReadyCLOUD
 * Resilio Sync
@@ -49,11 +49,15 @@
 
 **choco-package-list-backup.ps1** is saved to the Chocolatey's bin folder (\ProgramData\chocolatey\bin), so it's in your path and you can run it from anywhere.
 
+**choco-package-list-backup.ps1** supports copying [InstallChoco](https://chocolatey.org/packages/installchoco) with the packages.config path for the fastest way ever to reinstall Chocolatey and your packages! 
+
 **choco-package-list-backup.ps1** instructions:
 
 * Edit \ProgramData\chocolatey\bin\choco-package-list-backup.ps1 to customize your backup(s). (see comments in file)
 * From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list.
-* From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list.
+* From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. (May need path.) 
+
+**Use choco-package-list-backup along with [ForcePS](https://chocolatey.org/packages/forceps) for easy execution and [InstallChoco](https://chocolatey.org/packages/installchoco) for a complete backup and recovery solution of your Chocolatey packages.**
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup/readme.md)**
 	</description>
