@@ -5,38 +5,53 @@
 # Put the checking of save locations in a loop
 # Add other cloud services support by request
 # Add ability to use a different source other than the Chocolatey public repository
-# Possibly compile to a proper executable program
-# Open to suggestions - open a GitHub issue please.
+# Possibly compile to a proper executable program - scratched, can't modify variables as easily!
+# Open to suggestions - open a GitHub issue please if you have a suggestion/request.
+
+$CPLBver        = "2017.08.16" # version of this script
+$ConfigFile     = "packages.config"
+$SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
+$SaveVersions   = "False" # Specify if you want to save specific version info or not
+$InstallChoco   = "$Env:ChocolateyInstall\lib\installchoco\tools\InstallChoco.exe" # location of InstallChoco.exe if it exists
 
 # Toggle True/False if you want to backup/not backup to the locations below
 $UseDocuments   = "True"
+$UseHomeShare   = "True"  # Domain joined computers HOMEDRIVE support
 $UseDropbox     = "True"
 $UseGoogleDrive = "True"
-$UseHomeShare   = "True"  # Domain joined computers HOMEDRIVE support
 $UseOneDrive    = "True"
 $UseReadyCLOUD  = "True"
 $UseResilioSync = "True"
 $UseTonidoSync  = "True"
-$UseVersions    = "False" # Specify if you want to save specific version info or not
-$SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
-$ConfigFile     = "packages.config"
-$CPLBver        = "2017.08.08" # latest version of the script
 
 # Check the path to save packages.config and create if it doesn't exist
 Function Check-SaveLocation{
     $CheckPath = Test-Path $SavePath
-	If ($CheckPath -match "False")
-	   {
-	    New-Item $SavePath -Type Directory -force | out-null
-	   }   
+  If ($CheckPath -match "False")
+     {
+      New-Item $SavePath -Type Directory -force | out-null
+     }   
     }
 
+# Copy InstallChoco.exe if it exists to the same location as packages.config for super duper easy re-installation
+Function Check-InstallChoco{
+    $CheckICSource = Test-Path $InstallChoco
+	If ($CheckICSource -match "True"){
+	   $CheckICDest = Test-Path $SavePath\InstallChoco.exe
+	   If ($CheckICDest -match "False")
+	      {
+	       Copy-Item $InstallChoco $SavePath -force | out-null
+	      }
+	   }
+    }
+	
 # Write out the saved list of packages to packages.config
 Function Write-PackageConfig{ 
-    Check-SaveLocation    
+    Check-SaveLocation
+	Check-InstallChoco
     Write-Output "<?xml version=`"1.0`" encoding=`"utf-8`"?>" >"$SavePath\$ConfigFile"
     Write-Output "<packages>" >>"$SavePath\$ConfigFile"
-	if ($UseVersions -match "True")
+	if ($SaveVersions -match "True")
 	   {
         choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" />" }>>"$SavePath\$ConfigFile"
 	   } else {
@@ -46,8 +61,8 @@ Function Write-PackageConfig{
 	Write-Host "$SavePath\$ConfigFile SAVED!" -ForegroundColor green 
     }
 
-Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list locally and to the cloud
-Write-Host "Copyleft 2017 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use"
+Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list locally and to the cloud -ForegroundColor white
+Write-Host "Copyleft 2017 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 	
 # Backup Chocolatey package names on local computer to packages.config file in the Documents folder
 if ($UseDocuments -match "True" -and (Test-Path $Env:USERPROFILE\Documents))
@@ -109,6 +124,7 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
 
 Write-Host "TO RE-INSTALL YOUR CHOCOLATEY PACKAGES:" -ForegroundColor magenta 
 Write-Host "Go to the location of your saved packages.config file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
+Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at the e-mail address above." -ForegroundColor white
 
 
 
