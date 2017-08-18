@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original!
+* This may NOT work on Windows 7 / Windows Server 2012. I've added PowerShell v4 as a dependency in hopes it will work.
 * Read the INSTALL EXAMPLES again before use!
 * I personally use and endorse this script/package/program/task/whatever-you-want-to-call-it.
 
