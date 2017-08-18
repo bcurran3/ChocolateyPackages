@@ -1,8 +1,13 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original!
-* Real the INSTALL EXAMPLES again before use!
-* I personally use and endorse this program.
+* Read the INSTALL EXAMPLES again before use!
+* I personally use and endorse this script/package/program/task/whatever-you-want-to-call-it.
+
+ROADMAP:
+* Add options for weekly and monthly instead of only daily.
+* Cancel task to stop after xxx minutes in event of a non-silent package getting "stuck"
+* Possibly drop the leading 0 required for times less than < 10:00 AM
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
