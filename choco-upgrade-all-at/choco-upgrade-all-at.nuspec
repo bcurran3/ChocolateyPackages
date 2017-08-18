@@ -42,7 +42,8 @@ If you have a previous release of **choco-upgrade-all-at** installed, upgrading 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at/readme.md)**
 	</description>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.1.0" />	  
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+	  <dependency id="powershell" version="4.0" />
     </dependencies>
   </metadata>
   <files>
