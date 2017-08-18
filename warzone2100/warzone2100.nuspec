@@ -6,20 +6,21 @@
     <version>3.2.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/warzone2100</packageSourceUrl>
-    <title>Warzone 2100 (Portable)</title>
-    <authors></authors>
+    <title>Warzone 2100 (Install)</title>
+    <authors>buginator, cypr, sendai, the_cybersphinx, vexed-1</authors>
     <projectUrl>https://wz2100.net/</projectUrl>
-    <iconUrl></iconUrl>
-    <copyright></copyright>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/warzone2100/warzone2100_icon.png</iconUrl>
     <licenseUrl>https://github.com/Warzone2100/warzone2100/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Warzone2100/warzone2100</projectSourceUrl>
     <docsUrl>http://betaguide.wz2100.net/</docsUrl>
     <mailingListUrl>http://forums.wz2100.net/</mailingListUrl>
     <bugTrackerUrl>http://developer.wz2100.net/wiki/BugReporting</bugTrackerUrl>
-    <tags> admin</tags>
+    <tags>warzone warzone2100 rts game admin</tags>
     <summary>Warzone 2100 - RTS game with the theme of Strategy by Design</summary>
     <description>
+[Screenshot of Warzone 2100](https://a.fsdn.com/con/app/proj/warzone2100/screenshots/wz2100-20160421_200726-Sk-Mountain.png/1)
+	
 ##Welcome to Warzone 2100!
 
 In Warzone 2100, you command the forces of The Project in a battle to rebuild the world after mankind has almost been destroyed by nuclear missiles.
@@ -30,7 +31,7 @@ Warzone 2100 was originally developed as a commercial game by Pumpkin Studios an
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/warzone2100/readme.md)**	
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://wz2100.net/news/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
