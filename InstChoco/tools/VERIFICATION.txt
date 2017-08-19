@@ -1,0 +1,5 @@
+﻿==================== InstChoco ====================
+
+This InstChoco Chocolatey package was uploaded by the author, Bill Curran aka BCURRAN3.
+
+==================== InstChoco ====================
