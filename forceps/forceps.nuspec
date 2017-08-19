@@ -14,7 +14,7 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>forceps powershell utility portable</tags>
+    <tags>forceps bcurran3 powershell utility portable</tags>
     <summary>ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.</summary>
     <description>
 ![Screenshot of ForcePS](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/forceps/ForcePS_screenshot.png)
