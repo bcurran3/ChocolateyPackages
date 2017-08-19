@@ -17,6 +17,8 @@
     <tags>forceps powershell utility portable</tags>
     <summary>ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.</summary>
     <description>
+![Screenshot of ForcePS](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/forceps/ForcePS_screenshot.png)
+	
 ##ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.
 
 ###No more "File PSscript.ps1 cannot be loaded because running scripts is disabled on this system." messages!
