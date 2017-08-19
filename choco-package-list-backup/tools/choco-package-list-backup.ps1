@@ -12,7 +12,7 @@ $CPLBver        = "2017.08.16" # version of this script
 $ConfigFile     = "packages.config"
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $SaveVersions   = "False" # Specify if you want to save specific version info or not
-$InstallChoco   = "$Env:ChocolateyInstall\lib\installchoco\tools\InstallChoco.exe" # location of InstallChoco.exe if it exists
+$InstChoco      = "$Env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
 
 # Toggle True/False if you want to backup/not backup to the locations below
 $UseDocuments   = "True"
@@ -33,14 +33,14 @@ Function Check-SaveLocation{
      }   
     }
 
-# Copy InstallChoco.exe if it exists to the same location as packages.config for super duper easy re-installation
-Function Check-InstallChoco{
-    $CheckICSource = Test-Path $InstallChoco
+# Copy InstChoco.exe if it exists to the same location as packages.config for super duper easy re-installation
+Function Check-InstChoco{
+    $CheckICSource = Test-Path $InstChoco
 	If ($CheckICSource -match "True"){
-	   $CheckICDest = Test-Path $SavePath\InstallChoco.exe
+	   $CheckICDest = Test-Path $SavePath\InstChoco.exe
 	   If ($CheckICDest -match "False")
 	      {
-	       Copy-Item $InstallChoco $SavePath -force | out-null
+	       Copy-Item $InstChoco $SavePath -force | out-null
 	      }
 	   }
     }
@@ -48,7 +48,7 @@ Function Check-InstallChoco{
 # Write out the saved list of packages to packages.config
 Function Write-PackageConfig{ 
     Check-SaveLocation
-	Check-InstallChoco
+	Check-InstChoco
     Write-Output "<?xml version=`"1.0`" encoding=`"utf-8`"?>" >"$SavePath\$ConfigFile"
     Write-Output "<packages>" >>"$SavePath\$ConfigFile"
 	if ($SaveVersions -match "True")
