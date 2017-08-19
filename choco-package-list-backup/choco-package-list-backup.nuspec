@@ -47,17 +47,17 @@
 * configure what subfolder to save to (default=ChocolateyPackageListBackup)
 * easily add custom locations with no or little scripting experience - just copy, paste, and edit 3 variables
 
-**choco-package-list-backup.ps1** is saved to the Chocolatey's bin folder (\ProgramData\chocolatey\bin), so it's in your path and you can run it from anywhere.
+**choco-package-list-backup.ps1** is saved to the Chocolatey's bin folder (\ProgramData\chocolatey\bin), so it's in your path.
 
-**choco-package-list-backup.ps1** supports copying [InstallChoco](https://chocolatey.org/packages/installchoco) with the packages.config path for the fastest way ever to reinstall Chocolatey and your packages! 
+**choco-package-list-backup.ps1** supports copying [InstChoco](https://chocolatey.org/packages/instchoco) with the packages.config path for the fastest way ever to reinstall Chocolatey and migrate your packages! 
 
 **choco-package-list-backup.ps1** instructions:
 
 * Edit \ProgramData\chocolatey\bin\choco-package-list-backup.ps1 to customize your backup(s). (see comments in file)
 * From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list.
-* From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. (May need path.) 
+* From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list.
 
-**Use choco-package-list-backup along with [ForcePS](https://chocolatey.org/packages/forceps) for easy execution and [InstallChoco](https://chocolatey.org/packages/installchoco) for a complete backup and recovery solution of your Chocolatey packages.**
+**Use choco-package-list-backup along with [ForcePS](https://chocolatey.org/packages/forceps) for easy execution and [InstChoco](https://chocolatey.org/packages/instchoco) for a complete backup and recovery solution of your Chocolatey packages.**
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup/readme.md)**
 	</description>
