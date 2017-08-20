@@ -14,7 +14,7 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>instchoco bcurran3 choco unoffcial standalone portable installer admin</tags>
+    <tags>instchoco bcurran3 choco unoffcial standalone installer portable</tags>
     <summary>InstChoco is a standalone installer for Chocolatey and much more.</summary>
     <description>
 ![Screenshot of InstChoco in use](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
@@ -29,7 +29,7 @@ Features:
 
 * **InstChoco** uses Rob's ["Install with cmd.exe"](https://chocolatey.org/install) method for installing Chocolatey.
 * **InstChoco** integrates with [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) to provide a very convienant way to reinstall Chocolatey and your backed up packages list.
-* **InstChoco** will enable up to three choco features if you pass them as parameters, i.e. allowGlobalConfirmation, failOnAutoUninstaller, allowEmptyChecksums, etc.
+* **InstChoco** will enable up to four choco features if you pass them as parameters, i.e. allowGlobalConfirmation, failOnAutoUninstaller, allowEmptyChecksums, etc.
 * **InstChoco** will automatically run CINST PACKAGES.CONFIG -Y if packages.config is found in the current directory.
 
 You can find **InstChoco.exe** in \programdata\chocolatey\lib\instchoco\tools. I tell you this because I KNOW you want to copy it to your local server, website, Dropbox, USB thumbdrives, and everywhere you can think of so you'll have easy access to it.
