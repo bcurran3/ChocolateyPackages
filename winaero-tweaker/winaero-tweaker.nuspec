@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winaero-tweaker</id>
-    <version>0.7.0.4</version>
+    <version>0.8.0.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winaero-tweaker</packageSourceUrl>
     <title>Winaero Tweaker (Install)</title>
@@ -23,7 +23,7 @@ After years of development, I decided to release an all-in-one application which
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winaero-tweaker/readme.md)**
 	</description>
-    <releaseNotes>http://winaero.com/blog/winaero-tweaker-0-7-0-4-released/</releaseNotes>
+    <releaseNotes>http://winaero.com/blog/winaero-tweaker-0-8-is-out/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
