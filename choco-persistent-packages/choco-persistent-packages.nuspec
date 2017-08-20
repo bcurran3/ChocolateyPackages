@@ -3,41 +3,26 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-persistent-packages</id>
-    <version>0.0.1</version>
+    <version>2017.08.20</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</packageSourceUrl>
-    <title>(unofficial) choco upgrade all at (Task)</title>
-    <authors>bcurran3</authors>
+    <title>(unofficial) choco persistent packages (Task)</title>
+    <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-persistent-packages/choco-persistent-packages_logo.png</iconUrl>
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>unofficial choco upgrade all cup config schtasks scheduled task</tags>
+    <tags>unofficial bcurran3 choco persistent packages schtasks scheduled task</tags>
     <summary>choco-persistent-packages will create a Windows Scheduled Task to upgrade your Chocolatey packages daily</summary>
     <description>
-#DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY DAY? 
-
-#YOU JUST FOUND THE EASY WAY!
-	
-###This package creates a Windows Scheduled Task to run "choco upgrade all -y" every day at a time that you specify
-
-
-If you don't specify a time, it defaults to midnight.
-
-
-###INSTRUCTIONS:
-You can set the time by running **choco install choco-persistent-packages --params "'/Time:XX:XX'"** where XX:XX equals the "Military Time" to run updates. You **must** enter four digits and the colon, i.e. enter a leading 0 for times less than 10 AM. Not entering the correct format will fail the install. Please see the examples.
-
-###INSTALL EXAMPLES:
-* **choco install choco-persistent-packages --params "'/Time:04:00'"** - runs choco upgrade all at 4 AM
-* **choco install choco-persistent-packages --params "'/Time:06:30'"** - runs choco upgrade all at 6:30 AM
-* **choco install choco-persistent-packages --params "'/Time:21:00'"** - runs choco upgrade all at 9 PM
-* **choco install choco-persistent-packages --params "'/Time:23:30'"** - runs choco upgrade all at 11:30 PM
-
-If you have a previous release of **choco-upgrade-all-at** installed, upgrading to a new version will NOT modify your current scheduled task or time.
+# PACKAGE IS 99% DONE - DESCRIPTION AND DOCUMENTATION TO FOLLOW!
+# PACKAGE IS 99% DONE - DESCRIPTION AND DOCUMENTATION TO FOLLOW!
+# PACKAGE IS 99% DONE - DESCRIPTION AND DOCUMENTATION TO FOLLOW!
+# PACKAGE IS 99% DONE - DESCRIPTION AND DOCUMENTATION TO FOLLOW!
+# PACKAGE IS 99% DONE - DESCRIPTION AND DOCUMENTATION TO FOLLOW!
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages/readme.md)**
 	</description>
