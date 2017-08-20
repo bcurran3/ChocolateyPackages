@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</projectSourceUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>bcurran3 choco unofficial package packages.config backup script admin</tags>
+    <tags>bcurran3 choco unofficial package packages.config backup script</tags>
     <summary>Choco (unofficial) Package List Backup to Cloud and Local - a PowerShell script to backup your Chocolatey packages list for easy re-installation</summary>
     <description>
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
