@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.9.0</version>
+    <version>5.9.4</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/arq</packageSourceUrl>				
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.arqbackup.com/documentation/</docsUrl>
     <mailingListUrl>https://www.arqbackup.com/</mailingListUrl>
-    <bugTrackerUrl>https://www.arqbackup.com/download/arq5win_release_notes.html</bugTrackerUrl>
     <tags>arq backup cloud amazon google dropbox onedrive sftp nas trial admin</tags>
     <summary>Back up your files automatically to the cloud</summary>
     <description>
@@ -59,9 +58,9 @@ You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Clou
 **SOCIAL MEDIA:**
 [Twitter](https://twitter.com/arqbackup) | [Blog](https://www.arqbackup.com/blog/)
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/envelope-printer/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/arq/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.arqbackup.com/download/arq5win_release_notes.html</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
     </dependencies>
