@@ -4,7 +4,7 @@
   <metadata>
     <id>kmttg</id>
     <title>kmttg</title>
-    <version>2.3.1</version>
+    <version>2.3.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/kmttg</packageSourceUrl>			
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
@@ -27,6 +27,8 @@ Also has ability to capture video output directly from Slingbox Pro or later mod
 * Also now has capabilty to backup/restore Thumbs ratings
 * Slingbox video output capture capability
 * Use AutoSkip functionality for hands free commercial skipping for your TiVos
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/kmttg/readme.md)**
     </description>
     <projectUrl>https://sourceforge.net/projects/kmttg/</projectUrl>
     <iconUrl>https://fsdn.com/allura/p/kmttg/icon</iconUrl>	
