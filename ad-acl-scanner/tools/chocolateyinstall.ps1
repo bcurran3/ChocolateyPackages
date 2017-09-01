@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'ad-acl-scanner' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://download-codeplex.sec.s-msft.com/Download/Release?ProjectName=adaclscan&DownloadId=1635180&FileTime=131309703369400000&Build=21031'
-$checksum     = '8FCC040FA75E0593372C3F4397F26F0A1B7418A8B69491C08F565F5C566BA6E1'
+$url          = 'https://raw.githubusercontent.com/canix1/ADACLScanner/master/ADACLScan.ps1'
+$checksum     = '534D84F4B46F63DAE278938873787BCA63CF8A2E1C9BFE3168C8DD06C6572D76'
 $fileName     = 'ADACLScan.ps1'
 $shortcutName = 'AD ACL Scanner' 
 $FileFullpath = Join-Path $ToolsDir $fileName
