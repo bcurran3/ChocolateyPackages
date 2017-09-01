@@ -3,18 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskschedulerview</id>
-    <version>1.30</version>
+    <version>1.35</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskschedulerview</packageSourceUrl>
     <title>TaskSchedulerView (Portable)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</projectUrl>
     <iconUrl>http://www.nirsoft.net/utils/taskschedulerview_icon.png</iconUrl>
-    <copyright>Copyright (c) 2015 - 2017 Nir Sofer</copyright>
+    <copyright>Copyright Nir Sofer</copyright>
     <licenseUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>nirsoft taskschedulerview task scheduler utility portable</tags>
-    <summary></summary>
+    <summary>TaskSchedulerView lets you easily view and edit Windows Scheduled Tasks in a GUI.</summary>
     <description>
 ![Screenshot of TaskSchedulerView](http://www.nirsoft.net/utils/taskschedulerview.png)
 	
@@ -23,8 +23,9 @@ TaskSchedulerView is a simple tool for Windows Vista/7/8/10 that displays in a s
 ###System Requirements
 
 This tool works on any version of Windows, starting from Windows Vista and up to Windows 10. Both 32-bit and 64-bit systems are supported. Windows XP and older systems are not supported.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/taskschedulerview/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
