@@ -9,7 +9,7 @@
     <title>8GadgetPack (Install)</title>
     <authors>Helmut Buhler</authors>
     <projectUrl>http://8gadgetpack.net/</projectUrl>
-    <iconUrl></iconUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/8gadgetpack/8GadgetPack_icon.png</iconUrl>	
     <copyright>Copyright © Helmut Buhler</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://8gadgetpack.net/index.html#Howto</docsUrl>
