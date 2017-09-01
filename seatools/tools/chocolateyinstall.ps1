@@ -1,7 +1,8 @@
-﻿$packageName = 'seatools'
+﻿$packageName   = 'seatools'
 $installerType = 'exe'
-$url = 'http://www.seagate.com/files/www-content/support-content/downloads/seatools/_shared/downloads/SeaToolsforWindowsSetup.exe'
-$silentArgs = '/S'
+$url           = 'http://www.seagate.com/files/www-content/support-content/downloads/seatools/_shared/downloads/SeaToolsforWindowsSetup.exe'
+$checksum      = '87C458669F52960A8AC4BCD7578C6830003D874D7C0B425CEDA0B0E1020D8F62'
+$silentArgs    = '/S'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -10,7 +11,7 @@ $packageArgs = @{
   url           = $url
   silentArgs    = $silentArgs
   softwareName  = 'SeaTools*' 
-  checksum      = 'A55E431FEFEAE8D44FE14DD385AF8922F556BDBC6401BF23962FFCE449CA851C'
+  checksum      = $checksum
   checksumType  = 'sha256'  
   }
 Install-ChocolateyPackage @packageArgs
