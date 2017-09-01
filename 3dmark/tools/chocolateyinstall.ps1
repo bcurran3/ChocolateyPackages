@@ -1,24 +1,22 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= '3dmark' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://us1-dl.techpowerup.com/Benchmarking/Futuremark/3DMark-v2-1-2973.zip'
-$silentArgs = '/S'
-$validExitCodes= @(0)
-$fileLocation = "$env:ChocolateyInstall\lib\3dmark\tools\3dmark-setup.exe"
-
-choco --execution-timeout=7200
+$packageName    = '3dmark' 
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'http://akamai-dl.futuremark.com.akamaized.net/3DMark-v2-3-3732.zip'
+$checksum       = '1D7B1F61A44EE141036A94FA88E0F513EB5F1F53F438AA8FEEAA933CFE016909'
+$silentArgs     = '/S'
+$validExitCodes = @(0)
+$fileLocation   = "$toolsDir\3dmark-setup.exe"
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '8BF23AFBCD17F7B5BDD5FB5FC31F21EC0328D5BC136EAD6519F400849A9CEA33'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 
-#Install-ChocolateyZipPackage @packageArgs 
-Install-ChocolateyZipPackage @packageArgs --execution-timeout=7200
+Install-ChocolateyZipPackage @packageArgs 
 
 $packageArgs = @{
   packageName   = $packageName
@@ -29,7 +27,12 @@ $packageArgs = @{
   softwareName  = '3DMark*'
 }
  
-Install-ChocolateyInstallPackage @packageArgs --execution-timeout=7200
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item "$toolsDir\*.exe" | out-null
+Remove-Item "$toolsDir\*.dlc" | out-null
+Remove-Item "$toolsDir\*.msi" | out-null
+Remove-Item "$toolsDir\redist" -recurse | out-null
 
 if((get-process "FMSISvc" -ea SilentlyContinue) -eq $Null){ 
     Write-Host "Futuremark SystemInfo currently NOT running." 
