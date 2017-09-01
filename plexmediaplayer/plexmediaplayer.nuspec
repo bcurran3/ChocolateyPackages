@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>plexmediaplayer</id>
+    <version>2.1.0.74</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexmediaplayer</packageSourceUrl>
+    <title>Plex Media Player for Windows (Install)</title>
+    <authors>Plex</authors>
+    <projectUrl>https://www.plex.tv/apps/computer/plex-media-player/</projectUrl>
+    <iconUrl>https://static.plex.tv/assets/img/googleplus-photo-7fb74a6ebc8a0712691c5592f9de281d1a166d8ece89cf9e5fe662d56f6252be.png</iconUrl>
+    <copyright>Copyright © Plex</copyright>
+    <licenseUrl>https://www.plex.tv/downloads/#remodal-terms</licenseUrl>
+    <docsUrl>https://support.plex.tv/hc/en-us/articles/208050647-Getting-Started</docsUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://forums.plex.tv/</mailingListUrl>
+    <tags>plex plexmediaplayer streaming video music plexmediaserver htpc dlna notsilent</tags>
+    <summary>Plex Media Player is the go-to app for Home Theater PCs (HTPCs) connected to big screen TVs. Your collection of videos, music, and photos never looked so good!</summary>
+    <description>
+![Screenshot of Plex Media Player](https://www.plex.tv/wp-content/uploads/2016/12/image-block-plex-media-player-tv-macbook-1600x958.jpg)
+
+	
+##The ultimate home theater experience
+
+Your HTPC running Plex Media Player gives you the best possible playback experience on a dizzying array of configurations. From PCs to Raspberry Pis to Mac Minis, Plex Media Player is the most powerful, sophisticated way to play media in your home theater. Simple and intuitive controls give you the cleanest, most theater-like viewing experience. Power users and media junkies rejoice!
+
+##Easy to search and browse
+
+Plex Media Player has powerful live search capabilities that allow you to quickly find that movie, show, or song you are looking for. Plex also provides helpful suggestions when you don’t really know what you want.
+
+##Plays anything, anywhere
+
+Plex Media Player gives you both a beautiful HTPC experience and a slick desktop media player experience. Whether you are home or away, you can easily play any file type with the world’s most powerful playback engine. It’s the ultimate media player!
+
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/plexmediaplayer/readme.md)**	
+	</description>
+    <releaseNotes>https://forums.plex.tv/discussion/190085/plex-media-player</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
