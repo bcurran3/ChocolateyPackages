@@ -3,23 +3,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ad-acl-scanner</id>
-    <version>4.8</version>
+    <version>5.4.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ad-acl-scanner</packageSourceUrl>
     <title>AD ACL Scanner (Script)</title>
     <authors>Robin Granberg </authors>
-    <projectUrl>https://adaclscan.codeplex.com/</projectUrl>
-    <iconUrl>http://cache.filehippo.com/img/ex/7530__AD_ACL_SCANNER_ICON_converted.png</iconUrl>
-    <licenseUrl>https://adaclscan.codeplex.com/license</licenseUrl>
+    <projectUrl>https://github.com/canix1/ADACLScanner</projectUrl>
+    <iconUrl>https://social.technet.microsoft.com/wiki/cfs-filesystemfile.ashx/__key/communityserver-components-imagefileviewer/communityserver-wikis-components-files-00-00-00-00-05/5315.powershell_2D00_logo.gif_2D00_550x0.png</iconUrl>
+    <licenseUrl>https://github.com/canix1/ADACLScanner/blob/master/license.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://adaclscan.codeplex.com/SourceControl/list/changesets?branch=master</projectSourceUrl>
-    <docsUrl>https://adaclscan.codeplex.com/documentation</docsUrl>
-    <mailingListUrl>https://adaclscan.codeplex.com/discussions</mailingListUrl>
-    <bugTrackerUrl>https://adaclscan.codeplex.com/workitem/list/basic</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/canix1/ADACLScanner</projectSourceUrl>
+    <docsUrl>https://github.com/canix1/ADACLScanner/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/canix1/ADACLScanner/issues</bugTrackerUrl>
     <tags>ad active directory acl scanner powershell server admin</tags>
     <summary>A tool with GUI used to create reports of access control lists (DACLs) and system access control lists (SACLs) in Active Directory .</summary>
     <description>
-![Screenshot of AD ACL Scanner](https://github.com/bcurran3/ChocolateyPackages/blob/master/ad-acl-scanner/ADACLScan4.7.jpg)	
+![Screenshot of AD ACL Scanner](https://raw.githubusercontent.com/canix1/ADACLScanner/master/src/ADACLScan5.0.jpg)	
+
+
 ####Features
 
 It has the following features:
@@ -64,11 +65,12 @@ It has the following features:
 * PowerShell using a single-threaded apartment
 * Some functions requires Microsoft .NET Framework version 4.0
 
-PACKAGING NOTE: Make sure your PowerShell ExecutionPolicy is set to at least RemoteSigned.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ad-acl-scanner/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/canix1/ADACLScanner/wiki/History</releaseNotes>	
     <dependencies>
       <dependency id="dotnet4.0" />
+      <dependency id="powershell" version="2.0" />	  
     </dependencies>
   </metadata>
   <files>
