@@ -3,20 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>backupper-server</id>
-    <version>4.0.4</version>
+    <version>4.0.5</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/backupper-server</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>AOMEI Backupper Server (Install)</title>
     <authors>AOMEI</authors>
     <projectUrl>http://www.backup-utility.com/server.html</projectUrl>
-    <iconUrl>http://www.aomeitech.com//partners/marketing-material/logo/aomeilogo-jpg.jpg</iconUrl>
+    <iconUrl>http://www.backup-utility.com/images/public/header/aomei-backupper-logo.png</iconUrl>
     <copyright>Copyright © AOMEI</copyright>
     <licenseUrl>http://www.backup-utility.com/terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.backup-utility.com/help/index.html</docsUrl>
     <mailingListUrl>http://www.aomeitech.com/forum/</mailingListUrl>
 	<bugTrackerUrl>http://www.backup-utility.com/changelog.html</bugTrackerUrl>
-    <tags>aomei backupper backup clone restore trial admin</tags>
+    <tags>aomei backupper backup clone restore trial</tags>
     <summary>The Easiest Data Backup and Disaster Recovery Solution for Windows Server Machines</summary>
     <description>
 ![Screenshot of AOMEI Backupper Sserver](http://www.backup-utility.com/icon/aomei-backupper-server-screenshot.jpg)
@@ -41,14 +41,11 @@ What does Backupper Server include?
 * Hot Backup: A technology enables to take a backup without interrupting or shutting down Windows and other running applications.
 * Event-Triggered Scheduling Backups: automatically perform backup tasks in real-time based on user logon, user logoff, system startup and system shutdown.
 
-Compare editions: http://www.backup-utility.com/edition-comparison.html
+30 day free trial. $169.00 to purchase. [Compare editions](http://www.backup-utility.com/edition-comparison.html)
 
-30 day free trial. $169.00 to purchase.
-
-**PACKAGING NOTE1:** This is semi-silent. Uninstall is not silent. Reinstallation via -force and upgrades will most likely fail.
-**PACKAGING NOTE2:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/backupper-server/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.backup-utility.com/changelog.html</releaseNotes>
 	<dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>			
