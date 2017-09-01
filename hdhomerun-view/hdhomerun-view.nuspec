@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hdhomerun-view</id>
-    <version>2016.11.19</version>
+    <version>2017.08.15</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdhomerun-view</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>HDHomeRun View (Install)</title>
@@ -14,19 +14,18 @@
     <licenseUrl>https://www.silicondust.com/support/downloads/gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://www.silicondust.com/forum/index.php</mailingListUrl>
-    <bugTrackerUrl>https://www.silicondust.com/support/downloads/software-changelog/</bugTrackerUrl>
-    <tags>silicondust hdhomerun stream dvr tivo plex atsc tv admin</tags>
-    <summary>HDHomeRun View is a program to view live TV on your PC streamed from a SiliconDust HDHomeRun tuner.</summary>
+    <tags>silicondust hdhomerun stream dvr tivo plex atsc tv</tags>
+    <summary>HDHomeRun View is a program to view live TV on your PC streamed from SiliconDust HDHomeRun tuners.</summary>
     <description>
 ![Screenshot of HDHomeRun View software](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTEbfGLCK6jx8UChqaAEGLW7j8TH3FUb33L0dz5nxxNvMLjJJW5)
 
-HDHomeRun VIEW app
+###HDHomeRun VIEW app
 
 Live TV can be viewed with our own HDHomeRun View app (which is supported on Windows / Mac or Android devices such as phones, tablets, Kindle Fire, FireTV Box, Nvidia Shield and other supported Android TV devices).
 
 Launch the HDHomeRun VIEW application. It should start playing live TV automatically. Click anywhere, tap the screen, press space/up/down, or start typing a search term to bring up the channel list and our patented Channel Slice guide viewer.
 
-Supported Hardware
+**Supported Hardware**
 
 * HDHomeRun PRIME (HDHR3-CC)
 * HDHomeRun CONNECT (HDHR4-2US/2DT)
@@ -34,8 +33,16 @@ Supported Hardware
 * HDHomeRun EXPAND (HDHR3-4DC)
 
 Also includes the HDHomeRun Setup and HDHomeRun Config programs.
+
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/HDHomeRun) | [Twitter](https://twitter.com/HDHomeRun_US) | [YouTube](https://www.youtube.com/channel/UCY-ctaERYcqfPTCoTWDJkyQ) | [Instagram](https://www.instagram.com/hdhomerun_by_silicondust/) | [Google+](https://plus.google.com/explore/HDHomeRun) | [LinkedIn](https://www.linkedin.com/company/2381133/)
+
+**OTHER PLATFORMS:**
+[Android App](https://play.google.com/store/apps/details?id=com.silicondust.view) | [iOS App](https://itunes.apple.com/us/app/hdhomerun/id949582631) | [Windows App](https://www.microsoft.com/en-us/store/p/hdhomerun/9nblggh58vwk) | [Mac Program](http://download.silicondust.com/hdhomerun/hdhomerun_mac.dmg) | [Linux Source](https://www.silicondust.com/support/linux/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hdhomerun-view/readme.md)**
 	</description>
-    <releaseNotes>new version</releaseNotes>
+    <releaseNotes>https://www.silicondust.com/support/downloads/software-changelog/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
