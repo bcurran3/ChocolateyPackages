@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>8gadgetpack</id>
+    <version>23.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8gadgetpack</packageSourceUrl>		
+    <title>8GadgetPack (Install)</title>
+    <authors>Helmut Buhler</authors>
+    <projectUrl>http://8gadgetpack.net/</projectUrl>
+    <iconUrl></iconUrl>	
+    <copyright>Copyright © Helmut Buhler</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://8gadgetpack.net/index.html#Howto</docsUrl>
+    <bugTrackerUrl>http://8gadgetpack.net/index.html#Versionhistory</bugTrackerUrl>
+	<mailingListUrl>http://8gadgetpack.net/newsletter-v1/subscribe.php</mailingListUrl>	
+    <tags>8gadgetpack windows gadgets sidebar</tags>
+    <summary>8GadgetPack brings gadgets back in Windows 10 / 8.1 / 8</summary>
+    <description>
+![Screenshot of 9GadgetPack](http://8gadgetpack.net/Screen8GP.jpg)
+
+###About 8GadgetPack
+
+8GadgetPack makes it possible to use gadgets on Windows 10 / 8.1 / 8.
+
+###FAQ
+Is it free?
+Yes, completely
+
+Should I install the Anniversary Update of Windows 10?
+Yes, most gadgets will work with the current version of 8GadgetPack (v21). If you have an older version installed, simply install the new version to make the gadgets work again.
+
+I didn't really use gadgets previously. Is it really worth installing these?
+You should try it. The gadgets included are really useful when working with the PC. Unlike Metro-Apps gadgets can access useful system-information. The included Clipboard-Manager gadget for example will highly improve your productivity. With the Sidebar gadget, you can make the gadgets visible while working with maximized windows. Monitoring network traffic, setting the volume with one click and having an analog clock visible all the time are things you don't want to give up once you get used to it.
+
+Windows 10 updated and automatically uninstalled 8GadgetPack!
+Older versions of 8GadgetPack wern't compatible. Just reinstall the current version and everything should work.
+
+Win+G on Windows 10 is assigned to the game bar. But I want to use it to access my gadgets!
+Version 15 and later lets you override the shortcut to use it for gadgets. You can control this option in the 8GadgetPack Tools menu.
+
+The gadgets look very tiny, especially on screens with high resolutions. Can they be made bigger?
+Windows 8.1 (and Windows 7 with Internet Explorer 11 installed) introduced a bug that prevented gadgets from scaling properly according to the DPI-setting. In version 13 I was finally able to find a workaround that fixes this. You just need to upgrade to solve this. You can even configure a custom scaling by using the registry files found in "C:\Program Files (x86)\Windows Sidebar\8GadgetPack".
+
+What are the requirements?
+This works on Windows 7 / 8 / 8.1 / 10. Administrative rights are required to install.
+
+Does it work on Windows 7?
+Yes! Version 12 and higher can be installed even on Windows 7. Windows 7 already does have gadgets by default, but this program gives you an easy way to install many high-quality gadgets. It can also bring the gadgets back in case they were disabled or uninstalled. In case you don't like 8GadgetPack you can uninstall it and still use the gadgets provided by Windows 7.
+
+Why is there a sidebar? Windows 7 didn't have one.
+This is actually just a gadget to help you keeping the gadgets organized and visible. You can right-click on it and select "close sidebar" to do so. Even with the sidebar the gadgets can still be moved onto the desktop as you like. Or you can even add more sidebars by adding the gadget "7 Sidebar". This is especially useful when working with multiple monitors. You can also make the sidebar appear automatically when touching the border and customize its design. Right-click on it and select options to do so.
+
+(more on website)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8gadgetpack/readme.md)**
+	</description>
+    <releaseNotes>http://8gadgetpack.net/index.html#Versionhistory</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
