@@ -4,65 +4,49 @@
   <metadata>
     <id>drivermax</id>
     <title>DriverMax (Install)</title>
-    <version>9.32.0.218</version>
+    <version>9.37.0.260</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>			
     <authors>Innovative Solutions</authors>
     <owners>bcurran3</owners>
-    <summary>DriverMax is a new tool that allows you to download the latest driver updates for your computer.</summary>
+    <summary>DriverMax - Update, backup and restore outdated, missing or faulty drivers </summary>
     <description>
 ![alt text](http://www.innovative-sol.com/assets/images/Screenshots/dmx/drivermax-1.PNG)
 
+##Keep your drivers up to date
 
-####What is DriverMax ?
+Update, backup and restore outdated, missing or faulty drivers for more than 2,300,000 devices 
+Get your Nvidia, Intel, Microsoft and Realtek drivers with DriverMax 9
 
-DriverMax is a tool that changes the way you update your computer drivers. Remember how hard it was to search by yourself all the drivers you needed? DriverMax changed that. You no longer have to do this by yourself, DriverMax has got you covered. It scans your computer and identifies missing or outdated/faulty drivers, downloads them and installs them for you.
+##Easy automated update
+DriverMax supports automated installs, scheduled scans, and full device driver backups. It can be set to check for driver updates and download them for you at any time of any day, week, or month. You can find driver updates for 32-bit and 64-bit versions of Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Vista, and Windows XP.
 
-##Who is it for?
+##Increased PC productivity
+Drivers are components that enable the proper functioning of the internal hardware or devices that are connected to the computer. DriverMax reduces system freezes and malfunctions, making for a better performance of your PC by serving you only with the best latest updates.
 
-####Typical computer users
+##Latest version for more than 2,300,000 devices
+DriverMax analyzes your existing drivers and provides the latest versions for over 2,300,000 devices. An intelligent and unique online self-learning technology ensures that only the most appropriate and recent versions are installed.
 
-Having trouble with you USB stick or maybe your webcam isn't working? Are your speakers causing you problems? These issues are usually caused by malfunctioning drivers (the programs that control the operation of devices). DriverMax can fix these problems for you in just a matter of a few clicks.
+##Maximum security for your updates
+DriverMax automatically tests each new driver before installing it on your PC, ensuring its proper functioning. In addition, it backs up the current drivers and creates a system restore point, allowing a quick rollback of the installation. All controllers are scanned thoroughly for viruses and threats before they are provided to users.
 
-####Skilled computer users
-
-Did your computer freeze or slow down, or maybe it's crashing frequently? You might want to update or fix your faulty drivers. You won't be surprised to see how much faster your PC will perform with the help of DriverMax. With DriverMax, you are all set in just a few easy steps.
-
-####Computer technicians
-
-Pinpointing malfunctioning or missing drivers takes a lot of time for a single computer, let alone multiple PCs. DriverMax allows you to download drivers on one PC and then move them to other computers. With DriverMax you can also create backups for drivers even when formatting a computer.
-
-##Why update my system drivers ?
-
-Most of the situations when Windows is running slower are caused by faulty driver installations. Updating your system drivers makes your PC run better by preventing device errors. DriverMax provides you with quicker repairs and with the possibility of removing or updating obsolete driver versions. By doing so, DriverMax helps you ward off conflicts and enhance computer strength.
-
-Because of the fact that Windows stores all versions of older drivers, older versions get mixed up with more recent ones. To avoid that, the DriverMax Export Wizard will only export the drivers you select by copying the needed files to a folder or a compressed ZIP file. DriverMax allows you to export all your current drivers (or just the ones that work ok) to a folder or a compressed file. After reinstalling Windows you will have everything in one place!
-
-DriverMax finds and downloads the best drivers for your PC for:
-
-* Windows 10
-* Windows 8.1
-* Windows 8
-* Windows 7
-* Windows Vista
-* Windows XP
-* Both 64-bit and 32-bit editions of Windows are fully supported.
+**For Windows 10/8.1/8/7/Vista/XP, Windows Server all editions**
 
 ![alt text](http://www.drivermax.com/images/microsoft-certified.png)
 ![alt text](http://www.drivermax.com/images/softpedia.png)
 ![alt text](http://www.drivermax.com/images/cnet-rating.png)
 
+[Free versus paid/PRO comparison](http://www.drivermax.com/download.htm)
 
-### PACKAGING NOTES: 
-* DriverMax is updated VERY frequently. This package will likely fail, based on checksums, within a few days. It is recommended you install with the "--ignore-checksum" option (choco install drivermax --ignore-checksum) to ignore the checksums so the latest version of DriverMax will install even if this package is out of date.
-* The uninstall is 99% silent. When DriverMax uninstalls it will open your default browser and give you an opportunity to buy the PRO version at a reduced rate. There seems to be no way around it. 
-* Please post a DISQUS comment or on GitHub if you find this package out of date and I will upload a new package with the new checksum.
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/DriverMax-Software-Community-133223258991/) | [Google+](https://plus.google.com/u/0/105403154521904418668)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/drivermax/readme.md)**
     </description>
     <projectUrl>http://www.drivermax.com/</projectUrl>
-    <tags>drivermax drivers updater system utility admin</tags>
-    <copyright>Innovative Solutions</copyright>
-    <licenseUrl>http://www.drivermax.com/</licenseUrl>
+    <tags>innovativesolutions drivermax drivers updater system utility admin</tags>
+    <copyright>Copyright by Innovative Solutions. All Rights Reserved.</copyright>
+    <licenseUrl>http://www.drivermax.com/terms_and_conditions.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.drivermax.com/images/dmax.png</iconUrl>
-	<releaseNotes>Updated uninstall script to check for x86/x64 installs!</releaseNotes>
   </metadata>
 </package>
