@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'allway-sync' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://allwaysync.com/content/download/allwaysync-17-1-3.exe'
-$checksum    = '13F7279EEA696F8EB0077A960F957ACF91C38B128B5F3FF56C98B89699E23EAE'
-$url64       = 'https://allwaysync.com/content/download/allwaysync-x64-17-1-3.exe'
-$checksum64  = '3D5E2C11468152601C13806408EAE57B72A1AEA2276EB24BB94AD75E54F19DF3'
+$url         = 'https://allwaysync.com/content/download/allwaysync-17-2-8.exe'
+$checksum    = 'DE721B43A89DFB4CC2F016A5E6EA295F0F8EB2EFF59898B6218C5D3478D08009'
+$url64       = 'https://allwaysync.com/content/download/allwaysync-x64-17-2-8.exe'
+$checksum64  = '73EF2F702D5EDB08B0D9EE788B1B1044B5AD0FAE8DDD1E898AB524C237F8D91F'
 $silentArgs  = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
 
 $packageArgs = @{
