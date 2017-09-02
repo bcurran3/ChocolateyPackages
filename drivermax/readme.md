@@ -1,8 +1,9 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the proram released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
-* At some point in the future this package will be setup for creation by Auto Update (when I figure it out) which will solve the above problem.
-* Uninstall is 99% silent. When DriverMax uninstalls it will open your default browser and give you an opportunity to buy the PRO version at a reduced rate. There seems to be no way around it.
+* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* This has been tested with TVST (HD-TVI) and XVST (HD-SDI) MAGIC Series DVRs. It probably will work with UVST (EX-SDI) MAGIC Series DVRs as well.
+* There are many OEM versions of this program. This one is probably specific to http://unixcctv.com/ and http://www.magicdvr.com/
+* I personally use and endorse this program.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
