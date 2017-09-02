@@ -4,26 +4,32 @@
   <metadata>
     <id>allway-sync</id>
     <title>allway-sync (Install)</title>
-    <version>17.1.3</version>
+    <version>17.2.8</version>
     <authors>Botkind, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allway-sync</packageSourceUrl>		
-    <summary>File synchronization that works.</summary>
+    <summary>Allway Sync - File synchronization that works.</summary>
     <description>
 ![Screenshot of Allway Sync](http://allwaysync.com/content/img/screenshots/sync.png)
 
 Allway Sync uses innovative synchronization algorithms to synchronize your data between desktop PCs, laptops, USB drives, remote FTP/SFTP and WebDAV servers, various online data storages and more. Data compression and encryption are supported. It combines bulletproof reliability with extremely easy-to-use interface. Allway Sync also can synchronize your PC data with a Mac via Sync Gateway.
+
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/AllwaySync)
+
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/allway-sync/readme.md)**
     </description>
     <projectUrl>http://allwaysync.com/</projectUrl>
     <docsUrl>http://allwaysync.com/support/faq</docsUrl>
     <mailingListUrl>http://allwaysync.com/support/</mailingListUrl>
-    <bugTrackerUrl>http://allwaysync.com/news</bugTrackerUrl>
-    <tags>allwaysync backup synchronization synchronize admin</tags>
-    <copyright>© 2004–2009 Usov Lab, 2009–2016 Botkind, Inc. All rights reserved.</copyright>
+    <bugTrackerUrl>https://syncapp.com/php/stss/main</bugTrackerUrl>
+    <tags>allwaysync backup synchronization synchronize</tags>
+    <copyright>© Usov Lab, Botkind, Inc. All rights reserved.</copyright>
     <licenseUrl>http://allwaysync.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://allwaysync.com/themes/allwaysync/img/logo.png</iconUrl>
-    <releaseNotes>added checksums</releaseNotes>
+    <releaseNotes>https://allwaysync.com/news</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
