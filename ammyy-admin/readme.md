@@ -1,11 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* DISCLAIMER: This package uses an AutoHotKey script to attempt automatic installation of the program. I have done my best to make this work for the majority, there are always a number of x-factors that can cause a 'hiccup.' Some events are timed and may timeout and thus fail on slower than expected systems. It is HIGHLY RECOMMENDED that you monitor the installation of this package to make sure it worked/installed correctly in your environment. There are situations such as upgrades and forced reinstalls that may not work and you will have to manually enter input to get the desired result. If you report an issue in GitHub and the program is in active development, I will try to enhance the AHK script and this package in the future.
 * Binary is included in the package. 
-* Almost silent install: program will open up your default web browser to a setup and usage page. Sorry, I don't know how to get around this at the moment.
-* Shark007's Advanced Codecs is updated by the author on average of twice a week. I tend to update this package once a week. If a newer version of Shark007's Advanced Codecs has been released, you might be prompted to download the newer version during installation. This currently isn't handled by the AutoHotKey script but I will add logic for it as soon as I have time.
-* Uninstall is NOT silent.
-* I personally use and endorse this program.
+* BE CAREFUL with this, I know people who have been hacked. READ the warning in the package description.
+* I personally (sometimes) use and endorse this program.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
