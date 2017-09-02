@@ -9,6 +9,5 @@ else{
   Start-Sleep -s 2
 }
 
-Uninstall-ChocolateyZipPackage
 remove-item "$env:Public\Desktop\Ammyy Admin.lnk" -Force -ErrorAction 'SilentlyContinue'
 remove-item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Ammyy Admin.lnk" -Force -ErrorAction 'SilentlyContinue'

@@ -1,0 +1,7 @@
+﻿==================== Ammyy Admin ====================
+
+bcurran3 downloads and packages the executable for Ammyy Admin from http://www.ammyy.com/en/ (using Internet Explorer).
+
+The AA_v3.exe sha256 checksum is D67C7EF1C8E2CD56E266902BEF814AC328D64BBE06086F4EE24FBADBEBF39605
+
+==================== Ammyy Admin ====================
