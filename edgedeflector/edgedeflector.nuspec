@@ -3,21 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>edgedeflector</id>
-    <version>1.0.1.20170519</version>
+    <version>1.1.1.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/edgedeflector</packageSourceUrl>
     <title>EdgeDeflector (Install)</title>
     <authors>Daniel Aleksandersen</authors>
     <projectUrl>https://github.com/da2x/EdgeDeflector/releases</projectUrl>
     <iconUrl>https://github.com/da2x/EdgeDeflector/blob/master/EdgeDeflector/Icon.ico</iconUrl>
-    <copyright>Copyright © 2017 Daniel Aleksandersen</copyright>
+    <copyright>Copyright © Daniel Aleksandersen</copyright>
     <licenseUrl>https://github.com/da2x/EdgeDeflector/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/da2x/EdgeDeflector</projectSourceUrl>
     <docsUrl>https://github.com/da2x/EdgeDeflector/blob/master/README.md</docsUrl>
     <mailingListUrl>https://github.com/da2x/EdgeDeflector/releases.atom</mailingListUrl>
     <bugTrackerUrl>https://github.com/da2x/EdgeDeflector/issues</bugTrackerUrl>
-    <tags>edgedeflector cortana edge chrome firefox opera admin</tags>
+    <tags>edgedeflector cortana edge chrome firefox opera</tags>
     <summary>Change Windows 10's Cortana to use other browsers.</summary>
     <description>
 ###EdgeDeflector
