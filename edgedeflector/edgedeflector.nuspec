@@ -9,7 +9,7 @@
     <title>EdgeDeflector (Install)</title>
     <authors>Daniel Aleksandersen</authors>
     <projectUrl>https://github.com/da2x/EdgeDeflector/releases</projectUrl>
-    <iconUrl>https://github.com/da2x/EdgeDeflector/blob/master/EdgeDeflector/Icon.ico</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/edgedeflector/EdgeDeflector_icon.png</iconUrl>
     <copyright>Copyright © Daniel Aleksandersen</copyright>
     <licenseUrl>https://github.com/da2x/EdgeDeflector/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -44,11 +44,12 @@ If EdgeDeflector isn’t listed in either locations, try running it one more tim
 You don’t need to specify your browser of choice in EdgeDeflector. It will pick up on the system configured default from Windows Settings app: Apps: Default apps: Web browser.
 
 ARTICLES/REVIEWS:
-http://www.makeuseof.com/tag/force-cortana-use-chrome-google-windows-10/
-https://ctrl.blog/entry/edgedeflector-default-browser
+[How to Force Cortana to Use Chrome &amp; Google in Windows 10](http://www.makeuseof.com/tag/force-cortana-use-chrome-google-windows-10/)
+[Open links force-opened in Microsoft Edge in your default browser](https://ctrl.blog/entry/edgedeflector-default-browser)
 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/edgedeflector/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/da2x/EdgeDeflector/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
