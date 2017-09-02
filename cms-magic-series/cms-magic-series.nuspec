@@ -10,16 +10,18 @@
     <authors>Unknown/Unbranded</authors>
     <projectUrl>http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/cms-magic-series/cms-magic-series_icon.png</iconUrl>
     <docsUrl>http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/MANUAL/CMS_ENG_1050_01.pdf</docsUrl>
-    <tags>cms central management system cctv magic dvr admin</tags>
+    <tags>cms central management system cctv magic dvr</tags>
     <summary>CMS is a remote viewing program for MAGIC Series DVRs.</summary>
     <description>
-The Windows Central Management Software for MAGIC Series DVRs allows users to connect to and view security cameras from multiple DVR locations from a central client application. The software lets the user configure groups of connections, then picks and choose which cameras should be displayed.
+![Screenshot of CMS](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/cms-magic-series/cms-magic-series_screenshot.png)
 
-NOTE: This has been tested with TVST (HD-TVI) and XVST (HD-SDI) MAGIC Series DVRs. It probably will work with UVST (EX-SDI) MAGIC Series DVRs as well.
+	
+The Windows Central Management Software for [MAGIC Series](http://www.magicdvr.com/) DVRs allows users to connect to and view security cameras from multiple DVR locations from a central client application. The software lets the user configure groups of connections, then picks and choose which cameras should be displayed.
 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/cms-magic-series/readme.md)**
 	</description>
-    <releaseNotes>There are many OEM versions of this program. This one is probably specific to http://unixcctv.com/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
