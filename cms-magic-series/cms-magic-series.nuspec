@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cms-magic-series</id>
-    <version>2.2.3.2027</version>
+    <version>2.2.4.2028</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/cms-magic-series</packageSourceUrl>			
     <owners>bcurran3</owners>
     <title>CMS (Central Management System) for MAGIC Series DVRs (Install)</title>
