@@ -1,9 +1,9 @@
-﻿#http://us2-dl.techpowerup.com/files/FgPOUfUxTgURn3uKd9sALQ/1502168858/GPU-Z.2.2.0.exe
+﻿#http://us2-dl.techpowerup.com/files/MAbyJ5IKUWmuG5VAXVL3uQ/1504659091/GPU-Z.2.3.0.exe
 
 $packageName      = 'gpu-z'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $exeFile          = "GPU-Z.2.2.0.exe"
-$checksum         = '81BEA70BF1308D508E87929D2EB32718012DA277191F8A1D61347E50EBE73F6F'
+$checksum         = 'FDD4CD909CDCF27512F5B9F3F01B1BABB10FC6A43321DF352A062684C10F026B'
 $url              = "$toolsDir\$exeFile"
 
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\GPU-Z.lnk" -targetPath $url
