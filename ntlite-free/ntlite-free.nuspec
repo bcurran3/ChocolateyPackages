@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntlite-free</id>
-    <version>1.3.1.5060</version>
+    <version>1.4.0.5537</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
     <title>NTLite (Free) (Install)</title>
@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.ntlite.com/support/</docsUrl>
     <mailingListUrl>https://www.ntlite.com/discussions/#/categories</mailingListUrl>
-    <bugTrackerUrl>https://www.ntlite.com/changelog/</bugTrackerUrl>
     <tags>nlitesoft ntlite windows depoyment admin</tags>
     <summary>Windows deployment tool</summary>
     <description>
@@ -52,9 +51,9 @@ Next to editing images, you can also do the same actions on your existing Window
 More details at: https://www.ntlite.com/features/
 See license link for Free, Home, Professional, and Business version comparisons.
 
-PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ntlite-free/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.ntlite.com/changelog/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
