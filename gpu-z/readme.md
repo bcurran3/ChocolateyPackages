@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* The GPU-Z binary is included. This package will make an icon on your desktop. It does not actually "install." When you run GPU-Z it will give you the option to install or run stand-alone.
+* The GPU-Z binary is included in the package. When you run GPU-Z it will give you the option to run stand-alone or install.
 * I personally endorse this program.
 
 
