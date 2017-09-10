@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nfopad.portable</id>
-    <version>1.72</version>
+    <version>1.73</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nfopad.portable</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>NFOPad (Portable)</title>
@@ -61,8 +61,10 @@ Not allowing NFOPad to write to the registry will disable some features, such as
 
 ###Changing NFOPad's language without writing to the registry
 NFOPad will default to use the language of the country selected in Windows. If you want to use a different language go to the installation directory of NFOPad and rename the language files so the desired one is loaded.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/nfopad.portable/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.truehumandesign.se/s_nfopad.php#versionhistory</releaseNotes>
     <tags>true human design nfopad nfo portable</tags>
   </metadata>
 </package>

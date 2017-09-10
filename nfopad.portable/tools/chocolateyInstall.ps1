@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'nfopad.portable'
 $installerType = 'ZIP'
-$url           = 'http://truehumandesign.se/download/nfopad172portable.rar'
-$checksum      = '664D0475820BAC33AF2429883D76305CEF3D5DBEB4311140371DDE7008067E30'
+$url           = 'http://www.truehumandesign.se/download/nfopad173portable.rar'
+$checksum      = 'B9449D03A2C4B3BD95A5FAF35202BF87C88314ADB7B3C8B06E0D39EC9258AD0B'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 

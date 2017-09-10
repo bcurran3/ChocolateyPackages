@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'nfopad'
-$installerType = 'exe'
-$silentArgs = '/S'
-$url        = 'http://truehumandesign.se/download/nfopad172.exe'
-$checksum   = 'A0ABA03BADFAE16A0D5DA0C5055591356F04768BBDAA31A4A817810E276D1AB4'
-$validExitCodes= @(0)
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$packageName    = 'nfopad'
+$url            = 'http://www.truehumandesign.se/download/nfopad173.exe'
+$checksum       = '6971B749A07EAEE9748995DDD4E70426F26F331731D4D0D0F98D13A7612C2ED3'
+$installerType  = 'exe'
+$silentArgs     = '/S'
+$validExitCodes = @(0)
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 
 $packageArgs = @{
