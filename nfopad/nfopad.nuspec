@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>nfopad</id>
-    <version>1.72</version>
+    <version>1.73</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nfopad</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>NFOPad (Install)</title>
@@ -48,8 +48,10 @@ Features:
 * Always on top option
 * Word wrap option
 * MS Notepad's .LOG functionality
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/nfopad/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.truehumandesign.se/s_nfopad.php#versionhistory</releaseNotes>
     <tags>true human design nfopad nfo admin</tags>
   </metadata>
 </package>
