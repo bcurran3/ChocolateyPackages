@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-driver-update-utility</id>
-    <version>2.8.2.2</version>
+    <version>2.9.0.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-driver-update-utility</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Intel® Driver Update Utility (Install)</title>
@@ -18,7 +18,10 @@
     <tags>duu intel chipset driver update utility admin</tags>
     <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
     <description>
-Purpose
+![Screenshot of Intel Driver Update Utility](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-driver-update-utility/intel-driver-update-utility_screenshot.png)	
+
+
+##Purpose
 
 The Intel® Driver Update Utility (Intel® DUU)  enables users to scan their computing devices for the latest drivers available from Intel.
 
@@ -30,7 +33,7 @@ Required to install and use utility
 * Operating system requirements for installation: This application installs on Windows* 7, Windows 8, Windows 8.1, and Windows® 10
 * We recommend to perform a Windows update to bring your operating system up to date with the latest .NET
 
-PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-driver-update-utility/readme.md)**
 </description>
     <releaseNotes>https://downloadcenter.intel.com/download/24345/Intel-Driver-Update-Utility</releaseNotes>
 	<dependencies>
