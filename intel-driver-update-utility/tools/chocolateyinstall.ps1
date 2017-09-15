@@ -1,7 +1,7 @@
 ﻿$packageName    = 'intel-driver-update-utility'
 $installerType  = 'exe'
 $url            = 'https://downloadmirror.intel.com/24345/a08/Intel%20Driver%20Update%20Utility%20Installer.exe'
-$checksum       = 'F94090EE64D2F8A9BE2D21BFA3430EC7823B4C6B1D5B6287429F754CB5DB6044'
+$checksum       = '5EFA70CF6E2BCD90A74EF91671967A3668C62175D14FA8F34CACCEE170025F2D'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $silentArgs     = '/q /norestart'
 $validExitCodes = @(0)
