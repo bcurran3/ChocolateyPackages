@@ -2,7 +2,7 @@
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installerType  = 'EXE'
 $url            = 'http://www.aomeisoftware.com/download/adb/ABServer.exe'
-$checksum       = 'C9369853EB6F138E800575D60A62AFE6C1DD513744D6CA3B452C53A365B43925'
+$checksum       = 'C51DA3805BF87D01B5F89722169B5A732F66D6AECC1E9E57A6E24715864945E7'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0,1)
 $ahkExe         = 'AutoHotKey'
