@@ -1,7 +1,7 @@
 ﻿$packageName = 'siv' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\siv.zip"
-$checksum    = 'FB8BDD6B5C9C25DECBE0E9E34A6A496ED6CBB569248D436869B09393C8CCEF46'
+$checksum    = '150A3E21F814BF5C9EE32916A1BF735A8AB3EE6B5E0795EED1A07D793A6CB2D1'
 $bits        = Get-ProcessorBits
 
 
@@ -24,3 +24,5 @@ if ($bits -eq 64)
     Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\SIV.lnk" -targetPath "$toolsDir\SIV32X.exe" -WorkingDirectory "$toolsDir"
     Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\SIV.lnk" -targetPath "$toolsDir\SIV32X.exe"       
     }
+
+Remove-Item $url | out-null
