@@ -15,7 +15,7 @@
     <docsUrl>https://support.plex.tv/hc/en-us/articles/208050647-Getting-Started</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://forums.plex.tv/</mailingListUrl>
-    <tags>plex plexmediaplayer streaming video music plexmediaserver htpc dlna notsilent</tags>
+    <tags>plex plexmediaplayer streaming video music plexmediaserver htpc dlna</tags>
     <summary>Plex Media Player is the go-to app for Home Theater PCs (HTPCs) connected to big screen TVs. Your collection of videos, music, and photos never looked so good!</summary>
     <description>
 ![Screenshot of Plex Media Player](https://www.plex.tv/wp-content/uploads/2016/12/image-block-plex-media-player-tv-macbook-1600x958.jpg)
@@ -41,6 +41,9 @@ Plex Media Player gives you both a beautiful HTPC experience and a slick desktop
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/plexmediaplayer/readme.md)**	
 	</description>
     <releaseNotes>https://forums.plex.tv/discussion/190085/plex-media-player</releaseNotes>
+	<dependencies>
+      <dependency id="KB2919355" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
