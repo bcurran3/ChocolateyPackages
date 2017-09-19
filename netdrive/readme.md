@@ -3,10 +3,6 @@
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 
 
-ROADMAP:
-* Make an AutoHotkey script for uninstall
-
-
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
