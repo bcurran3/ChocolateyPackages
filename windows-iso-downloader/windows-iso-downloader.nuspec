@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>windows-iso-downloader</id>
+    <version>5.20</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-iso-downloader</packageSourceUrl>
+    <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>
+    <authors>Jan Krohn</authors>
+    <projectUrl>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool</projectUrl>
+    <iconUrl></iconUrl>
+    <copyright>Copyright © HeiDoc.net</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&start=4</docsUrl>
+    <mailingListUrl>https://heidoc.net/mailman/listinfo/win-iso_heidoc.net</mailingListUrl>
+    <bugTrackerUrl>https://www.wincert.net/forum/index.php?/forum/227-windows-iso-downloader/</bugTrackerUrl>
+    <tags>microsoft windows office iso admin</tags>
+    <summary></summary>
+    <description>
+![screenshot of Microsoft Windows and Office ISO Download Tool](https://www.heidoc.net/joomla/images/microsoft/win-downloader.jpg)	
+
+This tool allows an easy and comfortable way to download genuine Windows 7, Windows 8.1 and Windows 10 disk images (ISO) directly from Microsoft's servers, as well as Office 2007, Office 2010, Office 2013, Office 2016, and Office for Mac.
+
+In the past, Microsoft provided disk images for many of their products through their subcontractor "Digital River". These downloads were pulled in early 2014. Afterwards, Microsoft made a limited selection of downloads available on their TechBench site. Our tool accesses that TechBench site, and unlocks a large number of hidden download files on it.	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-iso-downloader/readme.md)**	
+	</description>
+    <releaseNotes>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&start=1</releaseNotes>
+    <dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
