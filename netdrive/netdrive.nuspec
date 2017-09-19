@@ -3,25 +3,28 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>netdrive</id>
-    <version>2.6.17.965</version>
+    <version>3.1.205</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netdrive</packageSourceUrl>			
     <owners>bcurran3</owners>
     <title>NetDrive (Install)</title>
     <authors>Bdrive Inc.</authors>
     <projectUrl>https://www.netdrive.net/</projectUrl>
-    <iconUrl>https://netdrive.net/img/logo-netdrive2.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/netdrive/NetDrive_icon.png</iconUrl>
     <copyright>Copyright © 2015 Bdrive Inc.</copyright>
     <licenseUrl>https://www.netdrive.net/NetDrive-terms.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.netdrive.net/knowledgebase</docsUrl>
-    <bugTrackerUrl>http://www.netdrive.net/download/changelog.html</bugTrackerUrl>
     <tags>netdrive net drive amazon box dropbox ftp google hubic onedrive openstack owncloud webdav owncloud android airdrive admin</tags>
     <summary>NetDrive - The Network Drive for Windows</summary>
     <description>
-![Screenshot of NetDrive](https://www.netdrive.net/images2/img3.jpg)
+![Screenshot of NetDrive](https://www.netdrive.net/static/netdrive_www/images/nd3_ui_A.png)
 
-##NetDrive - The Network Drive for Windows
+##NetDrive 3 - The Network Drive for Windows
 
+* New user interface
+* Mount at boot up without login
+* Faster than NetDrive 2 and stable as before!
+* Background uploading and read-only drive option
 * Direct access to cloud storage from your desktop
 * Manage FTP, WebDAV and NAS servers as virtual drives
 * Connect Google Drive, Dropbox and more
@@ -61,8 +64,13 @@ Microsoft Windows 10, Windows 8, Windows 8.1, Windows 7, Windows Vista, Windows 
 ####You can freely download and install NetDrive on your computer for evaluation during the 30-day trial period.
 ####Even after the trial period, you can continue using NetDrive but NetDrive will be limited to mount only one network drive, limited transfer speed and a banner will be displayed over the windows explorer indicating the trial is over.
 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/netdrive/readme.md)**	
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://accounts.bdrive.com/product_history/NetDrive3/</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2012"/>
+      <dependency id="vcredist140"/>	  
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

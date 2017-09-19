@@ -1,20 +1,35 @@
 ﻿$packageName    = 'netdrive'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://files.netdrive.net/build/NetDrive2_Setup_2_6_17_965.exe' 
-$checksum       = '9EC7FB0E5169D4EFD62CBEB7562BD723469CEC6790F89F7AF08859EFB57D89C6'
+$url            = 'http://files.bdrive.com/netdrive/builds/NetDrive3_Setup-3.1.205.exe' 
+$checksum       = 'BD09B374F86229F6E8C5739263AB89A83900BBBF248BCEB46CD092616DE34234'
 $silentArgs     = "/S"
 $validExitCodes = @(0,1223)
+$extractDir      = "$toolsDir\extracted"
+$fileLocation    = "$extractDir\NetDrive3.msi"
+
+New-Item $extractDir -type directory
 
 $packageArgs = @{
   packageName   = $packageName
-  fileType      = $installerType
+  unzipLocation = $extractDir
+  fileType      = 'ZIP' 
   url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = 'NetDrive2*'
   checksum      = $checksum
-  checksumType  = 'sha256' 
+  checksumType  = 'sha256'
 }
 
-Install-ChocolateyPackage @packageArgs  
+Install-ChocolateyZipPackage @packageArgs 
+
+$packageArgs = @{
+  packageName   = $packageName
+  fileType      = 'MSI'
+  file          = $fileLocation
+  silentArgs    = $silentArgs
+  validExitCodes= $validExitCodes
+  softwareName  = 'NetDrive*'
+}
+ 
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item $extractDir -recurse | out-null
