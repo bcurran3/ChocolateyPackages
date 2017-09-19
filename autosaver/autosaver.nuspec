@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>autosaver</id>
+    <version>3.0.1.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/autosaver</packageSourceUrl>
+    <title>AutoSaver (Portable)</title>
+    <authors>Kishan Bagaria</authors>
+    <projectUrl>http://www.door2windows.com/autosaver-save-the-file-you-are-working-on-automatically/</projectUrl>
+    <iconUrl></iconUrl>
+    <copyright>Kishan Bagaria door2windows</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl></mailingListUrl>
+    <tags>door2windows autosaver utility portable</tags>
+    <summary>AutoSaver - Automatically Save The File You're Working On</summary>
+    <description>
+![screenshot of AutoSaver](http://www.door2windows.com/files/AutoSaver.png)
+
+AutoSaver is a freeware from door2windows that automatically keeps pressing CTRL + S for you after an interval of time (like every minute). You never have to worry about forgetting to save a file again.	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/autosaver/readme.md)**	
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
