@@ -3,18 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stinger</id>
-    <version>12.1.0.2418</version>
+    <version>12.1.0.2497</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/stinger</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>McAfee Stinger (Portable)</title>
     <authors>McAfee Labs</authors>
     <projectUrl>http://www.mcafee.com/us/downloads/free-tools/stinger.aspx</projectUrl>
-    <iconUrl>https://www.mcafee.com/img/rwd/logo-intel-security-2.png</iconUrl>
-    <copyright>Copyright 2016 McAfee, Inc.</copyright>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/stinger/stinger_icon.png</iconUrl>
+    <copyright>Copyright McAfee, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.mcafee.com/us/downloads/free-tools/how-to-use-stinger.aspx</docsUrl>
     <mailingListUrl>https://support.mcafee.com/ServicePortal</mailingListUrl>
-    <bugTrackerUrl>http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/Readme.txt</bugTrackerUrl>
     <tags>mcafee stinger virus removal tool portable</tags>
     <summary>McAfee Stinger is a standalone utility used to detect and remove specific viruses.</summary>
     <description>
@@ -24,9 +23,9 @@ McAfee Stinger is a standalone utility used to detect and remove specific viruse
 
 Stinger now includes Real Protect - a real-time behavior detection technology that monitors suspicious activity on an endpoint. Real Protect leverages machine learning and automated behavioral based classification in the cloud to detect zero-day malware in real-time.
 
-PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the new version in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/stinger/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/Readme.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
