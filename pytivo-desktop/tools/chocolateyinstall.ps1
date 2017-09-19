@@ -1,7 +1,7 @@
 ﻿$packageName    = 'pytivo-desktop'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://www.pytivodesktop.com/win32/pyTivo_1.6.15.exe'
-$checksum       = 'D58F3B3D9BBEF769D877043D973644E1DCD923C7F87CF2B744435D23B04DC5D2'
+$url            = 'http://www.pytivodesktop.com/win32/pyTivo_1.6.16.exe'
+$checksum       = '97D84F8CBE73CB78AD01E46B12FF544A602A82F1FF69BB46BB28AAE60747FB5B'
 $validExitCodes = @(0)
 $bits           = Get-ProcessorBits
 $ahkExe         = 'AutoHotKey'
