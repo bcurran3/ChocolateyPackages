@@ -9,10 +9,9 @@
     <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>
     <authors>Jan Krohn</authors>
     <projectUrl>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/windows-iso-downloader/windows-iso-downloader_icon.png</iconUrl>
     <copyright>Copyright © HeiDoc.net</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&start=4</docsUrl>
     <mailingListUrl>https://heidoc.net/mailman/listinfo/win-iso_heidoc.net</mailingListUrl>
     <bugTrackerUrl>https://www.wincert.net/forum/index.php?/forum/227-windows-iso-downloader/</bugTrackerUrl>
     <tags>microsoft windows office iso admin</tags>
@@ -26,14 +25,9 @@ In the past, Microsoft provided disk images for many of their products through t
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-iso-downloader/readme.md)**	
 	</description>
-    <releaseNotes>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&start=1</releaseNotes>
+    <releaseNotes>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&amp;start=1</releaseNotes>
     <dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-uninstall.extension" />
+      <dependency id="dotnet4.6.1" />
     </dependencies>
   </metadata>
   <files>
