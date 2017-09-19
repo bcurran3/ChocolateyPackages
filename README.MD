@@ -12,8 +12,8 @@ Find them useful?
 
 SPECIALTIES / TOP PRIORITY:
 * Everything and anything I use!
-* Technican Tools: Admin Tools, Diagnostic Tools, Network Tools, Security Tools, System Management
-* BIG guys: Amazon, Dell, Google, HP, Intel, Microsoft
-* Smart Home/Multimedia: Hue, Plex, Insteon, Nest, Squeezebox, TiVo, WeMo
-* Anything Android on Windows.
+* Technican Tools: Admin Tools, Diagnostic Tools, Network Tools, Security Tools, System Management, etc.
+* BIG guys: Amazon, Dell, Google, HP, Intel, Microsoft, NETGEAR
+* Smart Home/Multimedia/Server: Hue, Plex, Insteon, Nest, Squeezebox, TiVo, WeMo, syncing software, etc.
+* Anything Android related on Windows.
 
