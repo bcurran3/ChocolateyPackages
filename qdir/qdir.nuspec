@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>6.58</version>
+    <version>6.69.1</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg</authors>
     <copyright>by Nenad Hrg softwareok.de</copyright>	
@@ -29,7 +29,7 @@ One can save many hand moves and also time!
 
 Q-Dir does not have to be installed and can be executed easily from the desktop, and can be carried on a small usb-stick or other memory device. 	
 
-PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the new version in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/qdir/readme.md)**
 	</description>
     <summary>The file management in Q-Dir is based on MS Windows Explorer but 4x plus Tabs and with more functionality!</summary>
     <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
