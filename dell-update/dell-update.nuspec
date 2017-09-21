@@ -3,18 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>1.9.20.0</version>
+    <version>1.9.40.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>			
     <title>Dell Update (Install)</title>
     <authors>Dell Inc.</authors>
     <projectUrl>https://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=31YHC</projectUrl>
-    <iconUrl>https://si.cdn.dell.com/images/global/brand/ui/logo-wt-bl.png</iconUrl>
-    <copyright>(c) 2005-2015 Dell Inc.</copyright>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
+    <copyright>(c) Dell Inc.</copyright>
     <licenseUrl>http://www.dell.com/learn/us/en/uscorp1/legal~terms-conditions~en/documents~dell-emc-sw-eula.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>dell update dup admin</tags>
-    <summary>This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</summary>
+    <tags>dell update dup</tags>
+    <summary>Dell Update supports Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</summary>
     <description>
 This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10. 
 
@@ -30,6 +30,8 @@ Dell Update automates the installation of driver and application updates specifi
 * Expanded compatibility.
 
 A list of support devices can be found [here](https://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=31YHC).
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     </description>
     <releaseNotes></releaseNotes>
   </metadata>
