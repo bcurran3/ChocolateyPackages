@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntlite-free</id>
-    <version>1.4.0.5537</version>
+    <version>1.4.1.5590</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
     <title>NTLite (Free) (Install)</title>
     <authors>Nlitesoft</authors>
     <projectUrl>https://www.ntlite.com/</projectUrl>
-    <iconUrl>https://www.ntlite.com/wp-content/uploads/2014/10/72-web-logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/ntlite-free/ntlite-free_icon.png</iconUrl>
     <copyright>© 2014-2017 Nlitesoft</copyright>
     <licenseUrl>https://www.ntlite.com/shop/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
