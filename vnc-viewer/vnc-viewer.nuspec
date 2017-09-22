@@ -3,28 +3,39 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-viewer</id>
-    <version>6.1.1</version>
+    <version>6.1.7</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer</packageSourceUrl>
     <title>VNC Viewer (Install)</title>
     <authors>RealVNC Limited.</authors>
     <projectUrl>https://www.realvnc.com/products/vnc/</projectUrl>
-    <iconUrl>https://www.realvnc.com/static/img/vnc-connect.svg</iconUrl>
-    <copyright>Copyright © 2002-2017 RealVNC Limited. All rights reserved.</copyright>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_icon.png</iconUrl>
+    <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.realvnc.com/docs/</docsUrl>
     <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
-    <tags>realvnc vnc connect viewer remote control admin</tags>
+    <tags>realvnc vnc connect viewer remote control</tags>
     <summary>VNC Viewer is used to remote control RealVNC and VNC Connect hosts.</summary>
     <description>
 ![Screen shot of VNC Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)
 
+Make sure you've downloaded VNC Connect to the computer you want to control.
+
 VNC Viewer is used to remote control RealVNC and VNC Connect hosts.
 
-Reference: https://chocolatey.org/packages/realvnc and https://chocolatey.org/packages/vnc-connect/
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/realvnc) | [Twitter](https://twitter.com/realvnc) | [Linkedin](https://www.linkedin.com/company/realvnc) | [YouTube](https://www.youtube.com/user/RealVNCLtd)
+
+**VNC SERVER SOFTWARE:**
+[VNC-Connect](https://chocolatey.org/packages/vnc-connect/)
+
+**VERSIONS ON OTHER PLATFORMS:**
+[Android App](http://play.google.com/store/apps/details?id=com.realvnc.viewer.android) | [iOS App](https://itunes.apple.com/us/app/vnc-viewer/id352019548?mt=8) | [Chrome Extension](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla) | [macOS Client](https://www.realvnc.com/download/viewer/macos/) |[Linux Client](https://www.realvnc.com/download/viewer/linux/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-viewer/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
