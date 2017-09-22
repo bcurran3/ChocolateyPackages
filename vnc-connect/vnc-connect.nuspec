@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>6.1.1</version>
+    <version>6.2.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
     <authors>RealVNC Limited.</authors>
     <projectUrl>https://www.realvnc.com/products/vnc/</projectUrl>
-    <iconUrl>https://www.realvnc.com/static/img/vnc-connect.svg</iconUrl>
-    <copyright>Copyright © 2002-2017 RealVNC Limited. All rights reserved.</copyright>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-connect_icon.png</iconUrl>
+    <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.realvnc.com/docs/</docsUrl>
     <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
-    <tags>realvnc vnc connect remote control admin</tags>
+    <tags>realvnc vnc connect remote control</tags>
     <summary>VNC Connect is the latest version of RealVNC remote control software.</summary>
     <description>
 ![Screen shot of VNC Connect Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)
@@ -66,8 +66,16 @@ Support business and compliance objectives with audit and security functionality
 * HOME = $0
 * PROFESSIONAL = $40/year
 * ENTERPRISE = $55/year
+
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/realvnc) | [Twitter](https://twitter.com/realvnc) | [Linkedin](https://www.linkedin.com/company/realvnc) | [YouTube](https://www.youtube.com/user/RealVNCLtd)
+
+**CLIENT SOFTARE:**
+[Windows Client](https://chocolatey.org/packages/vnc-viewer) | [Android App](http://play.google.com/store/apps/details?id=com.realvnc.viewer.android) | [iOS App](https://itunes.apple.com/us/app/vnc-viewer/id352019548?mt=8) | [Chrome Extension](https://chocolatey.org/packages/vnc-viewer-chrome/1.2.2.15132) | [macOS Client](https://www.realvnc.com/download/viewer/macos/) |[Linux Client](https://www.realvnc.com/download/viewer/linux/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-connect/readme.md)**
 	</description>
-    <releaseNotes>Fixed wrong softwareName to uninstall found in intial release - OOOOPS!</releaseNotes>
+    <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
