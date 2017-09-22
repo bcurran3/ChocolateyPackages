@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-network-drivers-win10</id>
-    <version>22.4.01</version>
+    <version>22.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-network-drivers-win10</packageSourceUrl>
     <title>Intel® Network Adapter Driver for Windows® 10 (Install)</title>
@@ -13,8 +13,7 @@
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <bugTrackerUrl>https://downloadmirror.intel.com/25016/eng/readme.txt</bugTrackerUrl>
-    <tags>intel network adapter nic driver drivers windows win10 admin</tags>
+    <tags>intel network adapter nic driver drivers windows win10</tags>
     <summary>Intel® Network Adapter Driver for Windows® 10</summary>
     <description>
 ##Detailed Description
@@ -82,6 +81,7 @@ This software may also apply to Intel® Ethernet Controllers. Support for built-
 	<dependencies>
       <dependency id="autohotkey" />
     </dependencies>		
+    <releaseNotes>https://downloadmirror.intel.com/25016/eng/readme.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
