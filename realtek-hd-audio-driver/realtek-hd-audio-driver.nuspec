@@ -9,7 +9,7 @@
     <title>Realtek Semiconductor Corp. High Definition Audio System Software (Install)</title>
     <authors>Realtek Semiconductor Corp.</authors>
     <projectUrl>http://www.realtek.com/downloads/downloadsView.aspx?Langid=1&amp;PNid=24&amp;PFid=24&amp;Level=4&amp;Conn=3&amp;DownTypeID=3&amp;GetDown=false</projectUrl>
-    <iconUrl>http://www.realtek.com/image/logo.gif</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/realtek-hd-audio-driver/realtek-hd-audio-driver_icon.png</iconUrl>
     <copyright>© Realtek Semiconductor Corp. All rights reserved.</copyright>
 	<docsUrl>http://download.wpc.azureedge.net/8012244/drivers/rtdrivers/pc/audio/0008-R282_Readme.pdf</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
