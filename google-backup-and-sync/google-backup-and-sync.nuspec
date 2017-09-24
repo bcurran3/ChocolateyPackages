@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <version>3.35.6168.0116</version>
+    <version>3.36.6884.5911</version>
     <id>google-backup-and-sync</id>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-backup-and-sync</packageSourceUrl>
@@ -14,16 +14,17 @@
     <licenseUrl>https://www.google.com/drive/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.google.com/drive/answer/2374987</docsUrl>
-    <tags>google backup sync photos drive admin</tags>
+    <tags>google backup sync photos drive</tags>
     <summary>Google Backup and Sync - Automatically back up photos from your Mac or PC, connected cameras and SD cards</summary>
     <description>
 You probably keep your most important files and photos in different places—your computer, your phone, various SD cards, and that digital camera you use from time to time. It can be a challenge to keep all these things safe, backed up, and organized, so today we’re introducing Backup and Sync. It’s a simpler, speedier and more reliable way to protect the files and photos that mean the most to you. This new tool replaces the existing Google Photos desktop uploader and Drive for Mac/PC.
 
 Backup and Sync is an app for Mac and PC that backs up files and photos safely in Google Drive and Google Photos, so they're no longer trapped on your computer and other devices. Just choose the folders you want to back up, and we’ll take care of the rest.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-backup-and-sync/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" />
+      <dependency id="autohotkey" />
     </dependencies>	
   </metadata>
   <files>
