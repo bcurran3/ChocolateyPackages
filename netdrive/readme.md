@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* NetDrive 3 has Visual C dependcies that may require a reboot and fail NetDrive install if not already installed. Reboot and install the package again if it fails for you.
 
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
