@@ -1,6 +1,6 @@
 ﻿$packageName   = 'expandrive' 
-$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v6-0-15_published_2017-09-07_at_21_00_09/ExpanDrive_Setup_6.0.15.exe' 
-$checksum      = '79F363F1F99CA6E71E1CE25B84C266CFE08A6F2B601D52560FB72A14B94352BE'
+$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v6-1-0_published_2017-09-25_at_14_30_36/ExpanDrive_Setup_6.1.0.exe' 
+$checksum      = '693BECFB56E0C8CAE9EDCF5C7671EE3B2D647DAF5237A483EAB7EDC45A69EF4A'
 $installerType = 'EXE'
 $silentArgs    = ''
 $validExitCodes= @(0, 3010, 1641)
