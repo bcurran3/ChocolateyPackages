@@ -1,10 +1,10 @@
 ﻿$packageName    = 'dokany'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.0.3/Dokan_x86.msi' 
-$checksum       = '1A8E3F1AF8B4B604B8B6BD722C47DE7CA150624FEE125BCFE5185B9CD37F592C'
-$url64          = 'https://github.com/dokan-dev/dokany/releases/download/v1.0.3/Dokan_x64.msi' 
-$checksum64     = '6C6FE9F8384505CFF4268388E7C0BF92E38946E57A912E46312B80D6E24B4B47'
+$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.0.5/Dokan_x86-1.0.5.1000.msi' 
+$checksum       = 'E3D9309E9D3F94A1C2338A2902C74B4AA738C708A3C45973776BC5EAC024815B'
+$url64          = 'https://github.com/dokan-dev/dokany/releases/download/v1.0.5/Dokan_x64-1.0.5.1000.msi' 
+$checksum64     = '20FB30D3526CD1E4683E1E354C5E91CAAE09F3D11747A953B378F12E0D34E2F0'
 $silentArgs     = '/passive /norestart'
 $validExitCodes = @(0, 3010, 1641)
 

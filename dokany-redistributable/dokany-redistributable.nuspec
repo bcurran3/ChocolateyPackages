@@ -3,20 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dokany-redistributable</id>
-    <version>1.0.3</version>
+    <version>1.0.5</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dokany-redistributable</packageSourceUrl>		
     <title>Dokany Redistributable Bundle (Install)</title>
     <authors>Adrien J. and Maxime C.</authors>
     <projectUrl>https://github.com/dokan-dev/dokany</projectUrl>
-    <copyright>Copyright (C) 2015 - 2016 Adrien J. and Maxime C. Copyright (C) 2007 - 2011 Hiroki Asakawa</copyright>
+    <copyright>Copyright Adrien J., Maxime C., and Hiroki Asakawa</copyright>
     <licenseUrl>https://github.com/dokan-dev/dokany/blob/master/license.mit.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/dokan-dev/dokany</projectSourceUrl>
     <docsUrl>https://github.com/dokan-dev/dokany/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/dokan-dev/dokany/issues</bugTrackerUrl>
-    <tags>dokany fuse filesystem admin</tags>
-    <summary>User mode file system library for windows with FUSE Wrapper</summary>
+    <tags>dokany fuse filesystem</tags>
+    <summary>dokany is a ser mode file system library for windows with FUSE Wrapper</summary>
     <description>
 ![Screenshot of dokany in use](https://camo.githubusercontent.com/e825c85d44931bd98fe0585a64478bc57f6eb34a/687474703a2f2f646f6b616e2d6465762e6769746875622e696f2f696d616765732f73637265656e636173742e676966)	
 
@@ -56,6 +56,8 @@ For example, when Windows Explorer requests to open a directory, the CreateFile 
 
 To learn more about Dokan file system development, see the API documentation.	
 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dokany-redistributable/readme.md)**
+
 PACKAGING NOTE: You will need to reboot your computer before dokany will install under two conditions: 
 
 * kb2999226 isn't already installed and gets installed as a dependency. 
@@ -63,7 +65,7 @@ PACKAGING NOTE: You will need to reboot your computer before dokany will install
 
 Then attempt installation again.	
 	</description>
-    <releaseNotes>updated description with packaging note</releaseNotes>
+    <releaseNotes>https://github.com/dokan-dev/dokany/blob/master/CHANGELOG.md</releaseNotes>
 	<dependencies>
 	  <dependency id="dotnet4.0" />
       <dependency id="vcredist2015" />
