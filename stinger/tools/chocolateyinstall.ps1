@@ -2,9 +2,9 @@
 $packageName      = 'stinger' 
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url              = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger32.exe'
-$checksum         = '95E3A73A1BD9F7CEAF01FD9F637E0D66A1423D083D60EE1B66FB11D5133CBF93'
+$checksum         = '0560D58C666FEF34FBF07D6B8C218074891309C19CE784AC71F21B8AF9776702'
 $url64            = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger64.exe'
-$checksum64       = '53D1082DD0EA98E663457201D8F701EC0402471EA1BDE3601F0380E33C92FF0C'
+$checksum64       = '3952BC60764527235C3C5371DBAC502C6A2828C24F06364738BD35BFD7C7526E'
 $ExeFile32        = 'stinger32.exe'
 $ExeFile64        = 'stinger64.exe'
 $ShortcutName     = 'McAfee Stinger'
@@ -13,8 +13,10 @@ $bits             = Get-ProcessorBits
 if ($bits -eq 64)
    {
     $installerPackage = Join-Path $toolsDir $ExeFile64
+	$ExeFile = $ExeFile64
    } else {
     $installerPackage = Join-Path $toolsDir $ExeFile32
+	$ExeFile = $ExeFile32
  }
 
 $packageArgs = @{
@@ -32,11 +34,5 @@ $packageArgs = @{
 
 Get-ChocolateyWebFile @packageArgs
 
-if ($bits -eq 64)
-    {
-     Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile64" -WorkingDirectory "$toolsDir\$packageName"
-     Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\McAfee Stinger.lnk" -targetPath "$toolsDir\$ExeFile64" -WorkingDirectory "$toolsDir\$packageName"
-    } else {
-     Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile32" -WorkingDirectory "$toolsDir\$packageName"
-     Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\McAfee Stinger.lnk" -targetPath "$toolsDir\$ExeFile32" -WorkingDirectory "$toolsDir\$packageName"
-    }
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir\$packageName"
+ Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\McAfee Stinger.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir\$packageName"
