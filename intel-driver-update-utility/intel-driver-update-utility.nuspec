@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-driver-update-utility</id>
-    <version>2.9.0.2</version>
+    <version>3.0.0.9</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-driver-update-utility</packageSourceUrl>		
     <owners>bcurran3</owners>
-    <title>Intel® Driver Update Utility (Install)</title>
+    <title>Intel® Driver &amp; Support Assistant (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Update-Utility</projectUrl>
     <iconUrl>https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/intel-128.png</iconUrl>
@@ -37,7 +37,7 @@ Required to install and use utility
 </description>
     <releaseNotes>https://downloadcenter.intel.com/download/24345/Intel-Driver-Update-Utility</releaseNotes>
 	<dependencies>
-      <dependency id="autohotkey.portable" />
+      <dependency id="autohotkey" />
     </dependencies>
   </metadata>
   <files>
