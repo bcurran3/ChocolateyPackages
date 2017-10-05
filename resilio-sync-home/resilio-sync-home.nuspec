@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resilio-sync-home</id>
-    <version>2.5.8.1076</version>
+    <version>2.5.9.1088</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-home</packageSourceUrl>
     <title>Resilio Sync Home (Install)</title>
