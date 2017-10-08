@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>snake-java</id>
+    <version>1.7.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snake-java</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>snake (Portable)</title>
+    <authors>spypunk</authors>
+    <projectUrl>https://github.com/spypunk/snake</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/spypunk-snake/icon</iconUrl>
+    <licenseUrl>http://www.wtfpl.net/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/spypunk-snake/files/</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/spypunk/snake/issues</bugTrackerUrl>	
+    <tags>spypunk snake java portable</tags>
+    <summary>snake - Just another Snake clone</summary>
+    <description>
+![screnshot of snake](https://raw.githubusercontent.com/spypunk/snake/master/img/screenshot.png)
+	
+Snake clone written in Java.
+
+##How to play ?
+
+* SPACE - Start a new game
+* UP - Change snake direction to the north
+* DOWN - Change snake direction to the south
+* LEFT - Change snake direction to the west
+* RIGHT - Change snake direction to the east
+* P - Pause the current game
+* M - Mute sound
+* PAGE UP - Increase the volume
+* PAGE DOWN - Decrease the volume
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/snake-java/readme.md)**	
+	</description>
+    <dependencies>
+      <dependency id="javaruntime" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
