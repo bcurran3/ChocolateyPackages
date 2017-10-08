@@ -9,7 +9,7 @@
     <title>snake (Portable)</title>
     <authors>spypunk</authors>
     <projectUrl>https://github.com/spypunk/snake</projectUrl>
-    <iconUrl>https://a.fsdn.com/allura/p/spypunk-snake/icon</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/spypunk/snake/master/src/main/resources/img/icons/icon.png</iconUrl>
     <licenseUrl>http://www.wtfpl.net/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/projects/spypunk-snake/files/</projectSourceUrl>
@@ -21,7 +21,7 @@
 	
 Snake clone written in Java.
 
-##How to play ?
+###How to play ?
 
 * SPACE - Start a new game
 * UP - Change snake direction to the north
