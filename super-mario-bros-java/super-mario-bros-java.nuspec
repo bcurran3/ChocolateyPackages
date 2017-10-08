@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>super-mario-bros-java</id>
+    <version>2017.05.06</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/super-mario-bros-java</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Super Mario Bros Java (Portable)</title>
+    <authors>Amit Ranaware</authors>
+    <projectUrl>https://sourceforge.net/projects/super-mario-bros-java/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/super-mario-bros-java/icon</iconUrl>
+    <licenseUrl>https://sourceforge.net/directory/os:windows/license:osi-approved-open-source/open-software-license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/super-mario-bros-java/files/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/super-mario-bros-java/tickets/</bugTrackerUrl>
+    <tags>aryan55 super mario bros game java portable</tags>
+    <summary>Super Mario Bros written in Java</summary>
+    <description>
+![Screenshot of Super Mario Bros Java](https://a.fsdn.com/con/app/proj/super-mario-bros-java/screenshots/1(1).png)	
+
+###Buttons:
+* Z = Fire / Speed
+* X = Jump
+* Arrow Left = Go Left
+* Arrow Right = Go Right
+* Arrow Down = Crouch / Go inside Pump(Downwards)
+* T = Take ScreenShot
+* I = Info
+
+All Levels(except cloud ones) with Sound,
+(cheats - one of Keyboard button will activate star)
+Disable sound if Game is lagging,
+require min. Java 1.4 , after GamePad Patch will requir
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/super-mario-bros-java/readme.md)**	
+	</description>
+    <dependencies>
+      <dependency id="javaruntime" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
