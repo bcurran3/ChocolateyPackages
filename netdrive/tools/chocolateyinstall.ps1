@@ -1,12 +1,12 @@
 ﻿$packageName    = 'netdrive'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://files.bdrive.com/netdrive/builds/NetDrive3_Setup-3.1.205.exe' 
-$checksum       = 'BD09B374F86229F6E8C5739263AB89A83900BBBF248BCEB46CD092616DE34234'
-$silentArgs     = "/S"
+$url            = 'http://files.bdrive.com/netdrive/builds/NetDrive3_Setup-3.1.218.exe' 
+$checksum       = '6ADFEC99D86A43E2B4CD864FC262BA00F6852DD2C1D70F8E6EFCEB2937D85FD1'
+$silentArgs     = "/quiet /qn /norestart"
 $validExitCodes = @(0,1223)
-$extractDir      = "$toolsDir\extracted"
-$fileLocation    = "$extractDir\NetDrive3.msi"
+$extractDir     = "$toolsDir\extracted"
+$fileLocation   = "$extractDir\NetDrive3.msi"
 
 New-Item $extractDir -type directory
 
