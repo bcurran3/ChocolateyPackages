@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mrboom</id>
+    <version>3.7</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mrboom</packageSourceUrl>
+    <title>MrBoom (Portable)</title>
+    <authors>Remdy Software</authors>
+    <projectUrl>https://github.com/Javanaise/mrboom-libretro</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Javanaise/mrboom-libretro/master/Assets/mrboom.png</iconUrl>
+    <copyright>Copyright (c) Remdy Software</copyright>
+    <licenseUrl>https://github.com/Javanaise/mrboom-libretro/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Javanaise/mrboom-libretro</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Javanaise/mrboom-libretro/issues</bugTrackerUrl>
+    <tags>mrboom multiplayer action arcade retroarch game portable bomberman </tags>
+    <summary>Mr.Boom is an 8 players Bomberman clone for RetroArch/Libretro </summary>
+    <description>
+![screenshot of MrBoom](https://raw.githubusercontent.com/Javanaise/mrboom-libretro/master/Assets/mrb1.png)
+	
+Mr.Boom is a Bomberman clone for the RetroArch platform and was converted from DOS assembly using asm2c.
+
+It runs on all RetroArch platforms: Android, Linux, Mac Os X, Nintendo Gamecube (NGC), Nintendo Wii, Raspberry Pi, Sony Playstation 3 (PS3), Sony Playstation Portable (PSP), Windows, Xbox, Xbox360...
+
+It can also be compiled as a stand-alone version using SDL2.
+
+It supports up to 8 players and features like netplay, AI bots (new C++ feature), pushing bombs, remote controls and kangaroo riding...
+
+Check the [Downloading and Playing Mr. Boom Core](https://www.youtube.com/watch?v=_0rw36mA9mM&amp;feature=youtu.be) video.
+
+You can find netplay games by joining the retroarch discord channel or #mrboom on freenode!
+
+####Options available:
+
+* Team mode by color or by sex.
+* No monster mode.
+* Drop bomb button autofire.
+	
+This manual page documents briefly the mrboom command.
+
+mrboom is an SDL2 version of the original 1999 version of Mr. Boom
+
+####USAGE
+The  goal of the game is to bomb away your enemies and other players.  Bomberman is controlled with the keyboard or with (up to 8) joy-pads.
+
+####Keys   
+* Space - Add a bomberman bot
+* Return - Start a game
+* ESC - Quit
+
+####1st player
+* Left - Left
+* Right - Right
+* Up - Up
+* Down - Down
+* RCtrl - Lay bomb
+* RAlt - Ignite bomb
+* RShift - Jump
+
+####2nd player
+* A - Left
+* D - Right
+* W - Up
+* S - Down
+* LCtrl - Lay bomb
+* LAlt - Ignite bomb
+* LShift - Jump
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mrboom/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
