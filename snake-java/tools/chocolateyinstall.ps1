@@ -18,8 +18,8 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\$extractedDir\$ExeFile" -iconLocation "$toolsDir\tetris.ico"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -targetPath "$toolsDir\$extractedDir\$ExeFile" -WorkingDirectory "$toolsDir" -iconLocation "$toolsDir\tetris.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\$extractedDir\$ExeFile" -iconLocation "$toolsDir\snake.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -targetPath "$toolsDir\$extractedDir\$ExeFile" -WorkingDirectory "$toolsDir" -iconLocation "$toolsDir\snake.ico"
 
 
 
