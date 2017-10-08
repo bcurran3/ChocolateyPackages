@@ -1,9 +1,9 @@
 ﻿$packageName    = 'intel-network-drivers-win10' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = 'F889774B7D60B555F005EA0CDB0EF47B319E449EEAC58AC02C660CF70ACFA482'
+$checksum       = 'F82BEBF8146E20D1DF6B57F29C92B96B0EE16711A05ABEFCDB558EC99B0C4E97'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = 'ADF513CC58B5D2390EE096628F4E643A9BA496B5EF2A31F7B37F53BB167C7911'
+$checksum64     = '3B68428307CC4CC7941C62C09EF636F66DC561B8983C07C854D0F630E65CC21B'
 $silentArgs     = ''
 $validExitCodes = @(0)
 $unzipLocation  = "$toolsDir\unzippedfiles"
@@ -11,12 +11,11 @@ $bits           = Get-ProcessorBits
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\INDInstall.ahk"
 
-if (Get-NetAdapter -physical | where interfacedescription -match Intel)
+$card = wmic path win32_NetworkAdapter get name
+if ($card -match "Intel")
   {
-   write-host  
-   write-host "You've got Intel!" -foreground "green" –backgroundcolor "blue"
+   write-host "You've got $card!" -foreground "green" –backgroundcolor "blue"
   } else {
-   write-host  
    write-host "No Intel network adapters found. Aborting." -foreground "red" –backgroundcolor "blue"
    throw
    }
