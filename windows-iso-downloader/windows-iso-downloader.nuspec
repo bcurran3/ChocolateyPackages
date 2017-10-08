@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-iso-downloader</id>
-    <version>5.20</version>
+    <version>5.21</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-iso-downloader</packageSourceUrl>
     <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>
@@ -15,7 +15,7 @@
     <mailingListUrl>https://heidoc.net/mailman/listinfo/win-iso_heidoc.net</mailingListUrl>
     <bugTrackerUrl>https://www.wincert.net/forum/index.php?/forum/227-windows-iso-downloader/</bugTrackerUrl>
     <tags>microsoft windows office iso admin</tags>
-    <summary></summary>
+    <summary>Easily download Windows and Office disk images</summary>
     <description>
 ![screenshot of Microsoft Windows and Office ISO Download Tool](https://www.heidoc.net/joomla/images/microsoft/win-downloader.jpg)	
 
