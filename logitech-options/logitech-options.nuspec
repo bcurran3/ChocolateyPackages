@@ -3,20 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>6.50.60</version>
+    <version>6.70.1197</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
     <authors>Logitech</authors>
     <projectUrl>http://support.logitech.com/en_us/software/options</projectUrl>
     <iconUrl>https://secure.logitech.com/assets/64869/options-icon.png</iconUrl>
-    <copyright>© 2017 Logitech. All rights reserved</copyright>
+    <copyright>© Logitech. All rights reserved</copyright>
     <licenseUrl>https://secure.logitech.com/en-us/footer/terms-of-use</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>logitech options keyboard utility admin</tags>
+    <tags>logitech options keyboard mouse utility</tags>
     <summary>Logitech Options software lets you customize your device settings.</summary>
     <description>
-Logitech Options software lets you customize your device's settings as follows:
+###Logitech Options software lets you customize your device's settings as follows:
 
 * Change function key shortcuts
 * Customize mouse buttons
@@ -24,32 +24,41 @@ Logitech Options software lets you customize your device's settings as follows:
 * Enable and disable touchpad gestures
 * Get on-screen notifications when your device's battery runs low or when you press a lock key	
 
-Works with these products:
+###Works with these products:
+* Bluetooth Easy-Switch Keyboard K811
+* Bluetooth Mouse M557
 * Bluetooth Multi-Device Keyboard K480
-* Connect Kit with Intel NUC
-* GROUP Kit with Intel NUC
-* Illuminated Living-Room Keyboard K830
+* Craft Advanced Keyboard with Creative Input Dial
 * K375s Multi-Device Wireless Keyboard
 * K380 Multi-Device Bluetooth Keyboard
 * K780 Multi-Device Wireless Keyboard
+* K850 Wireless Keyboard
 * M220 SILENT
 * M330 SILENT PLUS
 * M331 SILENT PLUS
 * M535 Bluetooth Mouse
+* M585 Multi-Device Mouse
+* M590 Multidevice Silent Mouse
 * M720 Triathlon Multi-Device Mouse
 * MK235 Wireless Keyboard and Mouse Combo
 * MK850 Performance Wireless Keyboard and Mouse Combo
 * MX Anywhere 2
+* MX Anywhere 2S Wireless Mouse
+* MX Ergo Wireless Trackball
+* MX Master 2S Wireless Mouse
 * MX Master Wireless Mouse
+* Rechargeable Trackpad for Mac
+* Ultrathin Touch Mouse T630
+* Ultrathin Touch Mouse T631 for Mac
 * Wireless Mini Mouse M187
 * Wireless Mouse M185
 * Wireless Mouse M235
-* Wireless Mouse M320
 * Wireless Mouse M335
 * Wireless Mouse M510
-* Wireless Touch Keyboard K400 Plus
+* Wireless Solar Keyboard K760
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/logitech-options/readme.md)**	
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
