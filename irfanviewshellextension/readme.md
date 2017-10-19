@@ -2,6 +2,7 @@
 
 * This package includes binaries. This release will work forever.
 * This package will only install if IrfanView is installed in it's default directory.
+* This package SHOULD work with 64bit installs, 32bit installs, and 32bit on 64bit Windows installs.
 * I personally use and endorse this program.
 
 ROADMAP
