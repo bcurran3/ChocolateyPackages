@@ -1,12 +1,11 @@
-﻿#https://www.fosshub.com/IrfanView.html
-$packageName    = 'irfanview'
+﻿$packageName    = 'irfanview'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\iview444_setup.exe"
-$checksum       = '71B44CD3D14376BBB619B2FE8A632D29200385738DD186680E988CE32662B3D6'
+$url            = "$toolsDir\iview450_setup.exe"
+$checksum       = '1568576EDCDFD95382154538299E01F58AE9D0B863E24F176BF8D97B8D2D4E33'
 $checksumType   = 'sha256'
-$url64          = "$toolsDir\iview444_x64_setup.exe"
-$checksum64     = '38C9AC7B8C7C4342ECABD139E5CA4E9BD9460F0B541C00DFCD3E9D76CC125888'
+$url64          = "$toolsDir\iview450_x64_setup.exe"
+$checksum64     = 'AA0BDF15331CABAF02C96B1027525EF42D5068C1C999DC3B6BBD1903B24977B3'
 $checksumType64 = 'sha256'
 $validExitCodes = @(0)
 $arguments      = @{}
@@ -102,5 +101,5 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs 	
 
-Remove-Item $url 
-Remove-Item $url64					  
+Remove-Item $url | out-null
+Remove-Item $url64 | out-null
