@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.44.20170319</version>
+    <version>4.50</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -53,16 +53,17 @@ If you have a modern graphic card which can be used for additional calculations,
 * ICONS - (version 4.30): additional icons for IrfanView file associations
 
 ###...and more! Full list at project URL.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanviewplugins/readme.md)**
 	</description>
     <summary>Additional plugins for IrFanView</summary>
     <copyright>© Irfan Skiljan</copyright>
-    <tags>irfanview image photo viewer plugin plugins admin</tags>
+    <tags>irfanview image photo viewer plugin plugins</tags>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
-    <releaseNotes>This package includes binaries. This release will work forever.</releaseNotes>	
+    <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>	
     <dependencies>
       <dependency id="irfanview" version="4.42" />	  	
-      <dependency id="chocolatey-uninstall.extension" />
     </dependencies>
   </metadata>
 </package>
