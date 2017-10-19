@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanview</id>
-    <version>4.44</version>
+    <version>4.50</version>
     <title>IrfanView (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -12,6 +12,9 @@
     <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/04f6a6eaed68793bfdbf951606879239ec9aaa0a/icons/irfanview.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+![Screenshot of IrfanView](http://www.irfanview.com/images/startbild_engl-small.gif)
+
+	
 IrfanView is a very fast, small, compact and innovative FREEWARE (for non-commercial use) graphic viewer for Windows 9x, ME, NT, 2000, XP, 2003 , 2008, Vista, Windows 7, Windows 8, Windows 10. 
 
 It is designed to be simple for beginners and powerful for professionals.
@@ -28,27 +31,28 @@ The first graphic viewer WORLDWIDE with Multiple ICO support.
 #### Package Parameters
 The following package parameters may be passed directly to the program's installer with the chocolatey option `-params`:
 
-* `/desktop` - create desktop shortcut for IrfanView
-* `/thumbs` - create desktop shortcut for IrfanView Thumbnails
-* `/group` - create IrfanView group in Start Menu
-* `/currentuser` - desktop/group links will only install for current user
-* `/assocallusers - set associations for all users (Windows XP only)
-* `/assoc=VALUE` - set file associations; 0 = none (default), 1 = images only, 2 = select all
-* `/ini=PATH` - set custom INI file folder (system environment variables are allowed)
-* `/folder=PATH` - destination folder; if not indicated: old IrfanView folder is used, if not found, the "Program Files" folder is used
+* `/desktop`      - create desktop shortcut for IrfanView
+* `/thumbs`       - create desktop shortcut for IrfanView Thumbnails
+* `/group`        - create IrfanView group in Start Menu
+* `/currentuser`  - desktop/group links will only install for current user
+* `/assocallusers`- set associations for all users (Windows XP only)
+* `/assoc=VALUE`  - set file associations; 0 = none (default), 1 = images only, 2 = select all
+* `/ini=PATH`     - set custom INI file folder (system environment variables are allowed)
+* `/folder=PATH`  - destination folder; if not indicated: old IrfanView folder is used, if not found, the "Program Files" folder is used
 
 #### Package Specifics
 If no parameters are passed, the following is assumed: `--params '/assoc=0 /ini=%APPDATA%\IrfanView'`.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview/readme.md)**
 </description>
     <summary>Fast and compact image viewer and converter</summary>
     <copyright>© Irfan Skiljan</copyright>
-    <tags>irfan irfanview image viewer editor converter thumbnail admin</tags>
+    <tags>irfan irfanview image viewer editor converter thumbnail</tags>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
-    <releaseNotes>This package includes binaries. This release will work forever.</releaseNotes>	
+    <releaseNotes>http://www.irfanview.com/main_history.htm</releaseNotes>	
     <dependencies>
-      <dependency id="autohotkey.portable" />
-      <dependency id="chocolatey-uninstall.extension" />
+      <dependency id="autohotkey" />
     </dependencies>
   </metadata>
 </package>
