@@ -63,7 +63,7 @@ If you have a modern graphic card which can be used for additional calculations,
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>	
     <dependencies>
-      <dependency id="irfanview" version="4.42" />	  	
+      <dependency id="irfanview" version="4.50" />	  	
     </dependencies>
   </metadata>
 </package>
