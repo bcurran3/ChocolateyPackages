@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lunarlander</id>
+    <version>2013.08.02</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/lunerlander</packageSourceUrl>
+    <title>Lunar Lander (Portable)</title>
+    <authors>PJ Crossley</authors>
+    <projectUrl>http://pjsfreeware.synthasite.com/</projectUrl>
+    <iconUrl>http://pjsfreeware.synthasite.com/resources/Rendered5.jpg</iconUrl>
+	<copyright>PJ Crossley</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pjcrossley lunar lander retro game portable</tags>
+    <summary>PJ Crossley's remake of the classic Lunar Lander game.</summary>
+    <description>
+![screen shot of Lander](http://pjsfreeware.synthasite.com/resources/lunar%20lander.png)
+
+************** My version of The Classic Lunar Lander by Atari **************
+
+With added joystick control
+
+Lunar lander remake (C) pj Crossley 2011
+
+###Controls;
+* Arrows left/right rotate lander module
+* Arrow down to thrust and slow lander
+* and now with joystick support
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/lunerlander/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
