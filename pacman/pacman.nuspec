@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>pacman</id>
+    <version>2013.08.04</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pacman</packageSourceUrl>
+    <title>Pacman (Portable)</title>
+    <authors>PJ Crossley</authors>
+    <projectUrl>http://pjsfreeware.synthasite.com/</projectUrl>
+    <iconUrl>http://pjsfreeware.synthasite.com/resources/Rendered5.jpg</iconUrl>
+	<copyright>PJ Crossley</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pjcrossley pacman retro game portable</tags>
+    <summary>PJ Crossley's remake of the classic Pacman game.</summary>
+    <description>
+![screen shot of Pacman](http://pjsfreeware.synthasite.com/resources/pacman.png)
+
+******************** Yep another pacman remake. ********************
+
+Added joystick control
+
+This game is Freeware
+Pacman
+written by PJ Crossley 2006
+
+###Goal
+The goal of this game is to remove all dots by eating them with your pacman. Ghosts try to eat you so you should avoid them. The Pills will help you. When you eat one of those the ghosts temporarily become afraid and can be chased for points. Also sometimes a bonus appears. Get the highest score and don't be eaten.
+
+###Playing
+* You steer your pacman using the arrow keys. You can  press the correct key before you reach the corridor (but keep it pressed).
+* F4 toggle fullscreen
+* Also the game is joystick compatible
+
+###Levels
+The game has Six  levels. At the end of the sixth you start again but the game becomes increasingly faster.
+
+More free games at http://www.synthasite.com/home
+
+gm5 06/11/09
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/pacman/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
