@@ -3,26 +3,27 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-10-update-assistant</id>
-    <version>1.4.9200.22175</version>
+    <version>1.4.9200.22256</version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-10-update-assistant</packageSourceUrl>	
     <title>Windows 10 Update Assistant (Portable)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
     <iconUrl>https://assets.onestore.ms/cdnfiles/onestorerolling-1608-23000/shell/v3/images/logo/microsoft.png</iconUrl>
-    <copyright>© 2016 Microsoft</copyright>
+    <copyright>© Microsoft</copyright>
     <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.microsoft.com/en-us/help/12373/windows-update-faq</docsUrl>
-    <tags>microsoft windows 10 win10 anniversary update assistant 1607 admin</tags>
-    <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 Anniversary Update (version 1607)</summary>
+    <tags>microsoft windows 10 win10 creators update assistant 1709</tags>
+    <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 Creators Update (version 1709)</summary>
     <description>
-To help keep all Windows 10 systems secure and provide the latest features and improvements, the Windows 10 Update Assistant downloads and starts the setup for Windows 10 Anniversary Update (version 1607). The Windows 10 Update Assistant will be deployed to Windows 10 PCs that have not yet had the latest update installed. 
+##Get the Windows 10 Fall Creators Update	
 
-You can check which version of Windows 10 your device is currently running to see whether you are eligible for the Windows 10 Anniversary update. To do this, click the Start button, then click Settings > System > About.
-If the About window shows that you have Version 10.0 (Build 10240) or Version 1511 (OS Build 10565), you are eligible to install the Windows 10 Anniversary update.
-If the About window shows that you have Version 1607 (OS Build 14393), you already have the Windows 10 Anniversary update.
+Windows 10 will notify you when the Fall Creators Update is available for your device. When the update is ready, you'll be asked to pick a time to install it if you're not ready. After it’s installed, your device will be running Windows 10, version 1709. To see which version of Windows 10 your device is currently running, select the Start button, then select Settings > System > About.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-10-update-assistant/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1703</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
