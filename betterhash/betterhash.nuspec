@@ -9,9 +9,8 @@
     <title>BetterHash (Install)</title>
     <authors>Innovative Solutions</authors>
     <projectUrl>https://www.betterhash.net</projectUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/betterhash/bettertash_icon.png</iconUrl>
     <copyright>© BetterHash</copyright>
-    <licenseUrl></licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.betterhash.net/faq/</docsUrl>
     <tags>betterhash cryptocurrency miner btc eth xmr zec</tags>
@@ -22,6 +21,8 @@
 ##Put your PC to work
 
 Earn cash with your computer. Easy setup. Optimal profit	
+
+**Works on all 64-bit versions of Windows**
 
 BetterHash is a cryptocurrency miner. It uses the power of your PC to validate cryptocurrency transfers. You may think of it like a "virtual notary". Depending on your CPU and video adapter performance, you can earn hundreds of dollars each month.
 

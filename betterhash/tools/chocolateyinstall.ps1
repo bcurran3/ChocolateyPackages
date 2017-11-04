@@ -10,15 +10,15 @@ if ($bits -eq 32)
 	throw
    } else {
      $packageArgs = @{
-     packageName   = $packageName
-     unzipLocation = $toolsDir
-     fileType      = 'exe' 
-     url           = $url
-     silentArgs    = '/SP- /VERYSILENT /SUPPRESSMSGBOXES /CLOSEAPPLICATIONS' 
-     softwareName  = 'BetterHash*' 
-     checksum      = $checksum
-     checksumType  = 'sha256'
-  }
+      packageName   = $packageName
+      unzipLocation = $toolsDir
+      fileType      = 'exe' 
+      url           = $url
+      silentArgs    = '/SP- /VERYSILENT /SUPPRESSMSGBOXES /CLOSEAPPLICATIONS' 
+      softwareName  = 'BetterHash' 
+      checksum      = $checksum
+      checksumType  = 'sha256'
+    }
    Install-ChocolateyPackage @packageArgs   
   }
 
