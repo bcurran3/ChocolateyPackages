@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>blitz</id>
+    <version>2010.05.07</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/blitz</packageSourceUrl>
+    <title>Blitz (Portable)</title>
+    <authors>PJ Crossley</authors>
+    <projectUrl>http://pjsfreeware.synthasite.com/</projectUrl>
+    <iconUrl>http://pjsfreeware.synthasite.com/resources/Rendered5.jpg</iconUrl>
+	<copyright>PJ Crossley</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pjcrossley blitz retro game portable</tags>
+    <summary>PJ Crossley's remake of the classic Blitz game.</summary>
+    <description>
+![screen shot of Blitz](http://pjsfreeware.synthasite.com/resources/blitz.jpg)
+
+********* Blitzs destroy the buildings or crash. new update 05/05/09 **********
+
+This game is freeware,  if you have been sold it then you have been ripped off.
+more games at http://pjsfreeware.synthasite.com/
+Blitz (C) PJ Crossley 2003
+
+programmed using the gamemaker by mark overmar 
+http://www.cs.uu.nl/people/markov/gmaker/index.html
+
+objective:
+* Blast everything in sight before crashing into the buildings
+
+controls:
+* any key drops the laser
+* F4 toggle fullscreen
+
+gm7/06/11/09
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/blitz/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+
