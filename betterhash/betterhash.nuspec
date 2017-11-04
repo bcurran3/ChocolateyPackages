@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>betterhash</id>
+    <version>1.47.0.322</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/betterhash</packageSourceUrl>
+    <title>BetterHash (Install)</title>
+    <authors>Innovative Solutions</authors>
+    <projectUrl>https://www.betterhash.net</projectUrl>
+    <iconUrl></iconUrl>
+    <copyright>© BetterHash</copyright>
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.betterhash.net/faq/</docsUrl>
+    <tags>betterhash cryptocurrency miner btc eth xmr zec</tags>
+    <summary>BetterHash - Earn cash with your computer. Easy setup. Optimal profit</summary>
+    <description>
+![Screenshot of BetterHash](https://www.betterhash.net/)
+
+##Put your PC to work
+
+Earn cash with your computer. Easy setup. Optimal profit	
+
+BetterHash is a cryptocurrency miner. It uses the power of your PC to validate cryptocurrency transfers. You may think of it like a "virtual notary". Depending on your CPU and video adapter performance, you can earn hundreds of dollars each month.
+
+###Easy to use
+
+BetterHash is an advanced, powerful tool designed for both experienced and beginner users. Click "Start" and you’re on your way.
+
+###No setup
+
+We take care of everything: selecting the most performant algorithm, switching between algorithms and even creating a wallet in case you don’t have one.
+
+###Optimal profit
+
+Get your fair share with BetterHash. Benchmark your PC after installation and see an estimation of its earning capabilities. Mine for the most profitable cryptocurrency in the most efficient mining pools.
+
+###Who are we
+A COMPANY WITH A SOLID BACKGROUND
+
+Our long time experience in creating Windows software, especially driver management software like DriverMax, combined with our ever growing user base, allowed us to evaluate the mathematical capabilities of almost all existing hardware devices. All the information that we gathered led to the development of BetterHash, one of the most profitable transaction validating applications on the market.
+
+##Currencies
+
+Currencies and revenue examples: Bitcoin (**BTC**), Ethereum (**ETH**), Monero (**XMR**),and ZCash (**ZEC**)
+
+###About us
+
+BetterHash was born in the need of a better mining tool, when the existing ones on the market failed to provide. Why are we better than what is currently available? Our interface is super simple to use, making your life easier by cutting some steps. We help you create your wallet and give you the opportunity to earn money as soon as possible, by not imposing a limit to your currency transfer. You are always served the best miners on the market as we update them in real time, making sure you maximize your profits.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/betterhash/readme.md)**	
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
