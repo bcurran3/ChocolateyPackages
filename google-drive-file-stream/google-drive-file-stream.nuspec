@@ -9,7 +9,7 @@
     <title>Google Drive File Stream (Install)</title>
     <authors>Google</authors>
     <projectUrl>https://gsuite.google.com/campaigns/index__drive-fs-eap.html</projectUrl>
-    <iconUrl>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtso-0DxANFiTXxnU8P59Np5vj7pPzA0AxjxoFb2hfmjS-6ux0w</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/google-drive-file-stream/google-drive-file-stream_icon.png</iconUrl>
     <copyright>Google</copyright>
     <licenseUrl>https://www.google.com/drive/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
