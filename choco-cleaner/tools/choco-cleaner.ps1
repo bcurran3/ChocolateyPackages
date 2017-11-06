@@ -14,12 +14,13 @@ Remove-Item -path $env:chocolateyinstall\* -recurse -include *.old -whatif
 #Remove-Item -path $env:chocolateyinstall\lib-bad\* -recurse -whatif
 #Remove-Item -path $env:chocolateyinstall\lib-bkp\* -recurse -whatif
 #
+#if cacheLocation in chocolatey.config hasn't been changed.
 #Remove-Item -path $env:tmp\chocolatey\* -recurse -whatif
 #Remove-Item -path $env:tmp\temp\chocolatey\* -recurse -whatif
 exit
 
 #######################################################################################################################
-You can comment out anything above you donot want to delete such as log files with a "#" at the front of the line.
+You can comment out anything above you do not want to delete such as log files with a "#" at the front of the line.
 
 LEGEND:
 * log files that are not the most current one
