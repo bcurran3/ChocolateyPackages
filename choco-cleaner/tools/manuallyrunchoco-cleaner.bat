@@ -1,5 +1,5 @@
 @echo off
-powershell -NoProfile -ExecutionPolicy Bypass -Command ".\choco-cleaner.ps1"
-echo Try ForcePS to run any of your PowerShell scripts easily from the Command Line:
+powershell -NoProfile -ExecutionPolicy Bypass -Command "\ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1"
+echo Try ForcePS to run your PowerShell scripts easily without policy blocking from the Command Line:
 echo https://chocolatey.org/packages/forceps
 pause
