@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <version>25.1.92.1924</version>
+    <id>google-drive-file-stream</id>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-drive-file-stream</packageSourceUrl>
+    <title>Google Drive File Stream (Install)</title>
+    <authors>Google</authors>
+    <projectUrl>https://gsuite.google.com/campaigns/index__drive-fs-eap.html</projectUrl>
+    <iconUrl>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUtso-0DxANFiTXxnU8P59Np5vj7pPzA0AxjxoFb2hfmjS-6ux0w</iconUrl>
+    <copyright>Google</copyright>
+    <licenseUrl>https://www.google.com/drive/terms-of-service/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.google.com/a/answer/7491144</docsUrl>
+    <tags>google drive file stream drive gsuite enterprise</tags>
+    <summary>Google Drive File Stream - Access and sync your files anywhere</summary>
+    <description>
+###Access Drive files on Mac/PC faster, using less disk space
+
+Introducing Drive File Stream — a new way to access all of your Google Drive files directly from your Mac or PC, without using up all your disk space. Unlike traditional file sync tools, Drive File Stream doesn’t require you to download your files first in order to access them from your computer. Instead, when you need to view or edit a file, it automatically streams from the cloud, on-demand. With Drive File Stream, your team will spend less time waiting for files to sync, no time worrying about disk space, and more time being productive.
+
+###Get your files in seconds with smarter offline access
+
+With Drive File Stream, files you open are streamed directly from the cloud on-demand. You can also select files or folders that you want to access offline at anytime. The files that you are likely to work on from your Mac or PC become available in the background intelligently, making it much quicker to access them later.
+
+###Work with all the tools and apps you’re used to
+
+With Drive File Stream, you can work with Drive files directly from the apps you're used to, like Microsoft Word and Adobe Photoshop. Any changes you make to files in those apps are saved automatically to Drive and can be accessed from any of your devices later.
+
+[Android Client](https://play.google.com/store/apps/details?id=com.google.android.apps.docs) | [iOS Client](https://itunes.apple.com/app/google-drive/id507874739)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-drive-file-stream/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
