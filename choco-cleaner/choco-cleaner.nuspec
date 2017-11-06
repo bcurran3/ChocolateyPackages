@@ -20,13 +20,14 @@
     <description>
 #THIS IS A WORK IN PROGRESS (almost done) - MODERATORS DO NOT PASS!	
 	
-#DO YOU WANT TO FREE UP SOME DISK SPACE USED BY UNNECESSARY LEFT OVER CHOCOLATEY FILES? 
+##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY CHOCOLATEY FILES? 
 
-#YOU JUST FOUND THE EASY WAY!
+##YOU JUST FOUND THE EASY WAY!
 	
 ###This package creates a Windows Scheduled Task to run choco-cleaner.ps1 every day at midnight
 
-choco-cleaner deletes:
+
+**choco-cleaner deletes:**
 * log files that are not the most current one
 * msi and zip files that are left over from packages that forgot to delete them post install
 * msi.ignore files created to ignore the file for shimming, but we just deleted the msi files
