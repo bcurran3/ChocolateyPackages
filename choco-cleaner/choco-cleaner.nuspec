@@ -18,24 +18,22 @@
     <tags>bcurran3 unofficial choco cleaner schtasks scheduled task</tags>
     <summary>choco-cleaner will clean (delete) unnecessary left over Chocolatey files</summary>
     <description>
-#MODERATORS DO NOT PASS! - THIS IS IN TESTING PHASE
+#MODERATORS DO NOT PASS! - IN FINAL TESTING PHASE
 
 	
 ##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY CHOCOLATEY FILES? 
 
 ##YOU JUST FOUND THE EASY WAY!
 
-BEFORE choco-cleaner (198 packages installed)
-![schreenshot of files and diskspace  before choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_before.png) 
-
-AFTER choco-cleaner (198 packages installed)
-![schreenshot of files and diskspace after choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_after.png)
-
-	
 ###This package creates a Windows Scheduled Task to run choco-cleaner.ps1 every day at 11:30 PM
 
-11:30 PM was chosen as not to conflict with **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)** if installed with the default set to run at midnight.
 
+(11:30 PM was chosen as not to conflict with **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)** when installed with the default set to run at midnight.)
+
+**BEFORE and AFTER choco-cleaner (198 packages installed and does not include temp folders)**
+![schreenshot of files and diskspace  before choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_before.png) ![schreenshot of files and diskspace after choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_after.png)
+
+	
 ##**choco-cleaner deletes:**
 * .log files that are not the most current one
 * .msi and .zip files left over from packages that forgot to delete them post install
@@ -59,7 +57,7 @@ You can edit \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1 a
 
 You can manually run choco-cleaner at any time by running \ProgramData\chocolatey\lib\choco-cleaner\tools\manuallyrunchoco-cleaner.bat
 
-**Sure, you're not going to get gigabytes of space back, but every few KB matters on some computers and to some people!** Remember also that due to your drive geometry and formatting a small 21 byte text file probably actually takes up 4 KB of HDD space.
+**Sure, you're not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as a 6 byte .ignore file actually takes up 4 KB of HDD space.**
 
 If you have a previous release of **choco-cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or time.
 
