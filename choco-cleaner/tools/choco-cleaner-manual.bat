@@ -9,15 +9,12 @@ if %errorLevel% == 0 goto RunScript
    echo                  *  You must choose "Run as administrator"  *
    echo                  ********************************************
    echo.
-   echo Hit any key to exit.
-   pause > nul
-  goto end
+   PING -n 3 8.8.8.8 >NUL
+   goto end
  )
 
 :RunScript
 powershell -NoProfile -ExecutionPolicy Bypass -Command "\ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1"
-echo Pausing so you can see results.
-echo Hit any key to exit.
-pause > nul
+PING -n 3 8.8.8.8 >NUL
 :end
 
