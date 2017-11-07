@@ -9,12 +9,12 @@ if %errorLevel% == 0 goto RunScript
    echo                  *  You must choose "Run as administrator"  *
    echo                  ********************************************
    echo.
-   PING -n 3 8.8.8.8 >NUL
+   timeout 5
    goto end
  )
 
 :RunScript
 powershell -NoProfile -ExecutionPolicy Bypass -Command "\ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1"
-PING -n 3 8.8.8.8 >NUL
+timeout 5
 :end
 
