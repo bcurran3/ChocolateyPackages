@@ -17,7 +17,7 @@ Write-Host Deleting unnecessary old Chocolatey files... -foreground magenta
 Remove-Item -path $env:chocolateyinstall\* -recurse -include *.old -ErrorAction SilentlyContinue
 Write-Host Deleting unnecessary config backup files... -foreground magenta
 Remove-Item -path $env:chocolateyinstall\chocolatey\config\chocolatey.config.backup -ErrorAction SilentlyContinue
-Write-Host Deleting unnecessary _processed.txt (WTF?) file... -foreground magenta
+Write-Host "Deleting unnecessary _processed.txt (WTF?) file..." -foreground magenta
 Remove-Item -path $env:chocolateyinstall\bin\_processed.txt -ErrorAction SilentlyContinue
 Write-Host Deleting unnecessary lib-bad files... -foreground magenta
 Remove-Item -path $env:chocolateyinstall\lib-bad\* -recurse -ErrorAction SilentlyContinue
