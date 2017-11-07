@@ -45,8 +45,7 @@
 * lib-bad holds packages that failed to install and lib-bkp contains aborted packages (during updates?) 
 * .nuspkg files are ZIP archives with NuGet package information, included already installed binaries are not needed (similar to [Package Reducer](https://chocolatey.org/docs/features-package-reducer)
 * \Users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config)
-* license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page
-* programname.license.txt files are license information for Chocolatey default tools
+* license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license information for Chocolatey default tools
 
 You can edit \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1 and comment out anything you do not want to delete.
 
