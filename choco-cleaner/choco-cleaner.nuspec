@@ -16,9 +16,9 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
-    <summary>choco-cleaner will clean (delete) unnecessary left over Chocolatey files</summary>
+    <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
     <description>
-##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY CHOCOLATEY FILES? 
+##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY RESIDUAL CHOCOLATEY FILES? 
 
 ##YOU JUST FOUND THE EASY WAY!
 
@@ -43,17 +43,17 @@
 * chocolatey.config.backup is a backup of your chocolatey.config file
 * _processed.txt - I have no idea what made this file
 * lib-bad holds packages that failed to install and lib-bkp contains aborted packages (during updates?) 
-* .nuspkg files are ZIP archives with NuGet package information, included already installed binaries are not needed (similar to [Package Reducer](https://chocolatey.org/docs/features-package-reducer)
-* \Users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config)
-* license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license information for Chocolatey default tools
+* archives and executables out of .nuspkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
+* \Users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config))
+* license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools
 
 You can edit \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1 and comment out anything you do not want to delete.
 
-**Organizations with software license compliance auditing should comment out and NOT delete the license and verification files for legal protection.**
+**Organizations with software license compliance auditing should comment out and NOT delete the license and verification files for legal protection. It's also recommended that you pin this package so any future updates don't overwrite your modifications to the default script.**
 
 You can manually run choco-cleaner at any time by running \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner-manual.bat
 
-**Sure, you're not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as a 6 byte .ignore file actually takes up 4 KB of HDD space.**
+**Sure, you're not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as 6 byte .ignore files actually take up 4 KB of HDD space each.**
 
 If you have a previous release of **choco-cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or time.
 
