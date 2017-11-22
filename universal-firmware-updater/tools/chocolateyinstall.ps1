@@ -8,12 +8,11 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = 'E3E337B8B9354D1B5D506C4EC14EE144246537713D2F9EC040307D85014CDF26'
+  checksum      = 'EAFFA980FEB866D51D8851E980037515DB72F29A4D2FAEE517181D03DA4F5E96'
   checksumType  = 'sha256' 
-  checksum64    = 'E3E337B8B9354D1B5D506C4EC14EE144246537713D2F9EC040307D85014CDF26'
-  checksumType64= 'sha256' 
 }
 
 Install-ChocolateyZipPackage @packageArgs
+
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\WD Firmware Updater.lnk" -targetPath "$toolsDir\WDFirmwareUpdater.exe" -WorkingDirectory "$toolsDir"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\WD Firmware Updater.lnk" -targetPath "$toolsDir\WDFirmwareUpdater.exe" -WorkingDirectory "$toolsDir"

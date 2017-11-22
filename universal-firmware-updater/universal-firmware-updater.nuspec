@@ -4,12 +4,24 @@
   <metadata>
     <id>universal-firmware-updater</id>
     <title>Western Digital Universal Firmware Updater for Windows (Install)</title>
-    <version>3.2.5.1</version>
+    <version>4.0.1.3</version>
     <authors>Western Digital</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/universal-firmware-updater</packageSourceUrl>	
     <summary>Updates the firmware on Western Digital hard drives.</summary>
     <description>
 ![Screen shot of Western Digital Universal Firmware Updater for Windows](http://support.wdc.com/images/kb/smartware/continue_to_update_windows.png)
+
+This Universal Firmware Updater automatically detects and installs the latest firmware update available for your hard drive.
+
+####Supported Operating Systems
+
+* Windows XP
+* Windows Vista
+* Windows 7
+* Windows 8
+* Windows 8.1
+
 
 ####Instructions
 1. Disconnect all other external drives from the computer except for one My Book or My Passport.
@@ -24,14 +36,18 @@
 10. Click "Exit."
 11. Please remove the USB and power cable. Wait 10 seconds and then connect the power cable and USB cable.
 12. Reboot your computer.
+
+####Applicable Products
+
+My Book Duo, My Book, My Book, My Book for Mac, My Book Pro, My Book Duo, My Passport Ultra, My Passport SSD, My Passport, My Passport Ultra (WD Backup), My Passport Ultra Metal
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/universal-firmware-updater/readme.md)**
     </description>
     <projectUrl>http://support.wdc.com/downloads.aspx?lang=en</projectUrl>
-    <bugTrackerUrl>http://support.wdc.com/download/notes/Win_Univ_FW_Updater_Release_Notes_v3.2.5.1.pdf</bugTrackerUrl>
-    <tags>western digital wd hdd firmware updater admin</tags>
+    <tags>western digital wd hdd firmware updater</tags>
     <copyright>Copyright (C) 2002-2015, Western Digital</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://support.wdc.com/images/wdlogo.png</iconUrl>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
