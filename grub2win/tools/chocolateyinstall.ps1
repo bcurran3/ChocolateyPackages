@@ -2,7 +2,7 @@
 $packageName    = 'grub2win' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloads.sourceforge.net/project/grub2win/grub2win.zip'
-$checksum       = '540C82EA514E120721361B6C2B851C2B2C3E3D8DDEE28729DE1E6D6F4D555D6B'
+$checksum       = '059768A3A6C647EC4F0DB657FF6A2818821B1E3807C31ED2763E344682A4BDC1'
 $silentArgs     = 'setup'
 $validExitCodes = @(0)
 $fileLocation   = "$toolsDir\install\winsource\grub2win.exe"
