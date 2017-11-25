@@ -9,6 +9,7 @@
     <title>Kcast (Install)</title>
     <authors>Kitco Metals Inc.</authors>
     <projectUrl>http://applications.kitco.com/supportcenter/taskbar</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/kcast/kcast_icon.png</iconUrl>	
     <copyright>Kitco Metals Inc.</copyright>
     <licenseUrl>http://www.kitco.com/termsofuse/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
