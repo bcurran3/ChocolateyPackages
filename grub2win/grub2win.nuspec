@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>grub2win</id>
-    <version>0.9.7.2</version>
+    <version>1.0.0.9</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/grub2win</packageSourceUrl>	
     <title>Grub2Win (Install)</title>
@@ -20,6 +20,8 @@
     <summary>Grub2Win allows you to safely dual boot Windows and Linux.</summary>
     <description>
 ![Screenshot of Grub2Win] (https://fsdn.com/con/app/proj/grub2win/screenshots/Install%201V.jpg)
+
+***. Now Works With Any Language! ***
 	
 Grub2Win supports 64 and 32 bit EFI and BIOS on Windows 10, 8, 7, Vista and XP.
 
@@ -57,7 +59,7 @@ If you find Grub2Win useful, please consider making a small donation to be used 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/grub2win/readme.md)**
 	</description>
-    <releaseNotes>https://sourceforge.net/projects/grub2win/files/changelog.txt/download</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/grub2win/files/changelog.txt</releaseNotes>
 	<dependencies>
       <dependency id="autohotkey" />
     </dependencies>		
