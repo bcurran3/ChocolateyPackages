@@ -1,8 +1,8 @@
 ﻿$packageName   = 'plexmediaplayer'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $installerType = 'exe'
-$url           = 'https://downloads.plex.tv/plexmediaplayer/2.1.0.74-8e24a8f4/PlexMediaPlayer-2.1.0.74-8e24a8f4-windows-x64.exe'
-$checksum      = '214314E6ACB72858EC781BD20061EAB4C349A898D3FBD02839343BA3EB140F09'
+$url           = 'https://downloads.plex.tv/plexmediaplayer/2.1.1.703-79cdfa5c/PlexMediaPlayer-2.1.1.703-79cdfa5c-windows-x64.exe'
+$checksum      = 'DAEA972A238BCCE5E05FC8ADB703E004F4ADD0837027CBCC1ACC3D989A548217'
 $silentArgs    = '/S'
 $bits          = Get-ProcessorBits
 
