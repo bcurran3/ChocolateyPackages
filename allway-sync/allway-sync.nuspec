@@ -4,7 +4,7 @@
   <metadata>
     <id>allway-sync</id>
     <title>allway-sync (Install)</title>
-    <version>17.2.8</version>
+    <version>17.2.17</version>
     <authors>Botkind, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allway-sync</packageSourceUrl>		
