@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.5.1</version>
+    <version>3.5.2</version>
     <title>Angry IP Scanner (Installer)</title>
     <authors>https://github.com/angryziber</authors>
     <owners>bcurran3</owners>
@@ -32,11 +32,12 @@ It is widely used by network administrators and just curious users around the wo
 + Free and open-source
 + Works on Windows, Mac and Linux
 + Installation not required
-####PACKAGING NOTES: This program does not support silent uninstall. Use the Control Panel to uninstall.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/angryip/readme.md)**
     </description>
     <summary>Fast and friendly network scanner.</summary>
     <releaseNotes></releaseNotes>
-    <tags>angryip ipscan angry scanner network ip admin</tags>
+    <tags>angryip ipscan angry scanner network ip</tags>
     <dependencies>
       <dependency id="javaruntime" />
     </dependencies>

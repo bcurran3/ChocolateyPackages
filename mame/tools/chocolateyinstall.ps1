@@ -1,9 +1,9 @@
 ﻿$packageName    = 'mame' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/mamedev/mame/releases/download/mame0185/mame0185b_32bit.exe'
-$checksum       = 'FEA15C076D7FC1DF86EF09370755B999F1250D2C9C6F3399BC4198804B28B755'
-$url64          = 'https://github.com/mamedev/mame/releases/download/mame0185/mame0185b_64bit.exe'
-$checksum64     = '9E38B586B58393796DCD551E4BC5AD2752F9834BDBA5677298B2C21220864F5B'
+$url            = 'https://github.com/mamedev/mame/releases/download/mame0191/mame0191b_32bit.exe'
+$checksum       = '579BF48B3FF42AEB6D319B2A6978A313EF213BE605A7CA94F7AE2794AF76F9F7'
+$url64          = 'https://github.com/mamedev/mame/releases/download/mame0191/mame0191b_64bit.exe'
+$checksum64     = '20DDB06B21776913FC5631BF8CEB823FBE0ADE79FF864FD83152CED17355AAE0'
 $bits           = Get-ProcessorBits
 
 $packageArgs = @{
