@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mame</id>
-    <version>0.185</version>
+    <version>0.191</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mame</packageSourceUrl>
     <title>MAME (Portable)</title>
@@ -38,8 +38,9 @@ Legal ROM Sources:
 [archived gaelco.com](https://web.archive.org/web/20160402171815/http://www.gaelco.com/english/pages/hablando/frhablan.htm)
 
 MAME is mostly programmed in C with some core components in C++. MAME can currently emulate over 32000 individual systems from the last 5 decades. [Supported systems](http://www.mess.org/supported_systems)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mame/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
