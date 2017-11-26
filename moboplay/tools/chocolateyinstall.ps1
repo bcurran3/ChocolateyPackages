@@ -2,8 +2,8 @@
 $packageName    = 'moboplay'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://download.moboplay.com/packages/MobileAssistant/moboplay/pcexe/officialsite/MoboPlay_3.0.3.319.exe' 
-$checksum       = '76B4FDC91B523766B25AD614A4A6DD62404A49E9E87B5619A29D3CEE839CF73D'
+$url            = 'http://download.moboplay.com/packages/MobileAssistant/moboplay/pcexe/officialsite/MoboPlay_3.0.6.339.exe' 
+$checksum       = 'CE90D19536AD6A61EEAD43E8B21D12721C63F54075969F0E611F2A1BF54E1701'
 $silentArgs     = '/SILENT'
 $validExitCodes = @(0,1)
 

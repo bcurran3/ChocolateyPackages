@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>expandrive</id>
-    <version>6.1.0</version>
+    <version>6.1.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
     <title>ExpanDrive (Trial) (Install)</title>
