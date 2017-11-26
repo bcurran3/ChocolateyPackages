@@ -4,9 +4,10 @@
   <metadata>
     <id>prime95.portable</id>
     <title>Prime95 (Portable)</title>
-    <version>28.9.20161009</version>
+    <version>29.4.5</version>
     <authors>George Woltman</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/prime95.portable</packageSourceUrl>	
     <summary>Free Mersenne Prime Search Software - Prime95</summary>
     <description>
 ![Screenshot of Prime95](https://upload.wikimedia.org/wikipedia/commons/c/c0/Prime95_screenshot.png)	
@@ -34,6 +35,8 @@ The Prime95 Wikipedia page has an excellent overview on using Prime95 to test yo
 1. Download the software and unzip the files to your desired location. (Chocolatey does that for you!)
 2. Run the Prime95 executable and select "Just Stress Testing" when asked.
 3. The default options are sufficient to do a well balanced stress test on the system.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/prime95.portable/readme.md)**
     </description>
     <projectUrl>http://www.mersenne.org/download/</projectUrl>
     <projectSourceUrl>http://www.mersenne.org/ftp_root/gimps/p95v287.source.zip</projectSourceUrl>
@@ -41,11 +44,11 @@ The Prime95 Wikipedia page has an excellent overview on using Prime95 to test yo
     <mailingListUrl>http://www.mersenneforum.org/</mailingListUrl>
     <bugTrackerUrl>http://www.mersenne.org/download/whatsnew.txt</bugTrackerUrl>	
     <tags>prime95 stress test burn-in portable</tags>
-    <copyright>Copyright (C) 1996-2016 Mersenne Research, Inc.</copyright>
+    <copyright>Copyright (C) Mersenne Research, Inc.</copyright>
     <licenseUrl>http://www.mersenne.org/legal/#EULA</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.mersenne.org/images/logo.gif</iconUrl>
-    <releaseNotes>added checksum</releaseNotes>
+    <releaseNotes>https://www.mersenne.org/download/whatsnew_294b5.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
