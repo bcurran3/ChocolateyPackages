@@ -1,7 +1,7 @@
 ﻿$packageName   = 'arq' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://www.arqbackup.com/download/Arq.exe' 
-$checksum      = 'A9902325BE9727E2425B89C7C24F925470BE3AA68CF7EF57457A5793E685D97E'
+$checksum      = 'CC419BACE5429AA72313270C4C5A818B05E150586BD3BCDB3D0C673417FB7800'
 $checksumType  = 'sha256'
 $UnzippedMSI   = Join-Path $toolsDir 'ArqSetup.msi'
 $installerType = 'MSI'
