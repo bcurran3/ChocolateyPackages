@@ -2,15 +2,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chrome-remote-desktop-chrome</id>
-    <version>0.85.20170115</version>
+    <version>63.0.3239.17</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chrome-remote-desktop-chrome</packageSourceUrl>	
     <title>Chrome Remote Desktop for Chrome</title>
-    <authors>Chrome.Devs</authors>
+    <authors>Chrome Remote Desktop Release Managers</authors>
     <owners>bcurran3</owners>
-    <projectUrl>https://chrome.google.com/webstore/detail/chrome-remote-desktop/acfgckdadojoapmmjckgaknmljmaibei</projectUrl>
-    <iconUrl>https://lh3.googleusercontent.com/UDjlJ8yGGy_LODbc0LCF-_PjWJBNzKTa6cfOcEEe0UtiaINqn73sjFDsdDt9oDxWSn8PTv0AVw</iconUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/chrome-remote-desktop/gbchcmhmhahfdphkhkmpfmihenigjmpp</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/ofXLzG7zzqOJE-AS-mnSt7nto6iVicXjHwHVZSZ5vdgg5AODzAUu_AvFHjWwV4MyUH0G8yDrhQ=w50-h50-e365</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Chrome Remote Desktop extention</summary>	
+    <summary>Chrome Remote Desktop application</summary>	
     <description>
 ###Access other computers or allow another user to access your computer securely over the Internet.
 
@@ -22,10 +22,9 @@ For information about privacy, please see the Google Privacy Policy and the Chro
 
 Stay tuned for future updates!
 	
-####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chrome-remote-desktop-chrome/readme.md)**	
 	</description>
-    <releaseNotes>updated to new install method</releaseNotes>		
-    <tags>remote desktop chrome extension</tags>
+    <tags>remote desktop chrome app</tags>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>
