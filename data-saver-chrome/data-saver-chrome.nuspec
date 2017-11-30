@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>data-saver-chrome</id>
+    <version>2.0.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/data-saver-chrome</packageSourceUrl>
+    <title>Data Saver for Chrome</title>
+    <authors>Google</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/data-saver/pfmgfdlgomnbgkofeojodiodmgpgmkac</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/CmpqBTN2riz3qCg_aHNAPD2MMXb4cos8B3-9MsHo9qwCvfXKKBkAqGBwiJp2U_564vV6AeDzRSM=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://www.google.com/intl/en/policies</licenseUrl>
+    <summary>Data Saver for Chrome reduces data usage by using Google servers to optimize pages you visit.</summary>	
+    <description>
+![Screenshot of Data Saver for Chrome](https://lh3.googleusercontent.com/PibNHaqyZkaIUQrfQIgVhztt0pT3BNFp41FymWSKOD0MOfXvtw_Kbi11ewJqxXpu4U4-U3LHIA=w640-h400-e365)
+	
+##Reduces data usage by using Google servers to optimize pages you visit.
+
+Browse more for less!
+
+By enabling this extension, Chrome will use Google servers to compress pages you visit before downloading them. Pages accessed using private connections (HTTPS) or in incognito tabs will not be optimized or seen by Google. Get more visibility into your data usage by clicking on “Details” to see how much data is used by the sites you visit. This might help you make more informed decisions regarding your usage based on the type of connection you are using.
+
+You can also enable Data Saver on Mobile Chrome on Android from the Settings menu.
+
+Learn more about Chrome’s Data Saver at https://support.google.com/chrome/?p=data_saver_off
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/data-saver-chrome/readme.md)**	
+	</description>
+    <tags>google keep chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
