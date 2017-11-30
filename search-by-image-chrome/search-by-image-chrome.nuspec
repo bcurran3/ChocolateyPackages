@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>search-by-image-chrome</id>
+    <version>1.5.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/search-by-image-chrome</packageSourceUrl>	
+    <title>Search by Image (by Google) for Chrome</title>
+    <authors>Google</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/search-by-image-by-google/dajedkncpodkggklbegccjpmnglmnflm</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/yL4DXYLSNAMlrqs7BxmqLaSxtXIJvZW6E5_7A9bwTsFfs6Q5rdiV1HNDFqqyZXSdDE2o1PvmpA=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://chrome.google.com/extensions/intl/en/gallery_tos.html</licenseUrl>	
+    <summary>Search by Image (by Google) - This extension allows you to initiate a Google search using any image on the web. By the Google Images team.</summary>	
+    <description>
+![Screenshot of Search by Image for Chrome](https://lh3.googleusercontent.com/UGpoDIe8O31rhzho47fTqyVduv94VAeBaWzgfF2Oyc7FYTBhmKVugObNotmXVUbeIU8wp71dcA=w640-h400-e365)
+	
+##This extension allows you to initiate a Google search using any image on the web. By the Google Images team.
+
+
+Found an image on the web that you’re curious about? With this extension, you can initiate a search on Google using pictures on the web. You can discover photos of places, learn more about art pieces, identify landmarks, and more.
+
+To use this extension, right click on an image on the web and select “Search Google with this image.”  You can also add a clickable Search by Image icon that appears when you point to an image. When you search by image, you’ll see results that show you where that image, and similar images, appear on the web. You can see webpages that contain that image, or find the same image in different sizes or resolutions.
+
+To learn more about Search by Image, visit http://www.google.com/insidesearch/searchbyimage.html
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/search-by-image-chrome/readme.md)**	
+	</description>
+    <tags>google search by image chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

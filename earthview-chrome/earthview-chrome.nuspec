@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>earthview-chrome</id>
+    <version>2.18.5</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/earthview-chrome</packageSourceUrl>	
+    <title>Earth View from Google Earth for Chrome</title>
+    <authors>Google Earth</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/earth-view-from-google-ea/bhloflhklmhfpedakmangadcdofhnnoh</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/sSO9uLu1QVkmGJafa9hI6PxcE5s7h3g6cw-5mRBHb3rPhC-mFcdsFBAy0U2PVujZQgJoCdxi2Q=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Earth View from Google Earth - Experience a beautiful image from Google Earth every time you open a new tab.</summary>	
+    <description>
+![Screenshot of Earth View from Google Earth](https://lh3.googleusercontent.com/I2ChTO0YedUVxdfZVKu0XD6SHH5rQFZ5SmjvCj1ZndmcxECTDO4YfdjqAsrpxYkHdAXWewB-=w640-h400-e365)
+	
+##Experience a beautiful image from Google Earth every time you open a new tab.
+
+Earth View displays a beautiful Satellite image from Google Earth every time you open a new tab.
+
+What's new in version 2?
+
+NEW VIEWS: Enjoy 500 new views from Google Earth's satellite imagery.
+HISTORY: See the images from the last 10 tabs you've opened.
+DOWNLOAD: Grab any image as wallpaper for your desktop or mobile.
+SHARING: Share your favorite image with your favorite people.
+GALLERY: Explore all 1500 images in our new web gallery: g.co/ev
+
+Note: To ensure best performance, please disable any other photo tab Chrome extensions by going to Settings > Extensions in your browser.
+ 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/earthview-chrome/readme.md)**	
+	</description>
+    <tags>google earth view chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
