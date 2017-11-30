@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mybrowserpage-chrome</id>
+    <version>1.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mybrowserpage-chrome</packageSourceUrl>	
+    <title>My Browser Page for Chrome</title>
+    <authors>mybrowserpage.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/my-browser-page/jghfknlgajlcihkhkhnlcoffhbohnlbg</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/Un2y2OdT0J_7gOWslUXcP3q-8hoGHZAheUhta4r7dde4ugKZgu_e1-eIaCebuBP2Imlo8va-=w50-h50-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>MyBrowserPage is a starterpage with Metro design.</summary>	
+    <description>
+![Screenshot of My Browser Page for Chrome](https://lh3.googleusercontent.com/1r2IMzzTg-lGjUONt5wHYwDgDaIU3TJCLrfn-WrGWOZXQtPJbsPDcmw2K4gxCML9ezETJKWIoA=w640-h400-e365)
+	
+###MyBrowserPage is a starterpage with Metro design, graphical list of most popular sites and multiple search engine included,…
+
+MyBrowserPage is a starterpage with Metro design, graphical list of most popular websites and multiple search engine included, personal bookmarks, free to use.
+
+You can add MBP to your default Homepage.
+
+https://mybrowserpage.com
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mybrowserpage-chrome/readme.md)**	
+	</description>
+    <tags>start home page metro chrome app</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

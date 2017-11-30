@@ -1,6 +1,6 @@
 $bits = Get-ProcessorBits
-$packageName = 'chrome-remote-desktop-chrome'
-$extensionID = 'gbchcmhmhahfdphkhkmpfmihenigjmpp'
+$packageName = 'teamviewer-chrome'
+$extensionID = 'oooiobdokpcfdlahlmcddobejikcmkfo'
 
 if ($bits -eq 64) {
     Remove-Item "HKLM:\SOFTWARE\Wow6432node\Google\Chrome\Extensions\$extensionID" -Force -ErrorAction SilentlyContinue | out-null
