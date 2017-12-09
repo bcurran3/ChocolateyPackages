@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-driver-update-utility</id>
-    <version>3.0.0.9</version>
+    <version>3.1.0.12</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-driver-update-utility</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
