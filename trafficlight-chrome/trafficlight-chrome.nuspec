@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>trafficlight-chrome</id>
+    <version>1.1.0.9</version>
+    <title>Bitdefender TrafficLight for Chrome</title>
+    <authors>trafficlight.bitdefender.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trafficlight-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/trafficlight/cfnpidifppmenkapgihekkeednfoenal</projectUrl>
+    <iconUrl>https://download.bitdefender.com/resources/themes/draco/images/prod_trafficlight.png</iconUrl>
+    <licenseUrl>https://www.bitdefender.com/site/view/legal-terms.html</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Bitdefender TrafficLight for Chrome](https://lh3.googleusercontent.com/ZsXrftOUvZmYxY_-EAvvdfGdrWHRqzYqp9GnvdhYqmYYiVR-MQeoLYAzaOcUSDx_lnBbI-4b0X0=w640-h400-e365)
+
+	
+**Bitdefender TrafficLight adds a strong and non-intrusive layer of security to your browsing experience.
+TrafficLight is taking the security-while-browsing concept where it belongs: in the browser. This extension will add a strong layer of security over your browsing experience without inducing speed penalties or system resource consumption. Part of the processing is done in the cloud with some intelligent small engines that make various checks on pages you're visiting enabling you to have top notch antiphishing and antimalware protection.**
+
+###Features:
+
+Real Time: TrafficLight scans the pages you visit for malware and phishing attempts each and every time you access them to avoid the threat of legitimate but recently compromised websites.
+
+Precise: TrafficLight won't block an entire website if just some pages within are malicious. Only the potentially harmful elements are blocked, leaving you free to view the rest of the site if you so choose.
+
+Unintrusive: TrafficLight does not add a toolbar to your already-cluttered browser interface. Its interface remains invisible until your input is needed or it's called up with a simple mouse gesture.
+
+Search Results: TrafficLight flags malware and fraudulent websites in search results.
+
+Tracker Revealer: Trackers are code snippets included in web site pages to track and analyze your browsing behavior. TrafficLight quickly identifies and lists them.	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/trafficlight-chrome/readme.md)**
+	</description>
+    <summary>Bitdefender TrafficLight - Cutting edge browser protection</summary>
+    <tags>bitdefender trafficlight protection malware filter scanner chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
