@@ -3,7 +3,7 @@
   <metadata>
     <id>ultimate-settings-panel</id>
     <title>Ultimate Settings Panel (Install)</title>
-    <version>5.7.1</version>
+    <version>5.8</version>
     <owners>bcurran3</owners>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>	
     <authors>A.J. Armstrong</authors>
@@ -17,9 +17,17 @@
     <description>
 ![Screenshot of Ultimate Settings Panel](http://i0.wp.com/usp.blog.techygeekshome.info/wp-content/uploads/sites/7/2017/04/Windows10.png)
 
-An all in one settings solution for a multitude of configuration options in Windows, Office, Powershell and popular internet browsers amongst others. This release now has 15 different configuration tabs including Windows 10 and a total of 283 configuration items spanning across all versions of Windows, Powershell, Outlook, Server Administration, Google Chome, Firefox and Internet Explorer. Ultimate Settings Panel is a panel based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a panel and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
+An all in one settings solution for a multitude of configuration options in Windows, Office, Powershell and popular internet browsers. This release now has 15 different configuration tabs including Windows 10 and a total of **292 configuration items** spanning across all versions of Windows, Powershell, Outlook, Server Administration, Google Chrome, Firefox and Internet Explorer.
 
-Ultimate Settings Panel is a tab based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a tab and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
+Our latest addition in version 5.8 is the Home Panel update to include the options and settings sections. This give you some information on your computer as well and the date and time.
+
+We have now also included portable app versions within the download package so you no longer have to install the program.
+
+In version 5.8 we have also made some slight changes to the options and top menu bar as well as welcome, date and time information. You can see what the new panel looks like by taking a look at our [screenshots](http://usp.blog.techygeekshome.info/2017/03/screenshots/) page.
+
+Ultimate Settings Panel is a panel based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a panel and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
+
+This utility is now completely free to download, simply visit our Downloads page to get it now!
 
 ###Features
 * Windows Admin Tab
@@ -39,10 +47,9 @@ Ultimate Settings Panel is a tab based utility giving you the option of selectin
 * RAM Information
 * Battery Information
 
-**PACKAGING NOTE:** v5.7.1 per author's site, but executables still show 5.7
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ultimate-settings-panel/readme.md)**
     </description>
-    <tags>ultimate settings panel system utility configuration control admin</tags>
-	<releaseNotes></releaseNotes>
+    <tags>ultimate settings panel system utility configuration control</tags>
     <dependencies>
       <dependency id="dotnet4.5" />
     </dependencies>	
