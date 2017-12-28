@@ -4,7 +4,7 @@
   <metadata>
     <id>universal-firmware-updater</id>
     <title>Western Digital Universal Firmware Updater for Windows (Install)</title>
-    <version>4.0.1.3</version>
+    <version>4.0.1.4</version>
     <authors>Western Digital</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/universal-firmware-updater</packageSourceUrl>	
