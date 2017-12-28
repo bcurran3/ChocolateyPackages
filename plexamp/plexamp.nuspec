@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>plexamp</id>
+    <title>Plexamp (Install)</title>
+    <version>1.0.0</version>
+    <authors>Plex</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexamp</packageSourceUrl>		
+    <summary>Plexamp is a small music player for your desktop, with a number of unique features.</summary>
+    <description>
+![Screenshots of Plexamp](https://cdn-images-1.medium.com/max/2000/1*_5vj2zq-mkZT88N8syPMtA@2x.png)	
+
+Plexamp is a small music player for your desktop, with a number of unique features.Throw your best FLACs at it and experience sonic bliss!
+
+For a more detailed look at Plexamp’s features (and a fun origin story!) check out our [write-up](https://medium.com/plexlabs/introducing-plexamp-9493a658847a).
+
+While Plexamp is unsupported, we’ve provided [Frequently Asked Questions](http://plexamp.com/#help) to aid in your musical adventure.
+
+###Built with Love, Right at Home on your Desktop
+Global media key support, a high-quality audio path, and a permanent home in your tray.
+ 
+###Gapless Playback
+No more buzz kill when listening to live albums. Seamlessly transition between tracks on an album.
+ 
+###Visualizers
+Beautiful animations for music, with key colors extracted from album art.
+
+###Loudness Leveling and Smart Transitions
+Stop reaching for the volume knob. Loudness is normalized and smart transition points are computed between tracks, ensuring optimal listening flow.
+ 
+###SoundPrints and Waveform Seeking
+Enjoy beautiful graphical views of songs, and seek easily to specific places in a song.
+ 
+###Library and Artist Radio
+Explore your library in new ways with Library Radio, Time Travel Radio, and Artist Radio.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/plexamp/readme.md)**
+    </description>
+    <projectUrl>http://plexamp.com/</projectUrl>
+    <docsUrl>http://plexamp.com/#help</docsUrl>
+    <mailingListUrl>https://forums.plex.tv/categories/plex-labs</mailingListUrl>
+    <tags>plex plexamp multimedia mp3 audio player free</tags>
+    <copyright>Copyright © Plex</copyright>
+    <licenseUrl>https://www.plex.tv/about/privacy-legal/plex-terms-of-service/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://plexamp.com/img/icon.png</iconUrl>
+    <releaseNotes>https://medium.com/plexlabs/introducing-plexamp-9493a658847a</releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
