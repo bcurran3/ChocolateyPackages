@@ -2,13 +2,14 @@
 $packageName= 'universal-firmware-updater' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'http://download.wdc.com/fwupdater/Win/WDFirmwareUpdater.zip'
+$checksum   = '989B4B8E960476C325292175B540EA9D03CAC40EE27EF25EA205375A01F5AD74'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = 'EAFFA980FEB866D51D8851E980037515DB72F29A4D2FAEE517181D03DA4F5E96'
+  checksum      = $checksum
   checksumType  = 'sha256' 
 }
 
