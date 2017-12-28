@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>video-repair-software</id>
-    <version>2.0.0.1</version>
+    <version>3.1.0.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/video-repair-software</packageSourceUrl>
     <title>Video Repair Software (Portable)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://grauonline.de/cms2/?page_id=111</docsUrl>
     <tags>grau video repair ac1 mpg2 mpg4 mp4 mp4v dvc dvpp dvhp xdvc xd5d xd5e h264 avc apch apcn apcs apco ap4h portable</tags>
-    <summary>Do-It-Yourself Video Repair Software (VRT) </summary>
+    <summary>Do-It-Yourself Video Repair Software (VRT)</summary>
     <description>
 ###Video Repair Software
 
@@ -45,13 +45,14 @@ Currently, our software can automatically repair damaged .mov, .mp4, m4v, or .3g
 
 System requirements:
 
-* PC: Windows XP SP3 / Vista / 7 or higher
+* PC: Windows Windows Vista / 7 / 8 / 10 or higher
 * Supported camera formats (see website for list)
 * **DEMO version restriction:** The repaired files are only half the size of the repaired movie files in full-mode! (e.g. if the DEMO version repairs 50 MB, the full version will repair 100 MB)
 
 LICENSE cost 29 EUR for 5 video repairs or 99 EUR for single use unlimited video repairs and can be purchased from the website.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8gadgetpack/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

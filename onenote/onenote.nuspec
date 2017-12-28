@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>onenote</id>
-    <version>16.0.8326.2062</version>
+    <version>16.0.8730.2122</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/onenote</packageSourceUrl>
     <title>Microsoft OneNote 2016 (Install)</title>

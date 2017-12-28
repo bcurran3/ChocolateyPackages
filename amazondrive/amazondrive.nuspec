@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>amazondrive</id>
-    <version>4.0.2.38004</version>
+    <version>5.0.3.98</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazondrive</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Amazon Drive (Install)</title>
@@ -13,7 +13,7 @@
     <copyright>(C) 1996-2016 Amazon.com Inc.</copyright>
     <licenseUrl>https://www.amazon.com/gp/help/customer/display.html/?nodeId=201376540</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>amazon amazondrive amazonclouddrive cloud drive dropbox googledrive onedrive admin</tags>
+    <tags>amazon amazondrive amazonclouddrive cloud drive</tags>
     <summary>Unlimited Secure Storage from Amazon</summary>
     <description>
 ![Screenshot of Amazon Drive](https://images-na.ssl-images-amazon.com/images/I/31tbQUopH8L.jpg)
@@ -31,8 +31,9 @@ Access your content from nearly any device. Free mobile apps for iOS and Android
 
 ###Install Amazon Drive on your computer.
 Quickly save files from your computer to Amazon Drive. You can upload folders, large files, and multiple items at once.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/amazondrive/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

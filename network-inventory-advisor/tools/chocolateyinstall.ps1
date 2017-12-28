@@ -2,7 +2,7 @@
 $packageName    = 'network-inventory-advisor'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://dl.network-inventory-advisor.com/network_inventory_advisor.exe'
-$checksum       = '45671B1A3AF668FA302C1055DA73C9FA99F1922D9CF618B20DFAE43CC8726FC1'
+$checksum       = 'AC8595CAF07D474F5D2BC83999C6947FB1B340D91D321FD77C8F78582BCB3426'
 $validExitCodes = @(0, 3010, 1641)
 $SilentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 

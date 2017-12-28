@@ -1,7 +1,7 @@
 ﻿$packageName    = 'performancetest'
 $installerType  = 'exe'
 $url            = 'https://www.passmark.com/ftp/petst.exe'
-$checksum       = 'BEA418430AC18D4C59404E972E5B80AF1A5E65E732E422324C55E181986D8965'
+$checksum       = '15D2CD85CAFF83E31AF9A577AEE27B55695A3BC4FC96E2EAA3BEA22321D6BE2F'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0)

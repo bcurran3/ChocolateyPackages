@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8gadgetpack</id>
-    <version>23.0</version>
+    <version>25.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8gadgetpack</packageSourceUrl>		
     <title>8GadgetPack (Install)</title>

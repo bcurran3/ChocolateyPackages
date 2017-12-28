@@ -1,7 +1,7 @@
 ﻿$packageName   = 'seatools'
 $installerType = 'exe'
 $url           = 'http://www.seagate.com/files/www-content/support-content/downloads/seatools/_shared/downloads/SeaToolsforWindowsSetup.exe'
-$checksum      = '87C458669F52960A8AC4BCD7578C6830003D874D7C0B425CEDA0B0E1020D8F62'
+$checksum      = 'C181762A2F4DAA32479FE2F85613E71E92D32A1026ADAB03DB85B337FCA47A45'
 $silentArgs    = '/S'
 
 $packageArgs = @{
