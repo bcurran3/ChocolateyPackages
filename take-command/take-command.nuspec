@@ -4,7 +4,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>21.0.32</version>
+    <version>22.0.29.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
@@ -17,7 +17,7 @@
     <docsUrl>https://jpsoft.com/help/index.htm?overview.htm</docsUrl>
     <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
     <bugTrackerUrl>https://jpsoft.com/forums/forums/announcements.17/</bugTrackerUrl>
-    <tags>jpsoftware jpsoft take command prompt cmd cli shell trial admin</tags>
+    <tags>jpsoftware jpsoft take command prompt cmd cli shell trial</tags>
     <summary>Take Command is a comprehensive interactive GUI and command line environment</summary>
     <description>
 ![Screenshot of Take Command] (https://jpsoft.com/images/takecommand.jpg)
@@ -34,9 +34,9 @@ Are you looking for a replacement command shell that provides an enhanced Window
 
 Take Command is our flagship product. For 25 years, JP Software has been helping programmers, system administrators, technical support professionals, and advanced users save time and beat their Windows command prompt frustrations. Take Command offers a new approach to working with Windows command line applications, bringing users the power of the command line and the ease of use of the GUI. Take Command is a complete Windows console and CMD replacement that provides you with a vastly better command prompt UI, a batch programming IDE (with syntax coloring and a powerful debugger), and thousands of additional features not available at the CMD command line.
 
-PACKAGING NOTE: This program is updated frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/take-command/readme.md)**
 	</description>
-    <releaseNotes>Psuedo silent install. Completely automated but progress windows will appear.</releaseNotes>
+    <releaseNotes>https://jpsoft.com/news.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

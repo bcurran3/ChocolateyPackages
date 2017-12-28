@@ -2,7 +2,7 @@
 $packageName    = 'ost2' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://d.4team.biz/files/ost2_setup.exe'
-$checksum       = 'BCCC9433994CC183F2775CBC88666541C30B7B29442744B73C1B2D9CDB7B503A'
+$checksum       = '0392A3D3AA6611A6638908CBB7F430C6D077718B1FC1024D093C2D4ACD7E76FA'
 $validExitCodes = @(0,2)
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "OST2install.ahk"

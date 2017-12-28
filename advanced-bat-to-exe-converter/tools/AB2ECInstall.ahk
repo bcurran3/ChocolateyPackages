@@ -8,7 +8,7 @@ WinActivate
 Send !a
 Send !n
 Send !n
-WinWaitActive, Advanced BAT to EXE Converter v4.09 , , 300
+WinWaitActive, Advanced BAT to EXE Converter v4.11 , , 300
 WinActivate
 Send !{F4}
 WinWaitActive, Application Installed , , 300

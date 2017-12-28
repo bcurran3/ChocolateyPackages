@@ -1,7 +1,7 @@
 ﻿$packageName    = 'wordweb-free'
 $installerType  = 'exe'
 $url            = 'http://uk.wordwebsoftware.com/downloads/wordweb8.exe'
-$checksum       = 'BD93E4F745B65C9FE395FC646B26E835D10A6EA7063DEC14DD7B188D32AE3C53'
+$checksum       = '4105E78F2DFA179E0B4425A9A7D74CF7E9B90EB97F69BC1A7CD4EA341ACACCB7'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $silentArgs     = '/s'
 $validExitCodes = @(0)

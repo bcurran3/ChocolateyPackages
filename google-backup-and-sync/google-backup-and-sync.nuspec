@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <version>3.36.6884.5911</version>
+    <version>3.38.7642.3857</version>
     <id>google-backup-and-sync</id>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-backup-and-sync</packageSourceUrl>

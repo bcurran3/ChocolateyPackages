@@ -1,8 +1,8 @@
 ﻿$packageName    = '8gadgetpack'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://8gadgetpack.net/dl230/8GadgetPackSetup.msi' 
-$checksum       = '814655C82CAA5F3B2993022C07C824E260194F003371E3866B2C60C130F5784E'
+$url            = 'http://8gadgetpack.net/dl_250/8GadgetPackSetup.msi' 
+$checksum       = 'A27D70053A9823A33AB383AE8CBAD626BCE1824B456B629081D30165377AF6A0'
 $silentArgs     = '/quiet /qn /norestart'
 $validExitCodes = @(0, 3010, 1641)
 

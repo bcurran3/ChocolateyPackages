@@ -1,8 +1,8 @@
 ﻿$packageName = 'font-awesome-font'
-$url         = 'http://fontawesome.io/assets/font-awesome-4.7.0.zip'
-$checksum    = '4E22A3FB2BB157269261FB7DB1444845192426874DB43E24087B4A4D2A7739D4'
+$url         = 'https://use.fontawesome.com/releases/v5.0.2/fontawesome-free-5.0.2.zip'
+$checksum    = '77C18E313E2259639444126A676C5628DE61C822485F152F6610C382AB6F76ED'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$destination = Join-Path $toolsDir 'font-awesome-4.7.0'
+$destination = Join-Path $toolsDir 'fontawesome-free-5.0.2'
 
 $packageArgs = @{
   packageName   = $packageName

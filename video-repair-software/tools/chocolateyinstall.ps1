@@ -1,7 +1,7 @@
 ﻿$packageName  = 'video-repair-software'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://grauonline.de/download/videorepair.zip'
-$checksum     = 'AB930614FCFE6B01ABC124CF2293AB6E7B1D7B2F4AF1FCE32E48784EA47381DF'
+$checksum     = 'F9C48DFA6641003D70CB7F94B20469DC9C6D208A2E7E0257104DF912DDAD10B2'
 $shortcutName = 'Video Repair Software.lnk'
 $exe          = 'videorepair\gs.exe'
 
@@ -17,6 +17,6 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir\UrbanTerror43"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir\UrbanTerror43"
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir\$packageName"
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir\$packageName"
 

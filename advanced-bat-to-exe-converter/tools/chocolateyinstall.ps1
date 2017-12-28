@@ -2,7 +2,7 @@
 $packageName    = 'advanced-bat-to-exe-converter'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://www.battoexeconverter.com/downloads/advancedbattoexeconverter.exe' 
-$checksum       = 'E87961E0DF832A47DBB90FE44B0E4F8A077EE53D53187FA274CD3A640C2E9463'
+$checksum       = '718E638164E20FC5464AA3DFB302DE35728B1B61C7FC0DD1D5DA47B1848BBC1A'
 $silentArgs     = ''
 $validExitCodes = @(0)
 $ahkExe         = 'AutoHotKey'

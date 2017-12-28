@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>advanced-bat-to-exe-converter</id>
-    <version>4.09</version>
+    <version>4.11</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-bat-to-exe-converter</packageSourceUrl>
     <title>Advanced BAT to EXE Converter (Install)</title>
@@ -55,6 +55,8 @@ All of the advanced commands are available in both the FREE and PRO ($89.95) ver
 Advanced BAT to EXE Converter has been updated often since 2003. We have spent thousands of hours developing the only batch file compiler that will work for all complex batch files. 
 
 No adware or bloatware in this free software download!
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advanced-bat-to-exe-converter/readme.md)**
 	</description>
     <releaseNotes>http://www.battoexeconverter.com/update.html</releaseNotes>
     <dependencies>
