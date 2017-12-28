@@ -4,7 +4,7 @@
   <metadata>
     <id>trojan-remover</id>
     <title>Trojan Remover (Install)</title>
-    <version>6.9.5.2952</version>
+    <version>6.9.5.2954</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trojan-remover</packageSourceUrl>		
     <authors>Simply Super Software</authors>
     <owners>bcurran3</owners>
@@ -42,15 +42,16 @@ Context-sensitive help is also available for most screens by tapping the F1 key.
 
 This essential security utility is available for you to try out FREE. Download a fully-working evaluation copy today. The program will work for 30 days before you need to decide whether you would like to register it.
 ####The registration fee for Trojan Remover is US$24.95*. This fee covers all database updates and future program updates for 1 year from the date of registration. The fee for renewals in subsequent years is currently set at US$17.95* per year. You can install Trojan Remover on up to 3 additional computers, for no extra charge.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/trojan-remover/readme.md)**
     </description>
     <projectUrl>http://www.simplysup.com/tremover/</projectUrl>
     <docsUrl>http://simplysup.com/tremover/faq.html</docsUrl>
     <bugTrackerUrl>http://www.simplysup.com/tremover/changes.html</bugTrackerUrl>
-    <tags>trojan remover malware adware worms spyware virus trial admin</tags>
-    <copyright>Copyright (C) 1999-2016 Simply Super Software All Rights Reserved</copyright>
+    <tags>trojan remover malware adware worms spyware virus trial</tags>
+    <copyright>Copyright (C) Simply Super Software All Rights Reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.simplysup.com/tremover/images/tricon_256_stretched.jpg</iconUrl>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

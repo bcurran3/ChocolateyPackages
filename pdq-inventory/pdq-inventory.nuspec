@@ -3,61 +3,74 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-inventory</id>
-    <version>13.2.0.0</version>
+    <version>14.3.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-inventory</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>PDQ Inventory (Install)</title>
     <authors>Admin Arsenal</authors>
     <projectUrl>http://www.adminarsenal.com/pdq-inventory/</projectUrl>
     <iconUrl>http://cdn.adminarsenal.com/aa/img/logo-inventory.png</iconUrl>
-    <copyright>Copyright (C) 2016 Admin Arsenal Inc</copyright>
+    <copyright>Copyright (C) Admin Arsenal Inc</copyright>
     <licenseUrl>http://www.adminarsenal.com/licensing/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.adminarsenal.com/documentation/</docsUrl>
     <mailingListUrl>https://support.adminarsenal.com/hc/en-us</mailingListUrl>
-    <tags>arsenal pdq inventory tool software hardware scanning trial admin</tags>
-    <summary>PDQ Inventory allows Windows admins to know the software and hardware installed on their computers</summary>
+    <tags>arsenal pdq inventory tool software hardware scanning trial</tags>
+    <summary>PDQ Inventory is a systems management tool that scans Windows computers to collect hardware, software, and Windows configuration data.</summary>
     <description>
 ![Screenshot of PDQ Inventory](http://cdn.adminarsenal.com/wp-content/uploads/2015/12/reboot-required-300x187.png)
 
-##Take an Inventory of your Company’s Network
+###Intelligent Data Tracking
+Out of the box, computers are automatically grouped based on common data. View computers that have the same installed applications, hardware, operating systems, and even Windows updates. Additionally, create groups based on your own criteria.
 
-###PDQ Inventory scans your computers and collects hardware, software, and Windows configurations. In addition, PDQ Inventory allows you to run scan inventory reports, boot machines from Wake-On LAN, execute commands and remote desktop on target machines, and [many other features](https://www.pdq.com/compare/).
+###Utilities
+Easily launch remote desktop, remote command, reboot/shutdown, WOL, event viewer, and more. Incorporate and run your own scripts and favorite utilities with ease.
 
-###Seeing what’s installed
-PDQ Inventory initiates a scan on all of your computers that will collect the installed software, hardware, and certain configurations within Windows.
-Knowing what’s installed on each computer allows you to group your computers based on what they have (or do not have) installed. These groupings are known as Collections.
+###Reports
+Report on the exact data you need by using the built-in reports or create your own. Reports are created using our filters or even SQL. Run reports on any or all computers in the database then print, export and even save and email on a regular schedule to all your bosses.
 
-###Collect Hardware and Software Inventory
-You have three methods of importing your computers into PDQ Inventory, manual entry, Active Directory, or a text file listing your computers.
-To use any of these methods, from the menu, select Computer > Add Computers.
-A window will open where you can type in the name(s) of the computers to manage, or you may select the Import or Active Directory buttons.
+###Integration with PDQ Deploy
+Easily identify which computers are out-of-date and use PDQ Deploy to deploy to those particular PCs. Automatically update PDQ Inventory directly following the deployment. However, best of all is automatically deploying when a computer goes from offline to online in PDQ Inventory.
 
-###Dynamically Organize Computers in Collections
-Group computers the way that makes sense for you. Computers can belong to any number of collections.
-There are two types of collections; Dynamic and Static. Dynamic collections are populated automatically when a computer matches criteria that you define. Static collections are populated manually by dragging the computer object into the collection.
+###Insanely Detailed Data Tracking
+The Collection Library makes it easy to see which computers have out-of-date popular applications or run times. These groupings are updated as new versions of these apps, updates, and runtimes are released and serve as great templates for creating your own.
 
-Group computers the way that makes sense for you. Computers can belong to any number of collections.
+###Find What You Want, When You Want
+PDQ Inventory offers customization in what data is gathered and when. Make sure the information most important to you is at hand at the time it’s needed. Easily scan for:
 
-###Create Scan Profiles
-Scan profiles are used to determine what information a particular scanner will collect. For instance, PDQ Inventory has scan profiles that collect installed applications, or hot fixes, or registry values.
-For some scans you may just want to have a quick scan and not wait for everything to be collected. For instance, if you just deployed an application and you wanted PDQ Inventory to reflect the new install, you could create a scan profile that just scanned for Applications and Computer Details. If you have hundreds (or thousands) of computers then you could cut down your scan time considerably.
+* Active Directory	
+* Applications	
+* Computer Details 
+* Disks	
+* Displays	
+* Environment Variables 
+* Files	
+* Hardware Devices	
+* Hot Fixes 
+* Memory Modules	
+* Network Adapters	
+* Printers Registry	Services	
+* Shares 
+* Users and Groups	
+* Windows Features	
 
-###PDQ Inventory Scanners in Inventory
-Active Directory, Applications,	Computer Details, Disks, Displays, Environment Variables, Files, Hardware Devices, Hot Fixes, Memory Modules, Network Adapters,	Printers, Registry	Services	Shares	Users and Groups, Windows Features	Windows Task Schedules, 
+###Multi-Admin Access With a Shared Database
+Share your reports and collections with other admins by creating a server/client relationship. Maybe they’ll buy you a drink for all of the work you saved them.
 
-**Memory Requirements:** 4 GB
+**Memory Requirements:** 4 GB RAM, 8 GB recommended
 
-**OS Requirements:** Windows 7, 8x, 10, or Server (2008x, 2012x, 2016x)
+**OS Requirements:** Windows 7, 8x, 10, or Server 2008x - 2016x
 
 [Comparison of PDQ Inventory Free/Pro/Enterprise](https://www.pdq.com/compare/)
 
 **SOCIAL MEDIA:**
 [Twitter](https://twitter.com/AdmArsenal) | [YouTube](https://www.linkedin.com/company/pdq.com) | [Linkedin](https://www.linkedin.com/company/pdq.com) | [spiceworks](https://community.spiceworks.com/pages/pdq)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/pdq-inventory/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://support.pdq.com/hc/en-us/articles/115001766452-Version-14-of-PDQ-Inventory-Released</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.0" />
+      <dependency id="dotnet4.6" />
     </dependencies>
   </metadata>
   <files>

@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>performancetest</id>
-    <version>9.0.1015</version>
+    <version>9.0.1022</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/performancetest</packageSourceUrl>
     <title>PassMark PerformanceTest (Install)</title>
     <authors>PassMark® Software</authors>
     <projectUrl>https://www.passmark.com/products/pt.htm</projectUrl>
     <iconUrl>https://www.passmark.com/products/images/pt9_headerlogo.png</iconUrl>
-    <copyright>Copyright © 2017 PassMark® Software</copyright>
+    <copyright>Copyright © PassMark® Software</copyright>
     <licenseUrl>https://www.passmark.com/legal/disclaimer.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.passmark.com/support/performancetest/index.htm</docsUrl>
     <mailingListUrl>https://www.passmark.com/forum/performancetest</mailingListUrl>
-    <tags>passmark performancetest benchmark benchmarking trial admin</tags>
+    <tags>passmark performancetest benchmark benchmarking trial</tags>
     <summary>PerformanceTest - Easy PC Benchmarking</summary>
     <description>
 ![Screenshot of PerformanceTest](https://www.passmark.com/images/pt9_mainscreen_small.png)
@@ -82,6 +82,8 @@ The application includes the following additional features:
 **Requirements:** Pentium4 CPU or better, DirectX 9 or higher video, 2GB RAM, 300MB of free disk space. (DX12 video card recomended)
 
 **Free 30 day evaluation, then US$27.00 to purchase.**
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/performancetest/readme.md)**
 	</description>
     <releaseNotes>https://www.passmark.com/products/pt_history.htm</releaseNotes>
   </metadata>

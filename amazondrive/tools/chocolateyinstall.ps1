@@ -3,7 +3,7 @@ $packageName   = 'amazondrive'
 $installerType = 'EXE'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://d29x207vrinatv.cloudfront.net/win/AmazonDriveSetup.exe' 
-$checksum      = '7BB4FEC8E861E74E01E4BE954F9033117926D6157D6E21D5F500AD61C3844F4F'
+$checksum      = '6C1CC3CCC91459371FB01788A9CF4ED5BFB3BEAFFC854637ECBC58A325AA9644'
 $silentArgs    = "-q"
 $validExitCodes= @(0)
 
