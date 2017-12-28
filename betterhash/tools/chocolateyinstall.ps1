@@ -1,7 +1,7 @@
 ﻿$packageName = 'betterhash' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://www.betterhash.net/download/BetterHash_Setup.exe'
-$checksum    = '6C4A3C22E7CC41A864538F86F1CCFB94B924A2E9D0509EA9E1399DC2FE63DB6A'
+$checksum    = '2007E7B9AA715E8D92F91C8B697261028245AC58DEDB5D0A0FC60594E745A89B'
 $bits        = Get-ProcessorBits
 
 if ($bits -eq 32)
