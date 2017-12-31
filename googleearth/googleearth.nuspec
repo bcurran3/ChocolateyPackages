@@ -33,7 +33,7 @@ Explore the world with Google Earth.
 * Go back in time with historical imagery
 * Dive beneath the surface of the ocean	
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://support.google.com/earth/answer/40901</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>	
