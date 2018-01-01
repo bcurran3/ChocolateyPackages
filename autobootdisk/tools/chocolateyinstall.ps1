@@ -1,9 +1,9 @@
 ﻿$packageName    = 'autobootdisk'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/EvilSourcerer/AutoBootDisk/blob/master/AutoBootDisk5.5.msi' 
-$checksum       = '029C34B9FF18691B36195B1BCEA3194A810C705F8AC05C6B6DE985F502F8C592'
-$silentArgs     = '/s /v"/qn"'
+$url            = 'https://raw.githubusercontent.com/EvilSourcerer/AutoBootDisk/master/AutoBootDisk5.5.msi' 
+$checksum       = '62353BB964561F35D9973F060CCE46D280AE28EF31E97A76B3BC43D683468045'
+$silentArgs     = '/quiet /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
 $packageArgs = @{

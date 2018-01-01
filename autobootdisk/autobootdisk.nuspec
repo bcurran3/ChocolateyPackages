@@ -14,10 +14,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://bluskript.wixsite.com/autobootdisk/faq</docsUrl>
     <bugTrackerUrl>https://github.com/EvilSourcerer/AutoBootDisk/issues</bugTrackerUrl>
-    <tags>linux distributions download bootable</tags>
+    <tags>autobootdisk linux distributions download bootable</tags>
     <summary>Create Bootable USB Automagically using this simple tool. It is programmed in Visual C# .NET framework, and automatically downloads and installs Linux Distributions.</summary>
     <description>
-![Screenshot of ]()
+![Screenshot of AutoBootDisk](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/autobootdisk/autobootdisk_screenshot.png)
 
 ###AutoBootDisk
 
