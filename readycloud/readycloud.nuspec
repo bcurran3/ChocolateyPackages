@@ -2,15 +2,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>readycloud</id>
-    <version>1.15.1292.517</version>
+    <version>1.16.1297.525</version>
     <title>NETGEAR ReadyCLOUD (Install)</title>
     <authors>NETGEAR, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readycloud</packageSourceUrl>	
     <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
-    <projectUrl>http://kb.netgear.com/29786/What-is-the-ReadyCLOUD-Desktop-App</projectUrl>
+    <projectUrl>https://www.netgear.com/support/product/ReadyCLOUD</projectUrl>
     <iconUrl>https://www.netgear.com/images/support/CategoryIcons/icon-readynas-software.png</iconUrl>
+    <copyright>(C) NETGEAR, Inc.</copyright>
+    <docsUrl>http://kb.netgear.com/29785/ReadyCLOUD-FAQ</docsUrl>
+    <mailingListUrl>https://community.netgear.com/t5/ReadyCLOUD/bd-p/readycloud</mailingListUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>netgear readycloud nas router nighthawk remote access file sharing</tags>	
+    <summary>ReadyCLOUD gives you remote access over the Internet to a USB storage device that is connected to your router's USB port.</summary>	
     <description>
 ![Screenshot of NETGEAR ReadyCLOUD](http://www.downloads.netgear.com/files/answer_media/images/readycloud/downloadlink5.png)
 
@@ -38,16 +43,10 @@ Movie &amp; music streaming - Router X ReadyNAS ✔
 
 *Requires an attached USB storage device
 
-PACKAGING NOTES: Uninstall is not silent (requires clicking finish). This package will NOT upgrade or reinstall well as it uninstalls the previous version first and the package is not currently scripted to handle that. Not compatible with readynas-remote package (ReadyCLOUD will uninstall ReadyNAS Remote and this is not scripted to handle it).
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/readycloud/readme.md)**
 </description>
-    <summary>ReadyCLOUD gives you remote access over the Internet to a USB storage device that is connected to your router's USB port.</summary>
-    <releaseNotes></releaseNotes>
 	<dependencies>
-      <dependency id="autohotkey.portable" />
+      <dependency id="autohotkey" />
     </dependencies>	
-    <copyright>(C) 2016 NETGEAR, Inc.</copyright>
-    <tags>netgear readycloud nas router nighthawk remote access file sharing not silent admin</tags>
-    <docsUrl>http://kb.netgear.com/29785/ReadyCLOUD-FAQ</docsUrl>
-    <mailingListUrl>https://community.netgear.com/</mailingListUrl>
   </metadata>
 </package>
