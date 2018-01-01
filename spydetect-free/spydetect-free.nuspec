@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>spydetectfree</id>
-    <version>1.0.0.0</version>
+    <version>1.0.0.20170805</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/spydetectfree</packageSourceUrl>
     <title>SpyDetectFree (Portable)</title>
     <authors>NesterSoft Inc.</authors>
     <projectUrl>https://www.worktime.com/spydetectfree/</projectUrl>
     <iconUrl>https://www.worktime.com/images/logo-spydetectfree.png</iconUrl>
-    <copyright>(c) 2015 NesterSoft Inc.</copyright>
+    <copyright>(c) NesterSoft Inc.</copyright>
     <licenseUrl>https://www.worktime.com/spydetectfree/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>spydetect spydetectfree nestersoft anti-malware antimalware antivirus anti-virus spying rootkit antispyware portable</tags>
@@ -36,8 +36,9 @@ Because NesterSoft Inc. supports Respectful Employee Monitoring Only without any
 
 ###Digital Signature
 SpyDetectFree is digitally signed by NesterSoft Inc. Our signed software is completely safe to use: there are no bundles, no advertisement, no viruses, no toolbars or other addons.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/spydetectfree/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
