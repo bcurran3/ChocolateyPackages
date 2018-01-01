@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>spydetectfree</id>
+    <version>1.0.0.20170805</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/spydetectfree</packageSourceUrl>
+    <title>SpyDetectFree (Portable)</title>
+    <authors>NesterSoft Inc.</authors>
+    <projectUrl>https://www.worktime.com/spydetectfree/</projectUrl>
+    <iconUrl>https://www.worktime.com/images/logo-spydetectfree.png</iconUrl>
+    <copyright>(c) NesterSoft Inc.</copyright>
+    <licenseUrl>https://www.worktime.com/spydetectfree/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>spydetect spydetectfree nestersoft anti-malware antimalware antivirus anti-virus spying rootkit antispyware portable</tags>
+    <summary>SpyDetectFree - Free Spyware Detector</summary>
+    <description>
+![Screenshot of SpyDectectFree](https://www.worktime.com/images/spydetectfree.png)
+
+SpyDetectFree is a FREE tool mainly intended for detecting processes on your computer that might be spying on your keyboard or in other word for detecting processes that might be recording your keystrokes.
+
+Just in one click get answers for your questions:
+
+* Are my keystrokes being recorded?
+* Is there any spyware on my computer? -Am I being spied on?
+* Is my computer being spied on?
+
+
+###Compatibility:
+
+SpyDetectFree is compatible with any desktop/server Windows starting from Windows XP, 2003.
+
+###Why Free?
+Because NesterSoft Inc. supports Respectful Employee Monitoring Only without any spying functionality. Performance monitoring only. Strictly. SpyDetectFree is a purely free software: no requirements for using it, there are no fees, or hidden functionality.
+
+###Digital Signature
+SpyDetectFree is digitally signed by NesterSoft Inc. Our signed software is completely safe to use: there are no bundles, no advertisement, no viruses, no toolbars or other addons.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/spydetectfree/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
