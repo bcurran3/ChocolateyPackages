@@ -1,9 +1,9 @@
 ﻿$packageName  = 'spydetectfree' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.worktime.com/download/spydetectfree.zip'
-$checksum     = '98C9B5079F7BBFF0A61D49D6EC821B64ED2EAC089A9FF251D2A412237C54BC17'
+$checksum     = 'B0F653B6907696605C4C61AAB51E1B35B163C518AD9F6AE69EACB25B12A13D73'
 $url64        = 'http://www.worktime.com/download/spydetectfree64.zip'
-$checksum64   = '53C2561223028EA3FF9C23AA6A82AE3A71A78DCCEBB46DFD5A431F06DD9F3E2E'
+$checksum64   = 'D350634F0C4789D91267715DD44C1F6BF723CFD77D20D34E9F48ED3A97186A3A'
 $shortcutName = 'SpyDetectFree.lnk'
 $exe          = 'SpyDetectFree.exe'
 $exe64        = 'SpyDetectFree64.exe'
