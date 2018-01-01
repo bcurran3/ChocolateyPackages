@@ -3,16 +3,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>active-directory-photos</id>
-    <title>Code Two Active Directory Photos (free) (Install)</title>
-    <version>1.2.1.0</version>
-    <authors>CODE TWO</authors>
+    <title>CodeTwo Active Directory Photos (free) (Install)</title>
+    <version>1.2.1.020180101</version>
+    <authors>CodeTwo</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/active-directory-photos</packageSourceUrl>		
-    <summary>Add photos to Active Directory and manage them in an easy way</summary>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/active-directory-photos</packageSourceUrl>
+    <projectUrl>http://www.codetwo.com/freeware/active-directory-photos/</projectUrl>
+    <iconUrl>https://www.codetwo.com/media/images/2016-12-13-logo-adp-66x90.png</iconUrl>		
+    <docsUrl>http://www.codetwo.com/freeware/active-directory-photos/userguide/</docsUrl>
+    <mailingListUrl>http://www.codetwo.com/signup/active-directory-photos/</mailingListUrl>
+    <copyright>(C) Code Two</copyright>
+    <licenseUrl>http://codetwo.com/regulations/order-terms?ref=f</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>codetwo active directory AD photos notsilent</tags>	
+    <summary>CodeTwo Active Directory Photos - Add photos to Active Directory and manage them in an easy way</summary>
     <description>
+![Screenshot of CodeTwo Active Directory Photos](http://www.codetwo.com/media/images/thumb_600_352/media/images/adp01-3.png)
+	
 CodeTwo Active Directory Photos will let you upload photographs to Active Directory and manage them easily using a light and super-intuitive user interface. This freeware application has been designed to make managing scores of users' images straightforward and ultra-fast. Setting up thousands of Active Directory users' photographs is just a matter of cooking soft boiled eggs, which really makes this program stand out in the crowd.
-
-![alt text](http://www.codetwo.com/media/images/thumb_600_352/media/images/adp01-3.png)
 
 ####Why would I need it to add photos to Active Directory?
 
@@ -26,38 +34,30 @@ You may need to add photographs to Active Directory to show them in internal Out
 * Resizing photographs
 * Automatic photo size adjustment to 100kb (or less) to comply with Active Directory requirements
 * Lets you display Active Directory photos in Outlook 2016, 2013 and 2010 emails, contacts and GALs
-* Compatible with CodeTwo Exchange Rules Pro. See how to add images from Active * Directory to automatic email signatures in Exchange
+* Lets you display Active Directory photos in SharePoint, Lync, and Skype for Business
+* Compatible with CodeTwo Exchange Rules Pro. [See how to add images from Active Directory to automatic email signatures in Exchange](https://www.codetwo.com/exchange-rules-pro/how-to-add-signatures-with-photos-from-active-directory)
 
 ####Supported platforms
 
-####Can be installed on
-Windows Server 2012 / 2008 / 2003 / SBS 2008
-Windows 10* / 8 / 7 / Vista / XP (SP3)
-
-Support for 32 / 64 bit platforms.
-
-*In the case the program does not work after upgrading to Windows 10 from Windows 7 or 8.1 please reinstall it.
+* Windows Server 2016(1) / 2012 R2 / 2012 / 2008 R2 / 2008 / 2003 R2 / 2003
+* Windows 10(2) / 8.1 / 8 / 7 / Vista / XP SP3
+* Small Business Server 2008
+* Support for 32 / 64 bit platforms.
+* If the program doesn't work after upgrading to Windows 10 from Windows 7 or 8.1, you need to reinstall it.
 
 ####Requires
 .NET Framework 2.0
 Access to Active Directory Domain Services
 
 on Windows 10 / 8 / Windows Server 2012: Install .NET Framework 3.5 manually via Turn Windows features on or off in Control Panel
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/active-directory-photos/readme.md)**
     </description>
-    <projectUrl>http://www.codetwo.com/freeware/active-directory-photos/</projectUrl>
-    <docsUrl>http://www.codetwo.com/freeware/active-directory-photos/userguide/</docsUrl>
-    <mailingListUrl>http://www.codetwo.com/signup/active-directory-photos/</mailingListUrl>
-    <bugTrackerUrl>http://www.codetwo.com/freeware/active-directory-photos-version-history</bugTrackerUrl>
-    <tags>codetwo active directory AD photos admin</tags>
-    <copyright>(C)2016 Code Two</copyright>
-    <licenseUrl>http://codetwo.com/regulations/order-terms?ref=f</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.codetwo.com/media/images/frh-icon-activedirectoryphotos-66x90.png</iconUrl>
     <dependencies>
       <dependency id="dotnet3.5" />
-      <dependency id="autohotkey.portable" />	  
+      <dependency id="autohotkey" />	  
     </dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.codetwo.com/freeware/active-directory-photos-version-history</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

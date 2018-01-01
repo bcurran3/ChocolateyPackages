@@ -5,15 +5,31 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
  
 WinWaitActive, CodeTwo Active Directory Photos Setup, Welcome to the CodeTwo Active Directory Photos Setup Wizard, 500
 WinActivate
-;BlockInput On
 Send !n
 Send !a
 Send !n
 Send !n
-Send {Enter}
-WinWaitActive, CodeTwo Active Directory Photos Setup, Completed the CodeTwo Active Directory Photos Setup Wizard, 60
+WinWaitActive, CodeTwo Active Directory Photos Setup, Ready to install, 60
+Send !i
+WinWaitActive, CodeTwo Active Directory Photos Setup, Completed the CodeTwo Active Directory Photos Setup Wizard, 30
 Send !f
-WinWaitActive, CodeTwo Active Directory Photos, Active Directory containers, 60
+Sleep, 15000
+If WinExist("Error")
+  {
+   Send {tab}
+   Send {tab}
+   Send {tab}
+   Send {space}
+  }
+ 
+WinWaitActive, CodeTwo Active Directory Photos, Learn how to add Exchange email signatures with photos pulled from Active Directory, 120
 Send !{f4}
-;BlockInput Off
+Sleep, 15000
+If WinExist("Error")			 
+  {
+   Send {tab}
+   Send {tab}
+   Send {tab}
+   Send {space}
+  }
 
