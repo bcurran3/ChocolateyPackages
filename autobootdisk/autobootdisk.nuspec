@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>autobootdisk</id>
+    <version>5.5</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/autobootdisk</packageSourceUrl>		
+    <title>AutoBootDisk (Install)</title>
+    <authors>EvilSourcerer/bluskript</authors>
+    <projectUrl>https://bluskript.wixsite.com/autobootdisk</projectUrl>
+	<iconUrl>https://static.wixstatic.com/media/e32f91_d682104e1540477694df191c63c796fd~mv2.png</iconUrl>
+    <copyright>© BY AUTOBOOTDISK</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://bluskript.wixsite.com/autobootdisk/faq</docsUrl>
+    <bugTrackerUrl>https://github.com/EvilSourcerer/AutoBootDisk/issues</bugTrackerUrl>
+    <tags>linux distributions download bootable</tags>
+    <summary>Create Bootable USB Automagically using this simple tool. It is programmed in Visual C# .NET framework, and automatically downloads and installs Linux Distributions.</summary>
+    <description>
+![Screenshot of ]()
+
+###AutoBootDisk
+
+​No more prolonged Google Searches.
+
+​No more annoying waits.
+
+​Everything is in one application.
+
+​Clean UI
+
+​AutoBootDisk is a new alternative bootable USB Loader program. It is 1.5 times faster than UNetbootin. This program also supports automatic updates, so any bugs get patched automatically.
+
+###​Features
+* Automatic Updates
+* Automatic Downloader with 78 Linux Distributions Supported, and a custom section if you don't find your distribution in the list.
+* Clean GUI
+* Faster than Rufus, UNetbootin, Universal USB Installer, or the Windows 7 USB Download Tool
+
+[Supported Linux Distributions](https://bluskript.wixsite.com/autobootdisk/supported-linux-distributions)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/autobootdisk/readme.md)**
+	</description>
+    <releaseNotes>https://bluskript.wixsite.com/autobootdisk/blog</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
