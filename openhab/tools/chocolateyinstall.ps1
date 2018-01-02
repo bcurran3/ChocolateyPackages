@@ -1,14 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName  = 'openhab' 
-$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab%2F2.2.0%2Fopenhab-2.2.0.zip'
-$checksum     = '1C57555BECABF3D5BCBE7A4CE10183271DBC2B0F6954E987506D46D0CA3072FC'
-$url2         = 'https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab-addons%2F2.2.0%2Fopenhab-addons-2.2.0.kar'
-$checksum2    = 'A7E6E8251489E64C22402973B550AA5436E8A23C38AB143E15A287BD32494206'
-$ExeFile      = 'start.bat'
-$ShortcutName = 'openHAB'
-$fileName     = 'openhab-addons-2.2.0.kar'
-$FileFullpath = '$ToolsDir\addons\$fileName'
+$packageName   = 'openhab' 
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url           = 'https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab%2F2.2.0%2Fopenhab-2.2.0.zip'
+$checksum      = '1C57555BECABF3D5BCBE7A4CE10183271DBC2B0F6954E987506D46D0CA3072FC'
+$url2          = 'https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab-addons%2F2.2.0%2Fopenhab-addons-2.2.0.kar'
+$checksum2     = 'A7E6E8251489E64C22402973B550AA5436E8A23C38AB143E15A287BD32494206'
+$ExeFile       = 'start.bat'
+$ShortcutName  = 'openHAB.lnk'
+$ShortcutName2 = 'openHAB Dashboard.lnk'
+$ShortcutName3 = 'openHAB Configuration Folder.lnk'
+$ShortcutName4 = 'openHAB Documentation.lnk'
+$ShortcutName5 = 'openHAB Community.lnk'
+$ShortcutName6 = 'openHAB Console.lnk'
+$ShortcutName7 = 'openHAB Logs.lnk'
+$fileName      = 'openhab-addons-2.2.0.kar'
+$FileFullpath  = "$toolsDir\addons\$fileName"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -32,8 +38,16 @@ $packageArgs = @{
 
 Get-ChocolateyWebFile @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir" -IconLocation "$toolsDir\openHAB.ico"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir" -IconLocation "$toolsDir\openHAB.ico"
+New-Item "$toolsDir\openHAB" -type directory -force -ErrorAction SilentlyContinue
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\openHAB" -WorkingDirectory "$toolsDir\openHAB" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -targetPath "$toolsDir\openHAB" -WorkingDirectory "$toolsDir\openHAB" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory $toolsDir -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName2" -targetPath "http://localhost:8080" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName3" -targetPath "$toolsDir\conf" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName4" -targetPath "http://docs.openhab.org/" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName5" -targetPath "https://community.openhab.org/" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName6" -targetPath "$toolsDir\runtime\bin\client.bat" -WorkingDirectory "$toolsDir\runtime\bin" -IconLocation "$toolsDir\openHAB.ico"
+Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName7" -targetPath "$toolsDir\userdata\logs" -IconLocation "$toolsDir\openHAB.ico"
 
 $WhoAmI=whoami
 icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null
