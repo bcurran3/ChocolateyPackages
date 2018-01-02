@@ -3,22 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-migration-exchange</id>
-    <version>5.0.32.17</version>
+    <version>5.0.33.22</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-migration-exchange</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>G Suite Migration for Microsoft® Exchange (Install)</title>
     <authors>Google</authors>
     <projectUrl>https://tools.google.com/dlpage/exchangemigration</projectUrl>
+	<iconUrl>https://4.bp.blogspot.com/-Pp8TROoyTwc/VeXXFhKQwWI/AAAAAAAACPo/b2g71CJ_Hj8/s1600/inline-googles-new-logo.png</iconUrl>
     <copyright>Google</copyright>
     <licenseUrl>https://gsuite.google.com/terms/standard_terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.google.com/support/enterprise/static/gapps/docs/admin/en/gapps_exchange_migration/index.html</docsUrl>
-    <bugTrackerUrl>https://support.google.com/a/answer/162794</bugTrackerUrl>	
-    <tags>gsmme google gsuite gapps migration exchange server admin</tags>
+    <tags>gsmme google gsuite gapps migration exchange server</tags>
     <summary>Tool for migrating from Microsoft Exchange to G Suite (formerly GApps)</summary>
     <description>
-##Google Apps Migration for Microsoft® Exchange
-(G Suite as of 09/29/2016)
+##G Suite Migration for Microsoft® Exchange
 
 You can migrate email, contacts, calendar, and Public Folder data from on-premise and hosted Microsoft® Exchange to G Suite, whether you have just a few users or tens of thousands. 
 
@@ -30,7 +29,7 @@ You can also migrate data from PST files and emails from IMAP servers (Novell® 
 * Selectively migrate email, calendar or contacts (or any combination thereof)
 * Migrate in phases for very large migrations	
 
-You can also migrate mail, contacts and calendar events with the Data migration service available in the G Suite Admin console. The Data migration service supports migrations from Microsoft® Exchange, Office 365, and IMAP-accessible mail servers such as GoDaddy or Yahoo. The Data migration service does not currently support migrating from PST files. 
+You can also migrate mail, contacts and calendar events with the [Data migration service](https://support.google.com/a/answer/6003169) available in the G Suite Admin console. The Data migration service supports migrations from Microsoft® Exchange, Office 365, and IMAP-accessible mail servers such as GoDaddy or Yahoo. The Data migration service does not currently support migrating from PST files. 
 
 ###System Requirements
 
@@ -42,8 +41,9 @@ You can also migrate mail, contacts and calendar events with the Data migration 
 * Microsoft® Windows: Windows XP SP3, Windows Vista Business SP1 or later, Windows 7, Windows 8, Windows Server 2003 SP2 or later, Windows 2008, Windows 2008 R2.
 * Microsoft Outlook® 2003/2007/2010/2013 (required only for migrating from Microsoft® Exchange or PST files). 64-bit versions and Click-to-Run versions are not supported.
 
-PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/gsuite-migration-exchange/readme.md)**
 	</description>
+    <releaseNotes>https://support.google.com/a/answer/162794</releaseNotes>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
