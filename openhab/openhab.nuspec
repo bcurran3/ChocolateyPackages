@@ -18,7 +18,7 @@
     <mailingListUrl>https://community.openhab.org/</mailingListUrl>
     <bugTrackerUrl>https://github.com/openhab/openhab-distro/issues</bugTrackerUrl>
     <tags>openhab home automation smart java</tags>
-    <summary>The open Home Automation Bus (openHAB, pronounced ˈəʊpənˈhæb) is an open source, technology agnostic home automation platform which runs as the center of your smart home!</summary>
+    <summary>openHAB - a vendor and technology agnostic open source automation software for your home</summary>
     <description>
 ![Screenshot of openHAB](http://www.openhab.org/assets/images/ui/slide-desktop.png)
 	
@@ -57,7 +57,7 @@ Nonetheless, this only applies to the setup and configuration of the system, whi
 	</description>
     <releaseNotes>https://github.com/openhab/openhab-distro/releases</releaseNotes>
     <dependencies>
-      <dependency id="zulu" />
+      <dependency id="javaruntime" />
     </dependencies>
   </metadata>
   <files>
