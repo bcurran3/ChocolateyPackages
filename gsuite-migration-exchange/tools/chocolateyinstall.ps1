@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName   = 'gsuite-migration-exchange'
-$installerType = 'msi'
-$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://dl.google.com/exchangemigration/GoogleAppsMigration.msi' 
-$checksum      = '18E9548BD1AD8E0E4DE73D5A983AB01CD39EA6B9513E1DA68FCE6DEFB27EF66B'
-$silentArgs    = '/quiet /qn /norestart'
-$validExitCodes= @(0, 3010, 1641)
+$packageName    = 'gsuite-migration-exchange'
+$installerType  = 'msi'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url            = 'https://dl.google.com/exchangemigration/GSuiteMigration.msi' 
+$checksum       = '0C7216793B3B8B3D254BCD12CDBE3560649DA73A6D8FBC6CD774553D58C0C782'
+$silentArgs     = '/quiet /qn /norestart'
+$validExitCodes = @(0, 3010, 1641)
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +13,7 @@ $packageArgs = @{
   url           = $url
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
-  softwareName  = 'Google Apps Migration For Microsoft*'
+  softwareName  = 'G Suite Migration For Microsoft*'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
