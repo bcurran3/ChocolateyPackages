@@ -3,49 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lan-speed-test-registered</id>
-    <title>LAN Speed Test Registered Version (Install)</title>
-    <version>3.5.20161009</version>
+    <title>[Deprecated] LAN Speed Test Registered Version (Install)</title>
+    <version>3.5.20180101</version>
     <authors>TotuSoft</authors>
     <owners>bcurran3</owners>
-    <summary>LAN speed benchmarkting utility.</summary>
+    <summary>LAN speed benchmarking utility.</summary>
     <description>
-![Screenshot of LAN Speed Test Registered Version](http://totusoft.com/content/media/lanspeed/lst2.jpg)
-	
-LAN Speed Test was designed from the ground up to be a simple but powerful tool for measuring file transfer, hard drive, USB Drive, and Local Area Network (LAN) speeds (wired and wireless). It does this by building a file in memory, then transfers it both ways (without effects of windows file caching) while keeping track of the time, and then does the calculations for you. Simple concept and easy to use. You’ll find that LAN Speed Test will quickly become one of your favorite network tools!
-
-Some of LAN Speed Test v3.5 Features include…
-
-Completely portable – No installation needed
-Incredibly small (183KB) and can run from a hard drive, USB Flash drives, etc.
-Compatible with Windows versions 2000 and up (2000, XP, Vista, Win7, Win8, Server2003, Server 2008, Server 2012)
-Very fast! Most tests are less than 1 minute
-Test packet sizes up to 9 GB while taking a maximum of just 10 MB of RAM on your system
-Progress window that displays progress bar and allows user to cancel at any time
-Compatible with LST Server for real network performance results without hard drive limitations – Even test your WAN (internet) speed with LST Server
-Network Scan (lets you see all other computers/devices that are on your network) with the ability to Ping test to any of them
-Log viewing screen with ability to add notes
-Scheduling test runs now an option with logging and the new Command Line format
-Open/Save option to .csv file
-Selectable Speed Measurements
-Simultaneous multiple stream support
-View Avg, Max, and Min throughput results
-Automatically re-start tests for a set period of time or until manually stopped
-Email results manually, automatically, or only when under a certain speed
-Revised! Command Line Mode (Allows network administrators to start the test from the command line with all test options now available)
-And much more!
-PACKAGE NOTES: Yes, you can download the registered version. Yes, you can run it. Registration costs $6 to activate all features.
+This package has been superseded by [LAN Speed Test](https://chocolatey.org/packages/lan-speed-test.portable).
     </description>
     <projectUrl>http://totusoft.com/lanspeed/</projectUrl>
-    <mailingListUrl>http://www.homenetworkenabled.com/forums/forumdisplay.php?63-LAN-Speed-Test</mailingListUrl>
-    <bugTrackerUrl>http://totusoft.com/lanspeed_history/</bugTrackerUrl>
-    <tags>totusoft lan speed test network benchmark utility admin</tags>
+    <tags>totusoft lan speed test network benchmark utility</tags>
     <copyright>(C) (2008-2015) Totusoft.com</copyright>
-    <licenseUrl>http://totusoft.com/about/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://img.informer.com/icons/png/48/5730/5730968.png</iconUrl>
-    <releaseNotes>added checksums and screenshot</releaseNotes>
+	<dependencies>
+      <dependency id="lan-speed-test.portable" />	
+    </dependencies>		
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
