@@ -15,7 +15,7 @@
     <copyright>(C) Totusoft.com</copyright>
     <licenseUrl>http://totusoft.com/about/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://img.informer.com/icons/png/48/5730/5730968.png</iconUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/lan-speed-test.portable/lan-speed-test.portable_icon.png</iconUrl>	
     <summary>LAN Speed Test is a LAN speed benchmarking utility.</summary>
     <description>
 ![Screenshot of LAN Speed Test](http://www.totusoft.com/content/media/lanspeed4/beta5_lst04_002.png)
