@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mrboom</id>
-    <version>3.7</version>
+    <version>4.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mrboom</packageSourceUrl>
     <title>MrBoom (Portable)</title>
@@ -55,18 +55,29 @@ The  goal of the game is to bomb away your enemies and other players.  Bomberman
 * Right - Right
 * Up - Up
 * Down - Down
-* RCtrl - Lay bomb
-* RAlt - Ignite bomb
-* RShift - Jump
+* Right Ctrl, End, Right GUI - Lay bomb
+* Right Alt or PageDown - Ignite bomb
+* Right Shift or Home - Jump
 
 ####2nd player
 * A - Left
 * D - Right
 * W - Up
 * S - Down
-* LCtrl - Lay bomb
-* LAlt - Ignite bomb
-* LShift - Jump
+* Left Ctrl, Left GUI - Lay bomb
+* Left Alt - Ignite bomb
+* Left Shift - Jump
+
+
+####COMMAND LINE OPTIONS
+* -f, --fx x FX volume: with x from 0 to 10.
+* -h, --help Show summary of options.
+* -m, --nomonster No monster mode.
+* -s, --sex Sex team mode.
+* -c, --color Color team mode.
+* -n, --noautofire No autofire for bomb drop.
+* -v, --version Show version of program.
+* -z, --nomusic No music.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mrboom/readme.md)**
 	</description>
