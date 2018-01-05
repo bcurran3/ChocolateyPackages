@@ -10,6 +10,12 @@ ROADMAP:
 * Cancel task to stop after xxx minutes in event of a non-silent package getting "stuck"
 * Possibly drop the leading 0 required for times less than < 10:00 AM
 
+CHANGELOG:
+* 2017.08.20.01 - updated Chocolatey/nuspec description to correct INSTALL EXAMPLES
+* 2017.08.20.01 - added message post install to edit persistentpackages.config
+* 2017.08.20.01 - added shortcut to persistentpackages.config in tools dir
+
+
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?

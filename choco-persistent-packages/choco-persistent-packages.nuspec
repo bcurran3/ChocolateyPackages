@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-persistent-packages</id>
-    <version>2017.08.20</version>
+    <version>2017.08.20.01</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</packageSourceUrl>
@@ -38,10 +38,10 @@ You don't. But **choco-persistent-packages** will only work if the Chocolatey pa
 You can set the time by running **choco install choco-persistent-packages --params "'/Time:XX:XX'"** where XX:XX equals the "Military Time" to run updates. You **must** enter four digits and the colon, i.e. enter a leading 0 for times less than 10 AM. Not entering the correct format will fail the install. Please see the examples.
 
 ###INSTALL EXAMPLES:
-* **choco choco-persistent-packages --params "'/Time:04:00'"** - (re)installs persistent packages 4 AM
-* **choco choco-persistent-packages --params "'/Time:06:30'"** - (re)installs persistent packages 6:30 AM
-* **choco choco-persistent-packages --params "'/Time:21:00'"** - (re)installs persistent packages at 9 PM
-* **choco choco-persistent-packages --params "'/Time:23:30'"** - (re)installs persistent packages 11:30 PM
+* **choco install choco-persistent-packages --params "'/Time:04:00'"** - (re)installs persistent packages 4 AM
+* **choco install choco-persistent-packages --params "'/Time:06:30'"** - (re)installs persistent packages 6:30 AM
+* **choco install choco-persistent-packages --params "'/Time:21:00'"** - (re)installs persistent packages at 9 PM
+* **choco install choco-persistent-packages --params "'/Time:23:30'"** - (re)installs persistent packages 11:30 PM
 
 If you don't specify a time, it defaults to midnight.
 
@@ -52,6 +52,7 @@ If you have a previous release of **choco-persistent-packages** installed, upgra
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages/readme.md)**
 	</description>
+    <releaseNotes>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages/readme.md</releaseNotes>	
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
 	  <dependency id="powershell" version="4.0" />
