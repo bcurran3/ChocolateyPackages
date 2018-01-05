@@ -34,7 +34,8 @@ if ($pp["Time"] -eq $null -or $pp["Time"] -eq ''){
 	 }
 
 SchTasks /Create /SC DAILY /RU SYSTEM /RL HIGHEST /TN "choco-persistent-packages" /TR $TaskCommand /ST $RunTime /F
-Write-Host Now configured to run choco-persistent-packages at $RunTime every day. -foreground magenta 
+Write-Host "Now configured to run choco-persistent-packages at $RunTime every day." -foreground magenta
+Write-Host "Go edit \ProgramData\Chocolatey\config\persistentpackages.config and read the comments section." -foreground magenta
 
 # Reference for possible future use:
 # https://technet.microsoft.com/en-us/library/jj649816(v=wps.630).aspx
