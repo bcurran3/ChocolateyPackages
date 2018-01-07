@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* Logitech switched to a custom installer without silent install options. Bit PITA. Thanks pauby for writing the new AHK scripts.
 
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
