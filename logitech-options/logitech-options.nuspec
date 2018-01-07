@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>6.70.1197</version>
+    <version>6.72.344</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
@@ -13,7 +13,7 @@
     <copyright>© Logitech. All rights reserved</copyright>
     <licenseUrl>https://secure.logitech.com/en-us/footer/terms-of-use</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>logitech options keyboard mouse utility</tags>
+    <tags>logitech options keyboard mouse utility notsilent</tags>
     <summary>Logitech Options software lets you customize your device settings.</summary>
     <description>
 ###Logitech Options software lets you customize your device's settings as follows:
@@ -59,6 +59,9 @@
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/logitech-options/readme.md)**	
 	</description>
+    <dependencies>
+      <dependency id="autohotkey" />
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
