@@ -3,20 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>googleearth</id>
-    <version>7.1.8.3036</version>
+    <version>7.1.8.30360001</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/googleearth</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Google Earth (Install)</title>
     <authors>Google</authors>
     <projectUrl>https://www.google.com/earth/explore/products/desktop.html</projectUrl>
     <iconUrl>https://www.google.com/earth/images/products_desktop.png</iconUrl>
-    <copyright>(C) 2017 Google Inc. All Rights Reserved.</copyright>
+    <copyright>(C) Google Inc. All Rights Reserved.</copyright>
     <licenseUrl>https://www.google.com/intl/en/policies/terms/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.google.com/earth/?hl=en#topic=4363013</docsUrl>
     <mailingListUrl>https://plus.google.com/u/0/+GoogleEarth</mailingListUrl>
     <bugTrackerUrl>https://support.google.com/earth/answer/40901</bugTrackerUrl>
-    <tags>googleearth google earth  maps navigation geographic mapping admin</tags>
+    <tags>googleearth google earth  maps navigation geographic mapping</tags>
     <summary>View satellite imagery, maps, terrain, 3D buildings, galaxies far in space, and the deepest depths of the ocean.</summary>
     <description>
 ##Google Earth
@@ -32,11 +32,10 @@ Explore the world with Google Earth.
 * Fly around cities (or the entire world) in 3D
 * Go back in time with historical imagery
 * Dive beneath the surface of the ocean	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/googleearth/readme.md)**
 	</description>
     <releaseNotes>https://support.google.com/earth/answer/40901</releaseNotes>
-    <dependencies>
-      <dependency id="autohotkey.portable" />
-    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
