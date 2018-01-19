@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>utorrent-link-sender-chrome</id>
+    <version>0.0.9</version>
+    <title>uTorrent Link Sender for Chrome</title>
+    <authors>Pendexgabo</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent-link-sender-chrome</packageSourceUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/utorrent-link-sender/jakpnimgfpjlkigbndhbfhhamkdfokpb</projectUrl>
+	<projectSourceUrl>https://github.com/pendexgabo/utorrent-download</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/pendexgabo/utorrent-download/issues</bugTrackerUrl>	
+    <iconUrl>https://upload.wikimedia.org/wikipedia/en/9/9f/UTorrent_%28logo%29.png</iconUrl>
+    <licenseUrl>https://github.com/pendexgabo/utorrent-download</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of uTorrent Link Sender](https://lh6.googleusercontent.com/l_--AbDt5pWj7LY5MdIRlRY3tyA9_XZP1NsY4KFVz_tIUA2MnONqLOCvDcffo-CNN1WmlIaH1Wk=s640-h400-e365-rw)
+
+###Send a link to the uTorrent Web UI
+
+The extension adds an item in the contextual menu when right click is done over a magnet link. You can then, send that link to the uTorrent UI without leaving the current page.
+
+Just install the extension, update your uTorrent server settings and start using it.
+
+No ads, not spyware. This just works...I added it because I got tired of extensions full of this kind of stuff.
+
+The code is open-source if you want to check it out: https://github.com/pendexgabo/utorrent-download
+
+Do you have feedback? Please post it here: http://bit.ly/1rP8bxS (google store feedback)
+
+If you think the extension is cool and you are in a good mood you can consider buying me a beer :) Just press the button in the settings page	
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>uTorrent Link Sender adds a context menu selection to send a torrent link to uTorrent running on another computer.</summary>
+    <tags>utorrent link sender chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
