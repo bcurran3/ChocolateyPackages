@@ -1,13 +1,14 @@
-﻿$packageName= 'gptgen' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://heanet.dl.sourceforge.net/project/gptgen/gptgen/v1.1/gptgen-1.1.zip'
+﻿$packageName = 'gptgen' 
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = 'https://superb-dca2.dl.sourceforge.net/project/gptfdisk/gptfdisk/1.0.1/gdisk-binaries/gdisk-windows-1.0.1.zip'
+$checksum    = '12CB72C557515DB3471D4A564858D230BE6ADCD24023DE0ED2BF680A05498B27'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '8C1781F3F8B26D4C5BF6D1F0583B4417E91F2FBEDF8F480D7546B9EE2759A9FE'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gptgen</id>
-    <version>1.1</version>
+    <version>1.1.20170316</version>
     <owners>bcurran3</owners>
     <title>gptgen (Portable)</title>
     <authors>Gábor A. Stefanik</authors>
@@ -17,7 +17,7 @@
     <tags>gptgen mbr gpt portable</tags>
     <summary>convert MBR to GPT</summary>
     <description>Gptgen is a tool to non-destructively convert hard disks partitioned in the common, "MSDOS-style" MBR scheme (including extended partitions) to use a GUID partition table (GPT).</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>new DL link - old mirror disappeared - trying more generic link</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

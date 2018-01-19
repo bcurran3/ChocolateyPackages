@@ -3,16 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>getdataback-simple</id>
-    <version>3.12</version>
+    <version>3.13</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/getdataback-simple</packageSourceUrl>
     <title>GetDataBack Simple (Install)</title>
     <authors>Runtime Software</authors>
     <projectUrl>https://www.runtime.org/data-recovery-software.htm</projectUrl>
-    <iconUrl></iconUrl>
-    <copyright>© 2017 Runtime Software | All Rights Reserved</copyright>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/getdataback-simple/GetDataBackSimple_icon.png</iconUrl>
+    <copyright>(c) 2001-2017 by Runtime Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl></projectSourceUrl>
     <docsUrl>https://www.runtime.org/data-recovery-documentation.htm</docsUrl>
     <tags>runtime getdataback simple data recovery utility ntfs fat12 fat16 fat32 exfat ext ext2 ext3 ext4 trial admin</tags>
     <summary>GetDataBack Simple - The simplest Data Recovery Software ever.</summary>
@@ -71,18 +70,6 @@ GetDataBack is read-only, meaning the program will not attempt to "fix" or write
 GetDataBack Simple's user interface is so simple, it enables even the most inexperienced users to conduct their own data recovery with just one click.
 
 GetDataBack Simple not only recovers you data. It does it quick. The first sophistication levels recover large drives in seconds or minutes. The speed of copying the recovered data to another medium competes with the speed of regular file copy operations.
-
-###Free to try
-
-Download the trial version and recover your files. You can preview your data to be sure it actually works. If you like the results you do not need run the program again. Purchase the license key and enter it into the open program. Then copy everything you need!
-
-###Free lifetime updates
-
-GetDataBack comes with free updates for the lifetime of the software. Unlike competitors who require you to buy a new version every year, our first GetDataBack customers from 2001 are still enjoying the newest versions of our software!
-
-###No working Windows?
-
-Run GetDataBack from our [Runtime Live CD](http://www.runtime.org/data-recovery-live-cd.htm) or a [WinPE Boot Medium](http://www.runtime.org/peb.htm).
 	</description>
 <!--    <releaseNotes>http://runtime3.org/blog/?cat=18</releaseNotes> -->
   </metadata>
