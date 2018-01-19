@@ -16,6 +16,9 @@
     <tags>syntaxerrors open mahjong tiles game java portable</tags>
     <summary>Open Mahjong - Implementation of the original Chinese board game of Mahjong using Hong Kong rules.</summary>
     <description>
+![screenshot of Open Mahjong](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/open-mahjong-java/OpenMahjong_screenshot.png)
+
+	
 Open Mahjong is the implementation of the original Mahjong board game.
 
 Mahjong is a game that originated in China, commonly played by four players.
