@@ -61,6 +61,7 @@ If you have a previous release of **choco-cleaner** installed, upgrading to a ne
 	</description>
     <dependencies>
 	  <dependency id="powershell" version="4.0" />
+      <dependency id="7zip" />
     </dependencies>
   </metadata>
   <files>
