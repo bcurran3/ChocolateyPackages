@@ -3,8 +3,8 @@ $packageName    = 'hdhomerun-view'
 $softwareName   = 'HDHomeRun*'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://download.silicondust.com/hdhomerun/hdhomerun_windows_20170930.exe' 
-$checksum       = '2EA2E406AD268B7695DBD67E78685361ED2CD83986BD3D2373FBCAA2FA342EEE'
+$url            = 'http://download.silicondust.com/hdhomerun/hdhomerun_windows_20171221.exe' 
+$checksum       = 'DF4F637AF14A4401597EF9593B5F8FC37C921149616483849656369FFD9AC32F'
 $silentArgs     = '/quiet /qn /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
