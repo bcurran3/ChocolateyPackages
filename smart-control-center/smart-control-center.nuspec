@@ -24,7 +24,8 @@
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" />	  
+      <dependency id="autohotkey" />	  
+      <dependency id="adobeair" />	  	  
     </dependencies>	
       </metadata>
   <files>
