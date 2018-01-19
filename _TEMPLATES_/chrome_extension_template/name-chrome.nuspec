@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>-chrome</id>
@@ -14,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 	
-####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master//readme.md)**
 	</description>
     <summary></summary>
     <tags>chrome extension</tags>
@@ -23,4 +24,7 @@
       <dependency id="googlechrome" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
