@@ -9,7 +9,7 @@
     <title>RAIDar (Portable)</title>
     <authors>NETGEAR</authors>
     <projectUrl>http://kb.netgear.com/app/answers/detail/a_id/20684</projectUrl>
-    <iconUrl>https://kb.netgear.com/resource/1495694569000/kbchat/images/netgear-logo.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/raidar/RAIDar_icon.png</iconUrl>
     <copyright>Copyright NETGEAR</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://kb.netgear.com/app/answers/detail/a_id/22765/~/basic-setup-with-raidar</docsUrl>
