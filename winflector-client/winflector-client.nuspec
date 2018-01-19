@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winflector-client</id>
-    <version>3.9.4.04</version>
+    <version>3.9.4.05</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winflector-client</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Winflector Client / Winflector Virtual Terminal(Install)</title>
@@ -40,6 +40,8 @@ A business application user needs to access applications and their functionality
 Remote desktop is a good solution when one wishes to remotely administrate the computer. In this case, it is efficient to use VNC software or single-user Terminal Services, which is included in the operating system.
 
 This is a fully functional version of Winflector software for two concurrent workstations for free.
+
+[Winflector Server](https://chocolatey.org/packages/winflector)
 
 PACKAGING NOTE: Uninstall from Control Panel.
 	</description>

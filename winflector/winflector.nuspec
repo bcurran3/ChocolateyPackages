@@ -41,6 +41,8 @@ Remote desktop is a good solution when one wishes to remotely administrate the c
 
 This is a fully functional version of Winflector software for two concurrent workstations for free.
 
+[Winflector Client](https://chocolatey.org/packages/winflector-client)
+
 PACKAGING NOTE: Uninstall is not silent. Reboot required after uninstall before reinstalling.
 	</description>
     <releaseNotes></releaseNotes>
