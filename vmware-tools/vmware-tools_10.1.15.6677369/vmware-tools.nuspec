@@ -15,8 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.vmware.com/pdf/vmware-tools-installation-configuration.pdf</docsUrl>
     <mailingListUrl>https://communities.vmware.com/welcome</mailingListUrl>
-    <bugTrackerUrl>https://pubs.vmware.com/Release_Notes/en/vmwaretools/1010/vmware-tools-1017-release-notes.html</bugTrackerUrl>
-    <tags>vmware vsphere esxi tools admin</tags>
+    <tags>vmware vsphere esxi tools</tags>
     <summary>Windows system utilities for VMs running under VSphere</summary>
     <description>
 ###Overview of VMware Tools
@@ -38,6 +37,7 @@ VMware Tools includes these components:
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-tools/vmware-tools_10.1.15.6677369/readme.md)**
     </description>
+    <releaseNotes>https://docs.vmware.com/en/VMware-Tools/10.1.15/rn/vmware-tools-10115-release-notes.html</releaseNotes>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
