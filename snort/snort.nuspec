@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snort</id>
-    <version>2.9.9.0</version>
+    <version>2.9.11</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snort</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Snort (Install)</title>
@@ -27,10 +27,12 @@ Snort is an open source network intrusion prevention system, capable of performi
 ####What can I do with Snort?
 
 Snort has three primary uses: It can be used as a straight packet sniffer like tcpdump, a packet logger (useful for network traffic debugging, etc), or as a full blown network intrusion prevention system.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/snort/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.snort.org/downloads/snort/release_notes_2.9.11.txt</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" />
+      <dependency id="autohotkey" />
       <dependency id="winpcap" version="4.1.1" />
     </dependencies>
   </metadata>
