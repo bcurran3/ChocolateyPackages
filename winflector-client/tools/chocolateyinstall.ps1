@@ -1,5 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'winflector-client'
+﻿$packageName    = 'winflector-client'
 $softwareName   = 'Windows Driver Package - Era software*'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"

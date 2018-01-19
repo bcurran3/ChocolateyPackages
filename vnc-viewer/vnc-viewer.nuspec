@@ -18,7 +18,7 @@
     <tags>realvnc vnc connect viewer remote control</tags>
     <summary>VNC Viewer is used to remote control RealVNC and VNC Connect hosts.</summary>
     <description>
-![Screen shot of VNC Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)
+![Screen shot of VNC Viewer](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_screenshot.png)
 
 Make sure you've downloaded VNC Connect to the computer you want to control.
 
