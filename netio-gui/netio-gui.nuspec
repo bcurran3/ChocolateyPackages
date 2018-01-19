@@ -19,6 +19,7 @@
     <summary>NetIO-GUI measures network speed between two peers</summary>
     <description>
 ![Screenshot of NetIO-GUI](https://a.fsdn.com/con/app/proj/netiogui/screenshots/Client_with_results.png)	
+
 NetIO-GUI is a Windows frontend for the multiplatform commandline utility 'netio'.
 
 It measures ICMP respond times and network transfer rates for different packet sizes and protocols.
@@ -26,8 +27,6 @@ It measures ICMP respond times and network transfer rates for different packet s
 All results are stored in a SQLite database file and can easily be compared.
 
 NetIO-GUI is preferred to rate the quality of peer-to-peer connections like VPN.
-
-Download as portable 7-Zip or as setup file.	
 	</description>
   </metadata>
   <files>
