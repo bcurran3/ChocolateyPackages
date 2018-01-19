@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>utorrent-easy-client-chrome</id>
+    <version>2.6.8</version>
+    <title>uTorrent easy client for Chrome</title>
+    <authors>Anton</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent-easy-client-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/utorrent-easy-client/fmfiejlelblhoaflnjajjjjkkgbeifpn</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/en/9/9f/UTorrent_%28logo%29.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of uTorent easy client](https://lh3.googleusercontent.com/P9oggSEltxLc6GbRpeTKJ_yWwfUz2KafsbIynyE3kKX7NxneQUPIupVl4mQ0BKA5WgOOEx2n5w=s640-h400-e365-rw)	
+
+This extension allows easy integrate in browser µTorrent!
+
+Allow:
+* View/manage torrent list.
+* View/manage file list.
+* Manage file priority.
+* Add/remove torrents.
+* Add/remove labels.
+* Add torrent from the context menu.
+* Control download/upload speed.
+
+* And something else ;)	
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>uTorrent easy client allows you to monitor and control uTorrent running on another computer.</summary>
+    <tags>utorrent easy client chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
