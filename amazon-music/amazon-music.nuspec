@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>amazon-music</id>
-    <version>5.3.3.1671</version>
+    <version>6.1.4.1205</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazon-music</packageSourceUrl>	
     <owners>bcurran3</owners>
-    <title>Amazon Music  (Install)</title>
+    <title>Amazon Music (Install)</title>
     <authors>Amazon Digital Services LLC</authors>
     <projectUrl>https://www.amazon.com/Amazon-Digital-Services-LLC-Music/dp/B00CTTEKJW</projectUrl>
     <iconUrl>https://images-na.ssl-images-amazon.com/images/I/71VdVNOOaZL._SX425_.png</iconUrl>
@@ -34,9 +34,8 @@
 * Amazon Music for PC detects and adds new music to your library even if you bought it from iTunes or ripped a CD. Your music library will always be organized and up-to-date.
 * System Requirements: Windows 7 and later
 
-PACKAGING NOTE: Uninstall is not silent.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/amazon-music/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
 	<dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>		
