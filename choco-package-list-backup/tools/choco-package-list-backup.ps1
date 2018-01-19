@@ -8,13 +8,15 @@
 # Possibly compile to a proper executable program - scratched, can't modify variables as easily!
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-$CPLBver        = "2017.08.16" # version of this script
+$CPLBver        = "2017.12.17" # Version of this script
 $ConfigFile     = "packages.config"
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $SaveVersions   = "False" # Specify if you want to save specific version info or not
 $InstChoco      = "$Env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
+$CustomPath     = "c:\test"  # Edit to save to a special location of your choice
 
 # Toggle True/False if you want to backup/not backup to the locations below
+$UseCustomPath  = "False" # Change to True if you are using $CustomPath
 $UseDocuments   = "True"
 $UseHomeShare   = "True"  # Domain joined computers HOMEDRIVE support
 $UseDropbox     = "True"
@@ -63,6 +65,13 @@ Function Write-PackageConfig{
 
 Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list locally and to the cloud -ForegroundColor white
 Write-Host "Copyleft 2017 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
+
+# Backup Chocolatey package names to packages.config file in custom defined path you set in $CustomPath above in line 16
+if ($UseCustomPath -match "True" -and (Test-Path $CustomPath))
+   {
+    $SavePath   = "$CustomPath\$SaveFolderName"
+    Write-PackageConfig
+   }
 	
 # Backup Chocolatey package names on local computer to packages.config file in the Documents folder
 if ($UseDocuments -match "True" -and (Test-Path $Env:USERPROFILE\Documents))
