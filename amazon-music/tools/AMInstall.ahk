@@ -7,7 +7,7 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 WinWaitActive, Amazon Music, Chrome Legacy Window , 600
 WinActivate
 Send !{f4}
-Sleep, 5000
+Sleep, 10000
 Run, %comspec% /c taskkill /IM "Amazon Music Helper.exe" /F
 ;BlockInput Off
 
