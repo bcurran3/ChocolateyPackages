@@ -6,30 +6,32 @@
     <title>Adblock Plus for Chrome</title>
     <authors>adblockplus.org</authors>
     <owners>bcurran3</owners>
-    <projectUrl>https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb?hl=en-UShttps://adblockplus.org/forum/viewforum.php?f=10http://adblockplus.org/releases/</bugtrackerUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adblockpluschrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb</projectUrl>
+	<bugTrackerUrl>https://adblockplus.org/forum/viewforum.php?f=10http://adblockplus.org/releases/</bugTrackerUrl>
     <iconUrl>https://lh6.googleusercontent.com/Z5w32sck7DXK5JzX3iVxIi1aC-1AwKr_zcUQej-w4Lbue0zTlfLLYgmsKxPPrU5Op9KjKd2jjg=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ##Used by over 50 million people, a free ad blocker that blocks ALL annoying ads, malware and tracking.
 Adblock Plus is the most popular ad blocker ever, and also supports websites by not blocking unobtrusive ads by default (configurable).
 
-#RECOMMENDED BY#
+###RECOMMENDED BY#
 * CNET - #1 in Chrome extensions
 * Gizmodo - #1 Chrome extension by users
 * Mashable.com - top 10 for productivity
 
-#BLOCKING FEATURES#
+###BLOCKING FEATURES#
 * All annoying ads
 * Youtube video ads
-* Facebook ads & other annoyances
+* Facebook ads and other annoyances
 * Malware
 * Third party tracking
 
-#ADDITIONAL BENEFITS#
+###ADDITIONAL BENEFITS#
 * Save bandwidth, data, time
-* Free for Chrome & all other browsers
+* Free for Chrome and all other browsers
 
-#TYPES OF ADS WE BLOCK#
+###TYPES OF ADS WE BLOCK#
 * Animated ads
 * Autoplay-sound ads
 * Overlay ads
@@ -41,13 +43,13 @@ Adblock Plus is the most popular ad blocker ever, and also supports websites by 
 * Webmail ads
 * All other annoying ads
 
-#PRIVACY#
+###PRIVACY#
 Adblock Plus can also help protect your privacy on the web through anti-malware and anti-social tracking features. These can be turned on after you install.
 
-#ACCEPTABLE ADS#
+###ACCEPTABLE ADS#
 Via the Acceptable Ads initiative, Adblock Plus allows some small and static ads, and users support websites that rely on advertising but choose to do it in a non-intrusive way. This feature can be disabled at any time. Go to http://adblockplus.org/en/acceptable-ads to find out more.
 
-#OPEN SOURCE#
+###OPEN SOURCE#
 Adblock Plus is a community-driven open source project, and hundreds of volunteers contribute to the success of Adblock Plus to make sure that all annoying ads are automatically blocked. 
 
 Please note: When installing, your browser shows a warning that Adblock Plus for Chrome has access to your browsing history and data. This is a standard message, we NEVER collect any information whatsoever!
@@ -64,7 +66,7 @@ Feeling adventurous? Try out a development build to always get the latest featur
 	
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
-    <summary></summary>
+    <summary>Chrome extension that blocks advertising while you browse.</summary>
     <tags>adblock adblockplus chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />
