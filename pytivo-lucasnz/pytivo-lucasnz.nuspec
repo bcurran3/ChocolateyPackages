@@ -5,6 +5,7 @@
     <id>pytivo-lucasnz</id>
     <title>PyTivo-lucasnz (Install)</title>
     <version>11.13.2016</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pytivo-lucasnz</packageSourceUrl>			
     <authors>pyTivo was created by Jason Michalski ("armooo"). Contributors include Kevin R. Keegan, William McBrine, and Terry Mound ("wgw").</authors>
     <owners>bcurran3</owners>
     <summary>pyTiVo lets you stream most videos from your PC to your unhacked TiVo.</summary>
@@ -20,7 +21,8 @@ Transfer TiVo recordings (.tivo) from computer to TiVo.
 Display Metadata about your video.
 Serve Music and Photos through the HMO protocol
 Support for Windows, Linux, and Mac	
-NOTE: PyTiVo requires Python 2.5 or greater but less than 3.0 to work. At this time the package does not have the dependency included.
+
+PACKAGING NOTE: You will need to edit the installation folder and give your primary login account full access so that it can write to the config files.
     </description>
     <projectUrl>https://github.com/lucasnz/pytivo</projectUrl>
     <projectSourceUrl>https://github.com/lucasnz/pytivo</projectSourceUrl>

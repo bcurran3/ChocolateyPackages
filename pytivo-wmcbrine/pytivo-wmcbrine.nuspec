@@ -22,6 +22,8 @@ Display Metadata about your video.
 Serve Music and Photos through the HMO protocol
 Support for Windows, Linux, and Mac	
 This is the wmcbrine fork.
+
+PACKAGING NOTE: You will need to edit the installation folder and give your primary login account full access so that it can write to the config files.
     </description>
     <projectUrl>https://github.com/wmcbrine/pytivo</projectUrl>
     <projectSourceUrl>https://github.com/wmcbrine/pytivo</projectSourceUrl>

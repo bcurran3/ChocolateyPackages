@@ -13,13 +13,11 @@
 This package is deprecated. The Plex extension for Chrome has been removed from the Chrome Web Store. 
 
 You can read Plex's announcement here: https://forums.plex.tv/discussion/291086/chrome-web-store-announcement
-
-[Plex Media Player](https://chocolatey.org/packages/plexmediaplayer) is the replacement.
 	</description>
-    <releaseNotes>https://forums.plex.tv/discussion/291086/chrome-web-store-announcement</releaseNotes>		
+    <releaseNotes>https://forums.plex.tv/discussion/291086/chrome-web-store-announcement</releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>	
     <tags>plex chrome extension</tags>
-	<dependencies>
-      <dependency id="plexmediaplayer" />	
-    </dependencies>		
   </metadata>
 </package>
