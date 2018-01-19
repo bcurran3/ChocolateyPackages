@@ -21,17 +21,3 @@ Get-ChocolateyWebFile @packageArgs
 
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath $portableEXE -WorkingDirectory "$toolsDir"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -targetPath $portableEXE -WorkingDirectory "$toolsDir"
-
-
-
-
-
-
-
-
-
-
-
-
-
-

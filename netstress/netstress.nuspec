@@ -39,6 +39,9 @@ This is where **NetStress** fits in. It's a simple tool, originally created for 
 * support for multiple network adapters
 	</description>
     <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="dotnet3.5" />
+    </dependencies>			
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
