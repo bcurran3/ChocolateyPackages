@@ -3,7 +3,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>colorfultabs-firefox</id>
-    <version>31.1.0</version>
+    <version>31.1.4</version>
     <title>ColorfulTabs for Firefox</title>
     <authors>Shivanand Sharma of BinaryTurf</authors>
     <owners>bcurran3</owners>
@@ -17,10 +17,11 @@
 ![Screenshot of ColorfulTabs](https://addons.cdn.mozilla.net/user-media/previews/full/12/12745.png)
 	
 The most beautiful yet the simplest add-on that makes a strong colorful appeal. Colors every tab in a different color and makes them easy to distinguish while beautifying the overall appearance of the interface. 
-Note: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. Subsequent updates should be dealt with automatically by Firefox.
+
+PACKAGING NOTE: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. Subsequent updates should be dealt with automatically by Firefox.
 </description>
-    <releaseNotes>added checksum</releaseNotes>
-    <tags>colorfultabs colored tabs extension firefox</tags>
+    <releaseNotes></releaseNotes>
+    <tags>colorfultabs colored tabs addon add-on extension firefox</tags>
     <dependencies>
       <dependency id="firefox" version="14.0"/>
     </dependencies>
