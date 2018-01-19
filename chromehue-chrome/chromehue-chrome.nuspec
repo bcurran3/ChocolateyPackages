@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chromehue-chrome</id>
+    <version>1.1.6</version>
+    <title>ChromeHue for Philips Hue for Chrome</title>
+    <authors>Nicolas VARROT</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromehue-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/chromehue-for-philips-hue/ofhimkkaomaoilmnmfhmdoekoaeclkoa</projectUrl>
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/chromehue-for-philips-hue/ofhimkkaomaoilmnmfhmdoekoaeclkoa</bugTrackerUrl>	
+    <iconUrl>https://lh3.googleusercontent.com/OIQJh8j4tB60WJLJrj8ppciA70drYMn5vVz00pXbepYXNaCkc2foBN6IAEqBP7UiYWZbrUN_Zg=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of ChromeHue for Philps Hue for Chrome](https://lh3.googleusercontent.com/izYijZj4TFPOB0TyAnk_sirUHCGjnrPRdfB8h9COdiH6PdS9-lNRbraB6fkNwCzpvtwcWEAIsQ=s640-h400-e365-rw)	
+
+ChromeHue allows you to control the Philips Hue bulbs from your browser by using a nice user-friendly UI.
+
+###Features list:
+
+* Switch bulbs on/off (for lights and groups)
+* Change brightness (for lights and groups)
+* Change hue (lights and groups)
+* Blink bulbs (lights and groups)
+* Enable color loop (lights and groups)
+* Display/edit bulb informations
+* Create/edit/delete groups
+* Very easy setup and friendly UI
+* Auto-discover your bridge on your local network
+
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>A Chrome extention to control your Phillips Hue lights.</summary>
+    <tags>phillips hue chromehue chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

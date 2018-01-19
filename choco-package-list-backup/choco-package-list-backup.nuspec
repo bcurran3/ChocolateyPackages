@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2017.08.19</version>
+    <version>2017.12.17</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
@@ -36,16 +36,17 @@
 * NETGEAR ReadyCLOUD
 * Resilio Sync
 * TonidoSync
+* A custom location of your choice (new 2017-12-17)
 * more coming (let me know what you want/need)
 
 **choco-package-list-backup.ps1** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s).
 
 **choco-package-list-backup.ps1** is configurable. You can:
 
-* configure which locations you want or don't want to save to (default=all the locations found)
+* configure which locations you want or don't want to save to (default=all the locations found except the custom location)
 * configure to save package version information or not (default=False)
 * configure what subfolder to save to (default=ChocolateyPackageListBackup)
-* easily add custom locations with no or little scripting experience - just copy, paste, and edit 3 variables
+* easily add a custom location by editing $CustomPath and $UseCustomPath in the script (new 2017-12-17)
 
 **choco-package-list-backup.ps1** is saved to the Chocolatey's bin folder (\ProgramData\chocolatey\bin), so it's in your path.
 
@@ -56,6 +57,7 @@
 * Edit \ProgramData\chocolatey\bin\choco-package-list-backup.ps1 to customize your backup(s). (see comments in file)
 * From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list.
 * From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list.
+* From Windows, double click choco-package-list-backup-manual.bat in \ProgramData\chocolatey\lib\choco-package-list-backup\tools (new 2017-12-17)
 
 **Use choco-package-list-backup along with [ForcePS](https://chocolatey.org/packages/forceps) for easy execution and [InstChoco](https://chocolatey.org/packages/instchoco) for a complete backup and recovery solution of your Chocolatey packages.**
 	
