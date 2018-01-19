@@ -13,4 +13,4 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\PyTiVo.lnk" -targetPath "$env:ChocolateyInstall\lib\pytivo-lucasnz\tools\pytivo-master\pytivo.py" -iconLocation "$env:ChocolateyInstall\lib\$packageName\tools\pytivo.ico" -workingDirectory "$env:ChocolateyInstall\lib\$packageName\tools\pytivo-master\"
+Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\PyTiVo-lucasnz.lnk" -targetPath "$env:ChocolateyInstall\lib\pytivo-lucasnz\tools\pytivo-master\pytivo.py" -iconLocation "$env:ChocolateyInstall\lib\$packageName\tools\pytivo.ico" -workingDirectory "$env:ChocolateyInstall\lib\$packageName\tools\pytivo-master\"

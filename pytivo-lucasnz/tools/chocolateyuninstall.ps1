@@ -1,5 +1,3 @@
 ﻿$packageName = 'pytivo-lucasnz'
-$softwareName = 'PyTiVo-lucasnz*' 
 
-Uninstall-ChocolateyZipPackage
-remove-item "$env:Public\Desktop\PyTiVo.lnk" -Force -ErrorAction 'SilentlyContinue'
+remove-item "$env:Public\Desktop\PyTiVo-lucasnz.lnk" -Force -ErrorAction 'SilentlyContinue'

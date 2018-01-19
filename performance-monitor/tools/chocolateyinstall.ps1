@@ -18,6 +18,13 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs 
 
+if((get-process "PerfMon" -ea SilentlyContinue) -eq $Null){ 
+    Write-Host "PerfMon currently NOT running." 
+  }else{ 
+    Write-Host "Stopping PerfMon process..."
+    Stop-Process -processname "PerfMon"
+  }
+  
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pst-merger</id>
-    <version>1.1.5010</version>
+    <version>1.02.5014</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pst-merger</packageSourceUrl>
     <title>Free PST Merger (Install)</title>
@@ -24,9 +24,12 @@
 If you have numerous PST (Outlook Personal Folders) files on your computer, it gets difficult to manage all of them. By using PST Merger, you can merge all PST files into a single file just in a few clicks.
 Free PST merger is useful when you have to combine two PST files. Free PST Merger allows you to merge Outlook PST files into a new PST file. It is a simple PST merge tool that does not require special IT knowledge.
 Use PST Merger Pro for merging more than two files or when you need advanced PST merging management features like filters or folders selection. By using this tool, you can copy or combine the content from several Microsoft Outlook files to a specified file. You can also transfer the specified Microsoft Outlook data from several files to a new Outlook file. This allows you to transfer only important Outlook folders to your new PST file. Merge any items from PST files, such as, Inboxes, Calendars, Contacts, Journals, Tasks etc. to another PST file. One more advantage is that you can store your new PST file in any convenient location. You can easily open PST files with OST PST Viewer.
-If you have to merge PST files frequently, PST Merger will save your valuable time by merging Outlook PST files in just a couple of clicks. In case your PST files contain a lot of data, to merge such files manually may not be possible. Using PST Merger can combine PST files of Microsoft Outlook with ease.	
+If you have to merge PST files frequently, PST Merger will save your valuable time by merging Outlook PST files in just a couple of clicks. In case your PST files contain a lot of data, to merge such files manually may not be possible. Using PST Merger can combine PST files of Microsoft Outlook with ease.
+
+See [website](http://www.pst-merger.com/) for complete list of features. (Too big to list here.)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/autobootdisk/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" />
     </dependencies>	
