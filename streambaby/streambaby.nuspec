@@ -35,9 +35,8 @@ Remembers your position in the video when you stop watching and automatically st
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="jre8" version="1.6" />	   
-      <dependency id="ffmpeg" />	   
     </dependencies>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>new version 0.54, package now copies over ini settings from previous version and changes directory permissions so the addons will download without requiring being run as admin</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
