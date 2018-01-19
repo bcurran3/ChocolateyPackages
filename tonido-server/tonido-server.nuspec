@@ -15,7 +15,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.tonido.com/tonidodesktop_how/</docsUrl>
     <mailingListUrl>http://www.tonido.com/forum/</mailingListUrl>
-    <bugTrackerUrl>http://www.tonido.com/tonido-release-notes/</bugTrackerUrl>
     <tags>codelathe tonido cloud home server admin</tags>
     <summary>Tonido allows you to host your own personal cloud drive and media server.</summary>
     <description>
@@ -55,9 +54,12 @@ Trusted by world leading organizations in 90 countries
 
 Works on Windows 2000, XP, Vista, Windows 7, Windows 8 and Windows 10 running on Intel x86 (32-bit or 64-bit)
 
+**CLIENTS:**
+[Windows Programs](https://chocolatey.org/packages?q=tonido) | [Windows App](https://www.microsoft.com/en-us/store/p/tonido/9wzdncrds372?rtc=1) | [Android App](https://play.google.com/store/apps/details?id=com.tonido.android) | [iOS App](https://itunes.apple.com/us/app/tonido-file-access-music-video/id388726418?mt=8&ign-mpt=uo%3D4)
+
 **PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the new version in Disquss or create an issue on GitHub.
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>http://www.tonido.com/tonido-release-notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
