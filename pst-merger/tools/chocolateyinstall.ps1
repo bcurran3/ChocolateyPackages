@@ -1,7 +1,7 @@
 ﻿$packageName    = 'pst-merger' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://d.4team.biz/files/pstmerger_setup.exe'
-$checksum       = 'FDEB0680222F70C0F5C1749FA3601EAD66692267AEBA07FA0ACAE23433096018'
+$checksum       = '83875C466B4B80A6ADDD2026793122CAC9213D1F7851CAB04756C77704AFD4D5'
 $validExitCodes = @(0,2)
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "PSTMergerInstall.ahk"
