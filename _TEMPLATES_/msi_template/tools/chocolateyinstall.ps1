@@ -3,7 +3,7 @@ $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = '' 
 $checksum       = ''
-$silentArgs     = ''
+$silentArgs     = '/quiet /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
 $packageArgs = @{

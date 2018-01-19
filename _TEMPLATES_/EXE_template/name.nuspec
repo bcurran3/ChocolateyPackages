@@ -12,7 +12,7 @@
     <description>
 ![Screenshot of ]()	
 
-**PACKAGING NOTE:** This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master//readme.md)**
     </description>
     <projectUrl></projectUrl>
     <docsUrl></docsUrl>
