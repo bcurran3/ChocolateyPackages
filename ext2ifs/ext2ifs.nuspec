@@ -56,14 +56,6 @@ Detailed list of features:
 (and more)
 	</description>
     <releaseNotes></releaseNotes>
-    <dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-uninstall.extension" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
