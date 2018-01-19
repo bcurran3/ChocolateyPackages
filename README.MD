@@ -2,7 +2,7 @@ Like my [packages](https://chocolatey.org/profiles/bcurran3)?
 
 Find them useful?
 
-**Want to buy me a beer?**
+**Want to buy me a beer for my efforts?**
 
 https://www.paypal.me/bcurran3donations
 
