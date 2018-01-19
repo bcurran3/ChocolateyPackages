@@ -36,7 +36,7 @@ PACKAGING NOTE: 2.8.3 is the last free version of TiVo Desktop. You should also 
       <dependency id="quicktime" version="7.1.3" />
       <dependency id="javaruntime" />	  
       <dependency id="tivo-desktop.install" />	  
-      <dependency id="tivo-desktop.patch" />	  
+      <dependency id="tivo-desktop-patch" />	  
     </dependencies>
     <releaseNotes>virtual package</releaseNotes>
   </metadata>
