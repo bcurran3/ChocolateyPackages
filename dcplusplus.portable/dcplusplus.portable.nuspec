@@ -17,7 +17,7 @@
     <docsUrl>http://dcplusplus.sourceforge.net/webhelp/get_started.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/dcplusplus/mailman/</mailingListUrl>
 	<bugTrackerUrl>https://bugs.launchpad.net/dcplusplus</bugTrackerUrl>
-    <tags>dcplusplus p2p advanced direct connect client</tags>
+    <tags>dc++ dcplusplus p2p advanced direct connect client portable</tags>
     <summary>DC++ - A Windows client for the Direct Connect networks</summary>
     <description>
 ![Screenshot of DC++](http://dcplusplus.sourceforge.net/img/screenshot.png)	

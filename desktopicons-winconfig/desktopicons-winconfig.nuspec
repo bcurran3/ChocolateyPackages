@@ -20,9 +20,9 @@
     <description>
 ###Don't you hate logging into a new computer to find all the normal Windows desktop icons missing? It drives me nuts!
 
-###WHY DO I NEED THIS?
+###WHAT'S THIS ALL ABOUT?
 
-Sure, there are other good methods of doing this too. I can go to settings and enable them, it doesn't take that long. I can use GPO, but not all my friends/family/customers are using domain joined computers. I used to import a .reg file but it was a PITA as I didn't always have it with me and I certainly wasn't going to take the time to install or login to Dropbox for such a trivial matter. Since I do put Chocolatey on just about every box I touch... I decided it was time to move this functionality into a Chocolatey package for (almost) super simple configuration, well, really so I can script it easily. Installing this package is probably too complex for the average person, but it should be of good use to those who script or automate a lot of installs using Chocolatey. This goes along with the mentality of my [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) and [InstChoco](https://chocolatey.org/packages/InstChoco) packages.
+**This is all about quick and easy scripted new computer configurations. I want ALL standard Windows Desktop icons available!** The icons are **so** useful for power users. So I made this Windows configuration package to simplify enabling the icons. Sure, there are other methods of doing this. I can go to settings and enable them, it doesn't take that long. I can use GPO, but not all my friends/family/customers are using domain joined computers. I used to import a .reg file. Since I do put Chocolatey on just about every box I touch... I decided it was time to move this functionality into a Chocolatey package for (almost) super simple configuration, well, really so I can add it to my setup scripts. Installing this package is probably too complex for the average person, but it should be of good use to those who script or automate a lot of installs using Chocolatey. This goes along with the mentality of my [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) and [InstChoco](https://chocolatey.org/packages/InstChoco) packages. Check them out if you haven't already.
 
 ####Features:
 * Add/Remove the desktop My Computer/This PC/"Computer" icon
@@ -51,7 +51,7 @@ You can set the desktop icons to show (YES) or not show (NO) by running **choco 
 * RenameComputer2 - /RenameComputer2:YES(rename the desktop Computer icon to computer name with user name)
 * RenameComputer  - /RenameComputer2:NO (rename the desktop Computer icon to "This PC")
 
-You're desktop will blink off and return as explorer is restarted at the end of the script so the changes are readily apparent.
+You're desktop will blink off and return as explorer is restarted at the end of the script so the changes are immediately available.
 
 ###INSTALL EXAMPLES:
 * choco install desktopicons-winconfig --params "'/AllIcons:YES'"
@@ -60,7 +60,7 @@ You're desktop will blink off and return as explorer is restarted at the end of 
 
 You can set any one icon to display or any mix of icons to display or not display. If you don't specify any parameters, nothing will change. Default = do nothing.
 
-**There is no upgrade path for this package. desktopicons-winconfig is a "one and done" package. It is recommended you uninstall this package after install (settings will NOT revert) so that you can install it again under a different user account if necessary. Settings changes only effect the currently logged in user.**
+**There is no upgrade path for this package. desktopicons-winconfig is a "one and done" package. It is recommended you uninstall this package after install (settings will NOT revert) so that you can install it again under a different user account if necessary (or reinstall using -force). Settings changes only effect the currently logged in user.**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/desktopicons-winconfig/readme.md)**
 	</description>

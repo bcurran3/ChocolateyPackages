@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-dsa</id>
+    <version>3.1.1.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>		
+    <owners>bcurran3</owners>
+    <title>Intel® Driver &amp; Support Assistant (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</projectUrl>
+    <iconUrl>https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/intel-128.png</iconUrl>
+    <copyright>Intel Corporation</copyright>
+    <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.intel.com/content/www/us/en/support/topics/idsa-faq.html</docsUrl>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>dsa intel driver support assistant update utility</tags>
+    <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
+    <description>
+
+###Purpose
+
+The Intel® Driver &amp; Support Assistant enables you to scan computing devices for the latest drivers available from Intel. This tool has the main interface hosted on Intel’s support website and provides a more integrated support experience to users. It has an enhanced detection engine to ensure that customers are given complete and accurate information and a scan frequency option to change from a “run-once” tool to a persistent experience that can provide customers with driver updates more quickly.
+
+Products supported: Graphics drivers, wireless networking, Intel® NUCs, and Intel® Compute Sticks
+
+###Required to install and use utility
+
+A broadband Internet connection is required to use this utility.
+
+Operating system requirements for installation: This application installs on Windows 7*, Windows 8*, Windows 8.1*, and Windows® 10.
+
+We recommend performing a Windows* update to bring your operating system up to date with the latest .NET.
+
+This application does not support older versions of Internet Explorer. We recommend using Chrome, Firefox or IE v11 browsers. 
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
+</description>
+    <releaseNotes>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</releaseNotes>
+	<dependencies>
+      <dependency id="autohotkey" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
