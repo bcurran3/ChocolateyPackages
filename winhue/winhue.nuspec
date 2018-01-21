@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.28</version>
+    <version>3.0.1422.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
@@ -15,28 +15,47 @@
     <projectSourceUrl>https://github.com/Hyrules/WinHue3</projectSourceUrl>
     <docsUrl>https://github.com/Hyrules/WinHue3/wiki/Basic%20Usage</docsUrl>
     <bugTrackerUrl>https://github.com/Hyrules/WinHue3/issues</bugTrackerUrl>
-    <tags>hyrules winhue hue phillips light automation philips-hue-lighting
-philips-hue-lights admin</tags>
-    <summary>A program to control your Phillips Hue lights from Windows.</summary>
+    <tags>hyrules winhue hue phillips light smarthome automation</tags>
+    <summary>WinHue 3 - Controlling the Philips Hue lighting system from your Windows PC.</summary>
     <description>
-![Screenshot of WinHue](https://hyrules.github.io/WinHue3/img/Main%20Window.png)
+(Officially WinHue 3 RC5 - fix 2)
+	
+![Screenshot of WinHue](https://hyrules.github.io/WinHue3/assets/mainWindow.png)
 
-WinHue is a windows desktop application to control the philips hue lighting system. It is was created for desktop pc using the microsoft .net framework. It is not intended to run on Windows phones and tablet and those plateforms will not be supported. WinHue also include a console version that comes with the installer.
+###Introduction
+WinHue is a desktop application that can control the Philips Hue lighting system. It is easy to install and use, and is one of the few fully-featured Hue apps on Windows.
 
-###Features :
+Plus, it's FREE!
 
-* Control the Philips Hue Lighting system via Microsoft Windows.
-* Create / Modify and delete : Groups, Schedules, Scenes and more.
-* Full control over lights / groups color, brightness, temperature, saturation, name.
-* Recurring Schedules and Timers !
-* Control your light from console.
-* Assign global keyboard shortcuts to your favorite actions and trigger them anywhere within windows.
-* Add rules or sensors.
-* IT'S FREE !	
+###Edit Everything
+Many items on the Hue bridge can be created, modified and deleted. These include:
 
-PACKAGING NOTE: v3 RC1
+* Groups
+* Schedules
+* Scenes
+* Rules
+* Sensors
+* More!
+
+Timer and schedules can also be set to recurr at certain times!
+
+###Full Control
+WinHue allows ultimate control of lights and groups.
+
+* Name
+* Color
+* Brightness
+* White Temperature
+* Saturation
+
+Quick and easy setup with support for multiple bridges means you'll be up and running with little more than a tap of the push-link button on your bridge.
+
+###And Finally...
+WinHue also has a fully-featured console application bundled with the installer.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winhue/readme.md)**
 	</description>
-    <releaseNotes>v3 RC1</releaseNotes>
+    <releaseNotes>https://github.com/Hyrules/WinHue3/releases</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
       <dependency id="vcredist2010" />
