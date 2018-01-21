@@ -3,7 +3,7 @@
   <metadata>
     <id>tcc</id>
     <version>22.0.36.0</version>
-    <title>Total Command Console (Trial)</title>
+    <title>Total Command Console (30-Day Trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tcc</packageSourceUrl>		
@@ -14,7 +14,7 @@
     <docsUrl>https://jpsoft.com/help/tcc.htm</docsUrl>
     <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
     <copyright>Copyright © Rex Conn and JP Software Inc.</copyright>
-    <tags>jpsoft tcc tccle 4nt cmd command prompt cli</tags>
+    <tags>jpsoft tcc tccle 4nt cmd command prompt cli trial</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ![Screenshot of TCC] (https://jpsoft.com/images/tcc21.png)
