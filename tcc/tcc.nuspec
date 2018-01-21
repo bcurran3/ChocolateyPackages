@@ -39,4 +39,7 @@ Too many to list due to nuspec description constraints. [Please view the website
     </description>
     <releaseNotes>https://jpsoft.com/help/whats-new-in-version-22.htm</releaseNotes>	
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>
