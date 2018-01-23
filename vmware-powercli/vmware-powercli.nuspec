@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vmware-powercli</id>
+    <version>6.5.4.7155375</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli</packageSourceUrl>
+    <title>VMware.PowerCLI (Install)</title>
+    <authors>VMware</authors>
+    <projectUrl>https://www.powershellgallery.com/packages/VMware.PowerCLI</projectUrl>
+    <iconUrl>https://www.powershellgallery.com/Content/Images/PackageDefaultIcon.png</iconUrl>
+    <copyright>Copyright (c) VMware, Inc. All rights reserved.</copyright>
+	<docsUrl>https://vdc-download.vmware.com/vmwb-repository/dcr-public/3e9ef3df-a143-455a-ba66-dc27bde2bcf3/ff8bc014-f7bd-4569-9336-94b4ce2311a3/vmware-powercli-654-user-guide.pdf</docsUrl>
+	<mailingListUrl>https://code.vmware.com/forums/2530/vmware-powercli</mailingListUrl>
+    <licenseUrl>https://www.vmware.com/help/legal.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>vmware powercli vsphere automation client virtual machine virtualization esx esxi</tags>
+    <summary>This Windows PowerShell module contains VMware.PowerCLI</summary>
+    <description>
+VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell, and provides more than 600 cmdlets for managing and automating vSphere, vCloud, vRealize Operations Manager, vSAN, NSX-T, VMware Cloud on AWS, and VMware Horizon environments.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-powercli/readme.md)**
+	</description>
+	<releaseNotes>https://vdc-download.vmware.com/vmwb-repository/dcr-public/712f3bf9-7970-4198-95db-9a224340712c/f5b5a818-5f8b-4beb-b78c-ca07b16cc87e/vmware-powercli-654-release-notes.html</releaseNotes>
+    <dependencies>
+	  <dependency id="powershell" version="3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
