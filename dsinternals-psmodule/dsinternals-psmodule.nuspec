@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dsinternals-psmodule</id>
+    <version>2.22</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dsinternals-psmodule</packageSourceUrl>
+    <owners>bcuran3</owners>
+    <title>DSInternals (Install)</title>
+    <authors>Michael Grafnetter</authors>
+    <projectUrl>https://www.powershellgallery.com/packages/DSInternals/2.22</projectUrl>
+    <iconUrl>https://www.powershellgallery.com/Content/Images/PackageDefaultIcon.png</iconUrl>	
+    <copyright>© Copyright Directory Services Internals</copyright>
+    <licenseUrl>https://github.com/MichaelGrafnetter/DSInternals/commit/ff80b8c710f6a4a01f94542f0993b555bce5f7f1</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/MichaelGrafnetter/DSInternals</projectSourceUrl>
+    <docsUrl>https://www.dsinternals.com/en/list-of-cmdlets-in-the-dsinternals-module/</docsUrl>
+    <bugTrackerUrl>https://github.com/MichaelGrafnetter/DSInternals/issues</bugTrackerUrl>
+    <tags>dsinternals active directory ad powershell</tags>
+    <summary>The DSInternals PowerShell Module exposes several internal features of Active Directory.</summary>
+    <description>
+DISCLAIMER: Features exposed through these tools are not supported by Microsoft and are therefore not intended to be used in production environments. Improper use might cause irreversible damage to domain controllers or negatively impact domain security.
+
+The DSInternals project consists of these two parts:
+
+* The [DSInternals Framework](https://www.nuget.org/profiles/MichaelGrafnetter) exposes several internal features of Active Directory and can be used from any .NET application. The codebase has already been integrated into several 3rd party commercial products that use it in scenarios like Active Directory disaster recovery, identity management, cross-forest migrations and password strength auditing.
+* The [DSInternals PowerShell Module](https://www.powershellgallery.com/packages/DSInternals/) provides easy-to-use cmdlets that are built on top of the Framework. The main features include offline [ntds.dit file](https://technet.microsoft.com/en-us/library/cc961761.aspx) manipulation and querying domain controllers through the [Directory Replication Service (DRS) Remote Protocol](https://msdn.microsoft.com/en-us/library/cc228086.aspx).
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dsinternals-psmodule/readme.md)**
+	</description>
+	<releaseNotes>https://github.com/MichaelGrafnetter/DSInternals/releases</releaseNotes>
+    <dependencies>
+	  <dependency id="powershell-packagemanagement" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
