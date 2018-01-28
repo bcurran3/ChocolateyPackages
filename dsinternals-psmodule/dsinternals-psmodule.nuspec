@@ -30,8 +30,8 @@ The DSInternals project consists of these two parts:
 	</description>
 	<releaseNotes>https://github.com/MichaelGrafnetter/DSInternals/releases</releaseNotes>
     <dependencies>
-	  <dependency id="powershell-packagemanagement" />
-    </dependencies>
+      <dependency id="powershell" version="5.0" />
+    </dependencies>	 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
