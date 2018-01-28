@@ -3,10 +3,10 @@ $packageName    = 'pdq-inventory'
 $softwareName   = 'PDQ Inventory*'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://www2.adminarsenal.com/download-pdqinventory' 
-$checksum       = 'BEBC69E5CF581E1C83092A4BF7D8A2757CAEE2469E1FD1B42FD35F1E26FA1F38'
+$checksum       = '80B9F2BBAD5026B1ACECD8A53575D9261627EAFC7C1D6A482ADA65DE4716211B'
 $silentArgs     = '/S'
 $validExitCodes = @(0)
-$fileLocation   = "$toolsDir\PDQInventory.14.3.0.0.exe"
+$fileLocation   = "$toolsDir\PDQInventory.15.1.0.0.exe"
 
 $packageArgs = @{
   packageName   = $packageName
