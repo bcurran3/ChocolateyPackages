@@ -24,9 +24,10 @@ VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell
 	</description>
 	<releaseNotes>https://vdc-download.vmware.com/vmwb-repository/dcr-public/712f3bf9-7970-4198-95db-9a224340712c/f5b5a818-5f8b-4beb-b78c-ca07b16cc87e/vmware-powercli-654-release-notes.html</releaseNotes>
     <dependencies>
-	  <dependency id="powershell-packagemanagement" />
-    </dependencies>
-  </metadata>
+	  <dependency id="dotnet4.5" />
+      <dependency id="powershell" version="5.0" />
+    </dependencies>	  
+  </metadata>	
   <files>
     <file src="tools\**" target="tools" />
   </files>
