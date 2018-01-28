@@ -1,3 +1,4 @@
-﻿$packageName = 'ntfssecurity-psmodule'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'ntfssecurity-psmodule'
 
-Uninstall-Module -Name NTFSSecurity -Force
+Uninstall-Module -Name "NTFSSecurity" -Force
