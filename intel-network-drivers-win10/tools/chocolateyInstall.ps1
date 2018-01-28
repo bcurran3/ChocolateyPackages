@@ -1,15 +1,13 @@
 ﻿$packageName    = 'intel-network-drivers-win10' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = 'F82BEBF8146E20D1DF6B57F29C92B96B0EE16711A05ABEFCDB558EC99B0C4E97'
+$checksum       = '0E706B84E64E0DF78593CB3ACD0297C17B40703C49EA5DDF01582316ACE5E7B9'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = '3B68428307CC4CC7941C62C09EF636F66DC561B8983C07C854D0F630E65CC21B'
-$silentArgs     = ''
+$checksum64     = 'C81473B326CD82032353A9133A95D04FB7F32E49912BC68C20E7249DBD8C5108'
+$silentArgs     = '/qn'
 $validExitCodes = @(0)
 $unzipLocation  = "$toolsDir\unzippedfiles"
 $bits           = Get-ProcessorBits
-$ahkExe         = 'AutoHotKey'
-$ahkFile        = "$toolsDir\INDInstall.ahk"
 
 $card = wmic path win32_NetworkAdapter get name
 if ($card -match "Intel")
@@ -38,12 +36,10 @@ Install-ChocolateyZipPackage @packageArgs
 
 if ($bits -eq 64)
    {
-	$url = "$unzipLocation\APPS\SETUP\SETUPBD\Winx64\SetupBD.EXE"
+	$url = "$unzipLocation\APPS\PROSETDX\Winx64\DxSetup.exe"
    } else {
-	$url = "$unzipLocation\APPS\SETUP\SETUPBD\Win32\SetupBD.EXE"
+	$url = "$unzipLocation\APPS\PROSETDX\Win32\DxSetup.exe"
    }
-
-Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName    = $packageName
