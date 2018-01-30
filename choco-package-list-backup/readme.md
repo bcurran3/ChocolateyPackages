@@ -11,8 +11,8 @@ ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
-2018.01.29 - edited re-installation message, updated donation info :)
-2017.12.17 - added editable custom save location (requested)
+* 2018.01.29 - edited re-installation message, updated donation info :)
+* 2017.12.17 - added editable custom save location (requested)
 
 
 
