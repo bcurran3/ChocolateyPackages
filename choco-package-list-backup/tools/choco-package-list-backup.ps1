@@ -2,18 +2,17 @@
 # I couldn't have done this without the list parsing from Ammaar Limbada found at https://gist.github.com/alimbada/449ddf65b4ef9752eff3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # ROADMAP:
-# Put the checking of save locations in a loop
-# Add other cloud services support by request
 # Add ability to use a different source other than the Chocolatey public repository
-# Possibly compile to a proper executable program - scratched, can't modify variables as easily!
+# Add other cloud services support by request
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
+# CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2017.12.17" # Version of this script
+$CPLBver        = "2018.01.29" # Version of this script
 $ConfigFile     = "packages.config"
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $SaveVersions   = "False" # Specify if you want to save specific version info or not
 $InstChoco      = "$Env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
-$CustomPath     = "c:\test"  # Edit to save to a special location of your choice
+$CustomPath     = "c:\install"  # Edit to save to a special location of your choice
 
 # Toggle True/False if you want to backup/not backup to the locations below
 $UseCustomPath  = "False" # Change to True if you are using $CustomPath
@@ -64,7 +63,7 @@ Function Write-PackageConfig{
     }
 
 Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list locally and to the cloud -ForegroundColor white
-Write-Host "Copyleft 2017 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
+Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 
 # Backup Chocolatey package names to packages.config file in custom defined path you set in $CustomPath above in line 16
 if ($UseCustomPath -match "True" -and (Test-Path $CustomPath))
@@ -132,8 +131,10 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
    }
 
 Write-Host "TO RE-INSTALL YOUR CHOCOLATEY PACKAGES:" -ForegroundColor magenta 
-Write-Host "Go to the location of your saved packages.config file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
-Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at the e-mail address above." -ForegroundColor white
+Write-Host "1> Go to the location of your saved PACKAGES.CONFIG file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
+Write-Host "2> Get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
+Write-Host "3> Double click choco-package-list-backup-manual.bat in this package's tools directory." -ForegroundColor magenta 
+Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
 
 
 

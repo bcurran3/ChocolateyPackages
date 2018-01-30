@@ -15,7 +15,6 @@ CHANGELOG:
 * 2017.08.20.01 - added message post install to edit persistentpackages.config
 * 2017.08.20.01 - added shortcut to persistentpackages.config in tools dir
 
-
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
