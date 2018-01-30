@@ -6,8 +6,8 @@
 * This is most likely the last release of choco-upgrade-all-at-startup.
 
 CHANGELOG:
-2018.01.30 - simplified, standardized, description updated, uninstall added
-2017.01.10 - original release
+* 2018.01.30 - simplified, standardized, description updated, uninstall added
+* 2017.01.10 - original release
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
