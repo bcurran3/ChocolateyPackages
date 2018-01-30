@@ -2,7 +2,7 @@
 
 * A BCURRAN3 original! (Inspired by https://daniel.streefkerkonline.com/2016/02/23/create-a-scheduled-task-to-keep-all-chocolatey-packages-up-to-date/)
 * This may NOT work on Windows 7 / Windows Server 2012. I've added PowerShell v4 as a dependency in hopes it will work.
-* I previously used this package but now use [choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at).
+* I previously used this package but now use [choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at).
 * This is most likely the last release of choco-upgrade-all-at-startup.
 
 CHANGELOG:
