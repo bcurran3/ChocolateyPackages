@@ -8,8 +8,13 @@ ROADMAP:
 * Add other cloud services support by request
 * Add ability to use a different source other than the Chocolatey public repository
 * Create a scheduled task to run daily/weekly/monthly/whenever
-* ~~digitally sign the script~~
 * I'm open to suggestions - open a GitHub issue please.
+
+CHANGELOG:
+2018.01.29 - edited re-installation message, updated donation info :)
+2017.12.17 - added editable custom save location (requested)
+
+
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 

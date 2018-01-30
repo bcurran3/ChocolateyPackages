@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>instchoco</id>
-    <version>1.00</version>
+    <version>1.10</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
@@ -14,27 +14,33 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>instchoco bcurran3 choco unoffcial standalone installer portable</tags>
-    <summary>InstChoco is a standalone installer for Chocolatey and much more.</summary>
+    <tags>instchoco bcurran3 choco chocolatey unofficial standalone installer portable</tags>
+    <summary>InstChoco - The ultimate Chocolatey and Chocolatey packages (re)installer!</summary>
     <description>
 ![Screenshot of InstChoco in use](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
+
+#InstChoco - The ultimate Chocolatey and Chocolatey packages (re)installer!
 	
 ##QUESTION: "Why do I need an installer for Chocolatey when I already have Chocolatey installed?"
 
 ##ANSWER: You need it for the NEXT time you want to install Chocolatey and it will make the task much EASIER!
 
-I wrote this as a batch file a couple of years ago so I wouldn't constantly have to reference Chocolatey.org for the VERY long command to install Chocolatey. I put in some basic error checking for administrator privileges, network connectivity, date checking, etc. I then placed the batchfile on my local server, on my website, in Dropbox, on USB thumbdrives, everywhere I could think of so I'd have easy access to it. I've used it for my computers, friend's computers, client's computers, and almost every Wintel computer I've touched in the last few years. It has served me well and saved me time. I've now stripped out all the annoying pauses, made it no-interaction-required, and compiled it to an executable program called **InstChoco**. It's now suitable for other people to use as well. My EUREKA! moment in re-creating this as an executable and expanding it's features was after writing my [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) script. I realized I could go a step further by integrating [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) along with **InstChoco** for a complete backup and recovery solution of my/your/his/her/their/everyone's Chocolatey packages. I hope **InstChoco** serves you well and saves you time!
+I wrote this as a batch file a couple of years ago so I wouldn't constantly have to reference Chocolatey.org for the VERY long command to install Chocolatey. I put in some basic error checking for administrator privileges, network connectivity, date checking, etc. I then placed the batch file on my local server, on my website, in Dropbox, on USB thumb drives, everywhere I could think of so I'd have easy access to it. I've used it for my computers, friend's computers, client's computers, and almost every Wintel computer I've touched in the last few years. It has served me well and saved me time. I've now stripped out all the annoying pauses, made it no-interaction-required, added a bunch of super duper dandy extra features, and compiled it to an executable program called **InstChoco**. I've deemed it so useful that I decided to share. My EUREKA! moment in re-creating this as an executable and expanding it's features was after writing my [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) script. I realized I could go a step further by integrating [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) along with **InstChoco** for a complete backup and recovery solution of my/your/his/her/their/everyone's Chocolatey packages. I hope **InstChoco** serves you well and saves you time!
 
 Features:
 
 * **InstChoco** uses Rob's ["Install with cmd.exe"](https://chocolatey.org/install) method for installing Chocolatey.
-* **InstChoco** integrates with [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) to provide a very convienant way to reinstall Chocolatey and your backed up packages list.
 * **InstChoco** will enable up to four choco features if you pass them as parameters, i.e. allowGlobalConfirmation, failOnAutoUninstaller, allowEmptyChecksums, etc.
-* **InstChoco** will automatically run CINST PACKAGES.CONFIG -Y if packages.config is found in the current directory.
+* **InstChoco** will automatically search for a PACKAGES.CONFIG file in various locations and install packages from it if found. 
+* **InstChoco** has baked in support for [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup). **InstChoco** will use the first found PACKAGES.CONFIG in the following order: current directory, Documents folder, HOMESHARE, Dropbox, Google Drive, OneDrive, ReadyCLOUD, Resilio Sync, or Tonido Sync. (New in v1.10)
+* **InstChoco** has baked in support for [Choco Persistent Packages](https://chocolatey.org/packages/choco-persistent-packages). **InstChoco** will use PERSISTANTPACKAGES.CONFIG and install packages from it if found - always. (New in v1.10)
 
-You can find **InstChoco.exe** in \programdata\chocolatey\lib\instchoco\tools. I tell you this because I KNOW you want to copy it to your local server, website, Dropbox, USB thumbdrives, and everywhere you can think of so you'll have easy access to it.
+
+You can find **InstChoco.exe** in \programdata\chocolatey\lib\instchoco\tools. I tell you this because I KNOW you want to copy it to your local server, website, Dropbox, USB thumb drives, and everywhere you can think of so you'll have easy access to it.
 
 Usage: InstChoco -y
+
+**If you find InstChoco useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocoinstall/readme.md)**	
 	</description>

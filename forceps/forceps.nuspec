@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>forceps</id>
-    <version>1.00</version>
+    <version>1.0.0.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/forceps</packageSourceUrl>
     <title>ForcePS (Portable)</title>
@@ -14,7 +14,7 @@
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>forceps bcurran3 powershell utility portable</tags>
+    <tags>forceps bcurran3 force powershell utility portable</tags>
     <summary>ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.</summary>
     <description>
 ![Screenshot of ForcePS](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/forceps/ForcePS_screenshot.png)
@@ -30,6 +30,8 @@ I wrote **ForcePS** because I was lazy and didn't want to keep changing my Windo
 Chocolatey will download **ForcePS** to the package's tools directory and shim it so that its available for global use.
 
 USAGE: ForcePS PSscript.ps1 parameter1 parameter2
+
+**If you find InstChoco useful, please consider donating: https://www.paypal.me/bcurran3donations**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/forceps/readme.md)**
 	</description>
