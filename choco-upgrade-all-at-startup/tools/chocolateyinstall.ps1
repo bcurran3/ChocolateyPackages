@@ -1,12 +1,12 @@
-﻿$chocoCmd = Get-Command -Name 'choco' -ErrorAction SilentlyContinue -WarningAction SilentlyContinue | Select-Object -ExpandProperty Source
-if ($chocoCmd -eq $null) { break }
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'choco-upgrade-all-startup'
+$GotTask     = (get-scheduledtask -TaskName "Run a Choco Upgrade All at Startup" -ErrorAction SilentlyContinue) 
 
-# Settings for the scheduled task
-$taskAction = New-ScheduledTaskAction –Execute $chocoCmd -Argument 'upgrade all -y'
-$taskTrigger = New-ScheduledTaskTrigger -AtStartup
-$taskUserPrincipal = New-ScheduledTaskPrincipal -UserId 'SYSTEM'
-$taskSettings = New-ScheduledTaskSettingsSet -Compatibility Win8
+# delete old task name if it exists from previous versions
+if ($GotTask -ne $null){
+    SCHTASKS.exe /DELETE /TN "Run a Choco Upgrade All at Startup" /F
+   }
 
-# Set up the task, and register it
-$task = New-ScheduledTask -Action $taskAction -Principal $taskUserPrincipal -Trigger $taskTrigger -Settings $taskSettings
-Register-ScheduledTask -TaskName 'Run a Choco Upgrade All at Startup' -InputObject $task -Force
+# create new scheduled task to run at startup   
+SchTasks /Create /SC ONSTART /RU SYSTEM /RL HIGHEST /TN "choco-upgrade-all-startup" /TR "choco upgrade all -y" /F
+Write-Host "Now configured to run ""choco upgrade all -y"" at Windows startup." -foreground magenta 
