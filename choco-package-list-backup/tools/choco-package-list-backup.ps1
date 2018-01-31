@@ -117,7 +117,7 @@ if ($UseReadyCLOUD -match "True" -and (Test-Path $Env:USERPROFILE\ReadyCLOUD))
    }
 
 # Backup Chocolatey package names on local computer to packages.config file in Resilio Sync directory if it exists
-if ($UseReadyCLOUD -match "True" -and (Test-Path "$Env:USERPROFILE\Resilio Sync"))
+if ($UseResilioSync -match "True" -and (Test-Path "$Env:USERPROFILE\Resilio Sync"))
    {
     $SavePath = "$Env:USERPROFILE\Resilio Sync\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
