@@ -24,6 +24,7 @@ $UseOneDrive    = "True"
 $UseReadyCLOUD  = "True"
 $UseResilioSync = "True"
 $UseTonidoSync  = "True"
+$UseNextcloud	= "True"
 
 # Check the path to save packages.config and create if it doesn't exist
 Function Check-SaveLocation{
@@ -130,6 +131,13 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
     Write-PackageConfig
    }
 
+# Backup Chocolatey package names on local computer to packages.config file in Nextcloud directory if it exists
+if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
+   {
+    $SavePath = "$Env:USERPROFILE\Nextcloud\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   }      
+   
 Write-Host "TO RE-INSTALL YOUR CHOCOLATEY PACKAGES:" -ForegroundColor magenta 
 Write-Host "1> Go to the location of your saved PACKAGES.CONFIG file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
 Write-Host "2> Get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
