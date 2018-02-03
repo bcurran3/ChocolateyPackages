@@ -9,6 +9,7 @@
     <title>Chocolatey Maintainer chocolateyinstall Helpers Extensions</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateyinstall-helpers.extension</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolateyinstall-helpers.extension/chocolateyinstall-helpers.extension_icon.png</iconUrl>	
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
