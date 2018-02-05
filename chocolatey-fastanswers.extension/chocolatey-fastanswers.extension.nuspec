@@ -15,57 +15,24 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-fastanswers.extension</projectSourceUrl>
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>choco extensions</tags>
-    <summary>chocolatyinstall.ps1 scripting extension for package maintainers</summary>
+    <tags>bcurran3 choco fast answers extension extensions</tags>
+    <summary>Chocolatey Fast Answers Extension is a (fairly) easy to remember collection of micro functions for package creators/maintainers.</summary>
     <description>
-**Chocolatey Fast Answers Extension** is a Chocolatey extension for use by package maintainers. It is not for individual sale. It is used as a dependency along with other packages.
+#**Chocolatey Fast Answers Extension** is a Chocolatey extension for use as a dependency by package maintainers.
 
-#Goal
-To provide (fairly) easy to remember micro functions for package creators/maintainers to get fast short answers to common decision tree questions that come up during package creation. The majority of functions return True/False. None of the functions are complex and most rely on WMI. By making these functions available as a Chocolatey extension you can script situations such as aborting an install based on minimal Windows version that much easier and faster. 
+#Purpose
+To provide (fairly) easy to remember micro functions for (new?) package creators/maintainers to get short fast answers to common decision tree questions that come up during package creation. The majority of functions return True/False. None of the functions are complex and most rely on WMI. By using this Chocolatey extension you can easily script situations such as aborting an install for a package/program that doesn't work on servers by checking first using Get-IsWinServer or conversely Get-IsWinWorkstation. Maybe you have a package that needs to make sure there is not a pending reboot and you can check using Get-PendingReboot and error out with a message explaining to reboot and try again. Maybe you have a package that only runs on Windows 10 and Windows Server 2016, you can easy check at the beginning of your script using Get-IsWin10 or Get-IsWinServer2016. 
 
-...and yes, nobody will probably use Get-IsSSD except me for some non-Chocolatey scripts! :)
+...and yes, nobody will probably use Get-IsSSD except me for some non-Chocolatey scripts! :) 
+(Though IMHO defrag packages should abort if a SSD is found and warn that it's not recommended to defrag a SSD.)
+
+The use cases go on...
 
 #Functions
-* Get-Is32.ps1 - Is Windows 32 bit? - RETURNS: True or False
-* Get-Is64.ps1 - Is Windows 64 bit? - RETURNS: True or False
-* Get-IsAMDVideo.ps1 - Is an AMD/ATI video card installed? - RETURNS: True or False
-* Get-IsInDomain.ps1  - Is computer joined to a domain? - RETURNS: True or False
-* Get-IsIntelVideo.ps1 - Is an Intel video card installed? - RETURNS: True or False
-* Get-IsNvidiaVideo.ps1 - Is a Nvidia video card installed? - RETURNS: True or False
-* Get-IsSSD.ps1 - Is an SSD drive installed? - RETURNS: True or False
-* Get-IsVirtualBox.ps1 - Is the computer a VirtualBox VM? - RETURNS: True or False
-* Get-IsVM.ps1 - Is the computer a VM? - RETURNS: True or False
-* Get-IsVMware.ps1 - Is the computer a VMWare VM? - RETURNS: True or False
-* Get-IsWin10.ps1 - Is this Windows 10? - RETURNS: True or False
-* Get-IsWin7.ps1 - Is this Windows 7? - RETURNS: True or False
-* Get-IsWin8.ps1 - Is this Windows 8? - RETURNS: True or False
-* Get-IsWin80.ps1 - Is this Windows 8.0? - RETURNS: True or False
-* Get-IsWin81.ps1 - Is this Windows 8.1? - RETURNS: True or False
-* Get-IsWinEdu.ps1 - Is this Windows Educational? - RETURNS: True or False
-* Get-IsWinEnt.ps1 - Is this Windows Enterprise? - RETURNS: True or False
-* Get-IsWinHome.ps1 - Is this Windows Home? - RETURNS: True or False
-* Get-IsWinPro.ps1 - Is this Windows Pro? - RETURNS: True or False
-* Get-IsWinServer.ps1 - Is this a Windows Server? - RETURNS: True or False
-* Get-IsWinServer2008.ps1 - Is this a Windows Server 2008? - RETURNS: True or False
-* Get-IsWinServer2008R2.ps1 - Is this a Windows Server 2008 R2? - RETURNS: True or False
-* Get-IsWinServer2012.ps1 - Is this a Windows Server 2012? - RETURNS: True or False
-* Get-IsWinServer2012R2.ps1 - Is this a Windows Server 2012 R2? - RETURNS: True or False
-* Get-IsWinServer2016.ps1 - Is this a Windows Server 2016? - RETURNS: True or False
-* Get-IsWinServerDatacenter.ps1 - Is this a Windows Server Datacenter edition? - RETURNS: True or False
-* Get-IsWinServerEssentials.ps1 - Is this a Windows Server Essentials edition? - RETURNS: True or False
-* Get-IsWinServerFoundation.ps1 - Is this a Windows Server Foundation edition? - RETURNS: True or False
-* Get-IsWinServerSBS.ps1 - Is this a Windows Server SBS edition? - RETURNS: True or False
-* Get-IsWinServerStandard.ps1 - Is this a Windows Server Standard edition? - RETURNS: True or False
-* Get-IsWinServerStorage.ps1 - Is this a Windows Server Storage edition? - RETURNS: True or False
-* Get-IsWinServerWeb.ps1 - Is this a Windows Server Web Server edition? - RETURNS: True or False
-* Get-IsWinWorkstation.ps1 - Is this a Windows Workstation (not server)? - RETURNS: True or False
-* Get-PendingReboot.ps1 - Is the computer pending a reboot? - RETURNS: True or False
-* Get-WinName.ps1 - Windows version name  - RETURNS: a string
-* Get-WinVerBuild.ps1 - Windows version build #? - RETURNS: the Windows build #
-* Get-WinVerMajor.ps1 - Windows major version - RETURNS: Windows major version (i.e. 7/8/10)
-* Get-WinVerMinor.ps1 - Windows minor version - RETURNS: Windows minor version
+[List of functions](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/List_of_functions.png)
 
-[Screen shot of	testing chocolatey-fastanswers.extension]()
+Screenshot testing all functions with simple test-package install script that does: $test=function and Write-Out function result for each function. Results from the functions show that the test package was run on a computer with Microsoft Windows 10 Pro build 16299 64bit, joined to a domain, (onboard) Intel video, (discreet) Nvidia video, has a SSD, is a workstation not a server, and is pending a reboot.
+[](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/chocolatey-fastanswers.extension.png)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-fastanswers.extension/readme.md)**
     </description>
