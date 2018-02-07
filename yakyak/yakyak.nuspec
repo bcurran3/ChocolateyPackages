@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yakyak</id>
-    <version>1.4.4</version>
+    <version>1.5.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/yakyak</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>YakYak (Portable)</title>
@@ -34,8 +34,10 @@
 * Video/audio integration (open in chrome)
 * Focus/typing indications (mainly a design issue. keep it clean)
 * Offer alternative color schemes
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/yakyak/readme.md)**	
 	</description>
-    <releaseNotes>checksum changed but release version didn't</releaseNotes>
+    <releaseNotes>https://github.com/yakyak/yakyak/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
