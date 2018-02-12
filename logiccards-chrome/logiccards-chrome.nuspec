@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>logiccards-chrome</id>
+    <version>1.0.0.2</version>
+    <title>LogicCards Chrome Extension</title>
+    <authors>logiccards.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logiccards-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/logiccards-chrome-extensi/lpidpfaihjcegdkflcnhjhgpnbdjimih</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/kOSyTPaobU4eYOj8MfR6QwL6Was6369C65tK3OFi89c2MT2wu3LYkFS_WHGJEpNSIFvx_E4Bdvs</iconUrl>
+    <licenseUrl>https://www.solarwindsmsp.com/legal/terms-of-use</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of LogicCards Chrome Extension](https://lh3.googleusercontent.com/GOtLeNonGWqRNzHjWFsheFWao1jHcltd2mLzoUBmHu4fb3yCoBjxQevCIg25YzNjyGAaovkH)	
+# LogicCards provides dynamic notifications for the LogicNow platform
+
+LogicCards, the latest addition to Max RM’s (now SolarWinds MSP) tool set, brings the power of data driven intelligence to your fingertips. Fueled by machine learning, near real-time analytics, and Big Data mining, LogicCards leverages data from across millions of devices to deliver useful, personalized, and timely insights. 
+
+###Features include:
+
+* Notifications of at-risk devices posing liability to your networks based on correlations found among vast quantities of machine data
+* Insight into relevant market trends spanning across our global MSP community
+* Timely instructional bites that make it easy to benefit from the full functionality of the services you already use
+* How you compare in best practice across our MSP community
+* Cross product integration that enables you to see RM and Service Desk notifications all in one place
+* Ability to assign notifications to yourself or others in your organization for future review via Service Desk	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/logiccards-chrome/readme.md)**
+	</description>
+    <summary>The LogicCards Chrome extension provides dynamic notifications for the LogicNow platform</summary>
+    <tags>logiccards solarwinds logicnow n-able chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
