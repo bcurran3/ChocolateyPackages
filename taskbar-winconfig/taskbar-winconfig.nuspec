@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>taskbar-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskbar-winconfig</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskbar-winconfig</packageSourceUrl>
+    <title>Windows Taskbar Config</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskbar-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/taskbar-winconfig/taskbar-winconfig_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 windows taskbar config</tags>
+    <summary>taskbar-winconfig let's you change Windows taskbar settings easily in scripts.</summary>
+    <description>
+###WHY DO I NEED THIS?
+
+The average person probably doesn't. This package is primarily for sysadmins who have to constantly configure computers and make sure they are all the same. Sure, there are other methods of doing these same functions. You can manually change the settings, it doesn't take that long. You could use GPO or a configuration manager, but not everyone has access to these tools - but you have access to Chocolatey! I put Chocolatey on just about every box I touch... so I made this Chocolatey package for (almost) super simple configuration, well, really so I can add it to my setup scripts. Installing this package is probably too complex for the average person, but it should be of good use to those who script or automate a lot of installs using Chocolatey. This is part of a series of "-winconfig" packages for configuration automation. Others include [desktopicons-winconfig](https://chocolatey.org/packages/desktopicons-winconfig), [explorer-winconfig](https://chocolatey.org/packages/explorer-winconfig), and [homepages-winconfig](https://chocolatey.org/packages/homepages-winconfig)
+
+####Features:
+* Change taskbar and icon size to BIG/SMALL
+* Change taskbar location to TOP/BOTTOM/LEFT/RIGHT
+* Change taskbar locked status YES/NO
+* Change taskbar icon combing feature YES/NO
+* Use taskbar People button YES/NO
+* Use taskbar Task view button YES/NO
+* Use taskbar Store button YES/NO
+* Use taskbar Ink Workspace button YES/NO
+* Use taskbar touch keyboard button YES/NO
+* Use Cortana on taskbar ICON/SEARCHBAR/NO
+
+###INSTALL INSTRUCTIONS:
+You NEED to install **taskbar-winconfig** with package parameters or it will do nothing. Below is the list of settings you can change with the parameters:
+
+* taskbar COMBINED icons - /COMBINED:yes or /COMBINED:no
+* taskbar CORTANA - /CORTANA:no or /CORTANA:icon or /CORTANA:searchbar 
+* taskbar INK Workspace icon - /INK:yes or /INK:no
+* taskbar LOCATION - /LOCATION:top or /LOCATION:bottom or /LOCATION:left or /LOCATION:right
+* taskbar LOCKED - /LOCKED:yes or /LOCKED:no
+* taskbar PEOPLE icon - /PEOPLE:yes or /PEOPLE:no
+* taskbar SIZE - /SIZE:big or /SIZE:small
+* taskbar STORE icon - /STORE:yes or /STORE:no
+* taskbar TASKVIEW icon - /TASKVIEW:yes or /TASKVIEW:no
+* taskbar touch KEYBOARD icon - /KEYBOARD:yes or /KEYBOARD:no
+
+You're desktop will blink off and return as explorer is restarted at the end of the script so the changes are immediately available.
+
+###INSTALL EXAMPLES:
+* choco install taskbar-winconfig --params "'/LOCKED:yes /PEOPLE:no /TASKVIEW:no /STORE:no /CORTANA:no'"
+* choco install taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon'"
+
+You can set any one icon to display or any mix of icons to display or not display. If you don't specify any parameters, nothing will change. Default = do nothing.
+
+**There is no upgrade path for this package. taskbar-winconfig is a "one and done" package. It is recommended you uninstall this package after install (settings will NOT revert) so that you can install it again under a different user account if necessary. Settings changes only effect the currently logged in user.**
+
+**If you find **taskbar-winconfig** useful, please consider donating: https://www.paypal.me/bcurran3donations**
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/taskbar-winconfig/readme.md)**
+	</description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
