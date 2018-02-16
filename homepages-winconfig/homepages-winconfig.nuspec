@@ -31,14 +31,14 @@ This is all about quick and easy scripted new computer configurations. I want al
 * Change default homepage for Microsoft Edge
 * Change default homepage for Internet Explorer
 * Change default homepage for Firefox 
-* Change default homepage for Chrome - not implemented yet
-* Change default homepage for Chromium - not implemented yet
-* Change default homepage for Opera - not implemented yet
+* Change default homepage for Chrome - coming soon
+* Change default homepage for Chromium - coming soon
+* Change default homepage for Opera - maybe/maybe not coming
 
 ###INSTALL INSTRUCTIONS:
 You can set the browser homepage(s) by running choco install homepages-winconfig --params "'/BROWSERNAME:YES /URL:website'". Below is the list of browser names and features you can use as parameters:
 
-* /ALL:YES - change the homepage for all supported browsers - not implemented yet
+* /ALL:YES - change the homepage for all supported browsers
 * /EDGE:YES - change the homepage for Microsoft Edge
 * /IE:YES - change the homepage for Internet Explorer
 * /FF:YES - change the homepage for Firefox
@@ -53,7 +53,7 @@ You can set the browser homepage(s) by running choco install homepages-winconfig
 
 **There is no upgrade path for this package. homepages-winconfig is a "one and done" package. It is recommended you uninstall this package after install (settings will NOT revert) so that you can install it again under a different user account if necessary. Settings changes only effect the currently logged in user. Of course, you could reinstall it again with -force to change the options.**
 
-**If you find taskbar-winconfig useful, please consider donating: https://www.paypal.me/bcurran3donations**
+**If you find homepages-winconfig useful, please consider donating: https://www.paypal.me/bcurran3donations**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/homepages-winconfig/readme.md)**
 	</description>
