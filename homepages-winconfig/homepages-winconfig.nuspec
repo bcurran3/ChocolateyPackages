@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>homepages-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homepages-winconfig</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homepages-winconfig</packageSourceUrl>
+    <title>Browser Homepages (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homepages-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/homepages-winconfig/homepages-winconfig_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 windows browser homepage config</tags>
+    <summary>Browser Homepages (Config) let's you change all your browser homepages to a new homepage all at once.</summary>
+    <description>
+
+#Do you want to set the homepage for all browsers at once?
+
+#This is the easy way!
+
+###WHY DO I NEED THIS?
+This is all about quick and easy scripted new computer configurations. I want all browsers set to the same home page, be it www.google.com or www.mybusiness.com - I want them all set to open up to the same location. If you want this too, you found the right place. Yes some of this can be configured through GPO and other methods but not everyone has these other methods. This lets you do it via a Chocolatey package to automate in your scripts. This is part of a series of "-winconfig" packages for configuration automation. Others include [desktopicons-winconfig](https://chocolatey.org/packages/desktopicons-winconfig), [explorer-winconfig](https://chocolatey.org/packages/explorer-winconfig), and [taskbar-winconfig](https://chocolatey.org/packages/taskbar-winconfig)
+
+
+####Features:
+* Change default homepage for Microsoft Edge
+* Change default homepage for Internet Explorer
+* Change default homepage for Firefox 
+* Change default homepage for Chrome - not implemented yet
+* Change default homepage for Chromium - not implemented yet
+* Change default homepage for Opera - not implemented yet
+
+###INSTALL INSTRUCTIONS:
+You can set the browser homepage(s) by running choco install homepages-winconfig --params "'/BROWSERNAME:YES /URL:website'". Below is the list of browser names and features you can use as parameters:
+
+* /ALL:YES - change the homepage for all supported browsers - not implemented yet
+* /EDGE:YES - change the homepage for Microsoft Edge
+* /IE:YES - change the homepage for Internet Explorer
+* /FF:YES - change the homepage for Firefox
+* setting any browser to NO will reset it to https://www.google.com
+
+###INSTALL EXAMPLES:
+* choco install homepages-winconfig --params "'/ALL:YES /URL:www.chocolatey.org'"
+* choco install homepages-winconfig --params "'/ALL:NO'"
+* choco install homepages-winconfig --params "'/IE:YES /EDGE:YES /FF:NO /URL:www.chocolatey.org'"
+* choco install homepages-winconfig --params "'/IE:YES /EDGE:YES /FF:NO /URL:www.chocolatey.org'"
+* choco install homepages-winconfig --params "'/IE:NO /EDGE:NO /FF:NO'"
+
+**There is no upgrade path for this package. homepages-winconfig is a "one and done" package. It is recommended you uninstall this package after install (settings will NOT revert) so that you can install it again under a different user account if necessary. Settings changes only effect the currently logged in user. Of course, you could reinstall it again with -force to change the options.**
+
+**If you find taskbar-winconfig useful, please consider donating: https://www.paypal.me/bcurran3donations**
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/homepages-winconfig/readme.md)**
+	</description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
