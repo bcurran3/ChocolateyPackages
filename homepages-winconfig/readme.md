@@ -1,14 +1,12 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* This installs no software. It modifies Windows registry keys controlling the showing of your desktop icons.
+* This installs no software. It modifies Windows registry keys and preference files setting your default home page(s).
 * Read the INSTALL EXAMPLES again before use!
-* This is probably the first of many -winconfig scripts. (I'm taking requests.)
 
 ROADMAP:
 * Test if this can be used with Computer\HKEY_USERS\.DEFAULT
-* Possibly add a RenameComputer:CustomText option.
-* I'm open to suggestions - open a GitHub issue please.
+* I'm open to suggestions for other browsers (point the way if you can!) - open a GitHub issue please.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
