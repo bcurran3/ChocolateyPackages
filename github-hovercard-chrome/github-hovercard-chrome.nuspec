@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>github-hovercard-chrome</id>
+    <version>1.4.4</version>
+    <title>GitHub Hovercard for Chrome</title>
+    <authors>GU Yiling</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/github-hovercard-chrome</packageSourceUrl>		
+	<projectSourceUrl>https://github.com/Justineo/github-hovercard</projectSourceUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/github-hovercard/mmoahbbnojgkclgceahhakhnccimnplk</projectUrl>
+    <bugTrackerUrl>https://github.com/Justineo/github-hovercard/issues</bugTrackerUrl>	
+    <iconUrl>https://raw.githubusercontent.com/Justineo/github-hovercard/master/icon.png</iconUrl>
+    <licenseUrl>https://github.com/Justineo/github-hovercard/blob/master/LICENSE</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of GitHub Hovercard for Chrome](https://lh3.googleusercontent.com/60VY0DgqbBSLaZ4G8jggGbq0uAfaux5y_3RiP_KTVY-RAYMt64rmHUWyVkj90gBa8n6h1DnU2m0)	
+#Neat hovercards for GitHub.
+
+GitHub Hovercard provides neat hovercards for GitHub.
+It brings you instant access to user/repo/issue/commit information from anywhere on GitHub.	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/github-hovercard-chrome/readme.md)**
+	</description>
+    <summary>Neat hovercards for GitHub.</summary>
+    <tags>github hovercard chrome extension</tags>
+    <releaseNotes>https://github.com/Justineo/github-hovercard/blob/master/CHANGELOG.md</releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
