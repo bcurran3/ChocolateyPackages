@@ -1,7 +1,7 @@
 ﻿$packageName    = 'plexamp'
 $installerType  = 'exe'
-$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/Plexamp%20Setup%201.0.1.exe'
-$checksum       = '635F0E08037F042D95CB799C66581A079A2A30B9C99D5644CB790A0FB425105C'
+$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/Plexamp%20Setup%201.0.2.exe'
+$checksum       = '14D65CEEA18FE41EEE5B4A0BF5C2364B3B79C5378B73B27639E333121132AD8E'
 $silentArgs     = '/S'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0,1)
