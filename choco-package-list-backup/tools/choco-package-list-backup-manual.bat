@@ -15,6 +15,6 @@ if %errorLevel% == 0 goto RunScript
 
 :RunScript
 powershell -NoProfile -ExecutionPolicy Bypass -Command "\ProgramData\chocolatey\bin\choco-package-list-backup.ps1"
-timeout 5
+timeout 10
 :end
 
