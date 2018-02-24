@@ -7,7 +7,7 @@
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.01.29" # Version of this script
+$CPLBver        = "2018.02.24" # Version of this script
 $ConfigFile     = "packages.config"
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $SaveVersions   = "False" # Specify if you want to save specific version info or not
@@ -18,13 +18,16 @@ $CustomPath     = "c:\install"  # Edit to save to a special location of your cho
 $UseCustomPath  = "False" # Change to True if you are using $CustomPath
 $UseDocuments   = "True"
 $UseHomeShare   = "True"  # Domain joined computers HOMEDRIVE support
+$UseBox         = "True"
 $UseDropbox     = "True"
 $UseGoogleDrive = "True"
+$UseNextcloud	= "True"
 $UseOneDrive    = "True"
 $UseReadyCLOUD  = "True"
 $UseResilioSync = "True"
+$UseSeafile     = "True"
 $UseTonidoSync  = "True"
-$UseNextcloud	= "True"
+
 
 # Check the path to save packages.config and create if it doesn't exist
 Function Check-SaveLocation{
@@ -80,6 +83,13 @@ if ($UseDocuments -match "True" -and (Test-Path $Env:USERPROFILE\Documents))
     Write-PackageConfig
    }
    
+# Backup Chocolatey package names on local computer to packages.config file in Box (Sync) directory if it exists
+if ($UseBox -match "True" -and (Test-Path "$Env:USERPROFILE\Box Sync"))
+   {
+    $SavePath = "$Env:USERPROFILE\Box Sync\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   }    
+   
 # Backup Chocolatey package names on local computer to packages.config file in Dropbox directory if it exists
 if ($UseDropbox -match "True" -and (Test-Path $Env:USERPROFILE\Dropbox))   
    {
@@ -102,6 +112,13 @@ if ($UseHomeShare -match "True" -and $ExistHomeShare -match "True")
     $SavePath = "$Env:HOMESHARE\$SaveFolderName\$Env:ComputerName"   
     Write-PackageConfig
    }      
+
+# Backup Chocolatey package names on local computer to packages.config file in Nextcloud directory if it exists
+if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
+   {
+    $SavePath = "$Env:USERPROFILE\Nextcloud\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   } 
    
 # Backup Chocolatey package names on local computer to packages.config file in OneDrive directory if it exists
 if ($UseOneDrive -match "True" -and (Test-Path $Env:USERPROFILE\OneDrive))
@@ -123,6 +140,13 @@ if ($UseResilioSync -match "True" -and (Test-Path "$Env:USERPROFILE\Resilio Sync
     $SavePath = "$Env:USERPROFILE\Resilio Sync\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
    }   
+
+# Backup Chocolatey package names on local computer to packages.config file in Seafile directory if it exists
+if ($UseSeafile -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Seafile))
+   {
+    $SavePath = "$Env:USERPROFILE\Seafile\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   }
    
 # Backup Chocolatey package names on local computer to packages.config file in TonidoSync directory if it exists
 if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\TonidoSync))
@@ -131,20 +155,11 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
     Write-PackageConfig
    }
 
-# Backup Chocolatey package names on local computer to packages.config file in Nextcloud directory if it exists
-if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
-   {
-    $SavePath = "$Env:USERPROFILE\Nextcloud\$SaveFolderName\$Env:ComputerName"
-    Write-PackageConfig
-   }      
+     
    
 Write-Host "TO RE-INSTALL YOUR CHOCOLATEY PACKAGES:" -ForegroundColor magenta 
 Write-Host "1> Go to the location of your saved PACKAGES.CONFIG file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
 Write-Host "2> Get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
 Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
-
-
-
-
 
 
