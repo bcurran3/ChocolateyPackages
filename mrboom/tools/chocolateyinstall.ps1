@@ -1,7 +1,7 @@
 ﻿$packageName   = 'mrboom' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://github.com/Javanaise/mrboom-libretro/releases/download/4.1/MrBoom-win64-4.1.zip'
-$checksum      = '443E0493F89CD367B5E3347FE198EFC1EEBE26F709758104D647F1E2A9364EA5'
+$url           = 'https://github.com/Javanaise/mrboom-libretro/releases/download/4.4/MrBoom-win64-4.4.zip'
+$checksum      = 'A0999BBCF93B2465A9178E79C32DC6ECF8FE3742B9E82AB2718E089360E21AA6'
 $PortableEXE   = 'MrBoom.exe'
 $ShortcutName  = 'MrBoom.lnk'
 $bits          = Get-ProcessorBits

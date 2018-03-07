@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.10.1</version>
+    <version>5.11.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/arq</packageSourceUrl>				
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
@@ -60,7 +60,7 @@ You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Clou
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/arq/readme.md)**
 	</description>
-    <releaseNotes>https://www.arqbackup.com/download/arq5win_release_notes.html</releaseNotes>
+    <releaseNotes>https://www.arqbackup.com/download/arq5windows_release_notes.html</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
     </dependencies>
