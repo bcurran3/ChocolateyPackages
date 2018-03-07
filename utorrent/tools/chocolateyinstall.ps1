@@ -1,7 +1,7 @@
 ﻿$packageName    = 'utorrent'
 $installerType  = 'exe'
 $url            = 'http://download.ap.bittorrent.com/track/stable/endpoint/utorrent/os/windows'
-$checksum       = '866A8FB02C387B7160D43FB72CC5CFBC5ACBB0DF825BE2F359727BAFEDC56D3A'
+$checksum       = '3C07BF16CA597238ED71FE37A56D76FD9860146D64EA0BF14AC68849681FE37E'
 $silentArgs     = '/S'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0,1)

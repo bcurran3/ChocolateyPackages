@@ -3,19 +3,19 @@
   <metadata>
     <id>ultimate-settings-panel</id>
     <title>Ultimate Settings Panel (Install)</title>
-    <version>5.8</version>
+    <version>5.9</version>
     <owners>bcurran3</owners>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>	
     <authors>A.J. Armstrong</authors>
     <copyright>A.J. Armstrong / techygeekshome.info</copyright>
-    <projectUrl>http://usp.blog.techygeekshome.info/</projectUrl>	
-    <docsUrl>http://usp.blog.techygeekshome.info/2017/03/instructions/</docsUrl>
+    <projectUrl>https://sourceforge.net/projects/ultimatesettingspanelpro//</projectUrl>	
+    <docsUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/ultimate-settings-panel-instructions/</docsUrl>
     <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/ultimate-settings-panel/UltimateSettingsPanel.png</iconUrl>	
     <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>	
     <description>
-![Screenshot of Ultimate Settings Panel](http://i0.wp.com/usp.blog.techygeekshome.info/wp-content/uploads/sites/7/2017/04/Windows10.png)
+![Screenshot of Ultimate Settings Panel](https://fsdn.com/con/app/proj/ultimatesettingspanelpro/screenshots/win7.PNG)
 
 An all in one settings solution for a multitude of configuration options in Windows, Office, Powershell and popular internet browsers. This release now has 15 different configuration tabs including Windows 10 and a total of **292 configuration items** spanning across all versions of Windows, Powershell, Outlook, Server Administration, Google Chrome, Firefox and Internet Explorer.
 
@@ -51,7 +51,7 @@ This utility is now completely free to download, simply visit our Downloads page
     </description>
     <tags>ultimate settings panel system utility configuration control</tags>
     <dependencies>
-      <dependency id="dotnet4.5" />
+      <dependency id="dotnet4.5.2" />
     </dependencies>	
   </metadata>
   <files>
