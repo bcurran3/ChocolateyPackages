@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>drobo-dashboard</id>
-    <version>3.1.5</version>
+    <version>3.1.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drobo-dashboard</packageSourceUrl>
     <title>Drobo Dashboard (Install)</title>
@@ -31,7 +31,7 @@ SUPPORTED OPERATING SYSTEMS
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/drobo-dashboard/readme.md)**
 	</description>
-    <releaseNotes>http://files.drobo.com/webrelease/dashboard/Release-Notes-dashboard-3.1.5.pdf</releaseNotes>
+    <releaseNotes>http://files.drobo.com/webrelease/dashboard/Release-Notes-dashboard-3.1.6.pdf</releaseNotes>
 	<dependencies>
       <dependency id="autohotkey" />
       <dependency id="vcredist2008" />

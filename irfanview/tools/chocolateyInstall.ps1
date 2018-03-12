@@ -1,11 +1,11 @@
 ﻿$packageName    = 'irfanview'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\iview450_setup.exe"
-$checksum       = '1568576EDCDFD95382154538299E01F58AE9D0B863E24F176BF8D97B8D2D4E33'
+$url            = "$toolsDir\iview451_setup.exe"
+$checksum       = '0A5400988954EC933EDAC01B8822F9937BB0B6BF2B1337B69CB3347BCA375DB2'
 $checksumType   = 'sha256'
-$url64          = "$toolsDir\iview450_x64_setup.exe"
-$checksum64     = 'AA0BDF15331CABAF02C96B1027525EF42D5068C1C999DC3B6BBD1903B24977B3'
+$url64          = "$toolsDir\iview451_x64_setup.exe"
+$checksum64     = 'C4CAC895DBC4A3C31565C3947D48949A7EB611696C1D4FDE0161710C35460E6C'
 $checksumType64 = 'sha256'
 $validExitCodes = @(0)
 $arguments      = @{}
@@ -14,9 +14,9 @@ $packageParameters = $env:chocolateyPackageParameters
 Write-Debug "Default values for package parameters: 0=off, 1=on"
 $desktop = 0
 $thumbs = 0
-$group = 0
+$group = 1
 $allusers = 1
-$assoc = 0
+$assoc = 1
 $ini = "%APPDATA%\IrfanView"
 $folder = $null
 
