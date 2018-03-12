@@ -1,7 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package includes binaries. This release will work forever.
-* Default install is with no icons, read the Package Parameters carefully if you want desktop or Start Menu icons.
+* AutoHotkey is no longer used for uninstall as of 4.51.
+* Default install as of 4.51 now includes Start Menu group and file associations.
 * I personally use and endorse this program.
 
 
@@ -11,7 +12,6 @@ Find them useful?
 
 **Want to buy me a beer?**
 
-[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4ECL3UCG5CGB6)
+https://www.paypal.me/bcurran3donations
 
-If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions. 
-
+If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.

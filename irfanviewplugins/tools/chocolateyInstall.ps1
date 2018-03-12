@@ -1,10 +1,10 @@
 ﻿$packageName    = 'irfanviewplugins'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\irfanview_plugins_450_setup.exe"
-$checksum       = '99D9F8AE453BAA68D2C31596E5E99315F087C3FFA11E32C038038C03A4F6BD34'
-$url64          = "$toolsDir\irfanview_plugins_x64_450_setup.exe"
-$checksum64     = 'DE5F02302597A4C2158BC06B08D3B26BB6AB2AC8A8AF9A82CC6AD6EC75CD19D8'
+$url            = "$toolsDir\irfanview_plugins_451_setup.exe"
+$checksum       = '25FCDD3A7A52C505A827505A28CC93B2B7729559209E21F447D9C855A279279B'
+$url64          = "$toolsDir\irfanview_plugins_x64_451_setup.exe"
+$checksum64     = '19C3FF7168EC96972CD4ED5C8CE79C320392C6E94FD2CA024FC78B07D6953442'
 $validExitCodes = @(0)
 $silentArgs     = "/silent"
 
