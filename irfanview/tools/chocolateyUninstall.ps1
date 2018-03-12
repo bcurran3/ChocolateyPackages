@@ -1,23 +1,9 @@
-﻿$packageName = 'irfanview'
-$softwareName = "IrfanView*"
-$installerType = 'exe'
-$silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$validExitCodes = @(0)
+$packageName    = 'irfanview'
 
-$scriptPath = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkFile = Join-Path $scriptPath "chocolateyUninstall.ahk"
-$ahkExe = 'AutoHotKey'
-$ahkRun = "$Env:Temp\$(Get-Random).ahk"
-Copy-Item $ahkFile "$ahkRun" -Force
-Start-Process $ahkExe $ahkRun
+if (Test-Path -Path $ENV:ProgramFiles\IrfanView\iv_uninstall.exe)
+   {
+    &$ENV:ProgramFiles\IrfanView\iv_uninstall.exe /silent
+   } else {
+    &${ENV:ProgramFiles(x86)}\IrfanView\iv_uninstall.exe /silent
+   }
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName $softwareName
-$key | ForEach-Object {
-  Uninstall-ChocolateyPackage -PackageName $packageName `
-                              -FileType $installerType `
-                              -SilentArgs $($silentArgs) `
-                              -File $($_.UninstallString.Replace('"','')) `
-                              -ValidExitCodes $validExitCodes
-}
-
-Remove-Item "$ahkRun" -Force

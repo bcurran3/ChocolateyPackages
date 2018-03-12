@@ -1,8 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package includes binaries. This release will work forever.
-* I personally use and endorse this program.
-
+* This package downloads the .EXE file via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 

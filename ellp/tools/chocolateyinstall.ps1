@@ -1,7 +1,7 @@
 ﻿$packageName    = 'ellp'
 $installerType  = 'exe'
 $url            = 'https://www.ellp.com/download/ellp/EllpSetup.exe'
-$checksum       = '7A6926AF73A9ECAA8BC8201EC07BF5903007320C016BF8D206F479C2607875D5'
+$checksum       = 'AF147B7C6AC4D698BD31B60A10ABF5142E7F97F690DA2CCAF45D8F8158F77167'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0,1)
