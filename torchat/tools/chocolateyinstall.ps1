@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName= 'torchat' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'https://cloud.github.com/downloads/prof7bit/TorChat/torchat-windows-0.9.9.553.zip'
+$url        = 'https://github.com/downloads/prof7bit/TorChat/torchat-windows-0.9.9.553.zip'
 $ShortcutName = 'TorChat'
 
 $packageArgs = @{

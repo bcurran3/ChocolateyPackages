@@ -1,6 +1,7 @@
-﻿$packageName= 'seagate-drive-detect' 
-$url        = 'http://support.seagate.com/kbimg/utils/drivedetect.exe' 
-$ToolsDir = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+﻿$packageName      = 'seagate-drive-detect' 
+$ToolsDir         = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$url              = 'http://support.seagate.com/kbimg/utils/drivedetect.exe' 
+$checksum         = '4785B39DD3AC1B9E5021A413A7361ADC3C6C363DED66AF989CA28941C915461E'
 $installerPackage = Join-Path $ToolsDir "drivedetect.exe"
 
 $packageArgs = @{
@@ -9,7 +10,7 @@ $packageArgs = @{
   url           = $url
   FileFullPath  = $installerPackage
   softwareName  = ''
-  checksum      = 'D49098C1A167EE6ECD5E553D163999484A78CEA47A5CA8E48F9FF4BB74D12F16'
+  checksum      = $checksum
   checksumType  = 'sha256'
 }
 
