@@ -3,14 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>torchat</id>
-    <version>0.9.9.553</version>
+    <version>0.9.9.553201803</version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/torchat</packageSourceUrl>	
     <title>TorChat (Portable)</title>
     <authors>prof7bit</authors>
     <projectUrl>https://github.com/prof7bit/TorChat</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/prof7bit/TorChat/torchat2/bin/icons/torchat.png</iconUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/prof7bit/TorChat/tree/torchat2/src</projectSourceUrl>
     <bugTrackerUrl>https://github.com/prof7bit/TorChat/issues</bugTrackerUrl>
+	<docsUrl>https://github.com/prof7bit/TorChat/wiki</docsUrl>	
     <tags>torchat torchat2 im chat messenger portable</tags>
     <summary>Decentralized anonymous instant messenger on top of Tor Hidden Services</summary>
     <description>
@@ -19,8 +22,10 @@
 Want the most secure solution for exchanging messages over local area networks? TorChat is all you need. Built on the anonymity providing Tor network, TorChat is a P2P chat messenger primarily focused on the privacy of the user communication. The application is completely portable, and can be run without requiring any initial configuration. Since TorChat uses Tor network’s anonymizing services, it’s impossible to find out the location of the user. Not only that, sender and receiver information is protected, and the communications are encrypted end-to-end as well. TorChat assigns a unique alphanumeric ID to each user, and you can add other users to your contact list via this unique IDs. Support for file transfer is there as well.
 
 Please note that TorChat is produced independently from the Tor® anonymity software, I am not related with or sponsored by torproject.org. TorChat is making use of the Tor® client software and the Windows version comes bundled with original Tor binaries but TorChat itself is a completely separate project developed by totally different people
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/torchat/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://github.com/prof7bit/TorChat/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

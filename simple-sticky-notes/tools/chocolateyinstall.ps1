@@ -1,7 +1,7 @@
 ﻿$packageName    = 'simple-sticky-notes'
 $installerType  = 'exe'
 $url            = 'http://www.simplestickynotes.com/setup/Setup_SimpleStickyNotes.exe'
-$checksum       = 'E68B9E7AC095E264FE169D989920AD983841323B832A57B76A64A62E5D892244'
+$checksum       = '4F8DD1B3564FB6B7E0F213D1D09F565A7B607888FED678306834C80728EE1E88'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0,1)

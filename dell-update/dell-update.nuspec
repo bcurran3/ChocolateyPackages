@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>1.9.60.0</version>
+    <version>1.11.1.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>			
     <title>Dell Update (Install)</title>
@@ -20,19 +20,10 @@ This package provides the Dell Update Application and is supported on Inspiron, 
 
 Dell Update automates the installation of driver and application updates specific for your device. This application is needed in order to receive these updates. 
 
-###Fixes and Enhancements
-
-####Fixes
-* Bug fixes and security updates
-
-####Enhancements
-* Not Applicable
-
 A list of support devices can be found [here](https://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=31YHC).
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     </description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
