@@ -2,9 +2,9 @@
 $packageName= 'osfmount' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'http://www.osforensics.com/downloads/osfmount.exe'
-$checksum   = '2932094021D4CCF6FF17EAEEC27C6F0AC44F0F5BF233D3C08B87601723D88A8F'
+$checksum   = 'A7085A13E5FBDCD7BB1D34AEFE291446F01DA1413235908B3242079557C72F7B'
 $url64      = 'http://www.osforensics.com/downloads/osfmount_x64.exe'
-$checksum64 = '2229886CA7586E3CACA37536B3D69127713F1613920161428C47948DBE8C4546'
+$checksum64 = 'B466B7E6AFD66192F6F0E2BFB738874E428E7D09980E65AFAB0B851CD684B335'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
 
 $packageArgs = @{
