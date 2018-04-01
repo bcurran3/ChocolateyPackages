@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>siv</id>
-    <version>5.24</version>
+    <version>5.28</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/siv</packageSourceUrl>
     <title>SIV - System Information Viewer (Portable)</title>
