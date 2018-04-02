@@ -1,7 +1,7 @@
 ﻿$packageName  = 'tiny-pxe-server' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://erwan.labalec.fr/tinypxeserver/pxesrv.zip'
-$checksum     = '6821C3DE8C2393D168BE21717C24A4071B14EFAC82AFA2266AF89C78248D70EC'
+$checksum     = '5105834F0ED2ACC002A335CCFA6DE7964FB0E2F1338FC07EF7732748074712A3'
 $shortcutName = 'TinyPXE Server.lnk'
 $exe          = 'pxesrv.exe'
 

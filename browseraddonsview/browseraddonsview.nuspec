@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>browseraddonsview</id>
-    <version>1.05</version>
+    <version>1.12</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/browseraddonsview</packageSourceUrl>
     <title>BrowserAddonsView (Portable)</title>
@@ -29,9 +29,8 @@ This utility works on any version of Windows, starting from Windows XP and up to
 
 When Firefox has more than one profile, the installed plugins will be displayed multiple times (one item for each profile), even if the plugins are linked to the same dll file.
 
-PACKAGING NOTE: This program is updated semi-frequently. The download link remains the same, but the checksum changes with each new release. If you get an error installing it please try --ignore-checksums and report the update in Disquss or open an issue on GitHub.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/browseraddonsview/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
