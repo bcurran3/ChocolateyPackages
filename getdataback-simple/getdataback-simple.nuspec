@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>getdataback-simple</id>
-    <version>3.13</version>
+    <version>4.00</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/getdataback-simple</packageSourceUrl>
     <title>GetDataBack Simple (Install)</title>
@@ -13,7 +13,7 @@
     <copyright>(c) 2001-2017 by Runtime Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.runtime.org/data-recovery-documentation.htm</docsUrl>
-    <tags>runtime getdataback simple data recovery utility ntfs fat12 fat16 fat32 exfat ext ext2 ext3 ext4 trial admin</tags>
+    <tags>runtime getdataback simple data recovery utility ntfs fat12 fat16 fat32 exfat ext ext2 ext3 ext4 trial</tags>
     <summary>GetDataBack Simple - The simplest Data Recovery Software ever.</summary>
     <description>
 ![Screenshot of GetDataBack Simple](http://www.runtime.org/images/gdbsim1.gif) ![Screenshot of GetDataBack Simple 2](http://www.runtime.org/images/gdbsim2.gif)	
@@ -69,9 +69,8 @@ GetDataBack is read-only, meaning the program will not attempt to "fix" or write
 
 GetDataBack Simple's user interface is so simple, it enables even the most inexperienced users to conduct their own data recovery with just one click.
 
-GetDataBack Simple not only recovers you data. It does it quick. The first sophistication levels recover large drives in seconds or minutes. The speed of copying the recovered data to another medium competes with the speed of regular file copy operations.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/getdataback-simple/readme.md)**
 	</description>
-<!--    <releaseNotes>http://runtime3.org/blog/?cat=18</releaseNotes> -->
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
