@@ -3,17 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tiny-pxe-server</id>
-    <version>1.0.0.21</version>
+    <version>1.0.0.22</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tiny-pxe-server</packageSourceUrl>
     <title>Tiny PXE Server (Install)</title>
     <authors>Erwan Labalec</authors>
     <projectUrl>http://labalec.fr/erwan/?page_id=958</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tiny-pxe-server/tiny-pxe-server.png</iconUrl>
     <docsUrl>http://mistyrebootfiles.altervista.org/documents/TinyPXEServer/</docsUrl>
     <mailingListUrl>http://reboot.pro/forum/142-tiny-pxe-server</mailingListUrl>
 	<bugTrackerUrl>http://reboot.pro/topic/18962-bug-reports-requests-howtos-about-tiny-pxe-server/</bugTrackerUrl>
-    <tags>tinypxe pxe dhcp tftp https binl proxydhcp dns network boot server portable admin</tags>
+    <tags>tinypxe pxe dhcp tftp https binl proxydhcp dns network boot server portable</tags>
     <summary>Tiny PXE Server is a portable DHCP server - it does not need to be installed and can be run from a USB device. </summary>
     <description>
 ![Screenshot of Tiny PXE Server](http://labalec.fr/erwan/wp-content/uploads/2014/03/rescue.png)
@@ -47,9 +48,9 @@ More info about these loading methods here :
 * [http://www.syslinux….dex.php/MEMDISK](http://www.syslinux.org/wiki/index.php?title=MEMDISK)
 * [http://ipxe.org/cmd/sanboot](http://ipxe.org/cmd/sanboot)
 * [http://ipxe.org/wimboot](http://ipxe.org/wimboot)
-	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tiny-pxe-server/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
