@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>expandrive</id>
-    <version>6.1.11</version>
+    <version>6.1.15</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
     <title>ExpanDrive (Trial) (Install)</title>
@@ -14,7 +14,7 @@
     <licenseUrl>http://www.expandrive.com/license-terms/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.expandrive.com/docs/</docsUrl>
-    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav trial admin</tags>
+    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav trial</tags>
     <summary>ExpanDrive Version 6 delivers super-fast background saves and transfers, and offers more cloud storage provider options than ever before.</summary>
     <description>
 ![Screenshot of ExpanDrive](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/expandrive/ExpanDriveScreenshot.png)
