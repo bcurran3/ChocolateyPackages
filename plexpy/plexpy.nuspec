@@ -2,55 +2,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>plexpy</id>
-    <version>1.4.21</version>
+    <version>1.4.21.0020180402</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexpy</packageSourceUrl>	
-    <title>PlexPy</title>
+    <title>[Deprecated] PlexPy</title>
     <authors>JohnyWong16</authors>
     <projectUrl>https://jonnywong16.github.io/plexpy/</projectUrl>
-    <iconUrl>https://pbs.twimg.com/profile_images/644980756117327874/kUszL3FD_400x400.png</iconUrl>
-    <copyright>Copyright © 2016 JonnyWong16</copyright>	
-    <licenseUrl>https://github.com/JonnyWong16/plexpy/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/JonnyWong16/plexpy</projectSourceUrl>
-    <docsUrl>https://github.com/JonnyWong16/plexpy/wiki/Installation</docsUrl>
-    <mailingListUrl>https://forums.plex.tv/discussion/169591/plexpy-another-plex-monitoring-program</mailingListUrl>
-    <bugTrackerUrl>https://github.com/JonnyWong16/plexpy/issues</bugTrackerUrl>
     <tags>plexpy plex pms python portable</tags>
-    <summary>PlexPy - A python based web application for monitoring, analytics and notifications for Plex Media Server.</summary>
     <description>
-[Screenshots](https://imgur.com/a/RwQPM)
-
-###WHAT IS PLEXPY?
-
-PlexPy is a python based web application for monitoring, analytics, and notifications for your Plex Media Server.
-
-PlexPy (pronounced "Plex Pie") is a 3rd party application that you can run along side your Plex Media Server to monitor activity and track various statistics. Most importantly, these statistics include what has been watched, who watched it, when and where they watched it, and how it was watched. The only thing missing is "why they watched it", but who am I to question your 42 plays of Frozen. All statistics are presented in a nice and clean interface with many tables and graphs, which makes it easy to brag about your server to everyone else.
-
-This project is based on code from Headphones and PlexWatchWeb.
-
-###Features
-* Responsive web design viewable on desktop, tablet and mobile web browsers.
-* Themed to complement Plex/Web.
-* Easy configuration setup (no separate web server required).
-* Monitor current Plex Media Server activity.
-* Fully customizable notifications for stream activity and recently added media.
-* Top statistics on home page with configurable duration and measurement metric.
-* Global watching history with search/filtering and dynamic column sorting.
-* Full user list with general information and comparison stats.
-* Individual user information including devices IP addresses.
-* Complete library statistics and media file information.
-* Rich analytics presented using Highcharts graphing.
-* Beautiful content information pages.
-* Full sync list data on all users syncing items from your library.
-* And many more!!
+##This package has been deprecated and replaced by [Tautulli](https://chocolatey.org/packages/tautulli)
 	</description>
-    <releaseNotes>https://github.com/JonnyWong16/plexpy/releases</releaseNotes>
     <dependencies>
-       <dependency id="python2" version="" />
+       <dependency id="tautulli" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+  <files />
 </package>
