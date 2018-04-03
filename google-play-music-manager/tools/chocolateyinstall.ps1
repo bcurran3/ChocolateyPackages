@@ -1,7 +1,7 @@
 ﻿$packageName    = 'google-play-music-manager' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://dl.google.com/androidjumper/win/musicmanagerinstaller.exe'
-$checksum       = '6A06D4094B76F3FFCAF7B2D06A16285E842F4F329AFC53BB1D383CD3CB155DE9'
+$checksum       = 'A267CA8DD5CC654C23771C89C26AE3CC713F9C6F82110A977037D801E5C40B62'
 $validExitCodes = @(0)
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "GPMMinstall.ahk"
