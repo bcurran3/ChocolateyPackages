@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'duplicati.portable'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/duplicati/duplicati/releases/download/v2.0.2.1-2.0.2.1_beta_2017-08-01/duplicati-2.0.2.1_beta_2017-08-01.zip' 
-$checksum       = 'E37D126296024A5FAE48FDC9896C97A334EEEB6B008A970AA0E1632BC13C77B0'
+$url            = 'https://github.com/duplicati/duplicati/releases/download/v2.0.3.3-2.0.3.3_beta_2018-04-02/duplicati-2.0.3.3_beta_2018-04-02.zip' 
+$checksum       = '492635C8669E7C1538A35460F2C1F5E2739244C2E8CEFF22A3E5F72997D66A7E'
 $validExitCodes = @(0)
 
 

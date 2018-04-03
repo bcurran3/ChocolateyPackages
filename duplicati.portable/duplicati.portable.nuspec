@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>duplicati.portable</id>
-    <version>2.0.2.1</version>
+    <version>2.0.3.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/duplicati.portable</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Duplicati (Portable)</title>
@@ -73,7 +73,7 @@ Duplicati was designed for online backups from scratch. It is not only data effi
 ###Web-based user interface
 Duplicati is configured by a web interface that runs in any browser (even mobile) and can be accessed - if you like - from anywhere. This also allows to run Duplicati on headless machines like a NAS (network attached storage).	
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/duplicati.portable/README.MD)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/duplicati.portable/readme.md)**
 	</description>
     <releaseNotes>https://github.com/duplicati/duplicati/blob/master/changelog.txt</releaseNotes>
     <dependencies>
