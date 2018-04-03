@@ -1,14 +1,16 @@
 ﻿$packageName = 'netstat-viewer' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url = 'http://www.misec.net/products/NetstatViewer.zip'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = "$toolsDir\NetstatViewer.exe"
+$checksum    = '6F50259DA1C39581BD5910ED54752B0C8FA4600C7C2F8CDF337E9276B7FAA478'
+$checksumType   = 'sha256'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'ZIP' 
   url           = $url
-  checksum      = '6DB608C6E6628979431613F7DAFF65DA1AD2F2D1A46AC89B7B7199C216075CC4'
-  checksumType  = 'sha256' 
+  checksum      = $checksum
+  checksumType  = $checksumType
 }
 
 Install-ChocolateyZipPackage @packageArgs

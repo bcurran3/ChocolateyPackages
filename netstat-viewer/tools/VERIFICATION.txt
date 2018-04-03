@@ -1,0 +1,5 @@
+﻿==================== Netstat Viewer ====================
+
+bcurran3, the packager, downloaded the Netstat Viewer program from http://www.misec.net/products/NetstatViewer.zip and directly packaged the executable into this Chocolatey package.  NetstatViewer.exe has a sha256 checksum of 6F50259DA1C39581BD5910ED54752B0C8FA4600C7C2F8CDF337E9276B7FAA478
+
+==================== Netstat Viewer ====================

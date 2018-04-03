@@ -1,0 +1,15 @@
+﻿==================== Netstat Viewer ====================
+
+Mischel Internet Security's website is no longer online.
+
+netstat-viewer was previously availabe for download from the developer's site at http://www.misec.net/freeware/ and the link was http://www.misec.net/products/NetstatViewer.zip from which BCURRAN3, the packager, downloaded it from.
+
+Please make note of the "/freeware" - it is 100% my belief that the program was intended to be freely re-distributable.
+
+Netstat Viewer is still downloadable from:
+Major Geeks - http://www.majorgeeks.com/files/details/netstat_viewer.html
+softonic - https://netstat-viewer.en.softonic.com/
+Softpedia - http://www.softpedia.com/get/Network-Tools/Network-Information/Netstat-Viewer.shtml
+
+
+==================== Netstat Viewer ====================
