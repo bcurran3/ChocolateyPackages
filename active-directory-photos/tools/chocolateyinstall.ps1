@@ -2,7 +2,7 @@
 $packageName    = 'active-directory-photos' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://www.codetwo.com/downloads/C2ADPhotosSetupEN.exe'
-$checksum       = 'B9CEC8CE93228887BCEA0D2BC632C9376AA87C06E4EA7B85F75E087F773823C7'
+$checksum       = 'FA8E33F424A1BE4D68A53E9056D740297C3A7BCE4A4D2826A2466693D250EB9F'
 $silentArgs     = ''
 $validExitCodes = @(0)
 $ahkExe         = 'AutoHotKey'

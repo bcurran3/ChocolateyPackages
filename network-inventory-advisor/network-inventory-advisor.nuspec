@@ -4,7 +4,7 @@
   <metadata>
     <id>network-inventory-advisor</id>
     <title>Network Inventory Advisor (Install)</title>
-    <version>5.0.106</version>
+    <version>5.0.127</version>
     <authors>ClearApps</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/network-inventory-advisor</packageSourceUrl>	

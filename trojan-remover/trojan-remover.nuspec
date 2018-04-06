@@ -4,7 +4,7 @@
   <metadata>
     <id>trojan-remover</id>
     <title>Trojan Remover (Install)</title>
-    <version>6.9.5.2954</version>
+    <version>6.9.5.2956</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trojan-remover</packageSourceUrl>		
     <authors>Simply Super Software</authors>
     <owners>bcurran3</owners>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snort</id>
-    <version>2.9.11</version>
+    <version>2.9.11.1</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snort</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Snort (Install)</title>

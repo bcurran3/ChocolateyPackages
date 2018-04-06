@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>moboplay</id>
-    <version>3.0.6.339</version>
+    <version>3.0.6.355</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/moboplay</packageSourceUrl>
     <title>MoboPlay (Install)</title>

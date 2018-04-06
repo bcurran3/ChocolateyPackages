@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>autobootdisk</id>
-    <version>5.5</version>
+    <version>5.7</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/autobootdisk</packageSourceUrl>		
     <title>AutoBootDisk (Install)</title>
     <authors>EvilSourcerer/bluskript</authors>
-    <projectUrl>https://bluskript.wixsite.com/autobootdisk</projectUrl>
+    <projectUrl>https://www.simpodex.com/autobootdisk.php</projectUrl>
 	<iconUrl>https://static.wixstatic.com/media/e32f91_d682104e1540477694df191c63c796fd~mv2.png</iconUrl>
     <copyright>© BY AUTOBOOTDISK</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

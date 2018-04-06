@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dcplusplus.portable</id>
-    <version>0.867</version>
+    <version>0.867.0020180405</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dcplusplus.portable</packageSourceUrl>
     <title>DC++ (Portable)</title>

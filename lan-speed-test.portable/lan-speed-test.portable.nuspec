@@ -4,7 +4,7 @@
   <metadata>
     <id>lan-speed-test.portable</id>
     <title>LAN Speed Test (Portable)</title>
-    <version>4.0</version>
+    <version>4.1</version>
     <authors>TotuSoft</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/lan-speed-test.portable</packageSourceUrl>	
@@ -63,6 +63,7 @@ LAN Speed Test was designed from the ground up to be a simple but powerful tool 
   
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/lan-speed-test.portable/readme.md)**  
     </description>
+	<releaseNotes>https://totusoft.com/lanspeed_history</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

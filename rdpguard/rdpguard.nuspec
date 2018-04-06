@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>rdpguard</id>
-    <version>4.8.9</version>
+    <version>5.2.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/rdpguard</packageSourceUrl>
     <title>RdpGuard (Install)</title>
@@ -14,7 +14,7 @@
     <licenseUrl>http://netsdk.com/terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://rdpguard.com/help.aspx</docsUrl>
-    <tags>netsdk rdpguard server security rdp sql ftp smtp iis mysql mssql ms-sql rd intrusion prevention trial admin</tags>
+    <tags>netsdk rdpguard server security rdp sql ftp smtp iis mysql mssql ms-sql rd intrusion prevention trial</tags>
     <summary>RdpGuard - Intrusion prevention system for your Windows Server</summary>
     <description>
 ![Screenshot of RdpGuard](https://rdpguard.com/images/index-screenshot.png)	
