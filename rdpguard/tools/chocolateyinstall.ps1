@@ -1,7 +1,7 @@
 ﻿$packageName    = 'rdpguard'
 $installerType  = 'exe'
-$url            = 'https://rdpguard.com/download/rdpguard-4-8-9.exe'
-$checksum       = 'A32A76F268B273C0B25A0E6FD2235DED69FF15E04BA00310450949D2228CB35A'
+$url            = 'https://rdpguard.com/download/rdpguard-5-2-3.exe'
+$checksum       = '4C009A6362FF29CA950D68EF2B40CFEF9131727744C3E065D749D0DFA631795F'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $validExitCodes = @(0)

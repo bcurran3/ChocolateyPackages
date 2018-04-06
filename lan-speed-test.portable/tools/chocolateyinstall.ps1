@@ -2,7 +2,7 @@
 $packageName  = 'lan-speed-test.portable'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.totusoft.com/files/LAN_SpeedTestPortable.zip'
-$checksum     = 'E1731799ED0B162BC043DADD87A81392657FBBABAAA879B7BD11996FC48C32F3'
+$checksum     = '7E6589CC0C9AA38B73A082E07363F60044166638ECF06891CCF7FDD4DCFE8095'
 $shortcutName = 'LAN Speed Test.lnk'
 $portableEXE  = "$toolsDir\LAN_SpeedTestPortable.exe";
 
