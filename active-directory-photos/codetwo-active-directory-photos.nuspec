@@ -4,7 +4,7 @@
   <metadata>
     <id>active-directory-photos</id>
     <title>CodeTwo Active Directory Photos (free) (Install)</title>
-    <version>1.2.1.020180101</version>
+    <version>1.3.1.0</version>
     <authors>CodeTwo</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/active-directory-photos</packageSourceUrl>

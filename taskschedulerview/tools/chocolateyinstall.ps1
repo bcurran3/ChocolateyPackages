@@ -1,9 +1,9 @@
 ﻿$packageName  = 'taskschedulerview' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.nirsoft.net/utils/taskschedulerview.zip'
-$checksum     = '0451676F8817C9B7A451A30FAB5C6258E6CA7F95CE36BCE6B095CE20964ED1F0'
+$checksum     = '052E1FFE2C9A3C80772371F2968A3146460195BF28C4BA93686BECEECB09A89F'
 $url64        = 'http://www.nirsoft.net/utils/taskschedulerview-x64.zip'
-$checksum64   = '0195190A1EF2F2700576FBDBF676064531FD94790803780065CDD2D89FD44F71'
+$checksum64   = 'B8E81B34EAD02C123619944982964AEFCC9C905E9A659170BE6398D5DD5A44FD'
 $shortcutName = 'TaskSchedulerView.lnk'
 $exe          = 'TaskSchedulerView.exe'
 

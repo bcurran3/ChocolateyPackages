@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskschedulerview</id>
-    <version>1.36</version>
+    <version>1.40</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskschedulerview</packageSourceUrl>
     <title>TaskSchedulerView (Portable)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</projectUrl>
-    <iconUrl>http://www.nirsoft.net/utils/taskschedulerview_icon.png</iconUrl>
+    <iconUrl>https://www.nirsoft.net/utils/taskschedulerview_icon.png</iconUrl>
     <copyright>Copyright Nir Sofer</copyright>
     <licenseUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
