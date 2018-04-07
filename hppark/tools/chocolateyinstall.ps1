@@ -1,9 +1,9 @@
 ﻿$packageName  = 'hppark' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'http://ftp.hp.com/pub/softlib/software13/COL40860/ds-99433-20/PARK-v1.8.3.zip'
-$checksum     = '18FE778B8AF633FE3A877E3CE4CE24EA78A41D101505D197FD2389B85BCD3C2E'
+$url          = 'http://ftp.hp.com/pub/softlib/software13/COL40860/ds-99433-21/PARK-v1.8.4.zip'
+$checksum     = '446389DF54FB24EC138E05303AAB5C4FD54D9DD8236DEE65F882C8A058438883'
 $shortcutName = 'HP PARK.lnk'
-$folder       = 'HP PARK-v1.8.3'
+$folder       = 'HP PARK-v1.8.4'
 
 $packageArgs = @{
   packageName   = $packageName
