@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>google-play-music-chrome</id>
+    <version>1.390.0</version>
+    <title>Google Play Music for Chrome</title>
+    <authors>google.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-play-music-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/google-play-music/fahmaaghhglfmonjliepjlchgpgfmobi</projectUrl>
+    <iconUrl>https://images.androidcrew.com/com.google.android.music-logo.png</iconUrl>
+    <licenseUrl>https://play.google.com/about/play-terms.html</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of GooglePlay Music for Chrome](https://lh3.googleusercontent.com/hR24eLUjO0gVzi-0Cp2sSz9Sgm9_Pi-iB4Qn1HjYKrAHD5LVegu4WbREUzDJ3oooqW-2nJN5-Q=w640-h400-e365)
+	
+##Google Play Music for Chrome
+
+Google Play Music for Chrome is a free app that adds features to Google Play Music on the web. 
+
+* Add your iTunes® music to Google Play
+* Easily upload new songs with drag and drop
+* Download free and purchased songs
+* Control playback with the mini player
+
+Add the app then visit play.google.com/music to get started.
+
+Google Play Music gives you just the right music at just the right time. Instantly start stations based on the artists and genres you love (available for free in the United States and Canada). Subscribe to access 35 million songs ad-free, listen to music offline, and get access to YouTube Red (United States only; see www.youtube.com/red for details).
+
+Free features:
+* Radio for anything you want to hear (free in the U.S. and Canada; requires subscription elsewhere)
+* Upload up to 50,000 songs from your personal music collection
+* Smart recommendations based on your taste
+* Listen on Android, iOS, and the web
+
+Subscription features:
+* The family plan, where up to six family members can enjoy Google Play Music for one low price (see availability here)
+* Ad-free, uninterrupted listening 
+* On-demand access to over 35 million songs 
+* Download music and listen when you're offline 
+* YouTube Red membership (U.S. only; see www.youtube.com/red for details)	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-play-music-chrome/readme.md)**
+	</description>
+    <summary>Google Play Music for Chrome is a free app that adds features to Google Play Music on the web.</summary>
+    <tags>google play music chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
