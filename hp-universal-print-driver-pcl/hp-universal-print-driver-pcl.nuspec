@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hp-universal-print-driver-pcl</id>
-    <version>6.5.0.22695</version>
+    <version>6.6.0.23029</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hp-universal-print-driver-pcl</packageSourceUrl>
     <title>HP Universal Print Driver for Windows PCL (Install)</title>
