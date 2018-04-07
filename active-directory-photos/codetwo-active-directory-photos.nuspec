@@ -46,7 +46,7 @@ You may need to add photographs to Active Directory to show them in internal Out
 * If the program doesn't work after upgrading to Windows 10 from Windows 7 or 8.1, you need to reinstall it.
 
 ####Requires
-.NET Framework 2.0
+.NET Framework 4.5
 Access to Active Directory Domain Services
 
 on Windows 10 / 8 / Windows Server 2012: Install .NET Framework 3.5 manually via Turn Windows features on or off in Control Panel
@@ -54,7 +54,7 @@ on Windows 10 / 8 / Windows Server 2012: Install .NET Framework 3.5 manually via
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/active-directory-photos/readme.md)**
     </description>
     <dependencies>
-      <dependency id="dotnet3.5" />
+      <dependency id="dotnet4.5" />
       <dependency id="autohotkey" />	  
     </dependencies>
     <releaseNotes>http://www.codetwo.com/freeware/active-directory-photos-version-history</releaseNotes>
