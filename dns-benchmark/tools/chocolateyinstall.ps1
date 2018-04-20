@@ -9,7 +9,7 @@ $packageArgs = @{
   url           = $url
   FileFullPath  = $installerPackage
   softwareName  = ''
-  checksum      = '0BAF546D6AC9FD853B11CBA89D3F314CA3FF0CA791224AA0753F0441A396DBE7'
+  checksum      = 'C03D23B734567A3DEBA88FC58CF721F5233E9C958F03268D72984A2BF9AC48A5'
   checksumType  = 'sha256'
 }
 
