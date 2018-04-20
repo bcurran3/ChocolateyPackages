@@ -13,7 +13,7 @@ $packageArgs = @{
   url           = $url
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
-  softwareName  = 'VMware Tools'
+  softwareName  = 'VMware vSphere Client 6*'
   checksum      = $checksum 
   checksumType  = 'sha256' 
 }
