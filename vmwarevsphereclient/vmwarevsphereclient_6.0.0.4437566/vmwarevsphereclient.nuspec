@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vmwarevsphereclient</id>
-    <version>6.0.0.5112508</version>
+    <version>6.0.0.4437566</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmwarevsphereclient/vmwarevsphereclient_6.0.0.5112508</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmwarevsphereclient/vmwarevsphereclient_6.0.0.4437566</packageSourceUrl>	
     <title>VMware vSphere Client</title>
     <authors>VMware, Inc.</authors>
     <projectUrl>https://www.vmware.com/products/vsphere/</projectUrl>
@@ -16,7 +16,7 @@
     <tags>vmware vsphere client virtual machine virtualization esxi</tags>	
     <summary>VMware vShere Client - Manage virtual infrastructure</summary>	
     <description>
-(VMware vSphere Client 6.0 Update 3)
+(VMware vSphere Client 6.0 Update 2a)	
 ![Screenshot of VMware vSphere Client](https://pubs.vmware.com/vsphere-4-esxi-installable-vcenter/topic/com.vmware.vsphere.gsinstallable.doc_40/getting_started/images/Host_welcome.png)	
 
 ##The vSphere Client is the principal interface for administering vCenter Server and ESXi.
@@ -31,7 +31,7 @@ When you first log in to the vSphere Client, it displays a Home page with icons 
 
 You perform many management tasks from the Inventory view, which consists of a single window containing a menu bar, a navigation bar, a toolbar, a status bar, a panel section, and pop-up menus.
 	
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmwarevsphereclient/vmwarevsphereclient_6.0.0.5112508/readme.md)**	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmwarevsphereclient/vmwarevsphereclient_6.0.0.4437566/readme.md)**	
 	</description>
     <releaseNotes>https://docs.vmware.com/en/VMware-vSphere/6.0/rn/vsphere-vcenter-server-60u3-release-notes.html</releaseNotes>
     <dependencies>
