@@ -1,9 +1,9 @@
 ﻿$packageName    = 'intel-network-drivers-win10' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = '0E706B84E64E0DF78593CB3ACD0297C17B40703C49EA5DDF01582316ACE5E7B9'
+$checksum       = '16095E66C7991085129B7045C4211955D927041F9B632B88EA53FE10240309FA'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = 'C81473B326CD82032353A9133A95D04FB7F32E49912BC68C20E7249DBD8C5108'
+$checksum64     = '0910834F19EE4C446756BCE3FFEF92521E43B76FB60831AE9C9AFC2E6864BD67'
 $silentArgs     = '/qn'
 $validExitCodes = @(0)
 $unzipLocation  = "$toolsDir\unzippedfiles"

@@ -4,7 +4,7 @@
   <metadata>
     <id>dns-benchmark</id>
     <title>DNS Benchmark</title>
-    <version>1.2.3925.20161106</version>
+    <version>1.3.6668.0</version>
     <authors>Steve Gibson</authors>
     <owners>bcurran3</owners>
     <summary>Domain Name Speed Benchmark</summary>
@@ -23,12 +23,11 @@ Once the benchmark finishes, the results are heuristically and statistically ana
 ####NOTE: This will download the program and make an icon on your desktop. It does not actually "install."
     </description>
     <projectUrl>https://www.grc.com/dns/benchmark.htm</projectUrl>
-    <tags>domain name server dns speed benchmark steve gibson</tags>
+    <tags>domain name server dns speed benchmark steve gibson portable</tags>
     <copyright>Copyright (c) by Gibson Research Corp.</copyright>
     <docsUrl>https://www.grc.com/dns/benchmark.htm</docsUrl>
     <iconUrl>https://www.grc.com/dns/dns-icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <releaseNotes>added checksums and screenshot</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
