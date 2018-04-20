@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>windows-defender-browser-protection-chrome</id>
+    <version>1.62</version>
+    <title>Windows Defender Browser Protection for Chrome</title>
+    <authors>Microsoft</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-defender-browser-protection-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/windows-defender-browser/bkbeeeffjjeopflfhgeknacdieedcoml</projectUrl>
+    <iconUrl>https://browserprotection.microsoft.com/img/WindowsDefenderLogo_White.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Windows Defender Browser Protection for Chrome](https://lh3.googleusercontent.com/isYGcP3WRpwRuvMGI4-2-Aa7rZhNyTlrXj57eeImve8nIwIJWQO36ffEtYQhcbJikPYQkZnJbQ=w640-h400-e365)	
+	
+##Protect yourself against online threats, like phishing and malicious websites, with real-time protection from Microsoft.
+
+The Windows Defender Browser Protection extension helps protect you against online threats, such as links in phishing emails and websites designed to trick you into downloading and installing malicious software that can harm your computer. 
+
+If you click a malicious link in an email or navigate to a site designed to trick you into disclosing financial, personal or other sensitive information, or a website that hosts malware, Windows Defender Browser Protection will check it against a constantly updated list of malicious URLs known to Microsoft. 
+
+If the malicious link matches one on the list, Windows Defender Browser Protection will show a red warning screen letting you know that the web page you are about to visit is known to be harmful, giving you a clear path back to safety with one click.	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-defender-browser-protection-chrome/readme.md)**
+	</description>
+    <summary>Windows Defender Browser Protection - Protect yourself against online threats, like phishing and malicious websites, with real-time protection from Microsoft.</summary>
+    <tags>microsoft defender malware protection chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

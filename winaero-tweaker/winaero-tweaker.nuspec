@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winaero-tweaker</id>
-    <version>0.9.0.0</version>
+    <version>0.10.1.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winaero-tweaker</packageSourceUrl>
     <title>Winaero Tweaker (Install)</title>
@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://winaero.com/blog/winaero-tweaker-faq/</docsUrl>
     <bugTrackerUrl>http://winaero.com/comment.php?comment.news.1836</bugTrackerUrl>
-    <tags>winaero tweaker windows aero system utility admin</tags>
+    <tags>winaero tweaker windows aero system utility</tags>
     <summary>Winaero Tweaker allows you to customize the appearance and behavior of the operating system in a flexible way.</summary>
     <description>
 ![Screenshot of Winaero Tweaker](http://winaero.com/blog/wp-content/uploads/2017/03/Winaero-Tweaker-07-600x463.png)
@@ -23,7 +23,7 @@ After years of development, I decided to release an all-in-one application which
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winaero-tweaker/readme.md)**
 	</description>
-    <releaseNotes>http://winaero.com/blog/winaero-tweaker-0-8-is-out/</releaseNotes>
+    <releaseNotes>https://winaero.com/blog/winaero-tweaker-0-10-1-is-out/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

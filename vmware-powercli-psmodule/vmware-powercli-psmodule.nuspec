@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vmware-powercli-psmodule</id>
-    <version>6.5.4.7155375</version>
+    <version>10.0.0.7895300</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli-psmodule</packageSourceUrl>
     <title>VMware.PowerCLI (Install)</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://www.powershellgallery.com/packages/VMware.PowerCLI</projectUrl>
     <iconUrl>https://www.powershellgallery.com/Content/Images/PackageDefaultIcon.png</iconUrl>
     <copyright>Copyright (c) VMware, Inc. All rights reserved.</copyright>
-	<docsUrl>https://vdc-download.vmware.com/vmwb-repository/dcr-public/3e9ef3df-a143-455a-ba66-dc27bde2bcf3/ff8bc014-f7bd-4569-9336-94b4ce2311a3/vmware-powercli-654-user-guide.pdf</docsUrl>
+	<docsUrl>https://vdc-download.vmware.com/vmwb-repository/dcr-public/b34705db-95be-4221-8afd-300c9398532c/e93e6337-ccb3-42f8-9325-e01f43c8eb67/vmware-powercli-10-user-guide.pdf</docsUrl>
 	<mailingListUrl>https://code.vmware.com/forums/2530/vmware-powercli</mailingListUrl>
     <licenseUrl>https://www.vmware.com/help/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,7 +22,7 @@ VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-powercli-psmodule/readme.md)**
 	</description>
-	<releaseNotes>https://vdc-download.vmware.com/vmwb-repository/dcr-public/712f3bf9-7970-4198-95db-9a224340712c/f5b5a818-5f8b-4beb-b78c-ca07b16cc87e/vmware-powercli-654-release-notes.html</releaseNotes>
+	<releaseNotes>https://vdc-download.vmware.com/vmwb-repository/dcr-public/3cef45f8-7dc2-4c28-bbd7-0a44f24ac0d7/105db27d-5ef8-4044-b047-2e6cd3b32584/vmware-powercli-10-release-notes.html</releaseNotes>
     <dependencies>
 	  <dependency id="dotnet4.5" />
       <dependency id="powershell" version="5.0" />
