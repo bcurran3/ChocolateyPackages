@@ -2,8 +2,8 @@
 # https://kb.vmware.com/s/article/2089791
 $packageName    = 'vmwarevsphereclient' 
 $installerType  = 'exe' 
-$url            = 'http://vsphereclient.vmware.com/vsphereclient/4/4/3/7/5/6/6/VMware-viclient-all-6.0.0-4437566.exe'
-$checksum       = '2DBD83683479D573098A654F2BF7472D7C2B9953CE8789DAA45D389999C4E1BC'
+$url            = 'http://vsphereclient.vmware.com/vsphereclient/3/0/1/6/4/4/7/VMware-viclient-all-6.0.0-3016447.exe'
+$checksum       = '83C7B8A5B7647FBEE4AC222AB3EB5910C87062657C0D6A6582FBC8156FF25FA5'
 $silentArgs     = '/s /w /v" /qb"' 
 $validExitCodes = @(0) 
 
