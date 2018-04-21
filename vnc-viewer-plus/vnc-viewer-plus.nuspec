@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-viewer-plus</id>
-    <version>1.2.10</version>
+    <version>1.2.11</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer-plus</packageSourceUrl>
     <title>VNC Viewer Plus (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.realvnc.com/docs/</docsUrl>
     <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
-    <tags>realvnc vnc connect viewer plus remote control trial admin</tags>
+    <tags>realvnc vnc connect viewer plus remote control trial</tags>
     <summary>VNC Viewer Plus is used to remote control RealVNC and VNC Connect hosts.</summary>
     <description>
 ![Screen shot of VNC Viewer](https://www.realvnc.com/docs/_images/faq-get-connected.png)

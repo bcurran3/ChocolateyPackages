@@ -4,14 +4,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>22.0.36.0</version>
+    <version>22.0.41.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
     <authors>JP Software</authors>
     <iconUrl>https://jpsoft.com/images/take-command.png</iconUrl>
-    <projectUrl>https://jpsoft.com/</projectUrl>
-    <copyright>Copyright © 2017 JP Software, All Rights Reserved</copyright>
+    <projectUrl>https://jpsoft.com/products/take-command.html</projectUrl>
+    <copyright>Copyright © JP Software, All Rights Reserved</copyright>
     <licenseUrl>https://jpsoft.com/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://jpsoft.com/help/index.htm?overview.htm</docsUrl>

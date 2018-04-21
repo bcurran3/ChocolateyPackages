@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>6.96</version>
+    <version>6.99.2</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg</authors>
     <copyright>by Nenad Hrg softwareok.de</copyright>	
@@ -34,6 +34,6 @@ Q-Dir allows you to save folder combinations as a favourite to open any time. Up
 	</description>
     <summary>The file management in Q-Dir is based on MS Windows Explorer but 4x plus Tabs and with more functionality!</summary>
     <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
-    <tags>qdir file manager managment explorer utility admin</tags>
+    <tags>qdir q-dir file manager managment explorer utility</tags>
   </metadata>
 </package>
