@@ -2,8 +2,8 @@
 $softwareName   = 'Windows Driver Package - Era software*'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://www.winflector.com/store/free-version/index/id/289' 
-$checksum       = 'FF74FC3B2C7A3CDF8463E7C491F78033402015536DB496D360BF920B197D1C45'
+$url            = 'https://www.winflector.com/store/free-version/index/id/349' 
+$checksum       = '18C3AC5E6E311ED42D4324281EAFA1143089F2DE16D02EBC862A30135AD49172'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0, 3010, 1641)
 

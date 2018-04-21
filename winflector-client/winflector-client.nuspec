@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winflector-client</id>
-    <version>3.9.4.05</version>
+    <version>3.9.4.9</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winflector-client</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Winflector Client / Winflector Virtual Terminal(Install)</title>
@@ -16,8 +16,8 @@
     <docsUrl>http://www.winflector.com/english/support/documentation_s.html</docsUrl>
     <mailingListUrl>https://www.winflector.com/store/forum</mailingListUrl>
     <bugTrackerUrl>http://www.winflector.com/english/support/versions.html</bugTrackerUrl>
-    <tags>winflector remote application execution server rdp admin</tags>
-    <summary>otc server for remote application execution client admin</summary>
+    <tags>winflector remote application execution terminal server rdp</tags>
+    <summary>Winflector terminal software client</summary>
     <description>
 ![Screenshot of Winflector](http://www.winflector.com/uploads/images/Gallery/Sv_add_user_EN/3580/sv_003.png)
 
@@ -43,9 +43,9 @@ This is a fully functional version of Winflector software for two concurrent wor
 
 [Winflector Server](https://chocolatey.org/packages/winflector)
 
-PACKAGING NOTE: Uninstall from Control Panel.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winflector-client/readme.md)**
 	</description>
-    <releaseNotes>Switched to their published version number instead of actual program number.</releaseNotes>
+    <releaseNotes>http://www.winflector.com/english/support/versions.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

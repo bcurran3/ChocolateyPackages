@@ -4,7 +4,7 @@
   <metadata>
     <id>drivermax</id>
     <title>DriverMax (Install)</title>
-    <version>9.41.0.273</version>
+    <version>9.43.0.280</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>			
     <authors>Innovative Solutions</authors>
     <owners>bcurran3</owners>
@@ -49,4 +49,7 @@ DriverMax automatically tests each new driver before installing it on your PC, e
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.drivermax.com/images/dmax.png</iconUrl>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>

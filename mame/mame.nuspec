@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mame</id>
-    <version>0.191</version>
+    <version>0.196</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mame</packageSourceUrl>
     <title>MAME (Portable)</title>
     <authors>hundreds of developers</authors>
     <projectUrl>http://mamedev.org/</projectUrl>
-    <iconUrl>http://mamedev.org/MAMELogoTMSmall.jpg</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mame/mame_icon.png</iconUrl>
     <copyright>hundreds of developers</copyright>
     <licenseUrl>http://mamedev.org/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

@@ -1,9 +1,9 @@
 ﻿$packageName  = 'browseraddonsview' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.nirsoft.net/utils/browseraddonsview.zip'
-$checksum     = 'E5FAFC16FBF2467473D861E510E1F3777E8553DACEF4EFE621FF6F2EBD7D3980'
+$checksum     = '06DEB3A5B082DF68F2AEC330AD59D10D7210440ED63519FDC0A9A1F319E6B547'
 $url64        = 'http://www.nirsoft.net/utils/browseraddonsview-x64.zip'
-$checksum64   = '846A7B481403191CF2BEB10B48C9C6D59D5D2DC0829272F88B879694AA9F2246'
+$checksum64   = 'BF75AB6CF9E32EEF7B1C95EE166986B4B3D0359D2A7B7CEC844C1A6C09777E1D'
 $shortcutName = 'BrowserAddonsView.lnk'
 $exe          = 'BrowserAddonsView.exe'
 
