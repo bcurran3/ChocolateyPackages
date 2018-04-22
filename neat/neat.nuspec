@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>neat</id>
-    <version>5.4.1.273</version>
+    <version>5.7.1.474</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neat</packageSourceUrl>
     <title>Neat 5 for Windows (Install)</title>
