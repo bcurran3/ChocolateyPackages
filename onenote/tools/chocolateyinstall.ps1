@@ -1,9 +1,9 @@
 ﻿$packageName    = 'onenote'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.onenote.com/download/win32/x86/en-US' 
-$checksum       = 'BD64ECAD11EF2B8B53DD909DF876597BC4E10A6DDCF6B3BDE8AA408A3EAAA80B'
+$checksum       = '641C19E3B78E73F5B9229AD416B8284D15EA26B15CCC0FD374E0B24C3412CFBB'
 $url64          = 'https://www.onenote.com/download/win32/x64/en-US'
-$checksum64     = '123AC286F6B6008FF48A9971F5FBB63A6C2D54AFF6C294A30549B5BC9F1E94A2'
+$checksum64     = 'A75E2D54A20F042C7D7A78593596CF9AD5001F1F4E94A71A946AE157ECEDB947'
 $silentArgs     = ''
 $validExitCodes = @(0)
 
