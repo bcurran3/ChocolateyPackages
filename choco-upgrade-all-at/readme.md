@@ -6,7 +6,6 @@
 * I personally use and endorse this script/package/program/task/whatever-you-want-to-call-it.
 
 ROADMAP:
-* Add options for weekly and monthly instead of only daily.
 * Cancel task to stop after xxx minutes in event of a non-silent package getting "stuck"
 * Possibly drop the leading 0 required for times less than < 10:00 AM
 
@@ -18,7 +17,7 @@ Find them useful?
 
 https://www.paypal.me/bcurran3donations
 
-If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
+If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions. 
 
 
 

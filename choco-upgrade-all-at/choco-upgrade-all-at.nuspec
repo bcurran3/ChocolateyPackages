@@ -3,11 +3,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at</id>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</packageSourceUrl>
-    <title>(unofficial) choco upgrade all at (Task)</title>
+    <title>(unofficial) Choco Upgrade All at (Task)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-upgrade-all-at/choco-upgrade-all-at_logo.png</iconUrl>
@@ -15,29 +15,33 @@
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>unofficial choco upgrade all cup config schtasks scheduled task</tags>
+    <tags>bcurran3 unofficial choco upgrade all cup config schtasks scheduled task</tags>
     <summary>choco-upgrade-all-at will create a Windows Scheduled Task to upgrade your Chocolatey packages daily</summary>
     <description>
-#DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY DAY? 
+#DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY DAY? OR MAYBE EVERY WEEK?
 
 #YOU JUST FOUND THE EASY WAY!
 	
-###This package creates a Windows Scheduled Task to run "choco upgrade all -y" every day at a time that you specify
+###This package creates a Windows Scheduled Task to run "choco upgrade all -y" at a time and frequency you specify.
 
-
-If you don't specify a time, it defaults to midnight.
-
+This package is a pseudo replacement for [choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup).
 
 ###INSTRUCTIONS:
-You can set the time by running **choco install choco-upgrade-all-at --params "'/Time:XX:XX'"** where XX:XX equals the "Military Time" to run updates. You **must** enter four digits and the colon, i.e. enter a leading 0 for times less than 10 AM. Not entering the correct format will fail the install. Please see the examples.
+You can install **choco-upgrade-all-at** with multiple parameters to make it run "choco upgrade all -y" daily or weekly (Monthly is just not often enough!) at your preferred time. If you enter no parameters at all, **choco-upgrade-all-at** will default to run "choco upgrade all -y" at 2 AM every day. When entering the TIME parameter, use "[Military Time](http://militarytimechart.com/)." When entering the DAILY or WEEKLY parameter you can actually use anything, "yes" just makes sense though. When using the WEEKLY parameter, DAYS are entered as MON, TUE, WED, THU, FRI, SAT, or SUN. Not entering the correct format will fail the install. Please see the examples below.
 
 ###INSTALL EXAMPLES:
-* **choco install choco-upgrade-all-at --params "'/Time:04:00'"** - runs choco upgrade all at 4 AM
-* **choco install choco-upgrade-all-at --params "'/Time:06:30'"** - runs choco upgrade all at 6:30 AM
-* **choco install choco-upgrade-all-at --params "'/Time:21:00'"** - runs choco upgrade all at 9 PM
-* **choco install choco-upgrade-all-at --params "'/Time:23:30'"** - runs choco upgrade all at 11:30 PM
+* **choco install choco-upgrade-all-at --params "'/TIME:23:00'"** - runs choco upgrade all daily (default) at 11 PM
+* **choco install choco-upgrade-all-at --params "'/DAILY:yes /TIME:04:00'"** - runs choco upgrade all daily at 4 AM
+* **choco install choco-upgrade-all-at --params "'/WEEKLY:yes /DAY:SUN /TIME:01:00'"** - runs choco upgrade all every Sunday at 1 AM.
 
-If you have a previous release of **choco-upgrade-all-at** installed, upgrading to a new version will NOT modify your current scheduled task or time.
+####A NOTE ON DEFAULTS:
+* If you don't specify any parameters, **choco-upgrade-all-at** defaults to running daily at 2AM. (My preference!)
+* Not specifying a time will always default to 2 AM.
+* When WEEKLY is specified but a DAY isn't, default first run will be a week from installation date; i.e. next week on whatever day of the week you installed the package.
+
+####IF UPGRADING FROM A PREVIOUS VERSION:
+* You're old scheduled task will be deleted and replaced with default (mentioned above) parameters. To ensure **choco-upgrade-all-at** runs when you want it to, you should uninstall and reinstall with the settings you prefer.
+* I have not tested with useRememberedArgumentsForUpgrades, you might get daily still with your preferred time.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at/readme.md)**
 	</description>
