@@ -1,37 +1,24 @@
 ﻿$packageName    = 'neat'
 $installerType  = 'exe'
-$url            = 'http://cdn.neatco.com/Neat_v5.4.1.273_FULL.sfx.exe'
-$checksum       = '6D204CDA1EEC58E4CFD3ACFE1739BF42855C08FC944F8E6EBE14F46239A1AD92'
+$url            = 'https://s3.amazonaws.com/legacy-installers/latest/Neat_v5.7.1.474_FULL.sfx.exe'
+$checksum       = '19E5C4A1351B948FA6E140AFEF8BD6C0A605BF41032DA5AFDF196E6E34979616'
 $silentArgs     = '/S'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0, 3010, 1641)
+$validExitCodes = @(0,1)
 $softwareName   = 'Neat*'
-$unzipLocation  = "$toolsDir\unzipped"
-$realInstaller  = "Neat v5.4.1 FULL.exe"
 
-New-Item $unzipLocation -type directory | out-null
-
-$packageArgs = @{
-  packageName    = $packageName
-  unzipLocation  = $unzipLocation
-  fileType       = 'ZIP' 
-  url            = $url
-  checksum       = $checksum
-  checksumType   = 'sha256'
-}
-
-Install-ChocolateyZipPackage @packageArgs 
 
 $packageArgs = @{
   packageName   = $packageName
-  fileType      = 'EXE'
-  file          = $unzipLocation + "\" + '$OUTDIR' + "\" + $realInstaller
-  silentArgs    = $silentArgs
+  unzipLocation = $toolsDir  
+  fileType      = $installerType
+  url           = $url
   validExitCodes= $validExitCodes
+  silentArgs    = $silentArgs
   softwareName  = $softwareName
+  checksum      = $checksum
+  checksumType  = 'sha256' 
 }
- 
-Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item $unzipLocation -recurse | out-null
+Install-ChocolateyPackage @packageArgs
 
