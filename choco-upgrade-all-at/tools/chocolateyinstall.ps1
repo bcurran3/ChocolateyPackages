@@ -12,7 +12,6 @@ $GotTask = (get-scheduledtask -TaskName choco-upgrade-all-at -ErrorAction Silent
 if ($GotTask -ne $null){
    Write-Host
    Write-Host Existing choco-upgrade-all-at scheduled task found. Keeping existing scheduled task. -foreground magenta -background blue
-   Write-Host Upgrading choco-upgrade-all-at Chocolatey package files only. -foreground magenta -background blue
    Write-Host If you want to change the task runtime, uninstall and reinstall the package. -foreground magenta -background blue
    exit
    }
@@ -20,11 +19,11 @@ if ($GotTask -ne $null){
 Write-Host "" 
 Write-Host "choco-upgrade-all-at Summary:" -foreground magenta
 
-if ($pp["Time"] -eq $null -or $pp["Time"] -eq ''){
+if ($pp["TIME"] -eq $null -or $pp["TIME"] -eq ''){
      Write-Host " * TIME NOT specified, defaulting to 02:00." -foreground magenta
 	 $RunTime = "02:00"
      } else {
-	   $RunTime = $pp["Time"]
+	   $RunTime = $pp["TIME"]
 	   Write-Host " * TIME specified as $RunTime." -foreground magenta
       } 
 
