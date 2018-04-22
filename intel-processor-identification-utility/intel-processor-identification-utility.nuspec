@@ -6,7 +6,7 @@
     <version>5.80.20171018</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-processor-identification-utility</packageSourceUrl>		
-    <title>Intel processor Identification Utility (Install)</title>
+    <title>Intel Processor Identification Utility (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://downloadcenter.intel.com/download/7838/Intel-Processor-Identification-Utility-Windows-Version</projectUrl>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>	
@@ -16,7 +16,7 @@
     <tags>intel cpu processor utility</tags>
     <summary>Displays information about your Intel processor.</summary>
     <description>
-![Screenshot of ]()
+![Screenshot of Intel Processor Identification Utility ](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-processor-identification-utility/intel-processor-identification-utility_screenshot.png)
 
 This utility identifies current Intel® Processors and technologies and enables you to run and save a processor ID report. The utility also features a frequency test to make sure that the processor is working at the tested and rated speed. [See processors recommended for this utility.](https://www.intel.com/content/www/us/en/support/articles/000005531.html)
 
