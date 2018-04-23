@@ -1,8 +1,8 @@
 ﻿#http://www.majorgeeks.com/mg/getmirror/win7codecs,1.html
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'advanced-codecs' 
-$url            = "$toolsDir\ADVANCED_Codecs_v890.exe"
-$checksum       = 'B85952D5BC545F417306DD5EE3D75F147B715252DD75DBD4B842F9980780E4A6'
+$url            = "$toolsDir\ADVANCED_Codecs_v1001.exe"
+$checksum       = '3869B4657E9BDBF6B9C9C480FAC39FE8109F90987CC510C41E6D658B0671356D'
 $installerType  = 'EXE'
 $silentArgs     = '/S /v/qn'
 $validExitCodes = @(0, 3010, 1641)

@@ -4,7 +4,7 @@
   <metadata>
     <id>ellp</id>
     <title>Ellp (Install)</title>
-    <version>1.4.1.1589</version>
+    <version>1.5.1.1611</version>
     <authors>Ellp Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ellp</packageSourceUrl>		
