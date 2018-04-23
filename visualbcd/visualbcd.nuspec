@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>visualbcd</id>
+    <version>0.9.3.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/visualbcd</packageSourceUrl>		
+    <title>Visual BCD (Install)</title>
+    <authors>BoYans</authors>
+    <projectUrl>https://www.boyans.net/</projectUrl>
+    <copyright>Copyright BoYans</copyright>
+	<licenseUrl>https://www.boyans.net/DownloadVisualBCD.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.boyans.net/VBCD_HowTo.html</docsUrl>
+	<mailingListUrl>https://www.boyans.net/forum.html</mailingListUrl>
+    <tags>boyans visual bcd editor boot manager uefi</tags>
+    <summary>Visual BCD Editor - graphical bcdedit utility for Windows 7 to Windows 10</summary>
+    <description>
+![Screenshot of Visual BCD](https://www.boyans.net/images/visual-bcdedit.png)
+
+##Visual BCD Editor - graphical bcdedit utility for Windows 7 to Windows 10
+
+* easy BCD edit
+* structured view of complete BCD
+* create and edit every BCD option
+ 
+
+Visual BCD Editor is an advanced graphical user interface (GUI) version of Windows bcdedit utility.
+
+It is the first GUI tool to implement full editing of Windows 7/Vista Boot Configuration Data (BCD) store.
+
+(For Windows 10/8.x on BIOS or UEFI we recommend version 0.9.0.1 of the tool as later versions can edit only objects which have a description element - boot manager and loader objects.)
+
+The tool gives a structured view of Windows BCD store with its explorer like interface and allows easy editing of all BCD objects and elements by novice or advanced users. The user can create, delete or edit every object like boot manager, loader or setting, add and remove elements with simple selections and clicks. [See short introduction to BCD objects and elements](https://www.boyans.net/VisualBCD_doc.htm).
+
+Visual BCD Editor allows complete editing of boot menu. Display order of loaders is only one characteristic. Windows 8 introduced graphical(metro) or text style boot menu which depends on numerous elements and other BCD tools hardly can edit all possible combinations of elements in boot manager, loader and settings objects which influence boot menu style. See details about [text or graphic style boot menu](https://www.boyans.net/BootMenuPolicy.html).
+
+Visual BCD Editor implements unique automatic creation of loaders for Windows 7/Vista/XP and VHD installations in dual or multi boot systems (since version 0.9.2 of the tool) and so is the ultimate Windows 7/Vista/XP dual/multi boot editor. Update of the tool will follow for this functionality to cover Windows 8.x and Windows 10 loaders.
+
+A boot sector loader (for booting Linux, Mint, Ubuntu, Fedora, Mac OS X) is created with one click but needs manual creation of one additional boot related file with corresponding MBR/PBR boot code for chain loading the non-Windows OS. In development is automatic creation of GRUB based loaders for Linux descendants like Mint, Ubuntu, Fedora.
+
+New in version 0.9.3 of the tool is handling of [Custom Bootstrap Actions - boot-time keyboard shortcuts to loaders](https://www.boyans.net/CustomActions.html) which allows activation of (eventually hidden) boot menu items on special keyboard keys from boot menu.
+
+Recommendation: Please read at least [Visual BCD - implementation notes and short introduction to BCD objects and elements](https://www.boyans.net/VisualBCD_doc.htm) if you don't have some BCD knowledge before manipulating BCD! There is a reason Microsoft made BCD accessible only with administrative rights. Be careful when manipulating BCD and have always an accessible BCD backup and recovery media ready! Everybody makes mistakes ;) - mistakes against BCD could make your system unbootable!
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/visualbcd/readme.md)**
+	</description>
+    <releaseNotes>https://www.boyans.net/ChangeLog.rtf</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

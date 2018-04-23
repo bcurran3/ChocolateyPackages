@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'drobo-dashboard' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.1.6.exe'
-$checksum    = 'D24325A9250E2E36A2FAE5EFD130DBEE2D65E2744CCCB1927D9ACBD6F8DC4F49'
+$url         = 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.2.0.exe'
+$checksum    = '5ECAC655CB6D5029F596F3C12C52184EEFBECDC80D0F7CC3E324748FBBDB35F6'
 $ahkExe      = 'AutoHotKey'
 $ahkFile     = Join-Path $toolsDir "DDinstall.ahk"
 
