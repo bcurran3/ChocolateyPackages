@@ -1,17 +1,18 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
+* Be sure to look at the companion package [choco-persistent-packages-abort](https://chocolatey.org/packages/choco-persistent-packages-abort).
 * If you have problems running this due to your Windows PowerShell Script Execution Policy, [ForcePS](https://chocolatey.org/packages/forceps) can make your life easier - but now you can just run from the Start menu!
 
 ROADMAP:
 * add an option to save date-packages.config for historical comparisons
-* Put the checking of save locations in a loop
 * Add other cloud services support by request
-* Add ability to use a different source other than the Chocolatey public repository
 * Create a scheduled task to run daily/weekly/monthly/whenever
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
+* 2018.04.24 - added [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages) support.
+* 2018.04.23 - now backups up packages automatically on install
 * 2018.02.24 - added Box and Seafile support as well as an icon to run from the Windows Start menu
 * 2018.02.12 - added Nextcloud support (thanks thomasaiman) and fixed TonidoSync (thanks thomasaiman)
 * 2018.01.29 - edited re-installation message, updated donation info :)

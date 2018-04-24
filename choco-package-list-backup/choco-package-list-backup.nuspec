@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2018.04.23</version>
+    <version>2018.04.24</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
@@ -43,6 +43,8 @@
 * more coming - Let me know what you want/need!
 
 **choco-package-list-backup.ps1** runs on install to make sure you have backup(s) right now! (new 2018-04-23)
+
+**choco-package-list-backup.ps1** supports backing up persistentpackages.config if you are using [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages) (new 2018-04-24)
 
 **choco-package-list-backup.ps1** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s). No confusion over what computer gets what packages!
 
