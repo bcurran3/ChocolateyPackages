@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-persistent-packages</id>
-    <version>2017.08.20.01</version>
+    <version>2018.04.23</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</packageSourceUrl>
-    <title>(unofficial) choco persistent packages (Task)</title>
+    <title>(unofficial) Choco Persistent Packages (Task)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-persistent-packages/choco-persistent-packages_icon.png</iconUrl>
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <copyright>public domain</copyright>
+    <copyright>Copyleft Bill Curran</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>unofficial bcurran3 choco persistent packages schtasks scheduled task</tags>
+    <tags>bcurran3 unofficial choco persistent packages schtasks scheduled task</tags>
     <summary>choco-persistent-packages will create a Windows Scheduled Task to upgrade your Chocolatey packages daily</summary>
     <description>
 **choco-persistent-packages** (re)installs any missing crucial Chocolatey packages that you designate as persistant packages. Uninstall a persistent package and it will be installed again ready for use the next day. 
@@ -55,7 +55,6 @@ If you have a previous release of **choco-persistent-packages** installed, upgra
     <releaseNotes>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages/readme.md</releaseNotes>	
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
-	  <dependency id="powershell" version="4.0" />
     </dependencies>
   </metadata>
   <files>

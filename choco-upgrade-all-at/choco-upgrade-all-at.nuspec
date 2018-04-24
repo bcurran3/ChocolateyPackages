@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at</id>
-    <version>0.0.4</version>
+    <version>0.0.4.1</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</packageSourceUrl>
@@ -48,7 +48,6 @@ You can install **choco-upgrade-all-at** with multiple parameters to make it run
 	</description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
-	  <dependency id="powershell" version="5.0" />
     </dependencies>
   </metadata>
   <files>

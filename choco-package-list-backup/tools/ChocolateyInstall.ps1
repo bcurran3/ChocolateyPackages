@@ -5,6 +5,8 @@ $shortcutName = 'Choco Package List Backup.lnk'
 
 Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force -ErrorAction 'SilentlyContinue'
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\choco-package-list-backup-manual.bat" -IconLocation "$toolsDir\choco-package-list-backup.ico" -RunAsAdmin
+Write-Host "Running choco-package-list-backup to create first-time backup(s)..." -foreground "magenta" 
+&powershell -NoProfile -ExecutionPolicy Bypass -Command "$env:ChocolateyInstall\bin\choco-package-list-backup.ps1"
 Write-Host "Edit $env:ChocolateyInstall\bin\$script to customize your backup(s)." -foreground "magenta" 
 Write-Host "TO BACKUP YOUR CHOCOLATEY PACKAGE LIST:" -foreground "magenta" 
 Write-Host "COMMAND PROMPT: POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1" -foreground "magenta" 

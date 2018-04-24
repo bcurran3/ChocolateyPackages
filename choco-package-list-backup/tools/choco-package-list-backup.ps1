@@ -4,10 +4,11 @@
 # ROADMAP:
 # Add ability to use a different source other than the Chocolatey public repository
 # Add other cloud services support by request
+# Add appended date/time option
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.02.24" # Version of this script
+$CPLBver        = "2018.04.23" # Version of this script
 $ConfigFile     = "packages.config"
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $SaveVersions   = "False" # Specify if you want to save specific version info or not

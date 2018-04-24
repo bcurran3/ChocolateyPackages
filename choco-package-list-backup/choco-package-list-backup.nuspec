@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2018.02.24</version>
+    <version>2018.04.23</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
@@ -20,7 +20,7 @@
     <description>
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
 	
-##choco-package-list-backup.ps1 solves your personal Chocolatey migration and package re-installation problems!
+#choco-package-list-backup.ps1 solves your Chocolatey migration and package re-installation problems!
 
 **choco-package-list-backup.ps1** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **choco-package-list-backup.ps1** backs up your package list locally and to multiple cloud services!
 
@@ -40,9 +40,11 @@
 * Seafile (new 2018-02-24)
 * TonidoSync
 * A custom location of your choice
-* more coming (let me know what you want/need)
+* more coming - Let me know what you want/need!
 
-**choco-package-list-backup.ps1** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s).
+**choco-package-list-backup.ps1** runs on install to make sure you have backup(s) right now! (new 2018-04-23)
+
+**choco-package-list-backup.ps1** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s). No confusion over what computer gets what packages!
 
 **choco-package-list-backup.ps1** is configurable. You can:
 
@@ -57,12 +59,12 @@
 
 **choco-package-list-backup.ps1** instructions:
 
-* Edit \ProgramData\chocolatey\bin\choco-package-list-backup.ps1 to customize your backup(s). (see comments in file)
+* Edit \ProgramData\chocolatey\bin\choco-package-list-backup.ps1 to customize your backup(s). It's easy, there are comments.
 * From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
 * From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
 * From Windows, click Choco Package List Backup in the Start menu (new 2018-02-24)
 
-**Use choco-package-list-backup.ps1 along with [ForcePS](https://chocolatey.org/packages/forceps) for easy execution and [InstChoco](https://chocolatey.org/packages/instchoco) for a complete backup and recovery solution of your Chocolatey packages.**
+###**Use choco-package-list-backup.ps1 along with [ForcePS](https://chocolatey.org/packages/forceps) for easy execution and [InstChoco](https://chocolatey.org/packages/instchoco) for a complete backup and recovery solution of your Chocolatey packages.**
 
 **If you find choco-package-list-backup.ps1 useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations**
 	
