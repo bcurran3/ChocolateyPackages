@@ -11,6 +11,7 @@ ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
+* 2018.04.24.01 - added ability to append the date to packages.config 
 * 2018.04.24 - added [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages) support.
 * 2018.04.23 - now backups up packages automatically on install
 * 2018.02.24 - added Box and Seafile support as well as an icon to run from the Windows Start menu

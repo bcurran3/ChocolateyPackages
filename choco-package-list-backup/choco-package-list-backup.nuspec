@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2018.04.24</version>
+    <version>2018.04.24.01</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
@@ -52,6 +52,7 @@
 
 * configure which locations you want or don't want to save to (default=all the locations found except the custom location)
 * configure to save package version information or not (default=False)
+* configure to append a date to the saved packages.config (default=False) (new 2018-04-24)
 * configure what subfolder to save to (default=ChocolateyPackageListBackup)
 * easily add a custom location by editing $CustomPath and $UseCustomPath in the script
 
