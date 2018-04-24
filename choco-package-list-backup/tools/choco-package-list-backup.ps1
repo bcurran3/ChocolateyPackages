@@ -8,7 +8,7 @@
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.04.23" # Version of this script
+$CPLBver        = "2018.04.24" # Version of this script
 $ConfigFile     = "packages.config"
 $SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
 $SaveVersions   = "False" # Specify if you want to save specific version info or not
@@ -39,6 +39,15 @@ Function Check-SaveLocation{
      }   
     }
 
+# Copy persistentpackages.config if it exists to the same location as packages.config
+Function Check-PPConfig{
+    $CheckPPSource = Test-Path $Env:ChocolateyInstall\config\persistentpackages.config
+	If ($CheckPPSource -match "True"){
+	   Copy-Item $Env:ChocolateyInstall\config\persistentpackages.config $SavePath -force | out-null
+	   Write-Host "$SavePath\persistentpackages.config SAVED!" -ForegroundColor green 
+    }
+  }
+	
 # Copy InstChoco.exe if it exists to the same location as packages.config for super duper easy re-installation
 Function Check-InstChoco{
     $CheckICSource = Test-Path $InstChoco
@@ -47,13 +56,18 @@ Function Check-InstChoco{
 	   If ($CheckICDest -match "False")
 	      {
 	       Copy-Item $InstChoco $SavePath -force | out-null
-	      }
+		   Write-Host "$SavePath\InstChoco.exe SAVED!" -ForegroundColor green 
+	      } else {
+# copying even if it already exists to ensure current version - may put flag in future InstChoco version to determine if upgraded
+		    Copy-Item $InstChoco $SavePath -force | out-null
 	   }
     }
-	
+  }
+
 # Write out the saved list of packages to packages.config
 Function Write-PackageConfig{ 
     Check-SaveLocation
+	Check-PPConfig
 	Check-InstChoco
     Write-Output "<?xml version=`"1.0`" encoding=`"utf-8`"?>" >"$SavePath\$ConfigFile"
     Write-Output "<packages>" >>"$SavePath\$ConfigFile"
@@ -67,7 +81,7 @@ Function Write-PackageConfig{
 	Write-Host "$SavePath\$ConfigFile SAVED!" -ForegroundColor green 
     }
 
-Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list locally and to the cloud -ForegroundColor white
+Write-Host "choco-package-list-backup.ps1 v$CPLBver" - backup Chocolatey package list(s) locally and to the cloud -ForegroundColor white
 Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 
 # Backup Chocolatey package names to packages.config file in custom defined path you set in $CustomPath above in line 16
@@ -156,11 +170,10 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
     Write-PackageConfig
    }
 
-     
-   
 Write-Host "TO RE-INSTALL YOUR CHOCOLATEY PACKAGES:" -ForegroundColor magenta 
 Write-Host "1> Go to the location of your saved PACKAGES.CONFIG file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
 Write-Host "2> Get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
 Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
+Start-Sleep -s 10
 
 
