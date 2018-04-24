@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-optimize-at</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</packageSourceUrl>
+    <title>(unofficial) Choco Optimize at (Task)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-optimize-at/choco-optimize-at_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 unofficial choco licensed c4b optimize schtasks scheduled task</tags>
+    <summary>choco-optimize-at will create a Windows Scheduled Task to optimize your Chocolatey packages daily</summary>
+    <description>
+##*choco-optimize-at** optimizes (reduces size of) downloaded Chocolatey packages (.nuspec files) to save some HDD space. 
+	
+This package creates a Windows Scheduled Task to run "choco optimize" at a time you specify. 
+
+###WHO IS THIS FOR?
+ **choco-optimize-at** is designed for [Chocolatey Pro](https://chocolatey.org/pricing) and [Chocolatey Business](https://chocolatey.org/pricing) licensed users who want to automate optimization of storage space used by their Chocolatey .nuspec files.
+
+
+###INSTRUCTIONS:
+You can install **choco-optimize-at** with multiple parameters to make it run "choco optimize" daily or weekly at your preferred time. If you enter no parameters at all, **choco-optimize-at** will default to run "choco optimize" at 5 AM every SUNDAY. When entering the TIME parameter, use "[Military Time](http://militarytimechart.com/)." When entering the DAILY or WEEKLY parameter you can actually use anything, "yes" just makes sense though. When using the WEEKLY parameter, DAYS are entered as MON, TUE, WED, THU, FRI, SAT, or SUN. Not entering the correct format will fail the install. Please see the examples below.
+
+###INSTALL EXAMPLES:
+* **choco install choco-optimize-at --params "'/TIME:23:00'"** - optimizes packages on SUNDAYS at 11 PM
+* **choco install choco-optimize-at --params "'/DAILY:yes /TIME:06:00'"** - optimizes packages daily at 6 AM
+* **choco install choco-optimize-at --params "'/WEEKLY:yes /DAY:SAT /TIME:01:00'"** - optimizes packages on SATURDAYS at 1 AM
+
+####A NOTE ON DEFAULTS:
+* If you don't specify any parameters, **choco-optimize-at** defaults to running daily at 5 AM. (My preference!) This default time was chosen to be compatible with with default run times used by **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)**, **[choco-upgrade-all-at-abort](https://chocolatey.org/packages/choco-upgrade-all-at-abort)**,  **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**, and **[choco-persistent-packages-abort](https://chocolatey.org/packages/choco-persistent-packages-abort)**.
+* Not specifying a time will always default to 5 AM.
+* When WEEKLY is specified but a DAY isn't, default first run will be a week from installation date; i.e. next week on whatever day of the week you installed the package.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-optimize-at/readme.md)**
+	</description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

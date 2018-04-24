@@ -16,7 +16,7 @@
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 unofficial choco persistent packages schtasks scheduled task</tags>
-    <summary>choco-persistent-packages-abort will </summary>
+    <summary>choco-persistent-packages-abort will stop possible hung child processes started by choco-persistent-packages</summary>
     <description>
 #IF YOU USE **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**, YOU WANT THIS TOO!
 
