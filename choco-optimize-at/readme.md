@@ -2,6 +2,7 @@
 
 * A BCURRAN3 original!
 * Read the INSTALL EXAMPLES again before use!
+* You MUST be a Chocolatey licensed customer or this package will abort install.
 * I personally use and endorse this script/package/program/task/whatever-you-want-to-call-it.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
