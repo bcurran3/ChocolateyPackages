@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-persistent-packages-abort</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages-abort</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages-abort</packageSourceUrl>
+    <title>(unofficial) Choco Persistent Packages Abort (Task)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages-abort</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-persistent-packages-abort/choco-persistent-packages-abort_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 unofficial choco persistent packages schtasks scheduled task</tags>
+    <summary>choco-persistent-packages-abort will </summary>
+    <description>
+#IF YOU USE **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**, YOU WANT THIS TOO!
+
+#...BECAUSE SOMETIMES PACKAGE INSTALLATIONS GO WRONG.
+
+This is a companion package for **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**.
+	
+This package creates a Windows Scheduled Task to run "taskkill /im choco.exe /f /t" at a time you specify. The command "taskkill /im choco.exe /f /t" will stop the Chocolatey (choco.exe) process and all child processes. 
+
+"Um, why do I want this?" you're thinking. You want this because sometimes background package installations go wrong. "Go wrong?" you're thinking. Yes, there are a couple scenarios where a Chocolatey package installation/upgrade can hang: if a package needs input, if an AutoHotKey or AutoIt script fails, and all those times a program installer pops up a browser window to tell you "Thank you." These scenarios leave hung processes in the background with no way for you to easily interact with them (They're in the background!). This means they are taking up memory resources for no reason and might cause problems installing other packages or programs. **If** you knew there was a hung process, you could manually stop the task, but who wants to check every day? This will automate checking and stopping any Chocolatey package hung tasks at the time you specify. I recommend setting it to a time an hour or two after you run **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**. 
+
+
+###INSTRUCTIONS:
+You can set the time by running **choco install choco-persistent-packages-abort --params "'/ABORTTIME:XX:XX'"** where XX:XX equals the ["Military Time"](http://militarytimechart.com/) to stop Chocolatey updates. Not entering the correct format will fail the install. Please see the examples.
+
+###INSTALL EXAMPLES:
+* **choco install choco-persistent-packages-abort --params "'/ABORTTIME:03:00'"** - stops persistent package (re)installs at 3 AM
+* **choco install choco-persistent-packages-abort --params "'/ABORTTIME:06:30'"** - stops persistent package (re)installs at 6:30 AM
+* **choco install choco-persistent-packages-abort --params "'/ABORTTIME:20:00'"** - stops persistent package (re)installs at 8 PM
+* **choco install choco-persistent-packages-abort --params "'/ABORTTIME:23:30'"** - stops persistent package (re)installs at 11:30 PM
+
+####A NOTE ON DEFAULTS:
+* If you don't specify any parameters, **choco-persistent-packages-abort** defaults to running daily at 1:30 AM. (My preference!) This was chosen since the default runtime for **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)** is MIDNIGHT which gives 1 1/2 hours for updates to run before aborting if necessary and if you're using **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)** the default kick off time for that is 2 AM.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages-abort/readme.md)**
+	</description>
+    <dependencies>
+	  <dependency id="choco-persistent-packages" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

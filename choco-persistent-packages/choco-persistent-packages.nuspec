@@ -20,8 +20,9 @@
     <description>
 **choco-persistent-packages** (re)installs any missing crucial Chocolatey packages that you designate as persistant packages. Uninstall a persistent package and it will be installed again ready for use the next day. 
 
-**This package creates a Windows Scheduled Task to run "cinst $env:ChocolateyInstall\config\persistentpackages.config -y" every day at a time that you specify.**
+This package creates a Windows Scheduled Task to run "cinst $env:ChocolateyInstall\config\persistentpackages.config -y" every day at a time that you specify.
 
+Be sure to look at the companion package [choco-persistent-packages-abort](https://chocolatey.org/packages/choco-persistent-packages-abort).
 
 ###WHO IS THIS FOR?
  **choco-persistent-packages** is designed for [Chocolatey Pro](https://chocolatey.org/pricing) and [Chocolatey Business](https://chocolatey.org/pricing) licensed users who's computers are not necessarily under [Active Directory Directory Services Group Policy](https://technet.microsoft.com/en-us/library/hh147307(v=ws.10).aspx) control or other system mananagement utilities that can enforce software installation and desired state.
@@ -35,7 +36,7 @@ You don't. But **choco-persistent-packages** will only work if the Chocolatey pa
 	
 
 ###INSTALL INSTRUCTIONS:
-You can set the time by running **choco install choco-persistent-packages --params "'/Time:XX:XX'"** where XX:XX equals the "Military Time" to run updates. You **must** enter four digits and the colon, i.e. enter a leading 0 for times less than 10 AM. Not entering the correct format will fail the install. Please see the examples.
+You can set the time by running **choco install choco-persistent-packages --params "'/Time:XX:XX'"**. When entering the TIME parameter, use "[Military Time](http://militarytimechart.com/)." Not entering the correct format will fail the install. Please see the examples below.
 
 ###INSTALL EXAMPLES:
 * **choco install choco-persistent-packages --params "'/Time:04:00'"** - (re)installs persistent packages 4 AM
