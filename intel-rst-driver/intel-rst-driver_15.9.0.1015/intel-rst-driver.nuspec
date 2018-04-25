@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>intel-rst-driver</id>
+    <version>15.9.0.1015</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver/intel-rst-driver_15.9.0.1015</packageSourceUrl>		
+    <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://downloadcenter.intel.com/download/27681/Intel-Rapid-Storage-Technology-Intel-RST-User-Interface-and-Driver?product=55005</projectUrl>	
+    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>		
+    <copyright>© Intel Corporation</copyright>	
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>intel rst storage driver</tags>
+    <summary>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver for Windows 10/Server 2016</summary>
+    <description>
+###Purpose
+	
+The Intel® Rapid Storage Technology (Intel® RST) Driver (15.9.0.1015) supports the configuration and enabling of multiple features including::
+
+* System Acceleration with Intel® Optane™ Memory
+* Configuration and maintenance of RAID 0/1/5/10
+* Intel® RST
+
+Note: Contact your system manufacturer prior to installing these applications or requesting technical support from Intel. They may provide software that is specifically configured for your system. 
+
+###Platforms supported
+
+* Intel® 200 Series Chipset Family SATA AHCI/RAID Controller
+* 7th Generation Intel® Core™ Processor Family Platform I/O SATA AHCI/RAID Controller
+* Intel® 100 Series/C230 Series Chipset Family SATA AHCI/RAID Controller
+* 6th Generation Intel® Core™ Processor Family Platform I/O SATA AHCI/RAID Controller
+
+**This version for Windows 7/8.1/10/Server 2016.** 
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-rst-driver/intel-rst-driver_15.9.0.1015/readme.md)**
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/27400/eng/ReadMe.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
+</package>
