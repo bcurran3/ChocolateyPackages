@@ -66,6 +66,9 @@ Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows
 $shortcutName = 'WEBSITE - Chocolatey Bug Tracker.lnk'
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://github.com/chocolatey/choco/issues -IconLocation $env:ChocolateyInstall\choco.exe 
 
+$shortcutName = 'WEBSITE - Chocolatey Docs.lnk'
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath https://chocolatey.org/docs -IconLocation $env:ChocolateyInstall\choco.exe 
+
 $shortcutName = 'WEBSITE - Chocolatey Google Groups.lnk'
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://groups.google.com/forum/#!forum/chocolatey" -IconLocation $env:ChocolateyInstall\choco.exe 
 
