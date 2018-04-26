@@ -10,7 +10,10 @@ ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
-* 2018.04.25 - removed run as admin requirement, now makes a backup of previous choco-packages-list-backup.ps1 (appended date), fixed minor text output error, added compatibility with [choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)
+* 2018.04.25 - removed run as admin requirement
+* 2018.04.25 - now makes a backup of previous choco-packages-list-backup.ps1 (appended date)
+* 2018.04.25 - fixed minor text output error
+* 2018.04.25 - added compatibility with [choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)
 * 2018.04.24.01 - added ability to append the date to packages.config 
 * 2018.04.24 - added [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages) support.
 * 2018.04.23 - now backups up packages automatically on install
