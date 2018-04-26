@@ -4,9 +4,9 @@
 * If you have problems running this due to your Windows PowerShell Script Execution Policy, [ForcePS](https://chocolatey.org/packages/forceps) can make your life easier - but now you can just run from the Start menu or the batch file!
 
 ROADMAP:
-* add an option to save date-packages.config for historical comparisons
 * Add other cloud services support by request
 * Create a scheduled task to run daily/weekly/monthly/whenever
+* Move configuration data to a seperate file
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
