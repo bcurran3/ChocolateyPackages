@@ -9,10 +9,11 @@ ROADMAP:
 * Cancel task to stop after xxx minutes in event of a non-silent package getting "stuck"
 
 CHANGELOG:
+* 2018.04.23 - Removed PowerShell dependency. Fixed compatibility with Windows 7 & 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet.
 * 2017.08.20.01 - updated Chocolatey/nuspec description to correct INSTALL EXAMPLES
 * 2017.08.20.01 - added message post install to edit persistentpackages.config
 * 2017.08.20.01 - added shortcut to persistentpackages.config in tools dir
-* 2018.04.23 - fixed compatibility with Windows 7 & 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet.
+
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
