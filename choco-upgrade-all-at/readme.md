@@ -5,7 +5,8 @@
 * I personally use and endorse this script/package/program/task/whatever-you-want-to-call-it.
 
 CHANGELOG:
-* 0.0.4.1 - Removed PowerShell dependency. Fixed compatibility with Windows 7 & 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet.
+* 0.0.4.1 - Fixed compatibility with Windows 7 & 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet.
+* 0.0.4.1 - Removed PowerShell v4/v5 dependency. 
 * 0.0.4 - added option to run weekly.
 
 

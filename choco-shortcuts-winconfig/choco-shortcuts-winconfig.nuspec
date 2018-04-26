@@ -7,7 +7,7 @@
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</packageSourceUrl>
-    <title>(unofficial) Choco Shortcuts (Config)</title>
+    <title>(unofficial) Chocolatey Shortcuts (Config)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_icon.png</iconUrl>
@@ -15,11 +15,29 @@
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial choco shortcuts</tags>
-    <summary></summary>
+    <tags>bcurran3 unofficial choco shortcuts start menu</tags>
+    <summary>This package creates Windows Start Menu shortcuts to run common Chocolatey functions.</summary>
     <description>
+![Screenshot of Choco Shortcuts](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
 
-	PLACEHOLDER UNTIL I WRITE
+#This package creates Windows Start Menu shortcuts to run common Chocolatey functions.
+
+###WHO IS THIS FOR?
+ **Chocolatey Shortcuts** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **Chocolatey Shortcuts** allows you to perform the most common Chocolatey functions right from the Windows Start Menu. The shortcuts still shell out to the Command Prompt to run, but **Chocolatey Shortcuts** is designed to be incredibly simple to use with minimal typing; install or remove a program in a few clicks and type in the package name. **Chocolatey Shortcuts** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can just point them to the Windows Start Menu!
+
+###WHY DO I NEED THIS?
+If you're a power user or use the Command Line and/or PowerShell all the time, you probably don't; though the website links might be useful for remembering where to find various Chocolatey resources.
+
+###FEATURES:
+* Search for, install, and uninstall a package from the Windows Start Menu.
+* List installed and outdated packages from the Windows Start Menu.
+* Upgrade all installed packages from the Windows Start Menu
+* Optimize your packages from the Windows Start Menu ([Chocolatey Pro](https://chocolatey.org/pricing) and [Chocolatey Business](https://chocolatey.org/pricing) licensed users).
+* Backup your list of packages if **[choco-package-list-backup](https://chocolatey.org/packages/choco-package-list-backup)** is installed.
+* View chocolatey.log from the Windows Start Menu.
+* Website links to prominent Chocolatey information.
+
+For a different take on Chocolatey Shortcuts for the desktop, checkout [mica](https://chocolatey.org/profiles/mica)'s [Chocolatey Shortcuts (unofficial)](https://chocolatey.org/packages/ChocoShortcuts).
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-shortcuts-winconfig/readme.md)**
 	</description>
