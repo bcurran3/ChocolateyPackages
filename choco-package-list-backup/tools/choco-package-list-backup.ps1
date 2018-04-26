@@ -8,7 +8,7 @@
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.04.24" # Version of this script
+$CPLBver        = "2018.04.25" # Version of this script
 $ConfigFile     = "packages.config"
 $Date           = Get-Date -UFormat %Y-%m-%d
 $AppendDate     = "False" # Change to True if you want to keep snapshot in time copies - semi-breaks InstChoco compatibility (need to rename file)
@@ -176,9 +176,13 @@ if ($UseTonidoSync -match "True" -and (Test-Path $Env:USERPROFILE\Documents\Toni
    }
 
 Write-Host TO RE-INSTALL YOUR CHOCOLATEY PACKAGES: -ForegroundColor magenta 
-Write-Host 1> Go to the location of your saved PACKAGES.CONFIG file and type CINST PACKAGES.CONFIG -Y -ForegroundColor magenta 
-Write-Host 2> Get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco -ForegroundColor magenta 
-Write-Host Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations -ForegroundColor white
+Write-Host "1> Go to the location of your saved PACKAGES.CONFIG file and type CINST PACKAGES.CONFIG -Y" -ForegroundColor magenta 
+If (Test-Path "$env:ChocolateyInstall\lib\instchoco"){
+     Write-Host "2> Run InstChoco -y" -ForegroundColor magenta 
+   } else {
+     Write-Host "2> Get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
+   }
+Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
 Start-Sleep -s 10
 
 
