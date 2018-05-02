@@ -1,7 +1,7 @@
 ﻿$packageName    = 'smart-control-center' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://www.downloads.netgear.com/files/GDC/S3300/SCC-Release-V1.1.3.3.exe'
-$checksum       = '0DCD16C5037CA5B3A29BA8596280AAD24F939A71CBEC79256DA312F5D60B22FD'
+$url            = 'https://www.downloads.netgear.com/files/GDC/S3300/SCC-Release-V1.1.3.4.exe'
+$checksum       = '24DE68AEBE95306EE30724A8183ADC1B5269CF17AA46C9F24E03723E275436D7'
 $validExitCodes = @(0)
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = Join-Path $toolsDir "SCCinstall.ahk"
