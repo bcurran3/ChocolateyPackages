@@ -2,13 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>6.99.2</version>
+    <version>7.01</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg</authors>
     <copyright>by Nenad Hrg softwareok.de</copyright>	
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/qdir</packageSourceUrl>			
     <projectUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
+	<docsUrl>http://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
     <bugTrackerUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</bugTrackerUrl>		
     <iconUrl>https://rawgit.com/zersh01/chocolatey-q-dir/master/Icon.png</iconUrl>
     <licenseUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
@@ -16,7 +17,7 @@
     <description>
 ![Screenshot of Q-Dir](http://www.softwareok.com/img/ss/g_en/Q-Dir2.jpg)
 
-Q-Dir (the Quad Explorer) makes your files and folders easy to manage, either installed or as a portable Windows program. 
+##The Quad-Directory-Explorer makes your files and folders easy to manage, either installed or as a portable Windows program.
 
 Fast and easy access to your hard disks, network folders, USB-sticks, floppy disks and other storage devices. 
 
@@ -26,13 +27,17 @@ You don't have to give up your usual work habits, drag 'n' drop, view types, and
 
 No! Q-Dir gives you extra useful functions to make you happy. Save time by reducing mouse-clicks and hand movements . Q-Dir does not have to be installed and can be executed easily from any location, such as the Desktop, and can be carried on a small USB-stick or other memory device. 
 
-Q-Dir's file management is based on MS Windows Explorer, but 4x plus Explorer View Tabs and with more functionality! More and more data makes for a larger file management challenge on you Windows OS. 
+Q-Dir's file management is based on MS Windows Explorer, but 4x plus [Explorer Tab Views](http://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=64) and with more functionality! More and more data makes for a larger file management challenge on you Windows OS. 
  
-Q-Dir allows you to save folder combinations as a favourite to open any time. Up to 64 folder combinations can be saved in a favorite, since each of the four windows is equipped with tabs  (ie 4 x 16 tabs 4 x Tree View plus 4 x Address Bar). 
+Q-Dir allows you to save [folder combinations as a favourite](http://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=4) to open any time. Up to 64 folder combinations can be saved in a favorite, since each of the four [windows is equipped with tabs](http://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=60)  (ie 4 x 16 tabs 4 x Tree View plus 4 x Address Bar),  [different colors for different file types ...](http://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=6)
+ 
+Warning! ► [Once Q-Dir, always Q-Dir !!!](http://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=57)
+
+[Feature list on Q-Dir's website](http://www.softwareok.com/?seite=Freeware/Q-Dir)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/qdir/readme.md)**
 	</description>
-    <summary>The file management in Q-Dir is based on MS Windows Explorer but 4x plus Tabs and with more functionality!</summary>
+    <summary>Q-Dir - Really good quad explorer 4 files and folder</summary>
     <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
     <tags>qdir q-dir file manager managment explorer utility</tags>
   </metadata>
