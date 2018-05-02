@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>disableofficenag-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disableofficenag-winconfig</packageSourceUrl>
+    <title>Disable Office Activation Prompt (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disabledefender-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/disableofficenag-winconfig/disableofficenag-winconfig_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disableofficenag-winconfig</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 office activation disable</tags>
+    <summary>This package disables Office 2013 and 2016 activation prompts from OEM installs.</summary>
+    <description>
+## Got this problem? 
+
+
+![Disable Office Activtion Prompt Screenshot](https://support.content.office.net/en-us/media/95750f4a-43ce-4b0e-9428-5aba7782be39.png)	
+##This package disables the Office activation prompt caused by OEM installs of Office that have been replaced by other Office versions.
+
+[More info from Microsoft](https://support.office.com/en-us/article/Office-repeatedly-prompts-you-to-activate-on-a-new-PC-a9a6b05f-f6ce-4d1f-8d49-eb5007b64ba1)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/disableofficenag-winconfig/readme.md)**	
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
