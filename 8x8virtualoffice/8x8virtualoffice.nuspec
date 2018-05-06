@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>8x8virtualoffice</id>
+    <version>5.2.0.19289</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8x8virtualoffice</packageSourceUrl>		
+    <title>8x8 Virtual Office (Install)</title>
+    <authors>8x8 Inc.</authors>
+    <projectUrl>https://support.8x8.com/us/download/virtual-office-desktop-pc-windows</projectUrl>
+	<iconUrl>https://support.8x8.com/sites/default/files/8x8-support-logo-new.png</iconUrl>
+    <copyright>Copyright 8x8 Inc.</copyright>
+	<licenseUrl>https://www.8x8.com/terms-and-conditions/business-terms</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.get8x8.com/8x8WebHelp/VirtualOfficeDesktop5_0/Default.htm</docsUrl>
+    <tags>8x8 voip phone phones virtual office</tags>
+    <summary>8x8 Virtual Office Desktop for PC (Windows)</summary>
+    <description>
+![Screenshot of 8x8 Virtual Office](https://www.8x8.com/wp-content/uploads/2016/06/VOD_5_Login.png)
+
+Virtual Office Desktop is a comprehensive Unified Communications client application integrating a business softphone with visual voicemail, corporate directory, IM &amp; presence, video calling, fax, call recording, web conferencing, and social media. Virtual Office Desktop offers all the functionality of Virtual Office Online and Virtual Office Pro in a standalone Windows application.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8x8virtualoffice/readme.md)**
+	</description>
+    <releaseNotes>https://support.8x8.com/us/release-notes/virtual-office-desktop-v-520</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
