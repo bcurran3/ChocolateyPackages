@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2018.04.25</version>
+    <version>2018.05.06</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
@@ -31,8 +31,8 @@
 * your local Documents folder
 * your Active Directory assigned HOMESHARE
 * Box (new 2018-02-24)
-* Dropbox
-* Google Drive
+* Dropbox Personal and Business (Buisness = new 2018-05-06)
+* Google Drive and Drive File Stream (GDFS = new 2018-05-06)
 * Microsoft OneDrive
 * NETGEAR ReadyCLOUD
 * Nextcloud

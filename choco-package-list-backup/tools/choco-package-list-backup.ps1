@@ -2,13 +2,11 @@
 # I couldn't have done this without the list parsing from Ammaar Limbada found at https://gist.github.com/alimbada/449ddf65b4ef9752eff3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # ROADMAP:
-# Add ability to use a different source other than the Chocolatey public repository
 # Add other cloud services support by request
-# Add appended date/time option
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.04.25" # Version of this script
+$CPLBver        = "2018.05.06" # Version of this script
 $ConfigFile     = "packages.config"
 $Date           = Get-Date -UFormat %Y-%m-%d
 $AppendDate     = "False" # Change to True if you want to keep snapshot in time copies - semi-breaks InstChoco compatibility (need to rename file)
@@ -110,19 +108,50 @@ if ($UseBox -match "True" -and (Test-Path "$Env:USERPROFILE\Box Sync"))
     Write-PackageConfig
    }    
    
-# Backup Chocolatey package names on local computer to packages.config file in Dropbox directory if it exists
-if ($UseDropbox -match "True" -and (Test-Path $Env:USERPROFILE\Dropbox))   
+# Check for Dropbox paths (Thanks ebbek!)
+if (Test-Path $Env:AppData\Dropbox\info.json)
+{
+    $DropboxPersonal = ((get-content $Env:AppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).personal.path
+    $DropboxBusiness = ((get-content $Env:AppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).business.path
+}
+elseif (Test-Path $Env:LocalAppData\Dropbox\info.json)
+{
+    $DropboxPersonal = ((get-content $Env:LocalAppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).personal.path
+    $DropboxBusiness = ((get-content $Env:LocalAppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).business.path
+}
+
+# Backup Chocolatey package names on local computer to packages.config file in Personal Dropbox directory if it exists
+if ($UseDropbox -match "True" -and ($DropboxPersonal) -and (Test-Path $DropboxPersonal))
    {
-    $SavePath = "$Env:USERPROFILE\Dropbox\$SaveFolderName\$Env:ComputerName"
+    $SavePath = "$DropboxPersonal\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
    }
    
-# Backup Chocolatey package names on local computer to packages.config file in Google Drive directory if it exists
+# Backup Chocolatey package names on local computer to packages.config file in Business Dropbox directory if it exists
+if ($UseDropbox -match "True" -and ($DropboxBusiness) -and (Test-Path $DropboxBusiness))
+   {
+    $SavePath = "$DropboxBusiness\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   }
+   
+# Backup Chocolatey package names on local computer to packages.config file in Google Drive/Backup and Sync directory if it exists
 if ($UseGoogleDrive -match "True" -and (Test-Path "$Env:USERPROFILE\Google Drive"))   
    {
     $SavePath = "$Env:USERPROFILE\Google Drive\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
-   }   
+   }
+   
+# Backup Chocolatey package names on local computer to packages.config file in Google Drive FS "My Drive" directory if it exists  (Thanks ebbek!)
+$GFSInstalled=(test-path -path HKCU:Software\Google\DriveFS\Share)
+if ($GFSInstalled)
+   {
+    $GoogleFSmountpoint = (Get-ItemProperty -path Registry::HKEY_CURRENT_USER\Software\Google\DriveFS\Share).MountPoint
+    if ($UseGoogleDrive -match "True" -and ($GoogleFSmountpoint) -and (Test-Path "${GoogleFSmountpoint}:\My Drive"))
+       {
+        $SavePath = "${GoogleFSmountpoint}:\My Drive\$SaveFolderName\$Env:ComputerName"
+        Write-PackageConfig
+       }
+	}
    
 # Backup Chocolatey package names on local computer to packages.config file on your HOMESHARE directory if it exists
 #if ($UseHomeShare -match "True" -and (Test-Path "$Env:HOMESHARE" -eq "True"))
@@ -143,7 +172,7 @@ if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
 # Backup Chocolatey package names on local computer to packages.config file in OneDrive directory if it exists
 if ($UseOneDrive -match "True" -and (Test-Path $Env:USERPROFILE\OneDrive))
    {
-    $SavePath = "$Env:USERPROFILE\OneDrive\$SaveFolderName\$Env:ComputerName"
+    $SavePath = "$Env:OneDrive\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
    }      
    
