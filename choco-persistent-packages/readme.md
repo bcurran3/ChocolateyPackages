@@ -2,18 +2,12 @@
 
 * A BCURRAN3 original!
 * Read the INSTALL EXAMPLES again before use!
-* I personally use and endorse this script/package/program/task/whatever-you-want-to-call-it.
-
-ROADMAP:
-* Add options for weekly instead of only daily.
-* Cancel task to stop after xxx minutes in event of a non-silent package getting "stuck"
+* I personally use and endorse this script/package/task.
 
 CHANGELOG:
-* 2018.04.23 - Fixed compatibility with Windows 7 & 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet.
-* 2018.04.23 - Removed PowerShell v4/v5 dependency. 
-* 2017.08.20.01 - updated Chocolatey/nuspec description to correct INSTALL EXAMPLES
-* 2017.08.20.01 - added message post install to edit persistentpackages.config
-* 2017.08.20.01 - added shortcut to persistentpackages.config in tools dir
+* 2018.05.06 - Added abort stuck upgrades feature. "Um, why do I want this?" you're thinking. You want this because sometimes background package installations go wrong. "Go wrong?" you're thinking. Yes, there are a couple scenarios where a Chocolatey package installation/upgrade can hang: if a package needs input, if an AutoHotKey or AutoIt script fails, and all those times a program installer pops up a browser window to tell you "Thank you." These scenarios leave hung processes in the background with no way for you to easily interact with them (They're in the background!). This means they are taking up memory resources for no reason and might cause problems installing other packages or programs. **If** you knew there was a hung process, you could manually stop the task, but who wants to check every day? This will automate checking and stopping any Chocolatey package hung tasks at the time you specify. I recommend setting it to a time an hour or two after you run your updates. 
+* 2018.04.23 - Fixed compatibility with Windows 7 & 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency. 
+* 2017.08.20.01 - Updated Chocolatey/nuspec description to correct INSTALL EXAMPLES. Added message post install to edit persistentpackages.config. Added shortcut to persistentpackages.config in tools dir.
 
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
