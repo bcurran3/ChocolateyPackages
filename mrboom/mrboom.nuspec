@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mrboom</id>
-    <version>4.4</version>
+    <version>4.5</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mrboom</packageSourceUrl>
     <title>MrBoom (Portable)</title>

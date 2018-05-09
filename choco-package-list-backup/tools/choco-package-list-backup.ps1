@@ -6,29 +6,30 @@
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.05.06" # Version of this script
-$ConfigFile     = "packages.config"
+$CPLBver        = "2018.05.09" # Version of this script
 $Date           = Get-Date -UFormat %Y-%m-%d
-$AppendDate     = "False" # Change to True if you want to keep snapshot in time copies - semi-breaks InstChoco compatibility (need to rename file)
-$SaveFolderName = "ChocolateyPackageListBackup" # Change the subfolder name if you don't like my default
-$SaveVersions   = "False" # Specify if you want to save specific version info or not
-$InstChoco      = "$Env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
-$CustomPath     = "c:\install"  # Edit to save to a special location of your choice
 
-# Toggle True/False if you want to backup/not backup to the locations below
-$UseCustomPath  = "False" # Change to True if you are using $CustomPath
-$UseDocuments   = "True"
-$UseHomeShare   = "True"  # Domain joined computers HOMEDRIVE support
-$UseBox         = "True"
-$UseDropbox     = "True"
-$UseGoogleDrive = "True"
-$UseNextcloud	= "True"
-$UseOneDrive    = "True"
-$UseReadyCLOUD  = "True"
-$UseResilioSync = "True"
-$UseSeafile     = "True"
-$UseTonidoSync  = "True"
+# Import preferences - see choco-package-list-backup.xml
+[xml]$ConfigFile = Get-Content "$env:ChocolateyInstall\bin\choco-package-list-backup.xml"
 
+$PackagesListFile = $ConfigFile.Settings.Preferences.PackagesListFile
+$SaveFolderName = $ConfigFile.Settings.Preferences.SaveFolderName
+$SaveVersions = $ConfigFile.Settings.Preferences.SaveVersions
+$AppendDate = $ConfigFile.Settings.Preferences.AppendDate
+$CustomPath = $ConfigFile.Settings.Preferences.CustomPath
+
+$UseCustomPath = $ConfigFile.Settings.Preferences.UseCustomPath 
+$UseDocuments = $ConfigFile.Settings.Preferences.UseDocuments
+$UseHomeShare = $ConfigFile.Settings.Preferences.UseHomeShare 
+$UseBox = $ConfigFile.Settings.Preferences.UseBox
+$UseDropbox = $ConfigFile.Settings.Preferences.UseDropbox
+$UseGoogleDrive = $ConfigFile.Settings.Preferences.UseGoogleDrive
+$UseNextcloud = $ConfigFile.Settings.Preferences.UseNextcloud
+$UseOneDrive = $ConfigFile.Settings.Preferences.UseOneDrive
+$UseReadyCLOUD = $ConfigFile.Settings.Preferences.UseReadyCLOUD
+$UseResilioSync = $ConfigFile.Settings.Preferences.UseResilioSync
+$UseSeafile = $ConfigFile.Settings.Preferences.UseSeafile
+$UseTonidoSync = $ConfigFile.Settings.Preferences.UseTonidoSync
 
 # Check the path to save packages.config and create if it doesn't exist
 Function Check-SaveLocation{
@@ -49,6 +50,7 @@ Function Check-PPConfig{
   }
 	
 # Copy InstChoco.exe if it exists to the same location as packages.config for super duper easy re-installation
+$InstChoco = "$Env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
 Function Check-InstChoco{
     $CheckICSource = Test-Path $InstChoco
 	If ($CheckICSource -match "True"){
@@ -58,8 +60,13 @@ Function Check-InstChoco{
 	       Copy-Item $InstChoco $SavePath -force | out-null
 		   Write-Host "$SavePath\InstChoco.exe SAVED!" -ForegroundColor green 
 	      } else {
-# copying even if it already exists to ensure current version - may put flag in future InstChoco version to determine if upgraded
-		    Copy-Item $InstChoco $SavePath -force | out-null
+		    $ICSource = [System.Diagnostics.FileVersionInfo]::GetVersionInfo($InstChoco).FileVersion
+		    $ICDest = [System.Diagnostics.FileVersionInfo]::GetVersionInfo("$SavePath\InstChoco.exe").FileVersion
+		    if ($ICSource -ne $ICDest)
+		       {
+		        Copy-Item $InstChoco $SavePath -force | out-null
+		        Write-Host "$SavePath\InstChoco.exe SAVED!" -ForegroundColor green
+			   }
 	   }
     }
   }
@@ -70,18 +77,18 @@ Function Write-PackageConfig{
 	Check-PPConfig
 	Check-InstChoco
 	if ($AppendDate -eq "True"){
-	    $ConfigFile = $ConfigFile+"_$Date"
+	    $PackagesListFile = $PackagesListFile+"_$Date"
 	}
-    Write-Output "<?xml version=`"1.0`" encoding=`"utf-8`"?>" >"$SavePath\$ConfigFile"
-    Write-Output "<packages>" >>"$SavePath\$ConfigFile"
+    Write-Output "<?xml version=`"1.0`" encoding=`"utf-8`"?>" >"$SavePath\$PackagesListFile"
+    Write-Output "<packages>" >>"$SavePath\$PackagesListFile"
 	if ($SaveVersions -match "True")
 	   {
-        choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" />" }>>"$SavePath\$ConfigFile"
+        choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" />" }>>"$SavePath\$PackagesListFile"
 	   } else {
-         choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" />" }>>"$SavePath\$ConfigFile"
+         choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" />" }>>"$SavePath\$PackagesListFile"
 		 }
-    Write-Output "</packages>" >>"$SavePath\$ConfigFile"
-	Write-Host "$SavePath\$ConfigFile SAVED!" -ForegroundColor green 
+    Write-Output "</packages>" >>"$SavePath\$PackagesListFile"
+	Write-Host "$SavePath\$PackagesListFile SAVED!" -ForegroundColor green 
     }
 
 Write-Host choco-package-list-backup.ps1 v$CPLBver - backup Chocolatey package list locally and to the cloud -ForegroundColor white
