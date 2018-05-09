@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>7.01</version>
+    <version>7.02</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg</authors>
     <copyright>by Nenad Hrg softwareok.de</copyright>	
@@ -41,4 +41,7 @@ Warning! ► [Once Q-Dir, always Q-Dir !!!](http://www.softwareok.com/?seite=faq
     <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
     <tags>qdir q-dir file manager managment explorer utility</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>
