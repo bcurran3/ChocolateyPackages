@@ -6,10 +6,10 @@
 ROADMAP:
 * Add other cloud services support by request
 * Create a scheduled task to run daily/weekly/monthly/whenever
-* Move configuration data to a separate file
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
+* 2018.05.09 - added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades!
 * 2018.05.06 - added Dropbox Business and Google Drive File Stream support (Thanks ebbek!)
 * 2018.04.25 - removed run as admin requirement
 * 2018.04.25 - now makes a backup of previous choco-packages-list-backup.ps1 (appended date)

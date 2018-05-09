@@ -4,7 +4,7 @@
   <metadata>
     <id>plexamp</id>
     <title>Plexamp (Install)</title>
-    <version>1.0.4</version>
+    <version>1.0.5</version>
     <authors>Plex</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexamp</packageSourceUrl>		
