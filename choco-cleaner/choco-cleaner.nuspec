@@ -1,30 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>0.0.1</version>
-    <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>	
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</packageSourceUrl>
-    <title>(unofficial) choco cleaner (Script + Task)</title>
+    <version>0.0.3-pre</version>
+    <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner.png</iconUrl>
-	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <copyright>Copyleft Bill Curran</copyright>
-    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
-    <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
     <description>
+	
+#!!!!!!!!!! DESCRIPTION WILL NEED EDITING BEFORE RELEASE !!!!!!!!!! 
+	
 ##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY RESIDUAL CHOCOLATEY FILES? 
 
 ##YOU JUST FOUND THE EASY WAY!
 
-####This package creates a Windows Scheduled Task to run choco-cleaner.ps1 every day at 11:30 PM.
+####This package creates a Windows Scheduled Task to run choco-cleaner.ps1 every Sunday at 11:00 PM.
 
-(11:30 PM was chosen as not to conflict with **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)** when installed with the default set to run at midnight.)
+(11:00 PM was chosen as not to conflict with **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)** when installed with the default set to run at midnight.)
 
 **BEFORE and AFTER choco-cleaner: (198 packages installed and does not include temp folder deletions.)**
 ![schreenshot of files and diskspace  before choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_before.png) ![schreenshot of files and diskspace after choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_after.png)
@@ -57,14 +53,15 @@ You can manually run choco-cleaner at any time by running \ProgramData\chocolate
 
 If you have a previous release of **choco-cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or time.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**
-	</description>
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**</description>
+    <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <dependencies>
-	  <dependency id="powershell" version="4.0" />
       <dependency id="7zip" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
