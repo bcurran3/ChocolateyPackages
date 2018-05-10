@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>blockjsvbs-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/blockjsvbs-winconfig</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/blockjsvbs-winconfig</packageSourceUrl>
+    <title>Block JavaScript and VBScript (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/blockjsvbs-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/blockjsvbs-winconfig/blockjsvbs-winconfig_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 block javascript vbscript js jse vbs vbe config security</tags>
+    <summary>blockjsvbs-winconfig will reassociate JavaScript and VBScript files to open in your text editor.</summary>
+    <description>
+**blockjsvbs-winconfig** helps protect you from malware payloads delivered using [JavaScript](https://en.wikipedia.org/wiki/JavaScript) and [VBScript](https://en.wikipedia.org/wiki/VBScript). It does this by simply reassociating the related file extensions (.js, .jse, .vbs, .vbe) to open up in your default text editor (most likely Notepad or Wordpad) instead of executing the scripts via their native script engines. 
+
+**blockjsvbs-winconfig** is only one step in helping to protect your computer from malware. There are many more file extensions that you may want to reassociate or disassociate completely. You can simply do this for more file extensions by looking at the ChocolateyInstall and ChocolateyUninstall scripts or read about the [assoc](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/assoc) command.
+
+**blockjsvbs-winconfig** is global. You only need to run it once and it will help protect all users of the computer.
+
+Uninstalling **blockjsvbs-winconfig** will revert the file associations back to default.
+
+####RELATED READING MATERIAL:
+* [File extensions and types that are common threat vectors for email](https://support.symantec.com/en_US/article.INFO3768.html)
+* [Most Popular Windows File Types Used by Malware (2017)](https://sensorstechforum.com/popular-windows-file-types-used-malware-2017/)
+* [50+ File Extensions That Are Potentially Dangerous on Windows](https://www.howtogeek.com/137270/50-file-extensions-that-are-potentially-dangerous-on-windows/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/blockjsvbs-winconfig/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
