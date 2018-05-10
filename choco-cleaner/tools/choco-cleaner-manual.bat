@@ -14,7 +14,6 @@ if %errorLevel% == 0 goto RunScript
  )
 
 :RunScript
-powershell -NoProfile -ExecutionPolicy Bypass -Command "\ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1"
-timeout 5
+powershell -NoProfile -ExecutionPolicy Bypass -Command "%ChocolateyInstall%\bin\choco-cleaner.ps1"
 :end
 
