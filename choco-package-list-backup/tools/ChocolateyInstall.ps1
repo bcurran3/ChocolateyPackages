@@ -16,6 +16,7 @@ if (Test-Path $env:ChocolateyInstall\bin\$script){
 Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue	
 
 if (Test-Path $env:ChocolateyInstall\bin\$xml){
+      Write-Host "Existing $xml file found, your preferences are safe." -foreground magenta
       Remove-Item $toolsDir\$xml -Force -ErrorAction SilentlyContinue
     } else {
 	  Move-Item "$toolsDir\$xml" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue
