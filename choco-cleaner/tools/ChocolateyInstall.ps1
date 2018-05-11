@@ -6,15 +6,18 @@ $shortcutName     = 'Choco-Cleaner.lnk'
 $altshortcutName  = 'Chocolatey Cleaner.lnk'
 $GotTask          = (&schtasks /query /tn choco-cleaner) 2> $null
 
+Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue
+
 if ($GotTask -ne $null){
    Write-Host
-   Write-Host Existing choco-cleaner scheduled task found. Keeping existing scheduled task. -foreground magenta 
+   Write-Host Existing choco-cleaner scheduled task found: -foreground magenta 
+   SchTasks /query /tn "choco-cleaner"
+   Write-Host Keeping existing scheduled task. -foreground magenta 
    Write-Host Upgrading choco-cleaner package files only. -foreground magenta 
    exit
    }
 
-Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue	
-   
+
 if (Test-Path $env:ChocolateyInstall\bin\$xml){
       Write-Host "Existing $xml file found, your preferences are safe." -foreground magenta
       Remove-Item $toolsDir\$xml -Force -ErrorAction SilentlyContinue
