@@ -14,7 +14,7 @@ $DeleteMSInstallers = $ConfigFile.Settings.Preferences.DeleteMSInstallers
 $DeleteIgnoreFiles = $ConfigFile.Settings.Preferences.DeleteIgnoreFiles 
 $DeleteReadmes = $ConfigFile.Settings.Preferences.DeleteReadmes
 $DeleteOldChoco = $ConfigFile.Settings.Preferences.DeleteOldChoco 
-$DeleteBackupFiles = $ConfigFile.Settings.Preferences.DeleteBackupFiles
+$DeleteConfigBackupFile = $ConfigFile.Settings.Preferences.DeleteConfigBackupFile
 $DeleteLibBad = $ConfigFile.Settings.Preferences.DeleteLibBad
 $DeleteLibBkp = $ConfigFile.Settings.Preferences.DeleteLibBkp
 $Optimizenupkgs = $ConfigFile.Settings.Preferences.Optimizenupkgs
@@ -73,7 +73,7 @@ if ($DeleteLogs)
      Remove-Item -path $env:chocolateyinstall\* -recurse -include *.old -ErrorAction SilentlyContinue
 	}
 
-	if ($DeleteBackupFiles)
+	if ($DeleteConfigBackupFile)
     {	
      Write-Host " * Deleting unnecessary config backup files..." -foreground magenta
      Remove-Item -path $env:chocolateyinstall\chocolatey\config\chocolatey.config.backup -ErrorAction SilentlyContinue
