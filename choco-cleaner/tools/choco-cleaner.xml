@@ -9,7 +9,7 @@
     <DeleteIgnoreFiles>true</DeleteIgnoreFiles>
     <DeleteReadmes>true</DeleteReadmes>
     <DeleteOldChoco>true</DeleteOldChoco>
-    <DeleteBackupFiles>true</DeleteBackupFiles>
+    <DeleteConfigBackupFile>true</DeleteConfigBackupFile>
     <DeleteLibBad>true</DeleteLibBad>
     <DeleteLibBkp>true</DeleteLibBkp>
     <Optimizenupkg>true</Optimizenupkg>
