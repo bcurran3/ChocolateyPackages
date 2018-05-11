@@ -177,7 +177,7 @@ if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
    } 
    
 # Backup Chocolatey package names on local computer to packages.config file in OneDrive directory if it exists
-if ($UseOneDrive -match "True" -and (Test-Path $Env:USERPROFILE\OneDrive))
+if ($UseOneDrive -match "True" -and (Test-Path $Env:OneDrive))
    {
     $SavePath = "$Env:OneDrive\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
