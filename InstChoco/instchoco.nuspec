@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>instchoco</id>
-    <version>1.20</version>
+    <version>1.21</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
@@ -27,19 +27,19 @@
 
 **InstChoco** is the evolution of an old batch file I used to automate installing Chocolatey and a standardized list of commonly used packages. I use it on every Wintel computer I touch. Besides just easily installing Chocolatey, it is extremely useful in automated standard setups. SysAdmins will love the new features added to **InstChoco** v1.20+. You can find **InstChoco.exe** in \programdata\chocolatey\lib\instchoco\tools.
 
-Standard Features:
+###Standard Features:
 
-* **InstChoco** uses Rob's ["Install with cmd.exe"](https://chocolatey.org/install) method for installing Chocolatey.
-* **InstChoco** will enable up to four choco features if you pass them as parameters, i.e. allowGlobalConfirmation, failOnAutoUninstaller, allowEmptyChecksums, etc.
+* **InstChoco** uses ferventcoder/Rob's ["Install with cmd.exe"](https://chocolatey.org/install) method for installing Chocolatey.
+* **InstChoco** will enable up to four choco features if you pass them as parameters, i.e. allowGlobalConfirmation, failOnAutoUninstaller, allowEmptyChecksums, useRememberedArgumentsForUpgrades, etc.
 * **InstChoco** will automatically search for a PACKAGES.CONFIG file in various locations and install packages from it if found. 
-* **InstChoco** has baked in support for [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup). **InstChoco** will use the first found PACKAGES.CONFIG in the following order: current directory, Documents folder, HOMESHARE, Dropbox, Google Drive, OneDrive, ReadyCLOUD, Resilio Sync, or Tonido Sync. (v1.10+)
-* **InstChoco** has baked in support for [Choco Persistent Packages](https://chocolatey.org/packages/choco-persistent-packages). **InstChoco** will use PERSISTANTPACKAGES.CONFIG and install packages from it if found - always. (v1.10+)
-* **InstChoco** has baked in support for Windows Active Directory domains. **InstChoco** will use various PACKAGES.CONFIG files based on domain and user account to install packages from them if found - always. Now you can standardize your organization with base Chocolatey package installs! (NEW in v1.20)
+* **InstChoco** has baked in support for [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup). **InstChoco** will use the first found PACKAGES.CONFIG in the following order: current directory, Documents folder, HOMESHARE, Box, Dropbox, Google Drive, OneDrive, ReadyCLOUD, Nextcloud, Resilio Sync, Seafile, or Tonido Sync.
+* **InstChoco** has baked in support for [Choco Persistent Packages](https://chocolatey.org/packages/choco-persistent-packages). **InstChoco** will use PERSISTANTPACKAGES.CONFIG and install packages from it if found - always.
+* **InstChoco** has baked in support for Windows Active Directory domains. **InstChoco** will use various PACKAGES.CONFIG files based on domain and user account to install packages from them if found - always. Now you can standardize your organization with base Chocolatey package installs!
 
-Special Features for Windows Active Directory Domains:
+###Special Features for Windows Active Directory Domains:
 
-* **InstChoco** will use domainnamePACKAGES.CONFIG and install packages from it if found - always. This allows Windows domain joined computers to have installed a common base setup of Chocolatey packages across all organizational computers. To use this feature, system administrators of Windows domains need to create a domainnamePACKAGES.CONFIG file and put it in your logon server's NETLOGON directory; i.e. \\Contoso\NETLOGON\ContosoPACKAGES.CONFIG (NEW in v1.20)
-* **InstChoco** will use usernamePACKAGES.CONFIG and install packages from it if found - always. This allows users of Windows domain joined computers to have their own specific Chocolatey packages installed for them (useful for roaming users). To use this feature, system administrators or users of Windows domains need to create a usernamePACKAGES.CONFIG file and put it in the root of the user's HOMESHARE; i.e. \\Contoso\UserName$\UserNamePACKAGES.CONFIG (NEW in v1.20)
+* **InstChoco** will use domainnamePACKAGES.CONFIG and install packages from it if found - always. This allows Windows domain joined computers to have installed a common base setup of Chocolatey packages across all organizational computers. To use this feature, system administrators of Windows domains need to create a domainnamePACKAGES.CONFIG file and put it in your logon server's NETLOGON directory; i.e. \\Contoso\NETLOGON\ContosoPACKAGES.CONFIG
+* **InstChoco** will use usernamePACKAGES.CONFIG and install packages from it if found - always. This allows users of Windows domain joined computers to have their own specific Chocolatey packages installed for them (useful for roaming users). To use this feature, system administrators or users of Windows domains need to create a usernamePACKAGES.CONFIG file and put it in the root of the user's HOMESHARE; i.e. \\Contoso\UserName$\UserNamePACKAGES.CONFIG
 
 Usage: InstChoco -y or InstChoco -ynp to install Chocolatey but no packages
 
@@ -47,6 +47,14 @@ Usage: InstChoco -y or InstChoco -ynp to install Chocolatey but no packages
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/InstChoco/readme.md)**	
 	</description>
+	<releaseNotes>
+CHANGELOG:
+* 1.21 - Added Box, Nextcloud, and Seafile support to catch up with choco-package-list-backup.
+* 1.20 - Added domain support to install predefined packages for domain joined computers and user specific packages.
+* 1.11 - (unreleased) Added -ynp switch to skip installation of packages. (Install Chocolatey only)
+* 1.10 - Added [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) and [choco persistent packages](https://chocolatey.org/packages/choco-persistent-packages) support for package (re)installation. Cosmetic changes. Checks for year 2018 or greater instead of 2017 or greater. Updated donation info. :)
+* 1.00 - initial release
+	</releaseNotes>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

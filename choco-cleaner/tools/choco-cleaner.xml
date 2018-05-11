@@ -2,8 +2,8 @@
 <Settings>
   <Preferences>
     <DeleteLicenseFiles>false</DeleteLicenseFiles>  
-    <DeleteLogs>true</DeleteLogs>
-    <DeleteFileLogs>true</DeleteFileLogs>	
+    <DeleteLogs>false</DeleteLogs>
+    <DeleteFileLogs>false</DeleteFileLogs>	
     <DeleteArchives>true</DeleteArchives>
     <DeleteMSInstallers>true</DeleteMSInstallers>
     <DeleteIgnoreFiles>true</DeleteIgnoreFiles>
