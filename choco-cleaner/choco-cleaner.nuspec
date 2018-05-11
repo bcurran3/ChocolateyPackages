@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>0.0.3-pre</version>
+    <version>0.0.3-pre2</version>
     <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -10,28 +10,37 @@
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
+    <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>	
     <description>
-	
-#!!!!!!!!!! DESCRIPTION WILL NEED EDITING BEFORE RELEASE !!!!!!!!!! 
-	
 ##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY RESIDUAL CHOCOLATEY FILES? 
 
 ##YOU JUST FOUND THE EASY WAY!
 
 ####This package creates a Windows Scheduled Task to run choco-cleaner.ps1 every Sunday at 11:00 PM.
 
-(11:00 PM was chosen as not to conflict with **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)** when installed with the default set to run at midnight.)
+(11:00 PM was chosen as not to conflict with default installs of **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)**,  **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**, and **[choco-optimize-at](https://chocolatey.org/packages/choco-optimize-at)**.
 
-**BEFORE and AFTER choco-cleaner: (198 packages installed and does not include temp folder deletions.)**
+##**BEFORE and AFTER choco-cleaner: (198 packages installed and does not include temp folder deletions.)**
 ![schreenshot of files and diskspace  before choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_before.png) ![schreenshot of files and diskspace after choco-cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_after.png)
 
+**Sure, you're probably not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as 6 byte .ignore files actually take up 4 KB of HDD space each.**
+
+##FEATURES:
+
+**choco-cleaner** cleans up your Chocolatey install weekly on Sundays at 11 PM.
 	
-##**choco-cleaner deletes:**
+**choco-cleaner deletes:**
+
 * .log files that are not the most current one
 * .zip, .rar, .iso, and various archive files left over from packages that forgot to delete them post install
 * .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation
 * .msi, .msu, and .msp are Microsoft intall packages left over from packages that forgot to delete them post install
-* .ignore files are created to not shim executables during package install but not needed after shim operations are finished (This may change in a future version of Chocolatey.)
+* .ignore files that are created to not shim executables during package install but not needed after shim operations are finished (This may change in a future version of Chocolatey.)
 * credits.txt are program credits (of contributors) files you can read on the web
 * readme.txt files you can read on the web
 * .md files are usually markdown readme files that you can read on the web
@@ -43,23 +52,25 @@
 * \Users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config))
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools
 
-You can edit \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner.ps1 and comment out anything you do not want to delete.
+##INSTRUCTIONS:
 
-**Organizations with software license compliance auditing should comment out and NOT delete the license and verification files for legal protection. It's also recommended that you pin this package so any future updates don't overwrite your modifications to the default script.**
+You can edit \ProgramData\chocolatey\bin\choco-cleaner.xml and set true/false for any grouping of files you want to delete, or not. License and log files default to false. This has been mandated to me for passing moderation.
 
-You can manually run choco-cleaner at any time by running \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner-manual.bat
+You can manually run choco-cleaner at any time from the Command Prompt by running \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner-manual.bat or via the shortcut in the Windows Start Menu. If you have  **[choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)** installed you'll find it with the rest of the Chocolatey Shortcuts.
 
-**Sure, you're not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as 6 byte .ignore files actually take up 4 KB of HDD space each.**
+If you have a previous release of **choco-cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or preferences.
 
-If you have a previous release of **choco-cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or time.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**
+    </description>
+	<releaseNotes>
+**Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcode/Rob has said many times, corporations are not advised to use the community respository and should be using [Chocolatey for Business](https://chocolatey.org/pricing)**
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**</description>
-    <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
-    <copyright>Copyleft Bill Curran</copyright>
-    <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</packageSourceUrl>
-    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+
+CHANGELOG:
+* 0.0.3 - Rewritten version of 0.0.1 with XML configuration file and ferventcoder/Rob's approved default settings.
+* 0.0.2 - Unreleased version with two scripts with different default settings; "Bill's way" and "Rob's way" and a package parameter to choose which one to use/install. Shelved.
+* 0.0.1 - Initial release. Did not pass Chocolatey moderation due to mandated changes of default parameters. Only "secretly" available.
+	</releaseNotes>	
     <dependencies>
       <dependency id="7zip" />
     </dependencies>
