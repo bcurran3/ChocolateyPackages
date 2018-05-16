@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
+* If you don't like the default scheduled time to run, you can easily change it using Window's TaskScheduler.
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
