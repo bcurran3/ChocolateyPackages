@@ -30,7 +30,7 @@
 
 ##FEATURES:
 
-**choco-cleaner** cleans up your Chocolatey install weekly on Sundays at 11 PM.
+Set it and forget it! **choco-cleaner** cleans up your Chocolatey installation every Sunday at 11 PM in the background so you don't have to be bothered with it.
 
 **choco-cleaner** is completely configurable, just edit \ProgramData\chocolatey\bin\choco-cleaner.xml and set true/false for any grouping of file types you want to delete or not. License and log files default to false. This has been mandated to me for passing moderation. Everything else listed below is deleted by default.
 	
@@ -59,7 +59,7 @@ To manually run **choco-cleaner**:
 
 * Command Prompt: \ProgramData\chocolatey\lib\choco-cleaner\tools\choco-cleaner-manual.bat
 * PowerShell: \ProgramData\chocolatey\bin\choco-cleaner.ps1
-* Windows Start Menu: click the icon. If you have [choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)** installed you'll find it with the rest of the Chocolatey Shortcuts.
+* Windows Start Menu: click the icon. If you have **[choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)** installed you'll find it with the rest of the Chocolatey Shortcuts.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**
     </description>
@@ -71,7 +71,7 @@ If you have a previous release of **choco-cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcode/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 ###CHANGELOG:
-* 0.0.3 - Rewritten version of 0.0.1 with XML configuration file and ferventcoder/Rob's approved default settings.
+* 0.0.3 - Rewritten version of 0.0.1 with XML configuration file and ferventcoder/Rob's approved default settings. Minor improvements.
 * 0.0.2 - Unreleased version with two scripts with different default settings; "Bill's way" and "Rob's way" and a package parameter to choose which one to use/install. Shelved.
 * 0.0.1 - Initial release. Did not pass Chocolatey moderation due to mandated changes of default parameters. Only "secretly" available.
 	</releaseNotes>	
