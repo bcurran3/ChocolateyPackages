@@ -1,7 +1,8 @@
-# choco-cleaner.ps1 v0.0.1 by Bill Curran 11/06/2017
+# choco-cleaner.ps1 by Bill Curran 
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue if you have a suggestion/request.
-Write-Host "choco-cleaner.ps1 v0.0.3 - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
+$CCver = "v0.0.3 (05/15/2018)"
+Write-Host "choco-cleaner.ps1 $CCver - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
 Write-Host "Copyleft 2017-2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -foreground white
 
 # Import preferences - see choco-cleaner.xml
@@ -27,6 +28,10 @@ $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 #parse <add key="cacheLocation" value="" description="Cache location if not TEMP folder. Replaces `$env:TEMP` value." />
 #$cacheLocation = $ConfigFile.config.cacheLocation.value
 
+if ($env:ChocolateyInstall -match $env:SystemDrive -and $env:SystemDrive -eq "C:")
+    {
+     $FreeBefore = Get-WmiObject Win32_LogicalDisk -Filter "DeviceID='C:'" | Foreach-Object {$_.FreeSpace}
+    }
 Write-Host "choco-cleaner Summary:" -foreground magenta
 Write-Host " * Deleting unnecessary _processed.txt (WTF?) file..." -foreground magenta
 Remove-Item -path $env:chocolateyinstall\bin\_processed.txt -ErrorAction SilentlyContinue
@@ -76,7 +81,7 @@ if ($DeleteLogs)
 	if ($DeleteConfigBackupFile)
     {	
      Write-Host " * Deleting unnecessary config backup files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\chocolatey\config\chocolatey.config.backup -ErrorAction SilentlyContinue
+     Remove-Item -path $env:chocolateyinstall\config\chocolatey.config.backup -ErrorAction SilentlyContinue
 	}
 
 	if ($DeleteLibBad)
@@ -103,13 +108,22 @@ if ($DeleteLogs)
      dir $env:chocolateyinstall\lib -recurse -include *.nupkg | %{7z d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
 	}
 # If cacheLocation in chocolatey.config has NOT been changed (most people)...
-# I'm going to change this to read in the location
+# I'm going to change this to read in the location from chocolatey.config in the future
 if ($DeleteCache)
     {
      Write-Host " * Deleting unnecessary cache files..." -foreground magenta
      Remove-Item -path $env:tmp\chocolatey -recurse -ErrorAction SilentlyContinue
+	 Remove-Item -path $env:SystemRoot\temp\chocolatey -recurse -ErrorAction SilentlyContinue
 	}
 
-Write-Host choco-cleaner finished deleting unnecessary Chocolatey files! -foreground magenta
+if ($env:ChocolateyInstall -match $env:SystemDrive -and $env:SystemDrive -eq "C:")
+    {
+     $FreeAfter = Get-WmiObject Win32_LogicalDisk -Filter "DeviceID='C:'" | Foreach-Object {$_.FreeSpace}
+	 $FreedSpace = $FreeAfter - $FreeBefore
+     $FreedSpace = $FreedSpace / 1024
+	 Write-Host choco-cleaner finished deleting unnecessary Chocolatey files and saved you $freedspace.ToString('N0') KB! -foreground green
+    } else {
+	  Write-Host choco-cleaner finished deleting unnecessary Chocolatey files! -foreground green
+	 }
 Write-Host "Found choco-cleaner.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
 Start-Sleep -s 10
