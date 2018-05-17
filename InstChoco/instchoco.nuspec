@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>instchoco</id>
-    <version>2.00-beta</version>
+    <version>2.00</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
@@ -25,7 +25,7 @@
 
 ##ANSWER: You need InstChoco for the NEXT time you want to install Chocolatey and automate package (re)installation!
 
-**InstChoco** is the evolution of an old batch file I used over the years to automate installing Chocolatey followed by a bunch of "choco install program -y" commands to install my standard set of packages. I eventually decided to make it a program and add many additional features as well as integrate with other Chocolatey packages I've created. What you see now is the culmination of many long days of work. I think InstChoco is the best it can be, but I'm always open to new features. Feel free to contact me with feedback. You can find **InstChoco.exe** in \ProgramData\chocolatey\lib\instchoco\tools.
+**InstChoco** is the evolution of an old batch file I used over the years to automate installing Chocolatey followed by a bunch of "choco install program -y" commands to install my standard set of packages. I eventually decided to make it a program and add many additional features as well as integrate with other Chocolatey packages I've created. What you see now is the culmination of many long days of work. I think **InstChoco** is the best it can be, but I'm always open to new features. Feel free to contact me with feedback. You can find **InstChoco.exe** in \ProgramData\chocolatey\lib\instchoco\tools.
 
 ###FEATURES:
 
