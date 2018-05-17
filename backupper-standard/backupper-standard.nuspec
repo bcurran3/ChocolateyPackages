@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>backupper-standard</id>
-    <version>4.0.6</version>
+    <version>4.1.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/backupper-standard</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>AOMEI Backupper Standard (Install)</title>

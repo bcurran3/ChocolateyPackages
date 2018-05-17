@@ -3,8 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gptgen</id>
-    <version>1.1.20170316</version>
+    <version>1.1.20180516</version>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gptgen</packageSourceUrl>	
     <title>gptgen (Portable)</title>
     <authors>Gábor A. Stefanik</authors>
     <projectUrl>https://sourceforge.net/projects/gptgen/</projectUrl>
@@ -15,9 +16,25 @@
     <mailingListUrl>https://sourceforge.net/p/gptgen/mailman/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/gptgen/bugs/</bugTrackerUrl>
     <tags>gptgen mbr gpt portable</tags>
-    <summary>convert MBR to GPT</summary>
-    <description>Gptgen is a tool to non-destructively convert hard disks partitioned in the common, "MSDOS-style" MBR scheme (including extended partitions) to use a GUID partition table (GPT).</description>
-    <releaseNotes>new DL link - old mirror disappeared - trying more generic link</releaseNotes>
+    <summary>gptgen - convert MBR to GPT</summary>
+    <description>
+GPT fdisk (aka gdisk) is a text-mode menu-driven program for creation and manipulation of partition tables. It will automatically convert an old-style Master Boot Record (MBR) partition table or BSD disklabel stored without an MBR carrier partition to the newer Globally Unique Identifier (GUID) Partition Table (GPT) format, or will load a GUID partition table. When used with the -l command-line option, the program displays the current partition table and then exits.
+GPT fdisk operates mainly on the GPT headers and partition tables; however, it can and will generate a fresh protective MBR, when required. (Any boot loader code in the protective MBR will not be disturbed.) If you've created an unusual protective MBR, such as a hybrid MBR created by gptsync or gdisk's own hybrid MBR creation feature, this should not be disturbed by most ordinary actions. Some advanced data recovery options require you to understand the distinctions between the main and backup data, as well as between the GPT headers and the partition tables. For information on MBR vs. GPT, as well as GPT terminology and structure, see the extended gdisk documentation at http://www.rodsbooks.com/gdisk/ or consult Wikipedia.
+
+The gdisk program employs a user interface similar to that of Linux's fdisk, but gdisk modifies GPT partitions. It also has the capability of transforming MBR partitions or BSD disklabels into GPT partitions. Like the original fdisk program, gdisk does not modify disk structures until you explicitly write them to disk, so if you make a mistake, you can exit from the program with the 'q' option to leave your partitions unmodified.
+
+Ordinarily, gdisk operates on disk device files, such as /dev/sda or /dev/hda under Linux, /dev/disk0 under Mac OS X, or /dev/ad0 or /dev/da0 under FreeBSD. The program can also operate on disk image files, which can be either copies of whole disks (made with dd, for instance) or raw disk images used by emulators such as QEMU or VMWare. Note that only raw disk images are supported; gdisk cannot work on compressed or other advanced disk image formats.
+
+The MBR partitioning system uses a combination of cylinder/head/sector (CHS) addressing and logical block addressing (LBA). The former is klunky and limiting. GPT drops CHS addressing and uses 64-bit LBA mode exclusively. Thus, GPT data structures, and therefore gdisk, do not need to deal with CHS geometries and all the problems they create. Users of fdisk will note that gdisk lacks the options and limitations associated with CHS geometries.
+
+For best results, you should use an OS-specific partition table program whenever possible. For example, you should make Mac OS X partitions with the Mac OS X Disk Utility program and Linux partitions with the Linux gdisk or GNU Parted program.
+
+Upon start, gdisk attempts to identify the partition type in use on the disk. If it finds valid GPT data, gdisk will use it. If gdisk finds a valid MBR or BSD disklabel but no GPT data, it will attempt to convert the MBR or disklabel into GPT form. (BSD disklabels are likely to have unusable first and/or final partitions because they overlap with the GPT data structures, though.) GPT fdisk can identify, but not use data in, Apple Partition Map (APM) disks, which are used on 680x0- and PowerPC-based Macintoshes. Upon exiting with the 'w' option, gdisk replaces the MBR or disklabel with a GPT. This action is potentially dangerous! Your system may become unbootable, and partition type codes may become corrupted if the disk uses unrecognized type codes. Boot problems are particularly likely if you're multi-booting with any GPT-unaware OS. If you mistakenly launch gdisk on an MBR disk, you can safely exit the program without making any changes by using the 'q' option.
+
+(more in gdisk.html)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/gptgen/readme.md)**
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
