@@ -6,7 +6,7 @@
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.05.09" # Version of this script
+$CPLBver        = "2018.05.17" # Version of this script
 $Date           = Get-Date -UFormat %Y-%m-%d
 
 # Import preferences - see choco-package-list-backup.xml
@@ -24,6 +24,7 @@ $UseHomeShare = $ConfigFile.Settings.Preferences.UseHomeShare
 $UseBox = $ConfigFile.Settings.Preferences.UseBox
 $UseDropbox = $ConfigFile.Settings.Preferences.UseDropbox
 $UseGoogleDrive = $ConfigFile.Settings.Preferences.UseGoogleDrive
+$UseiCloudDrive = $ConfigFile.Settings.Preferences.UseiCloudDrive
 $UseNextcloud = $ConfigFile.Settings.Preferences.UseNextcloud
 $UseOneDrive = $ConfigFile.Settings.Preferences.UseOneDrive
 $UseReadyCLOUD = $ConfigFile.Settings.Preferences.UseReadyCLOUD
@@ -161,7 +162,6 @@ if ($GFSInstalled)
 	}
    
 # Backup Chocolatey package names on local computer to packages.config file on your HOMESHARE directory if it exists
-#if ($UseHomeShare -match "True" -and (Test-Path "$Env:HOMESHARE" -eq "True"))
 $ExistHomeShare = (Test-Path "Env:HOMESHARE")
 if ($UseHomeShare -match "True" -and $ExistHomeShare -match "True")   
    {
@@ -169,6 +169,13 @@ if ($UseHomeShare -match "True" -and $ExistHomeShare -match "True")
     Write-PackageConfig
    }      
 
+# Backup Chocolatey package names on local computer to packages.config file in iCloudDrive directory if it exists
+if ($iCloudDrive -match "True" -and (Test-Path $Env:USERPROFILE\iCloudDrive))
+   {
+    $SavePath = "$Env:USERPROFILE\iCloudDrive\$SaveFolderName\$Env:ComputerName"
+    Write-PackageConfig
+   }    
+   
 # Backup Chocolatey package names on local computer to packages.config file in Nextcloud directory if it exists
 if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
    {
