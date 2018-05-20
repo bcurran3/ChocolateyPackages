@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2018.05.17</version>
+    <version>2018.05.19</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
@@ -76,6 +76,7 @@
 	</description>
 	<releaseNotes>
 CHANGELOG:
+* 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
 * 2018.05.17 - added iCloudDrive support
 * 2018.05.09 - added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades! Backups not created any more.
 * 2018.05.06 - added Dropbox Business and Google Drive File Stream support (Thanks ebbek!)

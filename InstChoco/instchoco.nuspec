@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>instchoco</id>
-    <version>2.00</version>
+    <version>2.01</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
@@ -33,7 +33,7 @@
 * **InstChoco** will enable up to four choco features if you pass them as parameters, i.e. allowGlobalConfirmation, failOnAutoUninstaller, allowEmptyChecksums, useRememberedArgumentsForUpgrades, etc.
 * **InstChoco** can download a packages.config file from the Internet and install packages from that downloaded file.
 * **InstChoco** will automatically search for a PACKAGES.CONFIG file in various locations on your computer and install packages from it if found. 
-* **InstChoco** has baked in support for [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup). **InstChoco** will use the first found PACKAGES.CONFIG in the following order: current directory, Documents folder, HOMESHARE, Box, Dropbox, Google Drive, OneDrive, ReadyCLOUD, Nextcloud, Resilio Sync, Seafile, or Tonido Sync.
+* **InstChoco** has baked in support for [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup). **InstChoco** will use the first found PACKAGES.CONFIG in the following order: current directory, Documents folder, HOMESHARE, Box, Dropbox, Google Drive, iCloudDrive, OneDrive, ReadyCLOUD, Nextcloud, Resilio Sync, Seafile, or Tonido Sync.
 * **InstChoco** has baked in support for [Choco Persistent Packages](https://chocolatey.org/packages/choco-persistent-packages). **InstChoco** will use PERSISTANTPACKAGES.CONFIG and install packages from it if found.
 * **InstChoco** has a baked in mini version of [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) to backup a list of your installed Chocolatey packages.
 * **InstChoco** has baked in support for Windows Active Directory domains. **InstChoco** will use various PACKAGES.CONFIG files based on domain and user account to install packages from them if found. Now you can easily standardize your organization with base Chocolatey package installs.
@@ -95,7 +95,8 @@ Optional  - You may pass up to 4 choco features to enable after other options an
             i.e. allowGlobalConfirmation failOnAutoUninstaller allowEmptyChecksums useRememberedArgumentsForUpgrades
 	
 ###CHANGELOG:
-* 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Commercial use of InstChoco v2+ requires a paid license.
+* 2.00 - fixed bug with non-domain joined computers
+* 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Added iCloudDrive support. Commercial use of InstChoco v2+ requires a paid license.
 * 1.30 - Added ability to download a packages.config file from the web and install packages from it.
 * 1.21 - Added Box, Nextcloud, and Seafile support to catch up with choco-package-list-backup.
 * 1.20 - Added domain support to install predefined packages for domain joined computers and user specific packages.
