@@ -1,0 +1,9 @@
+LICENSE INFORMATION:
+
+InstChoco is Copyright 2018 Bill Curran and is free for personal use, though donations are encouraged.
+
+Commercial use of InstChoco is forbidden without a paid license. Organizations who purchase an InstChoco
+license will receive a customized version of InstChoco with their organization's name embedded in the program
+and without corporate nag screens.
+
+To inquire about purchasing a license, please contact bcurran3@yahoo.com

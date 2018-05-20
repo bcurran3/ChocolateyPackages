@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>google-web-designer</id>
-    <version>2.0.2.1128</version>
+    <version>3.0.1.0319</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-web-designer</packageSourceUrl>
     <title>Google Web Designer (Install)</title>

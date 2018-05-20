@@ -9,6 +9,7 @@ ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
+* 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
 * 2018.05.17 - added iCloudDrive support
 * 2018.05.09 - added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades! Backups not created any more.
 * 2018.05.06 - added Dropbox Business and Google Drive File Stream support (Thanks ebbek!)

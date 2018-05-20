@@ -6,7 +6,7 @@
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 # CAN NOT save/get installed package parameters as they are encrypted :(
 
-$CPLBver        = "2018.05.17" # Version of this script
+$CPLBver        = "2018.05.19" # Version of this script
 $Date           = Get-Date -UFormat %Y-%m-%d
 
 # Import preferences - see choco-package-list-backup.xml
@@ -66,7 +66,7 @@ Function Check-InstChoco{
 		    if ($ICSource -ne $ICDest)
 		       {
 		        Copy-Item $InstChoco $SavePath -force | out-null
-		        Write-Host "$SavePath\InstChoco.exe SAVED!" -ForegroundColor green
+		        Write-Host "  * $SavePath\InstChoco.exe COPIED!" -ForegroundColor green
 			   }
 	   }
     }
@@ -89,11 +89,12 @@ Function Write-PackageConfig{
          choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" />" }>>"$SavePath\$PackagesListFile"
 		 }
     Write-Output "</packages>" >>"$SavePath\$PackagesListFile"
-	Write-Host "$SavePath\$PackagesListFile SAVED!" -ForegroundColor green 
+	Write-Host "  * $SavePath\$PackagesListFile SAVED!" -ForegroundColor green 
     }
 
 Write-Host choco-package-list-backup.ps1 v$CPLBver - backup Chocolatey package list locally and to the cloud -ForegroundColor white
 Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
+Write-Host "CPLB Summary:" -ForegroundColor magenta
 
 # Backup Chocolatey package names to packages.config file in custom defined path you set in $CustomPath above in line 16
 if ($UseCustomPath -match "True" -and (Test-Path $CustomPath))
@@ -162,7 +163,7 @@ if ($GFSInstalled)
 	}
    
 # Backup Chocolatey package names on local computer to packages.config file on your HOMESHARE directory if it exists
-$ExistHomeShare = (Test-Path "Env:HOMESHARE")
+if ($env:HOMESHARE) {$ExistHomeShare="True"} else {$ExistHomeShare="False"}
 if ($UseHomeShare -match "True" -and $ExistHomeShare -match "True")   
    {
     $SavePath = "$Env:HOMESHARE\$SaveFolderName\$Env:ComputerName"   
@@ -184,7 +185,8 @@ if ($UseNextcloud -match "True" -and (Test-Path $Env:USERPROFILE\Nextcloud))
    } 
    
 # Backup Chocolatey package names on local computer to packages.config file in OneDrive directory if it exists
-if ($UseOneDrive -match "True" -and (Test-Path $Env:OneDrive))
+if ($env:OneDrive) {$OneDriveExists="True"} else {$OneDriveExists="False"}
+if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
    {
     $SavePath = "$Env:OneDrive\$SaveFolderName\$Env:ComputerName"
     Write-PackageConfig
