@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
@@ -11,4 +11,3 @@ Find them useful?
 https://www.paypal.me/bcurran3donations
 
 If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
-

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>amazondrive</id>
-    <version>5.0.3.98</version>
+    <version>5.2.4.100</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazondrive</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Amazon Drive (Install)</title>
