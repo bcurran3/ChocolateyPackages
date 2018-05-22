@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>instchoco</id>
-    <version>2.01</version>
+    <version>2.02</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
@@ -95,7 +95,8 @@ Optional  - You may pass up to 4 choco features to enable after other options an
             i.e. allowGlobalConfirmation failOnAutoUninstaller allowEmptyChecksums useRememberedArgumentsForUpgrades
 	
 ###CHANGELOG:
-* 2.00 - fixed bug with non-domain joined computers
+* 2.02 - removed legacy date checking and connectivity checking which only worked in English environments
+* 2.01 - fixed bug with non-domain joined computers
 * 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Added iCloudDrive support. Commercial use of InstChoco v2+ requires a paid license.
 * 1.30 - Added ability to download a packages.config file from the web and install packages from it.
 * 1.21 - Added Box, Nextcloud, and Seafile support to catch up with choco-package-list-backup.
