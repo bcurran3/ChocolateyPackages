@@ -10,7 +10,8 @@ ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
-* 2.00 - fixed bug with non-domain joined computers
+* 2.02 - removed legacy date checking and connectivity checking which only worked in English environments
+* 2.01 - fixed bug with non-domain joined computers
 * 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Commercial use of InstChoco v2+ requires a paid license.
 * 1.30 - Added ability to download a packages.config file from the web and install packages from it.
 * 1.21 - Added Box, Nextcloud, and Seafile support to catch up with choco-package-list-backup.
