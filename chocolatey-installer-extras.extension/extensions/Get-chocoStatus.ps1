@@ -1,10 +1,17 @@
 function Get-chocoStatus{
-$chocoInstances = @(get-process -ea silentlycontinue choco).count
+$chocoInstances = @(Get-Process -ea silentlycontinue choco).count
+# running choco got you here and is one instance!
 
-if($chocoInstances -eq 1){ 
-    Write-Host "  ** choco.exe is currently NOT running." -foreground green
-  }else{ 
-    Write-Host "  ** WARNING: Found $chocoInstances instances of choco.exe running." -foreground red
-  }
-  
+if ($chocoInstances -gt 1)
+    {
+     while ($chocoInstances -gt 1)
+     {
+      Write-Host "  ** WARNING: Found $chocoInstances instances of choco.exe running. Pausing 15 seconds..." -foreground red
+	  Start-Sleep -seconds 15
+      $chocoInstances = @(Get-Process -ea silentlycontinue choco).count
+     }
+	} 
+Write-Host "  ** choco.exe IS NOT running multiple instances." -foreground green
 }
+
+
