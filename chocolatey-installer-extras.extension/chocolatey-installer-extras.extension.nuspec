@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-installer-extras.extension</id>
+    <version>0.0.1</version>	
+    <owners>bcurran3</owners>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-installer-extras.extension</packageSourceUrl>
+    <title>Chocolatey Extended Installer Extension</title>
+    <authors>Bill Curran</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-installer-extras.extension</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-installer-extras.extension_icon.png</iconUrl>	
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-installer-extras.extension</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 unofficial choco installer extras extension</tags>
+    <summary>Chocolatey Installer Extras Extension is a collection of installer add-ons.</summary>
+    <description>
+#**Chocolatey Installer Extras Extension** is a Chocolatey extension for .........
+
+#Purpose
+
+#Functions
+
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-installer-extras.extension/readme.md)**
+    </description>
+  </metadata>
+</package>
