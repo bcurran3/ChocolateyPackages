@@ -1,17 +1,4 @@
-function Start-PreInstallChecks {
-param([array[]]$packageArgs)
-
-#param($packageArgs)
-#param([string]$packageArgs)
-#param([array]$packageArgs)
-#param([string[]]$packageArgs)
-#        [Parameter(ValueFromPipeline = $true)]
-#        [System.Diagnostics.Process[]]
-#        $packageArgs
-#[parameter(Position=0,ValueFromPipeline=$True)]
-#[String[]] $packageArgs
-
-$packageArgs
+function Start-PreInstallChecks{
 
 Write-Host "PRE-INSTALLATION STATUS:" -foreground magenta
 if (Get-PendingRebootStatus) 
@@ -22,7 +9,6 @@ if (Get-PendingRebootStatus)
 	}
 Get-WindowsInstallerStatus
 Get-chocoStatus
-Install-ChocolateyPackageOriginal @packageArgs
+Remove-Item alias:\Install-ChocolateyPackage
+Install-ChocolateyPackage @args
 }
-
-#close but not there yet
