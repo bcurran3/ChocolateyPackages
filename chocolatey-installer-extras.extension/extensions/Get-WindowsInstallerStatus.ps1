@@ -1,16 +1,16 @@
 function Get-WindowsInstallerStatus{
-$ServiceName = 'msiserver'
-$InstallerService = Get-Service -Name $ServiceName
+$msiexecInstances = @(Get-Process -ea silentlycontinue msiexec).count
+# From my observances, msiexec sticks around after a .msi is run. Running an .msi causes 2-3 occurrences of msiexec.
 
-while ($InstallerService.Status -eq 'Running')
+if ($msiexecInstances -gt 1)
    {
-    write-host "  ** WARNING: Windows Installer IS running" -foreground red
-	Start-Sleep -seconds 30
-    $InstallerService.Refresh()
+    while ($msiexecInstances -gt 1)
+	{
+     Write-Host "  ** WARNING: Windows Installer IS currently running. Pausing 15 seconds..." -foreground red
+	 Start-Sleep -seconds 15
+     $msiexecInstances = @(Get-Process -ea silentlycontinue msiexec).count
+	}
    }
-if ($InstallerService.Status -ne 'Running')
-    {
-     Write-Host "  ** Windows Installer IS NOT running" -foreground green
-    }
+Write-Host "  ** Windows Installer IS NOT currently running" -foreground green
 }
 
