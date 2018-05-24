@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-preinstaller-checks.extension</id>
+    <version>0.0.1-pre</version>	
+    <owners>bcurran3</owners>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</packageSourceUrl>
+    <title>Chocolatey Preinstaller Checks Extension</title>
+    <authors>Bill Curran</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension_icon.png</iconUrl>	
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 unofficial choco preinstaller checks extension</tags>
+    <summary>Chocolatey Preinstaller Checks Extension is a collection of installer add-ons.</summary>
+    <description>
+	
+#PRERELEASE - TESTING AND FEEDBACK IS HIGHLY ENCOURAGED!
+#KNOWN BUG - DOESN'T WORK WITH AUTO UNINSTALLER (YET!)
+	
+##**Chocolatey Preinstaller Checks Extension** is a Chocolatey extension that intercepts and runs checks before installing or uninstalling a program. This extension will start working automatically once installed and does NOT need to be implemented by package creators/maintainers. #**Chocolatey Preinstaller Checks Extension** is meant to be installed and thus used directly by Chocolatey end users.
+
+###PURPOSE:
+**Chocolatey Preinstaller Checks Extension**'s main purpose to fend off specific types of problems before they occur. Currently Chocolatey (choco.exe) is not multi-instance friendly. If you try to install packages using choco install or cinst in two Command Prompts at the same time, strange things may occur. **Chocolatey Preinstaller Checks Extension** avoids these strange things by intercepting calls to install programs and making choco.exe wait for previous instances to finish. **Chocolatey Preinstaller Checks Extension** also checks Windows Installer to see if it's busy and will make MSI installer programs wait until Windows Installer has finished processing the other program. **Chocolatey Preinstaller Checks Extension** will pause and retry until [commandExecutionTimeoutSeconds](https://chocolatey.org/docs/chocolatey-configuration) hits it's threshold of 2700 seconds/45 minutes (default) and then choco will abort. **Chocolatey Preinstaller Checks Extension** only runs before program installations. It does not perform any functions related to portable packages or other choco commands.
+
+###FEATURES: 
+* **Chocolatey Preinstaller Checks Extension** will check if there is a pending reboot and warn you about it if so.
+* **Chocolatey Preinstaller Checks Extension** will check if there are instances of choco.exe already running and wait for them to finish.
+* **Chocolatey Preinstaller Checks Extension** will check if Windows Installer is already running and wait for it to finish.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-preinstaller-checks.extension/readme.md)**
+    </description>
+  </metadata>
+</package>
