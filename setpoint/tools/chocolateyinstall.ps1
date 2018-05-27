@@ -2,7 +2,9 @@
 $packageName = 'setpoint' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'http://www.logitech.com/pub/techsupport/mouse/SetPoint6.67.83_32.exe'
+$checksum    = '8C83874F83AB8580D3A345C550C9834F277EFD2E1C393535D11BD5D702DD79EE'
 $url64       = 'http://www.logitech.com/pub/techsupport/mouse/SetPoint6.67.83_64.exe'
+$checksum64  = '9948B0ACE1B91C416141EF8C73C2D944D19BBD6135D26FC6A4B34F7393D1AF21'
 $silentArgs  = '/S' 
 
 $packageArgs = @{
@@ -10,10 +12,10 @@ $packageArgs = @{
   unzipLocation = $toolsDir
   fileType      = 'exe' 
   url           = $url
-  checksum      = '1E60A1B0B302AD3B116B29DFE736FCEECF4DA21D4FF9CF0288E86EB14FA79210'
+  checksum      = $checksum
   checksumType  = 'sha256' 
   url64bit      = $url64  
-  checksum64    = '11650114A18EEB4F6BE75462C6D93891C31BB95D8BE908503854832071B1683E'
+  checksum64    = $checksum64
   checksumType64= 'sha256'  
   silentArgs    = $silentArgs 
   softwareName  = 'Logitech SetPoint*' 

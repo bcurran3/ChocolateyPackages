@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'trojan-remover'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://tremover.com/download/dl/trjsetup695.exe' 
-$checksum       = '4AD54BAE9C94E565246ECE5C96FD504CB539C624F4EF2705EA71449FB151134B'
+$url            = 'https://simplysup.co.uk/download/dl/trjsetup695.exe' 
+$checksum       = '526B5C905B4EEB58457F029A5F3EFC8851E0566C457CB809C768C9A176041285'
 $silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
 $validExitCodes = @(0) 
 
