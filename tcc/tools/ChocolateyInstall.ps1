@@ -3,7 +3,7 @@ $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $fileType    = 'exe'
 $silentArgs  = '/quiet'
 $url         = 'https://jpsoft.com/downloads/v22/tcc.exe'
-$checksum    = '195072FD6D093717D8D053B4B24D49814028CD6585E773965BB1006238C80E13'
+$checksum    = 'F2CD29509D3BF8867D52DF0A016FC4BDB9DA7FD636AF7BA41A607BBF166FBD08'
 
 $packageArgs = @{
   packageName   = $packageName

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>performancetest</id>
-    <version>9.0.1022</version>
+    <version>9.0.1025</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/performancetest</packageSourceUrl>
     <title>PassMark PerformanceTest (Install)</title>
