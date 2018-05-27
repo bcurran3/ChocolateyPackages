@@ -2,24 +2,63 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>-chrome</id>
-    <version></version>
-    <title>for Chrome</title>
-    <authors></authors>
+    <id>toby-chrome</id>
+    <version>0.5.2</version>
+    <title>Toby for Chrome</title>
+    <authors>gettoby.com</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
-    <projectUrl></projectUrl>
-    <bugTrackerUrl></bugTrackerUrl>	
-    <iconUrl></iconUrl>
-    <licenseUrl></licenseUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/toby-chrome</packageSourceUrl>		
+    <projectUrl>http://www.gettoby.com/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/toby-chrome/Tobo_symbol_pink.jpg</iconUrl>
+	<docsUrl>http://www.gettoby.com/faq</docsUrl>
+    <licenseUrl>http://www.gettoby.com/terms</licenseUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+![Screenshot of Toby for Chrome](https://lh3.googleusercontent.com/9qlrLXCj3xSTNAqZhovTq68fqF_fsEOyKvaI0AEEFEMG6DVEeZpugdGYEueRKOZaUGNGyHMAzDE=w640-h400-e365)	
 	
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master//readme.md)**
+##Better than bookmarks. Organize your browser tabs and access them quickly anywhere. “I don’t want to have 3,000 tabs open anymore” – from a new Toby user
+ 
+Bookmarks are for books, not browsers. Organize your browser tabs into Toby so you can access key resources in one-click instead of seven.
+ 
+Toby is better than bookmarks, it levels up your Chrome browser. Toby is a visual workspace that lives on every new tab. Add new tabs by dragging and dropping your browser tabs into collections or save a whole session in just one-click. Access all of your collections on any desktop with automatic sync. Use tags to organize your collections or create notes for your to-dos.
+ 
+Toby is changing the way you save and access tabs by making it easy and fun to use.  
+ 
+* #1 Chrome extension of 2016 from Product Hunt
+* Google Chrome’s Best of 2016 list
+* Featured in MIT Tech Review, Business Insider, Brit + Co and 30 other publications
+* Teams who work at Bazaarvoice, Twitter, New Relic, IBM, and more are using it daily
+* Over 9,250 love letters written by #TobyFriends in over 144 countries around the world
+
+###WHY TAB MANAGEMENT?
+
+We built Toby to provide distraction-free focus, saving you time spent switching between tabs from web apps and websites. A survey of Toby customers showed that Toby saves up to 8 hours per week, per person—the equivalent of ~48 work days per year.
+ 
+★ Pause and resume work
+ 
+Feel like your workflow is bottle-necked by context switching? With one-click Toby is able to save your browser session, or open it when you’re ready to resume your task.
+ 
+★ Clear the clutter
+ 
+Using different browser windows to separate tabs into to-dos, dashboards, and spreadsheets is not ideal. With Toby, you can remove the clutter by using one window with the tabs you need, right when you need it.
+ 
+★ Be an expert everywhere you work
+
+Get instant access to the tabs you need to get the job done. Toby is able to search for any website inside of any collection, letting you find exactly what you’re looking for in seconds.
+ 
+★ Flexible with your work habits
+ 
+Toby lives on every new tab and lets you speed dial into the websites or apps you use on a daily basis. Quick and consistent access is the key to Toby’s value.
+ 
+★ Stop emailing yourself links
+ 
+Access Toby on any page just by right-clicking. Now you can spend more time doing work while queuing up all of your favorite articles to read later.
+ 	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/toby-chrome/readme.md)**
 	</description>
-    <summary></summary>
-    <tags>chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <summary>Toby is a Chrome extension that organizes bookmarks into a card system.</summary>
+    <tags>toby bookmarks chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>
