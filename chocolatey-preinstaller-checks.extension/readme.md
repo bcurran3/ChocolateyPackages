@@ -8,6 +8,7 @@ CHANGE LOG:
 * 0.0.1   - initial release
 
 ROADMAP:
+* Check for the Chocolatey self service agent and handle differently (ignore?) when found.
 * Possibly add configurable options to enable disable each of the three checks.
 * Probably add configurable timeouts for each of the three checks.
 * Probably add conditional handling options for each of the three checks, i.e. option to abort install based on condition.
