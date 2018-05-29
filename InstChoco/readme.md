@@ -9,16 +9,17 @@ ROADMAP:
 * Add ability to use a different source other than the Chocolatey public repository. CANCELLED - sources can be listed inside packages.config.
 * I'm open to suggestions - open a GitHub issue please.
 
-CHANGELOG:
-* 2.02 - removed legacy date checking and connectivity checking which only worked in English environments
-* 2.01 - fixed bug with non-domain joined computers
-* 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Commercial use of InstChoco v2+ requires a paid license.
+###CHANGELOG:
+* 2.10 - Added offline Chocolatey install option.
+* 2.02 - Removed legacy date checking and connectivity checking which only worked in English environments.
+* 2.01 - Fixed bug with non-domain joined computers.
+* 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Added iCloudDrive support. Commercial use of InstChoco v2+ requires a paid license.
 * 1.30 - Added ability to download a packages.config file from the web and install packages from it.
 * 1.21 - Added Box, Nextcloud, and Seafile support to catch up with choco-package-list-backup.
 * 1.20 - Added domain support to install predefined packages for domain joined computers and user specific packages.
 * 1.11 - (unreleased) Added -ynp switch to skip installation of packages. (Install Chocolatey only)
-* 1.10 - Added [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) and [choco persistent packages](https://chocolatey.org/packages/choco-persistent-packages) support for package (re)installation. Cosmetic changes. Checks for year 2018 or greater instead of 2017 or greater. Updated donation info. :)
-* 1.00 - initial release
+* 1.10 - Added [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) and [Choco Persistent Packages](https://chocolatey.org/packages/choco-persistent-packages) support for package (re)installation. Cosmetic changes. Checks for year 2018 or greater instead of 2017 or greater. Updated donation info. :)
+* 1.00 - Initial release.
 
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
