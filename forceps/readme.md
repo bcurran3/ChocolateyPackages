@@ -19,8 +19,8 @@ Chocolatey will download **ForcePS** to the package's tools directory and shim i
 USAGE: ForcePS PSscript.ps1 parameter1 parameter2
 
 CHANGELOG:
-v1.0.0.1 - updated donation link :)
-v1.0 - initial release
+* v1.0.0.1 - updated donation link :)
+* v1.0 - initial release
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
