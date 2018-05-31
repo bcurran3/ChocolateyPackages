@@ -49,7 +49,7 @@ Find them useful?
 
 **Want to buy me a beer?**
 
-[![Donate](https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_76x48.png)](https://www.paypal.me/bcurran3donations)
+[[Donate](https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_76x48.png)](https://www.paypal.me/bcurran3donations)
 
 https://www.paypal.me/bcurran3donations
 
