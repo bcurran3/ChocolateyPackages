@@ -13,7 +13,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</packageSourceUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension/chocolatey-preinstaller-checks.extension_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Chocolatey Preinstaller Checks Extension is a collection of helpers that check for possible unwanted conditions before installing and uninstalling Chocolatey packages.</summary>	
     <description>
@@ -31,6 +31,7 @@ This extension attempts to head off problems related to:
 * [https://github.com/chocolatey/choco/issues/780](https://github.com/chocolatey/choco/issues/780)
 * [https://github.com/chocolatey/choco/issues/1526](https://github.com/chocolatey/choco/issues/1526)
 * [https://github.com/chocolatey/choco/issues/1548](https://github.com/chocolatey/choco/issues/1548)
+* [https://github.com/chocolatey/choco/issues/1579](https://github.com/chocolatey/choco/issues/1579)
 * and possibly others until such time that Chocolatey natively handles these issues better and this extension becomes moot.
 
 **Chocolatey Preinstaller Checks Extension**'s main purpose is to fend off specific types of problems before they occur. Currently Chocolatey (choco.exe) is not multi-instance friendly. If you try to install or uninstall packages using choco.exe in two Command Prompts at the same time, strange (bad) things may occur. **Chocolatey Preinstaller Checks Extension** avoids these strange (bad) things by intercepting calls to install and uninstall programs and making the current choco.exe instance wait for previous instances to finish. **Chocolatey Preinstaller Checks Extension** also checks Windows Installer to see if it's busy and will make MSI installer and uninstaller programs wait until Windows Installer has finished processing the other program. **Chocolatey Preinstaller Checks Extension** will pause and retry until [commandExecutionTimeoutSeconds](https://chocolatey.org/docs/chocolatey-configuration) hits it's threshold and then choco will abort. **Chocolatey Preinstaller Checks Extension** only runs before PROGRAM installations and uninstallations. It does not perform any functions related to portable packages or other choco commands.
@@ -48,14 +49,12 @@ This extension attempts to head off problems related to:
 ###CHANGE LOG:
 * 0.0.1   - initial release
 
-ROADMAP:
-* Check for the Chocolatey self service agent and handle differently (ignore?) when found.
+###ROADMAP:
+* Check for the Chocolatey self service agent and handle differently. i.e.Skip check if agent found? Ignore check completely if licensed?
 * Possibly add configurable options to enable disable each of the three checks.
 * Probably add configurable timeouts for each of the three checks.
 * Probably add conditional handling options for each of the three checks, i.e. option to abort install based on condition.
 
-You can add your options/wants/recommendations to https://github.com/bcurran3/ChocolateyPackages/issues/27
-
-You can add your options/wants/recommendations to https://github.com/bcurran3/ChocolateyPackages/issues/27	</releaseNotes>
+You can add your options/wants/recommendations to https://github.com/bcurran3/ChocolateyPackages/issues/27</releaseNotes>
   </metadata>
 </package>
