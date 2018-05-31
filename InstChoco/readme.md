@@ -1,9 +1,28 @@
-![](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png)
-
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * It is not recommended to run InstChoco without the -ynp switch on servers if you are using the Windows Active Directory Domain features!
+
+![](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png)
+
+![Screenshot of InstChoco in use](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
+
+#InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!
+	
+##QUESTION: "Why do I need an installer for Chocolatey when I already have Chocolatey installed?"
+
+##ANSWER: You need InstChoco for the NEXT time you want to install Chocolatey and automate package (re)installation!
+
+**InstChoco** is the evolution of an old batch file I used over the years to automate installing Chocolatey followed by a bunch of "choco install program -y" commands to install my standard set of packages. I eventually decided to make it a program with additional features. I also integrated with other Chocolatey packages I've created. What you see now is the culmination of many long hard hours of work. I think **InstChoco** is the best it can be, but I'm always open to new features. Feel free to contact me with feedback. You can find **InstChoco.exe** in \ProgramData\chocolatey\lib\instchoco\tools. If you don't already have Chocolatey installed you can download **InstChoco** from [SOFTPEDIA](http://www.softpedia.com/get/System/System-Miscellaneous/InstChoco.shtml), [CNET's Download.com](https://download.cnet.com/InstChoco/3000-2094_4-77751542.html), or [directly from my GitHub repo](https://github.com/bcurran3/ChocolateyPackages/raw/master/InstChoco/tools/InstChoco.exe).
+
+###FEATURES:
+
+![Screenshot of InstChoco features](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_features_screenshot.png)
+
+###Usage: 
+
+![Screenshot of InstChoco Options](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
+
 
 ROADMAP:
 * Possibly add domain security group specific package support; i.e. MARKETING needs GIMP but DEVELOPMENT doesn't. DEVELOPMENT needs NOTEPAD++ but SALES doesn't.
