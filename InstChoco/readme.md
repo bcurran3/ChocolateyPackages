@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png)
+
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
