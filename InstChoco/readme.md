@@ -51,6 +51,8 @@ Find them useful?
 
 [![Donate](https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_76x48.png)](https://www.paypal.me/bcurran3donations)
 
+[![Creative Commons License](http://i.creativecommons.org/l/by-nc-nd/3.0/88x31.png)](http://creativecommons.org/licenses/by-nc-nd/3.0/)
+
 https://www.paypal.me/bcurran3donations
 
 If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
