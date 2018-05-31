@@ -1,3 +1,5 @@
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="139" height="88">
+
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
@@ -7,6 +9,58 @@ ROADMAP:
 * Add other cloud services support by request
 * Create a scheduled task to run daily/weekly/monthly/whenever
 * I'm open to suggestions - open a GitHub issue please.
+
+![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
+	
+#choco-package-list-backup solves your Chocolatey migration and package re-installation problems!
+
+**choco-package-list-backup** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **choco-package-list-backup** backs up your package list locally and to multiple cloud services!
+
+###FEATURES:
+
+**choco-package-list-backup** supports saving PACKAGES.CONFIG to all of the following:
+
+* your local Documents folder
+* your Active Directory assigned HOMESHARE
+* Box
+* Dropbox Personal and Business
+* Google Drive and Drive File Stream
+* iCloudDrive
+* Microsoft OneDrive
+* NETGEAR ReadyCLOUD
+* Nextcloud
+* Resilio Sync
+* Seafile
+* TonidoSync
+* A custom location of your choice
+* more coming - Let me know what you want/need!
+
+**choco-package-list-backup** runs on install to make sure you have backup(s) right now!
+
+**choco-package-list-backup** supports copying [InstChoco](https://chocolatey.org/packages/instchoco) with the PACKAGES.CONFIG path for the fastest way ever to reinstall Chocolatey and your Chocolatey packages! (Or migrate!)
+
+**choco-package-list-backup** supports backing up PERSISTENTPACKAGES.CONFIG if you are using [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)
+
+**choco-package-list-backup** integrates with [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) if installed.
+
+**choco-package-list-backup** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s). No confusion over what computer gets what packages!
+
+**choco-package-list-backup** is configurable. You can:
+
+* configure which locations you want or don't want to save to (default=all the locations found except the custom location)
+* configure to save package version information or not (default=false)
+* configure to append a date to the saved packages.config (default=false)
+* configure what folder to save to (default=ChocolateyPackageListBackup)
+* easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
+
+**choco-package-list-backup** and choco-package-list-backup.xml are saved to Chocolatey's bin folder (\ProgramData\chocolatey\bin), so **choco-package-list-backup** is in your path.
+
+###INSTRUCTIONS:
+
+* Edit \ProgramData\chocolatey\bin\choco-package-list-backup.xml to customize your backup(s). It's easy, there are comments.
+* From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
+* From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
+* From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.
 
 CHANGELOG:
 * 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
@@ -25,14 +79,13 @@ CHANGELOG:
 * 2018.01.29 - edited re-installation message, updated donation info :)
 * 2017.12.17 - added editable custom save location (requested)
 
-
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 
 Find them useful?
 
 **Want to buy me a beer?**
 
-https://www.paypal.me/bcurran3donations
+[![Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 
-If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
+If applicable, please always consider donating to the developer or purchasing the software first - this includes [Chocolatey licensed editions](https://chocolatey.org/pricing).
 
