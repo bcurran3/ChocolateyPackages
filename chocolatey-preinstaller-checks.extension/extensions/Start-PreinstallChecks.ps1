@@ -1,4 +1,5 @@
 function Start-PreInstallChecks{
+$CheckLicense = "$env:ChocolateyInstall\license\chocolatey.license.xml"
 
 Write-Host "PRE-INSTALLATION CHECKS:" -foreground magenta
 if (Get-PendingRebootStatus) 
@@ -10,5 +11,8 @@ if (Get-PendingRebootStatus)
 Get-WindowsInstallerStatus
 Get-chocoStatus 1
 Remove-Item alias:\Install-ChocolateyInstallPackage
+if ($env:ChocolateyLicenseValid -eq 'true') {
+    Set-Alias Install-ChocolateyInstallPackage Install-ChocolateyInstallPackageCmdlet -Force -Scope Global
+   }
 Install-ChocolateyInstallPackage @args
 }
