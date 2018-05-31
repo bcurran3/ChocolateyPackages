@@ -3,7 +3,8 @@
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * It is not recommended to run InstChoco without the -ynp switch on servers if you are using the Windows Active Directory Domain features!
 
-![](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png){:height="100px" width="100px"}
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="100" height="100">
+![](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png)
 
 ![Screenshot of InstChoco in use](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
 
