@@ -5,11 +5,6 @@
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * If you have problems running this due to your Windows PowerShell Script Execution Policy, [ForcePS](https://chocolatey.org/packages/forceps) can make your life easier - but now you can just run from the Start menu or the batch file!
 
-ROADMAP:
-* Add other cloud services support by request
-* Create a scheduled task to run daily/weekly/monthly/whenever
-* I'm open to suggestions - open a GitHub issue please.
-
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
 	
 #choco-package-list-backup solves your Chocolatey migration and package re-installation problems!
@@ -61,6 +56,11 @@ ROADMAP:
 * From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
 * From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.
+
+ROADMAP:
+* Add other cloud services support by request
+* Create a scheduled task to run daily/weekly/monthly/whenever
+* I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
 * 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
