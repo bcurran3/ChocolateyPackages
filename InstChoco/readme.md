@@ -49,6 +49,8 @@ Find them useful?
 
 **Want to buy me a beer?**
 
+[**Want to buy me a beer?**](https://www.paypalobjects.com/webstatic/mktg/logo-center/PP_Acceptance_Marks_for_LogoCenter_76x48.png)](https://chocolatey.org/profiles/bcurran3)
+
 https://www.paypal.me/bcurran3donations
 
 If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
