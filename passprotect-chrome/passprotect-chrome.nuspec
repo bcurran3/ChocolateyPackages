@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>passprotect-chrome</id>
+    <version>0.1.8</version>
+    <title>PassProtect for Chrome</title>
+    <authors>Okta Developer</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/passprotect-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/passprotect/cpimldclklpfifolmdnicjnfbjdepjnf</projectUrl>
+    <iconUrl>https://www.passprotect.io/wp-content/uploads/2018/05/passprotect-logo-white.png</iconUrl>
+	<copyright>Copyright (c) 2018 Okta, Inc.</copyright>
+    <licenseUrl>https://www.passprotect.io/legal/</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of PassProtect for Chrome](https://lh3.googleusercontent.com/t2I8oQHebDvS1VLxX32CC-JYt825GlZDXhIkrsg6kbBxKU78Ru4BeygwFVPC-JgfBPC5Mni1mQ=w640-h400-e365)
+
+###Stop using bad passwords. PassProtect alerts you about breached credentials. Powered by "Have I Been Pwned?".
+
+PassProtect is a simple Chrome extension that dramatically improves your personal security when browsing the web. 
+
+There are a lot of passwords floating around the web because they were exposed in a data breach. Threat actors can use these exposed passwords to try to compromise your account – don't let them get in by using an exposed password!
+
+PassProtect works by checking your password against the fabulous Have I Been Pwned? API service (https://haveibeenpwned.com/) to see whether or not the password you are using in any web login has been breached in the past. PassProtect uses 'k-anonymity', which ensures that your passwords are never seen, stored, or sent over the network during this checking process. You can learn more about k-anonymity by reading this excellent article: https://blog.cloudflare.com/validating-leaked-passwords-with-k-anonymity/
+
+PassProtect is a new, experimental way to help individual users play a more active role in protecting their online accounts. We believe that by informing and guiding users to reset their credentials when necessary, we can all help make the web a safer place!
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/passprotect-chrome/readme.md)**
+	</description>
+    <summary>PassProtect is a simple Chrome extension that dramatically improves your personal security when browsing the web. </summary>
+    <tags>chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
