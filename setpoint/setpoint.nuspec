@@ -12,13 +12,16 @@
 ![Screenshot of Logitech SetPoint](https://secure.logitech.com/assets/33024/9/m570-image.jpg)
 	
 SetPoint lets you customize your mouse buttons, keyboard F-keys and hot-keys, control tracking speed, and configure other device-specific settings. It can also notify you of your device's battery status, and whether Caps Lock and Num Lock are on.
+
 #####Full Installer – Full-sized download, contains the files for all supported devices. Lets you install offline.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/setpoint/readme.md)**
     </description>
     <projectUrl>http://support.logitech.com/en_us/software/setpoint</projectUrl>
     <docsUrl>http://support.logitech.com/en_us/article/44525?product=a0qi00000069vBvAAI</docsUrl>
     <mailingListUrl>http://support.logitech.com/en_us/software/setpoint#</mailingListUrl>
-    <tags>logitech setpoint mouse utility util notsilent admin</tags>
-    <copyright>© 1987 - 2015 Logitech. All rights reserved.</copyright>
+    <tags>logitech setpoint mouse utility util</tags>
+    <copyright>© Logitech. All rights reserved.</copyright>
     <licenseUrl>http://www.logitech.com/en-us/footer/terms-of-use</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://secure.logitech.com/assets/46515/setpoint-deviceid.png</iconUrl>
