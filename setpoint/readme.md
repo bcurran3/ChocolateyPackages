@@ -1,7 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* Uninstall via Control Panel.
+* I use and endorse this package.
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
 

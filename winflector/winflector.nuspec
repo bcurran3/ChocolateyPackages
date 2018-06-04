@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winflector</id>
-    <version>3.9.4.9</version>
+    <version>3.9.6.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winflector</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Winflector (Install)</title>
     <authors>OTC S.A.</authors>
     <projectUrl>http://www.winflector.com/</projectUrl>
     <iconUrl>http://www.winflector.com/img/winflector.png</iconUrl>
-    <copyright>Copyright © 2011 OTC S.A.</copyright>
+    <copyright>Copyright OTC S.A.</copyright>
     <licenseUrl>http://www.winflector.com/english/free-license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.winflector.com/english/support/documentation_s.html</docsUrl>
     <mailingListUrl>https://www.winflector.com/store/forum</mailingListUrl>
-    <bugTrackerUrl>http://www.winflector.com/english/support/versions.html</bugTrackerUrl>
+    <bugTrackerUrl>http://www.winflector.com/english/support/report-problem.html</bugTrackerUrl>
     <tags>winflector remote application execution server rdp</tags>
     <summary>otc server for remote application execution</summary>
     <description>

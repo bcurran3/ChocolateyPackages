@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/passprotect-chrome</packageSourceUrl>		
     <projectUrl>https://chrome.google.com/webstore/detail/passprotect/cpimldclklpfifolmdnicjnfbjdepjnf</projectUrl>
-    <iconUrl>https://www.passprotect.io/wp-content/uploads/2018/05/passprotect-logo-white.png</iconUrl>
+    <iconUrl>https://lh3.googleusercontent.com/7OPTe4hYj2sOetoREFOOykLgT1ezFBaiTVilxQa7ZisUXc9JZbmGUzIcThodLoREgNK0S1Q1=w128-h128-e365</iconUrl>
 	<copyright>Copyright (c) 2018 Okta, Inc.</copyright>
     <licenseUrl>https://www.passprotect.io/legal/</licenseUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -29,7 +29,7 @@ PassProtect is a new, experimental way to help individual users play a more acti
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/passprotect-chrome/readme.md)**
 	</description>
     <summary>PassProtect is a simple Chrome extension that dramatically improves your personal security when browsing the web. </summary>
-    <tags>chrome extension</tags>
+    <tags>passprotect security password pwned chrome extension</tags>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>
