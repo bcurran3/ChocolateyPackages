@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>futuremark-systeminfo</id>
-    <version>5.1</version>
+    <version>5.10.676</version>
     <owners>bcurran3</owners>
     <title>Futuremark SystemInfo (Install)</title>
     <authors>Futuremark</authors>
     <projectUrl>http://www.futuremark.com/support/systeminfo</projectUrl>
-    <iconUrl>http://www.futuremark.com/static/images/futuremark-ul-company-logo.png</iconUrl>
-    <copyright>© 2016 Futuremark Corporation</copyright>
+    <iconUrl>https://aws.futuremark.com/static/images/contentboxes/ul-benchmarks-hero-red.png</iconUrl>
+    <copyright>© Futuremark Corporation</copyright>
     <licenseUrl>http://www.futuremark.com/business</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.futuremark.com/support/systeminfo</docsUrl>
