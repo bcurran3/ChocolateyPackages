@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pcmark8</id>
-    <version>2.7.613.20170322</version>
+    <version>2.10.901</version>
     <owners>bcurran3</owners>
     <title>PCMark 8 Basic Edition (Install)</title>
     <authors>Futuremark Corporation</authors>
     <projectUrl>http://www.futuremark.com/benchmarks/pcmark8</projectUrl>
-    <iconUrl>http://www.futuremark.com/static/images/futuremark-ul-company-logo.png</iconUrl>
+    <iconUrl>https://benchmarks.ul.com/static/images/contentboxes/pcmark8-hero.jpg</iconUrl>
     <copyright>© 2016 Futuremark Corporation</copyright>
     <licenseUrl>http://www.futuremark.com/support/downloads</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -51,12 +51,13 @@ Graphics:  DirectX 9.0c compatible
 Display:   1366 × 768 resolution
 Storage:   30 GB free hard disk space
 
-#####PACKAGING NOTE: This is a ~3 GB file. It may take about 10 minutes to download and a few more to install! Make sure you have ~9 GB free space to cover the .ZIP download, the extraction, and the install. (You may need to change your --execution-timeout setting.)
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/pcmark8/readme.md)**
 	</description>
-    <releaseNotes>new download link as old one changed to temporary links</releaseNotes>
+    <releaseNotes>http://akamai-dl.futuremark.com.akamaized.net/pcmark8-technical-guide.pdf</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
 	  <dependency id="futuremark-systeminfo" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />		  
     </dependencies>
   </metadata>
   <files>
