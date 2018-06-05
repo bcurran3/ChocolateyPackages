@@ -10,10 +10,13 @@
     <authors></authors>
     <projectUrl></projectUrl>
     <copyright></copyright>
+	<licenseUrl></licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<projectSourceUrl></projectSourceUrl>
     <docsUrl></docsUrl>
+	<mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>
-    <tags> admin</tags>
+    <tags> </tags>
     <summary></summary>
     <description>
 ![Screenshot of ]()
