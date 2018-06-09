@@ -1,7 +1,7 @@
 # choco-cleaner.ps1 by Bill Curran 
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue if you have a suggestion/request.
-$CCver = "v0.0.3 (05/15/2018)"
+$CCver = "v0.0.3.1 (06/06/2018)"
 Write-Host "choco-cleaner.ps1 $CCver - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
 Write-Host "Copyleft 2017-2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -foreground white
 
@@ -18,7 +18,7 @@ $DeleteOldChoco = $ConfigFile.Settings.Preferences.DeleteOldChoco
 $DeleteConfigBackupFile = $ConfigFile.Settings.Preferences.DeleteConfigBackupFile
 $DeleteLibBad = $ConfigFile.Settings.Preferences.DeleteLibBad
 $DeleteLibBkp = $ConfigFile.Settings.Preferences.DeleteLibBkp
-$Optimizenupkgs = $ConfigFile.Settings.Preferences.Optimizenupkgs
+$Optimizenupkg = $ConfigFile.Settings.Preferences.Optimizenupkg
 $DeleteCache = $ConfigFile.Settings.Preferences.DeleteCache
 $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 
@@ -102,9 +102,9 @@ if ($DeleteLogs)
      Remove-Item -path $env:chocolateyinstall\* -recurse -include license.txt,*.license.txt,verification.txt -exclude shimgen.license.txt -ErrorAction SilentlyContinue
 	}
 	
-	if ($Optimizenupkgs)
+	if ($Optimizenupkg)
     {	
-     Write-Host " * Deleting unnecessary archives and executibles in .nupkg files..." -foreground magenta
+     Write-Host " * Deleting unnecessary archives and executables in .nupkg files..." -foreground magenta
      dir $env:chocolateyinstall\lib -recurse -include *.nupkg | %{7z d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
 	}
 # If cacheLocation in chocolatey.config has NOT been changed (most people)...
