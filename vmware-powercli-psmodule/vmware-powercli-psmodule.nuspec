@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vmware-powercli-psmodule</id>
-    <version>10.0.0.7895300</version>
+    <version>10.1.0.8403314</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli-psmodule</packageSourceUrl>
     <title>VMware.PowerCLI (Install)</title>

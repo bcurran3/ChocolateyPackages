@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.1422.0</version>
+    <version>3.0.2180.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
@@ -18,7 +18,7 @@
     <tags>hyrules winhue hue phillips light smarthome automation</tags>
     <summary>WinHue 3 - Controlling the Philips Hue lighting system from your Windows PC.</summary>
     <description>
-(Officially WinHue 3 RC5 - fix 2)
+(Officially WinHue 3 RC5)
 	
 ![Screenshot of WinHue](https://hyrules.github.io/WinHue3/assets/mainWindow.png)
 
@@ -57,7 +57,7 @@ WinHue also has a fully-featured console application bundled with the installer.
 	</description>
     <releaseNotes>https://github.com/Hyrules/WinHue3/releases</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.5" />
+      <dependency id="dotnet4.5.2" />
       <dependency id="vcredist2010" />
     </dependencies>
   </metadata>

@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openhab</id>
-    <version>2.2.0</version>
+    <version>2.3.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>openHAB</title>
     <authors>openHAB Community and the openHAB Foundation</authors>
     <projectUrl>http://www.openhab.org/</projectUrl>
-    <iconUrl>http://www.openhab.org/assets/images/openhab-logo-square.png</iconUrl>
+    <iconUrl>https://www.openhab.org/oauth/innogy/img/openhab-logo.png</iconUrl>
     <copyright>Copyright © by the openHAB Community and the openHAB Foundation e.V.</copyright>
     <licenseUrl>https://github.com/openhab/openhab-distro/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -20,7 +20,7 @@
     <tags>openhab home automation smart java</tags>
     <summary>openHAB - a vendor and technology agnostic open source automation software for your home</summary>
     <description>
-![Screenshot of openHAB](http://www.openhab.org/assets/images/ui/slide-desktop.png)
+![Screenshot of openHAB](http://www.openhabfoundation.org/images/posts/2017-12_openhabian.png)
 	
 ###Introduction
 
