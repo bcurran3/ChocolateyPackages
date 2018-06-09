@@ -3,29 +3,27 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>allwemo</id>
-    <version>2.14.6249.29697</version>
+    <version>3.37.6634.33972</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allwemo</packageSourceUrl>
     <title>AllWemo (Install)</title>
-    <authors>Allware SA de CV</authors>
-    <projectUrl>http://www.allware.com.mx/Software.aspx?Pr=AllWemo</projectUrl>
+    <authors>Enrique Alonso</authors>
+    <projectUrl>https://ea.im/p/?r=AllWemo</projectUrl>
     <iconUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/allwemo/AllWemo_icon.png</iconUrl>	
-    <copyright>Allware SA de CV</copyright>
+    <copyright>Enrique Alonso (R)</copyright>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <mailingListUrl>http://www.allwareforums.com/yaf_topics26_AllWemo.aspx</mailingListUrl>
-    <tags>allware allwemo wemo smarthome home automation admin</tags>
+    <mailingListUrl>https://forums.ea.im/yaf_topics26_AllWemo.aspx</mailingListUrl>
+    <tags>allware allwemo wemo smarthome home automation</tags>
     <summary>AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).</summary>
     <description>
-![Screenshot of AllWemo](http://www.allware.com.mx/users/ImgSite.aspx?n=AllWemo2.jpg&amp;t=Imagen)
+![Screenshot of AllWemo](https://ea.im/users/ImgSite.aspx?n=PantWeb2.jpg&amp;t=Imagen)
 
-WEMO FOR PC
+##WEMO FOR PC
 
-AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).
+###AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).
 
 You need to be in the same network as your wemo devices.....
-
-Dowload file version 2.14 from here AllWemo_2_14_Setup.zip
 
 From version 2.10 and up you can send use commands to run the app, example:
 
@@ -34,9 +32,10 @@ Allwemo.exe -ip:192.168.1.23 -action:on
 The actions must be: on, off or toggle. 
 For the commands to run, you need to run for the first time Allwemo without commands and let it discover all the devices first.
 
-Please add your comments and suggestions in Allware Forums (look for the Wemo App forum)
+[Click here for advanced settings (WebServer, etc)](https://ea.im/p/?r=AllWemoWeb) and for comments and suggestions, please visit [EAAH Forums](https://forums.ea.im/yaf_topics26_AllWemo.aspx) (look for the Wemo App forum)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/allwemo/readme.md)**
 	</description>
-    <releaseNotes>EXE inside of ZIP is not silent install friendly, so the MSI has been extracted and included in the package.</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
