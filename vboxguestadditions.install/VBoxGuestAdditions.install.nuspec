@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VBoxGuestAdditions.install</id>
+    <version>5.2.12</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/VBoxGuestAdditions.install</packageSourceUrl>	
+    <title>VirtualBox Guest Additions (Install)</title>
+    <authors>Oracle Corporation</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <projectUrl>http://www.virtualbox.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/c9f08adeb0cc2dcda323211894358e69d3af323c/icons/virtualbox.png</iconUrl>	
+	<docsUrl>https://www.virtualbox.org/manual/ch04.html</docsUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+###The Guest Additions are designed to be installed inside a virtual machine after the guest operating system has been installed. They consist of device drivers and system applications that optimize the guest operating system for better performance and usability.
+
+The Guest Additions offer the following features:
+
+* Mouse pointer integration
+* Shared folders
+* Better video support
+* Seamless windows
+* Generic host/guest communication channels
+* Time synchronization
+* Shared clipboard
+* Automated logons (credentials passing)
+
+Each version of VirtualBox, even minor releases, ship with their own version of the Guest Additions. While the interfaces through which the VirtualBox core communicates with the Guest Additions are kept stable so that Guest Additions already installed in a VM should continue to work when VirtualBox is upgraded on the host, for best results, it is recommended to keep the Guest Additions at the same version.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/VBoxGuestAdditions.install/readme.md)**
+</description>
+    <releaseNotes>https://www.virtualbox.org/wiki/Changelog</releaseNotes>
+    <copyright>Copyright (C) Oracle Corporation</copyright>
+    <tags>virtualbox virtualization guest vm</tags>
+    <dependencies>
+      <dependency id="virtualbox" version="5.2.12" />
+    </dependencies>
+  </metadata>
+</package>

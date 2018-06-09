@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>google-play-music-manager</id>
-    <version>1.0.457.3796</version>
+    <version>1.0.457.379601</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-play-music-manager</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Google Play Music Manager (Install)</title>
@@ -34,14 +34,14 @@ Sign in to Music Manager, choose where you keep your music and it starts uploadi
 Now that you've set up your Google Play music library, you can access it on your Android phone or tablet and the web. Sign in and all your music is just there, like magic. And when you upgrade to the latest Android device, your music comes along too. You'll never be without your favorite artists again.
 
 **SOCIAL MEDIA:**
-[FACEBOOK](https://www.facebook.com/GooglePlay) | [TWITTER](https://twitter.com/GooglePlay) | [GOOGLEPLUS](https://plus.google.com/+GooglePlay)
+[FACEBOOK](https://www.facebook.com/GooglePlay) | [TWITTER](https://twitter.com/GooglePlay) | [GOOGLE PLUS](https://plus.google.com/+GooglePlay)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-play-music-manager/readme.md)**
 	</description>
     <dependencies>
       <dependency id="autohotkey" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />		  	  
     </dependencies>	
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
