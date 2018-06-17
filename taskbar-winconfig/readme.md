@@ -10,7 +10,8 @@ ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
-* 0.0.2 added -ea silentlycontinue on Win8 & Win10 specific features as not to fail the script when trying to change settings on incompatible versions of Windows
+* 0.0.3 added USEPOWERSHELL option for Win10 Redstone 2/CU/b1703+
+* 0.0.2 added -ea SilentlyContinue so Win8 and Win10 specific features do not fail the script when trying to change settings on incompatible versions of Windows
 * 0.0.1 initial release
 
 Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
@@ -19,7 +20,7 @@ Find them useful?
 
 **Want to buy me a beer?**
 
-https://www.paypal.me/bcurran3donations
+[![Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 
-If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions. 
+If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
 

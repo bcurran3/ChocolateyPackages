@@ -6,6 +6,26 @@ $shortcutName     = 'Choco Cleaner.lnk'
 $altshortcutName  = 'Chocolatey Cleaner.lnk'
 $GotTask          = (&schtasks /query /tn choco-cleaner) 2> $null
 
+Function Update-Config{
+[xml]$UpdatedConfig = Get-Content "$env:ChocolateyInstall\bin\$xml"
+
+$DeleteNuGetCache = $UpdatedConfig.Settings.Preferences.DeleteNuGetCache
+if ($DeleteNuGetCache -eq $null)
+   {
+    Write-Host Adding DeleteNuGetCache support to $xml. -foreground magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteNuGetCache", $null)
+    $NewStuff.InnerText=("true") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | out-null
+	$UpdatedFile = "True"
+   }
+   
+if ($UpdatedFile -eq "True")
+   {   
+    $UpdatedConfig.Save("$env:ChocolateyInstall\bin\$xml")
+	Write-Host "Updated $xml" -foreground magenta
+   }
+}
+
 Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue
 
 if ($GotTask -ne $null){
@@ -15,9 +35,9 @@ if ($GotTask -ne $null){
    Write-Host Keeping existing scheduled task and upgrading script files. -foreground magenta
    }
 
-
 if (Test-Path $env:ChocolateyInstall\bin\$xml){
       Write-Host "Existing $xml file found, your preferences have been saved." -foreground magenta
+	  Update-Config
       Remove-Item $toolsDir\$xml -Force -ErrorAction SilentlyContinue
     } else {
 	  Move-Item "$toolsDir\$xml" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue

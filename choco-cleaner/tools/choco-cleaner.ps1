@@ -1,12 +1,14 @@
 # choco-cleaner.ps1 by Bill Curran 
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue if you have a suggestion/request.
-$CCver = "v0.0.3.1 (06/06/2018)"
+$CCver = "v0.0.4 (06/10/2018)"
+$xml   = 'choco-cleaner.xml'
+
 Write-Host "choco-cleaner.ps1 $CCver - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
 Write-Host "Copyleft 2017-2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -foreground white
 
 # Import preferences - see choco-cleaner.xml
-[xml]$ConfigFile = Get-Content "$env:ChocolateyInstall\bin\choco-cleaner.xml"
+[xml]$ConfigFile = Get-Content "$env:ChocolateyInstall\bin\$xml"
 
 $DeleteLogs = $ConfigFile.Settings.Preferences.DeleteLogs
 $DeleteArchives = $ConfigFile.Settings.Preferences.DeleteArchives
@@ -21,10 +23,11 @@ $DeleteLibBkp = $ConfigFile.Settings.Preferences.DeleteLibBkp
 $Optimizenupkg = $ConfigFile.Settings.Preferences.Optimizenupkg
 $DeleteCache = $ConfigFile.Settings.Preferences.DeleteCache
 $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
+# new configuration items since implementation of XML config in v0.0.3
+$DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
 
-# Import chocolatey.config
-[xml]$ChocoConfigFile = Get-Content "$env:ChocolateyInstall\config\chocolatey.config"
-
+# Import chocolatey.config (future use)
+#[xml]$ChocoConfigFile = Get-Content "$env:ChocolateyInstall\config\chocolatey.config"
 #parse <add key="cacheLocation" value="" description="Cache location if not TEMP folder. Replaces `$env:TEMP` value." />
 #$cacheLocation = $ConfigFile.config.cacheLocation.value
 
@@ -102,19 +105,26 @@ if ($DeleteLogs)
      Remove-Item -path $env:chocolateyinstall\* -recurse -include license.txt,*.license.txt,verification.txt -exclude shimgen.license.txt -ErrorAction SilentlyContinue
 	}
 	
-	if ($Optimizenupkg)
-    {	
-     Write-Host " * Deleting unnecessary archives and executables in .nupkg files..." -foreground magenta
-     dir $env:chocolateyinstall\lib -recurse -include *.nupkg | %{7z d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
-	}
 # If cacheLocation in chocolatey.config has NOT been changed (most people)...
 # I'm going to change this to read in the location from chocolatey.config in the future
 if ($DeleteCache)
     {
-     Write-Host " * Deleting unnecessary cache files..." -foreground magenta
+     Write-Host " * Deleting unnecessary Chocolatey cache files..." -foreground magenta
      Remove-Item -path $env:tmp\chocolatey -recurse -ErrorAction SilentlyContinue
 	 Remove-Item -path $env:SystemRoot\temp\chocolatey -recurse -ErrorAction SilentlyContinue
 	}
+	
+if ($DeleteNuGetCache)
+    {
+     Write-Host " * Deleting unnecessary Nuget cache files..." -foreground magenta
+     Remove-Item -path $env:USERPROFILE\AppData\Local\NuGet\Cache -recurse -ErrorAction SilentlyContinue
+	}	
+	
+if ($Optimizenupkg)
+    {	
+     Write-Host " * Deleting unnecessary archives and executables in .nupkg files..." -foreground magenta
+     dir $env:chocolateyinstall\lib -recurse -include *.nupkg | %{7z d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
+	}	
 
 if ($env:ChocolateyInstall -match $env:SystemDrive -and $env:SystemDrive -eq "C:")
     {

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskbar-winconfig</id>
-    <version>0.0.2</version>
+    <version>0.0.3</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskbar-winconfig</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskbar-winconfig</packageSourceUrl>
@@ -28,12 +28,13 @@ The average person probably doesn't need this. This package is primarily for sys
 * Change taskbar location to TOP/BOTTOM/LEFT/RIGHT
 * Change taskbar locked status YES/NO
 * Change taskbar icon combining feature YES/NO
-* Use taskbar People button YES/NO (Win10)
+* Use taskbar People button YES/NO (Win10 Redstone 3/FCU/b1709+)
 * Use taskbar Task view button YES/NO (Win8.1+)
 * Use taskbar Store button YES/NO
 * Use taskbar Ink Workspace button YES/NO
 * Use taskbar touch keyboard button YES/NO
 * Use Cortana on taskbar ICON/SEARCHBAR/NO
+* Use Powershell (YES) or Command Prompt (NO) from Win+X menu (Win10 Redstone 2/CU/b1703+)
 
 ###INSTALL INSTRUCTIONS:
 You NEED to install **taskbar-winconfig** with package parameters or it will do nothing. Below is the list of settings you can change with the parameters:
@@ -49,12 +50,13 @@ You NEED to install **taskbar-winconfig** with package parameters or it will do 
 * taskbar STORE icon - /STORE:yes or /STORE:no
 * taskbar TASKVIEW icon - /TASKVIEW:yes or /TASKVIEW:no
 * taskbar touch KEYBOARD icon - /KEYBOARD:yes or /KEYBOARD:no
+* Win+X use PowerShell - /USEPOWERSHELL:yes or /USEPOWERSHELL:no (Command Prompt) 
 
 You're desktop will blink off and return as explorer is restarted at the end of the script so the changes are immediately available.
 
 ###INSTALL EXAMPLES:
 * choco install taskbar-winconfig --params "'/LOCKED:yes /PEOPLE:no /TASKVIEW:no /STORE:no /CORTANA:no'"
-* choco install taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no'"
+* choco install taskbar-winconfig --params "'/LOCATION:top /SIZE:small /LOCKED:yes /COMBINED:no /CORTANA:icon /AUTOTRAY:no /USEPOWERSHELL:no'"
 
 You can set any one option or any mix of options. If you don't specify any parameters, nothing will change. Default = do nothing.
 
@@ -64,6 +66,14 @@ You can set any one option or any mix of options. If you don't specify any param
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/taskbar-winconfig/readme.md)**
 	</description>
+    <releaseNotes>
+If you have a previous release of **taskbar-winconfig** installed, upgrading to a new version will do nothing.	
+	
+###CHANGELOG:
+* 0.0.3 added USEPOWERSHELL option for Win10 Redstone 2/CU/b1703+
+* 0.0.2 added -ea SilentlyContinue so Win8 and Win10 specific features do not fail the script when trying to change settings on incompatible versions of Windows
+* 0.0.1 initial release
+    </releaseNotes>	
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>

@@ -38,7 +38,8 @@ Set it and forget it! **choco-cleaner** cleans up your Chocolatey installation e
 * _processed.txt - I have no idea what made this file or why it exists
 * lib-bad holds packages that failed to install and lib-bkp contains aborted packages (during updates?) 
 * archives and executables out of .nuspkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
-* \Users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config))
+* \users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config))
+* \users\username\AppData\Local\Nuget\Cache if Nuget client is installed and caching files there
 * \Windows\Temp\chocolatey 
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools (NOT default)
 
@@ -57,6 +58,8 @@ If you have a previous release of **choco-cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcode/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
+* 0.0.4 - added deletion of Nuget Cache folder files
+* 0.0.3.1 - fixed typo causing nupkg files to NOT be optimized - thanks E.R.! 
 * 0.0.3 - Rewritten version of 0.0.1 with XML configuration file and ferventcoder/Rob's approved default settings. Minor improvements.
 * 0.0.2 - Unreleased version with two scripts with different default settings; "Bill's way" and "Rob's way" and a package parameter to choose which one to use/install. Shelved.
 * 0.0.1 - Initial release. Did not pass Chocolatey moderation due to mandated changes of default parameters. Only "secretly" available.
