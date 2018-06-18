@@ -34,13 +34,16 @@ if ($pp["SHOWHIDDEN"] -ne $null -or $pp["SHOWHIDDEN"] -ne '')
       if ($pp["SHOWHIDDEN"] -eq "YES" -or $pp["SHOWHIDDEN"] -eq "yes" -or $pp["SHOWHIDDEN"] -eq "Yes")
           {
            Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "Hidden" -Value 1 -ea SilentlyContinue
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowSuperHidden" -Value 0 -ea SilentlyContinue		   
           }
 	  if ($pp["SHOWHIDDEN"] -eq 'NO' -or $pp["SHOWHIDDEN"] -eq 'no' -or $pp["SHOWHIDDEN"] -eq 'No')
 	      {
 	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "Hidden" -Value 2 -ea SilentlyContinue
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowSuperHidden" -Value 0 -ea SilentlyContinue		   
 		  }
 	  if ($pp["SHOWHIDDEN"] -eq 'ALL' -or $pp["SHOWHIDDEN"] -eq 'all' -or $pp["SHOWHIDDEN"] -eq 'All')
 	      {
+           Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "Hidden" -Value 1 -ea SilentlyContinue		  
 	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowSuperHidden" -Value 1 -ea SilentlyContinue
 		  }		  
 }
@@ -64,10 +67,12 @@ if ($pp["SHOWENCRYPTED"] -ne $null -or $pp["SHOWENCRYPTED"] -ne '')
       if ($pp["SHOWENCRYPTED"] -eq "YES" -or $pp["SHOWENCRYPTED"] -eq "yes" -or $pp["SHOWENCRYPTED"] -eq "Yes")
           {
            Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "showEncryptCompressedColor" -Value 1 -ea SilentlyContinue
+		   Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowCompColor" -Value 1 -ea SilentlyContinue
           }
 	  if ($pp["SHOWENCRYPTED"] -eq 'NO' -or $pp["SHOWENCRYPTED"] -eq 'no' -or $pp["SHOWENCRYPTED"] -eq 'No')
 	      {
 	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "showEncryptCompressedColor" -Value 0 -ea SilentlyContinue
+		   Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" -Name "ShowCompColor" -Value 0 -ea SilentlyContinue		   
 		  }
 }
 
@@ -99,31 +104,39 @@ if ($pp["SHOWDETAILSPANE"] -ne $null -or $pp["SHOWDETAILSPANE"] -ne '')
 		  }
 }
 
-# Explorer - show view choices
-# THIS DOES NOT WORK YET
-if ($pp["VIEW"] -ne $null -or $pp["VIEW"] -ne '')
+# Explorer - use view choice
+if ($pp["USEVIEW"] -ne $null -or $pp["USEVIEW"] -ne '')
      {
-	 Remove-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\ShellBags" -ea SilentlyContinue
-      if ($pp["VIEW"] -eq "DETAILS" -or $pp["VIEW"] -eq "details" -or $pp["VIEW"] -eq "Details")
+	  Remove-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags" -recurse -force -ea SilentlyContinue
+	  Remove-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\BagMRU" -recurse -force -ea SilentlyContinue
+      New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags" -ea SilentlyContinue | Out-Null
+	  New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders" -ea SilentlyContinue | Out-Null
+	  New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" -ea SilentlyContinue | Out-Null
+	  New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -ea SilentlyContinue | Out-Null
+	  if ($pp["USEVIEW"] -eq 'ICONS' -or $pp["USEVIEW"] -eq 'icons' -or $pp["USEVIEW"] -eq 'Icons')
+	      {
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -Name "Mode" -Value 1 -ea SilentlyContinue
+		  }
+	  if ($pp["USEVIEW"] -eq 'LIST' -or $pp["USEVIEW"] -eq 'list' -or $pp["USEVIEW"] -eq 'List')
+	      {
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -Name "Mode" -Value 3 -ea SilentlyContinue
+		  }
+      if ($pp["USEVIEW"] -eq "DETAILS" -or $pp["USEVIEW"] -eq "details" -or $pp["USEVIEW"] -eq "Details")
           {
-           New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags"
-		   New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders"
-		   New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell"
-		   New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" -Name "{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}"
-	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell" -Name "Mode" -Value 4 -ea SilentlyContinue		   
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -Name "Mode" -Value 4 -ea SilentlyContinue
           }
-	  if ($pp["VIEW"] -eq 'LIST' -or $pp["VIEW"] -eq 'list' -or $pp["VIEW"] -eq 'List')
+	  if ($pp["USEVIEW"] -eq 'THUMBNAILS' -or $pp["USEVIEW"] -eq 'thumbnails' -or $pp["USEVIEW"] -eq 'Thumbnails')
 	      {
-	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams" -Name "Settings" -Value ([byte[]](0x08,0x00,0x00,0x00,0x03,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x77,0x7e,0x13,0x73,0x35,0xcf,0x11,0xae,0x69,0x08,0x00,0x2b,0x2e,0x12,0x62,0x04,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x43,0x00,0x00,0x00))
-		  }
-	  if ($pp["VIEW"] -eq 'LARGEICONS' -or $pp["VIEW"] -eq 'largeicons' -or $pp["VIEW"] -eq 'Largeicons')
-	      {
-	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams" -Name "Settings" -Value ([byte[]](0x08,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x77,0x7e,0x13,0x73,0x35,0xcf,0x11,0xae,0x69,0x08,0x00,0x2b,0x2e,0x12,0x62,0x04,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x43,0x00,0x00,0x00))
-		  }
-	  if ($pp["VIEW"] -eq 'SMALLICONS' -or $pp["VIEW"] -eq 'smallicons' -or $pp["VIEW"] -eq 'Smallicons')
-	      {
-	       Set-ItemProperty -LiteralPath "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams" -Name "Settings" -Value ([byte[]](0x08,0x00,0x00,0x00,0x02,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x77,0x7e,0x13,0x73,0x35,0xcf,0x11,0xae,0x69,0x08,0x00,0x2b,0x2e,0x12,0x62,0x04,0x00,0x00,0x00,0x01,0x00,0x00,0x00,0x43,0x00,0x00,0x00))
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -Name "Mode" -Value 5 -ea SilentlyContinue
 		  }		  
+	  if ($pp["USEVIEW"] -eq 'TILES' -or $pp["USEVIEW"] -eq 'tiles' -or $pp["USEVIEW"] -eq 'Tiles')
+	      {
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -Name "Mode" -Value 6 -ea SilentlyContinue
+		  }	
+	  if ($pp["USEVIEW"] -eq 'FILMSTRIP' -or $pp["USEVIEW"] -eq 'filmstrip' -or $pp["USEVIEW"] -eq 'Filmstrip')
+	      {
+	       Set-ItemProperty -LiteralPath "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\Shell\Bags\AllFolders\Shell\{5C4F28B5-F869-4E84-8E60-F11DB97C5CC7}" -Name "Mode" -Value 7 -ea SilentlyContinue
+		  }			  
 }
 
 # Explorer - hide drives with no media
