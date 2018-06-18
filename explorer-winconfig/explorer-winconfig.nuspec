@@ -18,9 +18,6 @@
     <tags>bcurran3 windows explorer config</tags>
     <summary>explorer-winconfig let's you change Windows Explorer settings easily in scripts.</summary>
     <description>
-	
-# PLACEHOLDER - nuspec display test and one feature not finished yet	
-	
 ###WHAT'S THIS ALL ABOUT?
 
 The average person probably doesn't need this. This package is primarily for sysadmins who have to constantly configure computers and make sure they are all the same. Sure, there are other methods of doing these same functions. You can manually change the settings, it doesn't take that long. You could use GPO or a configuration manager, but not everyone has access to these tools - but you have access to Chocolatey! I put Chocolatey on just about every box I touch... so I made this Chocolatey package for (almost) super simple configuration, well, really so I can add it to my setup scripts. Installing this package is probably too complex for the average person, but it should be of good use to those who script or automate a lot of installs using Chocolatey. This is part of a series of "-winconfig" packages for configuration automation. Others include [desktopicons-winconfig](https://chocolatey.org/packages/desktopicons-winconfig), [homepages-winconfig](https://chocolatey.org/packages/homepages-winconfig), and [taskbar-winconfig](https://chocolatey.org/packages/taskbar-winconfig)
@@ -34,7 +31,7 @@ The average person probably doesn't need this. This package is primarily for sys
 * Toggle Windows Explorer to show the preview pane YES/NO
 * Toggle Windows Explorer to show the details pane YES/NO
 * Toggle Windows Explorer to show drives with no media YES/NO
-* Toggle Windows Explorer view choices ----------------------> IN PROGRESS/NOT FINISHED
+* Toggle Windows Explorer file view choices
 * Toggle Windows Explorer use of Sharing Wizard YES/NO
 
 ###INSTALL INSTRUCTIONS:
@@ -48,13 +45,13 @@ You NEED to install **explorer-winconfig** with package parameters or it will do
 * Explorer SHOWPREVIEWPANE - /SHOWPREVIEWPANE:yes or /SHOWPREVIEWPANE:no
 * Explorer SHOWDETAILSPANE - /SHOWDETAILSPANE:yes or /SHOWDETAILSPANE:no
 * Explorer SHOWDRIVESNOMEDIA - /SHOWDRIVESNOMEDIA:yes or /SHOWDRIVESNOMEDIA:no
-* Explorer VIEW - /VIEW: (coming soon)
+* Explorer USEVIEW - /USEVIEW:details or /USEVIEW:icons or /USEVIEW:list
 * Explorer USESHARINGWIZARD - /USESHARINGWIZARD:yes or /USESHARINGWIZARD:no
 
 You're desktop will blink off and return as explorer is restarted at the end of the script so the changes are immediately available.
 
 ###INSTALL EXAMPLES:
-* choco install explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no'"
+* choco install explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWFULLPATH:yes /SHOWENCRYPTED:yes /SHOWCHECKBOXES:no /USESHARINGWIZARD:no /USEVIEW:details'"
 * choco install explorer-winconfig --params "'/SHOWEXTENSIONS:yes /SHOWCHECKBOXES:yes /SHOWPREVIEWPANE:yes'"
 
 You can set any one option or any mix of options. If you don't specify any parameters, nothing will change. Default = do nothing.
