@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resilio-sync-home</id>
-    <version>2.5.12.1191</version>
+    <version>2.5.13.1301</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-home</packageSourceUrl>
     <title>Resilio Sync Home (Install)</title>
@@ -49,6 +49,9 @@ Keep folders synced between multiple platforms and operating systems. Sync is av
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/resilio-sync-home/readme.md)**
 	</description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
