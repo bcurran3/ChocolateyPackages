@@ -33,7 +33,7 @@ P.S. If you are using Windows 8 or Windows Server 8 you can also mount ISO image
     <copyright>Copyright (c) Josip Medved</copyright>
     <licenseUrl>https://github.com/medo64/VhdAttach/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/medo64/VhdAttach/master/Source/VhdAttach/Properties/App.ico</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vhdattach/vhdattach_icon.png</iconUrl>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />
