@@ -25,10 +25,10 @@
 <!--
 choco-package-list-backup.xml preferences notes:
 
-AppendDate     - Change to true if you want to keep snapshot in time copies - semi-breaks InstChoco compatibility
+AppendDate     - Change to true if you want to keep snapshot in time copies
 SaveFolderName - Change the folder name if you don't like my default
 SaveVersions   - Specify if you want to save specific package version info or not
 CustomPath     - Edit to save to a special location of your choice
 UseCustomPath  - Change to true if you are using CustomPath
-Usexxxxxxxxx   - Should be obvious
+UseXxxxxxxxx   - Should be obvious
 -->

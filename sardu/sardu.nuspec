@@ -4,70 +4,41 @@
   <metadata>
     <id>sardu</id>
     <title>SARDU (Portable)</title>
-    <version>3.2.2</version>
+    <version>3.2.3</version>
     <authors>Davide Costa</authors>
     <owners>bcurran3</owners>
     <summary>Multiboot USB and DVD creator customized with rescue disk, utility, linux live, windows installer</summary>
     <description>
 ![Screenshot of SARDU](http://www.sarducd.it/images/Antivirus_rid.png)
 
-####Shardana Antivirus Rescue Disk Utility
+SARDU MultiBoot Creator is a useful application designed to help you create an emergency rescue CD or USB drive. These drives can be used to check and to repair your system in case of a failure.
 
+Most computer users have dealt with a situation when the computer simply cannot start the operating system. Although every one of us hopes to avoid this type of event, it is better to be prepared by having a recovery disk at hand.
 
-SARDU Multiboot Creator build a multiboot USB stick (or other removable) for PC and Mac with Utilities, Antivirus, Windows PE and Windows XP, Vista, Seven and Eight Installers and all Windows Recovery Disks easily and in a few minutes without make partitions and without any knowledge of Multiboot system.
-The media builded with SARDU can be used to boot one PC or a Mac OS X Apple based system
-Advanced user can also import customized menus and customized folders and / or ISOs not directly supported.
+This program intends to help you create a recovery disk with the tools required to diagnose and to repair the issues that prevents your computer from starting properly. The disk can be customized by creating multiple boot options and by adding the utilities that you need for your system configuration.
 
+You might need to include an antivirus, a partition manager and a network diagnosis tool. The program allows you to fetch the bootable images from the internet and to include them on your disk. The recovery tool can be customized by adding any bootable image from an ISO file.
 
-This makes the SARDU Multiboot Creator as infinitely complete and customizable and best solution for technicians or for those who have to install Windows from USB or repair a PC or a Mac, saving precious time.
+The boot menu can be personalized with folders, files and other items that are useful for the diagnostics. Unfortunately, you cannot preview the menu which means that you have to keep track of the inserted items.
 
+The recovery disk can be saved as an ISO file for burning it to a DVD or by creating a bootable disk from a removable USB device. The app automatically detects the connected USB device and turns it into a bootable recovery toolbox.
 
-The only thing that you have to do is download the ISOs (with the integrated downloader) and press the button to start the creation of the USB multiboot (or other media)
-Using the QEMU integrated the user can easily test the 'live' multiboot support created. (pen drive or ISO image)
+The interface of the application is easy to use and allows you to download or manually add the images that you want to use. The included download manager can handle multiple processes at once. It requires insignificant resources while downloading the images or creating the bootable ISO.
 
+Although it prompts you to install other components such as toolbars, SARDU is a practical tool for all the users that want to create a bootable recovery disk with minimum effort. It includes features for both novice and experienced users, as well as a documentation for the most important operations.
 
-###Multiboot from BIOS legacy or EFI for PC and Mac with Multi OS...
+####Please register your copy of SARDU at [SARDU Pro's Homepage](http://sardu.pro) to enable auto update and more features.
 
-
-####Multiboot with multiple Rescue disks antivirus
-
-
-After downloading the ISO images, SARDU has a download manager, you can use the engine of more than ten of antivirus (one at time) to remove malware, viruses or others malicious software. This multiple antivirus rescue disc utility considers a great computer troubleshooting tools if your computer can't be start or if is damaged. Best disaster recovery.
-
-
-####Multiboot with hundreds of Utilities
-
-
-You can create, recover, repair, resize and merge partitions, clone a disk, make an image, recover or change lost passwords, use backup software; run floppy-based diagnostic tools from a DVD or USB stick, recover and save lost photos and documents, and test hardware items such as RAM and hard disks, etc. All do you need for troubleshooting.
-
-
-####Multiboot with multiple Linux Live
-
-
-You can test the best Linux Live distributions by loading the file system images into RAM so nothing is written to your hard disk, so you can turn your PC to a Media Player, or test LAN or Wi-Fi security using your USB pen-drive or DVD.
-You can use more than 100 live Linux, modular distributions such as Slax, xPUD, Ubuntu (and derivated), Fedora, Debian Mint or others from the same USB Flash Drive or DVD.
-You can build one Live USB stick with Ubuntu and Fedora (and derivated) with persistent storage keeping your preferences and data even after reboot
-
-####Multiboot with multiple Windows installer or PE or Recovery Disk
-
-
-You can boot from DVD or USB using 'Windows Live' (Windows PE), so you can perform the recovery disks of Windows, install Windows XP, Windows Vista, Windows Seven, Windows Eight or the technical preview of Windows 10 from one multiboot USB or DVD. 
-Using the USB media for installation of an operating system takes advantage of greater speed compared to the slower and easily damaged DVD. 
-SARDU Multiboot Creator Pro wil allows you to install from USB all Windows operating systems as Windows XP, Windows Vista, Windows Seven, Windows Eight and the technical preview of Windows 10 without CD or DVD player. This is the fast solution for tablets and netbooks and the best solution for technicians.
-
-
-SARDU Multiboot Creator 3 is 100% clean of virus / toolbars and other crapware
-
-####Please register your copy of SARDU at [SARDU Pro's Homepage](http://sardu.pro) for enable auto update and more additions
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sardu/readme.md)**
     </description>
     <projectUrl>http://www.sarducd.it/</projectUrl>
-    <docsUrl>http://www.sarducd.it/windows</docsUrl>
+    <docsUrl>https://www.sarducd.it/tutorial-en</docsUrl>
     <mailingListUrl>http://www.sarducd.it/forum/</mailingListUrl>
-    <tags>sardu rufus yumi usb dvd boot multiboot util utility</tags>
+    <tags>sardu usb dvd boot multiboot util utility recovery portable</tags>
     <licenseUrl>http://creativecommons.org/licenses/by-nc-nd/3.0/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.sarducd.it/images/logo.png</iconUrl>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.sardu.pro/news</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
