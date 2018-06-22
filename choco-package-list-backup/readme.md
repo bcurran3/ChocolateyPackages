@@ -59,10 +59,10 @@
 
 ROADMAP:
 * Add other cloud services support by request
-* Create a scheduled task to run daily/weekly/monthly/whenever
 * I'm open to suggestions - open a GitHub issue please.
 
 CHANGELOG:
+* 2018.06.21 - Added scheduled task to run every Monday at 6 AM. AppendDate option now saves packages.config AND a packages_date.config. This makes the AppendDate option more useful for a nearline packages.config and archival snapshots as well as fixing compatibility with InstChoco.
 * 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
 * 2018.05.17 - added iCloudDrive support
 * 2018.05.09 - added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades! Backups not created any more.

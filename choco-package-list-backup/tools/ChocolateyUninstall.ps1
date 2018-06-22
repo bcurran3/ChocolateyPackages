@@ -5,6 +5,8 @@ $oldshortcutName = 'Choco Package List Backup.lnk'
 $shortcutName    = 'Chocolatey Package List Backup.lnk'
 $altshortcutName = 'Package List Backup.lnk'
 
+SchTasks /Delete /TN choco-package-list-backup /F
+
 Remove-Item "$env:ChocolateyInstall\bin\$script" -Force -ErrorAction SilentlyContinue
 Remove-Item "$env:ChocolateyInstall\bin\$script*.bak" -Force -ErrorAction SilentlyContinue
 Remove-Item "$env:ChocolateyInstall\bin\$xml" -Force -ErrorAction SilentlyContinue

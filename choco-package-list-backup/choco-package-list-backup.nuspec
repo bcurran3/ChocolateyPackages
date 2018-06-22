@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2018.05.19</version>
+    <version>2018.06.21</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
-    <title>(unofficial) Choco Package List Backup to Local and Cloud (Script)</title>
+    <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.png</iconUrl>
@@ -25,6 +25,8 @@
 **choco-package-list-backup** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **choco-package-list-backup** backs up your package list locally and to multiple cloud services!
 
 ###FEATURES:
+
+Set it and forget it! **choco-package-list-backup** backups up your Chocolatey packages list every Monday at 6 AM in the background so you don't have to be bothered with it.
 
 **choco-package-list-backup** supports saving PACKAGES.CONFIG to all of the following:
 
@@ -75,7 +77,12 @@
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup/readme.md)**
 	</description>
 	<releaseNotes>
+ROADMAP:
+* Add other cloud services support by request
+* I'm open to suggestions - open a GitHub issue please.
+
 CHANGELOG:
+* 2018.06.21 - Added scheduled task to run every Monday at 6 AM. AppendDate option now saves packages.config AND a packages_date.config. This makes the AppendDate option more useful for a nearline packages.config and archival snapshots as well as fixing compatibility with InstChoco.
 * 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
 * 2018.05.17 - added iCloudDrive support
 * 2018.05.09 - added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades! Backups not created any more.

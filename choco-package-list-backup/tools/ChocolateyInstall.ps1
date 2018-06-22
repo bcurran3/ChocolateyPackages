@@ -6,6 +6,7 @@ $xml              = 'choco-package-list-backup.xml'
 $shortcutName     = 'Chocolatey Package List Backup.lnk'
 $oldshortcutName  = 'Choco Package List Backup.lnk'
 $altshortcutName  = 'Package List Backup.lnk'
+$GotTask          = (&schtasks /query /tn choco-package-list-backup) 2> $null
 
 Function Update-Config{
 [xml]$UpdatedConfig = Get-Content "$env:ChocolateyInstall\bin\$xml"
@@ -29,6 +30,17 @@ if ($UpdatedFile -eq "True")
 
 Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force -ErrorAction SilentlyContinue	
 
+if ($GotTask -ne $null){
+     Write-Host
+     Write-Host Existing choco-package-list-backup scheduled task found: -foreground magenta 
+     SchTasks /query /tn "choco-package-list-backup"
+     Write-Host Keeping existing scheduled task and upgrading script files. -foreground magenta
+  } else {
+     SchTasks /Create /SC WEEKLY /D MON /RU SYSTEM /RL HIGHEST /TN "choco-package-list-backup" /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyInstall%\bin\choco-package-list-backup.ps1" /ST 06:00 /F
+     SchTasks /query /tn "choco-package-list-backup"
+	 Write-Host "Now configured to run choco-package-list-backup at 6 AM every MONDAY." -foreground green
+	}
+   
 if (Test-Path $env:ChocolateyInstall\bin\$xml){
       Remove-Item $toolsDir\$xml -Force -ErrorAction SilentlyContinue
 	  Update-Config
@@ -47,15 +59,15 @@ If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey
     } else {
       Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $script" -IconLocation $env:ChocolateyInstall\choco.exe -WorkingDirectory $env:ChocolateyInstall\bin\
 	}
-	
 Write-Host "Running choco-package-list-backup.ps1 to create backup(s)..." -foreground magenta
 &powershell -NoProfile -ExecutionPolicy Bypass -Command "$env:ChocolateyInstall\bin\choco-package-list-backup.ps1"
+Write-Host "ADDITIONAL INFORMATION:" -foreground magenta
 Write-Host "Edit $env:ChocolateyInstall\bin\$xml to customize your backup(s)." -foreground magenta
-Write-Host "TO BACKUP YOUR CHOCOLATEY PACKAGE LIST AGAIN:" -foreground magenta
-Write-Host "Command Prompt: POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1" -foreground magenta
-Write-Host "PowerShell    : CHOCO-PACKAGE-LIST-BACKUP.PS1" -foreground magenta
+Write-Host "To manually backup your Chocolatey package list:" -foreground magenta
+Write-Host "  Command Prompt : POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1" -foreground magenta
+Write-Host "  PowerShell     : CHOCO-PACKAGE-LIST-BACKUP.PS1" -foreground magenta
 If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
-     Write-Host "Windows       : Click Package List Backup in the Start menu under Chocolatey" -foreground magenta
+     Write-Host "  Windows        : Click Package List Backup in the Start menu under Chocolatey" -foreground magenta
    } else {
-     Write-Host "Windows       : Click Chocolatey Package List Backup in the Start menu" -foreground magenta
+     Write-Host "  Windows        : Click Chocolatey Package List Backup in the Start menu" -foreground magenta
    }	
