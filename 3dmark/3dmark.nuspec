@@ -3,24 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>3dmark</id>
-    <version>2.3.3732</version>
+    <version>2.5.5029</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/3dmark</packageSourceUrl>
     <title>3DMark Basic Edition (Install)</title>
-    <authors>Futuremark Corporation</authors>
-    <projectUrl>https://www.futuremark.com/support/downloads</projectUrl>
-    <iconUrl>https://www.futuremark.com/static/images/futuremark-ul-company-logo.png</iconUrl>
-    <docsUrl>http://www.futuremark.com/support/guides</docsUrl>
-    <mailingListUrl>https://community.futuremark.com/forum/</mailingListUrl>
-    <copyright>© 2016 Futuremark Corporation</copyright>
-    <licenseUrl>https://www.futuremark.com/terms-and-conditions</licenseUrl>
+    <authors>UL Benchmarks</authors>
+    <projectUrl>https://benchmarks.ul.com/3dmark</projectUrl>
+    <iconUrl>https://www.techspot.com/images2/downloads/topdownload/2014/06/3dmark.png</iconUrl>
+    <docsUrl>https://benchmarks.ul.com/support/user-guides</docsUrl>
+    <copyright>UL Benchmarks</copyright>
+    <licenseUrl>https://benchmarks.ul.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>futuremark 3dmark video gaming benchmark</tags>
+    <tags>ul futuremark 3dmark video gaming benchmark</tags>
     <summary>3DMark is a popular gaming performance benchmark.</summary>
     <description>
-![Screenshot of 3DMark Basic Edition](https://tpucdn.com/downloads/screenshots/2775_large.jpg)
-
-3DMark is a popular gaming performance benchmark used by millions of people, hundreds of hardware review sites and many of the world's leading technology companies.
+###3DMark is a popular gaming performance benchmark used by millions of people, hundreds of hardware review sites and many of the world's leading technology companies.
 
 3DMark includes everything you need to benchmark your PC and mobile devices in one app. Whether you're gaming on a desktop PC, laptop, notebook, or a tablet, 3DMark has a benchmark designed for your hardware.
 
@@ -37,10 +34,11 @@
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/3dmark/readme.md)**
 	</description>
-    <releaseNotes>https://www.techpowerup.com/download/futuremark-3dmark-timespy/#changes-v2-2-3509</releaseNotes>
+    <releaseNotes>https://www.techpowerup.com/download/futuremark-3dmark-timespy/#changes-v2-5-5029</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" />
       <dependency id="futuremark-systeminfo" version="5.1" />	  
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />	  
     </dependencies>
   </metadata>
   <files>
