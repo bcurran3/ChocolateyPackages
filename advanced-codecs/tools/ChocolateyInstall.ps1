@@ -1,8 +1,8 @@
 ﻿#http://www.majorgeeks.com/mg/getmirror/win7codecs,1.html
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'advanced-codecs' 
-$url            = "$toolsDir\ADVANCED_Codecs_v1020.exe"
-$checksum       = '615AE6B1AE9819804E85C360600DE7E4D241C26FA97E8F1EACD331CF0873C2FE'
+$url            = "$toolsDir\ADVANCED_Codecs_v1025.exe"
+$checksum       = '518C7C9E08799A5ED3A4FE48A6142D26D602AF6619B9FF760D3E3ECFD0DDA1B0'
 $installerType  = 'EXE'
 $silentArgs     = '/S /v/qn'
 $validExitCodes = @(0, 3010, 1641)
@@ -25,9 +25,7 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs  
 
-Start-Sleep -s 20
-
+Start-Sleep -s 10
 Start-CheckandStop "Settings32"  
 Start-CheckandStop "Settings64"  
-
 Remove-Item $url
