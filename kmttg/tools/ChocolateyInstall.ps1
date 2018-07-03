@@ -19,3 +19,4 @@ Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows
 
 $WhoAmI=whoami
 icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null
+

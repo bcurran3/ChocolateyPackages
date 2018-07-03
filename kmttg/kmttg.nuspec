@@ -31,7 +31,7 @@ Also has ability to capture video output directly from Slingbox Pro or later mod
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/kmttg/readme.md)**
     </description>
     <projectUrl>https://sourceforge.net/projects/kmttg/</projectUrl>
-    <iconUrl>https://fsdn.com/allura/p/kmttg/icon</iconUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/kmttg/kmttg_icon.png</iconUrl>	
     <projectSourceUrl>https://sourceforge.net/p/kmttg/code/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/kmttg/wiki/Home/</docsUrl>
     <licenseUrl>https://sourceforge.net/p/kmttg/code/HEAD/tree/trunk/LICENSE</licenseUrl>

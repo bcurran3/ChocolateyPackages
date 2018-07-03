@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>beebeep</id>
-    <version>4.0.0</version>
+    <version>5.0.0</version>
     <owners>bcurran3</owners>
     <title>beeBEEP (Portable)</title>
     <authors>Marco Mastroddi</authors>
@@ -16,7 +16,7 @@
     <tags>beebeep IM chat messenger portable</tags>
     <summary>BeeBEEP is an open source, peer to peer, secure LAN messenger.</summary>
     <description>
-![Screenshot of beeBEEP](https://fsdn.com/con/app/proj/beebeep/screenshots/beebeep-screenshot-1.jpg)
+![Screenshot of beeBEEP](http://beebeep.sourceforge.net/images/beebeep-screenshot-1.jpg)
 
 ###What is BeeBEEP?
 
@@ -32,8 +32,10 @@ BeeBEEP is an open source, peer to peer, lan messenger developed by Marco Mastro
 * P2P: send or share your files and folders (also by drag and drop).
 * Offline messages: messages will be delivered to offline users when they will be online.
 * Message History: all messages can be saved.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/beebeep/readme.md)**
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://sourceforge.net/p/beebeep/code/HEAD/tree/CHANGELOG.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
