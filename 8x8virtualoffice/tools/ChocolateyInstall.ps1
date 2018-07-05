@@ -1,8 +1,8 @@
 ﻿$packageName    = '8x8virtualoffice'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://support.8x8.com/us/downloads/get/2109' 
-$checksum       = 'FCEC4725767C2495AF9860D853BE01805CD254FE3E039C4EAC50E9BC7C9449A4'
+$url            = 'https://support.8x8.com/@api/deki/files/1947/uc_5_4_0_19820.msi' 
+$checksum       = 'BE9AE0FFE909F595CF668EFFCEF535EFFE474DEC22A42AB793CE84A791BA7691'
 $silentArgs     = '/quiet /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
@@ -12,7 +12,7 @@ $packageArgs = @{
   url           = $url
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
-  softwareName  = ''
+  softwareName  = '8x8 - Virtual Office'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
