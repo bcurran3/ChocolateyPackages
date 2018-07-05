@@ -4,7 +4,7 @@
   <metadata>
     <id>seagate-drive-detect</id>
     <title>Seagate Drive Detect (Portable)</title>
-    <version>3.0.0</version>
+    <version>3.1.1.0</version>
     <authors>Seagate Technology</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/seagate-drive-detect</packageSourceUrl>	
