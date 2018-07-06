@@ -4,7 +4,7 @@
   <metadata>
     <id>simple-sticky-notes</id>
     <title>Simple Sticky Notes (Install)</title>
-    <version>4.2</version>
+    <version>4.3</version>
     <authors>Simnet Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>		
