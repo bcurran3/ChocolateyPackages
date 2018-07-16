@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wordweb-free</id>
-    <version>8.21</version>
+    <version>8.21.0020180706</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wordweb-free</packageSourceUrl>
     <title>WordWeb Free (Install)</title>
