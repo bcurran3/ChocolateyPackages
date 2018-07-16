@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>boomeranggmail-chrome</id>
+    <version>1.2.7</version>
+    <title>Boomerang for Gmail for Chrome</title>
+    <authors>www.boomeranggmail.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/boomeranggmail-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/boomerang-for-gmail/mdanidgdpmkimeiiojknlnekblgmpdll</projectUrl>
+	<docsUrl>http://www.boomeranggmail.com/faq.html</docsUrl>
+    <iconUrl>http://www.boomeranggmail.com/images/Logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Boomerang for Gmail](http://www.boomeranggmail.com/l/img/SendTmrwMorn.png)
+
+###The ultimate email productivity tool. Send later, track responses, and use AI to write better emails.
+
+The ultimate email productivity tool. Send later, track responses, use AI to write better emails, and free yourself from email interruptions.
+
+Boomerang allows you to schedule messages to be sent or returned at a later date. Write a message now, send it whenever, even if you're not online. Track messages to make sure you hear back, and schedule reminders right inside Gmail™. Know whether your email got read with cross-platform read receipts. Free yourself from constant interruptions using Inbox Pause, while still getting notified about the emails that matter.
+
+###What is Boomerang?
+
+Millions of Gmail™ and G Suite™ users count on Boomerang for easy, integrated scheduled email sending and reminders. The service allows you to schedule emails to automatically send in the future, so you can write an email now, and the service will send it tomorrow morning at 6 AM, or next week while you’re at the beach, without you needing to be online.
+
+Boomerang also helps you to postpone (“snooze”) incoming emails, by making them disappear from your Inbox into a folder or label, then bringing them back to the top of the message list at the specified time. It helps you keep your Inbox clean, without losing track of important messages. Boomerang is also the only reminder service that can alert you if you do not get a reply to a message.
+
+Boomerang also brings an AI-powered assistant, Respondable, directly to your compose window. As you write an email, Respondable predicts the likelihood that the message will receive a response and explain that analysis in an easy to understand way, all in real-time. Respondable guides you toward writing a message that will be effective in starting a conversation (or keeping one going.)
+
+
+Boomerang’s latest productivity feature, Inbox Pause, helps you get focused by temporarily delaying the arrival of messages to your Inbox.
+
+###Great For
+* Scheduling birthday emails
+* Project management
+* Remembering to pay bills
+* Making sure you follow up with a sales lead, and that they replied to you
+* Communicating with people in different time zones
+* Managing travel confirmation emails, returning them on the day of your trip
+* Figuring out if your emails are getting read with cross-platform read receipts
+* Measuring your email engagement with open tracking and click tracking
+* Writing effective emails that get a response
+* Focusing on an important project without constant email distractions
+* Achieving Inbox Zero!
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/boomeranggmail-chrome/readme.md)**
+	</description>
+    <summary>Boomerang for Gmail - The ultimate email productivity tool. Send later, track responses, and use AI to write better emails.</summary>
+    <tags>boomerang gmail chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
