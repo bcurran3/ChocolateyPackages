@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>burneremails-chrome</id>
+    <version>0.1.7</version>
+    <title>Burner Emails for Chrome</title>
+    <authors>burnermail.io</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/burneremails-chrome</packageSourceUrl>		
+    <projectUrl>https://burnermail.io/</projectUrl>
+    <iconUrl>https://burnermail.io/assets/burnermail-logo-5f6578df2864488190819fcb983a94456780ea35ecff8626941d1714a89f3f0a.png</iconUrl>
+    <licenseUrl>https://burnermail.io/terms-and-conditions</licenseUrl>	
+	<copyright>Copyright © Burner Mail. All rights reserved.</copyright>
+	<docsUrl>https://burnermail.io/faq</docsUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Burner Emails for Chrome](https://burnermail.io/assets/screenshots/extension-2408544624b72f4ed8a284ec82f41cc437a93538badaff692017abf21aabcce6.png)	
+###Detects email fields as you browse and fills them with a burner email address that forwards to your personal email address 😎
+Never worry about spam emails ever again! 
+
+Burner Emails is a tool to generate a random email address for every form that you're submitting online, that will forward all emails to your personal email address. 
+
+This hides your true identity from the sender and protects you from spam. If later on you don't want to receive emails from them anymore, you can disable or delete your address and be done with them! It's like your very own unsubscribe button that actually works on every email ever sent.	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/burneremails-chrome/readme.md)**
+	</description>
+    <summary>Burner Emails: Easy, Fast, Disposable Emails</summary>
+    <tags>burner email chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
