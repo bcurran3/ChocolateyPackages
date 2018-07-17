@@ -27,5 +27,6 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 Start-Sleep -s 5
-Start-CheckandStop "Resilio Sync"
-#if ($ProcessWasRunning -eq "True") {&$ProcessFullPath} else {Start-CheckandStop "Resilio Sync"}
+if ($ProcessWasRunning -ne "True") {Start-CheckandStop "Resilio Sync"}
+
+
