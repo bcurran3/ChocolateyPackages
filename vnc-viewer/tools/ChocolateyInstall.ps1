@@ -1,4 +1,5 @@
-﻿$packageName    = 'vnc-viewer'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'vnc-viewer'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.18.625-Windows-32bit.exe'
@@ -8,6 +9,9 @@ $checksum64     = '11FDD8C46595704F61CC690439D26D8EB89406C056159E18B07BEBB35DB7A
 $shortcutName   = 'VNC Viewer' 
 $fileName32     = 'VNC-Viewer-6.18.625-Windows-32bit.exe'
 $fileName64     = 'VNC-Viewer-6.18.625-Windows-64bit.exe'
+
+#Start-CheckandThrow("VNC-Viewer")
+#if throw variable is true then throw package here - experimental
 
 if ((Get-OSArchitectureWidth -eq 64) -and ($env:chocolateyForceX86 -ne $true))
     {

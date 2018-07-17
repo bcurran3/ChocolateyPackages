@@ -2,6 +2,7 @@ $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
  
 $publicFunctions = @(
     'Start-CheckandStop',
+	'Start-CheckandThrow',
 	'Start-WaitandStop',
 	'Start-WaitandStopActual'
 )
