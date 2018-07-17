@@ -12,7 +12,12 @@ Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search
 
 <h1>Better yet... Keep me incentivized by Patreonizing me!</h1>
 
+<img src="https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png" alt="" width="40" height="40">
+
 [![Patreonize me!](https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png)](https://www.patreon.com/bcurran3)
+
+<h1>How about buying me a <img src="https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png" alt="" width="40" height="40"> via PayPal?</h1>
+
 
 If applicable, please always consider donating or purchasing the software you installed - including [Chocolatey's licensed editions](https://chocolatey.org/pricing).
 
