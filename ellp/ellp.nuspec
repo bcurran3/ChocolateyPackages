@@ -43,6 +43,9 @@ Easily automate your device by activating the Ellp cards that matter most to you
     <licenseUrl>https://www.ellp.com/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://www.ellp.com/images/logo.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />		  
+    </dependencies>	
       </metadata>
   <files>
     <file src="tools\**" target="tools" />
