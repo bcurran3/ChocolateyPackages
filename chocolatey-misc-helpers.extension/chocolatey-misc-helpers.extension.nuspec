@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-misc-helpers.extension</id>
-    <version>0.0.1</version>	
+    <version>0.0.2</version>	
     <title>Chocolatey Misc Helpers Extension</title>	
     <authors>Bill Curran</authors>	
     <owners>bcurran3</owners>	
