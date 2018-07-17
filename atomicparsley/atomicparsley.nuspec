@@ -8,6 +8,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/atomicparsley</packageSourceUrl>	
     <title>AtomicParsley (Portable)</title>
     <authors>BStory, puck_lock</authors>
+	<iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/atomicparsley/atomicparsley_icon.png</iconUrl>
     <projectUrl>http://atomicparsley.sourceforge.net/</projectUrl>	
     <licenseUrl>https://sourceforge.net/directory/os:windows/license:gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
