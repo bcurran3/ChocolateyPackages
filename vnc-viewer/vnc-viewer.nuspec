@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-viewer</id>
-    <version>6.18.625</version>
+    <version>6.18.625.0020180717</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer</packageSourceUrl>
     <title>VNC Viewer (Install)</title>
@@ -36,6 +36,9 @@ VNC Viewer is used to remote control RealVNC and VNC Connect hosts.
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-viewer/readme.md)**
 	</description>
     <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		  
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
