@@ -8,6 +8,8 @@ $checksum64     = 'F7491B35FFCEBD04103CF424CC53822CBCA5F62AF05DCE313743943FA69DC
 $silentArgs     = '/S'
 $validExitCodes = @(0, 1)
 
+Start-CheckandStop "Resilio Sync"
+
 $packageArgs = @{
   packageName    = $packageName
   fileType       = $installerType
@@ -25,6 +27,5 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 Start-Sleep -s 5
-Start-CheckandStop "Resilio Sync"
-#if ($ProcessWasRunning -eq "True") {&$ProcessFullPath} else {Start-CheckandStop "Resilio Sync"}
+if ($ProcessWasRunning -ne "True") {Start-CheckandStop "Resilio Sync"}
 
