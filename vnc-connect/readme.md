@@ -1,4 +1,4 @@
-<h3>BCURRAN3'S PACKAGE NOTES:</h3>
+**BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * I use and endorse this program.
@@ -20,5 +20,4 @@ If applicable, please always consider donating or purchasing the software you in
 <h3>TIA,</h3>
 
 <h3>Bill</h3>
-
 
