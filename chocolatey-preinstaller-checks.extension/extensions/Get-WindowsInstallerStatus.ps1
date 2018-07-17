@@ -1,6 +1,7 @@
+# chocolatey-preinstaller-checks.extension by Bill Curran AKA BCURRAN3 - 2018 public domain
+
 function Get-WindowsInstallerStatus{
 $msiexecInstances = @(Get-Process -ea silentlycontinue msiexec).count
-# From my observations, msiexec sticks around after a .msi is run. Running a .msi causes 2-3 occurrences of msiexec.
 
 if ($msiexecInstances -gt 1)
    {

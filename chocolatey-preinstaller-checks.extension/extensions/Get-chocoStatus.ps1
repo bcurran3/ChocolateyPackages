@@ -1,26 +1,27 @@
-function Get-chocoStatus($AllowedChocos){
-$chocoInstances = @(Get-Process -ea silentlycontinue choco).count
-$CheckLicense = "$env:ChocolateyInstall\license\chocolatey.license.xml"
-# running choco got you here and is one instance!
-# install causes one instance
-# uninstall seems to always cause two instances
-# choco-agent reports as choco.exe per gep13?? Unknown, can't test. 
+# chocolatey-preinstaller-checks.extension by Bill Curran AKA BCURRAN3 - 2018 public domain
+# Supposedly choco-agent reports as choco.exe?? per gep13. Unknown, can't test but doesn't make sense.
 
-if((get-process "choco-agent" -ea SilentlyContinue) -eq $Null){
+function Get-chocoStatus{
+
+if((get-process "chocolatey-agent" -ea SilentlyContinue) -eq $Null){
     } else {
-    Write-Host "  * choco-agent.exe found running, can't effectively check for multiple instances at this time. (Sorry!) " -foreground yellow
+    Write-Host "  * chocolatey-agent.exe found running, possibly can't check for multiple instances at this time. (Sorry!) " -foreground yellow
 	break
   }
 
-if ($chocoInstances -gt $AllowedChocos)
-    {
-     while ($chocoInstances -gt $AllowedChocos)
-     {
-      Write-Host "  * WARNING: Found multiple instances of choco.exe running. Pausing 30 seconds..." -foreground red
-	  Start-Sleep -seconds 30
-      $chocoInstances = @(Get-Process -ea silentlycontinue choco).count
-     }
-	} 
-Write-Host "  * choco.exe IS NOT running multiple instances." -foreground green
-}
+$chocoInstances = (Get-chocoCounts)
 
+if ($chocoInstances -ge 2)
+    {
+     while ($chocoInstances -gt 1)
+     {
+	  # exclude current instance from status report
+      $chocoInstances = $chocoInstances-1
+      Write-Host "  * WARNING: $chocoInstances other instance(s) of choco.exe actual found running. Pausing 30 seconds..." -foreground red
+	  Start-Sleep -seconds 30
+      $chocoInstances = (Get-chocoCounts)
+     }
+	} else {
+	  Write-Host "  * choco.exe IS NOT running multiple instances." -foreground green
+	 }
+}
