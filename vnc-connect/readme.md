@@ -14,7 +14,7 @@ Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search
 
 [![Patreonize me!](https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png)](https://www.patreon.com/bcurran3)
 
-<h3>If applicable, please always consider donating or purchasing the software you installed - including [Chocolatey's licensed editions](https://chocolatey.org/pricing).</h3>
+If applicable, please always consider donating or purchasing the software you installed - including [Chocolatey's licensed editions](https://chocolatey.org/pricing).
 
 <h3>TIA,</h3>
 
