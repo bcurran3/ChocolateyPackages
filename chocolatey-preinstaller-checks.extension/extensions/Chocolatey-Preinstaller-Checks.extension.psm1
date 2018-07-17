@@ -1,6 +1,7 @@
 $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
  
 $publicFunctions = @(
+    'Get-chocoCounts',
 	'Get-chocoStatus',
 	'Get-PendingRebootStatus',
     'Get-WindowsInstallerStatus',

@@ -13,7 +13,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</packageSourceUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension/chocolatey-preinstaller-checks.extension_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Chocolatey Preinstaller Checks Extension is a collection of helpers that check for possible unwanted conditions before installing and uninstalling Chocolatey packages.</summary>	
     <description>
@@ -38,22 +38,24 @@ This extension attempts to head off problems related to:
 
 ###FEATURES: 
 * **Chocolatey Preinstaller Checks Extension** will check if there is a pending reboot and warn you about it if so.
-* **Chocolatey Preinstaller Checks Extension** will check if there are instances of choco.exe already running and wait for them to finish.
 * **Chocolatey Preinstaller Checks Extension** will check if Windows Installer is already running and wait for it to finish.
+* **Chocolatey Preinstaller Checks Extension** will check if there are instances of choco.exe already running and wait for them to finish.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-preinstaller-checks.extension/readme.md)**
     </description>
     <releaseNotes>
-* The choco multi-instance checking is NOT compatible with the Chocolatey licensed self service agent as it runs choco.exe all the time.
+* The choco multi-instance checking is supposedly NOT compatible with the Chocolatey licensed self service agent as it supposedly runs choco.exe all the time.
+* If two instances of choco.exe run within 30 seconds of each other, they will most likely loop forever or at least until [commandExecutionTimeoutSeconds](https://chocolatey.org/docs/chocolatey-configuration).
+* Aborting a program package install/uninstall due to "* WARNING: x other instance(s) of choco.exe actual found running. Pausing 30 seconds..." will result in Chocolatey "loosing" the package, i.e. "[Pending] Removing incomplete install for 'packagename'" on next run. The result is the same if you have this extension or not and defeats the purpose of this extension.
 
 ###CHANGE LOG:
 * 0.0.1   - initial release
 
 ###ROADMAP:
-* Check for the Chocolatey self service agent and handle differently. i.e.Skip check if agent found? Ignore check completely if licensed?
+* Check for the Chocolatey self service agent and handle differently if what I'm told is true.
 * Possibly add configurable options to enable disable each of the three checks.
 * Probably add configurable timeouts for each of the three checks.
-* Probably add conditional handling options for each of the three checks, i.e. option to abort install based on condition.
+* Possibly add conditional handling options for each of the three checks, i.e. option to abort install based on condition.
 
 You can add your options/wants/recommendations to https://github.com/bcurran3/ChocolateyPackages/issues/27</releaseNotes>
   </metadata>
