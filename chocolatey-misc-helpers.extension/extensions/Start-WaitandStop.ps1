@@ -1,4 +1,7 @@
-# Runs background job to kill $ProcessName within 5 minutes
+# chocolatey-misc-helpers.extension v0.0.2 (07-19-2018) by Bill Curran - public domain
+# Runs a background job to kill $ProcessName within 5 minutes
+# You would typically run this before Install-ChocolateyPackage
+
 function Start-WaitandStop($ProcessName){
 $env:ProcessName = $ProcessName
 
