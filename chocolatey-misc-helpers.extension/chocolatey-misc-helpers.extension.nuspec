@@ -14,28 +14,40 @@
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</projectUrl>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</projectSourceUrl>
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>	
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <summary>Chocolatey Misc Helpers Extension is a collection of helper functions for package creators/maintainers.</summary>
     <description>
-**chocolatey-misc-helpers.extension** provides helper functions to be used in Chocolatey install/uninstall scripts by package creators/maintainers. 
+![Screenshot of some Chocolatey Misc Helpers Extension in use](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/chocolatey-misc-helpers.extension_screenshot.png)
+	
+##**chocolatey-misc-helpers.extension** provides helper functions to be used in Chocolatey install/uninstall scripts by package creators/maintainers. 
 
-These didn't fit into the concept scope of my other extensions so I decided to start a new miscellaneous collection and will add to it as "needed."
+These didn't fit into the concept scope of my other extensions so I started this miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Start-CheckandStop** - checks for and stops a process if running. Also creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running. Read comments in the script to implement.
-* **Start-WaitandStop** - starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. This would usually be called before Install-ChocolateyPackage.
+* **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website. (Power to the packagers!)
+* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines.
+* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc.
+* **Start-WaitandStop** - starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. 
 * **Start-WaitandStopActual** - (do not directly use) called by Start-WaitandStop to make Start-WaitandStop simple to use.
+* **-- Read comments in the scripts for help implementing. --**
 
 ###USAGE:
+* Show-Patreon "http://patreon.com/YourAccountName"
+* Show-ToastMessage "Line 1 of message" "Line 2 of message"
 * Start-CheckandStop "ProcessName"
 * Start-WaitandStop "ProcessName"
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-misc-helpers.extension/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
     <releaseNotes>
 ###CHANGE LOG:
-* 0.0.1   - initial release
+* 0.0.2 - Show-Patreon and Show-ToastMessage added.
+* 0.0.1 - initial release
     </releaseNotes>
   </metadata>
 </package>
