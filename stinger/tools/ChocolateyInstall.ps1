@@ -1,10 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName      = 'stinger' 
+$global:packageMaintainer = 'BCURRAN3'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url              = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger32.exe'
-$checksum         = '03E4FFB340829746E38D5EB908FD20FA8C593C254347D3D3C396F5AC72833A5F'
+$checksum         = 'B7C2ABC9DD81F5328CA0ED32F2E7AE472C897948768997F532D011F85F54E8C3'
 $url64            = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger64.exe'
-$checksum64       = '0EB5F20C45C7E6785302083B0C598AC2A90518FF78DF9CFA04D25E5F7AFC8490'
+$checksum64       = 'FEA599F638391C4F910D2C72132C591348FE67809CB4EC3334F268477F27F914'
 $ExeFile32        = 'stinger32.exe'
 $ExeFile64        = 'stinger64.exe'
 $ShortcutName     = 'McAfee Stinger'
@@ -32,7 +33,9 @@ $packageArgs = @{
   softwareName  = ''
   }
 
+Show-Patreon "https://www.patreon.com/bcurran3"
 Get-ChocolateyWebFile @packageArgs
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
 
 Install-BinFile -Name stinger -Path $toolsDir\$ExeFile
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir\$packageName"

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-iso-downloader</id>
-    <version>6.04</version>
+    <version>6.11</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-iso-downloader</packageSourceUrl>
     <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>
@@ -24,10 +24,15 @@ This tool allows an easy and comfortable way to download genuine Windows 7, Wind
 In the past, Microsoft provided disk images for many of their products through their subcontractor "Digital River". These downloads were pulled in early 2014. Afterwards, Microsoft made a limited selection of downloads available on their TechBench site. Our tool accesses that TechBench site, and unlocks a large number of hidden download files on it.	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-iso-downloader/readme.md)**	
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&amp;start=1</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.6.1" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  	  
     </dependencies>
   </metadata>
   <files>

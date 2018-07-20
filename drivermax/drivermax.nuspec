@@ -4,7 +4,7 @@
   <metadata>
     <id>drivermax</id>
     <title>DriverMax (Install)</title>
-    <version>9.43.0.291</version>
+    <version>10.12.0.10</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>			
     <authors>Innovative Solutions</authors>
     <owners>bcurran3</owners>
@@ -41,15 +41,19 @@ DriverMax automatically tests each new driver before installing it on your PC, e
 [Facebook](https://www.facebook.com/DriverMax-Software-Community-133223258991/) | [Google+](https://plus.google.com/u/0/105403154521904418668)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/drivermax/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
     <projectUrl>http://www.drivermax.com/</projectUrl>
-    <tags>innovativesolutions drivermax drivers updater system utility admin</tags>
+    <tags>innovativesolutions drivermax drivers updater system utility</tags>
     <copyright>Copyright by Innovative Solutions. All Rights Reserved.</copyright>
     <licenseUrl>http://www.drivermax.com/terms_and_conditions.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.drivermax.com/images/dmax.png</iconUrl>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>		
   </metadata>
   <files>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tcc</id>
-    <version>22.0.42.0</version>
+    <version>23.0.24.0</version>
     <title>Total Command Console (30-Day Trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>
@@ -36,8 +36,15 @@ Too many to list due to nuspec description constraints. [Please view the website
 **30 DAY TRIAL: License is $69.95**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tcc/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
-    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-22.htm</releaseNotes>	
+    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-23.htm</releaseNotes>	
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
