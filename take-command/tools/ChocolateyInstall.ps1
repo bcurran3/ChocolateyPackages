@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'take-command'
+$global:packageMaintainer = 'BCURRAN3'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://jpsoft.com/downloads/v22/tcmd.exe'
-$checksum    = 'A935CB1807374AC039AA30BE637E96CDD7E7E766EC5C5C6693D2E797B2BAC069'
+$url         = 'https://jpsoft.com/downloads/v23/tcmd.exe'
+$checksum    = '5BBEE4111F11A656E57FD18C2B122977BE0458E0A09FBCFD54D83695A5F58BB1'
 
 
 $packageArgs = @{
@@ -17,4 +18,7 @@ $packageArgs = @{
   validExitCodes = @(0) 
 }
 
+Show-Patreon "https://www.patreon.com/bcurran3"
 Install-ChocolateyPackage @packageArgs 
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
+

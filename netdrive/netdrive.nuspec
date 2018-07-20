@@ -3,18 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>netdrive</id>
-    <version>3.1.234</version>
+    <version>3.5.434</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netdrive</packageSourceUrl>			
     <owners>bcurran3</owners>
     <title>NetDrive (Install)</title>
     <authors>Bdrive Inc.</authors>
     <projectUrl>https://www.netdrive.net/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/netdrive/NetDrive_icon.png</iconUrl>
-    <copyright>Copyright © 2015 Bdrive Inc.</copyright>
+    <copyright>Copyright © Bdrive Inc.</copyright>
     <licenseUrl>https://www.netdrive.net/NetDrive-terms.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.netdrive.net/knowledgebase</docsUrl>
-    <tags>netdrive net drive amazon box dropbox ftp google hubic onedrive openstack owncloud webdav owncloud android airdrive admin</tags>
+    <tags>netdrive net drive amazon box dropbox ftp google hubic onedrive openstack owncloud webdav owncloud android airdrive</tags>
     <summary>NetDrive - The Network Drive for Windows</summary>
     <description>
 ![Screenshot of NetDrive](https://www.netdrive.net/static/netdrive_www/images/nd3_ui_A.png)
@@ -65,11 +65,16 @@ Microsoft Windows 10, Windows 8, Windows 8.1, Windows 7, Windows Vista, Windows 
 ####Even after the trial period, you can continue using NetDrive but NetDrive will be limited to mount only one network drive, limited transfer speed and a banner will be displayed over the windows explorer indicating the trial is over.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/netdrive/readme.md)**	
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://accounts.bdrive.com/product_history/NetDrive3/</releaseNotes>
     <dependencies>
       <dependency id="vcredist2012"/>
       <dependency id="vcredist140"/>	  
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	
     </dependencies>		
   </metadata>
   <files>

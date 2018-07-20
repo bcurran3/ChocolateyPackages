@@ -4,7 +4,7 @@
   <metadata>
     <id>allway-sync</id>
     <title>allway-sync (Install)</title>
-    <version>17.2.17</version>
+    <version>18.4.8</version>
     <authors>Botkind, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allway-sync</packageSourceUrl>		
@@ -19,6 +19,10 @@ Allway Sync uses innovative synchronization algorithms to synchronize your data 
 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/allway-sync/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
     <projectUrl>http://allwaysync.com/</projectUrl>
     <docsUrl>http://allwaysync.com/support/faq</docsUrl>
@@ -30,6 +34,9 @@ Allway Sync uses innovative synchronization algorithms to synchronize your data 
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://allwaysync.com/themes/allwaysync/img/logo.png</iconUrl>
     <releaseNotes>https://allwaysync.com/news</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

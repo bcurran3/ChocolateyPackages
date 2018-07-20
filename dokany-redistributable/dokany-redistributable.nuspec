@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dokany-redistributable</id>
-    <version>1.0.5</version>
+    <version>1.1.0.2000</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dokany-redistributable</packageSourceUrl>		
     <title>Dokany Redistributable Bundle (Install)</title>
@@ -16,7 +16,7 @@
     <docsUrl>https://github.com/dokan-dev/dokany/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/dokan-dev/dokany/issues</bugTrackerUrl>
     <tags>dokany fuse filesystem</tags>
-    <summary>dokany is a ser mode file system library for windows with FUSE Wrapper</summary>
+    <summary>dokany is a user mode file system library for windows with FUSE Wrapper</summary>
     <description>
 ![Screenshot of dokany in use](https://camo.githubusercontent.com/e825c85d44931bd98fe0585a64478bc57f6eb34a/687474703a2f2f646f6b616e2d6465762e6769746875622e696f2f696d616765732f73637265656e636173742e676966)	
 
@@ -58,18 +58,16 @@ To learn more about Dokan file system development, see the API documentation.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dokany-redistributable/readme.md)**
 
-PACKAGING NOTE: You will need to reboot your computer before dokany will install under two conditions: 
-
-* kb2999226 isn't already installed and gets installed as a dependency. 
-* You remove dokany and attempt to re-install.
-
-Then attempt installation again.	
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://github.com/dokan-dev/dokany/blob/master/CHANGELOG.md</releaseNotes>
 	<dependencies>
 	  <dependency id="dotnet4.0" />
       <dependency id="vcredist2015" />
       <dependency id="kb2999226" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		  
     </dependencies>	
   </metadata>
   <files>
