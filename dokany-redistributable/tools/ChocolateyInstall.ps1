@@ -1,17 +1,11 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'winflector'
+﻿$packageName    = 'dokany-redistributable'
 $global:packageMaintainer = 'BCURRAN3'
-$softwareName   = 'Winflector*'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://www.winflector.com/store/free-version/index/id/373' 
-$checksum       = 'BC97A47C34F962FAF3DE3621D18DCEC3B00ED5D233452D9C32E6547C7BDF7C32'
-$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.1.0.2000/DokanSetup_redist.exe'
+$checksum       = '22B6A1E1BDAFCD8E7E105436B151D84374558FB2B868957AB0404998FF5EF4CD'
+$silentArgs     = '/install /passive /norestart'
 $validExitCodes = @(0, 3010, 1641)
-$ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "WinflectorInstall.ahk"
-
-Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName   = $packageName
@@ -19,7 +13,7 @@ $packageArgs = @{
   url           = $url
   validExitCodes= $validExitCodes
   silentArgs    = $silentArgs
-  softwareName  = $softwareName
+  softwareName  = 'Dokan Library*'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
@@ -27,3 +21,4 @@ $packageArgs = @{
 Show-Patreon "https://www.patreon.com/bcurran3"
 Install-ChocolateyPackage @packageArgs  
 Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
+  

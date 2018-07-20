@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dokany</id>
-    <version>1.0.5</version>
+    <version>1.1.0.2000</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dokany</packageSourceUrl>		
     <title>dokany (Install)</title>
@@ -57,12 +57,17 @@ For example, when Windows Explorer requests to open a directory, the CreateFile 
 To learn more about Dokan file system development, see the API documentation.	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dokany/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://github.com/dokan-dev/dokany/blob/master/CHANGELOG.md</releaseNotes>
 	<dependencies>
 	  <dependency id="dotnet4.0" />	
       <dependency id="vcredist2015" />
       <dependency id="kb2999226" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		  
     </dependencies>	
   </metadata>
   <files>

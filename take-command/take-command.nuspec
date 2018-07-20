@@ -4,7 +4,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>22.0.42.0</version>
+    <version>23.0.24.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
@@ -37,8 +37,15 @@ Take Command is the most flexible and powerful Windows command line available an
 To read all the **benefits** and **features** [look at the jpsoft website](https://jpsoft.com/products/take-command.html).
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/take-command/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
-    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-22.htm</releaseNotes>
+    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-23.htm</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
