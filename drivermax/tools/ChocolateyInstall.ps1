@@ -1,7 +1,8 @@
 ﻿$packageName    = 'drivermax' 
+$global:packageMaintainer = 'BCURRAN3'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.drivermax.com/soft/dmx/drivermax.exe'
-$checksum       = '5263DF09DBA92F5430CC084FFB87EF71C746FB335F6CC7157774B449A0562EE9'
+$checksum       = '270EF5232F062EA677ECD452F9D35B4BC54A8673EC17CF4679D8D662A6772DD0'
 $validExitCodes = @(0, 1)
 
 $packageArgs = @{
@@ -16,5 +17,7 @@ $packageArgs = @{
   checksumType  = 'sha256'
   }
   
+Show-Patreon "https://www.patreon.com/bcurran3"  
 Install-ChocolateyPackage @packageArgs
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
 

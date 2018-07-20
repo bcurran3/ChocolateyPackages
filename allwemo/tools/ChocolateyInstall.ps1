@@ -1,9 +1,10 @@
 ﻿# https://ea.im/Doc.aspx?D=196&dn=AllWemo_setup_3_37.zip
 $packageName    = 'allwemo'
+$global:packageMaintainer = 'BCURRAN3'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = "$toolsDir\AllWemo.msi" 
-$checksum       = 'D6A184E53DC9FF035503154A0173B928DC94B4067EFDD7FD2BE2F8B56BE25638'
+$checksum       = 'BD69701574526395F2F3A285B77A6DEEF318ECF72F907C3D0F9FF27376B79F68'
 $silentArgs     = '/quiet /qn /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
@@ -18,4 +19,7 @@ $packageArgs = @{
   checksumType  = 'sha256' 
 }
 
-Install-ChocolateyPackage @packageArgs  
+Show-Patreon "https://www.patreon.com/bcurran3"
+Install-ChocolateyPackage @packageArgs
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
+Remove-Item $url

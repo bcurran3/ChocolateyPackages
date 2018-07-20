@@ -1,9 +1,10 @@
 $packageName = 'tcc'
+$global:packageMaintainer = 'BCURRAN3'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $fileType    = 'exe'
 $silentArgs  = '/quiet'
-$url         = 'https://jpsoft.com/downloads/v22/tcc.exe'
-$checksum    = 'F2CD29509D3BF8867D52DF0A016FC4BDB9DA7FD636AF7BA41A607BBF166FBD08'
+$url         = 'https://jpsoft.com/downloads/v23/tcc.exe'
+$checksum    = '0DD270CAABE9F0CA0447D5603B355D57955387818126290057AF1B2D885CB567'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -11,9 +12,11 @@ $packageArgs = @{
   fileType      = $fileType 
   url           = $url
   silentArgs    = $silentArgs
-  softwareName  = 'TCC 22' 
+  softwareName  = 'TCC 23' 
   checksum      = $checksum
   checksumType  = 'sha256'  
   }
   
+Show-Patreon "https://www.patreon.com/bcurran3"  
 Install-ChocolateyPackage @packageArgs
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."

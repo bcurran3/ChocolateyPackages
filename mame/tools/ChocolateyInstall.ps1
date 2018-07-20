@@ -1,9 +1,10 @@
 ﻿$packageName    = 'mame' 
+$global:packageMaintainer = 'BCURRAN3'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/mamedev/mame/releases/download/mame0198/mame0198b_32bit.exe'
-$checksum       = 'CDFDA3EE21605723EC674FF9DCBDDB4D95F639C701526707819244FAD781D360'
-$url64          = 'https://github.com/mamedev/mame/releases/download/mame0198/mame0198b_64bit.exe'
-$checksum64     = '9A81FEA6287059A9392FDC9923981F9641C976BE69DA45FE5DDD687C6B8CE5C1'
+$url            = 'https://github.com/mamedev/mame/releases/download/mame0199/mame0199b_32bit.exe'
+$checksum       = 'BFDC7569054969F2EB3E39403E6268A187FA6B55E0F8D4CDE4FE886BD459AA6D'
+$url64          = 'https://github.com/mamedev/mame/releases/download/mame0199/mame0199b_64bit.exe'
+$checksum64     = '80F67223E0F78ACBC3B4C1874D1BF5DC07AC10FCB1CA5973547F498F6DC53D32'
 $bits           = Get-ProcessorBits
 
 $packageArgs = @{
@@ -17,7 +18,9 @@ $packageArgs = @{
   checksumType  = 'sha256'
 }
 
-Install-ChocolateyZipPackage @packageArgs 
+Show-Patreon "https://www.patreon.com/bcurran3"
+Install-ChocolateyZipPackage @packageArgs
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
 
 if ($bits -eq 64)
    {
