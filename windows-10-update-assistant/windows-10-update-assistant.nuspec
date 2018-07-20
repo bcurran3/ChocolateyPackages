@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-10-update-assistant</id>
-    <version>1.4.9200.22452</version>
+    <version>1.4.9200.22514</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-10-update-assistant</packageSourceUrl>	
     <title>Windows 10 Update Assistant (Portable)</title>
@@ -17,13 +17,20 @@
     <tags>microsoft windows 10 win10 creators update assistant 1709</tags>
     <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 Creators Update (version 1709)</summary>
     <description>
-##Get the Windows 10 Fall Creators Update	
+##Get the Windows 10 April 2018 Update now available	
 
 Windows 10 will notify you when the Fall Creators Update is available for your device. When the update is ready, you'll be asked to pick a time to install it if you're not ready. After it’s installed, your device will be running Windows 10, version 1709. To see which version of Windows 10 your device is currently running, select the Start button, then select Settings > System > About.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-10-update-assistant/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
-    <releaseNotes>https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1703</releaseNotes>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1803</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winflector</id>
-    <version>3.9.6.0</version>
+    <version>3.9.6.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winflector</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Winflector (Install)</title>
@@ -44,10 +44,15 @@ This is a fully functional version of Winflector software for two concurrent wor
 [Winflector Client](https://chocolatey.org/packages/winflector-client)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winflector/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>http://www.winflector.com/english/support/versions.html</releaseNotes>
     <dependencies>
       <dependency id="autohotkey" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>	
   </metadata>
   <files>

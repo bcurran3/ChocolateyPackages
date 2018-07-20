@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>teamspeak-server</id>
-    <version>3.0.13.6</version>
+    <version>3.2.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/teamspeak-server</packageSourceUrl>
     <title>TeamSpeak Server</title>
     <authors>TeamSpeak Systems GmbH</authors>
     <projectUrl>http://www.teamspeak.com/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/teamspeak-server/TeamSpeak.png</iconUrl>
-    <copyright>© 2017 TeamSpeak Systems GmbH. All rights reserved.</copyright>
+    <copyright>© TeamSpeak Systems GmbH. All rights reserved.</copyright>
     <licenseUrl>http://www.teamspeak.com/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.teamspeakusa.com/index.php?/Knowledgebase/List/Index/10/english</docsUrl>
@@ -62,15 +62,23 @@ AES based encryption can optionally be enabled for the entire server or specific
 ####IN-GAME OVERLAY
 Keep your eyes on the action with the official TeamSpeak in-game overlay brought to you by Overwolf. Quickly access TeamSpeak voice controls, see who's talking, and receive notifications and messages where you need it most.
 
-####LIMITLESS CUSTOMIZATION
-Customize your TeamSpeak Client to meet your own personal style with the included plugins, themes and sound/icon packs, or choose from hundreds of addons contributed by our TeamSpeak user community.
+...and more.
 
 **SOCIAL MEDIA:**
 [Facebook](https://www.facebook.com/teamspeak) | [Twitter](https://twitter.com/teamspeak) | [Google+](https://plus.google.com/+teamspeak) | [YouTube](https://www.youtube.com/user/TeamSpeak)
 
 **CLIENT SOFTWARE:**
 [Android](https://play.google.com/store/apps/details?id=com.teamspeak.ts3client) | [iOS](https://itunes.apple.com/app/teamspeak-3/id577628510) | [Windows](https://chocolatey.org/packages/teamspeak) | [macOS](http://www.teamspeak.com/downloads.html#client) | [Linux](http://www.teamspeak.com/downloads.html#client)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/teamspeak-server/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
