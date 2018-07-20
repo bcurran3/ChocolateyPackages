@@ -1,14 +1,15 @@
-﻿
-VERIFICATION
+﻿==================== AllWemo ====================
 
 The included MSI binary included in this package went through through the following process to be obtained:
-* AllWemo_3_37_setup.zip with SHA256 of FCE7BF6D8721F647439BE0B6C6D1DC9E42E199181E825DFF84FB25298D0D4FAD was  originally downloaded from developers site at https://ea.im/Doc.aspx?D=196&dn=AllWemo_setup_3_37.zip 
-* AllWemo_setup_3_37.exe with SHA256 of 07E87268AC39A54ED63BF7B0616124F5B15F9A057600CAD634044B1336FA1CB8 was extracted from AllWemo_3_37_setup.zip.
-* AllWemo_setup_3_37.exe was checked for silent install options. Running setup.exe /? shows silent install options but they don't function. It is assumed by the packager that those are being shown by the underlying MSI package but not passed through by the wrapper.
-* AllWemo_setup_3_37.exe was run and the AllWemo.msi with SHA256 D6A184E53DC9FF035503154A0173B928DC94B4067EFDD7FD2BE2F8B56BE25638 was copied from the temp dir mid-process to then be included in this package.
+* AllWemo_setup_x_xx.zip was  originally downloaded from developers site at https://ea.im/p/?r=AllWemo
+* AllWemo_setup_x_xx.exe was extracted from AllWemo_setup_x_xx.zip.
+* AllWemo_setup_x_xx.exe was checked for silent install options. Running setup.exe /? shows silent install options but they don't function. It is assumed by the packager that those are being shown by the underlying MSI package but not passed through by the wrapper.
+* AllWemo_setup_x_xx.exe was run and the AllWemo.msi was copied from the temp dir mid-process to then be included in this package.
 * AllWemo.msi installs silently perfectly fine using normal MSI install functions.
 * AllWemo distribution rights (allowed) are covered in LICENSE.txt
 
 Checksums are not provided by the developer.
 https://ea.im/p/?r=AllWemo
+
+==================== AllWemo ====================
 

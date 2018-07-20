@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>beebeep</id>
-    <version>5.0.2</version>
+    <version>5.2.0</version>
     <owners>bcurran3</owners>
     <title>beeBEEP (Portable)</title>
     <authors>Marco Mastroddi</authors>
@@ -34,10 +34,18 @@ BeeBEEP is an open source, peer to peer, lan messenger developed by Marco Mastro
 * Message History: all messages can be saved.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/beebeep/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://sourceforge.net/p/beebeep/code/HEAD/tree/CHANGELOG.txt</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+
   </files>
 </package>

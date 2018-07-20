@@ -3,12 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-sync-outlook</id>
-    <version>3.8.440.12501</version>
+    <version>4.0.14.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-sync-outlook</packageSourceUrl>
     <owners>bcurran3</owners>
-    <title>G Suite Sync for Microsoft Outlook (Install)</title>
+    <title>G Suite Sync for Microsoft Outlook® (GSSMO) (Install)</title>
     <authors>Google</authors>
     <projectUrl>https://tools.google.com/dlpage/gappssync</projectUrl>
+	<iconUrl>https://4.bp.blogspot.com/-Pp8TROoyTwc/VeXXFhKQwWI/AAAAAAAACPo/b2g71CJ_Hj8/s1600/inline-googles-new-logo.png</iconUrl>	
     <copyright>Google</copyright>
     <licenseUrl>https://gsuite.google.com/terms/standard_terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -16,8 +17,8 @@
 	<!--<docsUrl2>https://support.google.com/a/users/answer/153872</docsUrl2> -->
     <mailingListUrl>https://productforums.google.com/forum/#!forum/apps</mailingListUrl>
     <bugTrackerUrl>https://support.google.com/a/answer/153463</bugTrackerUrl>
-    <tags>gssmo gsuite gapps google migration sync outlook admin</tags>
-    <summary>Tool to migrate your Outlook data to G Suite (formerly GApps).</summary>
+    <tags>gssmo gsuite gapps google migration sync outlook</tags>
+    <summary>GSSMO - a tool to migrate your Outlook data to G Suite.</summary>
     <description>
 ##What is GSSMO?
 
@@ -52,11 +53,17 @@ For information about which Microsoft Outlook features are supported and how usi
 * Microsoft Outlook 2010® (32 and 64 bit) 
 * Microsoft Outlook 2013® (32 and 64 bit) 
 * Microsoft Outlook 2016® (32 and 64 bit)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/gsuite-sync-outlook/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
-    <releaseNotes>This mysteriously got a new checksum with no new release info. I think the installer got updated.</releaseNotes>
+    <releaseNotes>https://support.google.com/a/answer/153463</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" />
-    </dependencies>		
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>			
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
