@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
-
 * Binary is included in the package. 
+* RocketDock.com is going away 2018-08-06. Docs and add-ons link won't work after that. Check https://punklabs.com/ for possible more information.
 
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
