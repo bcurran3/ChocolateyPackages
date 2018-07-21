@@ -1,5 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName = 'vmware-powercli-psmodule'
+$packageName  = 'vmware-powercli-psmodule'
+$shortcutName = 'VMware.PowerCLI.lnk'
 
 Uninstall-Module -Name VMware.DeployAutomation -Force
 Uninstall-Module -Name VMware.ImageBuilder -Force
@@ -21,3 +22,8 @@ Uninstall-Module -Name VMware.VimAutomation.Vds -Force
 Uninstall-Module -Name VMware.VimAutomation.Vmc -Force
 Uninstall-Module -Name VMware.VimAutomation.vROps -Force
 Uninstall-Module -Name VMware.VumAutomation -Force
+
+remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
+remove-item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
+Show-ToastMessage "$packageName uninstalled." "Version $env:packageVersion."
+
