@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vmware-powercli-psmodule</id>
-    <version>10.1.0.8403314</version>
+    <version>10.1.1.8827524</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli-psmodule</packageSourceUrl>
     <title>VMware.PowerCLI (Install)</title>
@@ -18,14 +18,19 @@
     <tags>vmware powercli vsphere automation client virtual machine virtualization esx esxi powershell</tags>
     <summary>This Windows PowerShell module contains VMware.PowerCLI</summary>
     <description>
-VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell, and provides more than 600 cmdlets for managing and automating vSphere, vCloud, vRealize Operations Manager, vSAN, NSX-T, VMware Cloud on AWS, and VMware Horizon environments.
+###VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell, and provides more than 600 cmdlets for managing and automating vSphere, vCloud, vRealize Operations Manager, vSAN, NSX-T, VMware Cloud on AWS, and VMware Horizon environments.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-powercli-psmodule/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
 	<releaseNotes>https://vdc-download.vmware.com/vmwb-repository/dcr-public/3cef45f8-7dc2-4c28-bbd7-0a44f24ac0d7/105db27d-5ef8-4044-b047-2e6cd3b32584/vmware-powercli-10-release-notes.html</releaseNotes>
     <dependencies>
 	  <dependency id="dotnet4.5" />
       <dependency id="powershell" version="5.0" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
     </dependencies>	  
   </metadata>	
   <files>
