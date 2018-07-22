@@ -16,4 +16,6 @@ $packageArgs = @{
   validExitCodes= $validExitCodes
 }
 
+Show-Patreon "https://www.patreon.com/bcurran3"  
 Install-ChocolateyPackage @packageArgs 
+Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
