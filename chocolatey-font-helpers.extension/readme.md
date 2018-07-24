@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
-* A BCURRAN3 original! - Sort of, Microsoft helped a little bit. :)
+* A BCURRAN3 original! - Microsoft helped a little bit. :)
 * I personally use and endorse this extension.
 
 ##**chocolatey-font-helpers.extension** provides helper functions to install and uninstall fonts via Chocolatey packages. Let the easy peasy font packages flow!
