@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>font-awesome-font</id>
-    <version>5.1.1</version>
+    <version>5.1.1.0020180724</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/font-awesome-font</packageSourceUrl>
     <title>Font Awesome (Font) (Install)</title>
@@ -66,7 +66,7 @@ Font Awesome loves screen readers and helps make your icons accessible on the we
 	</description>
     <releaseNotes>https://fontawesome.com/changelog/latest</releaseNotes>	
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+	  <dependency id="chocolatey-font-helpers.extension" version="0.0.1" />
     </dependencies>		
   </metadata>
   <files>
