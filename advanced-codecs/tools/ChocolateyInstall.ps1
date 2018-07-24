@@ -2,8 +2,8 @@
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $global:packageMaintainer = 'BCURRAN3'
 $packageName    = 'advanced-codecs' 
-$url            = "$toolsDir\ADVANCED_Codecs_v1034.exe"
-$checksum       = 'A567BBCEBF387C345FB4BF5F3385B13FB0180C4A345FD30486D9880869F8DA54'
+$url            = "$toolsDir\ADVANCED_Codecs_v1035.exe"
+$checksum       = '5E93846A9F7E8636AE656D15332BF5D73CF77F325C0606F70FEFDD9067C65818'
 $installerType  = 'EXE'
 $silentArgs     = '/S /v/qn'
 $validExitCodes = @(0, 3010, 1641)
@@ -26,7 +26,7 @@ $packageArgs = @{
 
 Show-Patreon "https://www.patreon.com/bcurran3"
 Install-ChocolateyPackage @packageArgs  
-Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
+Show-ToastMessage "Shark007 ADVANCED Codecs installed." "Version $env:packageVersion."
 
 Start-Sleep -s 10
 Start-CheckandStop "Settings32"  
