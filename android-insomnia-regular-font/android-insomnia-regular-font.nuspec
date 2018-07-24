@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>android-insomnia-regular-font</id>
+    <version>1.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/android-insomnia-regular-font</packageSourceUrl>
+    <title>Android Insomnia Regular (Font) (Install)</title>
+    <authors>Designed by Michael Moss</authors>
+    <projectUrl>http://www.fontspace.com/mechanismatic/android-insomnia</projectUrl>
+    <iconUrl>http://img.fontspace.com/gallery/728x2000/3/e630b6c691e349f0ae5a2b00e7c0861d.jpg</iconUrl>
+    <licenseUrl>tp://creativecommons.org/licenses/by/4.0/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>android insomnia regular ttf font</tags>
+    <summary>Android Insomnia Regular Version 1.0</summary>
+    <description>
+![Screenshot of Android Insomnia Regular Font](http://img.fontspace.com/gallery/728x2000/3/3fce9ade2c424ffcbab734bc3f95ba6c.jpg)
+
+
+##Android Insomnia Regular Version 1.0 
+
+Do insomniac androids dream of electric sleep? 
+
+Designed by Michael Moss 
+
+whitespirals.com 
+
+Contact me at mechanismatic@gmail.com for questions or feedback. 
+
+Created using Birdfont by Johan Mattsson 
+http://birdfont.org/ 
+
+9/24/2015 
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/android-insomnia-regular-font/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <dependencies>
+	  <dependency id="chocolatey-font-helpers.extension" version="0.0.1" />
+    </dependencies>		
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
