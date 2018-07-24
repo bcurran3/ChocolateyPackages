@@ -1,13 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'qdir'
+$global:packageMaintainer = 'BCURRAN3'
 $softwareName   = 'Q-Dir'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.softwareok.com/Download/Q-Dir_Installer.zip'
-$checksum       = 'E33D332ED98F64572C6AF98645411AABBC76FEA2AF78A91BBE9CDA2243FCDEE8'
+$checksum       = '8629297D2013E58C1C2FFD7A71268DD80228E006C01077E4ED2728299E42862A'
 $url64          = 'https://www.softwareok.com/Download/Q-Dir_Installer_x64.zip'
-$checksum64     = '0D7B14AF28021BFE495DEF73C8BEE9171CC6B3AF90DE19A36AA4B022507CFE6A'
-$silentArgs     = '/S'
+$checksum64     = '9C736167319803595BFC4D7E95EBDC989D55E64D8589BD4E3AB6E6AC132AE679'
+$silentArgs     = '/S langid=1'
 $validExitCodes = @(0,1)
 $bits           = Get-ProcessorBits
 
@@ -41,7 +42,9 @@ $packageArgs = @{
   softwareName  = $softwareName
 }
  
+Show-Patreon "https://www.patreon.com/bcurran3"  
 Install-ChocolateyInstallPackage @packageArgs
+Show-ToastMessage "$softwareName installed." "Version $env:packageVersion."
 
 Install-BinFile -Name qdir -Path $env:programfiles\Q-Dir\Q-Dir.exe
 Remove-Item $fileLocation | out-null
