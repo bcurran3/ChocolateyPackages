@@ -32,8 +32,7 @@ Features summary:
     <copyright>Copyright 2009-2011 Zach Saw. All rights reserved.</copyright>
     <licenseUrl>https://web.archive.org/web/20171221194621/http://www.zachsaw.com/?pg=lanbench_tcp_network_benchmark</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://static.windowspedia.net/data/programs/icons/lanbench_icon_127820.png</iconUrl>
-    <releaseNotes>https://www.techpowerup.com/download/futuremark-3dmark-timespy/#changes-v2-5-5029</releaseNotes>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/lanbench/lanbench_icon.png</iconUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
