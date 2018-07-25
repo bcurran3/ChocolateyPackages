@@ -3,18 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>netstat-viewer</id>
-    <title>netstat-viewer (Portable)</title>
-    <version>1.0.20180402</version>
+    <title>Netstat Viewer (Portable)</title>
+    <version>1.0.20180725</version>
     <authors>Mischel Internet Security</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netstat-viewer</packageSourceUrl>	
-    <projectUrl>http://www.misec.net/freeware/</projectUrl>
-	<iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/netstat-viewer/netstat-viewer_icon.png</iconUrl>
+    <projectUrl>https://web.archive.org/web/20171016152254/http://www.misec.net/freeware/</projectUrl>
+	<iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/netstat-viewer/netstat-viewer_icon.png</iconUrl>
     <copyright>Copyright © 2002 Mischel Internet Security</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <summary>Netstat Viewer is a handy GUI replacement for the command line application "netstat".</summary>
     <description>
-![Screenshot of Netstat Viewer](https://netstat-viewer.en.softonic.com/)
+![Screenshot of Netstat Viewer](https://web.archive.org/web/20160611001858/http://misec.net/i/netstatviewer.png)
+
 Netstat Viewer represents a graphical user interface for the netstat (network statistics) command-line tool, which displays incoming and outgoing network connections, network interfaces and network protocol statistics. The tool addresses power users, such as network administrators.
 
 This is a portable application, so you can run the executable file from any location on the computer. Since there is not installer included, you can save Netstat Viewer to a USB flash disk or similar storage unit and get network statistics on any workstation.
@@ -26,8 +27,12 @@ The GUI is represented by a single window where network statistics are automatic
 Shown details include the protocol, local address and port number, remote address and port, along with the status for each TCP connection. Sorting data is possible by clicking one of these columns to base it on.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/netstat-viewer/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
     </description>
-    <tags>netstat viewer gui tcp ip network util utility portable binary</tags>
+    <tags>netstat viewer gui tcp ip network util utility portable</tags>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />
