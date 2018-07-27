@@ -4,42 +4,35 @@
   <metadata>
     <id>intel-xtu</id>
     <version>6.4.1.23</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>		
     <owners>bcurran3</owners>
-    <title>Intel® Driver &amp; Support Assistant (Install)</title>
+    <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</projectUrl>
-    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_icon.png</iconUrl>
     <copyright>Intel Corporation</copyright>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.intel.com/content/www/us/en/support/topics/idsa-faq.html</docsUrl>
+    <docsUrl>https://www.intel.com/content/www/us/en/support/articles/000006022/processors/processor-utilities-and-programs.html</docsUrl>
     <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
-    <tags>dsa intel driver support assistant update utility</tags>
-    <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
+    <tags>xtu intel tuning utility</tags>
+    <summary>Intel XTU is a simple Windows*-based performance-tuning software for novice and experienced enthusiasts to overclock, monitor, and stress a system</summary>
     <description>
+![Screenshot of Intel XTU](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_screenshot.png)	
 
 ###Purpose
 
-The Intel® Driver &amp; Support Assistant enables you to scan computing devices for the latest drivers available from Intel. This tool has the main interface hosted on Intel’s support website and provides a more integrated support experience to users. It has an enhanced detection engine to ensure that customers are given complete and accurate information and a scan frequency option to change from a “run-once” tool to a persistent experience that can provide customers with driver updates more quickly.
+This download installs the Intel® Extreme Tuning Utility (Intel® XTU) version 6.4.1.23, including platform support for the next-generation Intel® Core™ Processor Family.
 
-Products supported: Graphics drivers, wireless networking, Intel® NUCs, and Intel® Compute Sticks
+Intel XTU is a simple Windows*-based performance-tuning software for novice and experienced enthusiasts to overclock, monitor, and stress a system. The software interface exposes a set of robust capabilities common in most enthusiast platforms along with special new features available on new Intel® Application Processors and Intel® Motherboards.
 
-###Required to install and use utility
+See the release notes for installation instructions, supported hardware, what is new, bug fixes, and known issues.
 
-A broadband Internet connection is required to use this utility.
-
-Operating system requirements for installation: This application installs on Windows 7*, Windows 8*, Windows 8.1*, and Windows® 10.
-
-We recommend performing a Windows* update to bring your operating system up to date with the latest .NET.
-
-This application does not support older versions of Internet Explorer. We recommend using Chrome, Firefox or IE v11 browsers. 
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-xtu/readme.md)**
 </description>
-    <releaseNotes>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/24075/eng/XTU-6_4-MR-ReleaseNotes.pdf</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		
     </dependencies>		
   </metadata>
   <files>
