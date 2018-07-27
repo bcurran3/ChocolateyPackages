@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>metax</id>
+    <version>2.67</version>
+    <title>MetaX (trial) (Install)</title>
+    <authors>Knowledge Design Software</authors>
+    <owners>the-running-dev, bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/metax</packageSourceUrl>	
+    <projectUrl>http://danhinsley.com/metax/metax.html</projectUrl>
+	<docsUrl>http://www.danhinsley.com/MetaX%20Help%20PDF.pdf</docsUrl>
+	<mailingListUrl>http://www.danhinsley.com/forums/viewforum.php?f=3</mailingListUrl>
+	<iconUrl>http://danhinsley.com/metax/wpimages/wpf0af8252_06.png</iconUrl>
+    <copyright>Copyright © Knowledge Design Software</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>metax tagging video mp4 m4v mov avi mkv wmv trial</tags>
+    <summary>Tag Your Movies To Look Perfect in iTunes, Apple TV or other Media Players</summary>	
+    <description>
+![Screenshot of MetaX](http://danhinsley.com/metax/784601_1.png)
+	
+Tag Your Movies To Look Perfect in iTunes, Apple TV or other Media Players.
+
+With only a mouse click or two, MetaX will scour all the major sources of movie
+and TV information on the web: TVDB, TheMovieDB, iTunes as well as IMDB and
+Yahoo posters and display the information. You can select from multiple entries
+to get just the look you want, then quickly write the tags into the file so that
+it shows up in iTunes, Apple TV or whatever media play you use, just like it would
+if you had purchased the movie from iTunes.
+MetaX supports MP4, M4V, MOV, AVI, MKV and WMV files.
+Not all formats support all tags. AVI files in particular don't support most tags,
+including not supporting cover art.
+
+## Features
+* Great for TV Shows
+* Set Ratings for Parental Control
+* Easy To Customize
+* Import data from MyMovies or other XML files
+* Find Great Cover Art
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/metax/readme.md)**
+    </description>
+  </metadata>
+</package>
