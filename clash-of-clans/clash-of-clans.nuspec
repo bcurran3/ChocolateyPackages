@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>clash-of-clans</id>
+    <title>Clash of Clans (Install)</title>
+    <version>0.28.5.0</version>
+    <authors>Supercell</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/clash-of-clans</packageSourceUrl>	
+    <summary>Clash of Clans is a warfare strategy game loved by millions around the world.</summary>
+    <description>
+![Clash of Clans title screen](https://www.games.lol/wp-content/uploads/2018/05/clashofclans_image.jpg)	
+
+From the developer of popular titles such as Hay Day, Boom Beach and Clash Royale, Clash of Clans is here to conquer your PC! Proudly developed by Supercell, Clash of Clans is a warfare strategy game loved by millions around the world.
+
+It’s a world of fantasy with Clash of Clans. As a chief of your village, you are responsible for building your village and forming troops to protect your village from foreign invasion, and also for attacking other players. Develop your attack and defense strategy, build defense buildings, train your troops to attack, and conquer other players’ territories. Read on as we bring you through all there is to be the best CoC Chief!
+
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/clash-of-clans/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <projectUrl>https://games.lol/clash-of-clans/</projectUrl>
+    <tags>supercell clash clans mobiegame games notsilent</tags>
+    <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://games.lol/wp-content/uploads/2018/05/clashofclans_icon.png</iconUrl> 
+    <dependencies>
+      <dependency id="autohotkey" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	 
+	  <dependency id="dotnet4.5" />	  
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
