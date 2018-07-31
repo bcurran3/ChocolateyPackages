@@ -5,9 +5,9 @@ $softwareName   = 'Q-Dir'
 $installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.softwareok.com/Download/Q-Dir_Installer.zip'
-$checksum       = '8629297D2013E58C1C2FFD7A71268DD80228E006C01077E4ED2728299E42862A'
+$checksum       = '9FA3616DB99DBB4A265D7AAF887791E39B01554BCC4A85F6D24638D5BA1BEB04'
 $url64          = 'https://www.softwareok.com/Download/Q-Dir_Installer_x64.zip'
-$checksum64     = '9C736167319803595BFC4D7E95EBDC989D55E64D8589BD4E3AB6E6AC132AE679'
+$checksum64     = '9E596E9C01A6B92335A9AEAE33459FF24718477F21CA363233D0D3896DD4DE7E'
 $silentArgs     = '/S langid=1'
 $validExitCodes = @(0,1)
 $bits           = Get-ProcessorBits
