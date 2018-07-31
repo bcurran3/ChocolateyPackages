@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resilio-sync-home</id>
-    <version>2.5.13.1301</version>
+    <version>2.6.0.1317</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-home</packageSourceUrl>
     <title>Resilio Sync Home (Install)</title>
     <authors>Resilio, Inc.</authors>
     <projectUrl>https://www.resilio.com/individuals/</projectUrl>
-    <iconUrl>https://blog.resilio.com/wp-content/uploads/2016/06/SyncSymbol-260x260px.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/resilio-sync-home/resilio-sync-home_icon.png</iconUrl>
     <copyright>© Resilio, Inc.</copyright>
     <licenseUrl>https://www.resilio.com/legal/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -48,9 +48,13 @@ Keep folders synced between multiple platforms and operating systems. Sync is av
 [Android App](https://play.google.com/store/apps/details?id=com.resilio.sync) | [iOS App](https://itunes.apple.com/us/app/id1126282325) | [Windows App](https://www.microsoft.com/en-us/store/p/resilio-sync/9wzdncrdmw96?rtc=1)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/resilio-sync-home/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>		
   </metadata>
   <files>
