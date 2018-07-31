@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>openpht</id>
+    <version>1.8.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openpht</packageSourceUrl>	
+    <title>OpenPHT (Install)</title>
+    <authors>OpenPHT Community</authors>
+    <licenseUrl>https://github.com/RasPlex/OpenPHT/blob/openpht-1.9/copying.txt</licenseUrl>
+    <projectUrl>https://forums.plex.tv/t/release-openpht-1-8-0/185459</projectUrl>
+	<projectSourceUrl>https://github.com/RasPlex/OpenPHT</projectSourceUrl>
+	<bugTrackerUrl>https://github.com/RasPlex/OpenPHT/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.rawgit.com/miketweaver/packages-for-chocolatey/master/icons/plex-home-theater.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<copyright></copyright>
+    <tags>openpht media plex home theater htpc foss</tags>	
+    <summary>OpenPHT is a community driven fork of Plex Home Theater</summary>	
+    <description>
+	
+##OpenPHT is the community driven fork of Plex Home Theater.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/openpht/readme.md)**	
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+	</description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>		
+  </metadata>
+</package>
