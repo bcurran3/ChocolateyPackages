@@ -15,7 +15,7 @@
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial chocolatey powershell test environment</tags>
+    <tags>bcurran3 unofficial chocolatey powershell test environment packagers maintainers</tags>
     <summary>Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.</summary>
     <description>
 ![Screenshot example of Chocolatey PowerShell](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_screenshot.png)
@@ -23,12 +23,11 @@
 ###Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.	
 	
 ###WHO IS THIS FOR?
- **chocolateypowershell** was created for Chocolatey package maintainers who want to test Chocolatey native functions and Chocolatey extensions functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run ChocolateyPowerShell and test away! 
+ **chocolateypowershell** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run ChocolateyPowerShell and test away! 
 
 
 ###INSTRUCTIONS:
-Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey functions. NOTE: There are environmental variables you may want to declare such as $packageName etc. that will be needed by many functions.
-
+Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolateypowershell/readme.md)**
 
