@@ -8,7 +8,7 @@
 
 ###HELPERS:
 * **Install-ChocolateyFont** - Runs Microsoft's [Add-Font.ps1](https://blogs.technet.microsoft.com/deploymentguys/2010/12/04/adding-and-removing-fonts-with-windows-powershell/) script
-* **Install-ChocolateyFont** - Runs Microsoft's [Remove-Font.ps1](https://blogs.technet.microsoft.com/deploymentguys/2010/12/04/adding-and-removing-fonts-with-windows-powershell/) script
+* **Uninstall-ChocolateyFont** - Runs Microsoft's [Remove-Font.ps1](https://blogs.technet.microsoft.com/deploymentguys/2010/12/04/adding-and-removing-fonts-with-windows-powershell/) script
 
 ###USAGE:
 * Install-ChocolateyFont "FilePath\FontName.ext"
