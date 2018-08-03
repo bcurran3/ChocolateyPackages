@@ -30,8 +30,13 @@ This extension attempts to head off problems related to:
 * **Chocolatey Preinstaller Checks Extension** will check if there are instances of choco.exe already running and wait for them to finish.
 * **Chocolatey Preinstaller Checks Extension** will check if Windows Installer is already running and wait for it to finish.
 
-CHANGE LOG:
-* 0.0.1   - initial release
+* The choco multi-instance checking is supposedly NOT compatible with the Chocolatey licensed self service agent as it supposedly runs choco.exe all the time.
+* If two instances of choco.exe run within 30 seconds of each other, they will most likely loop forever or at least until [commandExecutionTimeoutSeconds](https://chocolatey.org/docs/chocolatey-configuration).
+* Aborting a program package install/uninstall due to "* WARNING: x other instance(s) of choco.exe actual found running. Pausing 30 seconds..." will result in Chocolatey "loosing" the package, i.e. "[Pending] Removing incomplete install for 'packagename'" on next run. The result is the same if you have this extension or not and defeats the purpose of this extension.
+
+###CHANGE LOG:
+* 0.0.2 - Added configurable options to only warn or pause and retry when multiple instances are found. Added configurable pause time for each of the multiple instance checks. Added conditional handling options for each of the three checks, i.e. option to abort install based on condition.
+* 0.0.1 - initial release
 
 ROADMAP:
 * Check for the Chocolatey self service agent and handle differently (ignore?) when found.
@@ -40,6 +45,8 @@ ROADMAP:
 * Probably add conditional handling options for each of the three checks, i.e. option to abort install based on condition.
 
 You can add your options/wants/recommendations to https://github.com/bcurran3/ChocolateyPackages/issues/27
+
+***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
