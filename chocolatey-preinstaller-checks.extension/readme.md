@@ -35,7 +35,7 @@ This extension attempts to head off problems related to:
 * Aborting a program package install/uninstall due to "* WARNING: x other instance(s) of choco.exe actual found running. Pausing 30 seconds..." will result in Chocolatey "loosing" the package, i.e. "[Pending] Removing incomplete install for 'packagename'" on next run. The result is the same if you have this extension or not and defeats the purpose of this extension.
 
 ###CHANGE LOG:
-* 0.0.2 - Added configurable options to only warn or pause and retry when multiple instances are found. Added configurable pause time for each of the multiple instance checks. Added conditional handling options for each of the three checks, i.e. option to abort install based on condition.
+* 0.0.2 - Added configurable options to only warn or pause and retry when multiple instances are found. Added configurable pause time for each of the multiple instance checks. Added conditional handling options for each of the three checks, i.e. option to abort install based on condition. Edit C:\ProgramData\chocolatey\lib\chocolatey-preinstaller-checks.extension\Chocolatey-Preinstaller-Checks.xml. To warn only set WaitOnMultiple to false (default true). To abort install/uninstall when there is a problem set AbortOnMultiples to true (default false).
 * 0.0.1 - initial release
 
 ROADMAP:
