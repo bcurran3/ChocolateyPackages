@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>3.4.1.7</version>
+    <version>3.5.0.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
@@ -36,6 +36,11 @@ We recommend performing a Windows* update to bring your operating system up to d
 This application does not support older versions of Internet Explorer. We recommend using Chrome, Firefox or IE v11 browsers. 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+
 </description>
     <releaseNotes>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</releaseNotes>
     <dependencies>
