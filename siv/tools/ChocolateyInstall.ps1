@@ -1,7 +1,7 @@
 ﻿$packageName = 'siv' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\siv.zip"
-$checksum    = 'EA0F306299C2C7DCA0B2F579BCAADE224807D472148D4858569172C04221C696'
+$checksum    = '2EA4C64559061CBF76CB132D6F2992B13B620101E8F63EDD37D8A4E2B9F62CC0'
 $bits        = Get-ProcessorBits
 
 
