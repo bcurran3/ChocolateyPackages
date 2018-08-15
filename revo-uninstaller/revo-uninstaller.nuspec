@@ -10,7 +10,7 @@
     <copyright>VS Revo Group Ltd.</copyright>	
     <projectUrl>https://www.revouninstaller.com</projectUrl>
 	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/revo-uninstaller</packageSourceUrl>
-    <iconUrl>https://raw.github.com/jivkok/Chocolatey-AutomaticPackages/master/Revo.Uninstaller/Revo.Uninstaller.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/revo-uninstaller/revo-uninstaller_icon.png</iconUrl>
 	<docsUrl>https://www.revouninstaller.com/revo_uninstaller_how_to.html</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -18,34 +18,34 @@
 
 Revo Uninstaller is a freeware uninstall utility. It has powerful features to uninstall programs scanning for leftover files, folders and registry entries after uninstall. With its unique 'Hunter mode' it offers you some simple, easy to use but effective and powerful approaches to manage (uninstall, stop, delete, disable from auto starting) and to get information about your installed and/or running application. Many cleaning tools included!	
 	
-###MAIN FEATURES
+####MAIN FEATURES
 Here are just a few reasons to choose Revo Uninstaller for all of your uninstallation needs
 
-###ADVANCED SCANNING FOR LEFTOVERS
+####ADVANCED SCANNING FOR LEFTOVERS
 - remove remnants of one or few programs
 
-###FORCED UNINSTALL
+####FORCED UNINSTALL
 - remove stubborn programs
 
-###QUICK/MULTIPLE UNINSTALL
+####QUICK/MULTIPLE UNINSTALL
 - quick uninstall of one or few programs
 
-###REAL-TIME INSTALLATION MONITOR
+####REAL-TIME INSTALLATION MONITOR
 - for complete uninstall
 
-LOGS DATABASE
+####LOGS DATABASE
 - traced installation by our team ready to uninstall your installed programs
 
-###MANAGE INSTALLATION LOGS
+####MANAGE INSTALLATION LOGS
 - edit, review, share (export, import) logs
 
-###MULTI-LEVEL BACKUP SYSTEM
+####MULTI-LEVEL BACKUP SYSTEM
 - safe uninstall of programs
 
 **SOCIAL MEDIA:**
 [Facebook](https://www.facebook.com/Revo-Uninstaller-53526911789) | [Twitter](https://twitter.com/vsrevounin) | [Google+](https://plus.google.com/116436870689515674048/posts) | [LinkIn](https://www.linkedin.com/company/vs-revo-group)
 
-Revo Uninstaller Pro:
+**Revo Uninstaller Pro:**
 [Download free trial](https://www.revouninstaller.com/download-professional-version.php)
 [Purchase Revo Uninstaller Pro](https://www.revouninstaller.com/revo_uninstaller_buy_purchase_order_main.html)
 
