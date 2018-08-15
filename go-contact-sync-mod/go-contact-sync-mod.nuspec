@@ -44,7 +44,7 @@ Features and Benefits
     <tags>GO Contact Sync Mod Outlook Gmail Google email e-mail synchronization admin</tags>
     <licenseUrl>http://googlesyncmod.sourceforge.net/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://googlesyncmod.sourceforge.net/contacts-sync_3_48x48x32.png</iconUrl>
+    <iconUrl>http://https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/go-contact-sync-mod/go-contact-sync-mod_icon.png</iconUrl>
     <dependencies>
       <dependency id="dotnet4.5" version="4.5" />
     </dependencies>
