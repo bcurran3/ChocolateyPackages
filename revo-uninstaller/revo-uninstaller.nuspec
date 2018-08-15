@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>revo-uninstaller</id>
+    <version>2.0.5.0</version>
+    <title>Revo Uninstaller Free (Install)</title>
+    <authors>VS Revo Group Ltd.</authors>
+    <owners>bcurran3, jivkok</owners>
+    <licenseUrl>http://www.revouninstaller.com/revo_uninstaller_free_download.html</licenseUrl>
+    <copyright>VS Revo Group Ltd.</copyright>	
+    <projectUrl>https://www.revouninstaller.com</projectUrl>
+	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/revo-uninstaller</packageSourceUrl>
+    <iconUrl>https://raw.github.com/jivkok/Chocolatey-AutomaticPackages/master/Revo.Uninstaller/Revo.Uninstaller.png</iconUrl>
+	<docsUrl>https://www.revouninstaller.com/revo_uninstaller_how_to.html</docsUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Revo Uninstaller (Pro)](https://www.revouninstaller.com/images/screens/All_Programs_Icons.jpg)	
+
+Revo Uninstaller is a freeware uninstall utility. It has powerful features to uninstall programs scanning for leftover files, folders and registry entries after uninstall. With its unique 'Hunter mode' it offers you some simple, easy to use but effective and powerful approaches to manage (uninstall, stop, delete, disable from auto starting) and to get information about your installed and/or running application. Many cleaning tools included!	
+	
+###MAIN FEATURES
+Here are just a few reasons to choose Revo Uninstaller for all of your uninstallation needs
+
+###ADVANCED SCANNING FOR LEFTOVERS
+- remove remnants of one or few programs
+
+###FORCED UNINSTALL
+- remove stubborn programs
+
+###QUICK/MULTIPLE UNINSTALL
+- quick uninstall of one or few programs
+
+###REAL-TIME INSTALLATION MONITOR
+- for complete uninstall
+
+LOGS DATABASE
+- traced installation by our team ready to uninstall your installed programs
+
+###MANAGE INSTALLATION LOGS
+- edit, review, share (export, import) logs
+
+###MULTI-LEVEL BACKUP SYSTEM
+- safe uninstall of programs
+
+**SOCIAL MEDIA:**
+[Facebook](https://www.facebook.com/Revo-Uninstaller-53526911789) | [Twitter](https://twitter.com/vsrevounin) | [Google+](https://plus.google.com/116436870689515674048/posts) | [LinkIn](https://www.linkedin.com/company/vs-revo-group)
+
+Revo Uninstaller Pro:
+[Download free trial](https://www.revouninstaller.com/download-professional-version.php)
+[Purchase Revo Uninstaller Pro](https://www.revouninstaller.com/revo_uninstaller_buy_purchase_order_main.html)
+
+**OTHER PLATFORMS:**
+[Android App](https://play.google.com/store/apps/details?id=com.vsrevogroup.revouninstallermobile)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/revo-uninstaller/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+	</description>
+    <summary>Revo Uninstaller Pro is innovative uninstaller program which helps you to uninstall unnecessary software and remove easily unwanted programs installed on your personal computer.</summary>
+    <tags>revo uninstall uninstaller trial</tags>
+  </metadata>
+</package>
