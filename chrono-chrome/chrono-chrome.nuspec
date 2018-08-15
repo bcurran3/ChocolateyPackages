@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chrono-chrome</id>
+    <version>0.10.0</version>
+    <title>Chrono Download Manager for Chrome</title>
+    <authors>www.chronodownloader.net</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chrono-chrome</packageSourceUrl>
+    <projectUrl>https://www.chronodownloader.net/</projectUrl>
+	<bugTrackerUrl>http://bugs.chronodownloader.net/my_view_page.php</bugTrackerUrl>
+    <iconUrl>https://www.chronodownloader.net/img/mobile-promo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Chrono Download Manager](https://www.chronodownloader.net/img/shots/man_pop.png)	
+	
+Chrono Download Manager is the first (and only) full-featured download manager for Google Chrome. All your download management is done inside a browser tab instead of by installing a separate download managing application. Chrono is tightly integrated with Chrome by context menus, toolbar buttons and key shortcuts.	
+
+Besides download management, Chrono is also your best video download helper and bulk image downloader. The Chrono Sniffer detects all links, images, audios and videos on a webpage, and you can filter URLs by their file types or by Regular Expression.
+
+Start downloading with Chrono today! Have fun playing with it, and don't forget to share!
+
+
+##FEATURES
+* Totally override the Chrome's default download manager (e.g. Ctrl-J brings out Chrono Download Manager), and get rid of the Downloads Shelf(bar).
+* Use table to organize your downloads compactly and efficiently.
+* Just one click to browse and manage your downloads from a popup list at anytime.
+* Queue/Pause/Resume/Restart/Search/Recycle your downloads.
+* Desktop notifications and sound notifications for download completion/interruption.
+* Enter multiple URLs at the same time and downthemall with one-click.
+
+##MORE ADVANCED FEATURES
+* Highly customizable task filters let you group downloads by type, date, url etc.
+* Batch descriptors help you download a range of URLs with pattern painlessly.
+* Naming Mask determines a file name for your download automatically by URL host name, sub-directories, referrer, date/time and many more.
+* Rule System uses programmable rules to set naming masks automatically for different downloads, and to route your files to different folders.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chrono-chrome/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+	</description>
+    <summary>Chrono Download Manager - Download and manage the Web!</summary>
+    <tags>chrono download manager chrome extension</tags>
+	<releaseNotes>http://bugs.chronodownloader.net/changelog_page.php</releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
