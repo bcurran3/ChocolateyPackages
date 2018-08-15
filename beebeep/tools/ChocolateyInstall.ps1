@@ -1,10 +1,10 @@
 ﻿$packageName  = 'beebeep' 
 $global:packageMaintainer = 'BCURRAN3'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://downloads.sourceforge.net/project/beebeep/Windows/beebeep-5.2.0.zip'
-$checksum     = 'EB7C94D09435493E0D2229FC2F6288FE8654236702AAE7E2E6083504A90F4A07'
+$url          = 'https://downloads.sourceforge.net/project/beebeep/Windows/beebeep-5.4.2.zip'
+$checksum     = 'CFB0743A706453134825E76BC1CB0ADB89886C96AE3B5BCDF601C23A0119B868'
 $ShortcutName = 'beeBEEP'
-$unzipDir     = 'beebeep-5.2.0'
+$unzipDir     = 'beebeep-5.4.2'
 $exe          = 'beeBEEP.exe'
 
 $packageArgs = @{
@@ -18,6 +18,6 @@ $packageArgs = @{
 
 Show-Patreon "https://www.patreon.com/bcurran3"  
 Install-ChocolateyZipPackage @packageArgs
-Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
+Show-ToastMessage "beeBEEP installed." "Version $env:packageVersion."
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"

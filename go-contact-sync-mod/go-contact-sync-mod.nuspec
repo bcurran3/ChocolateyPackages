@@ -4,7 +4,7 @@
   <metadata>
     <id>go-contact-sync-mod</id>
     <title>GO Contact Sync Mod</title>
-    <version>3.10.14</version>
+    <version>3.10.15</version>
     <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>			
@@ -29,6 +29,12 @@ Features and Benefits
 	* Software free-of-charge
 	* Synchronize your Exchange contacts as well as your contacts in a PST file
 	* Synchronize your contacts with Windows Phone 7 (WP7), iPhone and Android over the air through Google
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/go-contact-sync-mod/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
     </description>
     <projectUrl>https://sourceforge.net/projects/googlesyncmod/</projectUrl>
     <projectSourceUrl>https://sourceforge.net/p/googlesyncmod/code/HEAD/tree/</projectSourceUrl>
@@ -42,7 +48,7 @@ Features and Benefits
     <dependencies>
       <dependency id="dotnet4.5" version="4.5" />
     </dependencies>
-    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.9.15/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.15/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
