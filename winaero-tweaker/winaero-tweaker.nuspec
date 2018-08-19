@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winaero-tweaker</id>
-    <version>0.10.2.0</version>
+    <version>0.11.2.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winaero-tweaker</packageSourceUrl>
     <title>Winaero Tweaker (Install)</title>
@@ -22,8 +22,12 @@
 After years of development, I decided to release an all-in-one application which will include most options available in my free Winaero apps and extend it as much as possible. I would like to introduce Winaero Tweaker - universal tweaker software which supports Windows 7, Windows 8, Windows 8.1 and Windows 10.	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winaero-tweaker/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
-    <releaseNotes>https://winaero.com/blog/winaero-tweaker-0-10-2/</releaseNotes>
+    <releaseNotes>https://winaero.com/comment.php?comment.news.1836</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
