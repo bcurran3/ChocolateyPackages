@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
     <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -63,6 +63,10 @@ To manually run **choco-cleaner**:
 * Windows Start Menu: click the icon. If you have **[choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)** installed you'll find it with the rest of the Chocolatey Shortcuts.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
     </description>
 	<releaseNotes>
 If you have a previous release of **choco-cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or preferences.
