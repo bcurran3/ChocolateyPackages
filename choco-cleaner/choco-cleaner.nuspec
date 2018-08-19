@@ -34,7 +34,7 @@
 
 Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation every Sunday at 11 PM in the background so you don't have to be bothered with it.
 
-**Choco-Cleaner** is completely configurable, just edit \ProgramData\chocolatey\bin\Choco-Cleaner.xml and set true/false for any grouping of file types you want to delete or not. License and log files default to false. This has been mandated to me for passing moderation. Everything else listed below is deleted by default.
+**Choco-Cleaner** is completely configurable, just edit \ProgramData\chocolatey\bin\Choco-Cleaner.xml and set true/false for any grouping of file types you want to delete or not. License and log files default to false. This has been mandated to me by Chocolatey for passing moderation. Everything else listed below is deleted by default.
 	
 **Choco-Cleaner deletes:**
 
