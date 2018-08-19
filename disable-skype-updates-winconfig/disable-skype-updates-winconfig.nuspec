@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>disable-skype-updates-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disable-skype-updates-winconfig</packageSourceUrl>
+    <title>Disable Skype Updates (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disable-skype-updates-winconfig</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/bcurran3_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disable-skype-updates-winconfig</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 disable skype updates</tags>
+    <summary>This package disables Skype updates (via kludge).</summary>
+    <description>
+#THIS IS TECHNICALLY A PRE-RELEASE FOR TESTING - IT NEEDS MORE TESTING
+#MODERATORS DO NOT PASS UNTIL A NEW VERSION IS PUSHED WITHOUT THIS MESSAGE
+#THIS PACKAGE WAS CREATED BY REQUEST OF CHOCOLATEY USER S.HANSEN. HE WILL TEST IN HIS WORK ENVIRONMENT.
+	
+##This package disables Skype updates via a kludge. Updates will be handled by Chocolatey only.
+
+##Uninstalling the package will re-enable normal Skype updates (as well as Chocolatey).
+
+REF: https://answers.microsoft.com/en-us/skype/forum/skype_windesk-skype_startms-skype_installms/how-to-turn-off-skype-automatic-updates-on-pc/cf980eed-d9be-422c-bf0f-3a3871325b26
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/disable-skype-updates-winconfig/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+	<dependencies>
+      <dependency id="chocolatey-fastanswers.extension" />
+    </dependencies>			
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
