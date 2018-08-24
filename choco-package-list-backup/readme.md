@@ -3,7 +3,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* If you have problems running this due to your Windows PowerShell Script Execution Policy, [ForcePS](https://chocolatey.org/packages/forceps) can make your life easier - but now you can just run from the Start menu or the batch file!
 
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
 	
@@ -24,6 +23,7 @@
 * Microsoft OneDrive
 * NETGEAR ReadyCLOUD
 * Nextcloud
+* ownCloud
 * Resilio Sync
 * Seafile
 * TonidoSync
@@ -40,6 +40,8 @@
 
 **choco-package-list-backup** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s). No confusion over what computer gets what packages!
 
+**choco-package-list-backup** saves a list of all your installed programs (AllProgramsList.txt) whether they were installed by Chocolatey or not.
+
 **choco-package-list-backup** is configurable. You can:
 
 * configure which locations you want or don't want to save to (default=all the locations found except the custom location)
@@ -47,8 +49,11 @@
 * configure to append a date to the saved packages.config (default=false)
 * configure what folder to save to (default=ChocolateyPackageListBackup)
 * easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
+* configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
 
 **choco-package-list-backup** and choco-package-list-backup.xml are saved to Chocolatey's bin folder (\ProgramData\chocolatey\bin), so **choco-package-list-backup** is in your path.
+
+**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations** or become a patron at https://www.patreon.com/bcurran3
 
 ###INSTRUCTIONS:
 
@@ -57,11 +62,8 @@
 * From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.
 
-ROADMAP:
-* Add other cloud services support by request
-* I'm open to suggestions - open a GitHub issue please.
-
-CHANGELOG:
+###CHANGELOG:
+* 2018.08.23 - Added ownCloud support and save all programs list feature
 * 2018.06.21 - Added scheduled task to run every Monday at 6 AM. AppendDate option now saves packages.config AND a packages_date.config. This makes the AppendDate option more useful for a nearline packages.config and archival snapshots as well as fixing compatibility with InstChoco.
 * 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
 * 2018.05.17 - added iCloudDrive support
@@ -78,6 +80,13 @@ CHANGELOG:
 * 2018.02.12 - added Nextcloud support (thanks thomasaiman) and fixed TonidoSync (Thanks thomasaiman!)
 * 2018.01.29 - edited re-installation message, updated donation info :)
 * 2017.12.17 - added editable custom save location (requested)
+
+###ROADMAP:
+* Investigate running the schedule task from the installing user account.
+* Add other cloud services support by request.
+* I'm open to suggestions - open a GitHub issue please.
+
+***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 

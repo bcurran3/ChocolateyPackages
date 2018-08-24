@@ -1,8 +1,8 @@
 ﻿$packageName    = '8x8virtualoffice'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://support.8x8.com/@api/deki/files/1947/uc_5_4_0_19820.msi' 
-$checksum       = 'BE9AE0FFE909F595CF668EFFCEF535EFFE474DEC22A42AB793CE84A791BA7691'
+$url            = 'https://support.8x8.com/@api/deki/files/1947/VOD_5_6_0.msi' 
+$checksum       = '6697626C9AC58751640B0D452DA5CC0629DA726FB975618A214154A1D1955C93'
 $silentArgs     = '/quiet /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
