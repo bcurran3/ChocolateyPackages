@@ -18,6 +18,8 @@ if ($bits -eq 64)
    
 Get-Process "OneDrive" -ErrorAction SilentlyContinue | Stop-Process
 
+Get-AppxPackage -allusers *microsoft.microsoftskydrive* | Remove-AppxPackage -ea SilentlyContinue
+
 New-Item -Path "HKLM:\Software\Policies\Microsoft\Windows\OneDrive" -ea SilentlyContinue | Out-Null
 Set-ItemProperty -LiteralPath "HKLM:\Software\Policies\Microsoft\Windows\OneDrive" -Name DisableFileSyncNGSC -Value 1 -ea SilentlyContinue
    
@@ -26,4 +28,6 @@ Remove-Item "$env:LocalAppData%\Microsoft\OneDrive" -recurse -ea SilentlyContinu
 Remove-Item "$env:ProgramData%\Microsoft OneDrive" -recurse -ea SilentlyContinue
 Remove-Item "$env:SystemDrive\OneDriveTemp" -recurse -ea SilentlyContinue
 Remove-Item "HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Force -ErrorAction SilentlyContinue 
-Remove-Item "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Force -ErrorAction SilentlyContinue 
+Remove-Item "HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}" -Force -ErrorAction SilentlyContinue
+Remove-Item "$env:SystemDrive\Users\Default\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\OneDrive.lnk" -Force -ErrorAction SilentlyContinue
+[Environment]::SetEnvironmentVariable("OneDrive",$null,"User")
