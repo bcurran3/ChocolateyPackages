@@ -15,10 +15,13 @@
     <UseiCloudDrive>true</UseiCloudDrive>	
     <UseNextcloud>true</UseNextcloud>
     <UseOneDrive>true</UseOneDrive>
+    <UseownCloud>true</UseownCloud>	
     <UseReadyCLOUD>true</UseReadyCLOUD>
     <UseResilioSync>true</UseResilioSync>
     <UseSeafile>true</UseSeafile>
-    <UseTonidoSync>true</UseTonidoSync>  
+    <UseTonidoSync>true</UseTonidoSync>
+    <SaveAllProgramsList>true</SaveAllProgramsList>
+    <AllProgramsListFile>AllProgramsList.txt</AllProgramsListFile>	
   </Preferences>
 </Settings>
 
@@ -31,4 +34,6 @@ SaveVersions   - Specify if you want to save specific package version info or no
 CustomPath     - Edit to save to a special location of your choice
 UseCustomPath  - Change to true if you are using CustomPath
 UseXxxxxxxxx   - Should be obvious
+SaveAllProgramsList - Save a list of all installed Windows programs (by Chocolatey or not) true/false
+AllProgramsListFile - Filename to save the list of All installed Windows
 -->

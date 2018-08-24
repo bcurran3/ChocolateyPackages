@@ -1,0 +1,7 @@
+﻿==================== FileBot v4.7.9 ====================
+
+bcurran3 downloaded and packaged the executables for FileBot v4.7.9 from https://sourceforge.net/projects/filebot/files/filebot/FileBot_4.7.9/
+
+SHA256 checksums for the files can be found in the accompanying ChocolateyInstall.ps1
+
+==================== FileBot v4.7.9 ====================

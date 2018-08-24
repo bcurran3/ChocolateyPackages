@@ -1,9 +1,9 @@
 # Choco-Cleaner.ps1 Copyleft 2017-2018 by Bill Curran 
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
-$CCver = "v0.0.5 (08/19/2018)"
+$CCver = "v0.0.5 (08/22/2018)"
 
-Write-Host "choco-cleaner.ps1 $CCver - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
+Write-Host "Choco-Cleaner.ps1 $CCver - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
 Write-Host "Copyleft 2017-2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -foreground white
 
 # Import preferences from choco-cleaner.xml
@@ -97,7 +97,7 @@ if ($DeleteArchives)
 if ($Optimizenupkg)
     {	
      Write-Host " * Deleting unnecessary Chocolatey package embedded archives and executables in .nupkg files..." -foreground green
-     dir $env:ChocolateyInstall\lib -recurse -include *.nupkg | %{7z d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
+     dir $env:ChocolateyInstall\lib -recurse -include *.nupkg | ForEach-Object {& $env:ChocolateyInstall\tools\7z.exe d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
 	}
 	
 if ($DeleteLicenseFiles)

@@ -6,7 +6,7 @@
 # FYI: CAN NOT save/get installed package parameters as they are encrypted :(
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-$CPLBver        = "2018.06.21" # Version of this script
+$CPLBver        = "2018.08.23" # Version of this script
 $Date           = Get-Date -UFormat %Y-%m-%d
 
 # Import preferences - see choco-package-list-backup.xml in Chocolatey's bin dir
@@ -17,6 +17,8 @@ $SaveFolderName = $ConfigFile.Settings.Preferences.SaveFolderName
 $SaveVersions = $ConfigFile.Settings.Preferences.SaveVersions
 $AppendDate = $ConfigFile.Settings.Preferences.AppendDate
 $CustomPath = $ConfigFile.Settings.Preferences.CustomPath
+$SaveAllProgramsList = $ConfigFile.Settings.Preferences.SaveAllProgramsList
+$AllProgramsListFile = $ConfigFile.Settings.Preferences.AllProgramsListFile
 
 $UseCustomPath = $ConfigFile.Settings.Preferences.UseCustomPath 
 $UseDocuments = $ConfigFile.Settings.Preferences.UseDocuments
@@ -27,6 +29,7 @@ $UseGoogleDrive = $ConfigFile.Settings.Preferences.UseGoogleDrive
 $UseiCloudDrive = $ConfigFile.Settings.Preferences.UseiCloudDrive
 $UseNextcloud = $ConfigFile.Settings.Preferences.UseNextcloud
 $UseOneDrive = $ConfigFile.Settings.Preferences.UseOneDrive
+$UseownCloud = $ConfigFile.Settings.Preferences.UseownCloud
 $UseReadyCLOUD = $ConfigFile.Settings.Preferences.UseReadyCLOUD
 $UseResilioSync = $ConfigFile.Settings.Preferences.UseResilioSync
 $UseSeafile = $ConfigFile.Settings.Preferences.UseSeafile
@@ -80,11 +83,21 @@ Function Check-InstChoco{
     }
   }
 
+# Write out the saved list of ALL installed programs to AllProgramsList.txt
+Function Write-AllProgramsList{
+    Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher | Format-Table >"$SavePath\$AllProgramsListFile"
+    Write-Host "  * $SavePath\$AllProgramsListFile SAVED!" -ForegroundColor green
+# 2nd copy in format AllProgramsList_date.txt if AppendDate is set to true	
+    if ($AppendDate -eq "true"){
+	    $AllProgramsListFileArchival = $AllProgramsListFile.Replace(".txt","")+"_$Date.txt"
+        Get-ItemProperty HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion, Publisher | Format-Table >$SavePath\$AllProgramsListFileArchival
+        Write-Host "  * $SavePath\$AllProgramsListFileArchival SAVED!" -ForegroundColor green
+       }
+}  
+  
 # Write out the saved list of packages to packages.config
 Function Write-PackagesConfig{ 
     Check-SaveLocation
-	Check-PPConfig
-	Check-InstChoco
     Write-Output "<?xml version=`"1.0`" encoding=`"utf-8`"?>" >"$SavePath\$PackagesListFile"
     Write-Output "<packages>" >>"$SavePath\$PackagesListFile"
 	if ($SaveVersions -match "True")
@@ -92,7 +105,7 @@ Function Write-PackagesConfig{
         choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" />" }>>"$SavePath\$PackagesListFile"
 	   } else {
          choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" />" }>>"$SavePath\$PackagesListFile"
-		 }
+		}
     Write-Output "</packages>" >>"$SavePath\$PackagesListFile"
 	Write-Host "  * $SavePath\$PackagesListFile SAVED!" -ForegroundColor green
 
@@ -109,6 +122,9 @@ Function Write-PackagesConfig{
         Write-Output "</packages>" >>"$SavePath\$PackagesListArchival"
 	    Write-Host "  * $SavePath\$PackagesListArchival SAVED!" -ForegroundColor green 
     }
+	Check-PPConfig
+	Check-InstChoco
+	if ($SaveAllProgramsList -eq "true"){Write-AllProgramsList}
 }
 
 Write-Host choco-package-list-backup.ps1 v$CPLBver - backup Chocolatey package list locally and to the cloud -ForegroundColor white
@@ -210,6 +226,13 @@ if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
     $SavePath = "$Env:OneDrive\$SaveFolderName\$Env:ComputerName"
     Write-PackagesConfig
    }      
+
+# Backup Chocolatey package names on local computer to packages.config file in ownCloud directory if it exists
+if ($UseownCloud -match "True" -and (Test-Path "$Env:USERPROFILE\ownCloud"))
+   {
+    $SavePath = "$Env:USERPROFILE\ownCloud\$SaveFolderName\$Env:ComputerName"
+    Write-PackagesConfig
+   }
    
 # Backup Chocolatey package names on local computer to packages.config file in Netgear ReadyCLOUD directory if it exists
 if ($UseReadyCLOUD -match "True" -and (Test-Path $Env:USERPROFILE\ReadyCLOUD))
@@ -218,6 +241,7 @@ if ($UseReadyCLOUD -match "True" -and (Test-Path $Env:USERPROFILE\ReadyCLOUD))
     Write-PackagesConfig
    }
 
+  
 # Backup Chocolatey package names on local computer to packages.config file in Resilio Sync directory if it exists
 if ($UseResilioSync -match "True" -and (Test-Path "$Env:USERPROFILE\Resilio Sync"))
    {
@@ -245,7 +269,9 @@ If (Test-Path "$env:ChocolateyInstall\lib\instchoco"){
    } else {
      Write-Host "Run CINST PACKAGES.CONFIG -Y or get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
    }
-Write-Host "Found choco-package-list-backup.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
+Write-Host "Found choco-package-list-backup.ps1 useful? -ForegroundColor white
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor white
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor white
 Start-Sleep -s 10
 
 

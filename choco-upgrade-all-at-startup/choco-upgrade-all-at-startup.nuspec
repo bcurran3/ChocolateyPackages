@@ -3,16 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at-startup</id>
-    <version>2018.01.30</version>
+    <version>2018.08.23</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>	
     <owners>bcurran3</owners>
-    <title>(unofficial) choco upgrade all at startup (Task)</title>
+    <title>(unofficial) Choco Upgrade All at Startup (Task)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-upgrade-all-at-startup/choco-upgrade-all-at-startup.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</projectSourceUrl>	
-    <tags>bcurran3 unofficial choco upgrade all startup cup config schtasks scheduled task</tags>
+    <tags>bcurran3 unofficial choco upgrade startup config schtasks scheduled task</tags>
     <summary>choco-upgrade-all-at-startup - Configures a scheduled task to run "choco upgrade all -y" at Windows startup.</summary>
     <description>
 #DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY TIME YOUR COMPUTER BOOTS? 
@@ -21,13 +24,25 @@
 	
 ###This package creates a Windows Scheduled Task to run "choco upgrade all -y" every time your computer boots.
 
-**WARNING:** Your computer boot time will increase! If you reboot daily, you'll never notice. If you reboot infrequently, you'll notice a slow down as packages are updated, especially if you have a slow Internet connection. Because of this **choco-upgrade-all-at-startup** is pseudo-deprecated and pseudo-superseded by [choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at) which allows you to set a time to run "choco upgrade all -y" every day in the wee hours of morning while you're happily dreaming about supercomputers and not waiting for your computer to boot up.
+Please understand your computer boot time will increase. If you reboot daily, you'll probably never notice. If you reboot infrequently, you'll notice a slow down as packages are downloaded and updated/installed, especially if you have a slow Internet connection. Because of this **choco-upgrade-all-at-startup** is pseudo-deprecated and pseudo-superseded by **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** which allows you to set a time to run "choco upgrade all -y" every day in the wee hours of morning while you're happily dreaming of owning a supercomputer instead of twiddling your thumbs waiting for your "slow" computer to boot up. Otherwise it works wonderfully at keeping your Chocolatey installed programs up to date. 
+
+SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/laptop users who tend to shut down their computers at night and thus miss scheduled updates/maintenance such as **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** (in the wee hours of the morning).
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at-startup/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
-    <dependencies>
-	  <dependency id="powershell" version="4.0" />
-    </dependencies>	
+	<releaseNotes>
+##CHANGELOG:
+* 2018.08.22 - Fixed compatibility with Windows 7 &amp; 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency.
+* 2018.01.30 - simplified, standardized, description updated, uninstall added
+* 2017.01.10 - original release
+
+##ROADMAP:
+* Nothing planned
+	</releaseNotes>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
