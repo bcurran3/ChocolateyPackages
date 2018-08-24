@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>remove-win10-apps-redhat-group01</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/remove-win10-apps-redhat-group01</packageSourceUrl>
+    <title>Remove Windows 10 Apps Group 01 (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/remove-win10-apps-redhat-group01</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/bcurran3_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/remove-win10-apps-redhat-group01</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 disable win10 apps</tags>
+    <summary>This package removes some Win10 apps.</summary>
+    <description>
+#THIS IS TECHNICALLY A PRE-RELEASE FOR TESTING - IT NEEDS MORE TESTING
+#THIS PACKAGE COMES AT THE REQUEST OF CHOCOLATEY USER jfail-at-RedHat
+	
+##This package removes the following Windows modern apps:
+* Get Office
+* Paid Wi-Fi &amp; Cellular
+* OneNote
+* Photoshop express
+* PowerBI
+* Eclipse Manager
+
+REF: https://www.askvg.com/guide-how-to-remove-all-built-in-apps-in-windows-10/
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/remove-win10-apps-redhat-group01/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
