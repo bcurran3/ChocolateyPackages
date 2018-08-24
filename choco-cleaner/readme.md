@@ -61,12 +61,16 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
-* 0.0.5 - added deletion of cacheLocation if defined in chocolatey.config, cosmetic changes
+* 0.0.5 - added deletion of cacheLocation if defined in chocolatey.config, cosmetic changes, removed 7Zip dependency and now using the version of 7Zip packaged with Chocolatey.
 * 0.0.4 - added deletion of Nuget Cache folder files
 * 0.0.3.1 - fixed typo causing nupkg files to NOT be optimized - thanks E.R.! 
 * 0.0.3 - Rewritten version of 0.0.1 with XML configuration file and ferventcoder/Rob's approved default settings. Minor improvements.
 * 0.0.2 - Unreleased version with two scripts with different default settings; "Bill's way" and "Rob's way" and a package parameter to choose which one to use/install. Shelved.
 * 0.0.1 - Initial release. Did not pass Chocolatey moderation due to mandated changes of default parameters. Only "secretly" available.
+
+###ROADMAP:
+* Clean up C:\ProgramData\chocolatey\.chocolatey
+* Clean up C:\ProgramData\chocolatey\lib-synced (licensed versions)
 
 ***
 

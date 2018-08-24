@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8x8virtualoffice</id>
-    <version>5.4.0.19820</version>
+    <version>5.6.0.20017</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8x8virtualoffice</packageSourceUrl>		
     <title>8x8 Virtual Office (Install)</title>
     <authors>8x8 Inc.</authors>
     <projectUrl>https://support.8x8.com/us/download/virtual-office-desktop-pc-windows</projectUrl>
-	<iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_icon.png</iconUrl>
+	<iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_icon.png</iconUrl>
     <copyright>Copyright 8x8 Inc.</copyright>
 	<licenseUrl>https://www.8x8.com/terms-and-conditions/business-terms</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -22,6 +22,10 @@
 Virtual Office Desktop is a comprehensive Unified Communications client application integrating a business softphone with visual voicemail, corporate directory, IM &amp; presence, video calling, fax, call recording, web conferencing, and social media. Virtual Office Desktop offers all the functionality of Virtual Office Online and Virtual Office Pro in a standalone Windows application.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8x8virtualoffice/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
     <releaseNotes>http://www.get8x8.com/8x8WebHelp/VirtualOfficeDesktop5_0</releaseNotes>
   </metadata>

@@ -20,6 +20,33 @@ if ($UseiCloudDrive -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | out-null
 	$UpdatedFile = "True"
    }
+$UseownCloud = $UpdatedConfig.Settings.Preferences.UseownCloud
+if ($UseownCloud -eq $null)
+   {
+    Write-Host Adding ownCloud support to $xml. -foreground magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "UseownCloud", $null)
+    $NewStuff.InnerText=("true") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | out-null
+	$UpdatedFile = "True"
+   }
+$SaveAllProgramsList = $UpdatedConfig.Settings.Preferences.SaveAllProgramsList
+if ($SaveAllProgramsList -eq $null)
+   {
+    Write-Host Adding SaveAllProgramsList support to $xml. -foreground magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "SaveAllProgramsList", $null)
+    $NewStuff.InnerText=("true") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | out-null
+	$UpdatedFile = "True"
+   }
+$AllProgramsListFile = $UpdatedConfig.Settings.Preferences.AllProgramsListFile
+if ($AllProgramsListFile -eq $null)
+   {
+    Write-Host Adding AllProgramsListFile support to $xml. -foreground magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "AllProgramsListFile", $null)
+    $NewStuff.InnerText=("AllProgramsList.txt") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | out-null
+	$UpdatedFile = "True"
+   }   
    
 if ($UpdatedFile -eq "True")
    {   

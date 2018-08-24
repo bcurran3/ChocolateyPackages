@@ -3,6 +3,8 @@
 * This package downloads the .MSI file via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * I used to use 8x8 hosted VOIP for two businesses. I have clients that use it and are 100% happy. It's a great VOIP phone service. I switched to cell phones only because I got an offer that I couldn't refuse. If you read this and choose to use 8x8 - mention me, Bill Curran, and I get a referral kickback from them. :) TIA!
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
