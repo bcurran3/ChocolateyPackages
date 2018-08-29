@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>bettertls-psmodule</id>
+    <version>0.1.0.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/bettertls-psmodule</packageSourceUrl>
+    <owners>bcuran3</owners>
+    <title>BetterTls (Install)</title>
+    <authors>Mark Kraus</authors>
+    <projectUrl>https://www.powershellgallery.com/packages/BetterTls</projectUrl>
+    <iconUrl>https://www.powershellgallery.com/Content/Images/PackageDefaultIcon.png</iconUrl>	
+    <copyright>Copyright (c) Mark Kraus. All rights reserved.</copyright>
+    <licenseUrl>https://cdn.rawgit.com/markekraus/BetterTls/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/markekraus/BetterTls</projectSourceUrl>
+    <docsUrl>https://cdn.rawgit.com/markekraus/BetterTls/639325e8/Docs/BetterTls.md</docsUrl>
+    <bugTrackerUrl>https://github.com/markekraus/BetterTls/issues</bugTrackerUrl>
+    <tags>mkraus bettertls security webcmdlets utility tls powershell</tags>
+    <summary>PowerShell Module to Enable TLS 1.1 and 1.2 for Use in Windows PowerShell Where Neither are Enabled by Default</summary>
+    <description>
+###Module Information
+BetterTls is a PowerShell Module to manage TLS settings for Invoke-WebRequest and Invoke-RestMethod in Windows PowerShell 5.1 and older.
+
+In Windows PowerShell 5.1 and older, only SSL 3.0 and TLS 1.0 are enabled by default. Many modern APIs, including GitHub, have begun moving to support only TLS 1.2. If you attempt to use those APIs with Invoke-WebRequest and/or Invoke-RestMethod you will received the following error:
+
+> Invoke-RestMethod : The request was aborted: Could not create SSL/TLS secure channel.
+> At line:1 char:1
+> + Invoke-RestMethod https://api.github.com/repositories/49609581/issues ...
+> + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-RestMethod], WebException
+> + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeRestMethodCommand
+> 
+> Invoke-WebRequest : The request was aborted: Could not create SSL/TLS secure channel.
+> At line:1 char:1
+> + Invoke-WebRequest https://api.github.com/repositories/49609581/issues ...
+> + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+> + CategoryInfo          : InvalidOperation: (System.Net.HttpWebRequest:HttpWebRequest) [Invoke-WebRequest], WebException
+> + FullyQualifiedErrorId : WebCmdletWebResponseException,Microsoft.PowerShell.Commands.InvokeWebRequestCommand
+
+This module provides best practice ways to enable and disable TLS protocols. Many module and script authors are setting these directly without prompting for user consent. That practice is dangerous as it may decrease the user's security or break access to previously working APIs. These settings affect .NET APIs beyond just Invoke-WebRequest and Invoke-RestMethod. Additionally, the settings persist for the duration of the user's PowerShell Session at the AppDomain level. These authors mean well, but may not fully understand all the implications of their actions.
+
+The functions in this module require user consent before making changes to the TLS settings, but only when settings are actually required. If the user's settings already include the code authors desired settings, then the user is not prompted and no changes are made.
+
+The confirmation prompts can be suppressed for automation jobs. However, when working with user facing and interactive code, the prompts should not be suppressed. This allows the user to be made aware of the changes being made to their session.
+
+PowerShell Core 6.0.0 and later do not require this module. Invoke-WebRequest and Invoke-RestMethod are not affected by settings made to System.Net.ServicePointManager in PowerShell Core. TLS 1.0, 1.1, and 1.2 are enabled by default in PowerShell Core. For more information on this and other differences please see my blog.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/bettertls-psmodule/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <dependencies>
+      <dependency id="powershell" version="5.0" />
+    </dependencies>	 
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

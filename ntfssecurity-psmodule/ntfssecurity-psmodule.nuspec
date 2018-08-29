@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntfssecurity-psmodule</id>
-    <version>4.2.3</version>
+    <version>4.2.4</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntfssecurity-psmodule</packageSourceUrl>
     <title>File System Security PowerShell Module (Install)</title>
@@ -17,7 +17,7 @@
     <docsUrl>https://blogs.technet.microsoft.com/fieldcoding/2014/12/05/ntfssecurity-tutorial-1-getting-adding-and-removing-permissions/</docsUrl>
     <bugTrackerUrl>https://github.com/raandree/NTFSSecurity/issues</bugTrackerUrl>
 	<mailingListUrl>https://gallery.technet.microsoft.com/scriptcenter/1abd77a5-9c0b-4a2b-acef-90dbb2b84e85/view/Discussions</mailingListUrl>
-    <tags>security ntfs permissions powershell</tags>
+    <tags>randree nttfssecurity security ntfs permissions powershell</tags>
     <summary>NTFSSecurity - Windows PowerShell Module for managing file and folder security on NTFS volumes</summary>
     <description>
 Managing permissions with PowerShell is only a bit easier than in VBS or the command line as there are no cmdlets for most day-to-day tasks like getting a permission report or adding permission to an item. PowerShell only offers Get-Acl and Set-Acl but everything in between getting and setting the ACL is missing. This module closes the gap.
@@ -35,11 +35,15 @@ The module provides 10 cmdlets to manage permissions on the file system, like ad
 * Get-NTFSOwner - Shows the owner of a file or folder.
 * Set-NTFSOwner - Sets the owner to a specific account.
 
-For documentation plese refer to:
+For documentation please refer to:
 [NTFSSecurity Tutorial 1 - Getting, adding and removing permissions](http://blogs.technet.com/b/fieldcoding/archive/2014/12/05/ntfssecurity-tutorial-1-getting-adding-and-removing-permissions.aspx)
 [NTFSSecurity Tutorial 2 - Managing NTFS Inheritance and Using Privileges](http://blogs.technet.com/b/fieldcoding/archive/2014/12/05/ntfssecurity-tutorial-2-managing-ntfs-inheritance-and-using-privileges.aspx)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ntfssecurity-psmodule/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://github.com/raandree/NTFSSecurity/wiki/Version-History</releaseNotes>
     <dependencies>
