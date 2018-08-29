@@ -4,7 +4,7 @@
   <metadata>
     <id>ammyy-admin</id>
     <title>Ammyy Admin (Portable)</title>
-    <version>3.5.6</version>
+    <version>3.7.0.0</version>
     <authors>Ammyy</authors>
     <owners>bcurran3</owners>
     <summary>Zero-Config Remote Desktop Software Ammyy Admin. The easiest way to establish remote desktop connection.</summary>
@@ -34,6 +34,10 @@ With Ammyy Admin it's easy to arrange on-line presentations or hold virtual clas
 [Learn more about on-line presentations and distance education](http://www.ammyy.com/en/solutions.html#d_education)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ammyy-admin/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
     <projectUrl>http://www.ammyy.com/</projectUrl>
     <docsUrl>http://www.ammyy.com/en/admin_manual.html</docsUrl>

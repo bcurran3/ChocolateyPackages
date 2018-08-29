@@ -32,7 +32,7 @@ Loop, 30
 if (found = 1)
 {
     WinActivate, %winTitle%
-    Click 525 425
+    send {Enter}
 }
 else
 {
@@ -55,31 +55,8 @@ Loop, 30
 if (found = 1)
 {
     WinActivate %winTitle%
-    Click 700 425
-}
-else
-{
-    ExitApp
-}
-
-found = 0
-LaunchLogitechOptions:
-Loop, 300 
-{
-    WinActivate, %winTitle%
-    PixelGetColor, colour, 510, 405, RGB
-    if (colour = "0x222425" || colour = "0x444646") {
-        found = 1
-        break, LaunchLogitechOptions
-         
-    }
-    Sleep, 1000
-}
-
-if (found = 1)
-{
-    WinActivate %winTitle%
-    Click 510 405
+    Send {tab}
+	Send {Enter}
 }
 else
 {
