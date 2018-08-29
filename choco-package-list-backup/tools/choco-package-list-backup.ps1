@@ -269,7 +269,7 @@ If (Test-Path "$env:ChocolateyInstall\lib\instchoco"){
    } else {
      Write-Host "Run CINST PACKAGES.CONFIG -Y or get InstChoco and let it do it for you! - https://chocolatey.org/packages/InstChoco" -ForegroundColor magenta 
    }
-Write-Host "Found choco-package-list-backup.ps1 useful? -ForegroundColor white
+Write-Host "Found choco-package-list-backup.ps1 useful?" -ForegroundColor white
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor white
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor white
 Start-Sleep -s 10
