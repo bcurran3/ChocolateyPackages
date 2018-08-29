@@ -3,22 +3,32 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-platform-tags-utility</id>
-    <version>4.0.25.1</version>
+    <version>4.0.27.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-platform-tags-utility</packageSourceUrl>
     <title>Dell Platform Tags Utility (Portable)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>http://www.dell.com/support/home/us/en/04/Drivers/DriversDetails?driverId=T3JYG</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/us/en/04/drivers/driversdetails?driverId=1R4WP</projectUrl>
     <iconUrl>https://si.cdn.dell.com/images/global/brand/ui/logo-wt-bl.png</iconUrl>
-    <copyright>(C) Copyright 1993-2016 Dell Inc.</copyright>
-    <licenseUrl>http://www.dell.com/learn/us/en/uscorp1/legal~terms-conditions~en/documents~dell-emc-sw-eula.pdf</licenseUrl>
+    <copyright>(C) Copyright Dell Inc.</copyright>
+    <licenseUrl>https://www.dell.com/learn/us/en/solutions/software-license-agreements?s=corp</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>dell platform tags utility system asset management portable</tags>
-    <summary></summary>
+    <summary>Dell Platform Tags Utility allows you to view and edit Owner and System asset tags on Dell computers.</summary>
     <description>
 This package provides Dell Platform Tags Utility and is supported on OptiPlex, XPS Notebook, Tablet, Precision and Latitude running the following Operating Systems: Windows 7, Windows 8, Windows 8.1, Windows10 and DOS	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-platform-tags-utility/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
-    <releaseNotes>Dell Platform Tags Utility allows you to view and edit Owner and System asset tags on Dell computers.</releaseNotes>
+    <releaseNotes>
+Enhancements:
+Added Asset Tag Extension support 
+Added WSMT Support	
+	</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

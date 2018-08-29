@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>6.72.344</version>
+    <version>6.92.275</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
@@ -61,6 +61,7 @@
 	</description>
     <dependencies>
       <dependency id="autohotkey" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  	  
     </dependencies>	
   </metadata>
   <files>

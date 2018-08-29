@@ -1,8 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* Binary is included in the package. 
-* BE CAREFUL with this, I know people who have been hacked. READ the warning in the package description.
-* I personally (sometimes) use and endorse this program.
+* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* I personally (sometimes) use and endorse this. 
 
 ***
 
