@@ -5,6 +5,8 @@
 * Shark007's Advanced Codecs is updated by the author on average of twice a week. I tend to update this package 2-4 times a month. If a newer version of Shark007's Advanced Codecs has been released, you might be prompted to download the newer version during installation, this is now watched for and handled by the AHK script.
 * I personally use and endorse this program.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
