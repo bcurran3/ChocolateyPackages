@@ -17,7 +17,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs 
-Install-BinFile -Name Ubuntu1804 -Path "$unzipLocation\ubuntu1804.exe"
 
 Set-Location -Path $unzipLocation
 ubuntu1804.exe install

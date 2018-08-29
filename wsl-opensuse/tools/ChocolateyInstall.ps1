@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'wsl-sles'
+$packageName    = 'wsl-opensuse'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://aka.ms/wsl-sles-12'
-$checksum       = 'FEE6FCC02EE8001173B019F8DF5AEB4F07D6892FB89FE3EB6E4A2C0166EF6D67'
+$url            = 'https://aka.ms/wsl-opensuse-42'
+$checksum       = '7E8D474A53631C4843C7F209E3530B777A40F6DA12B9C91AEA418071D76DCA02'
 $unzipLocation  = "$toolsDir\unzipped"
 
 New-Item $unzipLocation -type directory | out-null
@@ -19,5 +19,5 @@ $packageArgs = @{
 Install-ChocolateyZipPackage @packageArgs
 
 Set-Location -Path $unzipLocation
-.\SLES-12.exe
+.\openSUSE-42.exe run exit
 wslconfig /list
