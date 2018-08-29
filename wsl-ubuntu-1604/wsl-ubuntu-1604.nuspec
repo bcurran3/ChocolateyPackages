@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wsl-ubuntu-1604</id>
+    <version>16.04.3</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-ubuntu-1604</packageSourceUrl>
+    <title>Ubuntu 16.04.3 LTS for Windows Subsystem for Linux (Install)</title>
+    <authors>Canonical Ltd.</authors>
+    <iconUrl>https://assets.ubuntu.com/v1/c5cb0f8e-picto-ubuntu.svg</iconUrl>
+    <copyright>© Canonical Ltd.</copyright>
+    <licenseUrl>https://www.ubuntu.com/legal</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
+	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
+    <tags>wsl ubuntu linux</tags>
+    <summary>This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux</summary>
+    <description>
+This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-ubuntu-1604/readme.md)**
+	</description>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="wsl" version="0.0.1" />		  
+    </dependencies>		
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

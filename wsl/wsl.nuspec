@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wsl</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl</packageSourceUrl>
+    <title>Windows Subsystem for Linux (Install)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://docs.microsoft.com/nl-nl/windows/wsl/install-win10</projectUrl>
+	<docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/15cb498f3d11b3687c99e98d077031ad85a62c96/icons/win10mct.png</iconUrl>
+	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
+    <copyright>© Microsoft</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>microsoft wsl windows feature</tags>
+    <summary>Installs Windows Subsystem for Linux</summary>
+    <description>
+The Windows Subsystem for Linux (WSL) is a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows, alongside your traditional Windows desktop and modern store apps.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+	<releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes
+    </releaseNotes>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
