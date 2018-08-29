@@ -2,24 +2,24 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>wsl-sles</id>
-    <version>12.2</version>
+    <id>wsl-opensuse</id>
+    <version>42.2</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-sles</packageSourceUrl>
-    <title>SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux (Install)</title>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-opensuse</packageSourceUrl>
+    <title>openSUSE 42.2 (Malachite) for Windows Subsystem for Linux (Install)</title>
     <authors>SUSE</authors>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/wsl-sles/suse_logo_w-tag_color.jpg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/wsl-opensuse/suse_logo_w-tag_color.jpg</iconUrl>
     <copyright>© SUSE, All Rights Reserved</copyright>
     <licenseUrl>https://www.suse.com/company/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
 	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
-    <tags>wsl sles suse linux</tags>
-    <summary>This packages installs SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux</summary>
+    <tags>wsl suse opensuse malachite linux</tags>
+    <summary>This packages installs openSUSE 42.2 (Malachite) for Windows Subsystem for Linux.</summary>
     <description>
-###This packages installs SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux
+###This packages installs openSUSE 42.2 (Malachite) for Windows Subsystem for Linux.
 	
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-sles/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-opensuse/readme.md)**
 
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
@@ -27,7 +27,7 @@
 	</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
-      <dependency id="wsl" version="0.0.1" />		  
+      <dependency id="wsl" version="0.0.1" />
     </dependencies>		
   </metadata>
   <files>

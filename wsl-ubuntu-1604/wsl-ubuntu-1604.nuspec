@@ -8,18 +8,22 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-ubuntu-1604</packageSourceUrl>
     <title>Ubuntu 16.04.3 LTS for Windows Subsystem for Linux (Install)</title>
     <authors>Canonical Ltd.</authors>
-    <iconUrl>https://assets.ubuntu.com/v1/c5cb0f8e-picto-ubuntu.svg</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/wsl-ubuntu-1604/ubuntu_orange_hex.png</iconUrl>
     <copyright>© Canonical Ltd.</copyright>
     <licenseUrl>https://www.ubuntu.com/legal</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
 	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
-    <tags>wsl ubuntu linux</tags>
+    <tags>wsl ubuntu xenial linux</tags>
     <summary>This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux</summary>
     <description>
-This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux
+###This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-ubuntu-1604/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
