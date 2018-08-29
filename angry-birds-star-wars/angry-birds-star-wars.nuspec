@@ -4,7 +4,7 @@
   <metadata>
     <id>angry-birds-star-wars</id>
     <title>Angry Birds Star Wars (Install)</title>
-    <version>0.28.5.0</version>
+    <version>0.28.6.0</version>
     <authors>Rovio</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/angry-birds-star-wars</packageSourceUrl>	
@@ -33,10 +33,9 @@ It’s time to protect the galaxy from the dark side. May the force be tweet you
     <tags>rovio angry birds star wars mobiegame games notsilent</tags>
     <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://games.lol/wp-content/uploads/2018/06/angry-birds-star-wars-best-pc-games.jpg</iconUrl> 
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/angry-birds-star-wars/angry-birds-star-wars_icon.png</iconUrl> 
     <dependencies>
       <dependency id="autohotkey" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	 
 	  <dependency id="dotnet4.5" />	  
     </dependencies>
   </metadata>

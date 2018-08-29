@@ -4,7 +4,7 @@
   <metadata>
     <id>clash-royale</id>
     <title>Clash Royale (Install)</title>
-    <version>0.28.5.0</version>
+    <version>0.28.6.0</version>
     <authors>Supercell</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/clash-royale</packageSourceUrl>	
@@ -29,10 +29,9 @@ Each game lasts for a total of three minutes – the most crucial three minutes 
     <tags>supercell clash royale mobiegame games notsilent</tags>
     <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://games.lol/wp-content/uploads/2018/05/clashroyale_compressor.jpg</iconUrl> 
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/clash-royale/clash-royale_icon.png</iconUrl> 
     <dependencies>
       <dependency id="autohotkey" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	 
 	  <dependency id="dotnet4.5" />	  
     </dependencies>
   </metadata>

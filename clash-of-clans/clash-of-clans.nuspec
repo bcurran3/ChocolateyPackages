@@ -4,7 +4,7 @@
   <metadata>
     <id>clash-of-clans</id>
     <title>Clash of Clans (Install)</title>
-    <version>0.28.5.0</version>
+    <version>0.32.4.0</version>
     <authors>Supercell</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/clash-of-clans</packageSourceUrl>	
@@ -27,10 +27,9 @@ It’s a world of fantasy with Clash of Clans. As a chief of your village, you a
     <tags>supercell clash clans mobiegame games notsilent</tags>
     <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://games.lol/wp-content/uploads/2018/05/clashofclans_icon.png</iconUrl> 
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/clash-of-clans/clash-of-clans_icon.png</iconUrl> 
     <dependencies>
       <dependency id="autohotkey" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	 
 	  <dependency id="dotnet4.5" />	  
     </dependencies>
   </metadata>
