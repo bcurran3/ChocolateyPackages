@@ -25,8 +25,10 @@ The Windows Subsystem for Linux (WSL) is a new Windows 10 feature that enables y
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-	<releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes
-    </releaseNotes>	
+	<releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>	
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

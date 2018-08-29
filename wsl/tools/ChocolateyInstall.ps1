@@ -1,11 +1,22 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'wsl'
-$pp          = Get-PackageParameters
-$ubuntu1804Url= 'https://aka.ms/wsl-ubuntu-1804'
-$ubuntu1604Url='https://aka.ms/wsl-ubuntu-1604'
-$opensuseUrl='https://aka.ms/wsl-opensuse-42'
-$SLESUrl='https://aka.ms/wsl-sles-12'
 
+if (Get-IsWin7){
+	Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows."
+	throw
+}
+
+if (Get-IsWin8){
+	Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows."
+	throw
+}
+
+if (Get-IsWin81){
+	Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows."
+	throw
+}
+
+# Not sure if WSL is available in ALL editions of Windows 10
 if (Get-IsWin10){
     if (Get-WinVerBuild -egt 1607){
         Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -16,6 +27,27 @@ if (Get-IsWin10){
 	 }
 }
 
+if (Get-IsServer2008){
+	Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
+	throw
+}
+
+if (Get-IsServer2008R2){
+    Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
+	throw
+}
+
+if (Get-IsServer2012){
+    Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
+	throw
+}
+
+if (Get-IsServer2012R2){
+    Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
+	throw
+}
+
+# Not sure if WSL is available in ALL editions of Windows Server 2016
 if (Get-IsWinServer2016){
     if (Get-WinVerBuild -egt 1709){
         Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
