@@ -30,9 +30,6 @@ Vista, Windows7, Windows8, Windows8.1, Windows10
 ***
 	</description>
     <releaseNotes>https://az695102.vo.msecnd.net/rtdrivers/pc/audio/0008-R282_Readme.pdf</releaseNotes>	
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
-    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

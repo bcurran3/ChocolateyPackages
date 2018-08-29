@@ -9,7 +9,7 @@
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <copyright>Copyleft Bill Curran</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -69,7 +69,7 @@ Set it and forget it! **choco-package-list-backup** backups up your Chocolatey p
 
 **choco-package-list-backup** and choco-package-list-backup.xml are saved to Chocolatey's bin folder (\ProgramData\chocolatey\bin), so **choco-package-list-backup** is in your path.
 
-**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations** or become a patron at https://www.patreon.com/bcurran3**
+**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup/readme.md)**
 	</description>

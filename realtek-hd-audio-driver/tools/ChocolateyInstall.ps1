@@ -2,9 +2,9 @@
 $packageName    = 'realtek-hd-audio-driver' 
 $global:packageMaintainer = 'BCURRAN3'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://az695102.vo.msecnd.net/rtdrivers/pc/audio/0009-64bit_Win7_Win8_Win81_Win10_R282.exe'
+$url            = 'https://az695102.vo.msecnd.net/rtdrivers/pc/audio/0009-32bit_Win7_Win8_Win81_Win10_R282.exe'
 $checksum       = '4DBEB838B2E6650D0B57F0DB6EABE0DD8445A144DC64E3B38E3DF39BE1D41DAD'
-$url64          = 'https://az695102.vo.msecnd.net/rtdrivers/pc/audio/0009-32bit_Win7_Win8_Win81_Win10_R282.exe'
+$url64          = 'https://az695102.vo.msecnd.net/rtdrivers/pc/audio/0009-64bit_Win7_Win8_Win81_Win10_R282.exe'
 $checksum64     = '09784AB2BDFE97EEB085985B0C8A9E9727E882450B7918990B057B62612B967B'
 $silentArgs     = '/S'
 $validExitCodes = @(0)
@@ -46,8 +46,6 @@ $packageArgs = @{
   softwareName  = 'Realtek*'
 }
 
-Show-Patreon "https://www.patreon.com/bcurran3"
 Install-ChocolateyInstallPackage @packageArgs
-Show-ToastMessage "Realtek High Definition Audio System Software installed." "Version $env:packageVersion."
 
 Remove-Item $extractDir -recurse| out-null
