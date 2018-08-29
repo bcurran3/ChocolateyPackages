@@ -4,6 +4,8 @@
 * This package installs using the PowerShell Gallery. PowerShell Gallery requires PowerShell 5.0+ which is set as a dependency. If PowerShell 5.0+ is not already installed, it requires a reboot to become functional and this package will fail to install. If this happens to you because PowerShell 5.0+ was installed with this package, reboot and try again.
 * Uninstall may fail if you've used any of the modules within the current PowerShell. If you are uninstalling from CMD.EXE - have no fear.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 

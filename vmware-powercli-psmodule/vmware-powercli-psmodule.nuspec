@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vmware-powercli-psmodule</id>
-    <version>10.1.1.8827524</version>
+    <version>10.2.0.9372002</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli-psmodule</packageSourceUrl>
     <title>VMware.PowerCLI (Install)</title>
@@ -30,7 +30,6 @@
     <dependencies>
 	  <dependency id="dotnet4.5" />
       <dependency id="powershell" version="5.0" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
     </dependencies>	  
   </metadata>	
   <files>
