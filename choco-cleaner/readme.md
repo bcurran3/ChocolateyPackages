@@ -39,7 +39,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * chocolatey.config.backup is a backup of your chocolatey.config file
 * _processed.txt - I have no idea what made this file or why it exists
 * lib-bad holds packages that failed to install and lib-bkp contains aborted packages (during updates?) 
-* archives and executables out of .nuspkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
+* archives and executables out of .nupkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
 * \users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config)
 * files in cacheLocation if set in chocolatey.config
 * \users\username\AppData\Local\Nuget\Cache if Nuget client is installed and caching files there
