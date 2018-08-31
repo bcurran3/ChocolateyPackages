@@ -18,23 +18,25 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <summary>Chocolatey Misc Helpers Extension is a collection of helper functions for package creators/maintainers.</summary>
     <description>
-![Screenshot of some Chocolatey Misc Helpers Extension in use](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/chocolatey-misc-helpers.extension_screenshot.png)
-	
 ##**chocolatey-misc-helpers.extension** provides helper functions to be used in Chocolatey install/uninstall scripts by package creators/maintainers. 
 
 These didn't fit into the concept scope of my other extensions so I started this miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website. (Power to the packagers!)
-* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines.
-* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc.
+* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc.
+* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. (Requires [BurntToast PS module](https://chocolatey.org/packages/burnttoast-psmodule) pre-installed.) [SCREENSHOT](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-WaitandStop** - starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. 
 * **Start-WaitandStopActual** - (do not directly use) called by Start-WaitandStop to make Start-WaitandStop simple to use.
-* **-- Read comments in the scripts for help implementing. --**
+* **Read comments in the scripts for help implementing.**
+
+***
+DO NOT USE: Added but later nullified. Inclusion for backward compatibility with pre-release versions in the wild.
+* **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website.
+* **Show-PayPal** - Displays a message and link to your [PayPal](https://www.paypal.com/) website.
+***
 
 ###USAGE:
-* Show-Patreon "http://patreon.com/YourAccountName"
-* Show-ToastMessage "Line 1 of message" "Line 2 of message"
+* Show-ToastMessage "Your message line 1" "Your message line 2"
 * Start-CheckandStop "ProcessName"
 * Start-WaitandStop "ProcessName"
 
@@ -46,7 +48,7 @@ These didn't fit into the concept scope of my other extensions so I started this
     </description>
     <releaseNotes>
 ###CHANGE LOG:
-* 0.0.2 - Show-Patreon and Show-ToastMessage added.
+* 0.0.2 - Show-ToastMessage added (neutered from original form), Show-Patreon and Show-PayPal added but disapproved by the Chocolatey team and thus nullified. :(
 * 0.0.1 - initial release
     </releaseNotes>
   </metadata>
