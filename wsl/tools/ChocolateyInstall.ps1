@@ -25,24 +25,25 @@ if (Get-IsWin10){
 	  Write-Warning "Microsoft Windows Subsystem for Linux is only supported on Windows 10 builds 1607 and later."
 	  throw
 	 }
+   }
 }
 
-if (Get-IsServer2008){
+if (Get-IsWinServer2008){
 	Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
 	throw
 }
 
-if (Get-IsServer2008R2){
+if (Get-IsWinServer2008R2){
     Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
 	throw
 }
 
-if (Get-IsServer2012){
+if (Get-IsWinServer2012){
     Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
 	throw
 }
 
-if (Get-IsServer2012R2){
+if (Get-IsWinServer2012R2){
     Write-Warning "Microsoft Windows Subsystem for Linux is not compatible with your version of Windows Server."
 	throw
 }
@@ -56,6 +57,7 @@ if (Get-IsWinServer2016){
 	  Write-Warning "Microsoft Windows Subsystem for Linux is only supported on Windows Server 2016 builds 1709 and later."
 	  throw
 	 }
+   }
 }
 
 # Need to add Server 2019 compatibility in the future

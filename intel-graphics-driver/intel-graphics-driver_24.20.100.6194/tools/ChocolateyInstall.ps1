@@ -37,8 +37,6 @@ $packageArgs = @{
   softwareName  = $softwareName
   }
 
-Show-Patreon "https://www.patreon.com/bcurran3"
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-Show-ToastMessage "$softwareName installed." "Version $env:packageVersion."
 
