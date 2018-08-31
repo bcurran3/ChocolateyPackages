@@ -5,6 +5,7 @@ $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
 $publicFunctions = @(
     'Show-ToastMessage',
     'Show-Patreon',
+	'Show-PayPal',
     'Start-CheckandStop',
 	'Start-WaitandStop',
 	'Start-WaitandStopActual'
