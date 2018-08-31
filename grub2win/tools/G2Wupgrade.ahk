@@ -14,6 +14,12 @@ Send {Space}
 Send {Tab}
 Send {Space}
 Sleep 40000
+ If WinExist("EFI Update Log")
+   {
+    WinActivate
+    Send {Tab}
+	Send {Space}
+   }
 ;WinWaitActive, Upgrade Grub2Win, Close The Setup Program , 6000
 WinActivate
 Send {Space}

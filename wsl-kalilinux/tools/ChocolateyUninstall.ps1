@@ -1,7 +1,5 @@
 $ErrorActionPreference = 'Stop'
 $packageName    = 'wsl-kalilinux'
 
-wslconfig /unregister SLES-12
+wslconfig /unregister MyDistribution
 wslconfig /list
-
-Uninstall-BinFile -Name SLES-12

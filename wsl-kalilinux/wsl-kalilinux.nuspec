@@ -3,21 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wsl-kalilinux</id>
-    <version>12.2</version>
+    <version>2018.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-kalilinux</packageSourceUrl>
-    <title>SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux (Install)</title>
-    <authors>SUSE</authors>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/wsl-sles/suse_logo_w-tag_color.jpg</iconUrl>
-    <copyright>© SUSE, All Rights Reserved</copyright>
-    <licenseUrl>https://www.suse.com/company/legal/</licenseUrl>
+    <title>Kali GNU/Linux Rolling for Windows Subsystem for Linux (Install)</title>
+    <authors>Offensive Security</authors>
+    <iconUrl>https://docs.kali.org/wp-content/uploads/2013/03/kali-tm.png</iconUrl>
+    <copyright>Copyright © Kali Linux</copyright>
+    <licenseUrl>https://www.kali.org/EULA.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
 	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
-    <tags>wsl suse linux</tags>
-    <summary>This packages installs SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux</summary>
+    <tags>wsl kali gnu linux rolling foss</tags>
+    <summary>This packages installs Kali GNU/Linux Rolling for Windows Subsystem for Linux.</summary>
     <description>
-This packages installs SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux
+###This packages installs Kali GNU/Linux Rolling for Windows Subsystem for Linux.
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-kalilinux/readme.md)**
 

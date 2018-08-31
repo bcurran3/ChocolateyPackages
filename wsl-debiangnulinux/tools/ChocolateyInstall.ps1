@@ -2,7 +2,7 @@
 $packageName    = 'wsl-debiangnulinux'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://aka.ms/wsl-debian-gnulinux'
-$checksum       = ''
+$checksum       = '02CC1CE48E2FC21331B6FAA2AF44F22FBB9E9C219EAF74202970164BE6E3D3D8'
 $unzipLocation  = "$toolsDir\unzipped"
 
 New-Item $unzipLocation -type directory | out-null
@@ -17,8 +17,7 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-BinFile -Name SLES-12 -Path "$unzipLocation\SLES-12.exe"
 
 Set-Location -Path $unzipLocation
-.\SLES-12.exe
+debian.exe install
 wslconfig /list

@@ -2,9 +2,7 @@
 $packageName    = 'grub2win' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloads.sourceforge.net/project/grub2win/grub2win.zip'
-$checksum       = 'C7DEC26CC5ADCDCF96C0077270644228636998D105F649BE864490ADD4473F40'
-$silentArgs     = 'setup'
-$validExitCodes = @(0)
+$checksum       = 'E76BD8DC8FFB716149210E41A74B8977921353D480CCEE2D36F615A7C1BECC5A'
 $fileLocation   = "$toolsDir\g2install.exe"
 $ahkExe         = 'AutoHotKey'
 
@@ -31,8 +29,8 @@ $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
   file          = $fileLocation
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
+  silentArgs    = 'setup'
+  validExitCodes= @(0)
   softwareName  = 'grub2win*'
 }
  
