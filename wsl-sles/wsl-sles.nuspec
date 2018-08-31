@@ -2,10 +2,12 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+<!-- Unfortunately there are not a lot of truly specific URLs for this package, a lot of allowances needed to be made.  -->  
     <id>wsl-sles</id>
     <version>12.2</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-sles</packageSourceUrl>
+	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>
     <title>SUSE Linux Enterprise Server 12 SP2 for Windows Subsystem for Linux (Install)</title>
     <authors>SUSE</authors>
     <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/wsl-sles/suse_logo_w-tag_color.jpg</iconUrl>

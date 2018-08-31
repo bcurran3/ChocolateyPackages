@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>grub2win</id>
-    <version>1.0.5.3</version>
+    <version>1.0.5.8</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/grub2win</packageSourceUrl>	
     <title>Grub2Win (Install)</title>
@@ -58,6 +58,10 @@ If you find Grub2Win useful, please consider making a small donation to be used 
 * Digitally signed code. No adware or spyware - No hassles... It just works.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/grub2win/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://sourceforge.net/projects/grub2win/files/changelog.txt</releaseNotes>
 	<dependencies>

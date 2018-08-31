@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>open-visual-traceroute</id>
-    <version>1.7.0</version>	
+    <version>1.7.1</version>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-visual-traceroute</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Open Visual Traceroute (Install)</title>
@@ -17,7 +17,7 @@
     <docsUrl>http://visualtraceroute.net/installation</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/openvisualtrace/discussion/</mailingListUrl>
     <bugTrackerUrl>http://visualtraceroute.net/release-notes</bugTrackerUrl>
-    <tags>open visual traceroute java admin</tags>
+    <tags>llewis visual traceroute java foss cross-platform</tags>
     <summary>Open source cross-platform Java Visual Networking tool</summary>
     <description>
 ![Screenshot of Open Visual Traceroute](https://storage.googleapis.com/wzukusers/user-22771718/images/5765c45f492a3a4V55vY/traceroute3D.PNG)	
@@ -43,11 +43,15 @@
 * The software is written in Java and runs on Windows, MacOS X, Ubuntu, OpenSUSE.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/open-visual-traceroute/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/openvisualtrace/files/</releaseNotes>
     <dependencies>
       <dependency id="javaruntime" />
-      <dependency id="winpcap" />	  
+      <dependency id="winpcap" version="4.1.3" />		  
     </dependencies>
   </metadata>
   <files>
