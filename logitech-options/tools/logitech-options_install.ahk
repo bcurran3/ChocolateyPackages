@@ -2,10 +2,13 @@
 #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-SetTitleMatchMode, 1
+SetTitleMatchMode, 2
+SetTitleMatchMode, fast
 
-WinWait, LogiOptions Installer,, 90
-Sleep 10000
-Send {Enter}
-Send {Tab}
-Send {Enter}
+WinWait, LogiOptions Installer,, 300
+while WinExist("LogiOptions Installer")
+   {
+    Send {Enter}
+	Sleep 2000
+   }
+exit
