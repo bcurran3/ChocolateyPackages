@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-toast-notifications.extension</id>
+    <version>0.0.1</version>
+    <title>Chocolatey Toast Notifications Extension</title>
+    <authors>Bill Curran</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <copyright>public domain</copyright>
+    <tags>bcurran3 unofficial choco toast notifications extension</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</packageSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Chocolatey Toast Notifications Extension is a Chocolatey extension that displays a toast notification after installing or uninstalling a program.</summary>	
+    <description>
+![Screenshot of Chocolatey Toast Notifications Extension](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.extension/chocolatey-toast-notifications.extension_icon.png)
+
+###It's HERE! The 100% Chocolatey user OPT-IN toast notification extension for Chocolatey and Windows 10 (only).
+
+##**Chocolatey Toast Notifications Extension** is a Chocolatey extension that displays a toast notification after installing or uninstalling a program. This extension will start working automatically once installed and does NOT need to be implemented by package creators/maintainers. **Chocolatey Toast Notifications Extension** is meant to be installed and used directly by Chocolatey end users.
+
+###PURPOSE:
+
+* Chocogeeky fun!
+
+###FEATURES: 
+* **Chocolatey Toast Notifications Extension** will display a toast notification with the package name, program name, program version, status message (installed or uninstalled), and a link to the package page on the chocolatey.org website after a program is installed or uninstalled.
+
+###WHAT IT WON'T DO:
+* **Chocolatey Toast Notifications Extension** will NOT work on anything other than Windows 10, this is a limitation of the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module and its use of the [UWP Community Toolkit](https://github.com/Microsoft/WindowsCommunityToolkit). (Yes, I tried it on Windows Server 2016 and it did NOT work.)
+* **Chocolatey Toast Notifications Extension** will NOT display messages for programs that don't use standard installers, i.e. portable programs.
+* **Chocolatey Toast Notifications Extension** will NOT display messages for programs installed/uninstalled via any background processes; i.e. my **[choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup)**, **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)**, and **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)** packages.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-toast-notifications.extension/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <releaseNotes>
+###CHANGE LOG:
+* 0.0.1   - initial release
+
+###ROADMAP:
+* Attempt to make it work with PORTABLE packages as well.
+* Add global logged in user notifications if [BurntToast](https://github.com/Windos/BurntToast) and the [UWP Community Toolkit](https://github.com/Microsoft/WindowsCommunityToolkit) provide the functionality.
+   </releaseNotes>
+    <dependencies>      
+      <dependency id="burnttoast-psmodule" />
+    </dependencies>   
+  </metadata>
+</package>
