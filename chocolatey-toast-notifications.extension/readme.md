@@ -5,7 +5,7 @@
 * A BCURRAN3 original!
 * I personally use and endorse this extension.
 
-![Screenshot of Chocolatey Toast Notifications Extension](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.extension/chocolatey-toast-notifications.extension_icon.png)
+![Screenshot of Chocolatey Toast Notifications Extension](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.extension/chocolatey-toast-notifications.extension_screenshot.png)
 
 ###It's HERE! The 100% Chocolatey user OPT-IN toast notification extension for Chocolatey and Windows 10 (only).
 
