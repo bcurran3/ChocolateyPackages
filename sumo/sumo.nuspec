@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>sumo</id>
+    <version>5.7.4.401</version>
+    <title>SUMo (lite)</title>
+    <authors>KC Softwares</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sumo</packageSourceUrl>	
+    <copyright>© KC Softwares</copyright>	
+    <licenseUrl>http://www.kcsoftwares.com/legal/ToU.pdf</licenseUrl>
+    <projectUrl>http://www.kcsoftwares.com/?sumo</projectUrl>
+    <bugTrackerUrl>http://www.kcsoftwares.com/bugs/view_all_bug_page.php</bugTrackerUrl>	
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/d1e037cc7c943fda29b9067b3b1c3229d99402ff/icons/sumo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>kcsoftwares sumo update monitor notifier trial</tags>	
+    <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>	
+    <description>
+![Screenshot of SUMo](http://www.kcsoftwares.com/images/SUMo_screen.png)
+
+SUMo (Software Update Monitor) keeps your PC up-to-date & safe by using the most recent version of your favorite software !
+Unlike built-in auto update features, SUMo tells you if updates are available before you need to use your software.
+
+###Features
+* Automatic detection of installed software
+* Detects required updates / patchs for your software
+* Detects required drivers update (requires [DUMo](http://www.kcsoftwares.com/?page=dumo))
+* Filter / authorize Beta versions (user setting)
+* Automatic self-update (PRO only)
+* Direct access to software developer's web site (PRO only)
+* Ignore list : only tracks software YOU want to track
+* More compatibility and less false positive than others Update Monitors (according to users feedback ;-)
+* Internationalization support.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sumo/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+</description>
+    <releaseNotes>[Changelog](http://www.kcsoftwares.com/bugs/changelog_page.php?project_id=11)</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey" />
+    </dependencies>
+  </metadata>
+</package>
