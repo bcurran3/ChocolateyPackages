@@ -18,26 +18,29 @@
     <tags>bcurran3 dependency win10</tags>	
     <summary></summary>
     <description>
-# DESCRIPTION STILL BEING WORKED ON	
+# DESCRIPTION AND INSTRUCTIONS FOR THIS PACKAGE ARE VERY IMPORTANT AND STILL BEING WORKED ON	
 	
-**Package Dependency on Windows 10** is a Chocolatey package for use as a dependency by package maintainers/creators. It is similar to **[Chocolatey Fast Answers Extension](https://chocolatey.org/packages/chocolatey-fastanswers.extension)** to provide a "standard" way for dealing with packages/programs that are OS version specific. 
+**Package Dependency on Windows 10** is a Chocolatey package for use as a dependency by package maintainers/creators. It is similar in concept to **[Chocolatey Fast Answers Extension](https://chocolatey.org/packages/chocolatey-fastanswers.extension)** to provide a (proposed) standard way for dealing with packages/programs that are OS version specific. This package will purposely fail (throw) when Windows 10 is not found or an equal to or greater than version you specified.
 
 ###EXAMPLES FOR MAINTAINERS/PACKAGERS:
 
-* Works on any version of Windows 10
->    <dependencies>
->      <dependency id="dependency-windows10" version="10.0" />	  
->    </dependencies>
+![Examples](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/dependency-windows10/dependency-windows10_examples.png)
 
-* Works on Windows 10 version 1607 and later
->    <dependencies>
->      <dependency id="dependency-windows10" version="10.1607" />	  
->    </dependencies>
+Look at [Version History](https://chocolatey.org/packages/dependency-windows10#versionhistory) for the builds you can specify.
 
-* Works on Windows 10 version 1809 and later
->    <dependencies>
->      <dependency id="dependency-windows10" version="10.1809" />	  
->    </dependencies>
+***
+
+#I NEED TO THINK THIS THROUGH MORE
+
+###SPECIAL CONSIDERATIONS:
+
+Using **dependency-windows10** as a dependency to show Windows 10 as a package requirement and head off installation failures for your package is great idea since OS dependencies aren't currently a possibility via Chocolatey NuGet. When using **dependency-windows10** there is one special caveat that you should build into your chocolateyInstall.ps1 script:
+
+Remove-Item $env:ChocolateyInstall\lib\dependency-windows10 -Recurse -ea SilentlyContinue
+
+If you don't do this, you could destroy the possibility of using **dependency-windows10** by other package maintainers/creators. Why? Because if you use **dependency-windows10** v10.0 (allowing any version of Windows 10) for your package, it's natural at some point a user will do a "cup all" and **dependency-windows10** will be updated to v10.1809.
+
+***
 
 ###NOTE TO CHOCOLATEY MODERATORS:
 
