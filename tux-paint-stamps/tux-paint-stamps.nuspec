@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>tux-paint-stamps</id>
+    <version>2018.09.01</version>
+    <title>Tux Paint Stamps (Install)</title>
+    <authors>wkendrick</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tux-paint-stamps</packageSourceUrl>			
+    <projectUrl>http://www.tuxpaint.org/</projectUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/tuxpaint/bugs/</bugTrackerUrl>		
+	<mailingListUrl>https://sourceforge.net/p/tuxpaint/mailman/</mailingListUrl>
+	<copyright>Copyright New Breed Software/Various contributors</copyright>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-paint-stamps/tux-paint-stamps_icon.png</iconUrl>
+    <licenseUrl>http://www.tuxpaint.org/docs/COPYING.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Tux Paint Stamps](http://www.tuxpaint.org/screenshots/example_simple.png)
+
+This is a collection of 'rubber stamp' images for Tux Paint.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tux-paint-stamps/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <summary>This is a collection of 'rubber stamp' images for Tux Paint.</summary>
+    <releaseNotes>https://sourceforge.net/projects/tuxpaint/files/tuxpaint-stamps/2018-09-01/</releaseNotes>
+    <tags>tux4kids tux paint stamps drawing kids educational game foss cross-platform binary</tags>
+    <dependencies>
+      <dependency id="tux-paint" version="0.9.23" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
+</package>
