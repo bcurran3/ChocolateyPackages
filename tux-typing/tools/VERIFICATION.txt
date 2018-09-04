@@ -1,0 +1,10 @@
+﻿==================== Tux Typing ====================
+
+bcurran3 downloaded and packaged the included .EXE for Tux Typing from the developer's website. 
+
+The direct download link is:
+https://sourceforge.net/projects/tuxtype/files/tuxtype-win32/TuxType%201.8.1%20-%20Windows/tuxtype-1.8.1-win32-installer.exe
+
+SHA256 checksum for the .EXE is listed in the ChocolateyInstall.ps1 file
+
+==================== Tux Typing ====================

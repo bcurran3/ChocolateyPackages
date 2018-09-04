@@ -5,20 +5,18 @@
     <version>2.0.2</version>
     <title>Tux of Math Command (Install)</title>
     <authors>criswell, davidsbruce, wkendrick</authors>
-    <copyright></copyright>	
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tux-of-math-command</packageSourceUrl>			
-    <projectUrl>https://web.archive.org/web/20180227043144/http://tux4kids.alioth.debian.org:80/</projectUrl>
-	<docsUrl></docsUrl>
+    <projectUrl>https://sourceforge.net/projects/tuxmath/</projectUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tuxmath/bugs/</bugTrackerUrl>		
 	<mailingListUrl>https://sourceforge.net/p/tuxmath/mailman/</mailingListUrl>
-    <iconUrl></iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-of-math-command/tux-of-math-command_icon.png</iconUrl>
     <licenseUrl>https://sourceforge.net/directory/license:gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-![Screenshot of Tux of Math Command](https://a.fsdn.com/con/app/proj/tuxmath/screenshots/133379.jpg/max/max/1)
+![Screenshot of Tux of Math Command](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-of-math-command/tux-of-math-command_screenshot.png)
 
-Tux, of Math Command" is a math drill game starring Tux, the Linux Penguin. Lessons are included from simple number typing through addition, subtraction, multiplication, and division of positive and negative numbers. It is intended for kids ~4-10.
+"Tux, of Math Command" is a math drill game starring Tux, the Linux Penguin. Lessons are included from simple number typing through addition, subtraction, multiplication, and division of positive and negative numbers. It is intended for kids ~4-10.
 
 ###Features
 * Fun arcade-style math game
@@ -35,9 +33,9 @@ Tux, of Math Command" is a math drill game starring Tux, the Linux Penguin. Less
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-    <summary></summary>
+    <summary>"Tux, of Math Command" is a math drill game starring Tux, the Linux Penguin. </summary>
     <releaseNotes>https://sourceforge.net/p/tuxmath/news/</releaseNotes>
-    <tags></tags>
+    <tags>tux4kids tux math kids educational foss cross-platform binary notsilent</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
