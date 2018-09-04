@@ -1,0 +1,10 @@
+==================== Angry IP Scanner ====================
+
+https://angryip.org/about/
+
+License
+Angry IP Scanner is free and open-source software, so use it at your own risk. The license is GPLv2
+
+GPLv2 - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
+==================== Angry IP Scanner ====================

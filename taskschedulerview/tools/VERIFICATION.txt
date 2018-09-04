@@ -1,0 +1,11 @@
+﻿==================== TaskSchedulerView  ====================
+
+bcurran3 downloads and packages the included .ZIPs for TaskSchedulerView from the developer's website. 
+
+The direct download links are:
+https://www.nirsoft.net/utils/taskschedulerview.zip
+https://www.nirsoft.net/utils/taskschedulerview-x64.zip
+
+SHA256 checksums for these .ZIPs are listed in the ChocolateyInstall.ps1 file
+
+==================== TaskSchedulerView  ====================
