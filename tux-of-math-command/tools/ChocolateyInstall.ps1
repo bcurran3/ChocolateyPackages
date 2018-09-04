@@ -11,7 +11,7 @@ $packageArgs = @{
   checksum       = $checksum
   silentArgs     = '/S'
   validExitCodes = @(0,1)
-  softwareName   = ''
+  softwareName   = 'Tux of Math Command (remove only)'
 }
  
 Install-ChocolateyInstallPackage @packageArgs
