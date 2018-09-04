@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>tux-typing</id>
+    <version>1.8.1</version>
+    <title>Tux Typing (Install)</title>
+    <authors>anotherjesse, calarndt, criswell, davidsbruce</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tux-typing</packageSourceUrl>			
+    <projectUrl>https://sourceforge.net/projects/tuxtype/</projectUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/tuxtype/bugs/</bugTrackerUrl>		
+	<mailingListUrl>https://sourceforge.net/p/tuxtype/mailman/</mailingListUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-typing/tux-typing_icon.png</iconUrl>
+    <licenseUrl>https://sourceforge.net/directory/license:gpl/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Tux Typing](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-typing/tux-typing_screenshot.png)
+
+Tux Typing is an educational typing program for children starring Tux, the Linux Penguin. The program includes two video game-style activities for younger players, with phrases and finger lessons for older students. Extensive i18n. License: GPL.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tux-typing/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <summary>Tux Typing is an educational typing program for children starring Tux, the Linux Penguin.</summary>
+    <releaseNotes>https://sourceforge.net/p/tuxtype/news/</releaseNotes>
+    <tags>tux4kids tux typing kids educational foss cross-platform binary notsilent</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
+</package>
