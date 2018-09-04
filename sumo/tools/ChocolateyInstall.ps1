@@ -3,7 +3,7 @@ $packageName = 'sumo'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe      = 'AutoHotKey'
 $ahkFile     = "$toolsDir\SUMo_Install.ahk"
-$url         = 'http://www.kcsoftwares.com/files/sumo_lite.exe'
+$url         = 'https://www.kcsoftwares.com/files/sumo_lite.exe'
 $checksum    = '73AF40BC6632FA0AD478EAAD0B3EAC3E22855BB93BC0B1DB6F235C1B4B711EA8'
 
 $packageArgs = @{
@@ -18,3 +18,5 @@ $packageArgs = @{
 
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
+Start-Sleep -s 10
+Start-CheckandStop "SUMo"  

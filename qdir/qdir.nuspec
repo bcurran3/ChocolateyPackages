@@ -2,10 +2,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>7.12</version>
+    <version>7.13</version>
     <title>Q-Dir (Install)</title>
-    <authors>Nenad Hrg</authors>
-    <copyright>by Nenad Hrg softwareok.de</copyright>	
+    <authors>Nenad Hrg (SOFTWAREOK.COM)</authors>
+    <copyright>Nenad Hrg (SOFTWAREOK.COM)</copyright>	
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/qdir</packageSourceUrl>			
     <projectUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
@@ -43,10 +43,7 @@ Warning! ► [Once Q-Dir, always Q-Dir !!!](http://www.softwareok.com/?seite=faq
 	</description>
     <summary>Q-Dir - Really good quad explorer 4 files and folder</summary>
     <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
-    <tags>qdir q-dir file manager managment explorer utility</tags>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
-    </dependencies>			
+    <tags>nhrg qdir q-dir file manager management explorer utility</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

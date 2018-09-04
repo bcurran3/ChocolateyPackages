@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskschedulerview</id>
-    <version>1.41</version>
+    <version>1.42</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskschedulerview</packageSourceUrl>
     <title>TaskSchedulerView (Portable)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</projectUrl>
     <iconUrl>https://www.nirsoft.net/utils/taskschedulerview_icon.png</iconUrl>
-    <copyright>Copyright Nir Sofer</copyright>
+    <copyright>Copyright (c) Nir Sofer</copyright>
     <licenseUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>nirsoft taskschedulerview task scheduler utility portable</tags>
@@ -18,13 +18,19 @@
     <description>
 ![Screenshot of TaskSchedulerView](http://www.nirsoft.net/utils/taskschedulerview.png)
 	
-TaskSchedulerView is a simple tool for Windows Vista/7/8/10 that displays in a single table the list of all tasks from the Task Scheduler of Windows. It also allows you to easily disable/enable mutiple tasks at once. For every task, the following information is displayed: Task Name, Description, Status, Hidden (Yes/No), Last Run/Next Run Times, Task Folder, EXE filename or COM handler of the task, number of missed runs, and more...	
+TaskSchedulerView is a simple tool for Windows Vista/7/8/10 that displays in a single table the list of all tasks from the Task Scheduler of Windows. It also allows you to easily disable/enable multiple tasks at once. For every task, the following information is displayed: Task Name, Description, Status, Hidden (Yes/No), Last Run/Next Run Times, Task Folder, EXE filename or COM handler of the task, number of missed runs, and more...	
 
 ###System Requirements
 
 This tool works on any version of Windows, starting from Windows Vista and up to Windows 10. Both 32-bit and 64-bit systems are supported. Windows XP and older systems are not supported.
 
+**TaskSchedulerView** is also included with [NirLauncher](https://chocolatey.org/packages/nirlauncher)
+
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/taskschedulerview/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
   </metadata>
   <files>
