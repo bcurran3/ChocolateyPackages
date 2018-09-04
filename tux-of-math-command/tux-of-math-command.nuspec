@@ -10,7 +10,7 @@
     <projectUrl>https://sourceforge.net/projects/tuxmath/</projectUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tuxmath/bugs/</bugTrackerUrl>		
 	<mailingListUrl>https://sourceforge.net/p/tuxmath/mailman/</mailingListUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-of-math-command/tux-of-math-command_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/c2193380/tux-of-math-command/tux-of-math-command_icon.png?raw=true</iconUrl>
     <licenseUrl>https://sourceforge.net/directory/license:gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -35,7 +35,7 @@
 	</description>
     <summary>"Tux, of Math Command" is a math drill game starring Tux, the Linux Penguin. </summary>
     <releaseNotes>https://sourceforge.net/p/tuxmath/news/</releaseNotes>
-    <tags>tux4kids tux math kids educational foss cross-platform binary notsilent</tags>
+    <tags>tux4kids tux math kids educational game foss cross-platform binary notsilent</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,17 +1,17 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'tux-of-math-command'
+$packageName    = 'tux-paint'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\tuxmath-2.0.2-win32-installer.exe"
-$checksum       = '155173F1CB3258D971E8969B0C3E55EEBDB8F093D93FC342CF8DD8223AC50DA5'
+$url            = "$toolsDir\tuxpaint-0.9.23-win32-installer.exe"
+$checksum       = '52C43AA4925458421A20506F64659FABAD5A8939947ADB4B4C26A8BDC90E08E5'
 
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
   file           = $url
   checksum       = $checksum
-  silentArgs     = '/S'
+  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0,1)
-  softwareName   = 'Tux of Math Command (remove only)'
+  softwareName   = 'Tux Paint*'
 }
  
 Install-ChocolateyInstallPackage @packageArgs

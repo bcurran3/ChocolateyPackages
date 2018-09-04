@@ -14,7 +14,7 @@
     <licenseUrl>https://sourceforge.net/directory/license:gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-![Screenshot of Tux Typing](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-typing/tux-typing_screenshot.png)
+![Screenshot of Tux Typing](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/c2193380/tux-typing/tux-typing_screenshot.jpg?raw=true)
 
 Tux Typing is an educational typing program for children starring Tux, the Linux Penguin. The program includes two video game-style activities for younger players, with phrases and finger lessons for older students. Extensive i18n. License: GPL.
 
@@ -26,7 +26,7 @@ Tux Typing is an educational typing program for children starring Tux, the Linux
 	</description>
     <summary>Tux Typing is an educational typing program for children starring Tux, the Linux Penguin.</summary>
     <releaseNotes>https://sourceforge.net/p/tuxtype/news/</releaseNotes>
-    <tags>tux4kids tux typing kids educational foss cross-platform binary notsilent</tags>
+    <tags>tux4kids tux typing kids educational game foss cross-platform binary notsilent</tags>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
