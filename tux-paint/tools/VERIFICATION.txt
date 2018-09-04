@@ -1,0 +1,10 @@
+﻿==================== Tux Paint ====================
+
+bcurran3 downloaded and packaged the included .EXE for Tux Paint from the developer's website. 
+
+The direct download link is:
+https://sourceforge.net/projects/tuxpaint/files/tuxpaint/0.9.23/tuxpaint-0.9.23-win32-installer.exe
+
+SHA256 checksum for the .EXE is listed in the ChocolateyInstall.ps1 file
+
+==================== Tux Paint ====================

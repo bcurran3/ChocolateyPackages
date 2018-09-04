@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>tux-paint</id>
+    <version>0.9.23</version>
+    <title>Tux Typing (Install)</title>
+    <authors>wkendrick</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tux-paint</packageSourceUrl>			
+    <projectUrl>http://www.tuxpaint.org/</projectUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/tuxpaint/bugs/</bugTrackerUrl>		
+	<mailingListUrl>https://sourceforge.net/p/tuxpaint/mailman/</mailingListUrl>
+	<copyright>Copyright New Breed Software/Various contributors</copyright>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/tux-paint/tux-paint_icon.png</iconUrl>
+    <licenseUrl>http://www.tuxpaint.org/docs/COPYING.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Tux Typing](http://www.tuxpaint.org/screenshots/example_simple.png)
+
+Tux Paint is a free, award-winning drawing program for children ages 3 to 12 (for example, preschool and K-6). Tux Paint is used in schools around the world as a computer literacy drawing activity. It combines an easy-to-use interface, fun sound effects, and an encouraging cartoon mascot who guides children as they use the program.
+
+Kids are presented with a blank canvas and a variety of drawing tools to help them be creative. [See the full list of features.](http://www.tuxpaint.org/features/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tux-paint/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <summary>Tux Paint - Open Source Drawing Software for Children</summary>
+    <releaseNotes>https://sourceforge.net/p/tuxpaint/news/</releaseNotes>
+    <tags>tux4kids tux paint drawing kids educational game foss cross-platform binary</tags>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
+</package>
