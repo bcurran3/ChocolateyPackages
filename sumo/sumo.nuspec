@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.7.4.401</version>
+    <version>5.7.4.401180903</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
@@ -13,24 +13,25 @@
     <bugTrackerUrl>http://www.kcsoftwares.com/bugs/view_all_bug_page.php</bugTrackerUrl>	
     <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/d1e037cc7c943fda29b9067b3b1c3229d99402ff/icons/sumo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>kcsoftwares sumo update monitor notifier trial</tags>	
+    <tags>kcsoftwares sumo update monitor notifier trial notsilent</tags>	
     <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>	
     <description>
 ![Screenshot of SUMo](http://www.kcsoftwares.com/images/SUMo_screen.png)
 
-SUMo (Software Update Monitor) keeps your PC up-to-date & safe by using the most recent version of your favorite software !
-Unlike built-in auto update features, SUMo tells you if updates are available before you need to use your software.
+SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the most recent version of your favorite software ! Unlike built-in auto update features, SUMo tells you if updates are available before you need to use your software.
 
 ###Features
 * Automatic detection of installed software
 * Detects required updates / patchs for your software
 * Detects required drivers update (requires [DUMo](http://www.kcsoftwares.com/?page=dumo))
 * Filter / authorize Beta versions (user setting)
-* Automatic self-update (PRO only)
-* Direct access to software developer's web site (PRO only)
+* Automatic self-update **(PRO only)**
+* Direct access to software developer's web site **(PRO only)**
 * Ignore list : only tracks software YOU want to track
 * More compatibility and less false positive than others Update Monitors (according to users feedback ;-)
 * Internationalization support.
+
+[SUMo PRO €14.99/yr or €29.99/lifetime](http://www.kcsoftwares.com/?buy)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sumo/readme.md)**
 
@@ -41,6 +42,7 @@ Unlike built-in auto update features, SUMo tells you if updates are available be
     <releaseNotes>[Changelog](http://www.kcsoftwares.com/bugs/changelog_page.php?project_id=11)</releaseNotes>
     <dependencies>
       <dependency id="autohotkey" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
 </package>

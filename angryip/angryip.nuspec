@@ -2,44 +2,53 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.5.2</version>
+    <version>3.5.3</version>
     <title>Angry IP Scanner (Installer)</title>
-    <authors>https://github.com/angryziber</authors>
+    <authors>angryziber</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/angryip</packageSourceUrl>
-    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/angryip/ipscan/master/LICENSE</licenseUrl>
     <projectUrl>http://angryip.org/</projectUrl>
     <projectSourceUrl>https://github.com/angryziber/ipscan</projectSourceUrl>
     <bugTrackerUrl>https://github.com/angryziber/ipscan/issues</bugTrackerUrl>
     <docsUrl>http://angryip.org/faq/</docsUrl>
-    <iconUrl>http://angryip.org/images/icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/angryip/ipscan/4614d00a/resources/images/icon128.png?raw=true</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-![Screenshot of AngryIP](http://angryip.org/images/ipscan-screen.png)
+![Screenshot of AngryIP](https://angryip.org/screenshots/ipscan-win10.png)
 
-Angry IP Scanner (or simply ipscan) is an open-source and cross-platform network scanner designed to be fast and simple to use. It scans IP addresses and ports as well as has many other features.
+Angry IP Scanner (or simply ipscan) is an open-source and cross-platform network scanner designed to be fast and simple to use. It scans IP addresses and ports as well as has [many other features](https://angryip.org/about/).
 
 It is widely used by network administrators and just curious users around the world, including large and small enterprises, banks, and government agencies.
 
-####Features
-+ Scans local networks as well as Internet
-+ IP Range, Random or file in any format
-+ Exports results into many formats
-+ Extensible with many data fetchers
-+ Provides command-line interface
+It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as well.
 
-+ Over 18 million downloads
-+ Free and open-source
-+ Works on Windows, Mac and Linux
-+ Installation not required
+####Features
+* Scans local networks as well as Internet
+* IP Range, Random or file in any format
+* Exports results into many formats
+* Extensible with many data fetchers
+* Provides command-line interface
+
+* Over [23 million](https://angryip.org/2015/03/downloads.html) downloads
+* Free and open-source
+* Works on Windows, Mac and Linux
+* Installation not required
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/angryip/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
-    <summary>Fast and friendly network scanner.</summary>
-    <releaseNotes></releaseNotes>
-    <tags>angryip ipscan angry scanner network ip</tags>
+    <summary>Angry IP Scanner - fast and friendly network scanner</summary>
+    <releaseNotes>https://raw.githubusercontent.com/angryip/ipscan/master/RELEASE-NOTES</releaseNotes>
+    <tags>angryziber angryip ipscan angry scanner network ip foss cross-platform</tags>
     <dependencies>
       <dependency id="javaruntime" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>   
 </package>
