@@ -1,0 +1,5 @@
+https://sourceforge.net/projects/tuxmath/
+
+License
+GNU General Public License version 2.0 (GPLv2)
+https://sourceforge.net/directory/license:gpl/
