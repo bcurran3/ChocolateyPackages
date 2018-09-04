@@ -1,0 +1,10 @@
+﻿==================== Tux Paint Stamps ====================
+
+bcurran3 downloaded and packaged the included .EXE for Tux Paint Stamps from the developer's website. 
+
+The direct download link is:
+https://sourceforge.net/projects/tuxpaint/files/tuxpaint-stamps/2018-09-01/tuxpaint-stamps-2018-09-01-win32-installer.exe
+
+SHA256 checksum for the .EXE is listed in the ChocolateyInstall.ps1 file
+
+==================== Tux Paint Stamps ====================
