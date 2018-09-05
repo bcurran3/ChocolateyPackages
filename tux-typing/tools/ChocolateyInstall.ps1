@@ -9,6 +9,7 @@ $packageArgs = @{
   fileType       = 'EXE'
   file           = $url
   checksum       = $checksum
+  checksumType   = 'sha256'  
   silentArgs     = '/S'
   validExitCodes = @(0,1)
   softwareName   = 'Tux Typing (remove only)'
