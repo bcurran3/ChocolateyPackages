@@ -12,7 +12,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0,1)
-  softwareName   = 'Tux Paint*'
+  softwareName   = 'Tux Paint Stamps*'
 }
  
 Install-ChocolateyInstallPackage @packageArgs
