@@ -3,7 +3,7 @@
   <metadata>
     <id>tux-paint</id>
     <version>0.9.23</version>
-    <title>Tux Typing (Install)</title>
+    <title>Tux Paint (Install)</title>
     <authors>wkendrick</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tux-paint</packageSourceUrl>			
@@ -15,7 +15,7 @@
     <licenseUrl>http://www.tuxpaint.org/docs/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-![Screenshot of Tux Typing](http://www.tuxpaint.org/screenshots/example_simple.png)
+![Screenshot of Tux Paint](http://www.tuxpaint.org/screenshots/example_simple.png)
 
 Tux Paint is a free, award-winning drawing program for children ages 3 to 12 (for example, preschool and K-6). Tux Paint is used in schools around the world as a computer literacy drawing activity. It combines an easy-to-use interface, fun sound effects, and an encouraging cartoon mascot who guides children as they use the program.
 

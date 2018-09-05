@@ -9,9 +9,10 @@ $packageArgs = @{
   fileType       = 'EXE'
   file           = $url
   checksum       = $checksum
+  checksumType   = 'sha256'  
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0,1)
-  softwareName   = 'Tux Paint*'
+  softwareName   = 'Tux Paint 0.9.23'
 }
  
 Install-ChocolateyInstallPackage @packageArgs
