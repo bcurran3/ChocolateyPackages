@@ -1,6 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This program is updated semi-frequently. The download URL in this package will always download the latest version in the current major version (i.e. 22.1, 22.2, 22.3, but not 23.0). Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
+* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* "REBOOT=R" argument implemented supress reboots.
+* I personally use and endorse this program.
 
 ***
 

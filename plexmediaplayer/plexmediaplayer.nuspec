@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>plexmediaplayer</id>
-    <version>2.14.1.301</version>
+    <version>2.18.0.893</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexmediaplayer</packageSourceUrl>
     <title>Plex Media Player for Windows (Install)</title>
@@ -41,10 +41,9 @@ Plex Media Player gives you both a beautiful HTPC experience and a slick desktop
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-    <releaseNotes>https://forums.plex.tv/discussion/190085/plex-media-player</releaseNotes>
+    <releaseNotes>https://forums.plex.tv/t/plex-media-player/120475/58</releaseNotes>
 	<dependencies>
       <dependency id="KB2919355" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  	  
     </dependencies>		
   </metadata>
   <files>
