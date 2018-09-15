@@ -1,0 +1,11 @@
+﻿==================== MetaFox ====================
+
+bcurran3 downloads and packages the included .EXE for Metafox from the sites below.
+
+Direct download links can be found at:
+https://www.majorgeeks.com/files/details/metafox.html
+http://codecpack.co/download/MetaFox.html
+
+The developer does not have a website.
+
+==================== MetaFox ====================
