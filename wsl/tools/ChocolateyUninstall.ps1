@@ -1,4 +1,4 @@
 $ErrorActionPreference = 'Stop'
 $packageName = 'wsl'
 
-Disable-WindowsOptionalFeature -FeatureName Microsoft-Windows-Subsystem-Linux
+Disable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart |Out-Null
