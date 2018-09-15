@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-me-drivers</id>
+    <version>1824.12.0.1140 </version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-me-drivers</packageSourceUrl>
+    <title>Intel® Management Engine Driver for Windows 7*, 8.1*, and Windows® 10 (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://www.intel.com/content/www/us/en/support/articles/000008927/software/chipset-software.html</projectUrl>
+    <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>intel management engine me driver drivers windows</tags>
+    <summary>Intel® Management Engine Driver for Windows 7*, 8.1*, and Windows® 10</summary>
+    <description>
+[Alternate projectUrl](https://downloadcenter.intel.com/download/28083/Intel-Management-Engine-Driver-for-Windows-7-8-1-and-Windows-10)
+	
+##Purpose
+
+Installs the Intel® Management Engine (Intel® ME) components for the following platforms and operating systems:
+
+###Operating systems:
+
+* Windows*7 / Windows* 8 / Windows* 8.1 / Windows® 10 / Windows Server* 2008 64-bit versions / Windows Server* 2008 R2 / Windows Server* 2012 / Windows Server* 2016
+
+###Platforms:
+
+* 6th generation Intel® Core™ Processor family (codename Skylake)
+* 7th generation Intel® Core™ Processor family (codename Kaby Lake)
+* 8th generation Intel® Core™ Processor family (codename Kaby Lake R)
+* 9th generation Intel® Core™ Processor family (codename Coffee Lake)
+
+The Intel ME installer detects the Intel ME's capabilities and installs the relevant drivers.
+
+###INSTALL INSTRUCTIONS:
+There is a **Consumer** and a **Corporate** version of these drivers. You can specify which version to install using package parameters, examples are below. Not specifying a version will default to the Consumer drivers.
+
+###INSTALL EXAMPLES:
+* choco install intel-me-drivers --params "'/TYPE:consumer'" (default)
+* choco install intel-me-drivers --params "'/TYPE:corporate'"
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-me-drivers/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
