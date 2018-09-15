@@ -1,7 +1,9 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* This package does not install automatically, use Control Panel to uninstall.
+* This package uses the -overwrite switch with the installer, it's safe to install again and again.
+* This package does NOT uninstall automatically, you will be prompted. I can AutoHotKey script it in the future if someone requests it. Since these are drivers instead of a normal program, I doubt many people will be uninstalling the package.
+* Don't ask me the difference between the Consumer and Corporate versions, Intel is VERY secretive about everything ME related! (Lots of conspiracy theories because of this.) I'm sure the info is out there somewhere though. If you find a good breakdown of the differences, let me know and I'll update this readme file.
 
 ***
 
