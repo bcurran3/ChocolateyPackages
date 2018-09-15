@@ -5,8 +5,9 @@
 * If you don't like the default PowerShell icon for (unofficial) Chocolatey Powershell because you get it confused with your normal PowerShell icon, you can manually choose to change the icon to use the Chocolatey logo found at C:\ProgramData\Chocolatey\choco.ico which the Chocolatey Team won't let me use since they believe you might become confused and think this is an official Chocolatey package instead of the official blatantly named package name of "(unofficial) Chocolatey Powershell." Of course you have the power to manually change the icon to anything you want including a picture of Winnie the Poo if you so desire. If you do manually change it to the Chocolatey logo, please be smarter than the Chocolatey Team (GEP13) thinks you are. 
 
 
-CHANGELOG:
-0.0.1 - initial release
+###CHANGELOG:
+* 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
+* 0.0.1 - initial release.
 
 ***
 
