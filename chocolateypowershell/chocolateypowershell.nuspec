@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolateypowershell</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</packageSourceUrl>
@@ -35,7 +35,11 @@ Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-    <releaseNotes>0.0.1 - initial release.</releaseNotes>	
+    <releaseNotes>
+###CHANGELOG:
+* 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
+* 0.0.1 - initial release.
+	</releaseNotes>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
