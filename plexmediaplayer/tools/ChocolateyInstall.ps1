@@ -1,30 +1,27 @@
 ﻿$packageName   = 'plexmediaplayer'
-$global:packageMaintainer = 'BCURRAN3'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installerType = 'exe'
-$url           = 'https://downloads.plex.tv/plexmediaplayer/2.14.1.880-301a4b6c/PlexMediaPlayer-2.14.1.880-301a4b6c-windows-x64.exe'
-$checksum      = '9B58758D161843CDFDA6E5FA823D08CB55492B670E92D0E940A20EC59ED4AB77'
-$silentArgs    = '/S'
 $bits          = Get-ProcessorBits
+# https://www.plex.tv/media-server-downloads/#plex-app
+$url           = 'https://downloads.plex.tv/plexmediaplayer/2.18.0.893-48795f25/PlexMediaPlayer-2.18.0.893-48795f25-windows-x64.exe'
+$checksum      = '21F14A2AF2D88A59A71069BAC5FEC1D4D7D27689D4202269C7EB4DB258DA0B8C'
+
+if ($bits -eq 32){
+    Write-Warning "This program only supports 64 bit OSes."
+    throw
+   }
+
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = $installerType
+  fileType      = 'exe'
   url           = $url
-  silentArgs    = $silentArgs
+  silentArgs    = '/S'
   softwareName  = 'Plex Media Player' 
   checksum      = $checksum
   checksumType  = 'sha256'  
-  }
+ }
 
-if ($bits -eq 32)
-  {
-   Write-Host "This program only supports 64 bit OSes." -foreground "red" –backgroundcolor "blue"
-   throw
-  } else {  
-    Show-Patreon "https://www.patreon.com/bcurran3"
-    Install-ChocolateyPackage @packageArgs
-	Show-ToastMessage "$packageName installed." "Version $env:packageVersion."
-   }  
+Install-ChocolateyPackage @packageArgs
+  
 

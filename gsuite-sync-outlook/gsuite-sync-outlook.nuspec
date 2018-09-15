@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-sync-outlook</id>
-    <version>4.0.14.0</version>
+    <version>4.0.15.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-sync-outlook</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>G Suite Sync for Microsoft Outlook® (GSSMO) (Install)</title>
@@ -17,7 +17,7 @@
 	<!--<docsUrl2>https://support.google.com/a/users/answer/153872</docsUrl2> -->
     <mailingListUrl>https://productforums.google.com/forum/#!forum/apps</mailingListUrl>
     <bugTrackerUrl>https://support.google.com/a/answer/153463</bugTrackerUrl>
-    <tags>gssmo gsuite gapps google migration sync outlook</tags>
+    <tags>google gssmo gsuite gapps migration sync outlook</tags>
     <summary>GSSMO - a tool to migrate your Outlook data to G Suite.</summary>
     <description>
 ##What is GSSMO?
@@ -61,9 +61,6 @@ For information about which Microsoft Outlook features are supported and how usi
 ***
 	</description>
     <releaseNotes>https://support.google.com/a/answer/153463</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
-    </dependencies>			
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
