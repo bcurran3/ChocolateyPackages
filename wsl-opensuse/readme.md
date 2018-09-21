@@ -1,6 +1,9 @@
 <h3>BCURRAN3'S PACKAGE NOTES:</h3>
 
 * The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
+* openSUSE-42.exe does not support silent install, this package kludges that by waiting for it to finish unpacking its files and then killing the task.
+* openSUSE-42 will NOT prompt you to create a user when installed via this package, default user is root
+* Re-installation via -force is NOT supported, UNINSTALL the package and install it again. (Will most likely hang with a Error: 0x80070040 message in the openSUSE-42 installation window.)
 
 ***
 
