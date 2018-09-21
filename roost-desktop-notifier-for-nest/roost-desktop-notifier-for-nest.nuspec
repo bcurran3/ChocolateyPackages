@@ -4,7 +4,7 @@
   <metadata>
     <id>roost-desktop-notifier-for-nest</id>
     <title>Roost Desktop Notifier for Nest (Install)</title>
-    <version>0.9.8.155</version>
+    <version>0.9.8.212</version>
     <authors>Richard Everett</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/roost-desktop-notifier-for-nest</packageSourceUrl>	
@@ -22,18 +22,24 @@ You get a discrete notification when a thermostat notices an interesting change 
 
 Roost Desktop Notifier supports the Nest Learning Thermostat in Heat, Cool and Heat • Cool modes. Temperatures are shown in Celsius or Fahrenheit, depending on your Nest settings. It will work nicely if you have just one Nest Thermostat, a single Nest Protect or lots of both in one or two homes!
 
-PACKAGING NOTE: Uninstall not silent, use Control Panel.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/roost-desktop-notifier-for-nest/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
     </description>
     <projectUrl>http://richardeverett.com/Nest</projectUrl>
     <iconUrl>https://richardeverett.com/Content/Nest/works-with-nest.png</iconUrl>	
     <docsUrl>http://richardeverett.com/Nest</docsUrl>
-    <tags>roost google nest thermostat smarthome notsilent admin</tags>
+    <tags>roost nest thermostat smarthome notsilent</tags>
     <copyright>Copyright (C) Richard Everett</copyright>
     <licenseUrl>http://richardeverett.com/Nest</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="autohotkey.portable" />
-      <dependency id="dotnet4.5.2" />
+      <dependency id="autohotkey" />
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />	  
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="dotnet4.5.2" />	  
     </dependencies>
     <releaseNotes></releaseNotes>
   </metadata>
