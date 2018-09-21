@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-misc-helpers.extension</id>
-    <version>0.0.2</version>	
+    <version>0.0.3-pre</version>	
     <title>Chocolatey Misc Helpers Extension</title>	
     <authors>Bill Curran</authors>	
     <owners>bcurran3</owners>	
@@ -24,21 +24,15 @@ These didn't fit into the concept scope of my other extensions so I started this
 
 ###HELPERS:
 * **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc.
-* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. (Requires [BurntToast PS module](https://chocolatey.org/packages/burnttoast-psmodule) pre-installed.) [SCREENSHOT](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-WaitandStop** - starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. 
 * **Start-WaitandStopActual** - (do not directly use) called by Start-WaitandStop to make Start-WaitandStop simple to use.
+* **Test-Dependency** - Provides a way to verify a dependency is installed. Does NOT check version. Returns True/False. i.e. **Test-Dependency** "[dependency-windows10](https://chocolatey.org/packages/dependency-windows10)"
 * **Read comments in the scripts for help implementing.**
 
-***
-DO NOT USE: Added but later nullified. Inclusion for backward compatibility with pre-release versions in the wild.
-* **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website.
-* **Show-PayPal** - Displays a message and link to your [PayPal](https://www.paypal.com/) website.
-***
-
 ###USAGE:
-* Show-ToastMessage "Your message line 1" "Your message line 2"
 * Start-CheckandStop "ProcessName"
 * Start-WaitandStop "ProcessName"
+* Test-Dependency "DependencyName"
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-misc-helpers.extension/readme.md)**
 
@@ -48,8 +42,19 @@ DO NOT USE: Added but later nullified. Inclusion for backward compatibility with
     </description>
     <releaseNotes>
 ###CHANGE LOG:
-* 0.0.2 - Show-ToastMessage added (neutered from original form), Show-Patreon and Show-PayPal added but disapproved by the Chocolatey team and thus nullified. :(
+* 0.0.3 - added Test-Dependency for use with my [OS dependency packages](https://chocolatey.org/packages?q=tag%3Aosdependency)
+* 0.0.2 - Show-Patreon, Show-PayPal, and Show-ToastMessage added but later disapproved by the Chocolatey team and thus nullified. :(
 * 0.0.1 - initial release
+
+***
+###DO NOT USE: 
+The functions below were added to v0.0.2 but were later nullified; included for backward compatibility with pre-release versions in the wild. Any questions, look at the comments in the files.
+
+* **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website.
+* **Show-PayPal** - Displays a message and link to your [PayPal](https://www.paypal.com/) website.
+* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. [Screenshot of what could have been](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/chocolatey-misc-helpers.extension_screenshot.png)
+
+***
     </releaseNotes>
   </metadata>
 </package>
