@@ -4,7 +4,7 @@
   <metadata>
 <!-- Unfortunately there are not a lot of truly specific URLs for this package, a lot of allowances needed to be made.  -->
     <id>wsl-opensuse</id>
-    <version>42.2</version>
+    <version>42.2.0.020180919</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-opensuse</packageSourceUrl>
 	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>
@@ -16,7 +16,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
 	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
-    <tags>wsl suse opensuse malachite linux</tags>
+    <tags>wsl suse opensuse malachite linux notsilent</tags>
     <summary>This packages installs openSUSE 42.2 (Malachite) for Windows Subsystem for Linux.</summary>
     <description>
 ###This packages installs openSUSE 42.2 (Malachite) for Windows Subsystem for Linux.
@@ -29,7 +29,8 @@
 	</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
-      <dependency id="wsl" version="0.0.1" />
+	  <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="wsl" version="1.0.0" />	  
     </dependencies>		
   </metadata>
   <files>
