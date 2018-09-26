@@ -4,6 +4,8 @@
 * Uninstalling will open up a "Thank you for downloading Simple Sticky Notes" on the developer's webpage.
 * I use and endorse this program. I miss the old 3M Post-It Notes program (not updated since 2005?), I'm finding this to be my favorite replacement.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
