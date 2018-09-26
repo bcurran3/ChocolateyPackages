@@ -27,7 +27,7 @@
 	</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
-      <dependency id="wsl" version="0.0.1" />		  
+      <dependency id="wsl" version="1.0.0" />
     </dependencies>		
   </metadata>
   <files>

@@ -26,15 +26,26 @@ Start-Process openSUSE-42.exe
 Write-Host "  ** When you see ""Installation successful!"" in the other window, you may close it." -foreground magenta
 Write-Host "  ** Otherwise, just wait up to 25 seconds and it will close automatically." -foreground magenta
 
-# wait for openSUSE-42 installer to finish extracting files
-while (!(Test-Path $unzipLocation\rootfs\var\tmp)){
-       Start-Sleep -Seconds 15
-      }
+# Make sure openSUSE-42 starts setting up and doesn't give an error
+Start-Sleep -Seconds 5
+if (Test-Path $unzipLocation\rootfs)
+   {
+# wait for openSUSE-42 installer to finish extracting files   
+    while (!(Test-Path $unzipLocation\rootfs\var\tmp)){
+           Start-Sleep -Seconds 15
+          }
+    } else {
+	  Write-Warning "Something went wrong. Possibly you haven't rebooted since enabling WSL."
+	  $SomethingWentWrong=$true
+	 }
 
 # wait 10 more seconds to make sure the files IN rootfs\var\tmp get extracted
-Start-Sleep -Seconds 10
+if (!($SomethingWentWrong)) {Start-Sleep -Seconds 10}
 
 # terminate openSUSE-42.EXE ~when it hits the "Enter new UNIX username:" prompt (meaning installation has finished)
 Start-CheckandStop "openSUSE-42"
 
+if ($SomethingWentWrong) {throw}
+
 Write-Host "  ** root is the default user upon running WSL/openSUSE-42." -foreground magenta
+wslconfig /list

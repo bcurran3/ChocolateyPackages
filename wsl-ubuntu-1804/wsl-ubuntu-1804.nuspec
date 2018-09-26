@@ -4,7 +4,7 @@
   <metadata>
 <!-- Unfortunately there are not a lot of truly specific URLs for this package, a lot of allowances needed to be made.  -->
     <id>wsl-ubuntu-1804</id>
-    <version>18.04.1</version>
+    <version>18.04.1.020181923</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-ubuntu-1804</packageSourceUrl>
 	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>
@@ -29,7 +29,7 @@
 	</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
-      <dependency id="wsl" version="0.0.1" />		  
+      <dependency id="wsl" version="1.0.1" />
     </dependencies>		
   </metadata>
   <files>
