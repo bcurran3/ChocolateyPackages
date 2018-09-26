@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿# SLES-12 doesn't support being silently installed. This script kludges it.
+$ErrorActionPreference = 'Stop'
 $packageName    = 'wsl-sles'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://aka.ms/wsl-sles-12'
@@ -18,6 +19,33 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
+# open SLES-12 installer in a new window
 Set-Location -Path $unzipLocation
-.\SLES-12.exe
+Start-Process SLES-12.exe
+
+Write-Host "  ** When you see ""Installation successful!"" in the other window, you may close it." -foreground magenta
+Write-Host "  ** Otherwise, just wait up to 25 seconds and it will close automatically." -foreground magenta
+
+# Make sure SLES-12 starts setting up and doesn't give an error
+Start-Sleep -Seconds 5
+if (Test-Path $unzipLocation\rootfs)
+   {
+# wait for SLES-12 installer to finish extracting files   
+    while (!(Test-Path $unzipLocation\rootfs\var\tmp)){
+           Start-Sleep -Seconds 15
+          }
+    } else {
+	  Write-Warning "Something went wrong. Possibly you haven't rebooted since enabling WSL."
+	  $SomethingWentWrong=$true
+	 }
+
+# wait 10 more seconds to make sure the files IN rootfs\var\tmp get extracted
+if (!($SomethingWentWrong)) {Start-Sleep -Seconds 10}
+
+# terminate SLES-12.exe ~when it hits the "Enter new UNIX username:" prompt (meaning installation has finished)
+Start-CheckandStop "SLES-12"
+
+if ($SomethingWentWrong) {throw}
+
+Write-Host "  ** root is the default user upon running WSL/SLES-12." -foreground magenta
 wslconfig /list
