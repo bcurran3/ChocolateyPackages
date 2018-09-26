@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gsuite-new-tab-chrome</id>
+    <version>1.5.3</version>
+    <title>G Suite New Tab for Chrome</title>
+    <authors>Michal Sukupčák</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-new-tab-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/g-suite-new-tab/ehpgcagmhpndkmglombjndkdmggkgnge</projectUrl>
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/g-suite-new-tab/ehpgcagmhpndkmglombjndkdmggkgnge</bugTrackerUrl>	
+    <iconUrl>https://lh3.googleusercontent.com/hkCjk5XLw56Q7ENlOeN7C4mYGdH49w9R5BkoNpAlipes7wgX-T0O4zkAUOadR_GJAavX90a-Rw=s26-h26-e365-rw</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of G Suite New Tab](https://lh3.googleusercontent.com/3rrDueRQeXBRbBLZMQeRdACu7s2zzRSBEcVg4phYE4T4hLO4OJze2AdGaIeed1Yje9QwlfNHtqk=s640-h400-e365-rw)
+
+Chrome New Tab Page replacement for G Suite users inspired by Material Design and build using Polymer.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>Chrome new tab replacement for G Suite users.</summary>
+    <tags>Sukupčák gsuite gapps tab chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>
