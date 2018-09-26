@@ -5,6 +5,8 @@
 * This package checks for already installed Intel adapter drivers before installing and will throw an exception if none are found. However it does not verify you have supported Intel drivers, just an already installed Intel network adapter. Thus it also fails Chocolatey's automated testing.
 * I personally use and endorse this program.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
