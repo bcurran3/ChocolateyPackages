@@ -2,6 +2,8 @@
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
@@ -19,5 +21,3 @@ If applicable, please always consider donating or purchasing the software you in
 <h3>TIA,</h3>
 
 <h3>Bill</h3>
-
-

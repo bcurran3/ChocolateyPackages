@@ -4,6 +4,8 @@
 * Logitech switched to a custom installer without silent install options. Bit PITA. Thanks pauby for writing the new AHK scripts.
 
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
