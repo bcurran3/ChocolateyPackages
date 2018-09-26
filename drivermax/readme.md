@@ -6,6 +6,8 @@
 * Uninstall is 99% silent. When DriverMax uninstalls it will open your default browser and give you an opportunity to buy the PRO version at a reduced rate. There seems to be no way around it.
 * I personally use and endorse this program.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
