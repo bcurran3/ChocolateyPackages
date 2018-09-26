@@ -4,6 +4,8 @@
 * At some point in the future this package will be setup for creation by Auto Update (when I figure it out) which will solve the above problem.
 * I personally use and endorse this program.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
@@ -21,5 +23,3 @@ If applicable, please always consider donating or purchasing the software you in
 <h3>TIA,</h3>
 
 <h3>Bill</h3>
-
-
