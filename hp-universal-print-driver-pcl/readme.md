@@ -6,15 +6,25 @@
 * Future versions of this package might be updated to parse all the options available when installed by chocolatey and use my defaults if no parameters are passed. If you'd like to see this, create a GitHub Issue so I know it's desired.
 * Uninstalling this package DOES NOT uninstall the drivers. You have to delete the printer driver in Control Panel\All Control Panel Items\Devices and Printers.
 
-Like my [packages](https://chocolatey.org/profiles/bcurran3)? 
+***
 
-Find them useful?
+Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
-**Want to buy me a beer?**
 
-https://www.paypal.me/bcurran3donations
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
-If applicable, please always consider donating to the developer or purchasing the software first - this includes Chocolatey licensed editions.
+[![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
+
+<h1>Better yet... Keep me incentivized by Patreonizing me!</h1>
+
+[![Patreonize me!](https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png)](https://www.patreon.com/bcurran3)
+
+
+If applicable, please always consider donating or purchasing the software you installed - including [Chocolatey's licensed editions](https://chocolatey.org/pricing).
+
+<h3>TIA,</h3>
+
+<h3>Bill</h3>
 
 
 ===============================================================================================
