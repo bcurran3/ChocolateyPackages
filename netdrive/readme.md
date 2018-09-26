@@ -3,6 +3,7 @@
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * NetDrive 3 has Visual C dependcies that may require a reboot and fail NetDrive install if not already installed. Reboot and install the package again if it fails for you.
 
+***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
