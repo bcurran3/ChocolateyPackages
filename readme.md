@@ -21,6 +21,7 @@ If applicable, please always consider donating or purchasing the software you in
 <h1>Yes, I package requests.</h1>
 
 <h2>SPECIALTIES / TOP PRIORITY:</h2>
+
 * Everything and anything I use!
 * Technician Tools: Admin Tools, Diagnostic Tools, Network Tools, Security Tools, System Management, etc.
 * BIG guys: Amazon, Dell, Google, HP, Intel, Microsoft, NETGEAR
