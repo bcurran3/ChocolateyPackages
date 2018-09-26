@@ -4,6 +4,8 @@
 * You will need to reboot your computer before dokany will install if kb2999226 gets installed as a dependency, or if you remove dokany and attempt to re-install.
 * When new versions of dokany are released, please open a GitHub Issue requesting the package to be updated.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 

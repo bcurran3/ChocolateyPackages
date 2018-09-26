@@ -2,6 +2,8 @@
 
 * This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
