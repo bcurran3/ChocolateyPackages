@@ -33,6 +33,7 @@
 * 0.0.1   - initial release
 
 ###ROADMAP:
+* Make compatible with chocolatey-preinstaller-checks.extension
 * Attempt to make it work with PORTABLE packages as well.
 * Add global logged in user notifications if [BurntToast](https://github.com/Windos/BurntToast) and the [UWP Community Toolkit](https://github.com/Microsoft/WindowsCommunityToolkit) provide the functionality.
 

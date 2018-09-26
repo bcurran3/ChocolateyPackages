@@ -22,6 +22,8 @@ CHANGE LOG:
 * 0.0.1   - initial release. If you installed before 06/20/2018 final, please force reinstall.
 
 
+***
+
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
@@ -39,7 +41,3 @@ If applicable, please always consider donating or purchasing the software you in
 <h3>TIA,</h3>
 
 <h3>Bill</h3>
-
-
-
-
