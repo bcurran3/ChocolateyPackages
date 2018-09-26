@@ -39,6 +39,7 @@ This extension attempts to head off problems related to:
 * 0.0.1 - initial release
 
 ROADMAP:
+* Make compatible with chocolatey-toast-notifications.extension
 * Check for the Chocolatey self service agent and handle differently (ignore?) when found.
 * Possibly add configurable options to enable disable each of the three checks.
 * Probably add configurable timeouts for each of the three checks.
