@@ -4,3 +4,6 @@ Write-Warning "This only effects the currently logged in user installing the pac
 Remove-Item "$env:APPDATA\Microsoft\Skype for Desktop\Skype-Setup.exe" -ea SilentlyContinue | Out-Null
 New-Item "$env:APPDATA\Microsoft\Skype for Desktop\Skype-Setup.exe" -ItemType directory | Out-Null
 Write-Warning "Skype will now only be updated by Chocolatey."
+
+
+https://www.petri.com/delete-folder-file-from-command-line-powershell

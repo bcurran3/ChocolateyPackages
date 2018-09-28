@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>logitech-media-server</id>
+    <title>Logitech Media Server (Install)</title>
+    <version>7.7.6</version>
+    <authors>Logitech</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-media-server</packageSourceUrl>	
+    <summary>Logitech Media Server software for Squeezeboxes and Squeezesoft</summary>
+    <description>
+![Screenshot of Logitech Media Server](https://upload.wikimedia.org/wikipedia/en/5/57/Squeeze_Center.jpg)
+
+It doesn't matter if your library includes 100 tracks or 100,000. Or if you rip your own CDs or buy your music from services like iTunes and Amazon MP3. 
+Download Logitech Media Server software today and start listening to your personal music collection on a Squeezebox in any room in your home.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/logitech-media-server/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <projectUrl>http://www.mysqueezebox.com/download</projectUrl>
+    <docsUrl>https://en.wikipedia.org/wiki/Logitech_Media_Server</docsUrl>
+    <tags>logitech media server LMS squeezebox slimServer</tags>
+    <copyright>(C) Logitech</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.mysqueezebox.com/static/images/logitech-logo.png</iconUrl>
+	<dependencies>
+        <dependency id="vcredist2010" version="10.0" />
+    </dependencies>
+    <releaseNotes>http://wiki.slimdevices.com/index.php/Release_Notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
