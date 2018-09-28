@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>advanced-bat-to-exe-converter</id>
-    <version>4.11</version>
+    <version>4.11.020180624</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-bat-to-exe-converter</packageSourceUrl>
     <title>Advanced BAT to EXE Converter (Install)</title>
