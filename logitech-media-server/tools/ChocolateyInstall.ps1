@@ -1,7 +1,7 @@
 ﻿$packageName= 'logitech-media-server' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://downloads.slimdevices.com/LogitechMediaServer_v7.7.6/LogitechMediaServer-7.7.6.exe' 
-$checksum   = 'E0F23BDFF0FF256F61C77F494F813244472E0EF0DDA2278B26B579EF93E6DA37'
+$url        = 'http://downloads.slimdevices.com/LogitechMediaServer_v7.9.1/LogitechMediaServer-7.9.1.exe' 
+$checksum   = 'D2EB20833A01071A2583F440AFB235689FF4A70C3DBE0183853E1EC92A207ED3'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
 
 $packageArgs = @{

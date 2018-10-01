@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tageditor</id>
+    <version>3.1.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tageditor</packageSourceUrl>	
+    <owners>bcurran3</owners>
+    <title>Tag Editor (Portable)</title>
+    <authors>Martchus</authors>
+    <projectUrl>https://github.com/Martchus/tageditor</projectUrl>
+	<projectSourceUrl>https://github.com/Martchus/tageditor/releases</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/Martchus/tageditor/master/resources/icons/hicolor/128x128/apps/tageditor.png</iconUrl>
+    <copyright></copyright>
+	<licenseUrl>https://cdn.rawgit.com/Martchus/tageditor/b19a210f/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <bugTrackerUrl>https://github.com/Martchus/tageditor/issues</bugTrackerUrl>
+	<docsUrl>https://github.com/Martchus/tageditor/blob/master/README.md</docsUrl>
+    <tags>martchus tagedior mp4 aac flac vorbis id3 qt-gui opus matroska foss cross-platform binary portable</tags>
+    <summary>A tag editor with Qt GUI and command-line interface supporting MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska</summary>
+    <description>
+![Screenshot of Tag Editor](https://cdn.rawgit.com/Martchus/tageditor/b19a210f/resources/screenshots/mainwindow.png?raw=true)	
+A tag editor with Qt GUI and command-line interface. Supports MP4 (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.
+
+###Supported formats
+The tag editor can read and write the following tag formats:
+
+* iTunes-style MP4/M4A tags (MP4-DASH is supported)
+* ID3v1 and ID3v2 tags
+* conversion between ID3v1 and different versions of ID3v2 is possible
+* Vorbis, Opus and FLAC comments in Ogg streams
+* cover art via "METADATA_BLOCK_PICTURE" is supported
+* Vorbis comments and "METADATA_BLOCK_PICTURE" in raw FLAC streams
+* Matroska/WebM tags and attachments
+
+###Additional features
+
+The tag editor can also display technical information such as the ID, format, language, bitrate, duration, size, timestamps, sampling frequency, FPS and other information of the tracks.
+
+It also allows to inspect and validate the element structure of MP4 and Matroska files.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/screenlogic-connect/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
