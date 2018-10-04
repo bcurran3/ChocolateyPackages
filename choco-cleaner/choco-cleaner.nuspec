@@ -14,6 +14,7 @@
     <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</packageSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
     <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>	
     <description>

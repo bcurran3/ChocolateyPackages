@@ -11,6 +11,7 @@
     <tags>bcurran3 unofficial choco toast notifications extension</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</packageSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectUrl>
     <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
