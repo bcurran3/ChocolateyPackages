@@ -4,7 +4,7 @@
   <metadata>
 <!-- Unfortunately there are not a lot of truly specific URLs for this package, a lot of allowances needed to be made.  -->
     <id>wsl-opensuse</id>
-    <version>42.2.0.020180924</version>
+    <version>42.2.0.020181002</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-opensuse</packageSourceUrl>
 	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>

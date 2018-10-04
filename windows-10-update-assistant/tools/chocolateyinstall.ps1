@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'windows-10-update-assistant' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.microsoft.com/download/C/8/E/C8E7013A-F5D5-4F9F-A94E-3B4F333F2930/Windows10Upgrade9252.exe'
-$checksum    = '20B7E269F5D6CFF80B86184459708145FD6B003FFA1DD09D9148F483B8B05965'
+$url         = 'https://download.microsoft.com/download/9/4/E/94E04254-741B-4316-B1DF-8CAEDF2DF16C/Windows10Upgrade9252.exe'
+$checksum    = '02C384BD26C1F479D23870EBB498E8570CBEDF0E87325A6E79479F7AEB90665F'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -16,12 +16,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-
-Start-Sleep -s 2
-if((get-process "Windows10UpgraderApp" -ea SilentlyContinue) -eq $Null){ 
-    Write-Host "Windows 10 Upgrade Assistant currently NOT running." 
-  }else{ 
-    Write-Host "Stopping Windows 10 Upgrade Assistant process..."
-    Stop-Process -processname "Windows10UpgraderApp"
-  }
-
+Start-Sleep -Seconds 5
+Start-CheckandStop "Windows10UpgraderApp"

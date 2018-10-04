@@ -1,9 +1,9 @@
-<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="139" height="88">
+<img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* Yes, I considered icons for more advanced functions such as to view and change Chocolatey Features, Sources, and apikey. BUT (notice that's a big but) those are advanced commands that I feel the average user wouldn't need. The people who know what those things do are more likely to just go to the Command Prompt and do it anyway. A bigger reason why I didn't add this is that Windows 10 doesn't allow nested menus. So if I added another 3-9 shortcuts, it would be very cluttered. On Windows 7 the additional shortcuts could be managed nicely under a separate folder, I wish Windows 10 worked that way still..
+* Yes, I considered icons for more advanced functions such as to view and change Chocolatey Features, Sources, Pinning, and apikey. BUT (notice that's a big but) those are advanced commands that I feel the average user wouldn't need. The people who know what those things do are more likely to just go to the Command Prompt and do it there. A bigger reason why I didn't add this is that Windows 10 doesn't allow nested menus. So if I added another 3-9 shortcuts, it would be very cluttered. On Windows 7 the additional shortcuts could be managed nicely under a separate folder, I wish Windows 10 worked that way still.. If anyone requests it, I'd be glad to make a choco-shortcuts-advanced-winconfig with the more advanced commands and set this package as a dependency.
 
 ![Screenshot of Choco Shortcuts](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
 
@@ -26,10 +26,14 @@ If you're a power user or use the Command Line and/or PowerShell all the time, y
 
 For a different take on Chocolatey Shortcuts for the desktop, checkout [mica](https://chocolatey.org/profiles/mica)'s [Chocolatey Shortcuts (unofficial)](https://chocolatey.org/packages/ChocoShortcuts).
 
-ROADMAP:
+###CHANGELOG:
+* 0.0.2.1 bug fix, the "egg on face release"
+* 0.0.2 added link to Chocolatey status website, added support for moving my newer utils icons to the Chocolatey folder, minor organizational and optimization
+* 0.0.1 initial release
+
+###ROADMAP:
 * possibly add package builder if found
 * I'm open to suggestions - open a GitHub issue please.
-
 
 ***
 
