@@ -14,6 +14,7 @@
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-fastanswers.extension</projectSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <tags>bcurran3 choco fast answers extension extensions</tags>
     <summary>Chocolatey Fast Answers Extension is a (fairly) easy to remember collection of micro functions for package creators/maintainers.</summary>

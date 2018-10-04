@@ -11,8 +11,9 @@
     <copyright>public domain</copyright>	
     <tags>bcurran3 unofficial choco misc helpers extension</tags>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</packageSourceUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</projectUrl>	
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</projectSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
     <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>	
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	

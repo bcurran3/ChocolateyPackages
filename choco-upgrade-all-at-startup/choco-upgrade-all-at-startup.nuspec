@@ -4,7 +4,8 @@
   <metadata>
     <id>choco-upgrade-all-at-startup</id>
     <version>2018.08.23</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
     <owners>bcurran3</owners>
     <title>(unofficial) Choco Upgrade All at Startup (Task)</title>
     <authors>Bill Curran</authors>
