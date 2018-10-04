@@ -8,8 +8,8 @@ if ($IsWin10 -ne "10")
    }
 
 $IsCorrectBuild=[Environment]::OSVersion.Version.Build
-if ($IsCorrectBuild -lt "17741")
+if ($IsCorrectBuild -lt "17763")
    {
-    Write-Warning "This package requires at least Windows 10 version 1809/OS build 17741.x."
+    Write-Warning "This package requires at least Windows 10 version 1809/OS build 17763.x."
 	throw
    }

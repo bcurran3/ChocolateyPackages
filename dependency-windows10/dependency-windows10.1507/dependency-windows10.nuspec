@@ -15,10 +15,22 @@
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
-    <tags>bcurran3 dependency win10</tags>	
-    <summary></summary>
+    <tags>bcurran3 dependency osdependency win10</tags>	
+    <summary>Package Dependency on Windows 10 creates a way for package maintainers to build in OS version as a dependency.</summary>
     <description>
+**Package Dependency on Windows 10** is a Chocolatey package for use as a dependency by package maintainers/creators. It is similar in concept to **[Chocolatey Fast Answers Extension](https://chocolatey.org/packages/chocolatey-fastanswers.extension)** to provide a (proposed) standard way for dealing with packages/programs that are OS version specific. This package will purposely fail (throw) when Windows 10 is not found or an equal to or greater than version you specify.
 
+Other OS specific dependencies can be found [here](https://chocolatey.org/packages?q=tag%3Aosdependency).
+
+###EXAMPLE USE FOR MAINTAINERS/PACKAGERS:
+
+![Examples](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/dependency-windows10/dependency-windows10/dependency-windows10_examples.png)
+
+Look at [Version History](https://chocolatey.org/packages/dependency-windows10#versionhistory) for the builds you can specify as a minimum requirement for your package.
+
+###NOTE TO CHOCOLATEY MODERATORS:
+
+Seeing **dependency-windows10** listed as dependency on any package indicates the package has a requirement of Windows 10. The package will fail automated testing because of this and require an exemption.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dependency-windows10/readme.md)**
 
