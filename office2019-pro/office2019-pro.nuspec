@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>office2019-pro</id>
-    <version>2019.0</version>	
+    <version>2019.0-pre</version>	
     <owners>bcurran3</owners>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/office2019-pro</packageSourceUrl>	
     <title>Microsoft Office 2019 Pro</title>
@@ -14,16 +14,34 @@
     <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <tags>microsoft office 2019</tags>
-    <summary></summary>
+    <summary>Microsoft Office 2019 is the on-premises version of Word, Excel, PowerPoint, Outlook, Project, Visio, Access, and Publisher.</summary>
     <description>
-![Screenshot of ]()
+# This PACKAGE is pre-release. It is NOT fully automated. It will need user interaction to close the installer. I will finish it up as soon as I can.
+
+# Version 1808 (build 10730.20102 Click-to-Run)
+	
+![Screenshot of ](https://upload.wikimedia.org/wikipedia/en/thumb/7/77/Microsoft_Office_2019.png/300px-Microsoft_Office_2019.png)
 
 ##Get things done with Office 2019
 
 For customers who aren’t ready for the cloud, Office 2019 is the next on-premises version of Word, Excel, PowerPoint, Outlook, Project, Visio, Access, and Publisher.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/office2019-pro/readme.md)**
+From [Wikipedia](https://en.wikipedia.org/wiki/Microsoft_Office_2019#New_features)
+###New features
+
+Fluent and Office Online-inspired "Home" screens in Word, Excel, and PowerPoint.
+Office 2019 includes many of the features previously published via Office 365, along with improved inking features, new animation features in PowerPoint including the morph and zoom features, and new formulae and charts in Excel for data analysis. Office 2019 for Windows requires Windows 10, Windows Server 2016 or macOS Sierra. OneNote is absent from the suite as the UWP version of OneNote bundled with Windows 10 replaces it. OneNote 2016 can be installed as an optional feature on the Office Installer. For Mac users, Focus Mode will be brought to Word, 2D maps will be brought to Excel and new Morph transitions, SVG support and 4K video exports will be coming to PowerPoint, amidst other features.
+
+Office 2019 will receive 5 years of mainstream support, but will only get two years of extended support."
+
+# You have five days from install to enter your product key or most features will be disabled.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/office2019-homeandstudent/readme.md)**
     </description>
+	<releaseNotes>https://support.microsoft.com/en-us/help/4133312/office-2019-commercial-for-windows-and-mac-frequently-asked-questions</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
