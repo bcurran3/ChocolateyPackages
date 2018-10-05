@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hdhomerun-view</id>
-    <version>2018.08.17</version>
+    <version>2018.09.21</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdhomerun-view</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>HDHomeRun View (Install)</title>

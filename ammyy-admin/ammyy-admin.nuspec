@@ -4,7 +4,7 @@
   <metadata>
     <id>ammyy-admin</id>
     <title>Ammyy Admin (Portable)</title>
-    <version>3.7.0.0</version>
+    <version>3.7.0.020181004</version>
     <authors>Ammyy</authors>
     <owners>bcurran3</owners>
     <summary>Zero-Config Remote Desktop Software Ammyy Admin. The easiest way to establish remote desktop connection.</summary>
@@ -48,6 +48,9 @@ With Ammyy Admin it's easy to arrange on-line presentations or hold virtual clas
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.ammyy.com/img/en/graphics/desktop_sharing_Ammyy_Admin_logo.gif</iconUrl>
     <releaseNotes>http://www.ammyy.com/en/press.html</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
