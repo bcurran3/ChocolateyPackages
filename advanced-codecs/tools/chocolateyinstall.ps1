@@ -1,44 +1,22 @@
-﻿#http://www.majorgeeks.com/mg/getmirror/win7codecs,1.html
+﻿# https://www.majorgeeks.com/files/details/win7codecs.html
+$ErrorActionPreference = 'Stop';
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$packageName    = 'advanced-codecs' 
-$url            = "$toolsDir\ADVANCED_Codecs_v1004.exe"
-$checksum       = '308BB77A82FB724E8137D7E222366A00C61EEA2166252AB59F562C4CB0069C84'
-$installerType  = 'EXE'
-$silentArgs     = '/S /v/qn'
-$validExitCodes = @(0, 3010, 1641)
-$softwareName   = 'Shark007 ADVANCED Codecs*'
+$url            = "$toolsDir\ADVANCED_Codecs_v1062.exe"
 $ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "ACinstall.ahk"
-
-Start-Process $ahkExe $ahkFile
+$ahkFile        = "$toolsDir\advanced-codecs_install.ahk"
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = $installerType
-  url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
-  checksum      = $checksum
-  checksumType  = 'sha256' 
-}
-
-Install-ChocolateyPackage @packageArgs  
-
-Start-Sleep -s 20
-
-if((get-process "Settings32" -ea SilentlyContinue) -eq $Null){ 
-    Write-Host "Settings32 currently NOT running." 
-  }else{ 
-    Write-Host "Stopping Settings32 process..."
-    Stop-Process -processname "Settings32" -force
+  packageName    = 'advanced-codecs'
+  softwareName   = 'Shark007 ADVANCED Codecs*'
+  fileType       = 'EXE'
+  silentArgs     = '/S /v/qn'
+  file           = $url
+  validExitCodes = @(0, 3010, 1641)
   }
- 
-if((get-process "Settings64" -ea SilentlyContinue) -eq $Null){ 
-    Write-Host "Settings64 currently NOT running." 
-  }else{ 
-    Write-Host "Stopping Settings64 process..."
-    Stop-Process -processname "Settings64" -force
-  }
-
+Start-Process $ahkExe $ahkFile  
+Install-ChocolateyInstallPackage @packageArgs
+Start-Sleep -s 10
+Start-CheckandStop "Settings32"
+Start-CheckandStop "Settings64"
+Start-CheckandStop "AutoHotkey"
 Remove-Item $url
