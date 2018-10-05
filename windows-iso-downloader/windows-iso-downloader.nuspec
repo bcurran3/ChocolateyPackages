@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-iso-downloader</id>
-    <version>7.00</version>
+    <version>7.10</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-iso-downloader</packageSourceUrl>
     <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>

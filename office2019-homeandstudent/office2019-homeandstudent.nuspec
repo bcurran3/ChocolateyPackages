@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>office2019-homeandstudent</id>
+    <version>2019.0</version>	
+    <owners>bcurran3</owners>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/office2019-homeandstudent</packageSourceUrl>	
+    <title>Microsoft Office 2019 Home and Student</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://products.office.com/en-us/get-started-with-office-2019#compare_table</projectUrl>	
+    <iconUrl>http://www.softwaremedia.com/media/catalog/product/cache/1/image/370x/db978388cfd007780066eaab38556cef/o/f/office_2019.png</iconUrl>	
+    <copyright>© Microsoft</copyright>	
+    <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
+    <tags>microsoft office 2019</tags>
+    <summary></summary>
+    <description>
+![Screenshot of ]()
+
+##Get things done with Office 2019
+
+For customers who aren’t ready for the cloud, Office 2019 is the next on-premises version of Word, Excel, PowerPoint, Outlook, Project, Visio, Access, and Publisher.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/office2019-homeandstudent/readme.md)**
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
