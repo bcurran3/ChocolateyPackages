@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>realtek-hd-audio-driver</id>
-    <version>2.82.0020180722</version>
+    <version>2.82.0020181008</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/realtek-hd-audio-driver</packageSourceUrl>
     <title>Realtek High Definition Audio System Software (Install)</title>
@@ -13,7 +13,7 @@
     <copyright>© Realtek Semiconductor Corp. All rights reserved.</copyright>
 	<docsUrl>http://download.wpc.azureedge.net/8012244/drivers/rtdrivers/pc/audio/0008-R282_Readme.pdf</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>realtek audio drivers codecs</tags>
+    <tags>realtek hd audio drivers codecs</tags>
     <summary>Realtek High Definition Audio Codecs</summary>
     <description>
 Realtek Semiconductor Corp. High Definition Audio System Software Ver: R2.82
