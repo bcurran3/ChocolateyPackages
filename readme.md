@@ -28,3 +28,6 @@ If applicable, please always consider donating or purchasing the software you in
 * Smart Home/Multimedia/Server: Hue, Plex, Insteon, Nest, Squeezebox, TiVo, WeMo, syncing software, etc.
 * Anything Android related on Windows.
 
+I also believe that the Chocolatey community repository needs:
+* more GAMES!
+* more kids educational software!

@@ -2,12 +2,8 @@
 $packageName    = 'winaero-tweaker' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://winaero.com/e107_files/downloads/winaerotweaker.zip'
-$checksum       = '56BD7D85DF2332A6EE247456E736DBE767263C3F180FD659CDD6AC4570D47C86'
-$checksumType   = 'sha256'
-$UnzippedEXE    = Join-Path $toolsDir 'WinaeroTweaker-0.10.1.0-setup.exe'
-$installerType  = 'EXE'
-$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$validExitCodes = @(0)
+$checksum       = 'AB7BF4A818D6144907B6B762478CCB6CC8A509CE040A4E27EBC727DF0F0ECFEC'
+$UnzippedEXE    = "$toolsDir\WinaeroTweaker-$env:packageVersion-setup.exe"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -15,7 +11,7 @@ $packageArgs = @{
   fileType      = 'ZIP' 
   url           = $url
   checksum      = $checksum
-  checksumType  = $checksumType
+  checksumType  = 'sha256'
     Options = @{
     Headers = @{
       referer = "http://winaero.com/download.php?view.1796"
@@ -29,8 +25,8 @@ $packageArgs = @{
   packageName   = $packageName
   fileType      = 'exe'
   file          = $UnzippedEXE
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  validExitCodes= @(0)
   softwareName  = 'Winaero Tweaker'
 }
 
