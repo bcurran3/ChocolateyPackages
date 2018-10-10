@@ -19,14 +19,10 @@ $packageArgs = @{
   checksumType  = 'sha256' 
 }
 
+Start-CheckandStop "ellp_service"
+
 Install-ChocolateyPackage @packageArgs
 
 Start-Sleep -s 10
-
-if((get-process "ellp" -ea SilentlyContinue) -eq $Null){ 
-    Write-Host "Ellp currently NOT running." 
-  }else{ 
-    Write-Host "Stopping Ellp process..."
-    Stop-Process -processname "ellp" -force
-  }
- 
+if ($ProcessWasRunning -eq "True") {$ProcessFullPath}
+Start-CheckandStop "ellp"

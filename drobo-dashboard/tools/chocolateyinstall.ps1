@@ -1,21 +1,27 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'drobo-dashboard' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.2.0.exe'
-$checksum    = '5ECAC655CB6D5029F596F3C12C52184EEFBECDC80D0F7CC3E324748FBBDB35F6'
+$PreviouslyInstalled = (Test-Path "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{863885B3-7C05-421C-8817-568712778745}")
 $ahkExe      = 'AutoHotKey'
-$ahkFile     = Join-Path $toolsDir "DDinstall.ahk"
+$url         = 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.3.0.exe'
+$checksum    = 'A858A0EF5CB7731AF31954E6B04BCB3C237A74C3C469DEE7A69D8E9C35836489'
 
-$Installed = (Test-Path "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{863885B3-7C05-421C-8817-568712778745}")
-If ($Installed -eq "True")
-    {
-	Write-Host Found previous version of Drobo Dashboard. -ForegroundColor red -BackgroundColor blue
-	Write-Host Attempting to uninstall it... -ForegroundColor red -BackgroundColor blue
-	Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {863885B3-7C05-421C-8817-568712778745} /qn"
-	Start-Sleep -s 10
+If ($PreviouslyInstalled -eq $True){
+	Write-Host " ** Uninstalling previous version of Drobo Dashboard" -ForegroundColor magenta
+	Start-CheckandStop "DDAssist"
+	Start-CheckandStop "Drobo Dashboard"
+
+    $packageArgs = @{
+      packageName   = $packageName
+      fileType      = 'MSI' 
+      silentArgs    = '{863885B3-7C05-421C-8817-568712778745}'
+      softwareName  = 'Drobo Dashboard' 
     }
 
-Start-Process $ahkExe $ahkFile
+    $ahkFile = "$toolsDir\drobo-dashboard_uninstall.ahk" 
+    Start-Process $ahkExe $ahkFile 
+    Uninstall-ChocolateyPackage @packageArgs
+}
 
 $packageArgs = @{
   packageName   = $packageName
@@ -28,4 +34,10 @@ $packageArgs = @{
   softwareName  = 'Drobo Dashboard' 
   }
 
+$ahkFile = "$toolsDir\drobo-dashboard_install.ahk"
+Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
+
+If ($PreviouslyInstalled -eq $True){
+   if ($ProcessWasRunning -eq "True") {&"$ProcessFullPath"}
+   }
