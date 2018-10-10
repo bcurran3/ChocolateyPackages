@@ -1,19 +1,17 @@
 ﻿$packageName   = 'backupper-standard'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$installerType = 'exe'
 $url           = 'http://www.aomeisoftware.com/download/adb/BackupperFull.exe'
-$checksum      = '885E44F9B213784BE3C4A5E0A9523218D539CE8E332D936CFC3E36575C6349A0'
-$silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+$checksum      = '128FF651DD28C69D06FDDBAD1F8F476B8603FE7435833ACE2ADDB17A46B08DA6'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = $installerType
+  fileType      = 'EXE'
   url           = $url
-  silentArgs    = $silentArgs
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   softwareName  = 'AOMEI Backupper Standard*' 
   checksum      = $checksum 
   checksumType  = 'sha256'  
   }
-Install-ChocolateyPackage @packageArgs
 
+Install-ChocolateyPackage @packageArgs

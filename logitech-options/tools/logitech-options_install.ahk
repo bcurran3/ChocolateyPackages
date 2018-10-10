@@ -8,6 +8,7 @@ SetTitleMatchMode, fast
 WinWait, LogiOptions Installer,, 300
 while WinExist("LogiOptions Installer")
    {
+    WinActivate
     Send {Enter}
 	Sleep 2000
    }

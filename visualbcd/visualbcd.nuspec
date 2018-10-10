@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>visualbcd</id>
-    <version>0.9.3.1</version>
+    <version>0.9.3.1020181009</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/visualbcd</packageSourceUrl>		
     <title>Visual BCD (Install)</title>
@@ -45,6 +45,10 @@ New in version 0.9.3 of the tool is handling of [Custom Bootstrap Actions - boot
 Recommendation: Please read at least [Visual BCD - implementation notes and short introduction to BCD objects and elements](https://www.boyans.net/VisualBCD_doc.htm) if you don't have some BCD knowledge before manipulating BCD! There is a reason Microsoft made BCD accessible only with administrative rights. Be careful when manipulating BCD and have always an accessible BCD backup and recovery media ready! Everybody makes mistakes ;) - mistakes against BCD could make your system unbootable!
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/visualbcd/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://www.boyans.net/ChangeLog.rtf</releaseNotes>
   </metadata>
