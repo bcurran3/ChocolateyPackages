@@ -1,0 +1,5 @@
+<Configuration>
+ <RemoveMSI All="True" />
+ <Display Level="None" AcceptEULA="TRUE" />  
+ <Property Name="FORCEAPPSHUTDOWN" Value="True" />
+</Configuration>

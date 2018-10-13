@@ -1,6 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'office2019-pro' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$ahkExe   = 'AutoHotKey'
+$ahkFile  = "$toolsDir\office2019_install.ahk"
 $url          = 'https://officecdn.microsoft.com/db/492350F6-3A01-4F97-B9C0-C7C6DDF67D60/media/en-US/Professional2019Retail.img'
 $checksum     = '57BE67FFC089F54846F12404731778906248DF6486BD1901F5115C4FC8A626D9'
 $FileFullpath = "$ToolsDir\Professional2019Retail.img"
@@ -35,8 +37,13 @@ $packageArgs = @{
   softwareName  = 'Microsoft Office 2019*'
 }
 
+Start-Process $ahkExe $ahkFile
 Install-ChocolateyInstallPackage @packageArgs
 
-# I still need to check for the installation to finish (AHK) and wait before running the following:
+# Probably need a while loop for OfficeC2RClient.exe or autohotkey
 #Dismount-DiskImage -ImagePath $iso
 #Remote-Item $FileFullPath -Force | Out-Null
+
+# NOTES:
+# https://techhelpday.com/microsoft-office-2019/
+#
