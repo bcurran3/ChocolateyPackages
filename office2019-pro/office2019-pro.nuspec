@@ -40,6 +40,7 @@ Office 2019 will receive 5 years of mainstream support, but will only get two ye
     </description>
 	<releaseNotes>https://support.microsoft.com/en-us/help/4133312/office-2019-commercial-for-windows-and-mac-frequently-asked-questions</releaseNotes>
     <dependencies>
+      <dependency id="autohotkey" />	
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
     </dependencies>		
   </metadata>
