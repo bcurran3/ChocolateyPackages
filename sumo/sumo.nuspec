@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.8.2.404</version>
+    <version>5.8.3.405</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
@@ -45,4 +45,7 @@ SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the 
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>
