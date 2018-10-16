@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>taglib-sharp</id>
+    <title>TagLib# (DLL)</title>
+    <version>2.1.0</version>
+    <authors>Brian Nickel, Gabriel Burt, Alan McGovern, Alexander Kojevnikov, Guy Taylor</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taglib-sharp</packageSourceUrl>
+    <projectUrl>https://github.com/mono/taglib-sharp</projectUrl>
+	<projectSourceUrl>https://github.com/mono/taglib-sharp</projectSourceUrl>
+	<iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/dll_icon.png</iconUrl>
+	<bugTrackerUrl>https://github.com/mono/taglib-sharp/issues</bugTrackerUrl>
+    <licenseUrl>https://github.com/mono/taglib-sharp/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>taglib taglibsharp taglib-sharp multimedia dll binary oss cross-platform</tags>	
+    <summary>TagLib# is a library for reading and writing metadata in media files</summary>
+    <description>
+##TagLib# (aka taglib-sharp) is a library for reading and writing metadata in media files, including video, audio, and photo formats.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/taglib-sharp/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <releaseNotes>https://github.com/mono/taglib-sharp/blob/master/README.md</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
