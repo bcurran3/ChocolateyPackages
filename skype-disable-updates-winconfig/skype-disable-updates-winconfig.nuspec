@@ -6,6 +6,7 @@
     <version>0.0.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disable-skype-updates-winconfig</packageSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>		
     <title>Disable Skype Updates (Config)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disable-skype-updates-winconfig</projectUrl>
@@ -30,6 +31,9 @@ REF: https://answers.microsoft.com/en-us/skype/forum/skype_windesk-skype_startms
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
+    <dependencies>
+      <dependency id="skype" version="8.0" />
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
