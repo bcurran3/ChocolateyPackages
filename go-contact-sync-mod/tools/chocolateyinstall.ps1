@@ -1,18 +1,15 @@
-﻿$packageName= 'go-contact-sync-mod'
-$installerType = 'msi'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://kent.dl.sourceforge.net/project/googlesyncmod/Releases/3.10.14/SetupGCSM-3.10.14.msi' 
-$checksum   = '91C8B087A8AECDAA22101998326958D4AE4DC017A6DADD08155C5D5D0417F970'
-$silentArgs = '/quiet /qn /norestart'
-$validExitCodes= @(0, 3010, 1641)
+﻿$packageName = 'go-contact-sync-mod'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = 'https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.18/SetupGCSM-3.10.18.msi' 
+$checksum    = '2599FF78088EAD5182F99C20E34BE210A1962D862258C32CFE4566E811AB2117'
 
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = $installerType 
+  fileType      = 'msi'
   url           = $url
-  silentArgs    = $silentArgs
+  silentArgs    = '/quiet /qn /norestart'
   softwareName  = 'Go Contact Sync Mod*' 
   checksum      = $checksum
   checksumType  = 'sha256'  
