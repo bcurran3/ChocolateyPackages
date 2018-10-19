@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wsl-archlinux</id>
+    <version>1.0.3.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-archlinux</packageSourceUrl>
+	<projectUrl>https://github.com/bilguun0203/WSL-ArchLinux</projectUrl>	
+    <title>Arch Linux for Windows Subsystem for Linux (Install)</title>
+    <authors>Aaron Griffin, Allan McRae, Anatol Pomozov,Andreas Radke, Andrew Gregory, Antonio Rojas, Bartłomiej Piotrowski, Christian Hesse, Dan McGee, Dave Reisner, Evangelos Foutras, Felix Yan, Florian Pritz, Gaetan Bisson, Gerardo Pozzi, Giancarlo Razzolini, Giovanni Scafora, Guillaume Alaux, Ionuț Mircea Bîru, Jan de Groot, Jan Steffens, Jelle van der Waa, Johannes Löthberg, Jürgen Hötzel, Laurent Carlier, Levente Polyak, Lukas Fleischer, Maxime Gauduin, Pierre Schmitz, Ray Rashif, Rémy Oudompheng, Ronald van Haren, Sébastien Luttringer, Sven-Hendrik Haase, Thomas Bächler, Tobias Powalowski</authors>
+    <iconUrl>https://www.archlinux.org/static/logos/archlinux-logo-dark-90dpi.ebdee92a15b3.png</iconUrl>
+    <copyright>Copyright © Judd Vinet and Aaron Griffin.</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/yuk7/ArchWSL/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
+	<bugTrackerUrl>https://github.com/bilguun0203/WSL-ArchLinux/issues</bugTrackerUrl>
+    <tags>wsl arch linux</tags>
+    <summary>This packages installs Arch Linux for Windows Subsystem for Linux.</summary>
+    <description>
+###This packages installs Arch Linux for Windows Subsystem for Linux.
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-archlinux/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="wsl" version="1.0.1" />
+    </dependencies>		
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

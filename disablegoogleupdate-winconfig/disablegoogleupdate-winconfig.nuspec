@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>disablegoogleupdate-winconfig</id>
-    <version>0.0.1</version>
+    <version>0.0.1.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disablegoogleupdate-winconfig</packageSourceUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>		
