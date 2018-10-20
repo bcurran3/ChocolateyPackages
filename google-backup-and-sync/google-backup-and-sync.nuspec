@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <version>3.42.9747.1898</version>
+    <version>3.42.9858.3671</version>
     <id>google-backup-and-sync</id>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-backup-and-sync</packageSourceUrl>
@@ -22,11 +22,12 @@ You probably keep your most important files and photos in different places—you
 Backup and Sync is an app for Mac and PC that backs up files and photos safely in Google Drive and Google Photos, so they're no longer trapped on your computer and other devices. Just choose the folders you want to back up, and we’ll take care of the rest.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-backup-and-sync/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
 	<releaseNotes>https://support.google.com/a/answer/7573023</releaseNotes>
-    <dependencies>
-      <dependency id="autohotkey" />
-    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

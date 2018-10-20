@@ -1,22 +1,19 @@
-﻿#http://www.allware.com.mx/Doc.aspx?D=177&dn=AllWemo_2_14_setup.zip
-#NOTE: Installed software reports v2.13 in Control Panel, not v2.14
+﻿# https://ea.im/Doc.aspx?D=206&dn=AllWemoSetup_6_71.zip
 $packageName    = 'allwemo'
-$installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\AllWemo.msi" 
-$checksum       = '466FC0B3474E978B6C515C9A44F30DCC627D25FE0E5799AE12B84B70CDDCA2F2'
-$silentArgs     = '/quiet /qn /norestart'
-$validExitCodes = @(0, 3010, 1641)
+$url            = "$toolsDir\AllWemoSetup.msi" 
+$checksum       = '1A923962B66B544EE7B602CB063BCE9F97C12C29C25FEF1424F2737AF855ED68'
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = $installerType
-  url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = 'AllWemo*'
-  checksum      = $checksum
-  checksumType  = 'sha256' 
+  packageName    = $packageName
+  fileType       = 'MSI'
+  url            = $url
+  validExitCodes = @(0, 3010, 1641)
+  silentArgs     = '/quiet /qn /norestart'
+  softwareName   = 'AllWemo*'
+  checksum       = $checksum
+  checksumType   = 'sha256' 
 }
 
-Install-ChocolateyPackage @packageArgs  
+Install-ChocolateyPackage @packageArgs
+Remove-Item $url
