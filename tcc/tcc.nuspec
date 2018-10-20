@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tcc</id>
-    <version>23.0.29.0</version>
+    <version>23.0.31.0</version>
     <title>Total Command Console (trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>

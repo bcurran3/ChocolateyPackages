@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>23.0.30.0</version>
+    <version>23.0.31.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>

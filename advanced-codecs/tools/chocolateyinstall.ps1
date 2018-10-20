@@ -1,7 +1,7 @@
 ﻿# https://www.majorgeeks.com/files/details/win7codecs.html
 $ErrorActionPreference = 'Stop';
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\ADVANCED_Codecs_v1062.exe"
+$url            = "$toolsDir\ADVANCED_Codecs_v1067.exe"
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\advanced-codecs_install.ahk"
 
