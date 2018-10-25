@@ -9,7 +9,7 @@
     <title>AllWemo (Install)</title>
     <authors>Enrique Alonso</authors>
     <projectUrl>https://ea.im/p/?r=AllWemo</projectUrl>
-    <iconUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/allwemo/AllWemo_icon.png</iconUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/allwemo/AllWemo_screenshot.png</iconUrl>	
     <copyright>Enrique Alonso (R)</copyright>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
