@@ -7,21 +7,21 @@
     <version></version>
     <authors></authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
+    <iconUrl></iconUrl>	
+    <projectUrl></projectUrl>
+    <docsUrl></docsUrl>
+    <mailingListUrl></mailingListUrl>	
+    <copyright></copyright>
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags></tags>	
     <summary></summary>
     <description>
 ![Screenshot of ]()	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master//readme.md)**
     </description>
-    <projectUrl></projectUrl>
-    <docsUrl></docsUrl>
-    <mailingListUrl></mailingListUrl>
-    <tags> admin</tags>
-    <copyright></copyright>
-    <licenseUrl></licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl></iconUrl>
     <releaseNotes></releaseNotes>
       </metadata>
   <files>
