@@ -9,7 +9,7 @@
     <title>AllWemo (Install)</title>
     <authors>Enrique Alonso</authors>
     <projectUrl>https://ea.im/p/?r=AllWemo</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/allwemo/AllWemo_screenshot.png</iconUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/allwemo/allwemo_icon.png</iconUrl>
     <copyright>Enrique Alonso (R)</copyright>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,7 +17,7 @@
     <tags>allware allwemo wemo smarthome home automation</tags>
     <summary>AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).</summary>
     <description>
-![Screenshot of AllWemo](https://github.com/bcurran3/ChocolateyPackages/blob/master/allwemo/AllWemo_screenshot.png)
+![Screenshot of AllWemo](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/allwemo/allwemo_screenshot.png)
 
 ##WEMO FOR PC
 
