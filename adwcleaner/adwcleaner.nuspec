@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>adwcleaner</id>
+    <version>7.2.4.0</version>
+    <title>AdwCleaner (Portable)</title>
+    <authors>Malwarebytes</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/Akipe/chocolatey-packages/tree/master/automatic/adwcleaner/</packageSourceUrl>	
+    <licenseUrl>https://www.malwarebytes.com/adwcleaner/eula/</licenseUrl>
+    <projectUrl>https://toolslib.net/downloads/viewdownload/1-adwcleaner/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/Akipe/chocolatey-packages/ddac375b/icons/adwcleaner/adwcleaner.png</iconUrl>
+    <docsUrl>https://toolslib.net/downloads/viewdownload/1-adwcleaner/pages/5-en-adwcleaner-documentation/</docsUrl>
+    <bugTrackerUrl>https://toolslib.net/forum/viewcategory/1-adwcleaner/</bugTrackerUrl>	
+    <copyright>© Malwarebytes</copyright>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>malwarebytes adwcleaner unattended malware-scanner malware-remover toolbar-remover</tags>	
+    <summary>Anti-Adware/Toolbar/PUP/Hijacker search and delete tool</summary>	
+    <description>
+AdwCleaner is a free removal tool for :
+
+* Adware (ads software)
+* PUP/LPI (Potentially Undesirable Program)
+* Toolbars
+* Hijacker (Hijack of the browser's homepage)
+* Spyware
+
+It comes with both "Scan" and "Clean" mode. It can be easily uninstalled using the "Uninstall" button.
+
+Compatible with Windows 7, 8, 8.1, 10 in 32 &amp; 64 bits.	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/adwcleaner/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <releaseNotes>https://toolslib.net/downloads/viewdownload/1-adwcleaner/history/</releaseNotes>
+  </metadata>
+</package>
