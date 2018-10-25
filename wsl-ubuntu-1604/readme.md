@@ -4,6 +4,7 @@
 * This WSL distro does not support automated install, this package kludges that by waiting for it to finish unpacking its files and then killing the task when prompted to create a default user. Default user is root. Use adduser to create users.
 * There are a lot of comments about this in the ChocolateyInstall script. You can view them on the chocolatey.org package page.
 * I'm told installing via the Microsoft Store creates a Windows Start Menu icon, this package does not. Run from an elevated CLI.
+* This package unpacks the files to C:\ProgramData\chocolatey\lib\<wsl-distro>\tools\unzipped. Files in C:\ProgramData require admin privileges by default. If you want the ability to run under a non-admin account, change the file permissions.
 * If you encounter errors such as Error: 0x80070005 Press any key to continue... it usually means that WSL has lost track of the distro files (they might have moved or been deleted.) You should uninstall the package. If the package is missing you can list your installed distros with wslconfig /list, remove the distro with wslconfig /unregister distroname, then simply reinstall the package.
 * Future upgrades are a mystery. It's probably best to pin this package as an upgrade might wipe out your rootfs folder and anything you've saved or upgraded in there. Pin help here: https://github.com/chocolatey/choco/wiki/CommandsPin
 

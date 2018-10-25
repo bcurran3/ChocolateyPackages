@@ -3,6 +3,8 @@
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * To automated this package, it is installed with the install --root option thus skipping creating a new user. When you run WSL you will be logged in as root. To create a user use the adduser command.
 * Run from an elevated CLI.
+* This package unpacks the files to C:\ProgramData\chocolatey\lib\<wsl-distro>\tools\unzipped. Files in C:\ProgramData require admin privileges by default. If you want the ability to run under a non-admin account, change the file permissions.
+* This package unpacks the files to C:\ProgramData\chocolatey\lib\<wsl-distro>\tools\unzipped. Files in C:\ProgramData require admin privileges by default. If you want the ability to run under a non-admin account, change the file permissions.
 * If you encounter errors such as Error: 0x80070005 Press any key to continue... it usually means that WSL has lost track of the distro files (they might have moved or been deleted.) You should uninstall the package. If the package is missing you can list your installed distros with wslconfig /list, remove the distro with wslconfig /unregister distroname, then simply reinstall the package.
 * Future upgrades are a mystery. It's probably best to pin this package as an upgrade might wipe out your rootfs folder and anything you've saved or upgraded in there. Pin help here: https://github.com/chocolatey/choco/wiki/CommandsPin
 
