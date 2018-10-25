@@ -3,12 +3,12 @@ $packageName       = 'adwcleaner'
 $toolsDir          = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortcutName      = 'AdwCleaner.lnk'
 $portableEXE       = "adwcleaner_$env:packageVersion.exe"
-$urlBeforeDownload = 'https://toolslib.net/downloads/finish/1-adwcleaner/1388/';
+$urlBeforeDownload = 'https://download.toolslib.net/download/file/1/1735';
 $regexDownloadLink = '^https://download.toolslib.net/download/file/';
 $SourcePageBeforeDownload = Invoke-WebRequest -Uri $urlBeforeDownload -UseBasicParsing;
 $htmlLink          = $SourcePageBeforeDownload.Links | Where-Object href -match $regexDownloadLink;
 $url               = $htmlLink.href;
-$checksum          = 'C9CFB0A07961616D5C4779E8A187D2EAB91D4310166C07F5063F1DC13D9FF5BA'
+$checksum          = '55B7ACEB5ED0407B1D83CD07C448B65366576315A69D8842B9361B2A14240FC6'
 
 $packageArgs = @{
   packageName   = $packageName
