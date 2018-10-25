@@ -6,10 +6,10 @@
     <title>AdwCleaner (Portable)</title>
     <authors>Malwarebytes</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/Akipe/chocolatey-packages/tree/master/automatic/adwcleaner/</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adwcleaner</packageSourceUrl>	
     <licenseUrl>https://www.malwarebytes.com/adwcleaner/eula/</licenseUrl>
     <projectUrl>https://toolslib.net/downloads/viewdownload/1-adwcleaner/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/Akipe/chocolatey-packages/ddac375b/icons/adwcleaner/adwcleaner.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/adwcleaner/adwcleaner_icon.png</iconUrl>
     <docsUrl>https://toolslib.net/downloads/viewdownload/1-adwcleaner/pages/5-en-adwcleaner-documentation/</docsUrl>
     <bugTrackerUrl>https://toolslib.net/forum/viewcategory/1-adwcleaner/</bugTrackerUrl>	
     <copyright>© Malwarebytes</copyright>	
@@ -17,6 +17,7 @@
     <tags>malwarebytes adwcleaner unattended malware-scanner malware-remover toolbar-remover</tags>	
     <summary>Anti-Adware/Toolbar/PUP/Hijacker search and delete tool</summary>	
     <description>
+![AdwCleaner screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/adwcleaner/adwcleaner_screenshot.png)	
 AdwCleaner is a free removal tool for :
 
 * Adware (ads software)
