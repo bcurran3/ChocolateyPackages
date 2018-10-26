@@ -1,14 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName       = 'adwcleaner' 
 $toolsDir          = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url               = 'https://downloads.malwarebytes.com/file/adwcleaner'
+$checksum          = '55B7ACEB5ED0407B1D83CD07C448B65366576315A69D8842B9361B2A14240FC6'
 $shortcutName      = 'AdwCleaner.lnk'
 $portableEXE       = "adwcleaner_$env:packageVersion.exe"
-$urlBeforeDownload = 'https://download.toolslib.net/download/file/1/1735';
-$regexDownloadLink = '^https://download.toolslib.net/download/file/';
-$SourcePageBeforeDownload = Invoke-WebRequest -Uri $urlBeforeDownload -UseBasicParsing;
-$htmlLink          = $SourcePageBeforeDownload.Links | Where-Object href -match $regexDownloadLink;
-$url               = $htmlLink.href;
-$checksum          = '55B7ACEB5ED0407B1D83CD07C448B65366576315A69D8842B9361B2A14240FC6'
 
 $packageArgs = @{
   packageName   = $packageName

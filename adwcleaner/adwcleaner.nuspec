@@ -8,7 +8,7 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adwcleaner</packageSourceUrl>	
     <licenseUrl>https://www.malwarebytes.com/adwcleaner/eula/</licenseUrl>
-    <projectUrl>https://toolslib.net/downloads/viewdownload/1-adwcleaner/</projectUrl>
+    <projectUrl>https://www.malwarebytes.com/adwcleaner/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/adwcleaner/adwcleaner_icon.png</iconUrl>
     <docsUrl>https://toolslib.net/downloads/viewdownload/1-adwcleaner/pages/5-en-adwcleaner-documentation/</docsUrl>
     <bugTrackerUrl>https://toolslib.net/forum/viewcategory/1-adwcleaner/</bugTrackerUrl>	
@@ -18,17 +18,28 @@
     <summary>Anti-Adware/Toolbar/PUP/Hijacker search and delete tool</summary>	
     <description>
 ![AdwCleaner screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/adwcleaner/adwcleaner_screenshot.png)	
-AdwCleaner is a free removal tool for :
 
-* Adware (ads software)
-* PUP/LPI (Potentially Undesirable Program)
-* Toolbars
-* Hijacker (Hijack of the browser's homepage)
-* Spyware
+##Fast results. Powerful cleaning.
 
-It comes with both "Scan" and "Clean" mode. It can be easily uninstalled using the "Uninstall" button.
+Computer running slow? Strange messages popping up? Browser homepage changed without your permission? This could be the work of adware (and its friends), a sneaky variant of malware that is hard to find, and harder to remove. Malwarebytes AdwCleaner employs innovative technology engineered solely to detect and remove these unwanted hitchhikers. It’s the cleaner of choice for home users and technicians.
 
-Compatible with Windows 7, 8, 8.1, 10 in 32 &amp; 64 bits.	
+##What it does for you
+
+###Removes adware and unwanted programs	
+
+Aggressively targets adware, spyware, potentially unwanted programs (PUPs), and browser hijackers with technology specially engineered to remove these threats.
+
+###Crushes annoying toolbars
+
+Removes unwanted browser toolbars, which are often bundled in with other downloaded software, enabling you to take control of your browsing experience again.
+
+###Scans fast, faster, fastest
+
+Scans your computer in seconds. Clean your computer in less time than it takes to make a cup of coffee.
+
+###Installs…nothing
+
+Doesn’t use much memory or processor power, and there’s nothing to install. Just download, launch, and click to scan. It’s that simple.	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/adwcleaner/readme.md)**
 
