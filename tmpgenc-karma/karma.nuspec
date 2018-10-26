@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tmpgenc-karma</id>
+    <title>TMPGEnc KARMA.. (Install)</title>
+    <version>0.0.7.72</version>
+    <authors>Pegasys Inc.</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tmpgenc-karma</packageSourceUrl>
+    <iconUrl>http://tmpgenc.pegasys-inc.com/en/images/logo.png</iconUrl>	
+    <projectUrl>http://tmpgenc.pegasys-inc.com/en/product/tmka.html</projectUrl>
+    <copyright>© Copyright (c) Pegasys Inc. , All Rights Reserved.</copyright>
+    <licenseUrl>http://tmpgenc.pegasys-inc.com/en/download/tmka_license.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags></tags>	
+    <summary>pegasys tmpgenc karma multimedia video</summary>
+    <description>
+![Screenshot of TMPGEnc KARMA..](http://tmpgenc.pegasys-inc.com/en/images/tmka/karma_01.png)	
+
+##What is TMPGEnc KARMA..?
+
+Looking for a better way to find and organize all of the videos on your computer? TMPGEnc KARMA.. lets you easily scan folders and add videos, creating a library listing of them on your computer. Organize your videos easily by using the sorting options, and even create your own custom description tags. View your videos in any of the multiple preview screens, and use the included TileShot CREATOR tool to create images from your videos! Add some good karma to your life and download TMPGEnc KARMA.. today!
+
+##View Up To 4 Videos At Once
+
+View your video with the main TMPGEnc KARMA.. preview screen, or watch up to three more videos with the sub-preview screens! It's a great way to compare your clips!
+
+##Sync Play Feature
+
+You can load up to three videos in the sub-preview screens and use the Sync button to play or pause them all at the same time.
+
+##Resume Play Feature
+
+Start your video where you left off with the Resume Play feature. TMPGEnc KARMA.. automatically remembers where you stopped during video playback so the next time you select that video, it will play from that point.
+
+##Set Your Own Preview Thumbnail
+
+When you view your video library in thumbnail list mode, the preview thumbnails are automatically obtained from the first frame of your video. However, you can set your own preview thumbnail from any frame in the video by playing it in one of the sub-menus and right-clicking on the frame you'd like to use as the preview thumbnail.
+
+##Color Labels
+
+TMPGEnc KARMA.. lets you quickly color-code your videos with the Color Label buttons. Simply select your video(s) and click one of the color buttons to asign a color! You can then sort your videos by color to help you find the video you're looking for even faster!
+
+##Window Transparency
+
+Easily customize the opacity of the TMPGEnc KARMA.. window by using the slider in the upper right corner. Make your window fully opaque, fully transparent, or anything inbetween!
+
+##TMPGEnc TileShot CREATOR
+
+Create a tiled image composed of frames from your video with the included TMPGEnc TileShot CREATOR tool! It's a fast and easy way to create digital contact sheets from your video footage. You can even create an animated .gif image! Great for archiving purposes or used as a preview image on your website or blog!
+
+##More on [product page](http://tmpgenc.pegasys-inc.com/en/product/tmka.html).
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tmpgenc-karma/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

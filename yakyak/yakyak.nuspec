@@ -3,12 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yakyak</id>
-    <version>1.5.1</version>
+    <version>1.5.2</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/yakyak</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>YakYak (Portable)</title>
     <authors>Davide Bertola and Martin Algesten</authors>
     <projectUrl>https://github.com/yakyak/yakyak</projectUrl>
+	<iconUrl>https://raw.githubusercontent.com/yakyak/yakyak/master/src/icons/icon_256.png</iconUrl>
     <licenseUrl>https://github.com/yakyak/yakyak/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/yakyak/yakyak</projectSourceUrl>
@@ -36,6 +37,10 @@
 * Offer alternative color schemes
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/yakyak/readme.md)**	
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://github.com/yakyak/yakyak/releases</releaseNotes>
   </metadata>
