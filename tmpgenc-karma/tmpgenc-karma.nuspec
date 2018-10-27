@@ -8,7 +8,7 @@
     <authors>Pegasys Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tmpgenc-karma</packageSourceUrl>
-    <iconUrl>http://tmpgenc.pegasys-inc.com/en/images/logo.png</iconUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tmpgenc-karma/tmpgenc-karma_icon.png</iconUrl>	
     <projectUrl>http://tmpgenc.pegasys-inc.com/en/product/tmka.html</projectUrl>
     <copyright>© Copyright (c) Pegasys Inc. , All Rights Reserved.</copyright>
     <licenseUrl>http://tmpgenc.pegasys-inc.com/en/download/tmka_license.html</licenseUrl>
