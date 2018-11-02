@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winaero-tweaker</id>
-    <version>0.12.0.0</version>
+    <version>0.12.1.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winaero-tweaker</packageSourceUrl>
     <title>Winaero Tweaker (Install)</title>

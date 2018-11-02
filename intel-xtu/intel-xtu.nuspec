@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-xtu</id>
-    <version>6.4.1.23</version>
+    <version>6.4.1.25</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
@@ -29,11 +29,12 @@ Intel XTU is a simple Windows*-based performance-tuning software for novice and 
 See the release notes for installation instructions, supported hardware, what is new, bug fixes, and known issues.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-xtu/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 </description>
     <releaseNotes>https://downloadmirror.intel.com/24075/eng/XTU-6_4-MR-ReleaseNotes.pdf</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		
-    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,13 +1,13 @@
 ﻿$packageName = 'go-contact-sync-mod'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.18/SetupGCSM-3.10.18.msi' 
-$checksum    = '2599FF78088EAD5182F99C20E34BE210A1962D862258C32CFE4566E811AB2117'
+$url         = 'https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.19/SetupGCSM-3.10.19.msi' 
+$checksum    = 'D500E2BFA4CC4D83BE90F7649CD83E60D119076FB98BE5279B74E08AE3D033CC'
 
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'msi'
+  fileType      = 'MSI'
   url           = $url
   silentArgs    = '/quiet /qn /norestart'
   softwareName  = 'Go Contact Sync Mod*' 

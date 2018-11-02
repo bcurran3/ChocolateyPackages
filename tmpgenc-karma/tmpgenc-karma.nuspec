@@ -10,11 +10,12 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tmpgenc-karma</packageSourceUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tmpgenc-karma/tmpgenc-karma_icon.png</iconUrl>	
     <projectUrl>http://tmpgenc.pegasys-inc.com/en/product/tmka.html</projectUrl>
+	<mailingListUrl>https://www.tmpgenc.net/en/forum.html</mailingListUrl>
     <copyright>© Copyright (c) Pegasys Inc. , All Rights Reserved.</copyright>
     <licenseUrl>http://tmpgenc.pegasys-inc.com/en/download/tmka_license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags></tags>	
-    <summary>pegasys tmpgenc karma multimedia video</summary>
+    <tags>pegasys tmpgenc Convert Video Encode Authoring DVD/Blu-ray/AVCHD Creation Lossless Editing Commercial Detection Commercial Detection Plug-in Plug-in Smart Rendering Video Management PGMX Creation Slideshow Creation PGMX Player Premiere EDIUS HEVC Encoding With Menus Controller</tags>	
+    <summary>TMPGEnc KARMA... - A New Form of Video Management</summary>
     <description>
 ![Screenshot of TMPGEnc KARMA..](http://tmpgenc.pegasys-inc.com/en/images/tmka/karma_01.png)	
 
@@ -58,6 +59,7 @@ Create a tiled image composed of frames from your video with the included TMPGEn
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
+	<releaseNotes>http://tmpgenc.pegasys-inc.com/en/download/tmka_rireki.html</releaseNotes>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />
