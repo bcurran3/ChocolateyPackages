@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>performancetest</id>
-    <version>9.0.1025</version>
+    <version>9.0.1028</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/performancetest</packageSourceUrl>
     <title>PassMark PerformanceTest (Install)</title>
@@ -84,6 +84,10 @@ The application includes the following additional features:
 **Free 30 day evaluation, then US$27.00 to purchase.**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/performancetest/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://www.passmark.com/products/pt_history.htm</releaseNotes>
   </metadata>

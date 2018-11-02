@@ -3,9 +3,9 @@ $packageName    = 'qdir'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $url            = "$toolsDir\Q-Dir_Installer.zip"
-$checksum       = '1C399BC11B62C499A3163CF4D3E59E048FEF4DAD4097DAD4096F6E90987EDA92'
+$checksum       = '3E385FC169AE0BBADA193837843D2A9469611E60C60E43034806E72AE065DB71'
 $url64          = "$toolsDir\Q-Dir_Installer_x64.zip"
-$checksum64     = '3B8E861D7E319FF84F9EA7CFE00E10762A734EF3909A709DB2718B54BBA1D0F0'
+$checksum64     = '9B4C7F82A0168A4D9B6345A82FDEFDDB51AFD6F988EE699AED511879A0074C27'
 
 $packageArgs = @{
   packageName    = $packageName

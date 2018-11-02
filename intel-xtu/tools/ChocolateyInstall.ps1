@@ -1,22 +1,17 @@
 ﻿$packageName    = 'intel-xtu'
-$installerType  = 'exe'
-$url            = 'https://downloadmirror.intel.com/24075/eng/XTUSetup.exe'
-$checksum       = '8491A42D134FBAD37B50D2EFA928977435D0437B576F386549CF4B8DAFE82E93'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$silentArgs     = '/quiet /norestart'
-$validExitCodes = @(0)
-
+$url            = 'https://downloadmirror.intel.com/24075/eng/XTUSetup.exe'
+$checksum       = '236F39F4B4F8ED1C48C4A2C2CB72198933C65132A0FA4314ACD51BE4D5B08445'
 
 $packageArgs = @{
   packageName   = $packageName
-  fileType      = $installerType
+  fileType      = 'EXE'
   url           = $url
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
+  silentArgs    = '/quiet /norestart'
+  validExitCodes= @(0, 3010)
   softwareName  = 'Intel Extreme Tuning Utility'
   checksum      = $checksum
   checksumType  = 'sha256'
 }
-Show-Patreon "https://www.patreon.com/bcurran3"
+
 Install-ChocolateyPackage @packageArgs
-Show-ToastMessage "Home Assistant installed." "Version $env:packageVersion."

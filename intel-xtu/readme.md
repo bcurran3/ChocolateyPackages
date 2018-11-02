@@ -1,7 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* This package requires a reboot post install before uninstall.
+* This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
+* This package requires a reboot after installation before you can uninstall it.
 
 ***
 
