@@ -1,20 +1,16 @@
 ﻿$packageName    = 'performancetest'
-$installerType  = 'exe'
-$url            = 'https://www.passmark.com/ftp/petst.exe'
-$checksum       = 'BBFB366274ADC911AAD719E91F27CAB8310344C275A0E0BE2135DE08DD0E4413'
-$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0)
-$softwareName   = 'PerformanceTest*'
+$url            = 'https://www.passmark.com/ftp/petst.exe'
+$checksum       = 'E8C56CBC306A388A4E0E49DD03CD5276079B75E7B3A9EFA621E92FFEEBD849E2'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir  
-  fileType      = $installerType
+  fileType      = 'EXE'
   url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
+  validExitCodes= @(0)
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  softwareName  = 'PerformanceTest*'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }

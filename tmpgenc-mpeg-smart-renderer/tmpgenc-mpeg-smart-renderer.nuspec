@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tmpgenc-karma</id>
+    <title>TMPGEnc MPEG Smart Renderer (Install) (Trial)</title>
+    <version>5.0.17.23</version>
+    <authors>Pegasys Inc.</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tmpgenc-mpeg-smart-renderer</packageSourceUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tmpgenc-mpeg-smart-renderer_icon.png</iconUrl>	
+    <projectUrl>http://tmpgenc.pegasys-inc.com/en/product/tmsr5.html</projectUrl>
+	<mailingListUrl>https://www.tmpgenc.net/en/forum.html</mailingListUrl>	
+    <copyright>© Copyright (c) Pegasys Inc. , All Rights Reserved.</copyright>
+    <licenseUrl>http://tmpgenc.pegasys-inc.com/en/license/license_tmsr5.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pegasys tmpgenc Convert Video Encode Authoring DVD/Blu-ray/AVCHD Creation Lossless Editing Commercial Detection Commercial Detection Plug-in Plug-in Smart Rendering Video Management PGMX Creation Slideshow Creation PGMX Player Premiere EDIUS HEVC Encoding With Menus Controller</tags>	
+    <summary>Higher Speed and Smarter Performance. The Video Cutting Tool That Lets You Dig Deep Into Editing.</summary>
+    <description>
+![Screenshot of TMPGEnc MPEG Smart Renderer](http://tmpgenc.pegasys-inc.com/en/images/tmsr5/Edit_image.png)	
+
+##The De Facto Standard in Video Cutting Tools Now Supports H.265/HEVC Smart Rendering.
+
+TMPGEnc MPEG Smart Renderer 5 is a high-speed video cutting tool focusing on MPEG video file formats. The product is designed so that you can cut videos with great speed and detail, and also incorporates the "Smart Rendering" function which allows super-fast output with practically no loss in quality.
+
+In addition to MPEG-1/2 and H.264/AVC, this version newly supports H.265/HEVC - a new format for the 4K and 8K generation. With an aim on increased Smart Rendering support, this tool takes a "back to basics" approach, focusing on faster and smoother video editing. It not only reconsiders the internal processing but also pursues to optimize elements other than programming such as the seeking procedure, the cutting order and other functions. One new feature, the Production Tool, is developed for your advanced preparation for editing, which allows you to perform the Commercial Candidate Detector and Indexing for Seeking functions automatically. Also including a Blu-ray BDAV authoring function, this new product can grant amazingly high-speed, high quality cut-editing and outputting.
+
+##Native Support for 64-bit Architecture.
+
+This version is designed only for 64-bit architecture environments. Along with this enhancement, the application is capable of using an outstandingly large memory size. Therefore, editing operations that contain ultra HD editing, complex filtering, file importation, video rendering, clip copying, etc. become much easier and lighter to handle.
+*This application does not support 32-bit OS environments.
+
+##Usable for 30 days after initial startup. Full Version: $69.95
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tmpgenc-mpeg-smart-renderer/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <releaseNotes>http://tmpgenc.pegasys-inc.com/en/download/tmsr5_rireki.html</releaseNotes>	
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
