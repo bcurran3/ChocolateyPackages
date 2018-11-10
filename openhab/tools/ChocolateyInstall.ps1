@@ -27,16 +27,16 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-$packageArgs = @{
-  packageName   = $packageName
-  fileType      = ''
-  url           = $url2
-  FileFullPath  = $FileFullpath
-  checksum      = $checksum2
-  checksumType  = 'sha256'
-}
+# $packageArgs = @{
+#   packageName   = $packageName
+#   fileType      = ''
+#   url           = $url2
+#   FileFullPath  = $FileFullpath
+#   checksum      = $checksum2
+#   checksumType  = 'sha256'
+# }
 
-Get-ChocolateyWebFile @packageArgs
+# Get-ChocolateyWebFile @packageArgs
 
 New-Item "$toolsDir\openHAB" -type directory -force -ErrorAction SilentlyContinue
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\openHAB" -WorkingDirectory "$toolsDir\openHAB" -IconLocation "$toolsDir\openHAB.ico"
