@@ -1,3 +1,6 @@
+* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* If you want to install this program, you will find a setup program in the tools directory where this has been extracted. It does nothing more than copy the files to your Program Files directory and make the same icons. You will loose the ability to silently uninstall the program.
+
 ***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
