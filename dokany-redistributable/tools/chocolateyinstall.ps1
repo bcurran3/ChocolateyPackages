@@ -1,21 +1,17 @@
 ﻿$packageName    = 'dokany-redistributable'
-$installerType  = 'EXE'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.0.5/DokanSetup_redist-1.0.5.1000.exe'
-$checksum       = 'C5CCDFB76945D30EF3BC90CDD8017881864119D043923AD741FAD5901DB682F3'
-$silentArgs     = '/install /passive /norestart'
-$validExitCodes = @(0, 3010, 1641)
+$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.2.0.1000/DokanSetup_redist.exe'
+$checksum       = '29D180D9DCE272888D3943106C720EDADCA25AE9A839E1B0F25BF6FD50116AED'
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = $installerType
-  url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = 'Dokan Library*'
-  checksum      = $checksum
-  checksumType  = 'sha256' 
+  packageName    = $packageName
+  fileType       = 'EXE'
+  url            = $url
+  validExitCodes = @(0, 3010, 1641)
+  silentArgs     = '/install /passive /norestart'
+  softwareName   = 'Dokan Library*'
+  checksum       = $checksum
+  checksumType   = 'sha256' 
 }
 
 Install-ChocolateyPackage @packageArgs  
-  

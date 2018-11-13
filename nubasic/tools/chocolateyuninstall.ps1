@@ -1,6 +1,6 @@
 ﻿$packageName    = 'nubasic' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "nuBASICUninstall.ahk"
+$ahkFile        = "$toolsDir\nubasic-uninstall.ahk"
 
 Start-Process $ahkExe $ahkFile

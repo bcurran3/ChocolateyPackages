@@ -35,6 +35,10 @@ See the release notes for installation instructions, supported hardware, what is
 ***	
 </description>
     <releaseNotes>https://downloadmirror.intel.com/24075/eng/XTU-6_4-MR-ReleaseNotes.pdf</releaseNotes>
+	<dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
+      <dependency id="dotnet3.5" />	  
+    </dependencies>			
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

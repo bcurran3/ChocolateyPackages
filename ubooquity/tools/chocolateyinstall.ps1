@@ -1,17 +1,15 @@
 ﻿$packageName  = 'ubooquity' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://vaemendis.net/ubooquity/downloads/Ubooquity-2.1.1.zip'
-$checksum     = 'D7D454A99B3DB9C9F333F71F7C2A8977F3E0EA0B9B079E6370495C335AE0F600'
-$checksumType = 'sha256' 
-$fileType     = 'ZIP'
+$url          = 'https://vaemendis.net/ubooquity/downloads/Ubooquity-2.1.2.zip'
+$checksum     = 'D880955B1CB5635BE70F7A9D4FFDD1CAB4F528683E9FC7E978B6E3658A69024C'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = $fileType
+  fileType      = 'ZIP'
   url           = $url
   checksum      = $checksum
-  checksumType  = $checksumType
+  checksumType  = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
