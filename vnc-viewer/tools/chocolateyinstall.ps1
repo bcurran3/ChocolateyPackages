@@ -1,13 +1,17 @@
-﻿$packageName    = 'vnc-viewer'
+﻿# # https://www.realvnc.com/en/connect/download/viewer/
+$ErrorActionPreference = 'Stop'
+$packageName    = 'vnc-viewer'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Windows-32bit.exe'
-$checksum       = '50B497BDAB8CC35E5063B40D76A58EEF28B18844640B01F205F7056D7F0FF61F'
-$url64          = 'https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.17.1113-Windows-64bit.exe'
-$checksum64     = '9A6C072C7A54ADFCEFFDB0F6E33187E42983992C9A6CEA79D95F4736DE4C9F1B'
+$url            = 'https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.18.625-Windows-32bit.exe'
+$checksum       = '1193008CC8F2EA13435D911E23640877A44CCCD09BA27C301C7B9D3C594EE5D2'
+$url64          = 'https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.18.625-Windows-64bit.exe'
+$checksum64     = '11FDD8C46595704F61CC690439D26D8EB89406C056159E18B07BEBB35DB7AC06'
 $shortcutName   = 'VNC Viewer' 
-$fileName32     = 'VNC-Viewer-6.17.1113-Windows-32bit.exe'
-$fileName64     = 'VNC-Viewer-6.17.1113-Windows-64bit.exe'
+$fileName32     = 'VNC-Viewer-6.18.625-Windows-32bit.exe'
+$fileName64     = 'VNC-Viewer-6.18.625-Windows-64bit.exe'
+
+#Start-CheckandThrow("VNC-Viewer")
 
 if ((Get-OSArchitectureWidth -eq 64) -and ($env:chocolateyForceX86 -ne $true))
     {

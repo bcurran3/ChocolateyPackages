@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hp-universal-print-driver-pcl</id>
-    <version>6.6.0.23029</version>
+    <version>6.6.5.23510</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hp-universal-print-driver-pcl</packageSourceUrl>
     <title>HP Universal Print Driver for Windows PCL (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.hp.com/us-en/product/hp-universal-print-driver-series-for-windows/503548/manuals</docsUrl>
     <mailingListUrl>https://h30434.www3.hp.com/</mailingListUrl>
-    <tags>hp universal print printer driver pcl admin</tags>
+    <tags>hp universal print printer driver pcl</tags>
     <summary>HP Universal Print Driver for Windows (PCL6) - One versatile print driver for your PC or laptop
 </summary>
     <description>
@@ -41,8 +41,12 @@ Users are more self-sufficient when the HP UPD is deployed, reducing the need fo
 [HP Universal Print Driver Series for Windows - specifications](http://h20331.www2.hp.com/Hpsub/cache/344305-0-0-225-121.html)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hp-universal-print-driver-pcl/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
-    <releaseNotes>https://support.hp.com/soar-attachment/112/col40842-upd_6.4.1.22169_releasenotes.htm</releaseNotes>
+    <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c03635717</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

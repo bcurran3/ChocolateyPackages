@@ -1,12 +1,9 @@
 ﻿$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'hp-universal-print-driver-pcl' 
-$url            = 'http://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-19/upd-pcl6-x32-6.6.0.23029.exe'
-$checksum       = '455B295A2DB7D8BC6860A58D39F406E20C0BF2C02DD07367BF7C179BFB619A8B'
-$url64          = 'http://ftp.hp.com/pub/softlib/software13/COL40842/ds-99374-19/upd-pcl6-x64-6.6.0.23029.exe'
-$checksum64     = 'B4F318BB19D392072D99E2B6FE04B180C07B962281C3767BD6522F71DC7E07C8'
-$installerType  = 'ZIP'
-$silentArgs     = '/dm /nd /npf /q /h'
-$validExitCodes = @(0, 3010, 1641)
+$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-19/upd-pcl6-x32-6.6.5.23510.exe'
+$checksum       = '22590F3FAA980AE1C880DFF3DDFDB5BEB5179CD2F8A8C4A216B2CFA0B412F0D1'
+$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99374-19/upd-pcl6-x64-6.6.5.23510.exe'
+$checksum64     = 'E114E230D955EC4A38375F33C98F8A91A1346FCEBDD469B93F47A0A37BB040AD'
 $softwareName   = ''
 $fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 
@@ -44,12 +41,11 @@ $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
   file          = $fileLocation
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
+  silentArgs    = '/dm /nd /npf /q /h'
+  validExitCodes= @(0, 3010, 1641)
   softwareName  = $softwareName
 }
  
 Install-ChocolateyInstallPackage @packageArgs
 
 Remove-Item "$toolsDir\unzippedfiles" -recurse | out-null
-
