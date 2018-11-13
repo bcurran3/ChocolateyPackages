@@ -9,7 +9,7 @@
     <title>nuBASIC (Install)</title>
     <authors>Antonino Calderone</authors>
     <projectUrl>http://www.nubasic.eu/</projectUrl>
-    <iconUrl>http://www.nubasic.eu/_/rsrc/1468855535525/config/customLogo.gif</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/nubasic/nubasic_icon.jpg</iconUrl>
     <copyright>(c) Antonino Calderone 2014 - 2017</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
