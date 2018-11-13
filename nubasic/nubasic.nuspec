@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nubasic</id>
-    <version>1.48</version>
+    <version>1.49</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nubasic</packageSourceUrl>
     <title>nuBASIC (Install)</title>
@@ -17,16 +17,16 @@
     <docsUrl>http://www.nubasic.eu/user-guide</docsUrl>
     <mailingListUrl>https://sourceforge.net/projects/nubasic/support</mailingListUrl>
     <bugTrackerUrl>https://github.com/eantcal/nubasic/issues</bugTrackerUrl>
-    <tags>nubasic basic interpreter programming language ide notsilent admin</tags>
+    <tags>acalderone nubasic basic interpreter programming language ide notsilent</tags>
     <summary>BASIC language interpreter for Linux and Windows</summary>
     <description>
-![Screenshot of NuBASIC](https://80b4f219-a-62cb3a1a-s-sites.googlegroups.com/site/nubasiclanguageinterpreter/home/screenshot/screens.png?attachauth=ANoY7crUoy1Td8EGw3NwWHPxt2irw7BR2B7eyRTm-ZQOErPNNXB0EjrNm_8lYz2dBWUwgtxeN0_nwpjRSEmZHnVlFMku3oZY2s1RMrjxHi-jB8YoLNAe7xqnXfNZiJDddftxWycsJQlPZPho7xMbfzGYYPfzgQED2eG_L16i0Zhp4lNSRqxGIJbaJfmF7k1H--qP30x4DdaszpvcpKkV-O1W_mNrxJLPDp6hnyUhLZs5kntT5fT9LvD6ORPKcpD_bV4Vtuq_ozkN)	
+![Screenshot of NuBASIC](https://user-images.githubusercontent.com/13032534/27808819-69aaa2c2-6042-11e7-9132-675d1c71d162.png)	
 
-nuBASIC has been designed by the author, Antonino Calderone, mainly for educational purposes both for C++ developers that can deal with a non-trivial example of C++11 programming and for beginners, which may get hooked on programming. 
+nuBASIC has been designed and implemented mainly for educational purposes both for C++ developers that can deal with a non-trivial example of modern C++ programming and for beginners, which may get hooked on programming.
+
 It is suitable for simple games, educational or small business programs.
 
-Anyone who has previously worked with other BASIC languages will quickly become accustomed to nuBASIC.
-Large sections of the basic constructs of nuBASIC are compatible with other BASIC dialects.
+Anyone who has previously worked with other BASIC languages will quickly become accustomed to nuBASIC. Large sections of the basic constructs of nuBASIC are compatible with other BASIC dialects.
 
 nuBASIC is also very simple. It is an excellent tool for teaching programming to a complete beginner, despite this, it has all the features of a modern programming language.
 
@@ -42,11 +42,17 @@ Features
 * IDE for Windows
 * Examples include Tetris, Mine Hunter, Breakout, Calculator, TicTacToe
 * Tiny version is suitable for embedded systems
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/nubasic/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
     <releaseNotes>https://github.com/eantcal/nubasic/releases/</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" />	
-      <dependency id="vcredist2015" version="14.0.23026" />	  
+      <dependency id="vcredist140" version="14.11.25325" />	  
     </dependencies>
   </metadata>
   <files>

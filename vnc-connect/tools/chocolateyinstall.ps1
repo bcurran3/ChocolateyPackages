@@ -1,10 +1,10 @@
 ﻿# download page without login - https://www.realvnc.com/en/connect/download/vnc/
 $packageName    = 'vnc-connect'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$extractDir     = "$toolsDir\extracted"
 $bits           = Get-ProcessorBits
-$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.3.1-Windows-msi.zip'
-$checksum       = 'B3F199A195E3B5510F07D33D175DBF55CB848A6E6ABA70CC75F70FD4E4F60917'
+$extractDir     = "$toolsDir\extracted"
+$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.3.2-Windows-msi.zip'
+$checksum       = 'BBCEA0F66981B9E22AD38FE5B70E3C49B0BD7ED2C20036607EB535502C56EB25'
 
 
 $packageArgs = @{
