@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openhab</id>
-    <version>2.3.0</version>
+    <version>2.3.0.020181117</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>openHAB</title>
@@ -17,7 +17,7 @@
     <docsUrl>http://docs.openhab.org/</docsUrl>
     <mailingListUrl>https://community.openhab.org/</mailingListUrl>
     <bugTrackerUrl>https://github.com/openhab/openhab-distro/issues</bugTrackerUrl>
-    <tags>openhab home automation smart java</tags>
+    <tags>openhab home automation smart java binary foss cross-platform</tags>
     <summary>openHAB - a vendor and technology agnostic open source automation software for your home</summary>
     <description>
 ![Screenshot of openHAB](http://www.openhabfoundation.org/images/posts/2017-12_openhabian.png)

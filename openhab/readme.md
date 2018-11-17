@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* Binary is included in the package.
 * If you run the program and a command prompt window just flashes by, change/update/fix your JAVA_HOME environment variable.
 
 ***
