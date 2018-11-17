@@ -4,7 +4,7 @@
   <metadata>
     <id>gpu-z</id>
     <title>GPU-Z (Portable)</title>
-    <version>2.14.0</version>
+    <version>2.15.0</version>
     <authors>W1zzard of TechPowerUp</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gpu-z</packageSourceUrl>			

@@ -1,10 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'openhab' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab%2F2.2.0%2Fopenhab-2.2.0.zip'
-$checksum      = '1C57555BECABF3D5BCBE7A4CE10183271DBC2B0F6954E987506D46D0CA3072FC'
-$url2          = 'https://bintray.com/openhab/mvn/download_file?file_path=org%2Fopenhab%2Fdistro%2Fopenhab-addons%2F2.2.0%2Fopenhab-addons-2.2.0.kar'
-$checksum2     = 'A7E6E8251489E64C22402973B550AA5436E8A23C38AB143E15A287BD32494206'
+$url           = "$toolsDir\openhab-2.3.0.zip"
+$checksum      = '32BD9A69AA629BFCA39134FE7AC1BC5701D8FF66CD18C61F56B3590598946670'
 $ExeFile       = 'start.bat'
 $ShortcutName  = 'openHAB.lnk'
 $ShortcutName2 = 'openHAB Dashboard.lnk'
@@ -13,8 +11,6 @@ $ShortcutName4 = 'openHAB Documentation.lnk'
 $ShortcutName5 = 'openHAB Community.lnk'
 $ShortcutName6 = 'openHAB Console.lnk'
 $ShortcutName7 = 'openHAB Logs.lnk'
-$fileName      = 'openhab-addons-2.2.0.kar'
-$FileFullpath  = "$toolsDir\addons\$fileName"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -26,17 +22,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-
-$packageArgs = @{
-  packageName   = $packageName
-  fileType      = ''
-  url           = $url2
-  FileFullPath  = $FileFullpath
-  checksum      = $checksum2
-  checksumType  = 'sha256'
-}
-
-Get-ChocolateyWebFile @packageArgs
 
 New-Item "$toolsDir\openHAB" -type directory -force -ErrorAction SilentlyContinue
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\openHAB" -WorkingDirectory "$toolsDir\openHAB" -IconLocation "$toolsDir\openHAB.ico"
@@ -51,3 +36,4 @@ Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName7" 
 
 $WhoAmI=whoami
 icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null
+Remove-Item $url | Out-Null

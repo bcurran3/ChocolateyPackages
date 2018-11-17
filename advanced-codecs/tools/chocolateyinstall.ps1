@@ -19,4 +19,4 @@ Start-Sleep -s 10
 Start-CheckandStop "Settings32"
 Start-CheckandStop "Settings64"
 Start-CheckandStop "AutoHotkey"
-Remove-Item $url
+Remove-Item $url | Out-Null
