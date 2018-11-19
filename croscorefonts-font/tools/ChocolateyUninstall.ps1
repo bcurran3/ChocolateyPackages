@@ -1,0 +1,13 @@
+$packageName = 'croscorefonts-font'
+Uninstall-ChocolateyFont "Arimo-Bold.ttf"
+Uninstall-ChocolateyFont "Arimo-BoldItalic.ttf"
+Uninstall-ChocolateyFont "Arimo-Italic.ttf"
+Uninstall-ChocolateyFont "Arimo-Regular.ttf"
+Uninstall-ChocolateyFont "Cousine-Bold.ttf"
+Uninstall-ChocolateyFont "Cousine-BoldItalic.ttf"
+Uninstall-ChocolateyFont "Cousine-Italic.ttf"
+Uninstall-ChocolateyFont "Cousine-Regular.ttf"
+Uninstall-ChocolateyFont "Tinos-Bold.ttf"
+Uninstall-ChocolateyFont "Tinos-BoldItalic.ttf"
+Uninstall-ChocolateyFont "Tinos-Italic.ttf"
+Uninstall-ChocolateyFont "Tinos-Regular.ttf"
