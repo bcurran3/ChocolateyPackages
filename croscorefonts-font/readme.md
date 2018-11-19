@@ -1,8 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* This installs the TrueType fonts only and deletes the other files.
-* I personally use and endorse these fonts.
+* Binaries are included in the package.
 
 ***
 
