@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>3.6.0.4</version>
+    <version>3.6.1.4</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
