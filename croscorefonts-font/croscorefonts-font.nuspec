@@ -6,7 +6,7 @@
     <version>1.31.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/croscorefonts-font</packageSourceUrl>
-    <title>Croscore fonts (Font) (Install)</title>
+    <title>Croscore Fonts (Install)</title>
     <authors>Steve Matteson, Ascender Corporation</authors>
     <projectUrl>https://fonts.google.com/</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/ttf_icon.jpg</iconUrl>
