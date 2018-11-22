@@ -1,7 +1,9 @@
+# chocolatey-preinstaller-checks.extension v0.0.2-pre01 by Bill Curran AKA BCURRAN3 - 2018 public domain
+
 $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
  
 $publicFunctions = @(
-    'Get-chocoCounts',
+    'Get-chocoInstanceCounts',
 	'Get-chocoStatus',
 	'Get-PendingRebootStatus',
     'Get-WindowsInstallerStatus',
