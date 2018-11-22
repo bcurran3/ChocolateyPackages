@@ -1,5 +1,5 @@
-# chocolatey-preinstaller-checks.extension by Bill Curran AKA BCURRAN3 - 2018 public domain
-# get instances of choco.exe and all shims 
+# chocolatey-preinstaller-checks.extension v0.0.2-pre01 by Bill Curran AKA BCURRAN3 - 2018 public domain
+# Get-chocoCounts.ps1 - reports instances of choco.exe back to Get-chocoStatus.ps1
 # \ProgramData\chocolatey\bin\choco.exe (in path) IS a shim to \ProgramData\chocolatey\choco.exe actual (not in path)
 # i.e. running choco.exe will always count as 2 instances
 # all shims run choco.exe, so choco.exe count is +1 from the shim execution

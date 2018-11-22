@@ -1,7 +1,11 @@
-# chocolatey-preinstaller-checks.extension by Bill Curran AKA BCURRAN3 - 2018 public domain
-# thanks to http://ilovepowershell.com/2015/09/10/how-to-check-if-a-server-needs-a-reboot/
+# chocolatey-preinstaller-checks.extension v0.0.2-pre01 by Bill Curran AKA BCURRAN3 - 2018 public domain
+# Get-PendingRebootStatus.ps1 - warns if Windows has a pending reboot
+# See/Edit Chocolatey-Preinstaller-Checks.xml for options
+# If this extension stops your packages from becoming lost and unmanaged,
+# consider becoming a patron of me at https://www.patreon.com/bcurran3 :)
 
 function Get-PendingRebootStatus{
+# thanks to http://ilovepowershell.com/2015/09/10/how-to-check-if-a-server-needs-a-reboot/
 
 $RebootStatus=$false
 if (Get-ItemProperty -Path "HKLM:\Software\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending" -ErrorAction SilentlyContinue) { $RebootStatus=$true }
