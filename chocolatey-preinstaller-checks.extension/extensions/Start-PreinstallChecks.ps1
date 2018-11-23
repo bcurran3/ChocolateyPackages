@@ -1,4 +1,4 @@
-# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 public domain
+# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
 # Start-PreinstallChecks.ps1 - aliased as Install-ChocolateyInstallPackage to intercept and run before Install-ChocolateyInstallPackage then returns original functionality and passes on to install the package
 # See/Edit Chocolatey-Preinstaller-Checks.xml for options
 # If this extension stops your packages from becoming lost and unmanaged, consider becoming a patron of me at https://www.patreon.com/bcurran3 :)
