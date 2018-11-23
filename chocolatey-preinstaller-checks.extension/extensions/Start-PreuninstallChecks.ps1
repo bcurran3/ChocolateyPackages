@@ -8,8 +8,14 @@ Write-Host "PRE-UNINSTALLATION CHECKS:" -foreground magenta
 Get-PendingRebootStatus
 Get-WindowsInstallerStatus
 Get-chocoStatus
+if ($global:CPCEAbort -eq $true){ throw }
 
-# Remove alias for normal operations and call Uninstall-ChocolateyPackage actual
-Remove-Item alias:\Uninstall-ChocolateyPackage
-Uninstall-ChocolateyPackage @args
+# support for chocolatey-toast-notifications.extension 
+if (Get-Command Uninstall-ChocolateyPackageWithToastNotification -ErrorAction SilentlyContinue){
+   return
+  } else {
+    # Remove alias for normal operations and call Uninstall-ChocolateyPackage actual
+    Remove-Item alias:\Uninstall-ChocolateyPackage
+	Uninstall-ChocolateyPackage @args
+   }
 }
