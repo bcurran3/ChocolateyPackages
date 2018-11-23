@@ -1,12 +1,15 @@
-# chocolatey-toast-notifications.extension v0.0.1 by Bill Curran AKA BCURRAN3 - 2018 public domain
+# chocolatey-toast-notifications.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 public domain
 # This function is aliased as Install-ChocolateyInstallPackage to intercept and run before
 # Install-ChocolateyInstallPackage solely to add a a toast notification after running Install-ChocolateyInstallPackage.
 # Got it? 
 
 function Install-ChocolateyInstallPackageWithToastNotification{
 
+# support for chocolatey-preinstaller-checks.extension
+if (Get-Command Start-PreInstallChecks -ErrorAction SilentlyContinue){Start-PreInstallChecks}
+
 # Remove temporary alias and resume normal operations
-Remove-Item alias:\Install-ChocolateyInstallPackage 
+Remove-Item alias:\Install-ChocolateyInstallPackage -ErrorAction SilentlyContinue
 if ($env:ChocolateyLicenseValid -eq 'true') {
     Set-Alias Install-ChocolateyInstallPackage Install-ChocolateyInstallPackageCmdlet -Force -Scope Global
    }
