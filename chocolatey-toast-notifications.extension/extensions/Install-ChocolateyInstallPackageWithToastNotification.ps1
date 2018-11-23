@@ -1,4 +1,4 @@
-# chocolatey-toast-notifications.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 public domain
+# chocolatey-toast-notifications.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
 # This function is aliased as Install-ChocolateyInstallPackage to intercept and run before
 # Install-ChocolateyInstallPackage solely to add a a toast notification after running Install-ChocolateyInstallPackage.
 # Got it? 

@@ -1,4 +1,4 @@
-# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 public domain
+# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
 
 $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
  
