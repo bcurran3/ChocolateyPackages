@@ -1,4 +1,4 @@
-# chocolatey-preinstaller-checks.extension by Bill Curran AKA BCURRAN3 - 2018 public domain
+# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 public domain
 # modification created by Michel Buczynski AKA MikeBoutch 
 # \ProgramData\chocolatey\bin\choco.exe (in path) is a shim and \ProgramData\chocolatey\choco.exe actual (not in path)
 # SelfServe mode imply a background choco.exe with chocolatey-agent as parent and
