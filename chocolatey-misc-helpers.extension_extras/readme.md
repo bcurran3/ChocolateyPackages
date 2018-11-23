@@ -27,7 +27,6 @@ DO NOT USE: Added but later nullified. Inclusion for backward compatibility with
 * Start-CheckandStop "ProcessName"
 * Start-WaitandStop "ProcessName"
 
-CHANGE LOG:
 ###CHANGE LOG:
 * 0.0.2 - Show-ToastMessage added (neutered from original form), Show-Patreon and Show-PayPal added but disapproved by the Chocolatey team and thus nullified. :(
 * 0.0.1 - initial release
