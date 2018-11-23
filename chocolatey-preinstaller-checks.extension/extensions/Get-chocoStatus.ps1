@@ -11,12 +11,13 @@ $xml              = 'Chocolatey-Preinstaller-Checks.xml'
 $AbortOnMultiples = $ConfigFile.Settings.global.AbortOnMultiples
 $WaitOnMultiple   = $ConfigFile.Settings.chocoStatus.WaitOnMultiple
 $PauseSeconds     = $ConfigFile.Settings.chocoStatus.PauseSeconds
-$AbortSeconds     = $ConfigFile.Settings.chocoStatus.AbortSeconds
+#$AbortSeconds     = $ConfigFile.Settings.chocoStatus.AbortSeconds
 
 $chocoInstances = (Get-chocoInstanceCounts)
 
 if ($chocoInstances -gt 2)
     {
+	 $LoopMePlease=0
 	 # exclude current instance from status report
      while ($chocoInstances -gt 1)
      {
@@ -31,12 +32,16 @@ if ($chocoInstances -gt 2)
 	       Write-Host "  * WARNING: $($chocoInstances-1) other instance(s) of choco.exe actual found running." -foreground red
 		   return
 	      }
-      Write-Host "  * WARNING: $($chocoInstances-1) other instance(s) of choco.exe actual found running. Pausing $PauseSeconds seconds..." -foreground red
+      if ($LoopMePlease % 2 -eq 0) {$color="Red"} else {$color="DarkRed"}
+      Write-Host -NoNewLine "`r  * WARNING: $($chocoInstances-1) other instance(s) of choco.exe actual found running. Pausing $PauseSeconds seconds...(x$LoopMePlease)" -foreground $color
 	  Start-Sleep -seconds $PauseSeconds
       $chocoInstances = (Get-chocoInstanceCounts)
+	  $LoopMePlease++
+      $WaitDisplayed=$true
 	 }
     } else {
 	  Write-Host "  * choco.exe IS NOT running multiple instances." -foreground green
 	}
+if ($WaitDisplayed) {Write-Host ""}
 }
 
