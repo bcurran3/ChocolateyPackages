@@ -7,8 +7,11 @@
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <description>
 ![Screenshot of chocolatey-preinstaller-checks.extension](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension_extras/chocolatey-preinstaller-checks.extension_screenshot.png)
@@ -53,7 +56,7 @@ This extension attempts to head off problems related to:
 * Option to abort install/uninstall if PendingRebootStatus is true.
 * Option to abort after a configurable amount of time waiting for other competing processes to finish.
     </releaseNotes>
-    <copyright>public domain</copyright>
+    <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco pre installer uninstaller checks extension</tags>
   </metadata>
   <files>

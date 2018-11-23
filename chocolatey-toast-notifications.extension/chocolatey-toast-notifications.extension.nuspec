@@ -6,12 +6,12 @@
     <title>Chocolatey Toast Notifications Extension</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
-    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
-    <copyright>public domain</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco toast notifications extension</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</packageSourceUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
@@ -44,7 +44,7 @@
     </description>
     <releaseNotes>
 ###CHANGE LOG:
-* 0.0.2 - baked in compatibility with [chocolatey-preinstaller-checks.extension](https://chocolatey.org/packages/chocolatey-preinstaller-checks.extension) if installed
+* 0.0.2 - baked in compatibility with [chocolatey-preinstaller-checks.extension](https://chocolatey.org/packages/chocolatey-preinstaller-checks.extension) if installed, added win10 dependency
 * 0.0.1 - initial release
 
 ###ROADMAP:
