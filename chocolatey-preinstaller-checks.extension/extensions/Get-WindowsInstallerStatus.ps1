@@ -15,24 +15,29 @@ $PauseSeconds    = $ConfigFile.Settings.WindowsInstallerStatus.PauseSeconds
 
 if ($msiexecInstances -gt 1)
    {
+    $LoopMePlease=0
     while ($msiexecInstances -gt 1)
 	{
      If ($AbortOnMultiples -eq $true)
          {
 	      Write-Host "  * WARNING: Windows Installer IS currently running. Aborting install of $env:packageName!" -foreground red
-	      $global:CPCEAbort = "true"
+	      $global:CPCEAbort = $true
 	      return
 	     }
      If ($WaitOnMultiple -eq $false)
 	     {
 	      Write-Host "  * WARNING: Windows Installer IS currently running" -foreground red
 	      return
-	     } 	
-     Write-Host "  * WARNING: Windows Installer IS currently running. Pausing $PauseSeconds seconds..." -foreground red
+	     }
+     if ($LoopMePlease % 2 -eq 0) {$color="Red"} else {$color="DarkRed"}
+     Write-Host -NoNewLine "`r  * WARNING: Windows Installer IS currently running. Pausing $PauseSeconds seconds...(x$LoopMePlease)" -foreground $color
 	 Start-Sleep -seconds $PauseSeconds
      $msiexecInstances = @(Get-Process -ea silentlycontinue msiexec).count
+	 $LoopMePlease++
+     $WaitDisplayed=$true
 	}
    } else {
      Write-Host "  * Windows Installer IS NOT currently running" -foreground green
 	}
+if ($WaitDisplayed) {Write-Host ""}
 }

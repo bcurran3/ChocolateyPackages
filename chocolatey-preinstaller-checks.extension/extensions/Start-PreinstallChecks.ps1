@@ -6,35 +6,38 @@
 function Start-PreInstallChecks{
 $CheckLicense = "$env:ChocolateyInstall\license\chocolatey.license.xml"
 
-# Import preferences
-$xml                  = 'Chocolatey-Preinstaller-Checks.xml'  
-[xml]$ConfigFile      = Get-Content "$env:ChocolateyInstall\extensions\chocolatey-preinstaller-checks\$xml"  
-$AbortOnMultiples     = $ConfigFile.Settings.global.AbortOnMultiples
-$chocoWaitOnMultiple  = $ConfigFile.Settings.chocoStatus.WaitOnMultiple
-$chocoPauseSeconds    = $ConfigFile.Settings.chocoStatus.PauseSeconds
-$chocoAbortSeconds    = $ConfigFile.Settings.chocoStatus.AbortSeconds
-
 Write-Host "PRE-INSTALLATION CHECKS:" -foreground magenta
 Get-PendingRebootStatus
 Get-WindowsInstallerStatus
 Get-chocoStatus
+if ($global:CPCEAbort -eq $true){ throw }
 
-# Remove alias for normal operations and call Install-ChocolateyInstallPackage actual
-Remove-Item alias:\Install-ChocolateyInstallPackage 
-if ($env:ChocolateyLicenseValid -eq $true) {
-    Set-Alias Install-ChocolateyInstallPackage Install-ChocolateyInstallPackageCmdlet -Force -Scope Global
+# support for chocolatey-toast-notifications.extension 
+if (Get-Command Install-ChocolateyInstallPackageWithToastNotification -ErrorAction SilentlyContinue){
+   return
+  } else {
+    # Remove alias for normal operations and call Install-ChocolateyInstallPackage actual
+    Remove-Item alias:\Install-ChocolateyInstallPackage 
+    if ($env:ChocolateyLicenseValid -eq $true) {
+       Set-Alias Install-ChocolateyInstallPackage Install-ChocolateyInstallPackageCmdlet -Force -Scope Global
+      }
+	Install-ChocolateyInstallPackage @args 
    }
 }
 
-################ BETA ABORTION BELOW #############
 
-# Abort package install/upgrade due to multiple instances of either Chocolatey or Windows Installer running
+
+##IGNORE - NOT USED (I don't want to delete yet.)
+
+# Automatic clean-up if package install/upgrade was purposely aboarted due to multiple instances of either Chocolatey or Windows Installer running
 # default=false, only occurs when $AbortOnMultiples in XML config file is set to true
+
 #if ($global:CPCEAbort -eq $true)
 #    {
 #	 if (Test-Path $env:ChocolateyInstall\lib-bkp\$env:packageName)
 #	    {
-#         # If the package is an upgrade, delete the newly downloaded package files and move the old package files back		
+         # If the package is an upgrade, delete the newly downloaded package files and move the old package files back
+		 # This prevents Chocolatey from "loosing" management of package
 #		 Remove-Item $env:ChocolateyInstall\lib\$env:packageName -Recurse -Force -ErrorAction SilentlyContinue
 #		 Move-Item -Path $env:ChocolateyInstall\lib-bkp\$env:packageName -Destination $env:ChocolateyInstall\lib -Force -ErrorAction SilentlyContinue
 #		} else {
@@ -43,7 +46,7 @@ if ($env:ChocolateyLicenseValid -eq $true) {
 #		}
 #	 return
 #    } else { 
-#      # calling Install-ChocolateyInstallPackage actual
+      # calling Install-ChocolateyInstallPackage actual
 #	  Install-ChocolateyInstallPackage @args 
 #	}
 #}
