@@ -3,6 +3,8 @@
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * This installs no software. It modifies Windows registry keys to open .nupkg files with cinst.exe as administrator.
 * Packages installed from browsers will request UAC permission, open a Command Prompt window, install the package, and then close the Command Prompt window. The same new UAC and window behavior will happen when run from Command Prompt without administrative privileges. cinst.exe run from the Command Prompt will administrative privileges will act the same as before installation of choco-install-packages-from-web-winconfig.
+* This package has been tested and passed with Chrome, Firefox, and Opera. It will not work with Edge as Edge doesn't save the downloaded package file to the Downloads directory before choosing "Open."
+* WARNING: Chocolatey is NOT multi-instance friendly (yet). DO NOT run multiple package installs at the same time or bad things will happen!
 * DISCLAIMER: This has NOT been tested with non-Chocolatey .nupkg files.
 
 ROADMAP:
