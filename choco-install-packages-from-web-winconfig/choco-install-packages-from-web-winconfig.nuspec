@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-install-packages-from-web-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</packageSourceUrl>
+    <title>Install Chocolatey Packages from your Web Browser (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 nupkg config</tags>
+    <summary>Download and then install Chocolatey packages from your web browser.</summary>
+    <description>
+#Do you want to download and install Chocolatey packages from your browser?
+
+#You just found the easy way!
+
+###WHO IS THIS FOR?
+**choco-install-packages-from-web-winconfig** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **choco-install-packages-from-web-winconfig** allows you to install Chocolatey packages by simply downloading them in your web browser. **choco-install-packages-from-web-winconfig** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can give them a URL to click and have a package installed!
+
+If you like the convienance of this package, you should also check out [(unofficial) Chocolatey Shortcuts (Config)](https://chocolatey.org/packages/choco-shortcuts-winconfig).
+
+###HOW DOES IT WORK?
+**choco-install-packages-from-web-winconfig** configures Windows to automatically open .nupkg files using Chocolatey's cinst.exe ("choco install" shim) program. **choco-install-packages-from-web-winconfig** also sets cinst.exe to always run as administrator which is necessary for most packages.
+
+###USAGE INSTRUCTIONS:
+On chocolate.org package pages, click the "Download" link in the "Package Specific" area of a package you want to install. The package .nupkg file will download. Click the file to run or tell your browser to auto-run to save some clicking.
+
+###INSTALLATION INSTRUCTIONS:
+If you want **choco-install-packages-from-web-winconfig** to be configured for all users on the computer, install with the /ALLUSERS:YES parameter. With no parameters the default is the current user only.
+
+###INSTALL EXAMPLES:
+* choco install choco-install-packages-from-web-winconfig (for current user only)
+* choco install choco-install-packages-from-web-winconfig --params "'/ALLUSERS:YES'" (for all users)
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+	<releaseNotes>
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-install-packages-from-web-winconfig/readme.md)**	
+	</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
