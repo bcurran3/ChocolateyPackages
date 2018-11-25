@@ -19,14 +19,14 @@
     <tags>bcurran3 choco cinst nupkg config</tags>
     <summary>Download and then install Chocolatey packages from your web browser.</summary>
     <description>
-#Do you want to download and install Chocolatey packages from your browser?
+#Do you want to install Chocolatey packages from your web browser?
 
 #You just found the easy way!
 
 ###"This is the first package that every new Chocolatey user should install. Works great with Chrome, Firefox, and Opera. WOW!" - Anonymous Chocolatey User
 
 ###WHO IS THIS FOR?
-**choco-install-packages-from-web-winconfig** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **choco-install-packages-from-web-winconfig** allows you to install Chocolatey packages by simply downloading them in your web browser. **choco-install-packages-from-web-winconfig** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can give them a URL to click and have a package installed!
+**choco-install-packages-from-web-winconfig** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **choco-install-packages-from-web-winconfig** allows you to install Chocolatey packages by simply downloading them in your web browser. **choco-install-packages-from-web-winconfig** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can give them a URL to click and have a Chocolatey package installed!
 
 If you like the convienance of this package, you should also check out [(unofficial) Chocolatey Shortcuts (Config)](https://chocolatey.org/packages/choco-shortcuts-winconfig).
 
@@ -34,7 +34,13 @@ If you like the convienance of this package, you should also check out [(unoffic
 **choco-install-packages-from-web-winconfig** configures Windows to automatically open .nupkg files using Chocolatey's cinst.exe ("choco install" shim) program. **choco-install-packages-from-web-winconfig** also sets cinst.exe to always run as administrator which is necessary for most packages.
 
 ###USAGE INSTRUCTIONS:
-On a chocolate.org package page in the "Package Specific" area, click the "Download" link of the package you want to install. The package .nupkg file will download. Chrome and Firefox uers click the downloaded package .nuspkg file to open/run. Opera users double click the downloaded package .nuspkg file to open/run. Easy peasy! NOTE: Only install one package at a time until such time as Chocolatey v1.0 is released. 
+On a chocolate.org package page in the "Package Specific" area, click the "Download" link of the Chocolatey package you want to install. Wait (seconds) for it to download and:
+* Chrome  - double click the file download notification at the bottom of your browser.
+* Firefox - click OK when prompted to open the file.
+* Opera   - double click the file download notification at the top of your browser.
+
+
+If your web browser doesn't prompt you to open the file, click the downloaded file to open/run/install the Chocolatey package. Once the Chocolate pack file downloads your browser will either The package .nupkg file will download. Chrome and Firefox uers click the downloaded package .nuspkg file to open/run. Opera users double click the downloaded package .nuspkg file to open/run. Easy peasy! NOTE: Only install one package at a time until such time as Chocolatey v1.0 is released. 
 
 ###INSTALLATION INSTRUCTIONS:
 If you want **choco-install-packages-from-web-winconfig** to be configured for all users on the computer, install with the /ALLUSERS:YES parameter. With no parameters the default is the current user only.
