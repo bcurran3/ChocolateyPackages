@@ -8,6 +8,7 @@
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-server2019</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-server2019</projectSourceUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
     <projectUrl>https://github.com/chocolatey/choco/wiki/CreatePackages</projectUrl>	
     <docsUrl>https://docs.microsoft.com/en-us/nuget/reference/nuspec#dependencies-element</docsUrl>		
