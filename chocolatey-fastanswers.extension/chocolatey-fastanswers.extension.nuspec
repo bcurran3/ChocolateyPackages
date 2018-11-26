@@ -30,7 +30,7 @@ To provide (fairly) easy to remember micro functions for (new?) package creators
 The use cases go on...
 
 #FUNCTIONS:
-[List of functions](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension_extras/List_of_functions.png)
+![List of functions](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension_extras/List_of_functions.png)
 
 Screenshot testing all functions with simple test-package install script that does: $test=function and Write-Out function result for each function. Results from the functions show that the test package was run on a computer with Microsoft Windows 10 Pro build 16299 64bit, joined to a domain, (onboard) Intel video, (discreet) Nvidia video, has a SSD, is a workstation not a server, and is pending a reboot.
 [](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension_extras/chocolatey-fastanswers.extension.png)

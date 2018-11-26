@@ -1,0 +1,5 @@
+﻿==================== chocoprotocolstub ====================
+
+This chocoprotocolstub Chocolatey package was uploaded by the author, Bill Curran aka BCURRAN3.
+
+==================== chocoprotocolstub ====================

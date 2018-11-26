@@ -1,0 +1,11 @@
+﻿==================== chocoprotocolstub ====================
+
+chocoprotocolstub is free and Copylefted by Bill Curran.
+
+SEE:
+https://www.gnu.org/licenses/copyleft.en.html
+https://www.gnu.org/licenses/gpl.html
+
+bcurran3 11/25/2018
+
+==================== chocoprotocolstub ====================
