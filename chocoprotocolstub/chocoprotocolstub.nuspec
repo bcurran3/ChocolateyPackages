@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocoprotocolstub</id>
+    <version>1.0.0.0</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocoprotocolstub</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocoprotocolstub</packageSourceUrl>
+    <title>choco Protocol Stub</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocoprotocolstub</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/copyleft.en.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 choco package protocol cinst binary</tags>
+    <summary>Implements the custom choco:// protocol with chocoProtocolStub.exe.</summary>
+    <description>
+# NOTE: THIS WILL BE EDITED FURTHER.
+	
+	
+#Do you want to install Chocolatey packages from your web browser?
+
+#You just found the easy way!
+
+###"This is the first package that every new Chocolatey user should install. Works great with Chrome, Firefox, and Opera. WOW!" - Anonymous Chocolatey User
+
+###WHO IS THIS FOR?
+**chocoprotocolstub** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **chocoprotocolstub** allows you to install Chocolatey packages by simply clicking choco:// URLs in your web browser. **chocoprotocolstub** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can give them a URL to click and have a Chocolatey package installed!
+
+If you like the convienance of this package, you should also check out [Install Chocolatey Packages from your Web Browser](https://chocolatey.org/packages/choco-install-packages-from-web-winconfig) which is very similar in concept and [(unofficial) Chocolatey Shortcuts (Config)](https://chocolatey.org/packages/choco-shortcuts-winconfig).
+
+###HOW DOES IT WORK?
+**chocoprotocolstub** configures Windows to use choco://packagename URLs and passes them along to the **chocoProtocolStub.exe** which then processes the URL and runs Chocolatey's cinst.exe ("choco install" shim) to install the package. Lets hope this functionality gets built into a future version of Chocolatey and then this package can be deprecated. **chocoprotocolstub** also sets cinst.exe to always run as administrator which is necessary for most packages.
+
+###USAGE INSTRUCTIONS:
+Just click a choco://packagename URL on a web page and the packge will install. 
+* [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_chrome_example.png)  - Instructions yet to be written
+* [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_firefox_example.png) - Instructions yet to be written
+* [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_opera_example.png)   - Instructions yet to be written
+
+Easy peasy! 
+
+###INTRODUCING THE FIRST choco:// URLS ON THE INTERNET:
+[choco://instchoco](choco://instchoco) - (unofficial) InstChoco
+[choco://choco-package-list-backup](choco://choco-package-list-backup) - (unofficial) Choco Package List Backup to Local and Cloud
+[choco://choco-upgrade-all-at](choco://choco-upgrade-all-at) - (unofficial) Choco Upgrade All at
+[choco://choco-cleaner](choco://choco-cleaner) - (unofficial) Choco Cleaner
+[choco://choco-shortcuts-winconfig](choco://choco-shortcuts-winconfig) - (unofficial) Chocolatey Shortcuts 
+[choco://chocolatey-toast-notifications.extension](choco://chocolatey-toast-notifications.extension) - (unofficial) Chocolatey Toast Notifications 
+
+NOTE: Only install one package at a time until such time as Chocolatey v1.0 is released.
+
+**If you find chocoprotocolstub useful, please consider donating: 
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+	</description>
+	<releaseNotes>
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocoprotocolstub/readme.md)**	
+	</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
