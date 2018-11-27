@@ -32,8 +32,8 @@ If you like the convienance of this package, you should also check out [Install 
 **chocoprotocolstub** configures Windows to use choco://packagename URLs and passes them along to the **chocoProtocolStub.exe** which then processes the URL and runs Chocolatey's cinst.exe ("choco install" shim) to install the package. [Lets hope this functionality gets built into a future version of Chocolatey](https://github.com/chocolatey/choco/issues/1680) and then this package can be deprecated. **chocoprotocolstub** also sets cinst.exe to always run as administrator which is necessary for most packages.
 
 ###USAGE INSTRUCTIONS:
-Just click a choco://packagename URL on a web page and the packge will install.
-[Chrome Handling Example](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_chrome_example.png) | [Firefox Handling Example](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_firefox_example.png) | [Opera Handling Example](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_opera_example.png)
+Just click a choco://packagename URL on a web page and the package will install. 
+Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_opera_example.png)
 
 **Easy peasy, Chocolateasy!**
 
