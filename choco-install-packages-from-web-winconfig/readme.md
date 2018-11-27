@@ -1,14 +1,14 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* This installs no software. It modifies Windows registry keys to open .nupkg files with cinst.exe as administrator.
-* Packages installed from browsers will request UAC permission, open a Command Prompt window, install the package, and then close the Command Prompt window. The same new UAC and window behavior will happen when run from Command Prompt without administrative privileges. cinst.exe run from the Command Prompt will administrative privileges will act the same as before installation of choco-install-packages-from-web-winconfig.
-* This package has been tested and passed with Chrome, Firefox, and Opera. It will not work with Edge as Edge doesn't save the downloaded package file to the Downloads directory before choosing "Open."
-* WARNING: Chocolatey is NOT multi-instance friendly (yet). DO NOT run multiple package installs at the same time or bad things will happen!
+* This package installs no software. The package creates/modifies Windows registry keys to set the default opening of .nupkg files to use Chocolatey's cinst.exe program. The package also creates Windows registry keys to always run cinst.exe with administrative priveledges. This new behavior will work in CLI and Windows GUI programs.
+* Packages installed from browsers will request UAC permission, open a Command Prompt window, install the package, and then close the Command Prompt window. The same behavior will also happen when a .nuspec file is opened in a Windows GUI program or run from a CLI without administrative privileges. When cinst.exe is run from the Command Prompt with administrative privileges, it will act the same as before installation of this package; i.e. no UAC prompt necessary.
+* This package has been tested and passed with Chrome, Firefox, and Opera. Edge is a bit trickier as Edge doesn't save the downloaded package file to the Downloads directory before choosing "Open" (file seemes to be temporarily sandboxed). If you save the .nuspec file and then open it, it should work fine.
+* WARNING: Chocolatey is NOT multi-instance friendly (yet). DO NOT run multiple package installs at the same time or bad things will happen! Chocolatey has a milstone of 1.x for multi-instance friendliness. REFERENCE: https://github.com/chocolatey/choco/issues/1579
 * DISCLAIMER: This has NOT been tested with non-Chocolatey .nupkg files.
 
 ROADMAP:
-* Possibly set each popular browser to automatically run .nupkg files.
+* Possibly set each popular browsers to automatically run .nupkg files. (It's a lot of work to modify their config settings!)
 
 ***
 
