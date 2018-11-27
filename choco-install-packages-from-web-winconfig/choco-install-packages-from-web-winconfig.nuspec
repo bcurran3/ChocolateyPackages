@@ -7,7 +7,7 @@
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</packageSourceUrl>
-    <title>Install Chocolatey Packages from your Web Browser (Config)</title>
+    <title>(unofficial) Install Chocolatey Packages from your Web Browser (Config)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
@@ -16,8 +16,8 @@
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 choco cinst nupkg config</tags>
-    <summary>Download and then install Chocolatey packages from your web browser.</summary>
+    <tags>bcurran3 choco cinst nupkg winconfig chocolateasy</tags>
+    <summary>Implements ability to install Chocolatey packages from your web browser.</summary>
     <description>
 #Do you want to install Chocolatey packages from your web browser?
 
@@ -39,9 +39,9 @@ On a chocolate.org package page in the "Package Specific" area, click the "Downl
 * [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_firefox_example.png) - click OK when prompted to open the file.
 * [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_opera_example.png)   - double click the file download notification at the top of your browser.
 
-Easy peasy! 
+**Easy peasy, Chocolateasy!**
 
-NOTE: Only install one package at a time until such time as Chocolatey v1.0 is released.
+WARNING: Only install one package at a time until such time as Chocolatey v1.x is released. [(REFERENCE)](https://github.com/chocolatey/choco/issues/1579)
 
 **If you find choco-install-packages-from-web-winconfig useful, please consider donating: 
 https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
