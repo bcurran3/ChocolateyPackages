@@ -1,6 +1,7 @@
 ﻿==================== chocoprotocolstub ====================
 
-chocoprotocolstub is free and Copylefted by Bill Curran.
+chocoProtocolStub.exe is Copyleft 2018 by Bill Curran, free
+for personal and commercial use, and freely distributable.
 
 SEE:
 https://www.gnu.org/licenses/copyleft.en.html

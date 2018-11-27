@@ -34,10 +34,12 @@ If you like the convienance of this package, you should also check out [(unoffic
 **choco-install-packages-from-web-winconfig** configures Windows to automatically open Chocolatey packages (.nupkg files) using Chocolatey's cinst.exe ("choco install" shim) program. **choco-install-packages-from-web-winconfig** also sets cinst.exe to always run as administrator which is necessary for most packages.
 
 ###USAGE INSTRUCTIONS:
-On a chocolate.org package page in the "Package Specific" area, click the "Download" link of the Chocolatey package you want to install. Wait (seconds) for it to download and:
-* [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_chrome_example.png)  - double click the file download notification at the bottom of your browser. You can also click the arrow and choose "Always open files of this type" to make this automatic.
-* [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_firefox_example.png) - click OK when prompted to open the file.
-* [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_opera_example.png)   - double click the file download notification at the top of your browser.
+1. Browse to chocolatey.org. 
+2. Search for a package you want to install. 
+3. Click the result link to view the package page. 
+4. Find the **Package Specific** column on the left and click the **Download** link. 
+5. Wait (seconds) for it to download and... 
+6. Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_opera_example.png)
 
 **Easy peasy, Chocolateasy!**
 
