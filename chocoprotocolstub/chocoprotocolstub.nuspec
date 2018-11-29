@@ -13,8 +13,8 @@
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <copyright>Copyleft 2018 Bill Curran</copyright>
-    <licenseUrl>https://www.gnu.org/licenses/copyleft.en.html</licenseUrl>
+    <copyright>Copyright 2018 Bill Curran</copyright>
+    <licenseUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/chocoprotocolstub/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 chocoprotocolstub choco package protocol cinst chocolateasy winconfig binary</tags>
     <summary>Implements installing of Chocolatey packages from the web using choco:// protocol and chocoProtocolStub.exe</summary>

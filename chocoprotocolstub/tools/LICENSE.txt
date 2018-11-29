@@ -1,12 +1,14 @@
 ﻿==================== chocoprotocolstub ====================
 
-chocoProtocolStub.exe is Copyleft 2018 by Bill Curran, free
-for personal and commercial use, and freely distributable.
+chocoProtocolStub is Copyright 2018 Bill Curran 
 
-SEE:
-https://www.gnu.org/licenses/copyleft.en.html
-https://www.gnu.org/licenses/gpl.html
+The following permissions are hereby granted:
+ 
+* chocoProtocolStubs is freely distributable.
+* chocoProtocolStubs is free for personal and commerical use.
 
-bcurran3 11/25/2018
+chocoProtocolStubs comes with no implied or explict warranty.
+
+bcurran3 11/29/2018
 
 ==================== chocoprotocolstub ====================
