@@ -2,7 +2,7 @@
 $packageName       = 'adwcleaner' 
 $toolsDir          = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url               = 'https://downloads.malwarebytes.com/file/adwcleaner'
-$checksum          = '55B7ACEB5ED0407B1D83CD07C448B65366576315A69D8842B9361B2A14240FC6'
+$checksum          = 'AEA90F3B78A18E241B01F06933A22FABDEE91DB0F12D3A1FB2E283FC9543C58F'
 $shortcutName      = 'AdwCleaner.lnk'
 $portableEXE       = "adwcleaner_$env:packageVersion.exe"
 

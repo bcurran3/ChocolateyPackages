@@ -1,4 +1,4 @@
-# chocolatey-misc-helpers.extension v0.0.2 (07-19-2018) by Bill Curran - public domain
+# chocolatey-misc-helpers.extension v0.0.3 (12-04-2018) by Bill Curran - public domain
 # Runs a background job to kill $ProcessName within 5 minutes
 # You would typically run this before Install-ChocolateyPackage
 

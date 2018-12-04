@@ -30,14 +30,14 @@
 ***
 
 ###CHANGE LOG:
+* 0.0.3 - Notifications will now display in the foreground when sent from a background task using the system account but minus the web page link button.
 * 0.0.2 - baked in compatibility with [chocolatey-preinstaller-checks.extension](https://chocolatey.org/packages/chocolatey-preinstaller-checks.extension) if installed
 * 0.0.1 - initial release
 
 ###ROADMAP:
-* Make it Windows 8 compatible after packaging up an old version of [BurntToast](https://github.com/Windos/BurntToast)
+* Possibly make it Windows 8 compatible after packaging up an old version of [BurntToast](https://github.com/Windos/BurntToast)
 * Possibly make it Windows Server 2016 compatible.
 * Attempt to make it work with PORTABLE packages as well.
-* Add global logged in user notifications if [BurntToast](https://github.com/Windos/BurntToast) and the [UWP Community Toolkit](https://github.com/Microsoft/WindowsCommunityToolkit) provide the functionality.
 
 ***
 

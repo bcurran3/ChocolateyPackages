@@ -1,5 +1,6 @@
-﻿==================== chocoprotocolstub ====================
+﻿============================== chocoProtocolStub ==============================
 
-This chocoprotocolstub Chocolatey package was uploaded by the author, Bill Curran aka BCURRAN3.
+The chocoprotocolstub package and accompanying chocoProtocolStub
+program was uploaded by the author, Bill Curran aka BCURRAN3.
 
-==================== chocoprotocolstub ====================
+============================== chocoProtocolStub ==============================

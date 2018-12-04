@@ -10,26 +10,17 @@
 These didn't fit into the concept scope of my other extensions so I decided to start a new miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc.
-* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. (Currently requires [BurntToast PS module](https://github.com/Windos/BurntToast) pre-installed.) [SCREENSHOT](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/chocolatey-misc-helpers.extension_screenshot.png)
-* **Start-WaitandStop** - starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. 
+* **Start-CheckandStop** - checks for and stops a process if running. Also creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running. Read comments in the script to implement.
+* **Start-WaitandStop** - starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. This would usually be called before Install-ChocolateyPackage.
 * **Start-WaitandStopActual** - (do not directly use) called by Start-WaitandStop to make Start-WaitandStop simple to use.
-* **Read comments in the scripts for help implementing.**
-
-***
-DO NOT USE: Added but later nullified. Inclusion for backward compatibility with pre-release versions in the wild.
-* **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website.
-* **Show-PayPal** - Displays a message and link to your [PayPal](https://www.paypal.com/) website.
-***
 
 ###USAGE:
-* Show-ToastMessage "Your message line 1" "Your message line 2"
 * Start-CheckandStop "ProcessName"
 * Start-WaitandStop "ProcessName"
 
-###CHANGE LOG:
-* 0.0.2 - Show-ToastMessage added (neutered from original form), Show-Patreon and Show-PayPal added but disapproved by the Chocolatey team and thus nullified. :(
-* 0.0.1 - initial release
+CHANGE LOG:
+* 0.0.1   - initial release. If you installed before 06/20/2018 final, please force reinstall.
+
 
 ***
 
@@ -50,7 +41,3 @@ If applicable, please always consider donating or purchasing the software you in
 <h3>TIA,</h3>
 
 <h3>Bill</h3>
-
-
-
-

@@ -1,14 +1,20 @@
-﻿==================== chocoprotocolstub ====================
+﻿============================== chocoProtocolStub ==============================
 
 chocoProtocolStub is Copyright 2018 Bill Curran 
 
-The following permissions are hereby granted:
- 
-* chocoProtocolStubs is freely distributable.
-* chocoProtocolStubs is free for personal and commerical use.
+chocoProtocolStub comes with no implied or explict warranty.
 
-chocoProtocolStubs comes with no implied or explict warranty.
+The following permissions are hereby granted:
+
+  * chocoProtocolStub is freely distributable.
+  * chocoProtocolStub is free for personal and commercial use.
+
+The author humbly requests donations for commercial use/deployment
+of chocoProtocolStub. This is an ethical request, not a requirement.
+
+If you find chocoProtocolStub useful, please consider donating: 
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3
 
 bcurran3 11/29/2018
 
-==================== chocoprotocolstub ====================
+============================== chocoProtocolStub ==============================
