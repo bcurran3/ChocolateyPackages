@@ -10,10 +10,10 @@
 These didn't fit into the concept scope of my other extensions so I decided to start a new miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Enable-AutoPin** - Auto-pins a package during installation. (This has an unknown shelf life.)
-* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc.
-* **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so.
-* **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. 
+* **Enable-AutoPin** - Auto-pins a package during installation. (This has an unknown shelf life.) [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Enable-AutoPin_screenshot.png)
+* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-WaitandStopActual** - (do not directly use) Called by Start-WaitandStop to make Start-WaitandStop simple to use.
 * **Test-Dependency** - Provides a way to verify a dependency is installed. Does NOT check version. Returns True/False. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Test-Dependency_screenshot.png)
 * **Read comments in the scripts for help implementing.**
@@ -36,7 +36,7 @@ The functions below were added to v0.0.2 but were later nullified; included for 
 
 * **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website.
 * **Show-PayPal** - Displays a message and link to your [PayPal](https://www.paypal.com/) website.
-* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. [Screenshot of what could have been](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. This has been recycled and made into [chocolatey-toast-notifications.extension](https://chocolatey.org/packages/chocolatey-toast-notifications.extension).
 
 ***
 
