@@ -10,6 +10,7 @@ Do {
     Start-Sleep 5
     if((Get-Process "$ProcessName" -ea SilentlyContinue) -eq $Null){ 
       } else { 
+        Write-Verbose "  ** Stopping $ProcessName process..."	  
         Stop-Process -ProcessName "$ProcessName" -Force
 		break
        }	
