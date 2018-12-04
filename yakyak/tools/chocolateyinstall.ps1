@@ -1,7 +1,7 @@
 ﻿$packageName  = 'yakyak' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://github.com/yakyak/yakyak/releases/download/v1.5.2/yakyak-1.5.2-win32-x64.zip'
-$checksum     = 'D362D4AF8DFC271831D5973439E46B00F3534E7DE3F4CFC7BDB773F0C802A5B7'
+$url          = 'https://github.com/yakyak/yakyak/releases/download/v1.5.4-beta-rolling/yakyak-1.5.4-win32-x64.zip'
+$checksum     = '756EE0758C7B30FFF11F442A611D38CF21DCF63BBD22AC4D2EDE64FB15219077'
 $ShortcutName = 'YakYak.lnk'
 $unzipDir     = 'YakYak-win32-x64'
 $exe          = 'YakYak.exe'

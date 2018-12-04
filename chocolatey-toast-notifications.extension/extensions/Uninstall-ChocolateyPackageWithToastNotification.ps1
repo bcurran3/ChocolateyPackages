@@ -1,7 +1,7 @@
-# chocolatey-toast-notifications.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
+# chocolatey-toast-notifications.extension v0.0.3 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
 # This function is aliased as Uninstall-ChocolateyPackage to intercept and run before
 # Uninstall-ChocolateyPackage solely to add a a toast notification after running Uninstall-ChocolateyPackage.
-# Got it? 
+# Got it? No? Read it again.
 
 function Uninstall-ChocolateyPackageWithToastNotification{
 
@@ -22,6 +22,12 @@ if (!($IsWin10 -eq "10")){return}
 $chocolateySoftwareName = Get-ChocolateySoftwareName
 
 # Show toast notification
-$chocolateyPackagePage = New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName"
-New-BurntToastNotification -Text "Chocolatey ($env:chocolateyPackageName)", "$chocolateySoftwareName v$env:chocolateyPackageVersion", "Uninstalled." -Button $chocolateyPackagePage -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"
+if ($env:USERNAME -eq "$env:COMPUTERNAME$"){
+    If ((Get-Service $WinRM).Status -eq 'Running') {
+        Invoke-Command -ComputerName $env:COMPUTERNAME -ScriptBlock {New-BurntToastNotification -Text "Chocolatey ($env:chocolateyPackageName)", "$chocolateySoftwareName v$env:chocolateyPackageVersion", "Uninstalled." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName") -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"}
+	  }
+   } else {
+#    $chocolateyPackagePage = New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName"
+     New-BurntToastNotification -Text "Chocolatey ($env:chocolateyPackageName)", "$chocolateySoftwareName v$env:chocolateyPackageVersion", "Uninstalled." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName") -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"
+   }
 }

@@ -17,11 +17,11 @@
     <licenseUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/chocoprotocolstub/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 chocoprotocolstub choco package protocol cinst chocolateasy winconfig binary</tags>
-    <summary>Implements installing of Chocolatey packages from the web using choco:// protocol and chocoProtocolStub.exe</summary>
+    <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol and chocoProtocolStub.exe</summary>
     <description>
 ![screenshot of chocoprotocolstub](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_screenshot.png)	
 	
-#Implements installing of Chocolatey packages from the web using choco:// protocol and chocoProtocolStub.exe
+#Implements installing of Chocolatey packages from the web using choco:// Protocol and chocoProtocolStub.exe
 
 ###WHO IS THIS FOR?
 **chocoprotocolstub** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **chocoprotocolstub** allows you to install Chocolatey packages by simply clicking choco:// URLs in your web browser. **chocoprotocolstub** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can give them a URL to click and have a Chocolatey package installed!
@@ -29,10 +29,10 @@
 If you like the convienance of this package, you should also check out [Install Chocolatey Packages from your Web Browser](https://chocolatey.org/packages/choco-install-packages-from-web-winconfig) which is very similar in concept and [(unofficial) Chocolatey Shortcuts (Config)](https://chocolatey.org/packages/choco-shortcuts-winconfig).
 
 ###HOW DOES IT WORK?
-**chocoprotocolstub** configures Windows to use choco://packagename URLs and passes them along to the **chocoProtocolStub.exe** which then processes the URL and runs Chocolatey's cinst.exe ("choco install" shim) to install the package. [Lets hope this functionality gets built into a future version of Chocolatey](https://github.com/chocolatey/choco/issues/1680) and then this package can be deprecated. **chocoprotocolstub** also sets cinst.exe to always run as administrator which is necessary for most packages.
+**chocoprotocolstub** configures Windows to use choco://packagename URLs and pass them along to **chocoProtocolStub.exe** which then processes the URL and runs Chocolatey's cinst.exe ("choco install" shim) to install the package. [Lets hope this functionality gets built into a future version of Chocolatey](https://github.com/chocolatey/choco/issues/1680) and then this package can be deprecated. **chocoprotocolstub** also sets cinst.exe to always run as administrator which is necessary for most packages.
 
 ###USAGE INSTRUCTIONS:
-Just click a choco://packagename URL on a web page and the package will install. 
+Just click a choco://packagename URL on a web page and the package will install after one or two approval clicks. 
 Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocoprotocolstub\chocoprotocolstub_opera_example.png)
 
 **Easy peasy, Chocolateasy!**

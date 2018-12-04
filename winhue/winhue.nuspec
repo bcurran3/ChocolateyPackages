@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.2180.0</version>
+    <version>3.0.3028.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
@@ -54,6 +54,10 @@ Quick and easy setup with support for multiple bridges means you'll be up and ru
 WinHue also has a fully-featured console application bundled with the installer.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winhue/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
     <releaseNotes>https://github.com/Hyrules/WinHue3/releases</releaseNotes>
     <dependencies>
