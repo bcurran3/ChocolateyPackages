@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-nuspec-checker</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
+    <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
+    <authors>Bill Curran</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker</projectUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <copyright>Copyleft Bill Curran</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 cnc choco unofficial nuspec checker</tags>
+    <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
+    <description>
+![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)]()
+
+# NOTE TO MODERATORS - DO NOT PASS - THIS IS A FIRST DRAFT AND TECHNICALLY PRELIM
+
+#**choco-nuspec-checker** (CNC) is a PowerShell script designed for Chocolatey package creators/maintainers to check Chocolatey .nuspec files for common errors and ommisions.
+
+
+###FEATURES:
+* **CNC** checks for all tags and reports if any are missing
+* **CNC** checks for 
+* **CNC** checks for 
+
+**If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+	</description>
+	<releaseNotes>
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
+	</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
