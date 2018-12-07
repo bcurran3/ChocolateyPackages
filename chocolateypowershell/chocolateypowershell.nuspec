@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolateypowershell</id>
-    <version>0.0.2</version>
+    <version>0.0.2.1</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</packageSourceUrl>
@@ -11,7 +11,7 @@
     <title>(unofficial) Chocolatey Powershell</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
@@ -19,7 +19,7 @@
     <tags>bcurran3 unofficial chocolatey powershell test environment packagers maintainers</tags>
     <summary>Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.</summary>
     <description>
-![Screenshot example of Chocolatey PowerShell](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_screenshot.png)
+![Screenshot example of Chocolatey PowerShell](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_screenshot.png)
 	
 ###Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.	
 	
@@ -30,16 +30,12 @@
 ###INSTRUCTIONS:
 Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolateypowershell/readme.md)**
-
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
     <releaseNotes>
-###CHANGELOG:
-* 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
-* 0.0.1 - initial release.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolateypowershell/readme.md)**
 	</releaseNotes>	
   </metadata>
   <files>
