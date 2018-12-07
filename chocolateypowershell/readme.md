@@ -2,10 +2,21 @@
 
 **BCURRAN3'S PACKAGE NOTES:**
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* If you don't like the default PowerShell icon for (unofficial) Chocolatey Powershell because you get it confused with your normal PowerShell icon, you can manually choose to change the icon to use the Chocolatey logo found at C:\ProgramData\Chocolatey\choco.ico which the Chocolatey Team won't let me use since they believe you might become confused and think this is an official Chocolatey package instead of the official blatantly named package name of "(unofficial) Chocolatey Powershell." Of course you have the power to manually change the icon to anything you want including a picture of Winnie the Poo if you so desire. If you do manually change it to the Chocolatey logo, please be smarter than the Chocolatey Team (GEP13) thinks you are. 
+* If you don't like the default PowerShell icon for (unofficial) Chocolatey Powershell because you get it confused with your normal PowerShell icon, you can manually choose to change the icon to use the Chocolatey logo found at C:\ProgramData\Chocolatey\choco.ico which the Chocolatey Team won't let me use since they believe you might become confused and think this is an official Chocolatey package instead of the aptly named "(unofficial) Chocolatey Powershell." Of course you have the power to manually change the icon to anything you want including a picture of Winnie the Poo if you so desire. 
+* If you wish to set the console colors to stand out from other PowerShell windows edit the icon, go to the Colors tab and change the RGB values to either 84,42,12 or 160,85,45 for a more unique Chocolatey brown background.
 
+	
+###Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.	
+	
+###WHO IS THIS FOR?
+ **chocolateypowershell** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run ChocolateyPowerShell and test away! 
+
+
+###INSTRUCTIONS:
+Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
 ###CHANGELOG:
+* 0.0.2.1 - minor cosmetic and help improvements
 * 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
 * 0.0.1 - initial release.
 
