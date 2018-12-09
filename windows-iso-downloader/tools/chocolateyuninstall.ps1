@@ -1,4 +1,4 @@
-﻿$packageName = 'windows-iso-downloader'
+﻿$packageName  = 'windows-iso-downloader'
 $ShortcutName = 'Microsoft Windows and Office ISO Download Tool.lnk'
 
 remove-item "$env:Public\Desktop\$ShortcutName" -Force -ErrorAction 'SilentlyContinue'

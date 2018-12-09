@@ -1,11 +1,13 @@
 # CNC.ps1 Copyleft 2018 by Bill Curran AKA BCURRAN3
 
-$CNCver        = "0.0.1 (12/04/2018)" # Version of this script
+$CNCver        = "0.0.1 (12/07/2018)" # Version of this script
 Write-Host
 Write-Host "CNC.ps1 v$CNCver - (unofficial) Chocolatey .nuspec Checker ""Put it through the Bill.""" -ForegroundColor white
 Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 Write-Host
 
+# Get and parse .nuspec in current directory
+#ENCHANCEMENT: Should accept a filespec and use that as well
 $LocalnuspecFile = Get-Item *.nuspec
 if (!($LocalnuspecFile)) {
     Write-Warning "No .nuspec file found."
@@ -13,6 +15,7 @@ if (!($LocalnuspecFile)) {
    }
 
 # Validate that URL elements are actually URLs
+# ENHANCEMENT: Check the URL resource is valid
 function Validate-URL($url){
 if (($url -match "http://") -or ($url -match "https://")){
    } else {
@@ -106,5 +109,20 @@ if (!($NuspecSummary)) {Write-Warning "  ** <summary> element is empty"}
 if (!($NuspecTags)) {Write-Warning "  ** <tags> element is empty"}
 if (!($NuspecTitle)) {Write-Warning "  ** <title> element is empty"}
 if (!($NuspecVersion)) {Write-Warning "  ** <version> element is empty, this element is a requirement."}
+
+if ($NuspecAuthors -eq $NuspecOwners){
+  Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
+  Write-Host 'The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Magenta
+}
+
+if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
+  Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will triger a message from the verifier:"
+  Write-Host 'ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Magenta
+}
+
+if ($NuspecTags -match "chocolatey"){
+Write-Warning "  ** There is a tag named chocolatey. This will triger a message from the verifier:"
+Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Magenta
+}
 
 Write-Host
