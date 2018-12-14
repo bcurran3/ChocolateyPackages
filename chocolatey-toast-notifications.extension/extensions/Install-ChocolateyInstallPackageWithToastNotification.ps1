@@ -17,37 +17,15 @@ if ($env:ChocolateyLicenseValid -eq 'true') {
 # Execute Install-ChocolateyInstallPackage actual (or Chocolatey licensed version alias) normally
 Install-ChocolateyInstallPackage @args 
 
-# Ensure this ONLY runs on Windows 10 - this will be removed and dealt with via a BurntToast dependency next version
-$IsWin10=[Environment]::OSVersion.Version.Major
-if (!($IsWin10 -eq "10")){return}
-
 # Get name of program being installed from the .nuspec
 $chocolateySoftwareName = Get-ChocolateySoftwareName
 
 # Show toast notification
 if ($env:USERNAME -eq "$env:COMPUTERNAME$"){
     If ((Get-Service $WinRM).Status -eq 'Running') {
-	
-#        $env:global:TEMPchocolateySoftwareName=$chocolateySoftwareName
-#        $env:global:TEMPchocolateyPackageName=$env:chocolateyPackageName
-#        $env:global:TEMPchocolateyPackageVersion=$env:chocolateyPackageVersion
-		
-#		[Environment]::SetEnvironmentVariable("TEMPchocolateySoftwareName", "My Value", "Machine")
-#		[Environment]::SetEnvironmentVariable("TEMPchocolateyPackageName", "My Value", "Machine")
-#		[Environment]::SetEnvironmentVariable("TEMPchocolateyPackageVersion", "My Value", "Machine")
-				
-# LOOK AT THIS: https://social.technet.microsoft.com/Forums/lync/en-US/dcc394a4-4434-4623-97d8-3be812e46864/proper-way-to-pass-array-to-invokecommand-script-block?forum=ITCG
-
-#AND https://community.spiceworks.com/topic/1044614-invoke-command-passing-multipule-argements
-#AND: https://scriptinghell.blogspot.com/2013/02/passing-array-to-invoke-command.html
-				
-        Invoke-Command -ComputerName $env:COMPUTERNAME -ScriptBlock {New-BurntToastNotification -Text "Chocolatey ($env:chocolateyPackageName), "$chocolateySoftwareName v$env:chocolateyPackageVersion", "Installed or updated." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName") -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"}
-		
-#		Remove-Variable $env:global:TEMPchocolateySoftwareName
-#		Remove-Variable $env:global:TEMPchocolateyPackageName
-#		Remove-Variable $env:global:TEMPchocolateyPackageVersion
-	  }
-   } else {
-     New-BurntToastNotification -Text "Chocolatey ($env:chocolateyPackageName)", "$chocolateySoftwareName v$env:chocolateyPackageVersion", "Installed or updated." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName") -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"
+         Invoke-Command -ComputerName $env:COMPUTERNAME -ArgumentList $env:chocolateyPackageName,$chocolateySoftwareName,$env:chocolateyPackageVersion -ScriptBlock {param([string]$chocolateyPackageName, [string]$chocolateySoftwareName, [string]$chocolateyPackageVersion) New-BurntToastNotification -Text "Chocolatey ($chocolateyPackageName)", "$chocolateySoftwareName v$chocolateyPackageVersion", "Installed or updated." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName") -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"}
+        } else {
+          New-BurntToastNotification -Text "Chocolatey ($env:chocolateyPackageName)", "$chocolateySoftwareName v$env:chocolateyPackageVersion", "Installed or updated." -Button (New-BTButton -Content 'Package Webpage' -Arguments "https://chocolatey.org/packages/$env:chocolateyPackageName") -AppLogo "$env:ChocolateyInstall\extensions\chocolatey-toast-notifications\choco.ico"
+       }
    }
 }
