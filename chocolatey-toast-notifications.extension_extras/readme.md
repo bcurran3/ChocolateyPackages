@@ -30,7 +30,7 @@
 ***
 
 ###CHANGE LOG:
-* 0.0.3 - Notifications will now display in the foreground when sent from a background task using the system account but minus the web page link button.
+* 0.0.3 - Notifications will now display in the foreground when sent from a background task using the system account.
 * 0.0.2 - baked in compatibility with [chocolatey-preinstaller-checks.extension](https://chocolatey.org/packages/chocolatey-preinstaller-checks.extension) if installed
 * 0.0.1 - initial release
 
