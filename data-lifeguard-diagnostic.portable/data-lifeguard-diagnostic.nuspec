@@ -3,38 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>data-lifeguard-diagnostic.portable</id>
-    <title>Western Digital Data Lifeguard Diagnostic for Windows (Portable)</title>
+    <title>[Deprecated] Western Digital Data Lifeguard Diagnostic for Windows (Portable)</title>
     <version>1.36</version>
     <authors>Western Digital</authors>
     <owners>bcurran3</owners>
 	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/data-lifeguard-diagnostic.portable</packageSourceUrl>	
-    <summary>Western Digital Data Lifeguard Diagnostic for Windows tests your Western Digital hard disks for errors.</summary>
     <description>
-![Western Digital Data Lifeguard Diagnostic for Windows screenshot](http://support.wdc.com/images/kb/940_4.png)
+![Deprecated](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png)	
+	
+##This package has been deprecated. 
 
-This is a Windows version of the Data LifeGuard Diagnostics. It will test WD internal and external drives. In additional, it can provide you with the model and serial of WD drives attached to the system.
-Supported Operating Systems
+##Western Digital Data Lifeguard Diagnostic for Windows is no longer a portable program and must be installed.
 
-Windows 10
-Windows 8 32/64-bit versions
-Windows 7 32/64-bit versions
-Windows Vista 32/64 bit versions
-Windows XP 32/64-bit versions
-
-####Instructions
-1. Download the Windows Data Lifeguard Diagnostics, .zip
-2.  Extract and run the program, WinDlg.exe. (Chocolatey does this for you!) If running Windows Vista (or later), you will need to Right-Click on the WinDlg.exe file and choose to Run As Administrator.
-3. Read and accept the license agreement to continue.
-4. On the main program screen, there are two windows. In the top window, you will see the drives in your system that are available for testing. The model number, serial number, capacity, and SMART status of each drive will be displayed. In the bottom window, the partition information for the selected drive will be displayed.
-5. Highlight the drive and select the icon on the top row to test or run SMART status.
-6. When you select the run tests icon, the "DLGDIAG - Select an Option" window appears.
-7. You will see the following options:
-* QUICK TEST - performs SMART drive quick self-test to gather and verify the Data Lifeguard information contained on the drive.
-* EXTENDED TEST - performs a Full Media Scan to detect bad sectors. Test may take several hours to complete depending on the size of the drive.
-* WRITE ZEROS - writes zeros to the drive with options of Full Erase and Quick Erase. File system and data will be lost.
-* VIEW TEST RESULT - displays the latest test results.
-8. Select the test you wish to perform and click the Start button.
-9. When the test completes, you will be notified with a pass/fail message. Click the Close button.
+##This package has been replaced by [Western Digital Data Lifeguard Diagnostic for Windows (Install)](https://chocolatey.org/packages/data-lifeguard-diagnostic).
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/data-lifeguard-diagnostic.portable/readme.md)**
 
@@ -44,13 +25,13 @@ Windows XP 32/64-bit versions
     </description>
     <projectUrl>http://support.wdc.com/downloads.aspx?lang=en</projectUrl>
     <bugTrackerUrl>http://support.wdc.com/download/notes/WinDLG_v1_36_Release_Notes.pdf</bugTrackerUrl>
-    <tags>western digital wd data lifeguard hdd diagnostic dlgdiag windlg</tags>
+    <tags>western digital wd data lifeguard hdd diagnostic dlgdiag windlg deprecated</tags>
     <copyright>Copyright (C) Western Digital</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://support.wdc.com/images/wdlogo.png</iconUrl>
-    <releaseNotes>added checksum</releaseNotes>
+    <dependencies>
+      <dependency id="data-lifeguard-diagnostic" />
+    </dependencies>	
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+  <files />
 </package>
