@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>23.0.31.0</version>
+    <version>24.0.24.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
@@ -38,7 +38,7 @@ NEW COPY $99.95 UPGRADE $49.95
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-23.htm</releaseNotes>
+    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-24.htm</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

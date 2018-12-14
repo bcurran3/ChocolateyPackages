@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'take-command'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://jpsoft.com/downloads/v23/tcmd.exe'
-$checksum    = '1CD3108006931DAC042AEBABB2A9A875CA95BEE505464E1BACA9849BB4A93ECD'
+$url         = 'https://jpsoft.com/downloads/v24/tcmd.exe'
+$checksum    = '78B80A7F6D9B29DD208673F489A145DF7002CEBC2E12C232310FAC6C57CB7005'
 
 
 $packageArgs = @{
