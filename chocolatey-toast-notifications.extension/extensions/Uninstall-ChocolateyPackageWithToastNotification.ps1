@@ -14,10 +14,6 @@ Remove-Item alias:\Uninstall-ChocolateyPackage -ErrorAction SilentlyContinue
 # Execute Uninstall-ChocolateyInstallPackage actual
 Uninstall-ChocolateyPackage @args
 
-# Ensure this ONLY runs on Windows 10 - this will be removed and dealt with via a BurntToast dependency next version
-$IsWin10=[Environment]::OSVersion.Version.Major
-if (!($IsWin10 -eq "10")){return}
-
 # Get name of program being uninstalled from the .nuspec
 $chocolateySoftwareName = Get-ChocolateySoftwareName
 
