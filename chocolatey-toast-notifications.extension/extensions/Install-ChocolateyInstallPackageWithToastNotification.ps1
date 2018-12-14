@@ -17,10 +17,6 @@ if ($env:ChocolateyLicenseValid -eq 'true') {
 # Execute Install-ChocolateyInstallPackage actual (or Chocolatey licensed version alias) normally
 Install-ChocolateyInstallPackage @args 
 
-# Ensure this ONLY runs on Windows 10 - this will be removed and dealt with via a BurntToast dependency next version
-$IsWin10=[Environment]::OSVersion.Version.Major
-if (!($IsWin10 -eq "10")){return}
-
 # Get name of program being installed from the .nuspec
 $chocolateySoftwareName = Get-ChocolateySoftwareName
 
