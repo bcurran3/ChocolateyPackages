@@ -1,29 +1,19 @@
 ﻿$packageName    = 'irfanviewplugins'
-$installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\irfanview_plugins_451_setup.exe"
-$checksum       = '25FCDD3A7A52C505A827505A28CC93B2B7729559209E21F447D9C855A279279B'
-$url64          = "$toolsDir\irfanview_plugins_x64_451_setup.exe"
-$checksum64     = '19C3FF7168EC96972CD4ED5C8CE79C320392C6E94FD2CA024FC78B07D6953442'
-$validExitCodes = @(0)
-$silentArgs     = "/silent"
-
+$url            = "$toolsDir\iview452_plugins_setup.exe"
+$url64          = "$toolsDir\iview452_plugins_x64_setup.exe"
 					  
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = $installerType
-  url           = $url
-  url64bit      = $url64
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = ''
-  checksum      = $checksum
-  checksumType  = 'sha256'
-  Checksum64    = $checksum64
-  ChecksumType64= 'sha256'
+  packageName    = $packageName
+  fileType       = 'EXE'
+  file           = $url
+  file64         = $url64
+  validExitCodes = @(0)
+  silentArgs     = '/silent'
+  softwareName   = ''
 }
 
-Install-ChocolateyPackage @packageArgs  
+Install-ChocolateyInstallPackage @packageArgs  
 
 Remove-Item $url | out-null
 Remove-Item $url64 | out-null

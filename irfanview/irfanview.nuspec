@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanview</id>
-    <version>4.51</version>
+    <version>4.52</version>
     <title>IrfanView (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanview</packageSourceUrl>		
     <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>http://www.irfanview.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/04f6a6eaed68793bfdbf951606879239ec9aaa0a/icons/irfanview.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanview/irfanview_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ![Screenshot of IrfanView](http://www.irfanview.com/images/startbild_engl-small.gif)
@@ -44,6 +44,10 @@ The following package parameters may be passed directly to the program's install
 If no parameters are passed, the following is assumed: `--params '/assoc=1 /group=1 /ini=%APPDATA%\IrfanView'`.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 </description>
     <summary>Fast and compact image viewer and converter</summary>
     <copyright>© Irfan Skiljan</copyright>

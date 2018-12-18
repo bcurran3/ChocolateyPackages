@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.51</version>
+    <version>4.52</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>		
     <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
-    <iconUrl>http://www.irfanview.com/images/kater_li_oben.gif</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ###Available PlugIns and current versions:
@@ -19,6 +19,10 @@ There are too many plugins to list in the space of the description.
 Please see the [IrfanView PlugIns](http://www.irfanview.com/plugins.htm) web page for the current list and versions.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanviewplugins/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
     <summary>Additional plugins for IrFanView</summary>
     <copyright>© Irfan Skiljan</copyright>
@@ -27,7 +31,7 @@ Please see the [IrfanView PlugIns](http://www.irfanview.com/plugins.htm) web pag
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>	
     <dependencies>
-      <dependency id="irfanview" version="4.51" />	  	
+      <dependency id="irfanview" version="4.52" />	  	
     </dependencies>
   </metadata>
   <files>

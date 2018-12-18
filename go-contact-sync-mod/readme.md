@@ -1,7 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* I plan to change this to an embedded binary in the future. 
+* This package includes binaries. This release will work forever. 
 * I endorse and use this program.
 
 ***
