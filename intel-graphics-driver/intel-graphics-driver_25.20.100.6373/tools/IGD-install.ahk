@@ -22,10 +22,10 @@ Send !n
 ; --------- below could be improved ----------
 
 ; kludge as there's no difference in the window information if it's installing or done
-; waiting 1 1/2 minutes for drivers to finish installing
+; waiting 2 minutes for drivers to finish installing
 ; probably should loop sending !n until the next window pops up
 WinWaitActive, ahk_exe igxpin.exe , Setup Progress , 300
-sleep 9000
+sleep 1200
 WinActivate
 Send !n
 

@@ -1,7 +1,7 @@
-﻿
-VERIFICATION
+﻿==================== irfanView All Plugins ====================
 
-Binaries included in this package were downloaded by the packager, bcurran3. SHA256 signatures were manually created and put in the package .nuspec file.
+Binaries included in this package were downloaded by the packager, bcurran3. 
 
-Additionally checksums can be verified at http://www.irfanview.com/plugins.htm
+Checksums can be verified at http://www.irfanview.com/plugins.htm
 
+==================== irfanView All Plugins ====================

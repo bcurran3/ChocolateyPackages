@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>revo-uninstaller</id>
-    <version>2.0.5.0</version>
+    <version>2.0.6.0</version>
     <title>Revo Uninstaller Free (Install)</title>
     <authors>VS Revo Group Ltd.</authors>
     <owners>bcurran3, jivkok</owners>
@@ -10,9 +10,11 @@
     <copyright>VS Revo Group Ltd.</copyright>	
     <projectUrl>https://www.revouninstaller.com</projectUrl>
 	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/revo-uninstaller</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/revo-uninstaller/revo-uninstaller_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/revo-uninstaller/revo-uninstaller_icon.png</iconUrl>
 	<docsUrl>https://www.revouninstaller.com/revo_uninstaller_how_to.html</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Revo Uninstaller Pro is innovative uninstaller program which helps you to uninstall unnecessary software and remove easily unwanted programs installed on your personal computer.</summary>
+    <tags>revo uninstall uninstaller trial binary</tags>	
     <description>
 ![Screenshot of Revo Uninstaller (Pro)](https://www.revouninstaller.com/images/screens/All_Programs_Icons.jpg)	
 
@@ -58,7 +60,8 @@ Here are just a few reasons to choose Revo Uninstaller for all of your uninstall
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***	
 	</description>
-    <summary>Revo Uninstaller Pro is innovative uninstaller program which helps you to uninstall unnecessary software and remove easily unwanted programs installed on your personal computer.</summary>
-    <tags>revo uninstall uninstaller trial</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>
