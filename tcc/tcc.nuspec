@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tcc</id>
-    <version>23.0.31.0</version>
-    <title>Total Command Console (trial) (Install)</title>
+    <version>24.0.26.0</version>
+    <title>Total Command Console (Trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tcc</packageSourceUrl>		
@@ -33,7 +33,7 @@ TCC works with your existing command line applications and batch files, but offe
 ###Features
 Too many to list due to nuspec description constraints. [Please view the website.](https://jpsoft.com/products/tcc-cmd-prompt.html)
 
-**30 DAY TRIAL: License is $69.95**
+**30 DAY TRIAL: License is $69.95 / Upgrade is $34.95**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tcc/readme.md)**
 

@@ -1,9 +1,11 @@
-﻿-------------------------------------------------------------------------------
+﻿==================== Shark007's Advanced Codecs ====================
+
 The following information in LICENSE.txt has been copied and pasted from
 C:\Program Files (x86)\Shark007\Advanced\license.rtf post install.
 
 NOTE: There are additional software licenses following this one as well.
--------------------------------------------------------------------------------
+
+==================== Shark007's Advanced Codecs ====================
 
 Homepage: http://shark007.net
 

@@ -1,13 +1,7 @@
 ﻿$packageName    = 'irfanview'
-$installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\iview451_setup.exe"
-$checksum       = '0A5400988954EC933EDAC01B8822F9937BB0B6BF2B1337B69CB3347BCA375DB2'
-$checksumType   = 'sha256'
-$url64          = "$toolsDir\iview451_x64_setup.exe"
-$checksum64     = 'C4CAC895DBC4A3C31565C3947D48949A7EB611696C1D4FDE0161710C35460E6C'
-$checksumType64 = 'sha256'
-$validExitCodes = @(0)
+$url            = "$toolsDir\iview452_setup.exe"
+$url64          = "$toolsDir\iview452_x64_setup.exe"
 $arguments      = @{}
 $packageParameters = $env:chocolateyPackageParameters
 
@@ -87,19 +81,15 @@ Write-Debug "Silent arguments Chocolatey will use are: $silentArgs"
 
 $packageArgs = @{
   packageName   = $packageName
-  fileType      = $installerType
-  url           = $url
-  url64bit      = $url64
-  validExitCodes= $validExitCodes
+  fileType      = 'EXE'
+  file           = $url
+  file64      = $url64
+  validExitCodes= @(0)
   silentArgs    = $silentArgs
   softwareName  = 'IrfanView*'
-  checksum      = $checksum
-  checksumType  = $checksumType
-  Checksum64    = $checksum64
-  ChecksumType64= $checksumType64
 }
 
-Install-ChocolateyPackage @packageArgs 	
+Install-ChocolateyInstallPackage @packageArgs 	
 
 Remove-Item $url | out-null
 Remove-Item $url64 | out-null

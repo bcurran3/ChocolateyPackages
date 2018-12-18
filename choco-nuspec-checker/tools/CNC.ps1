@@ -125,4 +125,19 @@ Write-Warning "  ** There is a tag named chocolatey. This will triger a message 
 Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Magenta
 }
 
+if (($NuspecIconURL.contains("PNG")) -or ($NuspecIconURL.Contains("SVG")))
+{
+}
+
 Write-Host
+
+
+return
+
+
+
+
+# TDL
+# check icon to ensure png or svg - As per the packaging guidelines icons should be either a png or svg file. 
+# show dependencies and version - •	Package contains dependencies with no specified version. You should at least specify a minimum version of a dependency. 
+# Check for common binary types and mention: inary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have distribution rights. 

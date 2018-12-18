@@ -1,7 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
-* I might repackage this with the binary included in the near future as unmodified redistribution is allowed. 
+* This package includes binaries. This release will work forever.
 * Website will pop up post install giving options to buy the Pro version.
 
 ***

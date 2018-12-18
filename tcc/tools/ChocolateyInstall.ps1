@@ -1,7 +1,7 @@
 $packageName = 'tcc'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://jpsoft.com/downloads/v23/tcc.exe'
-$checksum    = '90DA00A26788A3469A7C6685DF16A4A51D1EBA041FA808C3FF0D168654AABAC4'
+$url         = 'https://jpsoft.com/downloads/v24/tcc.exe'
+$checksum    = '7598C0A1D1FCDEF43BCB48E2A7510A918D56994803E76F17D377DC04AD6EFFD1'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -9,7 +9,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
   silentArgs    = '/quiet'
-  softwareName  = 'TCC 23' 
+  softwareName  = 'TCC 24' 
   checksum      = $checksum
   checksumType  = 'sha256'  
   }

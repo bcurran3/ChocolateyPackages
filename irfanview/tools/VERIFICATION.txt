@@ -1,7 +1,9 @@
-﻿
-VERIFICATION
+﻿=================== IrfanView ===================
 
-Binaries included in this package were downloaded by the packager, bcurran3. SHA256 signatures were manually created and put in the package .nuspec file.
 
-Additionally checksums can be verified (assumably by the author) at https://www.fosshub.com/IrfanView.html
+Binaries included in this package were downloaded by the packager, bcurran3. 
+
+Checksums can be verified (assumably by the author) at https://www.fosshub.com/IrfanView.html
+
+=================== IrfanView ===================
 
