@@ -3,9 +3,9 @@ $packageName    = 'qdir'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $url            = "$toolsDir\Q-Dir_Installer.zip"
-$checksum       = 'A14F8491ADE0FF78B4989C466F9D44380375433445D6231268921155245EE776'
+$checksum       = 'DAC3FD356F543007B08FFE9AC43CEE3752A47DF06EEF91B0546678C5B1364FC4'
 $url64          = "$toolsDir\Q-Dir_Installer_x64.zip"
-$checksum64     = '6A47BFFBEC93AE2FBE06056AC26874ED258B0F9BF512D49C17D7104D03C20CF5'
+$checksum64     = '495082A9A9318F00F04841CEAC86148A7B3F65D91F9682FB7DEE8C76CB6EBB38'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -39,5 +39,5 @@ $packageArgs = @{
  
 Install-ChocolateyInstallPackage @packageArgs
 
-Install-BinFile -Name qdir -Path $env:programfiles\Q-Dir\Q-Dir.exe
+Install-BinFile -Name qdir -Path $env:ProgramFiles\Q-Dir\Q-Dir.exe
 Remove-Item "$toolsDir\q*.zip" | out-null
