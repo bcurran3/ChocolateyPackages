@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>backupper-server</id>
-    <version>4.1.0</version>
+    <version>4.6.1</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/backupper-server</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>AOMEI Backupper Server (Install)</title>
@@ -44,11 +44,12 @@ What does Backupper Server include?
 30 day free trial. $169.00 to purchase. [Compare editions](http://www.backup-utility.com/edition-comparison.html)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/backupper-server/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>http://www.backup-utility.com/changelog.html</releaseNotes>
-	<dependencies>
-      <dependency id="autohotkey" />
-    </dependencies>			
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

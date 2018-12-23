@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dokany</id>
-    <version>1.2.0.1000</version>
+    <version>1.2.1.2000</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dokany</packageSourceUrl>		
     <title>dokany (Install)</title>
@@ -14,6 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/dokan-dev/dokany</projectSourceUrl>
     <docsUrl>https://github.com/dokan-dev/dokany/wiki</docsUrl>
+	<iconUrl>https://dokan-dev.github.io/images/walnut.png</iconUrl>
     <bugTrackerUrl>https://github.com/dokan-dev/dokany/issues</bugTrackerUrl>
     <tags>dokany fuse filesystem</tags>
     <summary>dokany is a ser mode file system library for windows with FUSE Wrapper</summary>
@@ -66,7 +67,6 @@ To learn more about Dokan file system development, see the API documentation.
 	<dependencies>
       <dependency id="vcredist2017" />
       <dependency id="kb2999226" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		  
     </dependencies>	
   </metadata>
   <files>
