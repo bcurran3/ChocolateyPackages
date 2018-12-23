@@ -1,10 +1,9 @@
 # CNC.ps1 Copyleft 2018 by Bill Curran AKA BCURRAN3
 
-$CNCver        = "0.0.1 (12/07/2018)" # Version of this script
+$CNCver        = "2018.12.22" # Version of this script
 Write-Host
 Write-Host "CNC.ps1 v$CNCver - (unofficial) Chocolatey .nuspec Checker ""Put it through the Bill.""" -ForegroundColor white
 Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
-Write-Host
 
 # Get and parse .nuspec in current directory
 #ENCHANCEMENT: Should accept a filespec and use that as well
@@ -19,7 +18,7 @@ if (!($LocalnuspecFile)) {
 function Validate-URL($url){
 if (($url -match "http://") -or ($url -match "https://")){
    } else {
-     Write-Warning "  ** $url is not a valid URL"
+     Write-Warning "  ** URL is not a valid URL"
    }
 }
 
@@ -51,8 +50,9 @@ $NuspecTags = $nuspecFile.package.metadata.tags
 $NuspecTitle = $nuspecFile.package.metadata.title
 $NuspecVersion = $nuspecFile.package.metadata.version
 
-# Report empty elements
-Write-Host ""CNC summary of $LocalnuspecFile.Name:"" -ForegroundColor magenta
+# Report empty elements and misc possible oversights
+Write-Host
+Write-Host "CNC summary of "$LocalnuspecFile.Name":" -ForegroundColor magenta
 if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this element is a requirement."}
 if (!($NuspecBugTrackerURL)) {
      Write-Warning "  ** <bugTrackerUrl> element is empty"
@@ -74,6 +74,17 @@ if (!($NuspecIconURL)) {
    } else {
      Validate-URL $NuspecIconURL
 	}
+if ($NuspecIconURL -match "raw.githubusercontent"){
+    Write-Warning "  ** Your package icon links directly to GitHub. Please use a CDN such as:"
+    Write-Host "              https://www.staticaly.com, https://raw.githack.com, or https://gitcdn.link." -ForeGround Cyan
+  }
+
+$AcceptableIconExts=@("png","svg")
+$IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
+if (!($IconExt)){
+    Write-Warning "  ** .PNG and SVG are the preferred package icon file types." 
+  }
+
 if (!($NuspecID)) {Write-Warning "  ** <id> element is empty, this element is a requirement."}
 if (!($NuspecLicenseURL)) {
     Write-Warning "  ** <licenseUrl> element is empty"
@@ -111,33 +122,27 @@ if (!($NuspecTitle)) {Write-Warning "  ** <title> element is empty"}
 if (!($NuspecVersion)) {Write-Warning "  ** <version> element is empty, this element is a requirement."}
 
 if ($NuspecAuthors -eq $NuspecOwners){
-  Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
-  Write-Host 'The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Magenta
+    Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
+    Write-Host 'The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Magenta
 }
 
 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
-  Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will triger a message from the verifier:"
-  Write-Host 'ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Magenta
+    Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will triger a message from the verifier:"
+    Write-Host 'ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Magenta
 }
 
 if ($NuspecTags -match "chocolatey"){
-Write-Warning "  ** There is a tag named chocolatey. This will triger a message from the verifier:"
-Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Magenta
-}
-
-if (($NuspecIconURL.contains("PNG")) -or ($NuspecIconURL.Contains("SVG")))
-{
+    Write-Warning "  ** There is a tag named chocolatey. This will triger a message from the verifier:"
+    Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Magenta
 }
 
 Write-Host
-
-
+Write-Host "Found CNC.ps1 useful?" -ForegroundColor white
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor white
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor white
 return
 
-
-
-
 # TDL
-# check icon to ensure png or svg - As per the packaging guidelines icons should be either a png or svg file. 
 # show dependencies and version - •	Package contains dependencies with no specified version. You should at least specify a minimum version of a dependency. 
-# Check for common binary types and mention: inary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have distribution rights. 
+# Check for common binary types and mention: binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have distribution rights. 
+# What else?

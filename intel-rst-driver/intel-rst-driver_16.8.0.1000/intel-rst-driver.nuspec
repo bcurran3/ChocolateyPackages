@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>16.8.0.1000</version>
+    <version>16.8.0.1020181220</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver/intel-rst-driver_16.8.0.1000</packageSourceUrl>		
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
@@ -42,7 +42,7 @@ Note: Contact your system manufacturer prior to installing these applications or
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/28255/eng/ReadMe.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/28400/eng/Readme.txt</releaseNotes>
 	<dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
     </dependencies>		

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>0.0.1</version>
+    <version>2018.12.22</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
@@ -21,15 +21,13 @@
     <description>
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)]()
 
-# NOTE TO MODERATORS - DO NOT PASS - THIS IS A FIRST DRAFT AND TECHNICALLY PRELIM
-
-#**choco-nuspec-checker** (CNC) is a PowerShell script designed for Chocolatey package creators/maintainers to check Chocolatey .nuspec files for common errors and ommisions.
+#**choco-nuspec-checker** (CNC) is a PowerShell script designed for Chocolatey package maintainers (creators) to check Chocolatey .nuspec files for common errors and ommisions.
 
 
 ###FEATURES:
 * **CNC** checks for all tags and reports if any are missing
-* **CNC** checks for 
-* **CNC** checks for 
+* **CNC** checks for common oversights and reports about them
+* **CNC** checks for common verifier warnings
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	</description>

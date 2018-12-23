@@ -2,10 +2,13 @@
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzippedfiles"
 $bits           = Get-ProcessorBits
-$url            = 'https://downloadmirror.intel.com/28147/a08/WiFi_20.80.0_PROSet32.zip'
-$checksum       = 'F7A5D0CF7D2B1366C6E91562AC78542BCF44855C2E341C9AFD85D4A4CDB5BD49'
-$url64          = 'https://downloadmirror.intel.com/28147/a08/WiFi_20.80.0_PROSet64.zip'
-$checksum64     = 'FD7291E5D86ED47F50735575B60B7B4856625DEE56B7FDC610E65BA662EB35B0'
+$url            = 'https://downloadmirror.intel.com/28358/a08/WiFi_20.100_PROSet32_Win10.exe'
+$checksum       = 'E58627DD0079E087CF0BD61F7707520A4D36B28F1A8509D075B4E8643BBA37A0'
+$url64          = 'https://downloadmirror.intel.com/28358/a08/WiFi_20.100_PROSet64_Win10.exe'
+$checksum64     = '4F698B3AF33299831B94BDB4C98D099BBDE8B5236CD0B87BD47F675E72FF19C9'
+
+# Verify Windows 10 and throw if not
+if (!(Test-Dependency "dependency-windows10")) {throw}
 
 # No need to check for hardware, drivers install even if an Intel PROSet/Wireless card is not found
 

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-proset-drivers</id>
+    <version>20.100.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
+    <title>Intel® PROSet/Wireless Software and Drivers for Windows® 10 (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://www.intel.com/content/www/us/en/support/articles/000005649/network-and-i-o/wireless-networking.html</projectUrl>
+    <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>intel proset wifi network adapter nic driver drivers windows notsilent</tags>
+    <summary>Intel® PROSet/Wireless Software and Drivers</summary>
+    <description>
+[Alternate projectUrl](https://downloadcenter.intel.com/download/28359)
+	
+##Purpose
+
+Intel® PROSet/Wireless Software is recommended for IT administrators, large corporations, universities, and medical centers. Smaller organizations may also find the installation and deployment features useful.
+
+##Wi-Fi Driver
+
+The Intel® PROSet/Wireless Software package includes Wi-Fi drivers for different Intel® Wireless Adapters supported by this package. The Wi-Fi driver version you install to your system may be different than the Intel PROSet/Wireless Software package version containing this driver.
+For example, in Intel PROSet/Wireless Software 19.50.1, the Wi-Fi driver version for Intel® Dual Band Wireless-AC 7260 is 18.33.6.2.
+
+See [Understanding the Intel® PROSet/Wireless Software Version and the Driver Version](https://www.intel.com/content/www/us/en/support/articles/000026008/network-and-i-o/wireless-networking.html) for further details.
+ 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-proset-drivers/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+    <releaseNotes>https://downloadmirror.intel.com/28358/eng/ReleaseNotes_WiFi_20_100_0.pdf</releaseNotes>
+    <dependencies>
+	  <dependency id="chocolatey-misc-helpers.extension" />	
+      <dependency id="dependency-windows10" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
