@@ -14,8 +14,10 @@ $ShortcutName7 = 'openHAB Logs.lnk'
 
 if (!($env:JAVA_HOME)) {
     Write-Warning "  ** JAVA_HOME enviromental variable not set. You should set this."
-   } else {
-    Write-Host "  ** JAVA_HOME is currently set to $env:JAVA_HOME" -ForeGround Magenta
+   } 
+
+if (!(Test-Path $env:JAVA_HOME)){
+    Write-Warning "  ** JAVA_HOME is set to $env:JAVA_HOME but $env:JAVA_HOME does not exist."
    }
 
 $packageArgs = @{
