@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>6.92.275</version>
+    <version>7.10.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
@@ -39,6 +39,7 @@
 * M535 Bluetooth Mouse
 * M585 Multi-Device Mouse
 * M590 Multidevice Silent Mouse
+* M705 Marathon Mouse
 * M720 Triathlon Multi-Device Mouse
 * MK235 Wireless Keyboard and Mouse Combo
 * MK850 Performance Wireless Keyboard and Mouse Combo
@@ -47,9 +48,9 @@
 * MX Ergo Wireless Trackball
 * MX Master 2S Wireless Mouse
 * MX Master Wireless Mouse
-* Rechargeable Trackpad for Mac
+* MX900 Performance
 * Ultrathin Touch Mouse T630
-* Ultrathin Touch Mouse T631 for Mac
+* Wireless Combo MK330
 * Wireless Mini Mouse M187
 * Wireless Mouse M185
 * Wireless Mouse M235

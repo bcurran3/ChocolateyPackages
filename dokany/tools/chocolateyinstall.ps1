@@ -1,9 +1,9 @@
 ﻿$packageName    = 'dokany'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.2.0.1000/Dokan_x86.msi' 
-$checksum       = 'F3086854373C68214CAEBF3EF8E2688A530EBC0C52179A80E42A866B6D993A0B'
-$url64          = 'https://github.com/dokan-dev/dokany/releases/download/v1.2.0.1000/Dokan_x64.msi' 
-$checksum64     = 'DF82917530BC023BEBE352679B82EA76F99337D7E45E91EAC089FA416015D3A6'
+$url            = 'https://github.com/dokan-dev/dokany/releases/download/v1.2.1.2000/Dokan_x86.msi' 
+$checksum       = '19371DBFD65EF554C23E5C43A390686BB152F0A41F66D23FAB56213CB36EF333'
+$url64          = 'https://github.com/dokan-dev/dokany/releases/download/v1.2.1.2000/Dokan_x64.msi' 
+$checksum64     = '735FB096DB5CC1DD02A0D91951E2638CCA4F5F2F3A0AEEF9ABF270E2BD051196'
 
 $packageArgs = @{
   packageName   = $packageName

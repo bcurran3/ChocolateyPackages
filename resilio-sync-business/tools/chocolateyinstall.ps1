@@ -1,20 +1,17 @@
 ﻿$packageName    = 'resilio-sync-business'
-$installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://download-cdn.resilio.com/stable/windows/cc/2501/Resilio-Sync.exe'
-$checksum       = '84256BA87587A50C9FF2D4D4E846729A3B8CF588D41C3BAAB42706EE35065382'
+$checksum       = '6E9FB31BB1EB4D29BC06B27E2F137371B83C4C5FA4263C28CDAE31EE0BFD0ADE'
 $url64          = 'https://download-cdn.resilio.com/stable/windows64/cc/2501/Resilio-Sync_x64.exe'
-$checksum64     = 'C75284DF332DE80E73B24E1E1E885ADCF2276C62D947522D066443DD89D40BE6'
-$silentArgs     = '/S'
-$validExitCodes = @(0, 1)
+$checksum64     = '4441E71C4390EB5F9F4D0E48483493CEC8E3B86BDEADBACA5ABEE70F803F5B25'
 
 $packageArgs = @{
   packageName    = $packageName
-  fileType       = $installerType
+  fileType       = 'EXE'
   url            = $url
   url64          = $url64
-  validExitCodes = $validExitCodes
-  silentArgs     = $silentArgs
+  validExitCodes = @(0, 1)
+  silentArgs     = '/S'
   softwareName   = 'Resilio Sync'
   checksum       = $checksum
   checksum64     = $checksum64
@@ -22,13 +19,7 @@ $packageArgs = @{
   checksumType64 = 'sha256' 
 }
 
+Start-CheckandStop "Resilio Sync"
 Install-ChocolateyPackage @packageArgs
-
 Start-Sleep -s 5
-  
-if((get-process "Resilio Sync" -ea SilentlyContinue) -eq $Null){ 
-    Write-Host "Resilio Sync currently NOT running." 
-  }else{ 
-    Write-Host "Stopping Resilio Sync process..."
-    Stop-Process -processname "Resilio Sync"
-	}
+if ($ProcessWasRunning -eq $False) {Start-CheckandStop "Resilio Sync"}
