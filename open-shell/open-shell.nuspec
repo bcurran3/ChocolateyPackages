@@ -6,17 +6,21 @@
     <title>Open-Shell (Install)</title>
     <authors>Ivo Beltchev</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/chocolatey/chocolatey-coreteampackages/tree/master/automatic/classic-shell</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-shell</packageSourceUrl>	
     <copyright>Copyright Ivo Beltchev</copyright>	
     <licenseUrl>https://github.com/Open-Shell/Open-Shell-Menu/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://github.com/Open-Shell/Open-Shell-Menu</projectUrl>
 	<projectSourceUrl>https://github.com/Open-Shell/Open-Shell-Menu/tree/master/Src</projectSourceUrl>
+	<docsUrl>http://www.classicshell.net/faq/</docsUrl>
+	<mailingListUrl>http://www.classicshell.net/forum/</mailingListUrl>
 	<bugTrackerUrl>https://github.com/Open-Shell/Open-Shell-Menu/issues</bugTrackerUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/Open-Shell/Open-Shell-Menu/master/Src/Setup/OpenShell.ico</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/open-shell/open-shell_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Classic style Start Menu for Windows 7, 8, 8.1, 10</summary>
     <tags>classic-shell open-shell shell freeware start-menu binary</tags>	
     <description>
+![Screenshot of Open-Shell](http://www.classicshell.net/images/startmenu3.png)
+
 ###Originally Classic Shell by Ivo Beltchev
 
 ## Features
