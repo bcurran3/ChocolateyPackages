@@ -1,11 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
+$url      = 'https://www.danhinsley.com/downloads/MetaXSetup.msi'
+$checksum = '13D60996BF0C3EE78F03223DBE781CB50204BEE84FC7741F0ACF22D3978FFAE0'
 
 $arguments = @{
     packageName    = $env:ChocolateyPackageName
     softwareName   = 'MetaX for Windows'
-    url            = 'https://www.danhinsley.com/downloads/MetaXSetup.msi'
-    checksum       = '186AFD435DCB49528943F68EF59E66A74CF040A0BFA23C6FCE480DE721A6DE03'
-    fileType       = 'msi'
+    fileType       = 'MSI'
+    url            = $url
+    checksum       = $checksum
     checksumType   = 'sha256'
     silentArgs     = '/quiet'
     validExitCodes = @(0, 1641, 3010)
