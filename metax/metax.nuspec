@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>metax</id>
-    <version>2.67</version>
-    <title>MetaX (trial) (Install)</title>
+    <version>2.68</version>
+    <title>MetaX (Trial) (Install)</title>
     <authors>Knowledge Design Software</authors>
     <owners>the-running-dev, bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/metax</packageSourceUrl>	
