@@ -1,7 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
-* I am a paid registered customer of this program.
+* I am a paid registered customer of this program. I recommend it due to it is the fastest tag editor I've found yet.
 
 ***
 

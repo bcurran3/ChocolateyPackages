@@ -14,11 +14,11 @@ $ShortcutName7 = 'openHAB Logs.lnk'
 
 if (!($env:JAVA_HOME)) {
     Write-Warning "  ** JAVA_HOME enviromental variable not set. You should set this."
-   } 
-
-if (!(Test-Path $env:JAVA_HOME)){
-    Write-Warning "  ** JAVA_HOME is set to $env:JAVA_HOME but $env:JAVA_HOME does not exist."
-   }
+   } else {
+     if (!(Test-Path $env:JAVA_HOME)){
+         Write-Warning "  ** JAVA_HOME is set to $env:JAVA_HOME but $env:JAVA_HOME does not exist."
+        }
+	}
 
 $packageArgs = @{
   packageName   = $packageName
@@ -40,7 +40,7 @@ Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName3" 
 Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName4" -targetPath "http://docs.openhab.org/" -IconLocation "$toolsDir\openHAB.ico"
 Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName5" -targetPath "https://community.openhab.org/" -IconLocation "$toolsDir\openHAB.ico"
 Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName6" -targetPath "$toolsDir\runtime\bin\client.bat" -WorkingDirectory "$toolsDir\runtime\bin" -IconLocation "$toolsDir\openHAB.ico"
-New-Item "$toolsDir\userdata\logs" -ItemType Directory 
+New-Item "$toolsDir\userdata\logs" -ItemType Directory -EA SilentlyContinue
 Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName7" -targetPath "$toolsDir\userdata\logs" -IconLocation "$toolsDir\openHAB.ico" 
 
 $WhoAmI=whoami
