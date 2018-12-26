@@ -5,21 +5,21 @@
     <id>choco-protocol-support</id>
     <version>0.0.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support-support</projectSourceUrl>	
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support-support</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</packageSourceUrl>
     <title>(unofficial) choco:// Protocol support</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support-support</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <copyright>Copyright 2018 Bill Curran</copyright>
-    <licenseUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support-support/tools/LICENSE.txt</licenseUrl>
+    <copyright>Public Domain 2018 Bill Curran</copyright>
+    <licenseUrl>https://en.wikipedia.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 choco protocol cinst chocolateasy winconfig</tags>
-    <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol and choco-protocol-support-support.cmd (with sudo)</summary>
+    <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol and choco-protocol-support.cmd (with sudo)</summary>
     <description>
-![screenshot of choco-protocol-support-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_screenshot.png)	
+![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_screenshot.png)	
 	
 #Implements installing of Chocolatey packages from the web using choco:// Protocol with choco-protocol-support.cmd (and Sudo).
 
