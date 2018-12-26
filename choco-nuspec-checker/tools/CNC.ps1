@@ -1,8 +1,8 @@
 # CNC.ps1 Copyleft 2018 by Bill Curran AKA BCURRAN3
 
-$CNCver        = "2018.12.22" # Version of this script
+$CNCver        = "2018.12.26" # Version of this script
 Write-Host
-Write-Host "CNC.ps1 v$CNCver - (unofficial) Chocolatey .nuspec Checker ""Put it through the Bill.""" -ForegroundColor white
+Write-Host "CNC.ps1 v$CNCver - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
 Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 
 # Get and parse .nuspec in current directory
@@ -13,13 +13,21 @@ if (!($LocalnuspecFile)) {
 	return
    }
 
-# Validate that URL elements are actually URLs
-# ENHANCEMENT: Check the URL resource is valid
+# Validate that URL elements are actually URLs and verify they're working
 function Validate-URL($url){
 if (($url -match "http://") -or ($url -match "https://")){
-   } else {
-     Write-Warning "  ** URL is not a valid URL"
-   }
+    $HTTP_Request = [System.Net.WebRequest]::Create("$url")
+    $HTTP_Response = $HTTP_Request.GetResponse()
+    $HTTP_Status = [int]$HTTP_Response.StatusCode
+    if ($HTTP_Status -eq 200) {
+	   # do nothing, it's good!
+       } else {
+         Write-Warning "  **  $url might be down or bad, please check."
+       }
+    $HTTP_Response.Close()
+  } else {
+    Write-Warning "  ** $url is not a valid URL"
+  }
 }
 
 # Import package.nuspec file to get values
@@ -52,7 +60,7 @@ $NuspecVersion = $nuspecFile.package.metadata.version
 
 # Report empty elements and misc possible oversights
 Write-Host
-Write-Host "CNC summary of "$LocalnuspecFile.Name":" -ForegroundColor magenta
+Write-Host "CNC summary of "$LocalnuspecFile.Name":" -ForegroundColor Magenta
 if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this element is a requirement."}
 if (!($NuspecBugTrackerURL)) {
      Write-Warning "  ** <bugTrackerUrl> element is empty"
@@ -123,17 +131,17 @@ if (!($NuspecVersion)) {Write-Warning "  ** <version> element is empty, this ele
 
 if ($NuspecAuthors -eq $NuspecOwners){
     Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
-    Write-Host 'The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Magenta
+    Write-Host 'The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Cyan
 }
 
 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
-    Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will triger a message from the verifier:"
-    Write-Host 'ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Magenta
+    Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
+    Write-Host 'ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Cyan
 }
 
 if ($NuspecTags -match "chocolatey"){
-    Write-Warning "  ** There is a tag named chocolatey. This will triger a message from the verifier:"
-    Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Magenta
+    Write-Warning "  ** There is a tag named chocolatey. This will trigger a message from the verifier:"
+    Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Cyan
 }
 
 Write-Host
