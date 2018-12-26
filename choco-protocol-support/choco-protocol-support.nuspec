@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-protocol-support</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support-support</projectSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support-support</packageSourceUrl>
+    <title>(unofficial) choco:// Protocol support</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support-support</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>Copyright 2018 Bill Curran</copyright>
+    <licenseUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support-support/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 choco protocol cinst chocolateasy winconfig</tags>
+    <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol and choco-protocol-support-support.cmd (with sudo)</summary>
+    <description>
+![screenshot of choco-protocol-support-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_screenshot.png)	
+	
+#Implements installing of Chocolatey packages from the web using choco:// Protocol with choco-protocol-support.cmd (and Sudo).
+
+###WHO IS THIS FOR?
+**choco-protocol-support** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **choco-protocol-support** allows you to install Chocolatey packages by simply clicking choco:// URLs in your web browser. **choco-protocol-support** is also useful for support professionals who know the difficulty of getting end users to type in commands correctly. Now you can give end users a URL via e-mail or corporate software web page to click and have a Chocolatey package installed!
+
+If you like the convienance of this package, you should also check out [Install Chocolatey Packages from your Web Browser](https://chocolatey.org/packages/choco-install-packages-from-web-winconfig) which is very similar in concept as well as [(unofficial) Chocolatey Shortcuts (Config)](https://chocolatey.org/packages/choco-shortcuts-winconfig). All three of these make installing Chocolatey packages very user friendly.
+
+###HOW DOES IT WORK?
+**choco-protocol-support** configures Windows to use choco://packagename URLs and pass them along to **choco-protocol-support.cmd** which then processes the URL and runs Chocolatey's cinst.exe ("choco install" shim) with help from [Sudo](https://chocolatey.org/packages/Sudo) to install the package. [Lets hope this functionality gets built into a future version of Chocolatey](https://github.com/chocolatey/choco/issues/1680) and then this package can be deprecated. UPDATE: Added to Chocolatey 1.0.0 milestone!
+
+###USAGE INSTRUCTIONS:
+Just click a choco://packagename URL on a web page and the package will install after one or two approval clicks. 
+Browser examples: [Chrome](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_chrome_example.png) | [Firefox](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_firefox_example.png) | [Opera](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_opera_example.png)
+
+###**Easy peasy, Chocolateasy!**
+
+###INTRODUCING THE FIRST choco:// URLS ON THE INTERNET:
+(AKA Other fine 3rd party Chocolatey utilities by BCURRAN3)
+[choco://instchoco](choco://instchoco) - (unofficial) InstChoco
+[choco://choco-package-list-backup](choco://choco-package-list-backup) - (unofficial) Choco Package List Backup to Local and Cloud
+[choco://choco-upgrade-all-at-startup](choco://choco-upgrade-all-at-startup) - (unofficial) Choco Upgrade All at Startup
+[choco://choco-upgrade-all-at](choco://choco-upgrade-all-at) - (unofficial) Choco Upgrade All at
+[choco://choco-cleaner](choco://choco-cleaner) - (unofficial) Choco Cleaner
+[choco://choco-shortcuts-winconfig](choco://choco-shortcuts-winconfig) - (unofficial) Chocolatey Shortcuts 
+[choco://chocolatey-toast-notifications.extension](choco://chocolatey-toast-notifications.extension) - (unofficial) Chocolatey Toast Notifications 
+[choco://chocolatey-preinstaller-checks.extension](choco://chocolatey-preinstaller-checks.extension) - (unofficial) Chocolatey Preinstaller Checks
+[choco://choco-install-packages-from-web-winconfig](choco://choco-install-packages-from-web-winconfig) - (unofficial) Install Chocolatey Packages from your Web Browser 
+
+####WARNING: Only install one package at a time until such time as Chocolatey v1.x is released. [(REFERENCE)](https://github.com/chocolatey/choco/issues/1579)
+
+**If you find choco-protocol-support useful, please consider donating: 
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+	</description>
+	<releaseNotes>
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support/readme.md)**	
+	</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey" version="(,1.0]" />	
+      <dependency id="sudo" version="1.0" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
