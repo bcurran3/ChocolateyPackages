@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at</id>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectSourceUrl>	
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</packageSourceUrl>

@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2018.12.22</version>
+    <version>2018.12.26</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker</projectUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <copyright>Copyleft Bill Curran</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
