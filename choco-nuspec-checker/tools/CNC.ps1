@@ -13,21 +13,21 @@ if (!($LocalnuspecFile)) {
 	return
    }
 
-# Validate that URL elements are actually URLs and verify they're working
-function Validate-URL($url){
+# Validate that URL elements are actually URLs and verify the URLs are good
+function Validate-URL([string]$element,[string]$url){
 if (($url -match "http://") -or ($url -match "https://")){
     $HTTP_Request = [System.Net.WebRequest]::Create("$url")
     $HTTP_Response = $HTTP_Request.GetResponse()
     $HTTP_Status = [int]$HTTP_Response.StatusCode
+	$HTTP_Response.Close()
     if ($HTTP_Status -eq 200) {
 	   # do nothing, it's good!
        } else {
-         Write-Warning "  **  $url might be down or bad, please check."
+         Write-Warning "  ** $element - $url looks like a bad or non-responding URL, please check."
        }
-    $HTTP_Response.Close()
   } else {
-    Write-Warning "  ** $url is not a valid URL"
-  }
+    Write-Warning "  ** $element - ""$url"" is not a valid URL"
+  }	   
 }
 
 # Import package.nuspec file to get values
@@ -63,71 +63,71 @@ Write-Host
 Write-Host "CNC summary of "$LocalnuspecFile.Name":" -ForegroundColor Magenta
 if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this element is a requirement."}
 if (!($NuspecBugTrackerURL)) {
-     Write-Warning "  ** <bugTrackerUrl> element is empty"
+     Write-Warning "  ** <bugTrackerUrl> - element is empty"
    } else {
-     Validate-URL $NuspecBugTrackerURL
+     Validate-URL "<bugTrackerUrl>" $NuspecBugTrackerURL
 	}
 #if (!($NuspecConflicts)) {Write-Warning "  ** <conflicts> element is empty"} # Built for the future
-if (!($NuspecCopyright)) {Write-Warning "  ** <copyright> element is empty"}
-if (!($NuspecDependencies)) {Write-Warning "  ** <dependencies> element is empty"}
-if (!($NuspecDescription)) {Write-Warning "  ** <description> element is empty, this element is a requirement."}
+if (!($NuspecCopyright)) {Write-Warning "  ** <copyright> - element is empty"}
+if (!($NuspecDependencies)) {Write-Warning "  ** <dependencies> - element is empty"}
+if (!($NuspecDescription)) {Write-Warning "  ** <description> - element is empty, this element is a requirement."}
 if (!($NuspecDocsURL)) {
-    Write-Warning "  ** <docsUrl> element is empty"
+    Write-Warning "  ** <docsUrl> - element is empty"
    } else {
-     Validate-URL $NuspecDocsURL
+     Validate-URL "<docsUrl>" $NuspecDocsURL
 	}
-if (!($NuspecFiles)) {Write-Warning "  ** Files element is empty"}
+if (!($NuspecFiles)) {Write-Warning "  ** <files> - element is empty"}
 if (!($NuspecIconURL)) {
-    Write-Warning "  ** <iconUrl> element is empty"
+    Write-Warning "  ** <iconUrl> - element is empty"
    } else {
-     Validate-URL $NuspecIconURL
+     Validate-URL "<iconUrl>" $NuspecIconURL
 	}
 if ($NuspecIconURL -match "raw.githubusercontent"){
-    Write-Warning "  ** Your package icon links directly to GitHub. Please use a CDN such as:"
+    Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
     Write-Host "              https://www.staticaly.com, https://raw.githack.com, or https://gitcdn.link." -ForeGround Cyan
   }
 
 $AcceptableIconExts=@("png","svg")
 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
 if (!($IconExt)){
-    Write-Warning "  ** .PNG and SVG are the preferred package icon file types." 
+    Write-Warning "  ** <iconURL> - .PNG and .SVG are the preferred package icon file types." 
   }
 
-if (!($NuspecID)) {Write-Warning "  ** <id> element is empty, this element is a requirement."}
+if (!($NuspecID)) {Write-Warning "  ** <id> - element is empty, this element is a requirement."}
 if (!($NuspecLicenseURL)) {
-    Write-Warning "  ** <licenseUrl> element is empty"
+    Write-Warning "  ** <licenseUrl> - element is empty"
    } else {
-     Validate-URL $NuspecLicenseURL
+     Validate-URL "<licenseUrl>" $NuspecLicenseURL
 	}	
 if (!($NuspecMailingListURL)) {
-    Write-Warning "  ** <mailingListUrl> element is empty"
+    Write-Warning "  ** <mailingListUrl> - element is empty"
    } else {
-     Validate-URL $NuspecMailingListURL
+     Validate-URL "<mailingListUrl>" $NuspecMailingListURL
 	}		
-if (!($NuspecOwners)) {Write-Warning "  ** <owners> element is empty"}
+if (!($NuspecOwners)) {Write-Warning "  ** <owners> element is empty, this element is a requirement."}
 if (!($NuspecPackageSourceURL)) {
-    Write-Warning "  ** <packageSourceUrl> element is empty"
+    Write-Warning "  ** <packageSourceUrl> - element is empty"
    } else {
-     Validate-URL $NuspecPackageSourceURL
+     Validate-URL "<packageSourceUrl>" $NuspecPackageSourceURL
 	}		
 if (!($NuspecProjectSourceURL)) {
-    Write-Warning "  ** <projectSourceUrl> element is empty"
+    Write-Warning "  ** <projectSourceUrl> - element is empty"
    } else {
-     Validate-URL $NuspecProjectSourceURL
+     Validate-URL "<projectSourceUrl>" $NuspecProjectSourceURL
 	}	
 if (!($NuspecProjectURL)) {
-    Write-Warning "  ** <projectUrl> element is empty"
+    Write-Warning "  ** <projectUrl> - element is empty, this element is a requirement."
    } else {
-     Validate-URL $NuspecProjectURL
+     Validate-URL "<projectUrl>" $NuspecProjectURL
 	}	
 #if (!($NuspecProvides)) {Write-Warning "  ** <provides> element is empty"} # Built for the future
 if (!($NuspecReleaseNotes)) {Write-Warning "  ** <releaseNotes> element is empty"}
 #if (!($NuspecReplaces)) {Write-Warning "  ** <replaces> element is empty"} # Built for the future
-if (!($NuspecRequireLicenseAcceptance)) {Write-Warning "  ** <requireLicenseAcceptance> element is empty"}
-if (!($NuspecSummary)) {Write-Warning "  ** <summary> element is empty"}
-if (!($NuspecTags)) {Write-Warning "  ** <tags> element is empty"}
-if (!($NuspecTitle)) {Write-Warning "  ** <title> element is empty"}
-if (!($NuspecVersion)) {Write-Warning "  ** <version> element is empty, this element is a requirement."}
+if (!($NuspecRequireLicenseAcceptance)) {Write-Warning "  ** <requireLicenseAcceptance> - element is empty"}
+if (!($NuspecSummary)) {Write-Warning "  ** <summary> - element is empty"}
+if (!($NuspecTags)) {Write-Warning "  ** <tags> - element is empty"}
+if (!($NuspecTitle)) {Write-Warning "  ** <title> - element is empty, this element is a requirement."}
+if (!($NuspecVersion)) {Write-Warning "  ** <version> - element is empty, this element is a requirement."}
 
 if ($NuspecAuthors -eq $NuspecOwners){
     Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
