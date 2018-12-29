@@ -1,6 +1,6 @@
 # CNC.ps1 Copyleft 2018 by Bill Curran AKA BCURRAN3
 
-$CNCver        = "2018.12.26" # Version of this script
+$CNCver        = "2018.12.28" # Version of this script
 Write-Host
 Write-Host "CNC.ps1 v$CNCver - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
 Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
@@ -86,6 +86,10 @@ if ($NuspecIconURL -match "raw.githubusercontent"){
     Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
     Write-Host "              https://www.staticaly.com, https://raw.githack.com, or https://gitcdn.link." -ForeGround Cyan
   }
+if ($NuspecIconURL -match "cdn.rawgit.com"){
+    Write-Warning "  ** <iconUrl> - Your package icon uses RawGit CDN. It will be going offline in October 2019. Please change to a CDN such as:"
+    Write-Host "              https://www.staticaly.com, https://raw.githack.com, or https://gitcdn.link." -ForeGround Cyan
+  }  
 
 $AcceptableIconExts=@("png","svg")
 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)

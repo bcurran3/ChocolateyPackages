@@ -3,8 +3,6 @@
 bcurran3 downloads and packages the included .EXE for Angry IP Scanner from the developer's website. 
 
 The direct download link can be found at:
-https://github.com/angryip/ipscan/releases
-
-SHA256 checksum for this .EXE is listed in the ChocolateyInstall.ps1 file
+https://github.com/angryip/ipscan/releases and https://angryip.org/download/#windows
 
 ==================== Angry IP Scanner ====================

@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>10.9.0</version>
+    <version>10.9.2</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>	
@@ -60,7 +60,7 @@ Things the Shark pack does that other packs cannot do . . .
     <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m notsilent</tags>
     <licenseUrl>http://shark007.net/disclaimer.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl> 
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl> 
     <dependencies>
       <dependency id="autohotkey" />
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
