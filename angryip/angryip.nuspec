@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.5.3</version>
+    <version>3.5.5</version>
     <title>Angry IP Scanner (Installer)</title>
     <authors>angryziber</authors>
     <owners>bcurran3</owners>
@@ -12,7 +12,7 @@
     <projectSourceUrl>https://github.com/angryziber/ipscan</projectSourceUrl>
     <bugTrackerUrl>https://github.com/angryziber/ipscan/issues</bugTrackerUrl>
     <docsUrl>http://angryip.org/faq/</docsUrl>
-    <iconUrl>https://cdn.rawgit.com/angryip/ipscan/4614d00a/resources/images/icon128.png?raw=true</iconUrl>
+    <iconUrl>https://angryip.org/images/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ![Screenshot of AngryIP](https://angryip.org/screenshots/ipscan-win10.png)
