@@ -1,3 +1,6 @@
+
+* Due to the downloaded ZIP being >500MB, you need to install using choco install urban-terror --skip-virus-check
+
 ***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
