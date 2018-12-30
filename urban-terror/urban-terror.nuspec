@@ -3,20 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>urban-terror</id>
-    <version>4.3.2</version>
+    <version>4.3.4</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/urban-terror</packageSourceUrl>
     <title>Urban Terror (Portable)</title>
     <authors>Frozensand Games</authors>
     <projectUrl>http://www.urbanterror.info</projectUrl>
+	<projectSourceUrl>https://github.com/FrozenSand/UrbanTerror4</projectSourceUrl>
     <iconUrl>http://www.urbanterror.info/files/static/images/pages/0001.png</iconUrl>
-    <copyright>Copyright © 1999-2017 Frozensand Games Limited</copyright>
-    <licenseUrl>https://www.urbanterror.info/downloads/contract/terms-of-service</licenseUrl>
+    <copyright>Copyright © Frozensand Games Limited</copyright>
+    <licenseUrl>https://www.urbanterror.info/support/127-game-read-me/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.urbanterror.info/support/manual/game/</docsUrl>
     <mailingListUrl>http://www.urbanterror.info/forums/</mailingListUrl>
-    <bugTrackerUrl>http://www.urbanterror.info</bugTrackerUrl>
-    <tags>urban terror game quake3 shooter portable</tags>
+    <bugTrackerUrl>https://github.com/FrozenSand/UrbanTerror4</bugTrackerUrl>
+    <tags>urban terror game quake3 shooter portable cross-platform</tags>
     <summary>Urban Terror is a free 3D shooter game.</summary>
     <description>
 ![Screenshot of Urban Terror](http://www.urbanterror.info/files/static/images/pics/presentation/shot0015.jpg)
@@ -29,9 +30,13 @@ Urban Terror can be described as a Hollywood tactical shooter; somewhat realism 
 
 No registration required: Download, install, play!	
 
-PACKAGING NOTE: Due to the downloaded ZIP being >500MB, you need to install using **choco install urban-terror --skip-virus-check***
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/urban-terror/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://www.urbanterror.info/support/244-4-3-release-notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

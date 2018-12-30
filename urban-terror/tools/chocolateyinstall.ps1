@@ -1,7 +1,7 @@
 ﻿$packageName  = 'urban-terror' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'http://cdn.urbanterror.info/urt/43/releases/zips/UrbanTerror432_full.zip'
-$checksum     = '74DEE1566FA6CD0EB26D866149A1B6AD7E8F18A653693F02790C05EF7CE352A4'
+$url          = 'http://cdn.urbanterror.info/urt/43/releases/zips/UrbanTerror434_full.zip'
+$checksum     = '716669CC6C525663B791852E51FF9C94D96F382BE39279DAB6084DDDACB5A4E7'
 $shortcutName = 'Urban Terror.lnk'
 $exe          = 'UrbanTerror43\Quake3-UrT.exe'
 
@@ -15,7 +15,7 @@ $packageArgs = @{
   checksumType   = 'sha256'
 }
 
-Write-Host "This download can take a while even on a fast connection!" -foreground "magenta" –backgroundcolor "blue"
+Write-Warning "  ** This download can take a while even on a fast connection!" 
 Install-ChocolateyZipPackage @packageArgs
 
 $WhoAmI=whoami
