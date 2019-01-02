@@ -9,7 +9,7 @@
     <title>DSInternals (Install)</title>
     <authors>Michael Grafnetter</authors>
     <projectUrl>https://www.powershellgallery.com/packages/DSInternals</projectUrl>
-    <iconUrl>https://www.powershellgallery.com/Content/Images/PackageDefaultIcon.png</iconUrl>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/powershell_icon.png</iconUrl>	
     <copyright>(c) Michael Grafnetter. All rights reserved.</copyright>
     <licenseUrl>https://github.com/MichaelGrafnetter/DSInternals/commit/ff80b8c710f6a4a01f94542f0993b555bce5f7f1</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

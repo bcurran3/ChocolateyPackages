@@ -4,7 +4,7 @@
   <metadata>
     <id>simple-sticky-notes</id>
     <title>Simple Sticky Notes (Install)</title>
-    <version>4.3</version>
+    <version>4.4</version>
     <authors>Simnet Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>		
@@ -20,6 +20,10 @@ Minimum Requirements: Windows® 10 / 8.1 / 8 / 7 / Vista / XP PC with a 1 GHz In
 [Facebook](https://www.facebook.com/SimpleStickyNotes) | [Google+](https://plus.google.com/+SimpleStickyNotes) | [Twitter](https://twitter.com/SimpleSticky)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/simple-sticky-notes/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
     </description>
     <projectUrl>http://www.simplestickynotes.com</projectUrl>
     <docsUrl>http://www.simplestickynotes.com/help/</docsUrl>

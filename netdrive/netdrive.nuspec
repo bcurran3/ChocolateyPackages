@@ -3,17 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>netdrive</id>
-    <version>3.5.434</version>
+    <version>3.6.571</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netdrive</packageSourceUrl>			
     <owners>bcurran3</owners>
     <title>NetDrive (Install)</title>
     <authors>Bdrive Inc.</authors>
     <projectUrl>https://www.netdrive.net/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/netdrive/NetDrive_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/netdrive/NetDrive_icon.png</iconUrl>
     <copyright>Copyright © Bdrive Inc.</copyright>
     <licenseUrl>https://www.netdrive.net/NetDrive-terms.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://support.netdrive.net/knowledgebase</docsUrl>
+    <mailingListUrl>https://discourse.bdrive.com/c/netdrive3</mailingListUrl>
     <tags>netdrive net drive amazon box dropbox ftp google hubic onedrive openstack owncloud webdav owncloud android airdrive</tags>
     <summary>NetDrive - The Network Drive for Windows</summary>
     <description>
@@ -74,7 +74,6 @@ Microsoft Windows 10, Windows 8, Windows 8.1, Windows 7, Windows Vista, Windows 
     <dependencies>
       <dependency id="vcredist2012"/>
       <dependency id="vcredist140"/>	  
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	
     </dependencies>		
   </metadata>
   <files>
