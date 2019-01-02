@@ -3,7 +3,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>wot-firefox</id>
-    <version>20170206.0</version>
+    <version>20180622.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wot-firefox</packageSourceUrl>		
     <title>Web of Trust for Firefox</title>
     <authors>WOT Services</authors>
@@ -57,13 +57,16 @@ We respect your privacy and do everything we can to shield you.
 To enable real-time protection and allow us to fully understand website reputations, WOT requires the collection of browsing data, as described in our Privacy Policy. We will never license or share this data with any third parties for the purposes of direct marketing or identifying or targeting of individual users.
 By installing and/or using the WOT extension, you agree to the terms of our Privacy Policy: https://www.mywot.com/en/privacy/privacy_policy
 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wot-firefox/readme.md)**
 
-####PACKAGING NOTE: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox.  Subsequent updates should be dealt with automatically by Firefox.
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 </description>
     <releaseNotes></releaseNotes>
     <tags>wot web of trust reputation ratings firefox</tags>
     <dependencies>
-      <dependency id="firefox" version="45.0"/>
+      <dependency id="firefox" version="48.0"/>
     </dependencies>
   </metadata>
 </package>

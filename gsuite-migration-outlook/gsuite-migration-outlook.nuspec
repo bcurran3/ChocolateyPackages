@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-migration-outlook</id>
-    <version>4.0.30.10</version>
+    <version>4.0.117.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-migration-outlook</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>G Suite Migration for Microsoft Outlook (Install)</title>
@@ -44,9 +44,9 @@ Now you can migrate email, contacts and calendar data from Microsoft Outlook® p
 * Microsoft Outlook 2013® (32 and 64 bit) 
 * Microsoft Outlook 2016® (32 and 64 bit)
 	</description>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://support.google.com/a/users/answer/1283788</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" />
+      <dependency id="autohotkey" />
     </dependencies>		
   </metadata>
   <files>

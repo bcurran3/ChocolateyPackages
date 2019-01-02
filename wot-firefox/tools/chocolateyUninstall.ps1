@@ -1,4 +1,4 @@
-$extensionID = "{a0d7ccb3-214d-498b-b4aa-0e8fda9a7bf7}"
+$extensionID = '{a0d7ccb3-214d-498b-b4aa-0e8fda9a7bf7}'
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
 	$installDir = Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs | Select-Object -ExpandProperty Property

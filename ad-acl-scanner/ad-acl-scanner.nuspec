@@ -15,10 +15,10 @@
     <projectSourceUrl>https://github.com/canix1/ADACLScanner</projectSourceUrl>
     <docsUrl>https://github.com/canix1/ADACLScanner/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/canix1/ADACLScanner/issues</bugTrackerUrl>
-    <tags>ad active directory acl scanner powershell server admin</tags>
+    <tags>ad active directory acl scanner powershell server</tags>
     <summary>A tool with GUI used to create reports of access control lists (DACLs) and system access control lists (SACLs) in Active Directory .</summary>
     <description>
-![Screenshot of AD ACL Scanner](https://raw.githubusercontent.com/canix1/ADACLScanner/master/src/ADACLScan5.0.jpg)	
+![Screenshot of AD ACL Scanner](https://cdn.staticaly.com/gh/canix1/ADACLScanner/master/src/ADACLScan5.0.jpg)	
 
 
 ####Features
@@ -66,6 +66,10 @@ It has the following features:
 * Some functions requires Microsoft .NET Framework version 4.0
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ad-acl-scanner/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
     <releaseNotes>https://github.com/canix1/ADACLScanner/wiki/History</releaseNotes>	
     <dependencies>

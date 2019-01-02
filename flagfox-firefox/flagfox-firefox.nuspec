@@ -3,18 +3,18 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>flagfox-firefox</id>
-    <version>5.1.18</version>
+    <version>6.1.9</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/flagfox-firefox</packageSourceUrl>	
     <title>Flagfox for Firefox</title>
     <authors>Dave G</authors>
     <owners>bcurran3</owners>
-    <licenseUrl>https://addons.mozilla.org/en-US/firefox/addon/flagfox/license/5.1.9</licenseUrl>
+    <licenseUrl>https://addons.mozilla.org/en-US/firefox/addon/flagfox/license/</licenseUrl>
     <projectUrl>https://flagfox.wordpress.com/</projectUrl>
-    <iconUrl>https://addons.cdn.mozilla.net/static/img/icons/firefox.png</iconUrl>
+    <iconUrl>https://addons.cdn.mozilla.net/user-media/addon_icons/5/5791-64.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Displays a country flag depicting the location of the current website's server and provides a multitude of tools such as site safety checks, whois, translation, similar sites, validation, URL shortening, and more... </summary>
     <description>
-![Screenshot of Flagfox](https://addons.cdn.mozilla.net/user-media/previews/full/128/128264.png)
+![Screenshot of Flagfox](https://addons.cdn.mozilla.net/user-media/previews/thumbs/128/128278.png?modified=1543519024)
 	
 Flagfox is an extension that displays a flag icon indicating the current webserver's physical location. Knowing where you're connected to adds an extra layer of awareness to your browsing and can be useful to indicate the native languages and legal jurisdictions that may apply. Additional information can be obtained via a multitude of external lookups and users can add their own custom actions. All actions can be added to the flag icon's context menu and set to icon click or keyboard shortcuts for quick access.
 
@@ -33,7 +33,11 @@ Clicking the flag icon loads our default action, Geotool, which gives a detailed
 
 Flagfox is simple, unobtrusive, and uses relatively little resources. In order to protect your privacy, country lookups are done locally rather than asking an external server about every page you browse to. It works by accessing an internal IP address location database, basically a rough map of the physical layout of the Internet, based on data provided by Maxmind. This gives a flag for the nationality of the actual location of the server you're connected to, rather than just the nationality of the domain name which may be different. Flagfox updates are provided on a monthly basis to keep this internal database accurate.
 
-Note: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. The package should always install the latest version, independent of the package version. Subsequent updates should be dealt with automatically by Firefox.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/flagofox-firefox/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 </description>
     <releaseNotes>added checksum</releaseNotes>
     <copyright>Copyright 2007-2015, David Garrett</copyright>
@@ -41,7 +45,7 @@ Note: This addon will be installed for all profiles. You can not remove the addo
     <mailingListUrl>https://flagfox.net/forum/</mailingListUrl>
     <tags>flagfox extension firefox</tags>
     <dependencies>
-      <dependency id="firefox" version="24.0"/>
+      <dependency id="firefox" version="60.0"/>
     </dependencies>
   </metadata>
 </package>

@@ -1,5 +1,5 @@
 $packageName = 'flagfox-firefox'
-$extensionID = "{1018e4d6-728f-4b20-ad56-37578a4de76b}"
+$extensionID = '{1018e4d6-728f-4b20-ad56-37578a4de76b}'
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
 	$installDir = Get-Item -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Mozilla\Firefox\TaskBarIDs | Select-Object -ExpandProperty Property
