@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ad-acl-scanner</id>
-    <version>5.6</version>
+    <version>5.6.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ad-acl-scanner</packageSourceUrl>
     <title>AD ACL Scanner (Script)</title>
     <authors>Robin Granberg </authors>
     <projectUrl>https://github.com/canix1/ADACLScanner</projectUrl>
-    <iconUrl>https://social.technet.microsoft.com/wiki/cfs-filesystemfile.ashx/__key/communityserver-components-imagefileviewer/communityserver-wikis-components-files-00-00-00-00-05/5315.powershell_2D00_logo.gif_2D00_550x0.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/powershell_icon.png</iconUrl>
     <licenseUrl>https://github.com/canix1/ADACLScanner/blob/master/license.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/canix1/ADACLScanner</projectSourceUrl>
