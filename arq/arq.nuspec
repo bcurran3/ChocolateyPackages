@@ -3,23 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.12.0</version>
+    <version>5.13.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/arq</packageSourceUrl>				
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
     <authors>Haystack Software LLC</authors>
     <projectUrl>https://www.arqbackup.com/</projectUrl>
-    <iconUrl>https://www.arqbackup.com/assets/images/arq256.png</iconUrl>
-    <copyright>Copyright @ 2009-2016 Haystack Software LLC </copyright>
+    <iconUrl>https://www.arqbackup.com/images/ArqIcons/icon_512x512.png</iconUrl>
+    <copyright>Copyright Haystack Software LLC </copyright>
     <licenseUrl>https://www.arqbackup.com/documentation/pages/license.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.arqbackup.com/documentation/</docsUrl>
     <mailingListUrl>https://www.arqbackup.com/</mailingListUrl>
-    <tags>arq backup cloud amazon google dropbox onedrive sftp nas trial admin</tags>
+    <tags>arq backup cloud amazon google dropbox onedrive sftp nas trial</tags>
     <summary>Back up your files automatically to the cloud</summary>
     <description>
-![Screenshot of Arq](https://www.arqbackup.com/screenshots/1backup_anything.png)
-
 ##Product Features
 Everything you wanted in a backup app
 
@@ -59,6 +57,10 @@ You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Clou
 [Twitter](https://twitter.com/arqbackup) | [Blog](https://www.arqbackup.com/blog/)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/arq/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
 	</description>
     <releaseNotes>https://www.arqbackup.com/download/arq5windows_release_notes.html</releaseNotes>
     <dependencies>

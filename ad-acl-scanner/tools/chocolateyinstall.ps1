@@ -2,10 +2,10 @@
 $packageName  = 'ad-acl-scanner' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'https://raw.githubusercontent.com/canix1/ADACLScanner/master/ADACLScan.ps1'
-$checksum     = '908819F1E2BAAC1B8BDBDB58C4DA7325606173555E1188CBEE22D54E2A3D612A'
+$checksum     = 'B51FB4F0F794934C98CEBE9E850957D508BCF2AF1FDCC4F06C12929DBC8D8F85'
 $fileName     = 'ADACLScan.ps1'
 $shortcutName = 'AD ACL Scanner' 
-$FileFullpath = Join-Path $ToolsDir $fileName
+$FileFullpath = "$toolsDir\$fileName"
 
 
 $packageArgs = @{

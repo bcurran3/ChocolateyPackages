@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vmware-powercli-psmodule</id>
-    <version>10.2.0.9372002</version>
+    <version>11.1.0.11289667</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli-psmodule</packageSourceUrl>
     <title>VMware.PowerCLI (Install)</title>
@@ -11,7 +11,7 @@
     <projectUrl>https://www.powershellgallery.com/packages/VMware.PowerCLI</projectUrl>
     <iconUrl>https://www.powershellgallery.com/Content/Images/PackageDefaultIcon.png</iconUrl>
     <copyright>Copyright (c) VMware, Inc. All rights reserved.</copyright>
-	<docsUrl>https://vdc-download.vmware.com/vmwb-repository/dcr-public/b34705db-95be-4221-8afd-300c9398532c/e93e6337-ccb3-42f8-9325-e01f43c8eb67/vmware-powercli-10-user-guide.pdf</docsUrl>
+	<docsUrl>https://code.vmware.com/docs/7634/cmdlet-reference</docsUrl>
 	<mailingListUrl>https://code.vmware.com/forums/2530/vmware-powercli</mailingListUrl>
     <licenseUrl>https://www.vmware.com/help/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -26,7 +26,7 @@
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-	<releaseNotes>https://vdc-download.vmware.com/vmwb-repository/dcr-public/3cef45f8-7dc2-4c28-bbd7-0a44f24ac0d7/105db27d-5ef8-4044-b047-2e6cd3b32584/vmware-powercli-10-release-notes.html</releaseNotes>
+	<releaseNotes>https://blogs.vmware.com/PowerCLI/2018/12/new-release-powercli-11-1-0.html</releaseNotes>
     <dependencies>
 	  <dependency id="dotnet4.5" />
       <dependency id="powershell" version="5.0" />

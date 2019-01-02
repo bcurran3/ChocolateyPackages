@@ -1,6 +1,6 @@
 $packageName = 'flagfox-firefox'
-$url         = 'https://addons.cdn.mozilla.net/user-media/addons/5791/flagfox-5.1.18-fx+sm.xpi'
-$checksum    = 'AE3D10F1CE119E700C624C373B9C6BAEA8FA7381006905E6795032D91A430094'
+$url         = 'https://addons.mozilla.org/firefox/downloads/file/1175010/flagfox-6.1.9-fx.xpi'
+$checksum    = 'AB33528A7F58C0C108094EC2D5828554495117B0072C84573334A029BCCCF4AC'
 $extensionID = "{1018e4d6-728f-4b20-ad56-37578a4de76b}"
 
 if(test-path 'hklm:\SOFTWARE\Mozilla\Firefox\TaskBarIDs'){
@@ -13,6 +13,8 @@ if(test-path 'hklm:\SOFTWARE\Wow6432Node\Mozilla\Firefox\TaskBarIDs'){
 $browserFolder = Join-Path $installDir "browser"
 $extensionsFolder = Join-Path $browserFolder "extensions"
 $extFolder = Join-Path $extensionsFolder "$extensionID"
+
+Write-host DEBUG: $extFolder
 
 $packageArgs = @{
   packageName   = $packageName

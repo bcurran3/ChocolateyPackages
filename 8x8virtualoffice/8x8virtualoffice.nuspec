@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8x8virtualoffice</id>
-    <version>5.9.0.20481</version>
+    <version>5.9.0.20527</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8x8virtualoffice</packageSourceUrl>		
     <title>8x8 Virtual Office (Install)</title>
     <authors>8x8 Inc.</authors>
     <projectUrl>https://support.8x8.com/us/download/virtual-office-desktop-pc-windows</projectUrl>
-	<iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_icon.png</iconUrl>
+	<iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_icon.png</iconUrl>
     <copyright>Copyright 8x8 Inc.</copyright>
 	<licenseUrl>https://www.8x8.com/terms-and-conditions/business-terms</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

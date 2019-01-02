@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dsinternals-psmodule</id>
-    <version>2.23</version>
+    <version>3.1</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dsinternals-psmodule</packageSourceUrl>
     <owners>bcuran3</owners>
     <title>DSInternals (Install)</title>
