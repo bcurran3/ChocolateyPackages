@@ -139,9 +139,10 @@ if ($UseCustomPath -match "True" -and (Test-Path $CustomPath))
    }
 	
 # Backup Chocolatey package names on local computer to packages.config file in the Documents folder
-if ($UseDocuments -match "True" -and (Test-Path $Env:USERPROFILE\Documents))
+$DocumentsFolder = [Environment]::GetFolderPath("MyDocuments")
+if ($UseDocuments -match "True" -and (Test-Path $DocumentsFolder))
    {
-    $SavePath   = "$Env:USERPROFILE\Documents\$SaveFolderName"
+    $SavePath   = "$DocumentsFolder\$SaveFolderName"
     Write-PackagesConfig
    }
    
