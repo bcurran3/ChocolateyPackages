@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>utorrent</id>
-    <title>uTorrent (Install)</title>
-    <version>3.5.4.44846</version>
+    <title>uTorrent Classic (Install)</title>
+    <version>3.5.5.44954</version>
     <authors>BitTorrent, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>		
@@ -45,6 +45,7 @@ Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download
     <projectUrl>http://www.utorrent.com</projectUrl>
     <docsUrl>http://help.utorrent.com/</docsUrl>
     <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
+	<bugTrackerUrl>https://forum.utorrent.com/forum/14-bug-reports/</bugTrackerUrl>
     <tags>utorrent bittorrent torrent client p2p</tags>
     <copyright>© BitTorrent, Inc.</copyright>
     <licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>

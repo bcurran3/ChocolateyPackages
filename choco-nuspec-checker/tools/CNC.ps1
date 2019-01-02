@@ -17,7 +17,7 @@ if (!($LocalnuspecFile)) {
 function Validate-URL([string]$element,[string]$url){
 if (($url -match "http://") -or ($url -match "https://")){
     $HTTP_Request = [System.Net.WebRequest]::Create("$url")
-    $HTTP_Response = $HTTP_Request.GetResponse()
+    $HTTP_Response = $HTTP_Request.GetResponse() 
     $HTTP_Status = [int]$HTTP_Response.StatusCode
 	$HTTP_Response.Close()
     if ($HTTP_Status -eq 200) {
@@ -94,7 +94,7 @@ if ($NuspecIconURL -match "cdn.rawgit.com"){
 $AcceptableIconExts=@("png","svg")
 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
 if (!($IconExt)){
-    Write-Warning "  ** <iconURL> - .PNG and .SVG are the preferred package icon file types." 
+    Write-Warning "  ** <iconUrl> - .PNG and .SVG are the preferred package icon file types." 
   }
 
 if (!($NuspecID)) {Write-Warning "  ** <id> - element is empty, this element is a requirement."}

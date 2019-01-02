@@ -2,23 +2,23 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-shortcuts-winconfig</id>
-    <version>0.0.2.1</version>
+    <version>0.0.2.2</version>
     <title>(unofficial) Chocolatey Shortcuts (Config)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <copyright>public domain</copyright>	
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</packageSourceUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial choco shortcuts start menu</tags>	
+    <tags>bcurran3 unofficial choco shortcuts start menu chocolateasy</tags>	
     <summary>This package creates Windows Start Menu shortcuts to run common Chocolatey functions.</summary>	
     <description>
-![Screenshot of Choco Shortcuts](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
+![Screenshot of Choco Shortcuts](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
 
 #This package creates Windows Start Menu shortcuts to run common Chocolatey functions.
 
@@ -39,6 +39,8 @@ If you're a power user or use the Command Prompt and/or PowerShell all the time,
 
 For a different take on Chocolatey Shortcuts for the desktop, checkout [mica](https://chocolatey.org/profiles/mica)'s [Chocolatey Shortcuts (unofficial)](https://chocolatey.org/packages/ChocoShortcuts).
 
+Also check out [(unofficial) Install Chocolatey Packages from your Web Browser](https://chocolatey.org/packages/choco-install-packages-from-web-winconfig) which is another package I made that makes Chocolatey easy (Chocolateasy!) for new users to digest.
+
 **If you find Chocolatey Shortcuts useful, please consider donating: 
 https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
@@ -46,6 +48,7 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
     </description>
     <releaseNotes>
 ###CHANGELOG:
+* 0.0.2.2 added FeedBurner RSS link
 * 0.0.2.1 bug fix, the "egg on face release"
 * 0.0.2 added link to Chocolatey status website, added support for moving my newer utils icons to the Chocolatey folder, minor organizational and optimization
 * 0.0.1 initial release

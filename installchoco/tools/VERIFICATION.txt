@@ -1,5 +1,0 @@
-﻿==================== InstallChoco ====================
-
-This InstallChoco Chocolatey package was uploaded by the author, Bill Curran aka BCURRAN3.
-
-==================== InstallChoco ====================

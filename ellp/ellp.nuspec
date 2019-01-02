@@ -3,51 +3,34 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ellp</id>
-    <title>Ellp (Install)</title>
-    <version>1.5.1.1611</version>
+    <title>[Deprecated] Ellp (Install)</title>
+    <version>86.20181230</version>
     <authors>Ellp Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ellp</packageSourceUrl>		
-    <summary>A new program for the Windows called Ellp is kind of like IFTTT for the desktop. - PCWorld</summary>
+    <summary>deprecated</summary>
     <description>
-##Consider it done.
+![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png)
+##This package has been deprecated	
 
-Introducing the new PC Assistant that easily automates your daily tasks, keeps your PC running smoothly, and helps you get organized
+Per http://www.ellp.com/ :
 
-Trusted by over [150,000 people worldwide](https://www.ellp.com/reviews/)
+"Announcement
 
-##Discover what Ellp can do for you
+We would like to inform you that Ellp Ltd. has discontinued its operation. Existing Ellp users can still keep enjoying the product for free. The software will, however, be no longer updated nor supported. 
 
-[Over 35 available cards](https://www.ellp.com/cards/) (and counting!)
+Have a great day!
 
-##Automate your tasks in 3 simple steps
-
-Get started in seconds!
-
-####1. CHOOSE
-Flip through and select your preferred Ellp cards to automate your online, social media, performance, storage, security, schedule, and audio related tasks.
-
-####2. EDIT
-Set your preferences once and start getting the most out of your device right away. Personalize each Ellp card based on your needs, using Ellp’s simple editor.
-
-####3. ACTIVATE
-Easily automate your device by activating the Ellp cards that matter most to you. Enjoy the peace of mind that comes with having a personal device helper.
-
-**[REVIEWS](https://www.ellp.com/reviews/#expert-reviews)**
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ellp/readme.md)**
+Posted on October 23, 2018"
     </description>
-    <projectUrl>https://www.ellp.com/</projectUrl>
-    <tags>ellp automation tool</tags>
-    <copyright>Copyright © Ellp Limited. All Rights Reserved.</copyright>
-    <licenseUrl>https://www.ellp.com/eula/</licenseUrl>
+    <projectUrl>http://www.ellp.com/</projectUrl>
+    <tags>deprecated</tags>
+	<copyright>Copyright © Ellp Limited. All Rights Reserved.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://www.ellp.com/images/logo.png</iconUrl>
+    <releaseNotes />
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />		  
-    </dependencies>	
+      <dependency id="chocolatey" />
+    </dependencies>		
       </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
+  <files />
 </package>

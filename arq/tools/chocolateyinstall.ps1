@@ -1,12 +1,8 @@
 ﻿$packageName   = 'arq' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://www.arqbackup.com/download/Arq.exe' 
-$checksum      = '935CC4206FB3FAA076603982687726C17DB3A4A78E93DC5E68F9D94196763455'
-$checksumType  = 'sha256'
-$UnzippedMSI   = Join-Path $toolsDir 'ArqSetup.msi'
-$installerType = 'MSI'
-$silentArgs    = '/passive ACCEPT=YES'
-$validExitCodes= @(0, 3010, 1641)
+$checksum      = '51F91CCD95EECC955611E167E40230D4EC55E499DF9BCF31E675010DE89F627A'
+$UnzippedMSI   = "$toolsDir\ArqSetup.msi"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -14,17 +10,17 @@ $packageArgs = @{
   fileType      = 'ZIP' 
   url           = $url
   checksum      = $checksum
-  checksumType  = $checksumType
+  checksumType  = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
 
 $packageArgs = @{
   packageName   = $packageName
-  fileType      = 'msi'
+  fileType      = 'MSI'
   file          = $UnzippedMSI
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
+  silentArgs    = '/passive ACCEPT=YES'
+  validExitCodes= @(0, 3010, 1641)
   softwareName  = 'Arq*'   
 }
 

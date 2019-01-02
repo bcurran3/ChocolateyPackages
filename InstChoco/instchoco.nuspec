@@ -9,15 +9,16 @@
     <title>(unofficial) InstChoco (Portable)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png</iconUrl>
-    <copyright>Copyright 2018 Bill Curran</copyright>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <copyright>Copyright 2018-2019 Bill Curran</copyright>
     <licenseUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>		
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <tags>bcurran3 instchoco choco chocolatey unofficial installer portable</tags>
     <summary>InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!</summary>
     <description>
-![Screenshot of InstChoco in use](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
+![Screenshot of InstChoco in use](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
 
 #InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!
 	
@@ -29,11 +30,11 @@
 
 ###FEATURES:
 
-![Screenshot of InstChoco features](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_features_screenshot.png)
+![Screenshot of InstChoco features](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_features_screenshot.png)
 
 ###Usage: 
 
-![Screenshot of InstChoco Options](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
+![Screenshot of InstChoco Options](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/InstChoco/readme.md)**	
 	</description>
