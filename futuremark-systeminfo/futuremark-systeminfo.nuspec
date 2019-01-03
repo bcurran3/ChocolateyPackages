@@ -3,18 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>futuremark-systeminfo</id>
-    <version>5.10.676</version>
+    <version>5.14.693</version>
     <owners>bcurran3</owners>
     <title>Futuremark SystemInfo (Install)</title>
     <authors>Futuremark</authors>
-    <projectUrl>http://www.futuremark.com/support/systeminfo</projectUrl>
+    <projectUrl>https://benchmarks.ul.com/systeminfo</projectUrl>
+	<bugTrackerUrl>https://benchmarks.ul.com/support</bugTrackerUrl>
     <iconUrl>https://aws.futuremark.com/static/images/contentboxes/ul-benchmarks-hero-red.png</iconUrl>
     <copyright>© Futuremark Corporation</copyright>
-    <licenseUrl>http://www.futuremark.com/business</licenseUrl>
+    <licenseUrl>https://benchmarks.ul.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://www.futuremark.com/support/systeminfo</docsUrl>
-    <mailingListUrl>https://community.futuremark.com/forum/</mailingListUrl>
-    <tags>futuremark systeminfo</tags>
+    <tags>futuremark systeminfo benchmarks</tags>
     <summary>SystemInfo is a component used in many of our benchmarks to identify the hardware in your system.</summary>
     <description>
 SystemInfo is a component used in many of our benchmarks to identify the hardware in your system. It does not collect any personally identifiable information. SystemInfo updates do not affect benchmark scores but you may need the latest version in order to obtain a valid score.
@@ -26,6 +25,10 @@ Note that Windows XP, 3DMark06, and PCMark05 are no longer supported by Futurema
 ####All Futuremark benchmarks on Windows 10 require Futuremark SystemInfo 4.40 or later to be installed.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/futuremark-systeminfo/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
 	</description>
     <releaseNotes>http://www.futuremark.com/support/systeminfo</releaseNotes>
   </metadata>
