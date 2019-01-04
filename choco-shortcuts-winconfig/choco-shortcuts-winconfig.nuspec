@@ -18,6 +18,11 @@
     <tags>bcurran3 unofficial choco shortcuts start menu chocolateasy</tags>	
     <summary>This package creates Windows Start Menu shortcuts to run common Chocolatey functions.</summary>	
     <description>
+***	
+[choco://choco-shortcuts-winconfig](choco://choco-shortcuts-winconfig)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
 ![Screenshot of Choco Shortcuts](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
 
 #This package creates Windows Start Menu shortcuts to run common Chocolatey functions.

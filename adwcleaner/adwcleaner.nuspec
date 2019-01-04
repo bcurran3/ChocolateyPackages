@@ -17,6 +17,11 @@
     <tags>malwarebytes adwcleaner unattended malware-scanner malware-remover toolbar-remover</tags>	
     <summary>Anti-Adware/Toolbar/PUP/Hijacker search and delete tool</summary>	
     <description>
+***	
+[choco://adwcleaner](choco://adwcleaner)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![AdwCleaner screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/adwcleaner/adwcleaner_screenshot.png)	
 
 ##Fast results. Powerful cleaning.

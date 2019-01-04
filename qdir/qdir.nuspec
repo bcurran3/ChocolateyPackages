@@ -15,6 +15,11 @@
     <licenseUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+***	
+[choco://qdir](choco://qdir)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of Q-Dir](http://www.softwareok.com/img/ss/g_en/Q-Dir2.jpg)
 
 ##The Quad-Directory-Explorer makes your files and folders easy to manage, either installed or as a portable Windows program.

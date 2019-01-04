@@ -10,6 +10,11 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>		
     <summary>A (very) tiny BitTorrent client.</summary>
     <description>
+***	
+[choco://utorrent](choco://utorrent)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of uTorrent](https://remote.utorrent.com/static/images/win_ut_toolbar.png)	
 
 ##The #1 torrent download client on desktops worldwide.
