@@ -1,9 +1,12 @@
 # CNC.ps1 Copyleft 2018 by Bill Curran AKA BCURRAN3
+$AcceptableIconExts=@("png","svg")
+$CDNlist     = "https://www.staticaly.com, https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
+$CNCHeader   = 'CNCHeader.txt'
+$CNCFooter   = 'CNCFooter.txt'
 
-$CNCver        = "2018.12.28" # Version of this script
 Write-Host
-Write-Host "CNC.ps1 v$CNCver - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
-Write-Host "Copyleft 2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
+Write-Host "CNC.ps1 v2019.01.03 - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
+Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 
 # Get and parse .nuspec in current directory
 #ENCHANCEMENT: Should accept a filespec and use that as well
@@ -30,11 +33,33 @@ if (($url -match "http://") -or ($url -match "https://")){
   }	   
 }
 
+# FUTURE ENHANCEMENT to add a standardized header to the description
+function Add-Header{
+$NuspecDescription=(Get-Content $CNCHeaderFile)+$NuspecDescription
+}
+
+# FUTURE ENHANCEMENT to add a standardized footer to the description
+function Add-Footer{
+$NuspecDescription=$NuspecDescription+(Get-Content $CNCFooterFile)
+}
+
+# FUTURE ENHANCEMENT to open all URLs to view
+function Open-URLs{
+if ($NuspecBugTrackerURL){&start $NuspecBugTrackerURL}
+if ($NuspecDocsURL){&start $NuspecDocsURL}
+if ($NuspecIconURL){&start $NuspecIconURL}
+if ($NuspecLicenseURL){&start $NuspecLicenseURL}
+if ($NuspecMailingListURL){&start $NuspecMailingListURL}
+if ($NuspecPackageSourceURL){&start $NuspecPackageSourceURL}
+if ($NuspecProjectSourceURL){&start $NuspecProjectSourceURL}
+if ($NuspecProjectURL){&start $NuspecProjectURL}
+}
+
 # Import package.nuspec file to get values
 $nuspecXML = $LocalnuspecFile
 [xml]$nuspecFile = Get-Content $nuspecXML
 $NuspecAuthors = $nuspecFile.package.metadata.authors
-$NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl
+$NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl	
 $NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
 $NuspecCopyright = $nuspecFile.package.metadata.copyright
 $NuspecDependencies = $nuspecFile.package.metadata.dependencies # Not fully implemented yet
@@ -61,6 +86,7 @@ $NuspecVersion = $nuspecFile.package.metadata.version
 # Report empty elements and misc possible oversights
 Write-Host
 Write-Host "CNC summary of "$LocalnuspecFile.Name":" -ForegroundColor Magenta
+#Write-Host $NuspecDescription -foreground green
 if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this element is a requirement."}
 if (!($NuspecBugTrackerURL)) {
      Write-Warning "  ** <bugTrackerUrl> - element is empty"
@@ -70,7 +96,15 @@ if (!($NuspecBugTrackerURL)) {
 #if (!($NuspecConflicts)) {Write-Warning "  ** <conflicts> element is empty"} # Built for the future
 if (!($NuspecCopyright)) {Write-Warning "  ** <copyright> - element is empty"}
 if (!($NuspecDependencies)) {Write-Warning "  ** <dependencies> - element is empty"}
-if (!($NuspecDescription)) {Write-Warning "  ** <description> - element is empty, this element is a requirement."}
+if (!($NuspecDescription)) {
+    Write-Warning "  ** <description> - element is empty, this element is a requirement."
+   } else {
+     if ($NuspecDescription -match "cdn.rawgit.com"){
+         Write-Warning "  ** <description> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
+         Write-Host "           ** $CDNlist" -ForeGround Cyan
+       }
+	}
+
 if (!($NuspecDocsURL)) {
     Write-Warning "  ** <docsUrl> - element is empty"
    } else {
@@ -81,17 +115,16 @@ if (!($NuspecIconURL)) {
     Write-Warning "  ** <iconUrl> - element is empty"
    } else {
      Validate-URL "<iconUrl>" $NuspecIconURL
-	}
-if ($NuspecIconURL -match "raw.githubusercontent"){
-    Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
-    Write-Host "              https://www.staticaly.com, https://raw.githack.com, or https://gitcdn.link." -ForeGround Cyan
-  }
-if ($NuspecIconURL -match "cdn.rawgit.com"){
-    Write-Warning "  ** <iconUrl> - Your package icon uses RawGit CDN. It will be going offline in October 2019. Please change to a CDN such as:"
-    Write-Host "              https://www.staticaly.com, https://raw.githack.com, or https://gitcdn.link." -ForeGround Cyan
-  }  
+	 if ($NuspecIconURL -match "raw.githubusercontent"){
+         Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
+         Write-Host "           ** $CDNlist" -ForeGround Cyan
+        }
+     if ($NuspecIconURL -match "cdn.rawgit.com"){
+        Write-Warning "  ** <iconUrl> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
+        Write-Host "           ** $CDNlist" -ForeGround Cyan
+       }
+   }
 
-$AcceptableIconExts=@("png","svg")
 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
 if (!($IconExt)){
     Write-Warning "  ** <iconUrl> - .PNG and .SVG are the preferred package icon file types." 
@@ -135,17 +168,17 @@ if (!($NuspecVersion)) {Write-Warning "  ** <version> - element is empty, this e
 
 if ($NuspecAuthors -eq $NuspecOwners){
     Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
-    Write-Host 'The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Cyan
+    Write-Host '           ** The package maintainer field (owners) matches the software author field (authors) in the nuspec. The reviewer will ensure that the package maintainer is also the software author.' -ForeGround Cyan
 }
 
 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
     Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
-    Write-Host 'ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Cyan
+    Write-Host '           ** ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Cyan
 }
 
 if ($NuspecTags -match "chocolatey"){
     Write-Warning "  ** There is a tag named chocolatey. This will trigger a message from the verifier:"
-    Write-Host 'Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Cyan
+    Write-Host '           ** Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Cyan
 }
 
 Write-Host

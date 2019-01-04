@@ -21,3 +21,6 @@ if (Get-ProcessorBits 64) {
    Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\Serva.lnk" -targetPath "$toolsDir\Serva32.exe" -WorkingDirectory "$toolsDir"
    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Serva.lnk" -targetPath "$toolsDir\Serva32.exe" -WorkingDirectory "$toolsDir"
   }
+  
+$WhoAmI=whoami
+icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | Out-Null
