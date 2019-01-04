@@ -16,6 +16,11 @@
     <tags>kcsoftwares sumo update monitor notifier trial notsilent</tags>	
     <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>	
     <description>
+***	
+[choco://sumo](choco://sumo)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of SUMo](http://www.kcsoftwares.com/images/SUMo_screen.png)
 
 SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the most recent version of your favorite software ! Unlike built-in auto update features, SUMo tells you if updates are available before you need to use your software.

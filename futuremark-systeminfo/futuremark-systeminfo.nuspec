@@ -9,11 +9,11 @@
     <authors>Futuremark</authors>
     <projectUrl>https://benchmarks.ul.com/systeminfo</projectUrl>
 	<bugTrackerUrl>https://benchmarks.ul.com/support</bugTrackerUrl>
-    <iconUrl>https://aws.futuremark.com/static/images/contentboxes/ul-benchmarks-hero-red.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/futuremark-systeminfo/futuremark-systeminfo_icon.png</iconUrl>
     <copyright>© Futuremark Corporation</copyright>
     <licenseUrl>https://benchmarks.ul.com/terms-and-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>futuremark systeminfo benchmarks</tags>
+    <tags>futuremark ul systeminfo benchmarks</tags>
     <summary>SystemInfo is a component used in many of our benchmarks to identify the hardware in your system.</summary>
     <description>
 SystemInfo is a component used in many of our benchmarks to identify the hardware in your system. It does not collect any personally identifiable information. SystemInfo updates do not affect benchmark scores but you may need the latest version in order to obtain a valid score.
@@ -30,7 +30,7 @@ Note that Windows XP, 3DMark06, and PCMark05 are no longer supported by Futurema
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***	
 	</description>
-    <releaseNotes>http://www.futuremark.com/support/systeminfo</releaseNotes>
+    <releaseNotes>https://benchmarks.ul.com/systeminfo</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

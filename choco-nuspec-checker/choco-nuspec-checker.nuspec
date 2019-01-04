@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2018.12.22</version>
+    <version>2019.01.03</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
@@ -19,6 +19,11 @@
     <tags>bcurran3 cnc choco unofficial nuspec checker</tags>
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <description>
+***	
+[choco://choco-nuspec-checker](choco://choco-nuspec-checker)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
 #**choco-nuspec-checker** (CNC) is a PowerShell script designed for Chocolatey package maintainers (creators) to check Chocolatey .nuspec files for common errors and ommisions.
@@ -26,13 +31,27 @@
 
 ###FEATURES:
 * **CNC** checks for all tags and reports if any are missing
-* **CNC** checks for common oversights and reports about them
+* **CNC** checks for dead URLs and reports them
+* **CNC** checks for common oversights and reports about them (CDNs, icon image types, etc)
 * **CNC** checks for common verifier warnings
+
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	</description>
 	<releaseNotes>
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
+###CHANGELOG:	
+* 2019.01.03 - fixed some URL checking handling that could cause PS errors, updated list of CDN recommendations, added checking for RawGit URLs in description, cosmetic updates
+* 2018.12.22-2018-12.28 - intial release
+
+###ROADMAP:
+* take a filespec to check .nuspec files outside of the local path
+* automatically convert RawGit CDN URLs to Staticaly or a possibly a selectable preference
+* (out of original scope) option to insert configurable headers and footers into description (some groundwork laid)
+* option to open and view all URLs (some groundwork laid)
+* capture and test URLs found in description
+* add more verifier warnings and errors
 	</releaseNotes>
   </metadata>
   <files>

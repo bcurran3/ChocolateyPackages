@@ -40,4 +40,7 @@ including not supporting cover art.
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/metax/readme.md)**
     </description>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>

@@ -17,6 +17,11 @@
     <tags>8x8 voip phone phones virtual office</tags>
     <summary>8x8 Virtual Office Desktop for PC (Windows)</summary>
     <description>
+***	
+[choco://8x8virtualoffice](choco://8x8virtualoffice)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
 ![8x8 Virtual Office screenshot](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_screenshot.png)
 
 Virtual Office Desktop is a comprehensive Unified Communications client application integrating a business softphone with visual voicemail, corporate directory, IM &amp; presence, video calling, fax, call recording, web conferencing, and social media. Virtual Office Desktop offers all the functionality of Virtual Office Online and Virtual Office Pro in a standalone Windows application.

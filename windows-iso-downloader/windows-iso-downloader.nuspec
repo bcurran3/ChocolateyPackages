@@ -17,6 +17,11 @@
     <tags>microsoft windows office iso admin</tags>
     <summary>Easily download Windows and Office disk images</summary>
     <description>
+***	
+[choco://windows-iso-downloader](choco://windows-iso-downloader)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![screenshot of Microsoft Windows and Office ISO Download Tool](https://www.heidoc.net/joomla/images/microsoft/win-downloader.png)
 
 This tool allows an easy and comfortable way to download genuine Windows 7, Windows 8.1 and Windows 10 disk images (ISO) directly from Microsoft's servers, as well as Office 2010, Office 2013, Office 2016, Office 2019, Expression Studio and Office for Mac.

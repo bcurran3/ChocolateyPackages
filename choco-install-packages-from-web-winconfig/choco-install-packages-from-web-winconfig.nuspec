@@ -19,6 +19,11 @@
     <tags>bcurran3 choco cinst nupkg winconfig chocolateasy</tags>
     <summary>Implements ability to install Chocolatey packages from your web browser.</summary>
     <description>
+***	
+[choco://choco-install-packages-from-web-winconfig](choco://choco-install-packages-from-web-winconfig)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 #Do you want to install Chocolatey packages from your web browser?
 
 #You just found the easy way!

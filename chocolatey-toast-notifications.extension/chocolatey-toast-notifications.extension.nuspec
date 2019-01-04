@@ -18,6 +18,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Chocolatey Toast Notifications Extension is a Chocolatey extension that displays a toast notification after installing or uninstalling a program.</summary>	
     <description>
+***	
+[choco://chocolatey-toast-notifications.extension](choco://chocolatey-toast-notifications.extension)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of Chocolatey Toast Notifications Extension](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.extension_extras/chocolatey-toast-notifications.extension_screenshot.png)
 
 ###It's HERE! The 100% Chocolatey user OPT-IN toast notification extension for Chocolatey and Windows 10 (only).

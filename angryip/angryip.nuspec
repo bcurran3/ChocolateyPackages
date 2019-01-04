@@ -15,6 +15,11 @@
     <iconUrl>https://angryip.org/images/icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+***	
+[choco://angryip](choco://angryip)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of AngryIP](https://angryip.org/screenshots/ipscan-win10.png)
 
 Angry IP Scanner (or simply ipscan) is an open-source and cross-platform network scanner designed to be fast and simple to use. It scans IP addresses and ports as well as has [many other features](https://angryip.org/about/).

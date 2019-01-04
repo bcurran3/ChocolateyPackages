@@ -19,6 +19,11 @@
     <tags>bcurran3 unofficial choco upgrade all cup config schtasks scheduled task</tags>
     <summary>choco-upgrade-all-at will create a Windows Scheduled Task to upgrade your Chocolatey packages daily</summary>
     <description>
+***	
+[choco://choco-upgrade-all-at](choco://choco-upgrade-all-at)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 #DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY DAY? OR MAYBE EVERY WEEK?
 
 #YOU JUST FOUND THE EASY WAY!
