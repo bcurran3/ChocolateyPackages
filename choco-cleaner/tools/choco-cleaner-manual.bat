@@ -14,6 +14,6 @@ if %errorLevel% == 0 goto RunScript
  )
 
 :RunScript
-powershell -NoProfile -ExecutionPolicy Bypass -Command "%ChocolateyInstall%\bin\choco-cleaner.ps1"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "%ChocolateyInstall%\bin\Choco-Cleaner.ps1"
 :end
 

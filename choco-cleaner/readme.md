@@ -61,6 +61,8 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
+* 0.0.5.2 - minor update to delete .img (alternate .iso name), and .msi,.msu, and .msp files in toolsDir, as well as minor cosmetic changes
+* 0.0.5.1 - made PowerShell Core compatible
 * 0.0.5 - added deletion of cacheLocation if defined in chocolatey.config, cosmetic changes, removed 7Zip dependency and now using the version of 7Zip packaged with Chocolatey.
 * 0.0.4 - added deletion of Nuget Cache folder files
 * 0.0.3.1 - fixed typo causing nupkg files to NOT be optimized - thanks E.R.! 
