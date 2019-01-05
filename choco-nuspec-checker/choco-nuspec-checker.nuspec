@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2019.01.03</version>
+    <version>2019.01.04</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
@@ -41,7 +41,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	</description>
 	<releaseNotes>
-###CHANGELOG:	
+###CHANGELOG:
+* 2019.01.04 - implemented included binary files checking and messages, laid out the groundwork for the future enhancements
 * 2019.01.03 - fixed some URL checking handling that could cause PS errors, updated list of CDN recommendations, added checking for RawGit URLs in description, cosmetic updates
 * 2018.12.22-2018-12.28 - intial release
 
