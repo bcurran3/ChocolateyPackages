@@ -17,9 +17,14 @@ $packageArgs = @{
 }
  
 Get-ChocolateyWebFile @packageArgs
-Install-BinFile -Name adwcleaner -Path "$toolsDir\$portableEXE"
+
+Remove-Item $toolsDir\*.exe -Exclude "adwcleaner_$env:packageVersion.exe" # deleted old versions kept by upgrade
+Remove-Item $ENV:ChocolateyInstall\bin\adwcleaner_*.exe # delete shims from previous packages
+Remove-Item $toolsDir\*.ignore -Exclude "adwcleaner_$env:packageVersion.exe.ignore" # delete old .ignore files (7.2.8.0+)
+Write-Host "" | Out-File "$toolsDir\adwcleaner_$env:packageVersion.exe.ignore" # create .ignore file so shim isn't created
+Install-BinFile -Name adwcleaner -Path "$toolsDir\$portableEXE" # create adwcleaner shim instead of adwcleaner_version shim
 
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
 
-Remove-Item $toolsDir\*.exe -Exclude "adwcleaner_$env:packageVersion.exe" | Out-Null
+# Change this to just rename current ver to adwcleaner so i don't have to make a shim
