@@ -19,6 +19,11 @@
     <tags>aomei backupper backup clone restore trial</tags>
     <summary>The Easiest Data Backup and Disaster Recovery Solution for Windows Server Machines</summary>
     <description>
+***	
+[choco://backupper-server](choco://backupper-server)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***	
+
 ![Screenshot of AOMEI Backupper Sserver](http://www.backup-utility.com/icon/aomei-backupper-server-screenshot.jpg)
 
 AOMEI Backupper Server, especially designed for small and medium sized business, is not only data protection and disaster recovery solutions, but also disk partition cloning software. With simple and easy-to-use interface, anyone even non-technical users can protect all of critical business data in minutes without having to be an expert. Besides, our stable and robust server backup software is able to backup your physical and virtual server without interrupting or shutting down Windows and other running applications.
@@ -50,6 +55,10 @@ What does Backupper Server include?
 ***
 	</description>
     <releaseNotes>http://www.backup-utility.com/changelog.html</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey" />
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+    </dependencies> 	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

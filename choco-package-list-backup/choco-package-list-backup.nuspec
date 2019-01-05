@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2019.01.02</version>
+    <version>2019.01.04</version>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -81,6 +81,7 @@ Set it and forget it! **choco-package-list-backup** backups up your Chocolatey p
 * Wait until Monday at 6 AM for **choco-package-list-backup** to run automatically. NOTE: The scheduled task runs under the SYSTEM account
 	
 ###CHANGELOG:
+* 2019.01.04 - 2019.01.02 didn't get packaged with the install and uninstall scripts! - fixed (GitHub bit me)
 * 2019.01.02 - Will now write to Documents/MyDocuments if the folder has been moved, thanks Aaron Throckmorton for the enhancement!
 * 2018.08.23 - Added ownCloud support and save all programs list feature
 * 2018.06.21 - Added scheduled task to run every Monday at 6 AM. AppendDate option now saves packages.config AND a packages_date.config. This makes the AppendDate option more useful for a nearline packages.config and archival snapshots as well as fixing compatibility with InstChoco.

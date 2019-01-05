@@ -1,15 +1,14 @@
-# choco-cleaner.ps1 by Bill Curran 
+# Choco-Cleaner.ps1 Copyleft 2017-2019 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
-# Open a GitHub issue if you have a suggestion/request.
-$CCver = "v0.0.4 (06/10/2018)"
-$xml   = 'choco-cleaner.xml'
+# Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "choco-cleaner.ps1 $CCver - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
-Write-Host "Copyleft 2017-2018 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -foreground white
+Write-Host "Choco-Cleaner.ps1 v0.0.5.2 (01/04/2019) - deletes unnecessary residual Chocolatey files to free up disk space" -foreground white
+Write-Host "Copyleft 2017-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -foreground white
 
-# Import preferences - see choco-cleaner.xml
-[xml]$ConfigFile = Get-Content "$env:ChocolateyInstall\bin\$xml"
+#$BinaryExtensions=@("*.exe","*.msi","*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.msu","*.msp") # miss any?
 
+# Import preferences from choco-cleaner.xml
+[xml]$ConfigFile = Get-Content "$env:ChocolateyInstall\bin\choco-cleaner.xml"
 $DeleteLogs = $ConfigFile.Settings.Preferences.DeleteLogs
 $DeleteArchives = $ConfigFile.Settings.Preferences.DeleteArchives
 $DeleteFileLogs = $ConfigFile.Settings.Preferences.DeleteFileLogs
@@ -26,114 +25,121 @@ $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 # new configuration items since implementation of XML config in v0.0.3
 $DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
 
-# Import chocolatey.config (future use)
-#[xml]$ChocoConfigFile = Get-Content "$env:ChocolateyInstall\config\chocolatey.config"
-#parse <add key="cacheLocation" value="" description="Cache location if not TEMP folder. Replaces `$env:TEMP` value." />
-#$cacheLocation = $ConfigFile.config.cacheLocation.value
+# Import chocolatey.config and get cacheLocation if set
+[xml]$ChocoConfigFile = Get-Content "$env:ChocolateyInstall\config\chocolatey.config"
+$cacheLocation = $ChocoConfigFile.chocolatey.config | % { $_.add } | ? { $_.key -eq 'cacheLocation' } | select -Expand value
 
 if ($env:ChocolateyInstall -match $env:SystemDrive -and $env:SystemDrive -eq "C:")
     {
-     $FreeBefore = Get-WmiObject Win32_LogicalDisk -Filter "DeviceID='C:'" | Foreach-Object {$_.FreeSpace}
+     $FreeBefore = Get-PSDrive C | foreach-object {$_.Free}
     }
-Write-Host "choco-cleaner Summary:" -foreground magenta
-Write-Host " * Deleting unnecessary _processed.txt (WTF?) file..." -foreground magenta
-Remove-Item -path $env:chocolateyinstall\bin\_processed.txt -ErrorAction SilentlyContinue
+Write-Host "Choco-Cleaner Summary:" -foreground magenta
+Write-Host "  **  Deleting unnecessary Chocolatey _processed.txt (WTF?) file..." -foreground green
+Remove-Item -path $env:ChocolateyInstall\bin\_processed.txt -ErrorAction SilentlyContinue
 
-if ($DeleteLogs)
+if ($DeleteIgnoreFiles)
     {
-     Write-Host " * Deleting unnecessary log files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\logs\* -recurse -exclude chocolatey.log,choco.summary.log -ErrorAction SilentlyContinue
-    }
+     Write-Host "  **  Deleting unnecessary Chocolatey .ignore files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include *.ignore -ErrorAction SilentlyContinue
+	}
 
-	if ($DeleteArchives)
+if ($DeleteOldChoco)
     {	
-     Write-Host " * Deleting unnecessary archive files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include *.zip,*.rar,*.7z,*.gz,*.tar,*.sfx,*.iso -ErrorAction SilentlyContinue
+     Write-Host "  **  Deleting unnecessary Chocolatey .old files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include *.old -ErrorAction SilentlyContinue
 	}
 
-	if ($DeleteFileLogs)
-    {	
-     Write-Host " * Deleting unnecessary extracted file logs..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include *.zip.txt,*.exe.txt,*.rar.txt,*.7z.txt,*.gz.txt,*.tar.txt,*.sfx.txt,*.iso.txt -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteMSInstallers)
-    {	
-     Write-Host " * Deleting unnecessary Microsoft installers..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include *.msi,*.msu,*.msp -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteIgnoreFiles)
-    {
-     Write-Host " * Deleting unnecessary .ignore files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include *.ignore -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteReadmes)
-    {
-     Write-Host " * Deleting unnecessary various read me files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include credits.txt,readme.txt,*.md -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteOldChoco)
-    {	
-     Write-Host " * Deleting unnecessary old Chocolatey files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include *.old -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteConfigBackupFile)
-    {	
-     Write-Host " * Deleting unnecessary config backup files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\config\chocolatey.config.backup -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteLibBad)
-    {
-     Write-Host " * Deleting unnecessary lib-bad files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\lib-bad -recurse -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteLibBkp)
-    {	
-     Write-Host " * Deleting unnecessary lib-bkp files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\lib-bkp -recurse -ErrorAction SilentlyContinue
-	}
-
-	if ($DeleteLicenseFiles)
-    {
-     Write-Host " * Deleting unnecessary license files..." -foreground magenta
-     Remove-Item -path $env:chocolateyinstall\* -recurse -include license.txt,*.license.txt,verification.txt -exclude shimgen.license.txt -ErrorAction SilentlyContinue
-	}
-	
-# If cacheLocation in chocolatey.config has NOT been changed (most people)...
-# I'm going to change this to read in the location from chocolatey.config in the future
 if ($DeleteCache)
     {
-     Write-Host " * Deleting unnecessary Chocolatey cache files..." -foreground magenta
+     Write-Host "  **  Deleting unnecessary Chocolatey cache files..." -foreground green
      Remove-Item -path $env:tmp\chocolatey -recurse -ErrorAction SilentlyContinue
 	 Remove-Item -path $env:SystemRoot\temp\chocolatey -recurse -ErrorAction SilentlyContinue
+	 if ($cacheLocation) {
+	   Remove-Item -path $cacheLocation -recurse -ErrorAction SilentlyContinue
+	   }
+	}	
+	
+if ($DeleteConfigBackupFile)
+    {	
+     Write-Host "  **  Deleting unnecessary Chocolatey config backup files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\config\chocolatey.config.backup -ErrorAction SilentlyContinue
+	}	
+
+if ($DeleteLibBad)
+    {
+     Write-Host "  **  Deleting unnecessary Chocolatey lib-bad package files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\lib-bad -recurse -ErrorAction SilentlyContinue
+	}
+
+if ($DeleteLibBkp)
+    {	
+     Write-Host "  **  Deleting unnecessary Chocolatey lib-bkp package files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\lib-bkp -recurse -ErrorAction SilentlyContinue
+	}	
+
+if ($DeleteFileLogs)
+    {	
+     Write-Host "  **  Deleting unnecessary Chocolatey extracted file logs..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include *.zip.txt,*.exe.txt,*.rar.txt,*.7z.txt,*.gz.txt,*.tar.txt,*.sfx.txt,*.iso.txt -ErrorAction SilentlyContinue
+	}		
+	
+if ($DeleteLogs)
+    {
+     Write-Host "  **  Deleting unnecessary Chocolatey log files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\logs\* -recurse -exclude chocolatey.log,choco.summary.log -ErrorAction SilentlyContinue
+    }	
+	
+if ($DeleteArchives)
+    {	
+     Write-Host "  **  Deleting unnecessary Chocolatey package embedded archive files in toolsDir..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include *.zip,*.rar,*.7z,*.gz,*.tar,*.sfx,*.iso,*.img,*.msi,*.msu,*.msp -ErrorAction SilentlyContinue
+	}
+
+if ($Optimizenupkg)
+    {	
+     Write-Host "  **  Deleting unnecessary Chocolatey package embedded archives and executables in .nupkg files..." -foreground green
+     dir $env:ChocolateyInstall\lib -recurse -include *.nupkg | ForEach-Object {& $env:ChocolateyInstall\tools\7z.exe d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
 	}
 	
+if ($DeleteLicenseFiles)
+    {
+     Write-Host "  **  Deleting unnecessary Chocolatey package embedded license files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include license.txt,*.license.txt,verification.txt -exclude shimgen.license.txt -ErrorAction SilentlyContinue
+	}	
+	
+if ($DeleteMSInstallers)
+    {	
+     Write-Host "  **  Deleting unnecessary Chocolatey package embedded Microsoft installers..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include *.msi,*.msu,*.msp -ErrorAction SilentlyContinue
+	}
+	
+if ($DeleteReadmes)
+    {
+     Write-Host "  **  Deleting unnecessary Chocolatey package embedded various read me files..." -foreground green
+     Remove-Item -path $env:ChocolateyInstall\* -recurse -include credits.txt,readme.txt,*.md -ErrorAction SilentlyContinue
+	}	
+
 if ($DeleteNuGetCache)
     {
-     Write-Host " * Deleting unnecessary Nuget cache files..." -foreground magenta
+     Write-Host "  **  Deleting unnecessary Nuget cache files..." -foreground green
      Remove-Item -path $env:USERPROFILE\AppData\Local\NuGet\Cache -recurse -ErrorAction SilentlyContinue
 	}	
 	
-if ($Optimizenupkg)
-    {	
-     Write-Host " * Deleting unnecessary archives and executables in .nupkg files..." -foreground magenta
-     dir $env:chocolateyinstall\lib -recurse -include *.nupkg | %{7z d -r -tZIP $_.FullName *.exe *.zip *.rar *.7z *.gz *.tar *.sfx *.iso *.msi *.msu *.msp} | Out-Null
-	}	
-
 if ($env:ChocolateyInstall -match $env:SystemDrive -and $env:SystemDrive -eq "C:")
     {
-     $FreeAfter = Get-WmiObject Win32_LogicalDisk -Filter "DeviceID='C:'" | Foreach-Object {$_.FreeSpace}
+     $FreeAfter  = Get-PSDrive C | foreach-object {$_.Free}
 	 $FreedSpace = $FreeAfter - $FreeBefore
      $FreedSpace = $FreedSpace / 1024
-	 Write-Host choco-cleaner finished deleting unnecessary Chocolatey files and saved you $freedspace.ToString('N0') KB! -foreground green
+	 Write-Host Choco-Cleaner finished deleting unnecessary Chocolatey files and saved you $freedspace.ToString('N0') KB! -foreground magenta
     } else {
-	  Write-Host choco-cleaner finished deleting unnecessary Chocolatey files! -foreground green
+	  Write-Host choco-cleaner finished deleting unnecessary Chocolatey files! -foreground magenta
 	 }
-Write-Host "Found choco-cleaner.ps1 useful? Consider buying me a beer via PayPal at https://www.paypal.me/bcurran3donations" -ForegroundColor white
+Write-Host "Found Choco-Cleaner.ps1 useful?" -ForegroundColor white
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor white
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor white
 Start-Sleep -s 10
+
+# TDL
+# Recursively delete Chocolatey and NuGet cache files from all user directories
+# Clean C:\ProgramData\chocolatey\lib-synced
+# Clean C:\ProgramData\chocolatey\.chocolatey
