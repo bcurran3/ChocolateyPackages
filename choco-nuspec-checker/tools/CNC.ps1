@@ -73,7 +73,7 @@ if ($NuspecDescription -match "'*'*'*"){ #This match doesn't work yet
    }
 }
 
-# FUTURE ENHANCEMENT to check for a standardized header
+# FUTURE ENHANCEMENT to check for a standardized footer
 function Check-Footer{
 if ($NuspecDescription -match "'*'*'*"){ #This match doesn't work yet
     Write-Host "           ** <description> - standardized footer found" -ForeGround Green
