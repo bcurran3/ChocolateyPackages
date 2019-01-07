@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ellp</id>
-    <title>[Deprecated] Ellp (Install)</title>
+    <title>[Retired] Ellp (Install)</title>
     <version>86.20181230</version>
     <authors>Ellp Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ellp</packageSourceUrl>		
     <summary>deprecated</summary>
     <description>
-![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png)
+![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/retired.png)
 ##This package has been retired.
 
 Per http://www.ellp.com/ :
