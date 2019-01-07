@@ -1,28 +1,14 @@
-﻿$packageName    = 'ellp'
-$installerType  = 'exe'
-$url            = 'https://download.ellp.com/download/ellp/EllpSetup.exe'
-$checksum       = '67AD52323A1DB286B2197F6A748A0382D1BD71E1682530AF21E178108A06C3BC'
-$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0,1)
-$softwareName   = 'Ellp*'
+﻿Write-Host "
+This package has been retired.
 
-$packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir  
-  fileType      = $installerType
-  url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
-  checksum      = $checksum
-  checksumType  = 'sha256' 
-}
+Per http://www.ellp.com/ :
 
-Start-CheckandStop "ellp_service"
+Announcement
 
-Install-ChocolateyPackage @packageArgs
+We would like to inform you that Ellp Ltd. has discontinued its operation. Existing Ellp users can still keep enjoying the product for free. The software will, however, be no longer updated nor supported. 
 
-Start-Sleep -s 10
-if ($ProcessWasRunning -eq "True") {$ProcessFullPath}
-Start-CheckandStop "ellp"
+Have a great day!
+
+Posted on October 23, 2018
+
+"
