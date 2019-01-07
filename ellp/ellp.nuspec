@@ -11,7 +11,7 @@
     <summary>deprecated</summary>
     <description>
 ![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png)
-##This package has been deprecated	
+##This package has been retired.
 
 Per http://www.ellp.com/ :
 
@@ -28,9 +28,8 @@ Posted on October 23, 2018"
 	<copyright>Copyright © Ellp Limited. All Rights Reserved.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <releaseNotes />
-    <dependencies>
-      <dependency id="chocolatey" />
-    </dependencies>		
       </metadata>
-  <files />
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
