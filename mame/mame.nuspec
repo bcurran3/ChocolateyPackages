@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mame</id>
-    <version>0.199</version>
+    <version>0.205</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mame</packageSourceUrl>
     <title>MAME (Portable)</title>
     <authors>hundreds of developers</authors>
     <projectUrl>http://mamedev.org/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mame/mame_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mame/mame_icon.png</iconUrl>
     <copyright>hundreds of developers</copyright>
     <licenseUrl>http://mamedev.org/legal.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -20,6 +20,11 @@
     <tags>mame arcade emulator game games gaming nintendo nes snes famicom gameboy sega portable</tags>
     <summary>Multiple Arcade Machine Emulator</summary>
     <description>
+***	
+[choco://mame](choco://mame)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ###What is MAME
 MAME originally stood for Multiple Arcade Machine Emulator.
 
@@ -45,9 +50,7 @@ MAME is mostly programmed in C with some core components in C++. MAME can curren
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
-    </dependencies>	
+	<releaseNotes>https://www.mamedev.org/releases/whatsnew_0205.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
