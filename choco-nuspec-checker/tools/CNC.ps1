@@ -2,8 +2,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host
-Write-Host "CNC.ps1 v2019.01.04 - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
+Write-Host "CNC.ps1 v2019.01.07 - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
 
 $AcceptableIconExts=@("png","svg")
@@ -24,7 +23,7 @@ if (!($LocalnuspecFile)) {
 function Validate-URL([string]$element,[string]$url){
 if (($url -match "http://") -or ($url -match "https://")){
     $HTTP_Request = [System.Net.WebRequest]::Create("$url")
-    $HTTP_Response = $HTTP_Request.GetResponse() 
+    $HTTP_Response = $HTTP_Request.GetResponse() # Can throw an error under unknown conditions
     $HTTP_Status = [int]$HTTP_Response.StatusCode
 	$HTTP_Response.Close()
     if ($HTTP_Status -eq 200) {
@@ -38,18 +37,18 @@ if (($url -match "http://") -or ($url -match "https://")){
 }
 
 function Check-LicenseFile{
-$LicenseFile=(Get-ChildItem -Include LICENSE.txt -Recurse)
+$LicenseFile=(Get-ChildItem -Include *LICENSE*.txt -Recurse)
 if ($LicenseFile){
-     Write-Host "           ** Binary files - LICENSE.txt file found." -ForeGround Green
+	 Write-Host '           ** Binary files - '  $LicenseFile.Name ' file(s) found.' -ForeGround Green
 	} else {
 	 Write-Warning "           ** Binary files - LICENSE.txt file NOT found."
    }
 }
 
 function Check-VerificationFile{
-$VerificationFile=(Get-ChildItem -Include LICENSE.txt -Recurse)
+$VerificationFile=(Get-ChildItem -Include *VERIFICATION*.txt -Recurse)
 if ($VerificationFile){
-     Write-Host "           ** Binary files - VERIFICATION.txt file found." -ForeGround Green
+     Write-Host '           ** Binary files - '  $VerificationFile.Name ' file(s) found.' -ForeGround Green
 	} else {
 	 Write-Warning "           ** Binary files - VERIFICATION.txt file NOT found."
    }
@@ -65,17 +64,15 @@ if ($IncludedBinaries){
    }
 }
 
-# FUTURE ENHANCEMENT to check for a standardized header
 function Check-Header{
-if ($NuspecDescription -match "'*'*'*"){ #This match doesn't work yet
+if ($NuspecDescription.StartsWith -match '---'){ 
     Write-Host "           ** <description> - standardized header found" -ForeGround Green
 	$HeaderFound=$True
    }
 }
 
-# FUTURE ENHANCEMENT to check for a standardized footer
 function Check-Footer{
-if ($NuspecDescription -match "'*'*'*"){ #This match doesn't work yet
+if ($NuspecDescription.EndsWith -match '---'){
     Write-Host "           ** <description> - standardized footer found" -ForeGround Green
 	$FooterFound=$True
    }
@@ -150,7 +147,7 @@ $NuspecTitle = $nuspecFile.package.metadata.title
 $NuspecVersion = $nuspecFile.package.metadata.version
 
 Write-Host
-Write-Host "CNC summary of "$LocalnuspecFile.Name":" -ForegroundColor Magenta
+Write-Host 'CNC summary of' $LocalnuspecFile.Name':' -ForegroundColor Magenta
 #Write-Host $NuspecSummary -foreground green
 
 # <authors> checks
@@ -182,7 +179,8 @@ if (!($NuspecDescription)) {
        }
 	}
 	
-#Check-Header
+Check-Header
+Check-Footer
 
 # <docsUrl> checks
 if (!($NuspecDocsURL)) {
