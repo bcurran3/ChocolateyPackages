@@ -8,6 +8,7 @@ $CheckExecutionPolicy = Get-ExecutionPolicy
 Write-Host "  ** $packageName - FYI: Your PowerShell Execution Policy is curently set to $CheckExecutionPolicy" -ForeGround Yellow
 
 Move-Item "$toolsDir\$script" $env:ChocolateyInstall\bin -Force 
+
 if (!(Test-Path $ENV:ChocolateyInstall\bin\$CNCHeader)) {
     Move-Item "$toolsDir\$CNCHeader" $env:ChocolateyInstall\bin -Force
 	$WhoAmI=whoami

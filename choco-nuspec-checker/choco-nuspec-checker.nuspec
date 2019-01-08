@@ -18,8 +18,7 @@
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <tags>bcurran3 cnc choco unofficial nuspec checker</tags>
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
-    <description>
-***	
+    <description>***	
 [choco://choco-nuspec-checker](choco://choco-nuspec-checker)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
@@ -42,6 +41,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	</description>
 	<releaseNotes>
 ###CHANGELOG:
+* 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (>4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
 * 2019.01.04 - implemented included binary files checking and messages, laid out the groundwork for the future enhancements
 * 2019.01.03 - fixed some URL checking handling that could cause PS errors, updated list of CDN recommendations, added checking for RawGit URLs in description, cosmetic updates
 * 2018.12.22-2018-12.28 - intial release
@@ -50,9 +50,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * take a filespec to check .nuspec files outside of the local path
 * automatically convert RawGit CDN URLs to Staticaly or a possibly a selectable preference
 * (out of original scope) option to insert configurable headers and footers into description (some groundwork laid)
-* option to open and view all URLs (some groundwork laid)
 * capture and test URLs found in description
-* add more verifier warnings and errors
 	</releaseNotes>
   </metadata>
   <files>
