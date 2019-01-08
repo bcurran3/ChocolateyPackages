@@ -12,13 +12,13 @@
     <projectSourceUrl>https://github.com/angryziber/ipscan</projectSourceUrl>
     <bugTrackerUrl>https://github.com/angryziber/ipscan/issues</bugTrackerUrl>
     <docsUrl>http://angryip.org/faq/</docsUrl>
-    <iconUrl>https://angryip.org/images/icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/angryip/angryip_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-***	
+---
 [choco://angryip](choco://angryip)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+---
 	
 ![Screenshot of AngryIP](https://angryip.org/screenshots/ipscan-win10.png)
 
@@ -42,9 +42,9 @@ It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/angryip/readme.md)**
 
-***
+---
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
+---
     </description>
     <summary>Angry IP Scanner - fast and friendly network scanner</summary>
     <releaseNotes>https://raw.githubusercontent.com/angryip/ipscan/master/RELEASE-NOTES</releaseNotes>

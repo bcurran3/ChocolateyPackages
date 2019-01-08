@@ -2,14 +2,75 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "CNC.ps1 v2019.01.07 - (unofficial) Chocolatey .nuspec Checker ""CNC - Put it through the Bill.""" -ForegroundColor white
+function CNC-Splash{
+Write-Host "CNC.ps1 v2019.01.07 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForegroundColor white
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForegroundColor white
+Write-Host
+}
 
 $AcceptableIconExts=@("png","svg")
 $BinaryExtensions=@("*.exe","*.msi","*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.msu","*.msp") # miss any?
 $CDNlist     = "https://www.staticaly.com, https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
 $CNCHeader   = "$ENV:ChocolateyInstall\bin\CNCHeader.txt"
 $CNCFooter   = "$ENV:ChocolateyInstall\bin\CNCFooter.txt"
+
+if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
+    CNC-Splash
+    Write-Host "OPTIONS AND SWITCHES:" -ForeGround Magenta
+	Write-Host
+	Write-Host "-help, -?, or /?"
+	Write-Host "   Displays this information."
+	Write-Host
+	Write-Host "-AddFooter (saving not implemented yet)"
+    Write-Host "   Adds a footer ($CNCFooter) to your .nuspec file and saves it."	
+	Write-Host
+	Write-Host "-AddHeader (saving not implemented yet)"
+    Write-Host "   Adds a header ($CNCHeader) to your .nuspec file and saves it."
+	Write-Host
+	Write-Host "-EditFooter"
+    Write-Host "   Edit $CNCFooter with Notepad."
+	Write-Host
+	Write-Host "-EditHeader"
+    Write-Host "   Edit $CNCHeader with Notepad."
+	Write-Host	
+	Write-Host "-OpenURLs"
+    Write-Host "   Open all URLs in your browser for inspection when finished."
+	Write-Host
+	Write-Host "-ShowFooter"
+    Write-Host "   Displays $CNCFooter."	
+	Write-Host
+	Write-Host "-ShowHeader"
+    Write-Host "   Displays $CNCHeader."
+	return
+}
+
+CNC-Splash
+
+if ($args -eq "-EditFooter") {
+    Write-Host "Editing contents of $CNCFooter." -foreground magenta
+	&Notepad $CNCFooter
+	return
+}
+
+if ($args -eq "-EditHeader") {
+    Write-Host "Editing contents of $CNCHeader." -foreground magenta
+	&Notepad $CNCHeader
+	return
+}
+
+if ($args -eq "-ShowFooter") {
+	Write-Host "Displaying contents of $CNCFooter." -foreground magenta
+    Write-Host	
+    Get-Content $CNCFooter
+	return
+}
+
+if ($args -eq "-ShowHeader") {
+    Write-Host "Displaying contents of $CNCHeader." -foreground magenta
+    Write-Host	
+    Get-Content $CNCHeader
+	return
+}
 
 # Get and parse .nuspec in current directory
 #FUTURE ENCHANCEMENT accept a filespec and use that as well
@@ -65,29 +126,41 @@ if ($IncludedBinaries){
 }
 
 function Check-Header{
-if ($NuspecDescription.StartsWith -match '---'){ 
+# still needs to handle pre-pended spaces
+if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
     Write-Host "           ** <description> - standardized header found" -ForeGround Green
 	$HeaderFound=$True
    }
 }
 
 function Check-Footer{
-if ($NuspecDescription.EndsWith -match '---'){
+# still needs to handle trailing spaces
+if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
     Write-Host "           ** <description> - standardized footer found" -ForeGround Green
 	$FooterFound=$True
    }
 }
 
-# FUTURE ENHANCEMENT to add a standardized header to the description
 function Add-Header{
-$NuspecDescription=(Get-Content $CNCHeader)+$NuspecDescription
-$UpdateNuspec=$True
+if (Test-Path $CNCHeader){
+    $Header=(Get-Content $CNCHeader)
+    $NuspecDescription=$Header+$NuspecDescription
+    $UpdateNuspec=$True
+	return $NuspecDescription
+   } else {
+	Write-Warning "           ** $CNCHeader not found."
+   }
 }
 
-# FUTURE ENHANCEMENT to add a standardized footer to the description
 function Add-Footer{
-$NuspecDescription=$NuspecDescription+(Get-Content $CNCFooter)
-$UpdateNuspec=$True
+if (Test-Path $CNCFooter){
+    $Footer=(Get-Content $CNCFooter)
+    $NuspecDescription=$NuspecDescription+$Footer
+    $UpdateNuspec=$True
+	return $NuspecDescription
+   } else {
+	Write-Warning "           ** $CNCFooter not found."
+   }
 }
 
 # FUTURE ENHANCEMENT to add a replace RawGit URLs with Staticaly(?) URLs
@@ -95,7 +168,6 @@ function Replace-RawGit{
 $UpdateNuspec=$True
 }
 
-# FUTURE ENHANCEMENT to open all URLs to view
 function Open-URLs{
 if ($NuspecBugTrackerURL){&start $NuspecBugTrackerURL}
 if ($NuspecDocsURL){&start $NuspecDocsURL}
@@ -146,7 +218,6 @@ $NuspecTags = $nuspecFile.package.metadata.tags
 $NuspecTitle = $nuspecFile.package.metadata.title
 $NuspecVersion = $nuspecFile.package.metadata.version
 
-Write-Host
 Write-Host 'CNC summary of' $LocalnuspecFile.Name':' -ForegroundColor Magenta
 #Write-Host $NuspecSummary -foreground green
 
@@ -155,24 +226,26 @@ if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this ele
 
 # <bugTrackerUrl> checks
 if (!($NuspecBugTrackerURL)) {
-     Write-Warning "  ** <bugTrackerUrl> - element is empty"
+     Write-Warning "  ** <bugTrackerUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** Suggestion: bugTrackerUrl - points to the location where issues and tickets can be accessed' -ForeGround Cyan
    } else {
      Validate-URL "<bugTrackerUrl>" $NuspecBugTrackerURL
 	}
 
-# <conflicts> checks
-#if (!($NuspecConflicts)) {Write-Warning "  ** <conflicts> element is empty"} # Built for the future
+# <conflicts> checks - Built for the future
+#if (!($NuspecConflicts)) {Write-Warning "  ** <conflicts> element is empty."}
 
 # <copyright> checks
-if (!($NuspecCopyright)) {Write-Warning "  ** <copyright> - element is empty"}
+if (!($NuspecCopyright)) {Write-Warning "  ** <copyright> - element is empty."}
 
 # <dependencies> checks
-if (!($NuspecDependencies)) {Write-Warning "  ** <dependencies> - element is empty"}
+if (!($NuspecDependencies)) {Write-Warning "  ** <dependencies> - element is empty."}
 
 # <description> checks
 if (!($NuspecDescription)) {
     Write-Warning "  ** <description> - element is empty, this element is a requirement."
    } else {
+     if ($NuspecDescription.length -gt 4000) {Write-Warning "  ** <description> - is greater than 4,000 characters."}
      if ($NuspecDescription -match "cdn.rawgit.com"){
          Write-Warning "  ** <description> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
          Write-Host "           ** $CDNlist" -ForeGround Cyan
@@ -184,17 +257,19 @@ Check-Footer
 
 # <docsUrl> checks
 if (!($NuspecDocsURL)) {
-    Write-Warning "  ** <docsUrl> - element is empty"
+    Write-Warning "  ** <docsUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** (Suggestion:) docsUrl - points to the location of the wiki or docs of the software' -ForeGround Cyan
    } else {
      Validate-URL "<docsUrl>" $NuspecDocsURL
 	}
 
 # <files> checks
-if (!($NuspecFiles)) {Write-Warning "  ** <files> - element is empty"}
+if (!($NuspecFiles)) {Write-Warning "  ** <files> - element is empty."}
 
 # <iconUrl> checks
 if (!($NuspecIconURL)) {
-    Write-Warning "  ** <iconUrl> - element is empty"
+    Write-Warning "  ** <iconUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -ForeGround Cyan
    } else {
      Validate-URL "<iconUrl>" $NuspecIconURL
 	 if ($NuspecIconURL -match "raw.githubusercontent"){
@@ -217,14 +292,16 @@ if (!($NuspecID)) {Write-Warning "  ** <id> - element is empty, this element is 
 
 # <licenseUrl> checks
 if (!($NuspecLicenseURL)) {
-    Write-Warning "  ** <licenseUrl> - element is empty"
+    Write-Warning "  ** <licenseUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** The licenseUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -ForeGround Cyan
    } else {
      Validate-URL "<licenseUrl>" $NuspecLicenseURL
 	}	
 
 # <mailingListUrl> checks
 if (!($NuspecMailingListURL)) {
-    Write-Warning "  ** <mailingListUrl> - element is empty"
+    Write-Warning "  ** <mailingListUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** (Suggestion:) mailingListUrl - points to the forum or email list group for the software' -ForeGround Cyan
    } else {
      Validate-URL "<mailingListUrl>" $NuspecMailingListURL
 	}
@@ -241,14 +318,16 @@ if (!($NuspecOwners)) {
 
 # <packageSourceUrl> checks
 if (!($NuspecPackageSourceURL)) {
-    Write-Warning "  ** <packageSourceUrl> - element is empty"
+    Write-Warning "  ** <packageSourceUrl> - element is empty."
+	Write-Host '           ** Suggestion: Consider publishing your packages on GitHub. Other people might help you improve your package. Users can also open issus to notify you of problems or updates.' -ForeGround Cyan
    } else {
      Validate-URL "<packageSourceUrl>" $NuspecPackageSourceURL
 	}		
 
 # <projectSourceUrl> checks
 if (!($NuspecProjectSourceURL)) {
-    Write-Warning "  ** <projectSourceUrl> - element is empty"
+    Write-Warning "  ** <projectSourceUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** (Suggestion:) projectSourceUrl - points to the location of the underlying software source' -ForeGround Cyan
    } else {
      Validate-URL "<projectSourceUrl>" $NuspecProjectSourceURL
 	}
@@ -265,24 +344,27 @@ if (!($NuspecProjectURL)) {
      Validate-URL "<projectUrl>" $NuspecProjectURL
 	}	
 
-# <provides> checks
-#if (!($NuspecProvides)) {Write-Warning "  ** <provides> element is empty"} # Built for the future
+# <provides> checks - Built for the future
+#if (!($NuspecProvides)) {Write-Warning "  ** <provides> element is empty"}
 
 # <releaseNotes> checks
-if (!($NuspecReleaseNotes)) {Write-Warning "  ** <releaseNotes> element is empty"}
+if (!($NuspecReleaseNotes)) {
+    Write-Warning "  ** <releaseNotes> element is empty. This will trigger a message from the verifier:"
+	Write-Host '           ** Release Notes (releaseNotes) are a short description of changes in each version of a package. Please include releasenotes in the nuspec. NOTE: To prevent the need to continually update this field, providing a URL to an external list of Release Notes is perfectly acceptable.' -ForeGround Cyan
+   }
 
-# <replaces> checks
-#if (!($NuspecReplaces)) {Write-Warning "  ** <replaces> element is empty"} # Built for the future
+# <replaces> checks - Built for the future
+#if (!($NuspecReplaces)) {Write-Warning "  ** <replaces> element is empty."}
 
 # <requireLicenseAcceptance> checks
-if (!($NuspecRequireLicenseAcceptance)) {Write-Warning "  ** <requireLicenseAcceptance> - element is empty"}
+if (!($NuspecRequireLicenseAcceptance)) {Write-Warning "  ** <requireLicenseAcceptance> - element is empty."}
 
 # <summary> checks
-if (!($NuspecSummary)) {Write-Warning "  ** <summary> - element is empty"}
+if (!($NuspecSummary)) {Write-Warning "  ** <summary> - element is empty."}
 
 # <tags> checks
 if (!($NuspecTags)) {
-     Write-Warning "  ** <tags> - element is empty"
+     Write-Warning "  ** <tags> - element is empty."
 	} else {
 	  if ($NuspecTags -match "chocolatey"){
          Write-Warning "  ** There is a tag named chocolatey. This will trigger a message from the verifier:"
@@ -302,17 +384,21 @@ Check-Binaries
 # FUTURE ENHANCEMENT ask to replace RawGit URLs
 # Replace-RawGit
 
-# FUTURE ENHANCEMENT ask to add header and/or footer
-# Add-Header
-# Add-Footer
+if ($args -eq "-AddHeader") {
+$NewNuspecDescription=(Add-Header)
+}
 
-# FUTURE ENHANCEMENT ask to view all URLs
-# Open-URLs
+if ($args -eq "-AddFooter") {
+$NewNuspecDescription=(Add-Footer)
+}
+
+Write-Host $NewNuspecDescription -ForeGround Green # temporary debugging
+
+if ($args -eq "-OpenURLs") {Open-URLs}
 
 # FUTURE ENHANCEMENT update changes to nuspec
 # Update-nuspec
 
-Write-Host
 Write-Host "Found CNC.ps1 useful?" -ForegroundColor white
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor white
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor white
@@ -321,5 +407,7 @@ return
 # TDL
 # show dependencies and version - •	Package contains dependencies with no specified version. You should at least specify a minimum version of a dependency. 
 # check http links to see if https links are available and report if so
-# check description for > 4,000 characters and show cpack error
+# tags and id - check for uppercase
+# check id length and if >20 recommend breaking it up with dashes
+# option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # What else?
