@@ -4,12 +4,12 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>10.9.5</version>
+    <version>10.9.6</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>	
     <summary>ADVANCED Codecs for Windows 10/8.1/7 is an audio and video codec package which contains a full suite of codecs.</summary>
-    <description>***	
+    <description>***
 [choco://advanced-codecs](choco://advanced-codecs)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
