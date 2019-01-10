@@ -1,18 +1,15 @@
-﻿$ErrorActionPreference = 'Stop';
-$packageName = 'xmedia-recode'
-$url         = 'https://www.xmedia-recode.de/download/XMediaRecode3445_setup.exe'
-$checksum    = '4B9847DED6F8F0F6DC1889B0477AB19BE2DCF706C586E4C6C216B1FAB92021BB'
-
+﻿$ErrorActionPreference = 'Stop'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$packageName   = 'xmedia-recode'
+$TodaysVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','')
+$url           = "$toolsDir\XMediaRecode"+$TodaysVersion+"_setup.exe"
 
 $packageArgs = @{
   packageName    = $packageName
-  fileType       = 'exe'
-  url            = $url
+  fileType       = 'EXE'
+  file           = $url
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0)
-  checksum       = $checksum
-  checksumType   = 'sha256'
 }
 
-Install-ChocolateyPackage @packageArgs
-
+Install-ChocolateyInstallPackage @packageArgs
