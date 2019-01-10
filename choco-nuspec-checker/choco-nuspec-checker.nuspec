@@ -16,7 +16,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</projectSourceUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>bcurran3 cnc choco unofficial nuspec checker validator script</tags>
+    <tags>bcurran3 cnc choco unofficial nuspec checker validator script chocolateasy</tags>
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <description>***	
 [choco://choco-nuspec-checker](choco://choco-nuspec-checker)
@@ -25,8 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
-#**choco-nuspec-checker** (CNC) is a PowerShell script designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and ommisions. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package.
-
+#**choco-nuspec-checker** (**CNC**) is a PowerShell script designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and ommisions. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. 
 
 ###FEATURES:
 * **CNC** checks for common verifier guidelines, suggestions, and notes warnings
@@ -37,8 +36,11 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
 * **CNC** can add a standard template header and/or footer to your .nuspec description (coming soon)
 
+###Helps make packaging Chocolateasy!
+
 ###INSTRUCTIONS:
-Change to the directory where you have a package .nuspec file and run CNC via PowerShell; it's already in your path. CNC -help for help and options.
+* Change to the directory where you have a package .nuspec file and run **CNC** via PowerShell; it's already in your path. **CNC -help** for help and options. 
+* To check all your packages' .nuspec files change to the root directory of all your packages and via PowerShell run **Get-ChildItem -Recurse | ?{if ($__.PSIsContainer){cls;cd $__.Name;cnc;cd ..;pause}}**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
 
