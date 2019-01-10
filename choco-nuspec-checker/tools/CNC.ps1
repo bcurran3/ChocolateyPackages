@@ -40,6 +40,9 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
     Write-Host "   Displays $CNCHeader."
 	Write-Host "-UpdateImageURLs"
     Write-Host "   Updates image URLs with Staticaly CDN URLs."
+	Write-Host
+	Write-Host "To check all your packages' .nuspec files: Change to the root directory of your packages and run (via PowerShell):"
+	Write-Host 'Get-ChildItem -Recurse | ?{if ($_.PSIsContainer){cls;cd $_.Name;cnc;cd ..;pause}}'
 	return
 }
 
@@ -82,12 +85,13 @@ if ($args -eq "-OpenValidatorInfo") {
 #FUTURE ENCHANCEMENT accept a filespec and use that as well
 $LocalnuspecFile = Get-Item *.nuspec
 if (!($LocalnuspecFile)) {
-    Write-Warning "No .nuspec file found."
+    $CurrentDir=Get-Location
+    Write-Warning "  ** No .nuspec file found in $CurrentDir"
 	return
    }
-   
+
+# borrowed from https://blogs.technet.microsoft.com/samdrey/2014/03/26/determine-the-file-encoding-of-a-file-csv-file-with-french-accents-or-other-exotic-characters-that-youre-trying-to-import-in-powershell/   
 function Get-FileEncoding
-# borrowed from https://blogs.technet.microsoft.com/samdrey/2014/03/26/determine-the-file-encoding-of-a-file-csv-file-with-french-accents-or-other-exotic-characters-that-youre-trying-to-import-in-powershell/
 {
     [CmdletBinding()] Param (
      [Parameter(Mandatory = $True, ValueFromPipelineByPropertyName = $True)] [string]$Path
@@ -108,20 +112,27 @@ function Get-FileEncoding
 }
 
 # Validate that URL elements are actually URLs and verify the URLs are good
+# Thanks https://stackoverflow.com/questions/23760070/the-remote-server-returned-an-error-401-unauthorized
 function Validate-URL([string]$element,[string]$url){
 if (($url -match "http://") -or ($url -match "https://")){
-    $HTTP_Request = [System.Net.WebRequest]::Create("$url")
-    $HTTP_Response = $HTTP_Request.GetResponse() # Can throw an error under certain conditions
-    $HTTP_Status = [int]$HTTP_Response.StatusCode
-	$HTTP_Response.Close()
-    if ($HTTP_Status -eq 200) {
-	   # do nothing, it's good!
-       } else {
-         Write-Warning "  ** $element - $url looks like a bad or non-responding URL, please check."
-       }
-  } else {
-    Write-Warning "  ** $element - ""$url"" is not a valid URL"
-  }	   
+     $HTTP_Response = $null
+     $HTTP_Request = [System.Net.WebRequest]::Create($url)
+     try{
+         $HTTP_Response = $HTTP_Request.GetResponse()
+         $HTTP_Status = [int]$HTTP_Response.StatusCode
+         if ($HTTP_Status -eq 200) { 
+            # do nothing, it's good!
+         } else {
+           Write-Host ("  ** $element - $url site might be OK, status code:" + $HTTP_Status)
+		   Write-Host "           ** Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -ForeGround Cyan
+         }
+         $HTTP_Response.Close()
+        } catch {
+          $HTTP_Status = [regex]::matches($_.exception.message, "(?<=\()[\d]{3}").Value
+          Write-Warning ("  ** $element - ""$url"" is probably bad, status code: " + $HTTP_Status)
+          Write-Host "           ** Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -ForeGround Cyan
+        }
+   }
 }
 
 function Check-LicenseFile{
@@ -146,7 +157,7 @@ function Check-Binaries{
 $IncludedBinaries=(Get-ChildItem -Include $BinaryExtensions -Recurse)
 if ($IncludedBinaries){
     Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
-    Write-Host '           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have distribution rights. ' -ForeGround Cyan
+    Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -ForeGround Cyan
 	Check-LicenseFile
 	Check-VerificationFile
    }
@@ -263,7 +274,7 @@ if ($args -eq "-OpenURLs") {
 
 # check for UTF8 encoding
 $NuspecEncoding=(Get-FileEncoding -Path $LocalnuspecFile)
-if ($NuspecEncoding -ne "UTF8"){Write-Warning "  ** $NuspecDisplayName is NOT UTF8 encoded."}
+if ($NuspecEncoding -ne "UTF8"){Write-Warning "  ** $NuspecDisplayName is $NuspecEncoding, NOT UTF8 encoded."}
 
 # <authors> checks
 if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this element is a requirement."}
@@ -283,7 +294,7 @@ if (!($NuspecBugTrackerURL)) {
 if (!($NuspecCopyright)) {
     Write-Warning "  ** <copyright> - element is empty."
 	} else {
-	  if ($NuspecCopyright.length -lt 5) {
+	  if ($NuspecCopyright.Length -lt 5) {
 	      Write-Warning "  ** <copyright> - Please update the copyright field so that it is using at least 4 characters."
 		  }
 	}
@@ -298,8 +309,8 @@ if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){Write-Warnin
 if (!($NuspecDescription)) {
     Write-Warning "  ** <description> - element is empty, this element is a requirement."
    } else {
-     if ($NuspecDescription.length -lt 30) {Write-Warning "  ** <description> - is less than 30 characters."}
-     if ($NuspecDescription.length -gt 4000) {Write-Warning "  ** <description> - is greater than 4,000 characters."}
+     if ($NuspecDescription.Length -lt 30) {Write-Warning "  ** <description> - is less than 30 characters."}
+     if ($NuspecDescription.Length -gt 4000) {Write-Warning "  ** <description> - is greater than 4,000 characters."}
 	 if ($NuspecDescription -match "raw.githubusercontent"){
          Write-Warning "  ** <description> - has a GitHub direct link. Please change to a CDN such as:"
          Write-Host "           ** $CDNlist" -ForeGround Cyan
@@ -359,12 +370,12 @@ if (!($IconExt)){
 if (!($NuspecID)) {
     Write-Warning "  ** <id> - element is empty, this element is a requirement."
 	} else {
-     if ($NuspecID.length -gt 20) {
+     if (($NuspecID.Length -gt 20) -and (!$NuspecID.Contains("-")) -and (!$NuspecID.Contains("."))) {
 	     Write-Warning "  ** <id> - is greater than 20 characters. This will trigger a message from the verifier:"
 	     Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the`n              package for one that will be pushed with a new id that meets the package naming guidelines." -ForeGround Cyan
 	    }
 	 if ($NuspecID -cmatch "[A-Z]") {Write-Warning "  ** <id> - includes UPPERcase letters." }
-	 if (($NuspecID -match ".") -and ($NuspecID -notmatch ".install") -and ($NuspecID -notmatch ".portable")) {
+	 if (($NuspecID.Contains(".")) -and (!$NuspecID.Contains(".install")) -and (!$NuspecID.Contains(".portable"))) {
 	      Write-Warning "  ** <id> - includes a '.'. This will trigger a message from the verifier:"
 		  Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the package`n              for one that will be pushed with a new id that meets the package naming guidelines."  -ForeGround Cyan
 		 }
@@ -399,7 +410,7 @@ if (!($NuspecOwners)) {
 # <packageSourceUrl> checks
 if (!($NuspecPackageSourceURL)) {
     Write-Warning "  ** <packageSourceUrl> - element is empty."
-	Write-Host "           ** Suggestion: Consider publishing your packages on GitHub. Other people might help you improve your package.`n              Users can also open issues to notify you of problems or updates." -ForeGround Cyan
+	Write-Host "           ** Suggestion: Consider publishing your packages on GitHub. Other people might help you improve your package.`n              Users can also notify you of issues or program updates." -ForeGround Cyan
    } else {
      Validate-URL "<packageSourceUrl>" $NuspecPackageSourceURL
 	}		
@@ -414,7 +425,7 @@ if (!($NuspecProjectSourceURL)) {
 	
 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
     Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
-    Write-Host '           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure that projectSourceUrl is pointing to software source code or remove the field from the nuspec.' -ForeGround Cyan
+    Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -ForeGround Cyan
 }
 
 # <projectUrl> checks
