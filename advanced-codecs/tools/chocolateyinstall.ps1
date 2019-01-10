@@ -4,7 +4,7 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\advanced-codecs_install.ahk"
 $TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
-$url            = "$toolsDir\ADVANCED_Codecs_v$TodaysVersion.exe"
+$url            = "$toolsDir\ADVANCED_Codecs_v"+$TodaysVersion+".exe"
 
 $packageArgs = @{
   packageName    = 'advanced-codecs'
