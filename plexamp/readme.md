@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* This program only installs for the current user.
 
 ***
 

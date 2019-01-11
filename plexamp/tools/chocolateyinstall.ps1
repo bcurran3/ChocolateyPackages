@@ -1,23 +1,18 @@
 ﻿$packageName    = 'plexamp'
-$installerType  = 'exe'
-$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/Plexamp%20Setup%201.0.5.exe'
-$checksum       = '928BFCADBF35A562CDA83AF55E4234CD887689A6DD913393A44EBE37E49DCEC7'
-$silentArgs     = '/S'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0,1)
-$softwareName   = 'Plexamp*'
+$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/Plexamp%20Setup%201.1.0.exe'
+$checksum       = 'C38DE045826C02273C65563221676A9FCBC4638E167CAFEA9CC5B2400ACD2357'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir  
-  fileType      = $installerType
+  fileType      = 'EXE'
   url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
+  validExitCodes= @(0,1)
+  silentArgs    = '/S'
+  softwareName  = 'Plexamp*'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
 
 Install-ChocolateyPackage @packageArgs
-

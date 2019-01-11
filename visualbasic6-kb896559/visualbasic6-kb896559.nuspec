@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>visualbasic6-kb896559</id>
+    <title>Microsoft Visual Basic 6.0 Common Controls (Install)</title>
+    <version>6.0.2800.1106</version>
+    <authors>Microsoft</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/VisualBasic6-KB896559</packageSourceUrl>		
+    <summary>Update for the Microsoft Visual Basic 6.0 Common Controls: mscomctl.ocx and comctl32.ocx.</summary>
+    <description>[choco://VisualBasic6-KB896559](choco://VisualBasic6-KB896559)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
+This package updates two Microsoft Visual Basic 6.0 Common Controls: mscomctl.ocx and comctl32.ocx to address the issues described in the KB articles noted in the Related Resources section on this page. 
+This package will not install these Common Controls if they do not already exist on the target system. This package cannot be uninstalled.
+
+This package is provided under the terms of the End User License Agreement and is intended for the following customers:
+
+* Customers who are Microsoft Visual Basic 6.0 and/or Microsoft Visual Studio 6.0 licensees.
+* Customers who are not licensees of Microsoft Visual Basic 6.0 nor Microsoft Visual Studio 6.0 but are using older versions of the two Common Controls.
+
+Mainstream Support for Microsoft Visual Basic 6.0 ended on March 31, 2005. However, we are releasing this non-security related package because it contains improvements that were ready for release just prior to the end of Mainstream Support. Microsoft Visual Basic 6.0 has transitioned to Extended Support which runs through March 31, 2008. Microsoft is not extending the Mainstream Support phase for Microsoft Visual Basic 6.0 in any way.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/VisualBasic6-KB896559/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***</description>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=10019</projectUrl>
+    <tags>visual basic controls mscomctl.ocx comctl32.ocx</tags>
+    <copyright>Microsoft</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/ocx_icon.png</iconUrl>
+    <dependencies>
+      <dependency id="autohotkey" />
+    </dependencies>	
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

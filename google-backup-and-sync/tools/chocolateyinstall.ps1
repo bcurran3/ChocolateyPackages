@@ -1,9 +1,9 @@
 ﻿$packageName = 'google-backup-and-sync' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://dl.google.com/drive/gsync_enterprise.msi'
-$checksum    = '5536CF0A1BBDE156A954E008DCB5C9C6DFACB450BF22026158FA5EE180876E81'
+$checksum    = 'FA39A76EE91736EC2056B1F0F17390F5382D865F3FDE170C9D971A7617F7B428'
 $url64       = 'https://dl.google.com/drive/gsync_enterprise64.msi'
-$checksum64  = '628ADDF2476C4BB77C2F46773F69884A0207448683FCF6D2D52D58AE4F777D01'
+$checksum64  = '48F54D68D686F8E9CB6607E92EAAFED815F05D424BFFCD94EC53429EE9CF49CB'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -20,4 +20,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs  
-  
