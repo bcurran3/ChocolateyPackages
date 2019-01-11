@@ -2,6 +2,7 @@
 
 * The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
 * To automated this package, it is installed with the install --root option thus skipping creating a new user. When you run WSL you will be logged in as root. To create a user use the adduser command.
+* This package unpacks the files to C:\ProgramData\chocolatey\lib<wsl-distro>\tools\unzipped. Files in C:\ProgramData require admin privileges by default. If you want the ability to run under a non-admin account, change the file permissions.
 * There are a lot of comments about this in the ChocolateyInstall script. You can view them on the chocolatey.org package page.
 * I'm told installing via the Microsoft Store creates a Windows Start Menu icon, this package does not. Run from an elevated CLI.
 * If you encounter errors such as Error: 0x80070005 Press any key to continue... it usually means that WSL has lost track of the distro files (they might have moved or been deleted.) You should uninstall the package. If the package is missing you can list your installed distros with wslconfig /list, remove the distro with wslconfig /unregister distroname, then simply reinstall the package.
