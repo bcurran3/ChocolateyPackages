@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'startuplist.portable' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.merijn.nu/files/startuplist.zip'
-$ExeFile = 'StartupList.exe'
+$packageName  = 'startuplist.portable' 
+$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url          = 'https://www.merijn.nu/files/startuplist.zip'
+$ExeFile      = 'StartupList.exe'
 $ShortcutName = 'StartupList'
 
 $packageArgs = @{
@@ -16,5 +16,5 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName.lnk" -targetPath "$env:ChocolateyInstall\lib\$packageName\tools\$ExeFile"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$ShortcutName.lnk" -targetPath "$ENV:ChocolateyInstall\lib\$packageName\tools\$ExeFile"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir"
