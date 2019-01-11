@@ -3,19 +3,25 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskschedulerview</id>
-    <version>1.45</version>
+    <version>1.46</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskschedulerview</packageSourceUrl>
     <title>TaskSchedulerView (Portable)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</projectUrl>
+	<docsUrl>https://www.nirsoft.net/utils/task_scheduler_view.html</docsUrl>
     <iconUrl>https://www.nirsoft.net/utils/taskschedulerview_icon.png</iconUrl>
     <copyright>Copyright (c) Nir Sofer</copyright>
     <licenseUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</licenseUrl>
+	<bugTrackerUrl>https://www.nirsoft.net/contact-new.html</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>nirsoft taskschedulerview task scheduler utility portable</tags>
+    <tags>nirsoft taskschedulerview task scheduler utility portable binary</tags>
     <summary>TaskSchedulerView lets you easily view and edit Windows Scheduled Tasks in a GUI.</summary>
-    <description>
+    <description>***
+[choco://taskschedulerview](choco://taskschedulerview)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
 ![Screenshot of TaskSchedulerView](http://www.nirsoft.net/utils/taskschedulerview.png)
 	
 TaskSchedulerView is a simple tool for Windows Vista/7/8/10 that displays in a single table the list of all tasks from the Task Scheduler of Windows. It also allows you to easily disable/enable multiple tasks at once. For every task, the following information is displayed: Task Name, Description, Status, Hidden (Yes/No), Last Run/Next Run Times, Task Folder, EXE filename or COM handler of the task, number of missed runs, and more...	
@@ -30,8 +36,8 @@ This tool works on any version of Windows, starting from Windows Vista and up to
 
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+***</description>
+	<releaseNotes>https://www.nirsoft.net/utils/task_scheduler_view.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

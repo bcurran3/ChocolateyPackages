@@ -4,12 +4,16 @@
   <metadata>
     <id>plexamp</id>
     <title>Plexamp (Install)</title>
-    <version>1.0.5</version>
+    <version>1.1.0</version>
     <authors>Plex</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexamp</packageSourceUrl>		
     <summary>Plexamp is a small music player for your desktop, with a number of unique features.</summary>
-    <description>
+    <description>***
+[choco://plexamp](choco://plexamp)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
 ![Screenshots of Plexamp](https://cdn-images-1.medium.com/max/2000/1*_5vj2zq-mkZT88N8syPMtA@2x.png)	
 
 Plexamp is a small music player for your desktop, with a number of unique features.Throw your best FLACs at it and experience sonic bliss!
@@ -37,16 +41,19 @@ Enjoy beautiful graphical views of songs, and seek easily to specific places in 
 Explore your library in new ways with Library Radio, Time Travel Radio, and Artist Radio.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/plexamp/readme.md)**
-    </description>
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***</description>
     <projectUrl>http://plexamp.com/</projectUrl>
     <docsUrl>http://plexamp.com/#help</docsUrl>
-    <mailingListUrl>https://forums.plex.tv/categories/plex-labs</mailingListUrl>
+    <mailingListUrl>https://forums.plex.tv/c/testing/plex-labs</mailingListUrl>
     <tags>plex plexamp multimedia mp3 audio player free</tags>
     <copyright>Copyright © Plex</copyright>
     <licenseUrl>https://www.plex.tv/about/privacy-legal/plex-terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://plexamp.com/img/icon.png</iconUrl>
-    <releaseNotes>https://medium.com/plexlabs/introducing-plexamp-9493a658847a</releaseNotes>
+    <releaseNotes>https://forums.plex.tv/t/plexamp-release-notes/221280</releaseNotes>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />
