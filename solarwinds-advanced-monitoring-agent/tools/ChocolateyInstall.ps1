@@ -18,7 +18,7 @@ Install-ChocolateyZipPackage @packageArgs
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
-  file          = "$toolsDir\AGENT_10_7_12.EXE"
+  file          = "$toolsDir\AGENT_$CurrentVersion.EXE"
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   softwareName  = 'Advanced Monitoring Agent'
   }

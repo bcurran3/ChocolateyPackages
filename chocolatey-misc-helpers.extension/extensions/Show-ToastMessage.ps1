@@ -1,4 +1,4 @@
-# chocolatey-misc-helpers.extension v0.0.2 (07-19-2018) by Bill Curran - public domain
+# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
 # Show-ToastMessage.ps1 - Sends a Windows toast message.
 # Uses BurntToast (https://github.com/Windos/BurntToast) if installed. NOTE: v0.5.0+ no longer works on Windows 8.
 # Otherwise uses the code I blatantly stole from https://gist.github.com/Windos/9aa6a684ac583e0d38a8fa68196bc2dc
@@ -11,7 +11,9 @@ function Show-ToastMessage($MessageLine1, $MessageLine2){
 # This function has been disallowed by the Chocolatey team as "pop ups" need to be 100% opt-in.
 # Its existence is for backward compatibility, actual function NULLIFIED.
 # I argued that by having BurntToast installed, users WANT the toast messages. The Chocolatey Team still disagreed. :(
-# This might return in a different form in the future.
+# 01-12-2019
+# This functionality has been replaced by https://chocolatey.org/packages/chocolatey-toast-notifications.extension which is much better!
+Write-Host "  ** The Show-ToastMessage function has been retired. Please inform the package maintainer!" -ForeGround Red
 return
 
 if (!(Test-Path "$ChocolateyInstall\extensions\chocolatey-misc-helpers\choco.ico")){

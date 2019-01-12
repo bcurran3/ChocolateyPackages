@@ -5,7 +5,7 @@
 # REF: https://github.com/chocolatey/package-validator/wiki
 
 function CNC-Splash{
-Write-Host "CNC.ps1 v2019.01.09 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor white
+Write-Host "CNC.ps1 v2019.01.12 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor white
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForeGroundColor white
 Write-Host
 }
@@ -375,7 +375,7 @@ if (!($NuspecID)) {
 	     Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the`n              package for one that will be pushed with a new id that meets the package naming guidelines." -ForeGround Cyan
 	    }
 	 if ($NuspecID -cmatch "[A-Z]") {Write-Warning "  ** <id> - includes UPPERcase letters." }
-	 if (($NuspecID.Contains(".")) -and (!$NuspecID.Contains(".install")) -and (!$NuspecID.Contains(".portable"))) {
+	 if (($NuspecID.Contains(".")) -and (!$NuspecID.Contains(".install")) -and (!$NuspecID.Contains(".portable")) -and (!$NuspecID.Contains(".extension"))) {
 	      Write-Warning "  ** <id> - includes a '.'. This will trigger a message from the verifier:"
 		  Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the package`n              for one that will be pushed with a new id that meets the package naming guidelines."  -ForeGround Cyan
 		 }

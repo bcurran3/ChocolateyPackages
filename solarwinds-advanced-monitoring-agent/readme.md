@@ -2,6 +2,7 @@
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * After installing the agent, don't forget to run it and login with your SolarWinds MSP account.
+* It is recommended that you pin this package and let the agent be updated by your RMM Dashboard Agent Auto-update Settings: choco pin add -n=solarwinds-advanced-monitoring-agent
 
 ***
 
