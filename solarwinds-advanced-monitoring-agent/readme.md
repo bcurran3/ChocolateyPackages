@@ -1,9 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package doesn't work, no working DL URL yet.
-
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-
+* After installing the agent, don't forget to run it and login with your SolarWinds MSP account.
 
 ***
 

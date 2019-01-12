@@ -20,4 +20,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+Start-CheckandStop "ProcessController"
 Start-CheckandStop "RecoveryConsole"

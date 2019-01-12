@@ -10,11 +10,12 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-recovery-console</packageSourceUrl>		
     <projectUrl>https://www.solarwindsmsp.com/products/backup</projectUrl>
     <docsUrl>http://help.solarwinds.com/backup/documentation/Content/advanced-recovery/recovery-console/home.htm</docsUrl>
-    <tags>solarwinds msp backup recovery console</tags>
+    <tags>solarwinds solarwindsmsp msp backup recovery console</tags>
     <copyright>© SolarWinds MSP</copyright>
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://d36spl5w3z9i0o.cloudfront.net/files/m/a/maxacademy_docebosaas_com/assets/img/original/3591c8f5b1ecc2461974af5f45bc7039bfc5fc69.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-recovery-console/solarwinds-recovery-console_icon.png</iconUrl>
+	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Get More Done with Automation without Learning a New Scripting Language</summary>
     <description>
 ***
@@ -22,7 +23,7 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
 
-![Screenshot of ]()	
+![Screenshot of SolarWinds Recovery Console](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-recovery-console/solarwinds-recovery-console_screenshot.png)	
 
 ###Your customers count on you.
 ###You can count on us. 
@@ -41,6 +42,7 @@ SpeedVault, a local cache capability, gives you the option to help recover data 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
+	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>	
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
