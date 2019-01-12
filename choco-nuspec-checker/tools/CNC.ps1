@@ -135,6 +135,7 @@ if (($url -match "http://") -or ($url -match "https://")){
    }
 }
 
+# Check for license files when binaries are included
 function Check-LicenseFile{
 $LicenseFile=(Get-ChildItem -Include *LICENSE*.txt -Recurse)
 if ($LicenseFile){
@@ -144,6 +145,7 @@ if ($LicenseFile){
    }
 }
 
+# Check for verfication file when binaries are included
 function Check-VerificationFile{
 $VerificationFile=(Get-ChildItem -Include *VERIFICATION*.txt -Recurse)
 if ($VerificationFile){
@@ -153,6 +155,7 @@ if ($VerificationFile){
    }
 }
 
+# check for binaries
 function Check-Binaries{
 $IncludedBinaries=(Get-ChildItem -Include $BinaryExtensions -Recurse)
 if ($IncludedBinaries){
@@ -163,6 +166,7 @@ if ($IncludedBinaries){
    }
 }
 
+# add header template to <description>
 function Add-Header{
 if (Test-Path $CNCHeader){
     $Header=(Get-Content $CNCHeader)
@@ -174,6 +178,7 @@ if (Test-Path $CNCHeader){
    }
 }
 
+# add footer template to <description>
 function Add-Footer{
 if (Test-Path $CNCFooter){
     $Footer=(Get-Content $CNCFooter)
@@ -185,6 +190,7 @@ if (Test-Path $CNCFooter){
    }
 }
 
+# check if header template is already in the description
 function Check-Header{
 $NuspecDescription=$NuspecDescription.Trim()
 if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
@@ -193,6 +199,7 @@ if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---"
    }
 }
 
+# check if footer template is already in the description
 function Check-Footer{
 $NuspecDescription=$NuspecDescription.Trim()
 if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
@@ -309,6 +316,8 @@ if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){Write-Warnin
 if (!($NuspecDescription)) {
     Write-Warning "  ** <description> - element is empty, this element is a requirement."
    } else {
+     Check-Header
+     Check-Footer
      if ($NuspecDescription.Length -lt 30) {Write-Warning "  ** <description> - is less than 30 characters."}
      if ($NuspecDescription.Length -gt 4000) {Write-Warning "  ** <description> - is greater than 4,000 characters."}
 	 if ($NuspecDescription -match "raw.githubusercontent"){
@@ -325,9 +334,6 @@ if (!($NuspecDescription)) {
 	
 # ENHANCEMENT: (verifier message) Package contains dependencies with no specified version. You should at least specify a minimum version of a dependency. 
 	
-Check-Header
-Check-Footer
-
 # <docsUrl> checks
 if (!($NuspecDocsURL)) {
     Write-Warning "  ** <docsUrl> - element is empty. This will trigger a message from the verifier:"
@@ -420,13 +426,12 @@ if (!($NuspecProjectSourceURL)) {
 	Write-Host '           ** Suggestion: projectSourceUrl - points to the location of the underlying software source' -ForeGround Cyan
    } else {
      Validate-URL "<projectSourceUrl>" $NuspecProjectSourceURL
+	 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
+         Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
+         Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -ForeGround Cyan
+       }
 	}
 	
-if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
-    Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
-    Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -ForeGround Cyan
-}
-
 # <projectUrl> checks
 if (!($NuspecProjectURL)) {
     Write-Warning "  ** <projectUrl> - element is empty, this element is a requirement."
@@ -484,10 +489,12 @@ if (!($NuspecVersion)) {Write-Warning "  ** <version> - element is empty, this e
 # Binaries checks
 Check-Binaries
 
+# add header template to <description> if -AddHeader is passed to script
 if ($args -eq "-AddHeader") {
 $NewNuspecDescription=(Add-Header)
 }
 
+# add footer template to <description> if -AddFooter is passed to script
 if ($args -eq "-AddFooter") {
 $NewNuspecDescription=(Add-Footer)
 }
@@ -496,8 +503,8 @@ Write-Host $NewNuspecDescription -ForeGround Green # temporary debugging
 
 # FUTURE ENHANCEMENT update changes to nuspec
 # Update-nuspec{
-# $NewNuspecIconURL
-# $NewNuspecDescription
+# $NewNuspecIconURL - make global ?
+# $NewNuspecDescription - make global ?
 #}
 
 Write-Host "Found CNC.ps1 useful?" -ForeGroundColor white
