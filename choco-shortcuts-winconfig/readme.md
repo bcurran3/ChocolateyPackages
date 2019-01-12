@@ -5,7 +5,7 @@
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * Yes, I considered icons for more advanced functions such as to view and change Chocolatey Features, Sources, Pinning, and apikey. BUT (notice that's a big but) those are advanced commands that I feel the average user wouldn't need. The people who know what those things do are more likely to just go to the Command Prompt and do it there. A bigger reason why I didn't add this is that Windows 10 doesn't allow nested menus. So if I added another 3-9 shortcuts, it would be very cluttered. On Windows 7 the additional shortcuts could be managed nicely under a separate folder, I wish Windows 10 worked that way still.. If anyone requests it, I'd be glad to make a choco-shortcuts-advanced-winconfig with the more advanced commands and set this package as a dependency.
 
-![Screenshot of Choco Shortcuts](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
+![Screenshot of Choco Shortcuts](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
 
 #This package creates Windows Start Menu shortcuts to run common Chocolatey functions.
 
@@ -54,5 +54,4 @@ If applicable, please always consider donating or purchasing the software you in
 <h3>TIA,</h3>
 
 <h3>Bill</h3>
-
 

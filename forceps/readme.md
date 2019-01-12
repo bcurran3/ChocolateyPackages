@@ -1,10 +1,10 @@
-<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/forceps/ForcePS_icon.png" width="100" height="100">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/forceps/ForcePS_icon.png" width="100" height="100">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
 
-![Screenshot of ForcePS](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/forceps/ForcePS_screenshot.png)
+![Screenshot of ForcePS](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/forceps/ForcePS_screenshot.png)
 	
 ##ForcePS - Allows you to run a PowerShell script from the Command Prompt bypassing Windows PowerShell Script Execution Policy.
 
