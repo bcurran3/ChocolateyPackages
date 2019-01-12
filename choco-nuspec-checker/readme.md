@@ -1,27 +1,52 @@
 <<<<<<< HEAD
-<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original!
 * I personally use and endorse this extension.
 
-![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)]()
+***
+[choco://choco-nuspec-checker](choco://choco-nuspec-checker)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
+![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
-#**choco-nuspec-checker** (CNC) is a PowerShell script designed for Chocolatey package maintainers (creators) to check Chocolatey .nuspec files for common errors and ommisions.
-
+#**choco-nuspec-checker** (**CNC**) is a PowerShell script designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and ommisions. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. 
 
 ###FEATURES:
+* **CNC** checks for common verifier guidelines, suggestions, and notes warnings
 * **CNC** checks for all tags and reports if any are missing
-* **CNC** checks for common oversights and reports about them
-* **CNC** checks for common verifier warnings
+* **CNC** checks for dead URLs and reports them
+* **CNC** checks for GitHub direct links, reports them, and can convert to Staticaly CDN URLs
+* **CNC** checks for RawGit CDN links, reports them, and can convert to Staticaly CDN URLs
+* **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
+* **CNC** can add a standard template header and/or footer to your .nuspec description (coming soon)
 
+###Helps make packaging Chocolateasy!
 
-###CHANGE LOG:
-* 2018.12.22 - initial release
+###INSTRUCTIONS:
+* Change to the directory where you have a package .nuspec file and run **CNC** via PowerShell; it's already in your path. **CNC -help** for help and options. 
+* To check all your packages' .nuspec files change to the root directory of all your packages and via PowerShell run **Get-ChildItem -Recurse | ?{if ($__.PSIsContainer){cls;cd $__.Name;cnc;cd ..;pause}}**
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
+
+**If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+
+###CHANGELOG:
+* 2019.01.12 - minor fixes
+* 2019.01.09 - many more checks and warnings added, almost all known verifier guidelines, suggestions and notes added, some beautifications, added option to view Chocolatey validator info page, added optional image GitHub direct and RawGit URL conversions to Staticaly CDN URLs
+* 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (>4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
+* 2019.01.04 - implemented included binary files checking and messages, laid out the groundwork for the future enhancements
+* 2019.01.03 - fixed some URL checking handling that could cause PS errors, updated list of CDN recommendations, added checking for RawGit URLs in description, cosmetic updates
+* 2018.12.22-2018-12.28 - initial release
 
 ###ROADMAP:
-* 
+* take a filespec to check .nuspec files outside of the local path
+* automatically convert RawGit CDN URLs to Staticaly or a possibly a selectable preference
+* (out of original scope) option to insert configurable headers and footers into description (some groundwork laid)
+* capture and test URLs found in description
 
 ***
 
