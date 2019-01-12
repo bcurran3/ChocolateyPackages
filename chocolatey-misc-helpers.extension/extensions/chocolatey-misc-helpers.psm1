@@ -1,4 +1,4 @@
-# chocolatey-misc-helpers.extension v0.0.3 (12-04-2018) by Bill Curran - public domain
+# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
 
 $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
 

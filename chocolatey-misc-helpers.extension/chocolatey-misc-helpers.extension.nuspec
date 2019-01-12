@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-misc-helpers.extension</id>
-    <version>0.0.3</version>	
+    <version>0.0.3.1</version>	
     <title>Chocolatey Misc Helpers Extension</title>	
     <authors>Bill Curran</authors>	
     <owners>bcurran3</owners>	
@@ -15,25 +15,27 @@
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-misc-helpers.extension</projectSourceUrl>
 	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
 	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>	
     <summary>Chocolatey Misc Helpers Extension is a collection of helper functions for package creators/maintainers.</summary>
-    <description>
+    <description>***
+[choco://chocolatey-misc-helpers.extension](choco://chocolatey-misc-helpers.extension)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
 ##**chocolatey-misc-helpers.extension** provides helper functions to be used in Chocolatey install/uninstall scripts by package creators/maintainers. 
 
 These didn't fit into the concept scope of my other extensions so I started this miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Enable-AutoPin** - Auto-pins a package during installation. (This has an unknown shelf life.) [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Enable-AutoPin_screenshot.png)
-* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
-* **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
-* **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-WaitandStopActual** - (do not directly use) Called by Start-WaitandStop to make Start-WaitandStop simple to use.
-* **Test-Dependency** - Provides a way to verify a dependency is installed. Does NOT check version. Returns True/False. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Test-Dependency_screenshot.png)
+* **Test-Dependency** - Provides a way to verify a dependency is installed. Does NOT check version. Returns True/False. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Test-Dependency_screenshot.png)
 * **Read comments in the scripts for help implementing.**
 
 ###USAGE:
-* Enable-AutoPin
 * Start-CheckandStop "ProcessName"
 * Start-CheckandThrow "ProcessName"
 * Start-WaitandStop "ProcessName"
@@ -41,8 +43,7 @@ These didn't fit into the concept scope of my other extensions so I started this
 
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-    </description>
+***</description>
     <releaseNotes>
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-misc-helpers.extension_extras/readme.md)**
     </releaseNotes>

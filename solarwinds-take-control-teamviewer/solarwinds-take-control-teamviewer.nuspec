@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-take-control-teamviewer</id>
-    <title>SolarWinds Take Control TeamViewer(Install)</title>
+    <title>SolarWinds Take Control TeamViewer (Install)</title>
     <version>13.0.6447</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
