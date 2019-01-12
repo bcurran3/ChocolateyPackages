@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>solarwinds-advanced-monitoring-agent</id>
+    <title>Solarwinds MSP Advanced Monitoring Agent (Install)</title>
+    <version>10.7.12</version>
+    <authors>SolarWinds MSP</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-advanced-monitoring-agent</packageSourceUrl>
+    <projectUrl>https://www.solarwindsmsp.com/content/advanced-monitoring-agent</projectUrl>
+    <tags>solarwinds msp rmm agent</tags>
+    <copyright>© SolarWinds MSP</copyright>
+    <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://d36spl5w3z9i0o.cloudfront.net/files/m/a/maxacademy_docebosaas_com/assets/img/original/3591c8f5b1ecc2461974af5f45bc7039bfc5fc69.png</iconUrl>
+    <summary>Advanced Monitoring Agent Software for SolarWinds MSP</summary>
+    <description>
+***
+[choco://solarwinds-advanced-monitoring-agent](choco://solarwinds-advanced-monitoring-agent)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
+![Screenshot of ]()	
+
+With an advanced monitoring agent, you have full control over managing your customers' IT. SolarWinds MSP's (formerly LOGICnow) remote management platform makes it easy to streamline processes and outrun your competition with our cloud-based automated maintenance and fully integrated customer service. Start your free trial of SolarWinds MSP's solutions today.
+
+Why Your Clients Need a Network Monitoring Software
+Monitoring agents are used to keep a system or network of computers updated and free of malicious programs through 24/7 surveillance and IT support. They keep track of networks and ensure security and reliability—both during and after work hours, while enabling backup and disaster recovery capabilities. 
+
+Why risk the security and trust of your customers? Considered one of the world's most successful solutions for MSPs and IT professionals, SolarWinds MSP extends the remote management, backup, encryption and support software, as well as a dedicated IT staff to provide help when you need it. 
+
+Advanced Monitoring Agent Software | SolarWinds MSP
+With SolarWinds MSP, the security and functionality of your clients' businesses remains the top priority. Specifically, our remote management software empowers our customers to streamline all aspects of security by automating monitoring and management services so it works even when your clients are clocked out. 
+
+Additionally, our software includes remote access to all servers and networks. This means, if a virus or suspicious activity is detected, you will know immediately and can remove the threat. And since this is done remotely, you can save money and minimize downtime to your clients' operations.
+
+No matter how you use SolarWinds MSP's software solution for MSPs and IT professionals, you can expect superior technology capabilities and dedicated customer service support whenever you need it. SolarWinds MSP is trusted by more than 12,000 MSPs worldwide, so you can be confident you're using the best in monitoring services to keep your clients and your own business in excellent, working order.
+
+Check out our advanced monitoring agent software for yourself by signing up for a free trial today.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-advanced-monitoring-agent/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <releaseNotes>https://status.solarwindsmsp.com/category/msp-remote-monitoring-management/msp-remote-monitoring-management-release-notes/</releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
