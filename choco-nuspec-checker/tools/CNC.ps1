@@ -108,7 +108,7 @@ function Get-FileEncoding
     elseif ($byte[0] -eq 0x2b -and $byte[1] -eq 0x2f -and $byte[2] -eq 0x76)
     { Write-Output 'UTF7'}
     else
-    { Write-Output 'ASCII' }
+    { Write-Output 'ASCII' } 
 }
 
 # Validate that URL elements are actually URLs and verify the URLs are good
@@ -186,7 +186,7 @@ if (Test-Path $CNCFooter){
 }
 
 function Check-Header{
-# still needs to handle pre-pended spaces
+$NuspecDescription=$NuspecDescription.Trim()
 if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
     Write-Host "           ** <description> - standardized header found." -ForeGround Green
 	$HeaderFound=$True
@@ -194,7 +194,7 @@ if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---"
 }
 
 function Check-Footer{
-# still needs to handle trailing spaces
+$NuspecDescription=$NuspecDescription.Trim()
 if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
     Write-Host "           ** <description> - standardized footer found." -ForeGround Green
 	$FooterFound=$True
