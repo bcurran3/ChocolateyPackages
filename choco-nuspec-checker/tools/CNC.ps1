@@ -359,12 +359,11 @@ if (!($NuspecIconURL)) {
 		    $NewNuspecIconURL=(Update-CDNURL "$NuspecIconURL")
 		   }
        }
+     $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
+     if (!($IconExt)){
+         Write-Warning "  ** <iconUrl> - Suggestion: .PNG and .SVG are the preferred package icon file types." 
+       }
    }
-
-$IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
-if (!($IconExt)){
-    Write-Warning "  ** <iconUrl> - Suggestion: .PNG and .SVG are the preferred package icon file types." 
-  }
 
 # <id> checks
 if (!($NuspecID)) {
