@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
@@ -16,10 +16,10 @@ To provide (fairly) easy to remember micro functions for (new?) package creators
 The use cases go on...
 
 #Functions
-![List of functions](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/List_of_functions.png)
+![List of functions](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/List_of_functions.png)
 
 Screenshot testing all functions with simple test-package install script that does: $test=function and Write-Out function result for each function. Results from the functions show that the test package was run on a computer with Microsoft Windows 10 Pro build 16299 64bit, joined to a domain, (onboard) Intel video, (discreet) Nvidia video, has a SSD, is a workstation not a server, and is pending a reboot.
-![](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/chocolatey-fastanswers.extension.png)
+![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/chocolatey-fastanswers.extension.png)
 
 ###CHANGE LOG:
 * 0.0.2 - Added Get-IsAMDCPU, Get-IsARMCPU, Get-IsHyperV, Get-IsIntelCPU, Get-IsKVM, Get-IsMobile, Get-NuspecInfo, Get-IsWinServer2019, and Get-IsXen. Improved Get-IsVM, Get-IsWin7/8/80/81/10, Get-IsWinServer2016, and Get-IsVMware. Bug fixed in Get-IsWin8 and Get-IsWin81.
