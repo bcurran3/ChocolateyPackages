@@ -1,11 +1,11 @@
-<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * It is not recommended to run InstChoco without the -ynp switch on servers if you are using the Windows Active Directory Domain features!
 
-![Screenshot of InstChoco in use](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
+![Screenshot of InstChoco in use](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
 
 #InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!
 	
@@ -17,11 +17,11 @@
 
 ###FEATURES:
 
-![Screenshot of InstChoco features](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_features_screenshot.png)
+![Screenshot of InstChoco features](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_features_screenshot.png)
 
 ###Usage: 
 
-![Screenshot of InstChoco Options](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
+![Screenshot of InstChoco Options](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
 
 
 ROADMAP:
