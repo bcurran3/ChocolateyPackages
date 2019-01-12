@@ -10,11 +10,12 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-automation-manager</packageSourceUrl>		
     <projectUrl>https://www.solarwindsmsp.com/products/n-central/automation</projectUrl>
     <docsUrl>http://help.logicnow.com/remote-management/helpcontents/index.html?script_builder.htm</docsUrl>
-    <tags>solarwinds msp automation manager</tags>
+    <tags>solarwinds solarwindsmsp msp automation manager</tags>
     <copyright>© SolarWinds MSP</copyright>
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://d36spl5w3z9i0o.cloudfront.net/files/m/a/maxacademy_docebosaas_com/assets/img/original/3591c8f5b1ecc2461974af5f45bc7039bfc5fc69.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-automation-manager/solarwinds-automation-manager_icon.png</iconUrl>
+	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Get More Done with Automation without Learning a New Scripting Language</summary>
     <description>
 ***
@@ -66,6 +67,7 @@ And this is just a short sample.
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
+	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -9,11 +9,12 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-advanced-monitoring-agent</packageSourceUrl>
     <projectUrl>https://www.solarwindsmsp.com/content/advanced-monitoring-agent</projectUrl>
-    <tags>solarwinds msp rmm agent</tags>
+    <tags>solarwinds solarwindsmsp msp rmm agent</tags>
     <copyright>© SolarWinds MSP</copyright>
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://d36spl5w3z9i0o.cloudfront.net/files/m/a/maxacademy_docebosaas_com/assets/img/original/3591c8f5b1ecc2461974af5f45bc7039bfc5fc69.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-advanced-monitoring-agent/solarwinds-advanced-monitoring-agent_icon.png</iconUrl>
+	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Advanced Monitoring Agent Software for SolarWinds MSP</summary>
     <description>
 ***
@@ -21,7 +22,7 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
 
-![Screenshot of ]()	
+![Screenshot of Solarwinds MSP Advanced Monitoring Agent](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-advanced-monitoring-agent/solarwinds-advanced-monitoring-agent_screenshot.png)	
 
 With an advanced monitoring agent, you have full control over managing your customers' IT. SolarWinds MSP's (formerly LOGICnow) remote management platform makes it easy to streamline processes and outrun your competition with our cloud-based automated maintenance and fully integrated customer service. Start your free trial of SolarWinds MSP's solutions today.
 
@@ -45,7 +46,7 @@ Check out our advanced monitoring agent software for yourself by signing up for 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
-    <releaseNotes>https://status.solarwindsmsp.com/category/msp-remote-monitoring-management/msp-remote-monitoring-management-release-notes/</releaseNotes>
+    <releaseNotes>https://dashboard.systemmonitor.us/help/default.php?key=agentreleasenotes/</releaseNotes>
       </metadata>
   <files>
     <file src="tools\**" target="tools" />

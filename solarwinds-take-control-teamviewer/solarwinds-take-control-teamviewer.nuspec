@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>solarwinds-take-control-teamviewer</id>
+    <title>SolarWinds Take Control TeamViewer(Install)</title>
+    <version>13.0.6447</version>
+    <authors>SolarWinds MSP</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-take-control-teamviewer</packageSourceUrl>		
+    <projectUrl>https://www.solarwindsmsp.com/products/remote-management/remote-access</projectUrl>
+    <docsUrl>https://documentation.solarwindsmsp.com/remote-management/helpcontents/index.html?take_control_viewer_teamviewer.htm</docsUrl>
+    <tags>solarwinds solarwindsmsp teamviwer remote take control support tool</tags>
+    <copyright>Copyright © TeamViewer GmbH</copyright>
+    <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-teamviewer_screenshot/solarwinds-take-control-teamviewer_icon.png</iconUrl>
+	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <summary>Take Control TeamViewer is a remote management tool.</summary>
+    <description>
+***
+[choco://solarwinds-take-control-teamviewer](choco://solarwinds-take-control-teamviewer)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
+![Screenshot of SolarWinds Take Control TeamViewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-teamviewer_screenshot/solarwinds-take-control-teamviewer_screenshot.png)	
+
+###Take Control and Resolve Issues Efficiently with Lightning-Fast Remote Support
+
+When users have technical issues that require your expert attention, your remote access tools should enable you to get the job done quickly and easily. The remote control features in SolarWinds® Remote Monitoring &amp; Management give you one-click access to any endpoint under management in as few as five seconds. And with the ability for technicians to chat on the back end or pass sessions between team members, Remote Monitoring &amp; Management makes it easy for IT teams to collaborate to solve even the thorniest technical challenges.
+
+###Provide Outstanding Unattended Support
+* Rapid connections: Quickly connect to any machine in your managed networks with one click.
+* Session transfers: Transfer sessions to other technicians if you need to take a break, or if you need to pass the issue to someone with a different expertise
+* Chat: Open a live chat window with end users if questions arise while you fix their workstation.
+
+###Fix Issues Fast with Powerful Diagnostic Tools
+
+* File transfers: Remotely upload files, including scripts, to users’ systems without disturbing them as they work.
+* Remote command line: Use the bash shell to solve issues from afar and even issue PowerShell® commands.
+* System preferences: Open the system controls in the background to diagnose computer or network issues, review or kill processes, and more.
+
+###Monitor Quality and Keep Your Environment Secure
+
+* User management: Assign technicians to specific worksites or departments, and set up permissions to help ensure proper security. 
+* Session recordings: Record any support session you want, so you can review later for quality control or troubleshooting. 
+* Chat transcripts: Review historical chat transcripts broken down by end user or technician.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-take-control-teamviewer/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
