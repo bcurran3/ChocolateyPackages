@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>solarwinds-take-control-viewer</id>
+    <title>SolarWinds Take Control Viewer (Install)</title>
+    <version>6.80.21</version>
+    <authors>SolarWinds MSP</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-take-control-viewer</packageSourceUrl>		
+    <projectUrl>https://www.solarwindsmsp.com/products/take-control</projectUrl>
+    <docsUrl>http://help.logicnow.com/remote-management/helpcontents/index.html?take_control.htm</docsUrl>
+    <tags>solarwinds solarwindsmsp remote take control support tool</tags>
+    <copyright>© SolarWinds MSP</copyright>
+    <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-viewer/solarwinds-take-control-viewer_icon.png</iconUrl>
+    <summary>Take Control is a remote management tool.</summary>
+	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <description>
+***
+[choco://solarwinds-take-control-viewer](choco://solarwinds-take-control-viewer)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+
+![Screenshot of SolarWinds Take Control Viewer](https://gfimaxstatus.files.wordpress.com/2019/01/whole_viewer.png?w=640)	
+
+###About Take Control
+
+Take Control, formerly MSP Connect, is a remote management tool that enables you to troubleshoot and resolve your customer's issues without remotely controlling a user's workstation and interrupting them. Take Control connects directly into the device, enabling you to easily see what is going on with the device and make the necessary changes, completely transparent to the end user.
+
+Take Control is available on SolarWinds N-central servers with a Professional license.
+
+Take Control includes:
+
+* remote control of Mac OS devices,
+* terminal services support,
+* session report included in audit trail, and
+* detailed system information, including Windows event log (Professional nodes only).
+
+###Supported platforms
+
+Take Control is available for devices running:
+
+* Windows XP and later, including Windows 10
+* Windows server 2003 and later
+* Mac OS X 10.7 and later. The viewer supports OS X 10.9 and later
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-take-control-viewer/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
+	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
