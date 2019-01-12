@@ -1,4 +1,4 @@
-# chocolatey-misc-helpers.extension v0.0.3 (12-04-2018) by Bill Curran - public domain
+# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
 # Tests to verify a dependency is installed and returns true/false. Does NOT check version. 
 # Designed for use with my OS dependency packages but can be used for anything to verify that SOME VERISION 
 # of the dependency is installed; i.e. Chocolatey v0.10.11 will continue trying to install a package even
@@ -8,10 +8,10 @@
 
 function Test-Dependency($dependency){
 if (Test-Path -Path $env:ChocolateyInstall\lib\$dependency){
-    return $true
-	Write-Host "  ** Dependency $dependency found." -foreground green
+    return $True
+	Write-Host "  ** Dependency $dependency found." -ForeGround Green
     } else {
-	  return $false
-	  Write-Host "  ** Dependency $dependency NOT found." -foreground red
+	  return $False
+	  Write-Host "  ** Dependency $dependency NOT found." -ForeGround Red
     }
 }

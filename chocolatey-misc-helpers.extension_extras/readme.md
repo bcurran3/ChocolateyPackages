@@ -10,7 +10,6 @@
 These didn't fit into the concept scope of my other extensions so I decided to start a new miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Enable-AutoPin** - Auto-pins a package during installation. (This has an unknown shelf life.) [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Enable-AutoPin_screenshot.png)
 * **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. [Screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
@@ -19,21 +18,22 @@ These didn't fit into the concept scope of my other extensions so I decided to s
 * **Read comments in the scripts for help implementing.**
 
 ###USAGE:
-* Enable-AutoPin
 * Start-CheckandStop "ProcessName"
 * Start-CheckandThrow "ProcessName"
 * Start-WaitandStop "ProcessName"
 * Test-Dependency "DependencyPackageName"
 
 ###CHANGE LOG:
+0.0.3.1 - Removed Enable-AutoPin. Real world testing has shown that even though the function works perfectly, it's a negated as choco.exe deletes the .pin file after chocolateyinstall.ps1 finishes when the .pin file didn't exist previously. Even when the .pin file is set to read only, choco.exe errors out trying to delete the .pin file and fails the package install.
 * 0.0.3 - Added Enable-AutoPin, Start-CheckandThrow, and Test-Dependency. Minor cosmetic changes.
 * 0.0.2 - Show-Patreon, Show-PayPal, and Show-ToastMessage added but later disapproved by the Chocolatey team and thus nullified. :(
 * 0.0.1 - initial release
 
 ***
 ###DO NOT USE: 
-The functions below were added to v0.0.2 but were later nullified; included for backward compatibility with pre-release versions in the wild. Any questions, look at the comments in the files.
+The functions below were added to v0.0.2 and v0.0.3 but were later nullified; included for backward compatibility with pre-release versions in the wild. Any questions, look at the comments in the files.
 
+* **Enable-AutoPin** - Auto-pins a package during installation.
 * **Show-Patreon** - Displays a message and link to your [Patreon](https://www.patreon.com/) website.
 * **Show-PayPal** - Displays a message and link to your [PayPal](https://www.paypal.com/) website.
 * **Show-ToastMessage** - Displays a Windows [toast](https://en.wikipedia.org/wiki/Windows_Push_Notification_Service) message, you can send two lines. This has been recycled and made into [chocolatey-toast-notifications.extension](https://chocolatey.org/packages/chocolatey-toast-notifications.extension).
