@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>24.0.29.0</version>
+    <version>24.0.32.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
@@ -19,6 +19,11 @@
     <tags>jpsoftware jpsoft take command prompt cmd cli shell trial</tags>
     <summary>Take Command is a comprehensive interactive GUI and command line environment</summary>
     <description>
+***
+[choco://take-command](choco://take-command)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of Take Command] (https://jpsoft.com/images/takecommand.jpg)
 
 ###Enhancing the Windows Command Prompt and Batch Scripting
