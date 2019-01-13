@@ -1,3 +1,9 @@
+
+
+###PACKAGING NOTES: 
+####After this is installed you MUST run and configure it or unlock your computer. It WILL automatically block Chocolatey from running! You will want to add "C:\ProgramData\chocolatey=1" to [CustomPolicies] in the softwarepolicy.ini configuration file right away to allow Chocolatey to run.
+####Uninstallation is not completely silent and will remove the policy restrictions. Be sure to unlock your computer with the program first.
+
 ***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
