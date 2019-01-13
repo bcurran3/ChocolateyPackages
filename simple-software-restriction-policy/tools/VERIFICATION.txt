@@ -1,6 +1,6 @@
 ﻿https://iwrconsultancy.co.uk/downloads.htm
 
-SoftwarePolicy210Setup.exe.exe
+SoftwarePolicy220Setup.exe.exe
 
-Current version 2.1.0.0 Setup. 1551758 bytes. Released 17/6/2016. VirusTotal Report 
-SHA256: B22502F28AE5BC4B545FF303F6125800F5C8EBC37FECD176053EAEAAAA553138 
+Current version 2.2.0.0 Setup. 1568502 bytes. Released 19/10/2018. VirusTotal Report 
+SHA256: A5D6A2D8CE5F8F80D7CAA54509B8BB30C8483002FC6D7A084391F14C89C92F0A
