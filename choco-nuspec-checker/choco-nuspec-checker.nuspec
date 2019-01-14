@@ -49,7 +49,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	</description>
 	<releaseNotes>
 ###CHANGELOG:
-* 2019.01.13 - finished the dependencies checking, all verifier messages (guidelines, suggestions, and notes) now reporting in **CNC*
+* 2019.01.13 - finished the dependencies checking, all verifier messages (guidelines, suggestions, and notes) now reporting in **CNC**
 * 2019.01.12 - minor fixes
 * 2019.01.09 - many more checks and warnings added, almost all known verifier guidelines, suggestions and notes added, some beautifications, added option to view Chocolatey validator info page, added optional image GitHub direct and RawGit URL conversions to Staticaly CDN URLs
 * 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (>4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
