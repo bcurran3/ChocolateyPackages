@@ -14,7 +14,7 @@ if ($PSversion -lt "5")
 
 if (Get-Module -ListAvailable -Name VMware.PowerCLI -ErrorAction SilentlyContinue){
 # Will fail if packageVersion is a revised version not matching module version, i.e. x.x.x.0020180101
-     Update-Module "VMware.PowerCLI" -RequiredVersion "$env:packageVersion" -Force
+     Update-Module "VMware.PowerCLI" -RequiredVersion "$env:packageVersion" -AllowClobber -Force
    } else {   
      Get-PackageProvider -Name NuGet -Force
      Install-Module -Name VMware.PowerCLI -Scope AllUsers -RequiredVersion $env:packageVersion -AllowClobber -Force
