@@ -1,8 +1,9 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>sumo</id>
-    <version>5.8.10.412</version>
+    <version>5.8.11.414</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
