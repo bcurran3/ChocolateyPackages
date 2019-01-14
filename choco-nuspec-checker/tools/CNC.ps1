@@ -3,9 +3,10 @@
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
 # REF: https://github.com/chocolatey/package-validator/wiki
+# REF: https://docs.microsoft.com/en-us/nuget/reference/nuspec
 
 function CNC-Splash{
-Write-Host "CNC.ps1 v2019.01.12 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor white
+Write-Host "CNC.ps1 v2019.01.13 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor white
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForeGroundColor white
 Write-Host
 }
@@ -86,7 +87,7 @@ if ($args -eq "-OpenValidatorInfo") {
 $LocalnuspecFile = Get-Item *.nuspec
 if (!($LocalnuspecFile)) {
     $CurrentDir=Get-Location
-    Write-Warning "  ** No .nuspec file found in $CurrentDir"
+    Write-Host "  ** No .nuspec file found in $CurrentDir" -ForeGround Red
 	return
    }
 
@@ -307,10 +308,30 @@ if (!($NuspecCopyright)) {
 	}
 
 # <dependencies> checks
-if (!($NuspecDependencies)) {Write-Warning "  ** <dependencies> - element is empty."}
-if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){Write-Warning "  ** <dependencies> - Deprecated packages must have a dependency."}
-
-# ENHANCEMENT: (verifier message) The package takes a dependency on Chocolatey. The reviewer will ensure the package uses a specific Chocolatey feature that requires a minimum version. 
+if (!($NuspecDependencies)) {
+    Write-Warning "  ** <dependencies> - element is empty."
+   } else {
+     if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){Write-Warning "  ** <dependencies> - Deprecated packages must have a dependency."}
+	 if ($NuspecDependencies.dependency.id -eq 'chocolatey'){
+	     Write-Warning "  ** <dependencies> - ""chocolatey"" is a dependency. This will trigger a message from the verifier:"
+	     Write-Host "           ** Note: The package takes a dependency on Chocolatey. The reviewer will ensure the package uses a specific`n              Chocolatey feature that requires a minimum version." -ForeGround Cyan
+		 }
+		 
+	 $DependencyNumber=0
+	 do{
+ 	    if ($NuspecDependencies.dependency[$DependencyNumber].version -eq $null){
+		    if ($NuspecDependencies.dependency.id.count -eq 1){
+			    $DependencyName=$NuspecDependencies.dependency.id
+				} else {
+	              $DependencyName=$NuspecDependencies.dependency.id[$DependencyNumber]
+				 }
+	        Write-Warning "  ** <dependencies> - ""$DependencyName"" has no version. This will trigger a message from the verifier:"
+			Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -ForeGround Cyan
+			}
+	   $DependencyNumber++
+       } while ($DependencyNumber -lt $NuspecDependencies.dependency.id.count)
+	 }
+	 
 
 # <description> checks
 if (!($NuspecDescription)) {
@@ -331,8 +352,6 @@ if (!($NuspecDescription)) {
 #         Update-CDNURL - (need to parse and pass URL)
        }
 	}
-	
-# ENHANCEMENT: (verifier message) Package contains dependencies with no specified version. You should at least specify a minimum version of a dependency. 
 	
 # <docsUrl> checks
 if (!($NuspecDocsURL)) {
@@ -404,7 +423,7 @@ if (!($NuspecMailingListURL)) {
 	
 # <owners> checks
 if (!($NuspecOwners)) {
-    Write-Warning "  ** <owners> element is empty, this element is a requirement."
+    Write-Warning "  ** <owners> element is empty."
    } else {
      if ($NuspecAuthors -eq $NuspecOwners){
         Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
@@ -434,7 +453,7 @@ if (!($NuspecProjectSourceURL)) {
 	
 # <projectUrl> checks
 if (!($NuspecProjectURL)) {
-    Write-Warning "  ** <projectUrl> - element is empty, this element is a requirement."
+    Write-Warning "  ** <projectUrl> - element is empty."
    } else {
      Validate-URL "<projectUrl>" $NuspecProjectURL
 	}	
@@ -481,7 +500,7 @@ if (!($NuspecTags)) {
     }
 
 # <title> checks
-if (!($NuspecTitle)) {Write-Warning "  ** <title> - element is empty, this element is a requirement."}
+if (!($NuspecTitle)) {Write-Warning "  ** <title> - element is empty."}
 
 # <version> checks
 if (!($NuspecVersion)) {Write-Warning "  ** <version> - element is empty, this element is a requirement."}
@@ -513,7 +532,8 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForeGroundColo
 return
 
 # TDL
-# show dependencies and version - Package contains dependencies with no specified version. You should at least specify a minimum version of a dependency. 
-# check http links to see if https links are available and report if so
+# add the saving of changes to the nuspec
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
+# check http links to see if https links are available and report if so - low priority
+# MAYBE download icon file and check it's dimension - very low priority
 # What else?
