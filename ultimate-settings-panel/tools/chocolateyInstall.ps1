@@ -1,10 +1,14 @@
 $packageName    = 'ultimate-settings-panel'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://downloads.sourceforge.net/project/ultimatesettingspanelpro/v6.1/USPv61.zip'
-$checksum       = '691FBAC73EE9F9CDE177C04C89D5FDC42F492900AB40AD7CE6FA6DF77FE41CC4'
-$silentArgs     = '/quiet /qn /norestart'
-$validExitCodes = @(0)
 $osBits         = Get-ProcessorBits
+$url            = 'https://downloads.sourceforge.net/project/ultimatesettingspanelpro/v6.3/USPv63.zip'
+$checksum       = '7962042F8CDDE61737CEF0DDAF40F6069628BD2F8B46FFDCCFCBE88A62919AD1'
+$UnzippedEXE    = "$toolsDir\USPv63\Installers\Ultimate Settings Panel.msi"
+
+if ($osBits -eq 32){
+    Write-Warning "This program only supports 64 bit OSes. Aborting..."
+    throw
+   }
 
 $packageArgs = @{
   packageName   = $packageName
@@ -17,26 +21,15 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-  if ($osBits -eq 64) 
-    {
-     $UnzippedEXE  = Join-Path $toolsDir 'x64\Ultimate Settings Panel x64.msi'
-    }
-  else
-    {
-     $UnzippedEXE  = Join-Path $toolsDir 'x86\Ultimate Settings Panel x86.msi'
-    }
-
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'MSI'
-  file          = $UnzippedEXE
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = 'Ultimate Settings Panel*'   
+  packageName    = $packageName
+  fileType       = 'MSI'
+  file           = $UnzippedEXE
+  silentArgs     = '/quiet /qn /norestart'
+  validExitCodes = @(0)
+  softwareName   = 'Ultimate Settings Panel*'   
 }
 
 Install-ChocolateyInstallPackage @packageArgs	
 
-Remove-Item $toolsDir\USPv59 -Force -Recurse -ErrorAction SilentlyContinue
-
-
+Remove-Item $toolsDir\USPv63 -Recurse -Force -ErrorAction SilentlyContinue | out-null
