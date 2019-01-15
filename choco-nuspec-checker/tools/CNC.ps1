@@ -286,7 +286,7 @@ $NuspecEncoding=(Get-FileEncoding -Path $LocalnuspecFile)
 if ($NuspecEncoding -ne "UTF8"){Write-Warning "  ** $NuspecDisplayName is $NuspecEncoding, NOT UTF8 encoded."}
 
 # <authors> checks
-if (!($NuspecAuthors)) {Write-Warning "  ** <authors> element is empty, this element is a requirement."}
+if (!($NuspecAuthors)) {Write-Host "           ** <authors> element is empty, this element is a requirement." -ForeGround Red}
 
 # <bugTrackerUrl> checks
 if (!($NuspecBugTrackerURL)) {
@@ -336,7 +336,7 @@ if (!($NuspecDependencies)) {
 
 # <description> checks
 if (!($NuspecDescription)) {
-    Write-Warning "  ** <description> - element is empty, this element is a requirement."
+    Write-Host "           ** <description> - element is empty, this element is a requirement." -ForeGround Red
    } else {
      Check-Header
      Check-Footer
@@ -393,7 +393,7 @@ if (!($NuspecIconURL)) {
 
 # <id> checks
 if (!($NuspecID)) {
-    Write-Warning "  ** <id> - element is empty, this element is a requirement."
+    Write-Host "           ** <id> - element is empty, this element is a requirement." -ForeGround Red
 	} else {
      if (($NuspecID.Length -gt 20) -and (!$NuspecID.Contains("-")) -and (!$NuspecID.Contains("."))) {
 	     Write-Warning "  ** <id> - is greater than 20 characters. This will trigger a message from the verifier:"
@@ -491,11 +491,11 @@ if (!($NuspecTags)) {
          Write-Warning "  ** <tags> - tags are separated with commas. They should only be separated with spaces."
 		}
 	  if ($NuspecTags -match "chocolatey"){
-         Write-Warning "  ** Note: There is a tag named chocolatey. This will trigger a message from the verifier:"
+         Write-Warning "  ** Note: There is a tag named ""chocolatey"" which will trigger a message from the verifier:"
          Write-Host '           ** Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Cyan
 		}
 	  if ($NuspecTags -match "notsilent"){
-         Write-Warning "  ** Note: There is a tag named notsilent. This will trigger a message from the verifier:"
+         Write-Warning "  ** Note: There is a tag named ""notsilent"" which will trigger a message from the verifier:"
          Write-Host '           ** Note: notSilent tag is being used. The reviewer will ensure this is being used appropriately. ' -ForeGround Cyan
 		}		
     }
@@ -504,7 +504,7 @@ if (!($NuspecTags)) {
 if (!($NuspecTitle)) {Write-Warning "  ** <title> - element is empty."}
 
 # <version> checks
-if (!($NuspecVersion)) {Write-Warning "  ** <version> - element is empty, this element is a requirement."}
+if (!($NuspecVersion)) {Write-Host "           ** <version> - element is empty, this element is a requirement." -ForeGround Red}
 
 # Binaries checks
 Check-Binaries
