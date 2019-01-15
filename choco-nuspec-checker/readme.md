@@ -4,7 +4,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original!
-* I personally use and endorse this extension.
+* I personally use and endorse this script.
+* In your header and footer files, if you want to add lines above and below your header and/or footer text like I do, I recommend using "___" for a line in markdown as apposed to "***" or "---". Chocolatey.org's package pages are fickle with "***" and "---" where sometimes the lines will be different shades of gray. "___" seems to consistently get displayed as a dark gray line. I've played with white space before and after "***" and "---" and I can't find any rhyme or reason to why I'll get a light gray line in one place and a dark gray line in another. I give up. "___" works.
 
 ***
 [choco://choco-nuspec-checker](choco://choco-nuspec-checker)
@@ -16,13 +17,14 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 #**choco-nuspec-checker** (**CNC**) is a PowerShell script designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and ommisions. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. 
 
 ###FEATURES:
-* **CNC** checks for common verifier guidelines, suggestions, and notes warnings
-* **CNC** checks for all tags and reports if any are missing
+* **CNC** checks for all .nuspec elements and reports any missing
+* **CNC** checks for all verifier messages (guidelines, suggestions, and notes) and reports them if applicable
+* **CNC** checks for UTF-8 encoding and reports the type of encoding if not UTF-8
 * **CNC** checks for dead URLs and reports them
 * **CNC** checks for GitHub direct links, reports them, and can convert to Staticaly CDN URLs
 * **CNC** checks for RawGit CDN links, reports them, and can convert to Staticaly CDN URLs
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
-* **CNC** can add a standard template header and/or footer to your .nuspec description (coming soon)
+* **CNC** can add a standard template header and/or footer to your .nuspec description (saving coming soon)
 
 ###Helps make packaging Chocolateasy!
 
@@ -35,6 +37,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
 ###CHANGELOG:
+* 2019.01.13 - finished the dependencies checking, all verifier messages (guidelines, suggestions, and notes) now reporting in **CNC**
 * 2019.01.12 - minor fixes
 * 2019.01.09 - many more checks and warnings added, almost all known verifier guidelines, suggestions and notes added, some beautifications, added option to view Chocolatey validator info page, added optional image GitHub direct and RawGit URL conversions to Staticaly CDN URLs
 * 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (>4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
@@ -43,10 +46,10 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * 2018.12.22-2018-12.28 - initial release
 
 ###ROADMAP:
+* save desired changes to the .nuspec file
 * take a filespec to check .nuspec files outside of the local path
-* automatically convert RawGit CDN URLs to Staticaly or a possibly a selectable preference
-* (out of original scope) option to insert configurable headers and footers into description (some groundwork laid)
 * capture and test URLs found in description
+* add packaging tips/tweaks/etc
 
 ***
 
