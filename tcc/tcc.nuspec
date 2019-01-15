@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tcc</id>
-    <version>24.0.29.0</version>
+    <version>24.0.32.0</version>
     <title>Total Command Console (Trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tcc</packageSourceUrl>		
     <licenseUrl>http://jpsoft.com/license.html</licenseUrl>
     <projectUrl>https://jpsoft.com/products/tcc-cmd-prompt.html</projectUrl>
-    <iconUrl>https://dxezhqhj7t42i.cloudfront.net/image/ce99fa97-6854-443e-b5b0-73c4cb9fd5a9</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/tcc/tcc_icon.png</iconUrl>
     <summary>TCC Windows Command Prompt : Upgrading the CMD Shell</summary>
     <docsUrl>https://jpsoft.com/help/tcc.htm</docsUrl>
     <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
@@ -17,6 +17,11 @@
     <tags>jpsoft tcc tccle 4nt cmd command prompt cli trial</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+___
+[choco://tcc](choco://tcc)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of TCC] (https://jpsoft.com/images/tcc21.png)
 	
 **TCC** is our console mode Windows command shell (formerly known as 4NT). TCC is a replacement for the CMD command line (the default Windows command prompt). TCC is a superset of CMD, with 235+ internal commands (CMD has fewer than 40), 680+ internal variables and functions, and hundreds of enhancements to existing CMD commands.
@@ -37,9 +42,9 @@ Too many to list due to nuspec description constraints. [Please view the website
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tcc/readme.md)**
 
-***
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
+___
     </description>
     <releaseNotes>https://jpsoft.com/help/whats-new-in-version-24.htm</releaseNotes>	
   </metadata>
