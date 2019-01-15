@@ -111,6 +111,7 @@ function Get-FileEncoding
     else
     { Write-Output 'ASCII' } 
 }
+# ^ UTF8 w/o BOM reports as ASCI. UTF8 w/BOM is not desired "You must save your files with UTF–8 character encoding without BOM."
 
 # Validate that URL elements are actually URLs and verify the URLs are good
 # Thanks https://stackoverflow.com/questions/23760070/the-remote-server-returned-an-error-401-unauthorized
