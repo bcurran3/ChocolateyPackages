@@ -2,14 +2,16 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-# REF: https://github.com/chocolatey/package-validator/wiki
 # REF: https://docs.microsoft.com/en-us/nuget/reference/nuspec
+# REF: https://github.com/chocolatey/package-validator/wiki
 
-function CNC-Splash{
-Write-Host "CNC.ps1 v2019.01.13 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor white
-Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForeGroundColor white
+param (
+    [string]$path=(Get-Location)
+ )
+ 
+Write-Host "CNC.ps1 v2019.01.15 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor White
+Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForeGroundColor White
 Write-Host
-}
 
 $AcceptableIconExts=@("png","svg")
 $BinaryExtensions=@("*.exe","*.msi","*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.msu","*.msp") # miss any?
@@ -17,8 +19,15 @@ $CDNlist     = "https://www.staticaly.com, https://raw.githack.com, https://gitc
 $CNCHeader   = "$ENV:ChocolateyInstall\bin\CNCHeader.txt"
 $CNCFooter   = "$ENV:ChocolateyInstall\bin\CNCFooter.txt"
 
+#if ($path='\') {$path=(Get-Location).Drive.Name + ":" + $path}
+if (!(Test-Path $path)){
+    Write-Host "           ** $path is an invalid path." -ForeGround Red
+	return
+#    $path=Get-Location
+#	Write-Host "  ** Changing path to $path."
+	}
+
 if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
-    CNC-Splash
     Write-Host "OPTIONS AND SWITCHES:" -ForeGround Magenta
 	Write-Host
 	Write-Host "-help, -?, or /?"
@@ -28,9 +37,9 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
 	Write-Host "-AddHeader (saving not implemented yet)"
     Write-Host "   Adds a header ($CNCHeader) to your .nuspec file and saves it."
 	Write-Host "-EditFooter"
-    Write-Host "   Edit $CNCFooter with Notepad."
+    Write-Host "   Edit $CNCFooter with Notepad++ or Notepad."
 	Write-Host "-EditHeader"
-    Write-Host "   Edit $CNCHeader with Notepad."
+    Write-Host "   Edit $CNCHeader with Notepad++ or Notepad."
 	Write-Host "-OpenURLs"
     Write-Host "   Open all URLs in your browser for inspection when finished."
 	Write-Host "-OpenValidatorInfo"
@@ -47,17 +56,21 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
 	return
 }
 
-CNC-Splash
+if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
+     $Editor="notepad++.exe"
+    } else {
+      $Editor="notepad.exe"
+    }
 
 if ($args -eq "-EditFooter") {
     Write-Host "  ** Editing contents of $CNCFooter." -ForeGround Magenta
-	&Notepad $CNCFooter
+	&$Editor $CNCFooter
 	return
 }
 
 if ($args -eq "-EditHeader") {
     Write-Host "  ** Editing contents of $CNCHeader." -ForeGround Magenta
-	&Notepad $CNCHeader
+	&$Editor $CNCHeader
 	return
 }
 
@@ -82,12 +95,20 @@ if ($args -eq "-OpenValidatorInfo") {
 	return
 }
 
-# Get and parse .nuspec in current directory
-#FUTURE ENCHANCEMENT accept a filespec and use that as well
-$LocalnuspecFile = Get-Item *.nuspec
+# NOT implemented yet
+if ($args -eq "-Recurse") {
+    $Recurse=$True
+	return
+}
+
+# Let's you specify a folder to find a .nuspec file
+# Do NOT specify the file itself, just the folder.
+# Defaults to current working directory.
+if (!$path) {$LocalnuspecFile = Get-Item ./*.nuspec}
+if ($path) {$LocalnuspecFile = Get-Item $path\*.nuspec}
 if (!($LocalnuspecFile)) {
-    $CurrentDir=Get-Location
-    Write-Host "  ** No .nuspec file found in $CurrentDir" -ForeGround Red
+    $CurrentDir=$path
+    Write-Host "           ** No .nuspec file found in $CurrentDir" -ForeGround Red
 	return
    }
 
@@ -139,27 +160,27 @@ if (($url -match "http://") -or ($url -match "https://")){
 
 # Check for license files when binaries are included
 function Check-LicenseFile{
-$LicenseFile=(Get-ChildItem -Include *LICENSE*.txt -Recurse)
+$LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE*.txt -Recurse)
 if ($LicenseFile){
 	 Write-Host '           ** Binary files - '  $LicenseFile.Name ' file(s) found.' -ForeGround Green
 	} else {
-	 Write-Warning "           ** Binary files - LICENSE.txt file NOT found."
+	 Write-Warning "  ** Binary files - LICENSE.txt file NOT found."
    }
 }
 
-# Check for verfication file when binaries are included
+# Check for verification file when binaries are included
 function Check-VerificationFile{
-$VerificationFile=(Get-ChildItem -Include *VERIFICATION*.txt -Recurse)
+$VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION*.txt -Recurse)
 if ($VerificationFile){
      Write-Host '           ** Binary files - '  $VerificationFile.Name ' file(s) found.' -ForeGround Green
 	} else {
-	 Write-Warning "           ** Binary files - VERIFICATION.txt file NOT found."
+	 Write-Warning "  ** Binary files - VERIFICATION.txt file NOT found."
    }
 }
 
 # check for binaries
 function Check-Binaries{
-$IncludedBinaries=(Get-ChildItem -Include $BinaryExtensions -Recurse)
+$IncludedBinaries=(Get-ChildItem -Path $path -Include $BinaryExtensions -Recurse)
 if ($IncludedBinaries){
     Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
     Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -ForeGround Cyan
@@ -188,7 +209,7 @@ if (Test-Path $CNCFooter){
     $UpdateNuspec=$True
 	return $NuspecDescription
    } else {
-	Write-Warning "           ** $CNCFooter not found."
+	Write-Warning "           ** $CNCFooter NOT found."
    }
 }
 
@@ -227,7 +248,10 @@ function Update-CDNURL([string]$oldURL){
 if ($oldURL -match 'https://raw.githubusercontent.com'){$StaticalyURL=($oldURL -replace 'https://raw.githubusercontent.com','https://cdn.staticaly.com/gh')}
 if ($oldURL -match 'https://cdn.rawgit.com'){$StaticalyURL=($oldURL -replace 'https://cdn.rawgit.com','https://cdn.staticaly.com/gh')}
 $UpdateNuspec=$True
-Write-Host "           ** URL converted but saving not implemented yet." -ForeGround Red	
+Write-Host "           ** $oldURL" -ForeGround Yellow
+Write-Host "              converted to:" -Foreground Magenta
+Write-Host "              $StaticalyURL" -ForeGround Green
+Write-Host "              (saving not implemented yet)" -ForeGround Red
 return $StaticalyURL
 }
 
@@ -271,9 +295,10 @@ $NuspecTitle = $nuspecFile.package.metadata.title
 $NuspecVersion = $nuspecFile.package.metadata.version
 
 $NuspecDisplayName=$LocalnuspecFile.Name
+$NuspecDisplayName=$NuspecDisplayName.ToUpper()
 
 # Start outputting check results
-Write-Host "CNC summary of $NuspecDisplayName :" -ForeGroundColor Magenta
+Write-Host "CNC Summary of $NuspecDisplayName :" -ForeGroundColor Magenta
 
 # Open all .nuspec URLs for viewing if -OpenURLs is passed
 if ($args -eq "-OpenURLs") {
@@ -363,7 +388,11 @@ if (!($NuspecDocsURL)) {
 	}
 
 # <files> checks
-if (!($NuspecFiles)) {Write-Warning "  ** <files> - element is empty."}
+if (!($NuspecFiles)) {
+    Write-Warning "  ** <files> - element is empty."
+	Write-Host '           ** All of the following files will be packaged:' -ForeGround Cyan
+	Get-ChildItem -Path $path -Exclude *.nupkg
+	}
 
 # <iconUrl> checks
 if (!($NuspecIconURL)) {
@@ -371,23 +400,26 @@ if (!($NuspecIconURL)) {
 	Write-Host '           ** Guideline: The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -ForeGround Cyan
    } else {
      Validate-URL "<iconUrl>" $NuspecIconURL
+	 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
+     if (!($IconExt)){
+	     Write-Warning "  ** <iconUrl> - Your package icon is NOT a .PNG or .SVG. This will trigger a message from the verifier:"
+	Write-Host '           ** Suggestion: As per the packaging guidelines icons should be either a png or svg file.' -ForeGround Cyan
+       }
 	 if ($NuspecIconURL -match "raw.githubusercontent"){
-         Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
-         Write-Host "           ** $CDNlist" -ForeGround Cyan
          if ($args -eq "-UpdateImageURLs") {
 		    $NewNuspecIconURL=(Update-CDNURL "$NuspecIconURL")
-		   }
-        }
+		   } else {
+		     Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
+             Write-Host "           ** $CDNlist" -ForeGround Cyan
+            }
+		}
      if ($NuspecIconURL -match "cdn.rawgit.com"){
-        Write-Warning "  ** <iconUrl> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
-        Write-Host "           ** $CDNlist" -ForeGround Cyan
-        if ($args -eq "-UpdateImageURLs") {
+	     if ($args -eq "-UpdateImageURLs") {
 		    $NewNuspecIconURL=(Update-CDNURL "$NuspecIconURL")
-		   }
-       }
-     $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
-     if (!($IconExt)){
-         Write-Warning "  ** <iconUrl> - Suggestion: .PNG and .SVG are the preferred package icon file types." 
+		   } else {
+             Write-Warning "  ** <iconUrl> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
+             Write-Host "           ** $CDNlist" -ForeGround Cyan
+			}
        }
    }
 
@@ -534,6 +566,7 @@ return
 
 # TDL
 # add the saving of changes to the nuspec
+# check for e-mail addresses placed instead of links (authors and where else?)
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # check http links to see if https links are available and report if so - low priority
 # MAYBE download icon file and check it's dimension - very low priority
