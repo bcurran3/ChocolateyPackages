@@ -29,7 +29,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ###Helps make packaging Chocolateasy!
 
 ###INSTRUCTIONS:
-* Change to the directory where you have a package .nuspec file and run **CNC** via PowerShell; it's already in your path. **CNC -help** for help and options. 
+* **CNC -help** for help with options and switches
+* Run **CNC** to check the .nuspec in your current directory, run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file itself, just the directory.)
 * To check all your packages' .nuspec files change to the root directory of all your packages and via PowerShell run **Get-ChildItem -Recurse | ?{if ($__.PSIsContainer){cls;cd $__.Name;cnc;cd ..;pause}}**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
@@ -37,6 +38,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
 ###CHANGELOG:
+* 2019.01.15 - you can now specify a path to a directory containing a .nuspec file to check, misc minor tweaks
 * 2019.01.13 - finished the dependencies checking, all verifier messages (guidelines, suggestions, and notes) now reporting in **CNC**
 * 2019.01.12 - minor fixes
 * 2019.01.09 - many more checks and warnings added, almost all known verifier guidelines, suggestions and notes added, some beautifications, added option to view Chocolatey validator info page, added optional image GitHub direct and RawGit URL conversions to Staticaly CDN URLs
