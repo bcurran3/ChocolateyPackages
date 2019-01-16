@@ -4,33 +4,33 @@
   <metadata>
     <id>startuplist.portable</id>
     <title>StartupList (Portable)</title>
-    <version>2.02.20190110</version>
+    <version>2.02.20190115</version>
     <authors>Merijn Bellekom</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/startuplist.portable</packageSourceUrl>	
     <summary>StartupList shows you what processes start automatically on your computer.</summary>
     <description>
-***
+___
 [choco://startuplist.portable](choco://startuplist.portable)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+___
 
-![Screenshot of StartupList](http://i.utdstc.com/screen/windows/thumb/startuplist-002.jpg)
+![Screenshot of StartupList](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/startuplist.portable/startuplist.portable_screenshot.png)
 
 StartupList: A simple tool that lists all and every auto starting program on your system. You might be surprised what it finds, this is way better than Msconfig. Commonly used to troubleshoot malfunctioning systems, trojan/viral infections, new spyware/malware breed and the likes.
 Compatible with: All Windows versions
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/startuplist.portable/readme.md)**
 
-***
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
+___
     </description>
     <projectUrl>http://www.merijn.nu/programs.php#startuplist</projectUrl>
-    <tags>startuplist merijn system util utility startup list autoruns portable</tags>
+    <tags>startuplist merijn system util utility startup list portable binary</tags>
     <licenseUrl>http://www.merijn.nu/faq.php#a_me4</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8gadgetpack/startuplist.portable_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/startuplist.portable/startuplist.portable_icon.png</iconUrl>
     <releaseNotes />
     <dependencies>
       <dependency id="visualbasic6-kb896559" />
