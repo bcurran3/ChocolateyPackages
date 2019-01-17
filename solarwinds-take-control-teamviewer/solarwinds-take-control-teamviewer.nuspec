@@ -14,16 +14,16 @@
     <copyright>Copyright © TeamViewer GmbH</copyright>
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-teamviewer_screenshot/solarwinds-take-control-teamviewer_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-teamviewer/solarwinds-take-control-teamviewer_icon.png</iconUrl>
 	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Take Control TeamViewer is a remote management tool.</summary>
     <description>
-***
+___
 [choco://solarwinds-take-control-teamviewer](choco://solarwinds-take-control-teamviewer)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+___
 
-![Screenshot of SolarWinds Take Control TeamViewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-teamviewer_screenshot/solarwinds-take-control-teamviewer_screenshot.png)	
+![Screenshot of SolarWinds Take Control TeamViewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-teamviewer/solarwinds-take-control-teamviewer_screenshot.png)	
 
 ###Take Control and Resolve Issues Efficiently with Lightning-Fast Remote Support
 
@@ -48,9 +48,9 @@ When users have technical issues that require your expert attention, your remote
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-take-control-teamviewer/readme.md)**
 
-***
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
+___
     </description>
 	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
       </metadata>
