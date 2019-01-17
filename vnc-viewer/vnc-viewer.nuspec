@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-viewer</id>
-    <version>6.18.625.0020180717</version>
+    <version>6.19.107</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer</packageSourceUrl>
-    <title>VNC Viewer (Install)</title>
+    <title>VNC Viewer (Portable)</title>
     <authors>RealVNC Limited.</authors>
     <projectUrl>https://www.realvnc.com/products/vnc/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_icon.png</iconUrl>
     <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,7 +18,11 @@
     <tags>realvnc vnc connect viewer remote control</tags>
     <summary>VNC Viewer is used to remote control RealVNC and VNC Connect hosts.</summary>
     <description>
-![Screen shot of VNC Viewer](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_screenshot.png)
+___
+[choco://vnc-viewer](choco://vnc-viewer)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___	
+![Screen shot of VNC Viewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_screenshot.png)
 
 Make sure you've downloaded VNC Connect to the computer you want to control.
 
@@ -34,11 +38,12 @@ VNC Viewer is used to remote control RealVNC and VNC Connect hosts.
 [Android App](http://play.google.com/store/apps/details?id=com.realvnc.viewer.android) | [iOS App](https://itunes.apple.com/us/app/vnc-viewer/id352019548?mt=8) | [Chrome Extension](https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla) | [macOS Client](https://www.realvnc.com/download/viewer/macos/) |[Linux Client](https://www.realvnc.com/download/viewer/linux/)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-viewer/readme.md)**
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
 	</description>
     <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />		  
-    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

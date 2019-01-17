@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>6.3.2</version>
+    <version>6.4.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
     <authors>RealVNC Limited.</authors>
     <projectUrl>https://www.realvnc.com/products/vnc/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-connect_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-connect_icon.png</iconUrl>
     <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -19,7 +19,11 @@
     <tags>realvnc vnc connect remote control</tags>
     <summary>VNC Connect is the latest version of RealVNC remote control software.</summary>
     <description>
-![Screen shot of VNC Connect Viewer](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-viewer_screenshot.png)
+___
+[choco://vnc-connect](choco://vnc-connect)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___	
+![Screen shot of VNC Connect Viewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-viewer_screenshot.png)
 
 ###VNC Connect business benefits
 
@@ -76,9 +80,9 @@ Support business and compliance objectives with audit and security functionality
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-connect/readme.md)**
 
-***
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
+___
 	</description>
     <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
   </metadata>

@@ -4,16 +4,16 @@
   <metadata>
     <id>go-contact-sync-mod</id>
     <title>GO Contact Sync Mod</title>
-    <version>3.10.22</version>
+    <version>3.10.23</version>
     <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>			
     <summary>GO Contact Sync Mod is an open source tool to synchronize your Microsoft Outlook contacts with Google Mail</summary>
     <description>
-***	
+___
 [choco://go-contact-sync-mod](choco://go-contact-sync-mod)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+___
 
 ![Screenshot of program interface](https://a.fsdn.com/con/app/proj/googlesyncmod/screenshots/GCSMScreenshot.PNG)
 
@@ -42,9 +42,9 @@ Please find some guidelines how to sync your mobile phone contacts with Google C
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/go-contact-sync-mod/readme.md)**
 
-***
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
+___
     </description>
     <projectUrl>https://googlesyncmod.sourceforge.io/</projectUrl>
     <projectSourceUrl>https://sourceforge.net/p/googlesyncmod/code/HEAD/tree/</projectSourceUrl>
