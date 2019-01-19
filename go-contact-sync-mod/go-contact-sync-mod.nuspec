@@ -4,7 +4,7 @@
   <metadata>
     <id>go-contact-sync-mod</id>
     <title>GO Contact Sync Mod</title>
-    <version>3.10.23</version>
+    <version>3.10.24</version>
     <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>			
