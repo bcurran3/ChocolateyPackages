@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2019.01.15</version>
+    <version>2019.01.22</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
@@ -50,6 +50,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	</description>
 	<releaseNotes>
 ###CHANGELOG:
+* 2019.01.22 - added xml declaration and UTF-8 comment checking, better dependency version checking, a rare verifier message I missed
 * 2019.01.15 - you can now specify a path to a directory containing a .nuspec file to check, misc minor tweaks
 * 2019.01.13 - finished the dependencies checking, all verifier messages (guidelines, suggestions, and notes) now reporting in **CNC**
 * 2019.01.12 - minor fixes
