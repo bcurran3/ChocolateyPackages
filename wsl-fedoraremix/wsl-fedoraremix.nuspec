@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>wsl-fedoraremix</id>
-    <version>1.0.26-pre</version>
+    <version>1.0.26-pre2</version>
     <title>Fedora Remix for Windows Subsystem for Linux (WSL) (Install)</title>
     <authors>Whitewater Foundry, Ltd. Co.</authors>
     <owners>bcurran3</owners>
@@ -10,7 +10,8 @@
     <projectUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wsl-fedoraremix/wsl-fedoraremix_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>___
+    <description>
+___
 [choco://wsl-fedoraremix](choco://wsl-fedoraremix)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
@@ -45,7 +46,8 @@ Whitewater Foundry devs monitor the Fedora Remix for WSL GitHub issues page howe
 
 ___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___</description>
+___
+    </description>
     <summary>This packages installs Fedora Remix for Windows Subsystem for Linux (WSL).</summary>
     <releaseNotes>https://docs.fedoraproject.org/en-US/fedora/f29/release-notes/</releaseNotes>
     <copyright>Whitewater Foundry, Ltd. Co.</copyright>
@@ -58,4 +60,7 @@ ___</description>
       <dependency id="wsl" version="1.0.1" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>
