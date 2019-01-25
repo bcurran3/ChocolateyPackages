@@ -4,56 +4,52 @@
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
 
+***	
+[choco://choco-package-list-backup](choco://choco-package-list-backup)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
 	
-#choco-package-list-backup solves your Chocolatey migration and package re-installation problems!
+#**choco-package-list-backup** solves your Chocolatey migration and package re-installation problems!
 
-**choco-package-list-backup** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **choco-package-list-backup** backs up your package list locally and to multiple cloud services!
+##**choco-package-list-backup (CPLB)** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **CPLB** backs up your package list locally AND to multiple cloud services!
 
 ###FEATURES:
+* **CPLB** supports saving PACKAGES.CONFIG to all of the following:
+1. your local Documents folder
+2. your Active Directory assigned HOMESHARE
+3. Box
+4. Dropbox Personal and Business
+5. Google Drive and Drive File Stream
+6. iCloudDrive
+7. Microsoft OneDrive
+8. NETGEAR ReadyCLOUD
+9. Nextcloud
+10. ownCloud
+11. Resilio Sync
+12. Seafile
+13. TonidoSync
+14. A custom location of your choice
+15. C:\Users\Public when run from system account
+* **CPLB** runs on install to make sure you have backup(s) right now!
+* **CPLB** backups every Monday at 6 AM in the background to C:\Users\Public. Set it and forget it! 
+* **CPLB** supports copying [InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!](https://chocolatey.org/packages/instchoco) to your PACKAGES.CONFIG backup location(s) for the fastest way ever to reinstall Chocolatey and your Chocolatey packages! (Or migrate!)
+* **CPLB** supports backing up PERSISTENTPACKAGES.CONFIG if you are using [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages).
+* **CPLB** integrates with [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig).
+* **CPLB** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s). No confusion over what computer gets what packages!
+* **CPLB** saves a list of all your installed programs (AllProgramsList.txt) whether they were installed by Chocolatey or not.
+* **CPLB** saves your pinned information to pins.bat for easy re-pinning packages.
+* **CPLB** is in your path and ready to run.
+* **CPLB** is configurable. You can:
+1. configure which locations you want or don't want to save to (default=all the locations found except the custom location)
+2. configure to save package version information or not (default=false)
+3. configure to append a date to the saved packages.config and AllProgramsList.txt files(default=false)
+4. configure what folder to save to (default=ChocolateyPackageListBackup)
+5. easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
+6. configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
 
-**choco-package-list-backup** supports saving PACKAGES.CONFIG to all of the following:
-
-* your local Documents folder
-* your Active Directory assigned HOMESHARE
-* Box
-* Dropbox Personal and Business
-* Google Drive and Drive File Stream
-* iCloudDrive
-* Microsoft OneDrive
-* NETGEAR ReadyCLOUD
-* Nextcloud
-* ownCloud
-* Resilio Sync
-* Seafile
-* TonidoSync
-* A custom location of your choice
-* more coming - Let me know what you want/need!
-
-**choco-package-list-backup** runs on install to make sure you have backup(s) right now!
-
-**choco-package-list-backup** supports copying [InstChoco](https://chocolatey.org/packages/instchoco) with the PACKAGES.CONFIG path for the fastest way ever to reinstall Chocolatey and your Chocolatey packages! (Or migrate!)
-
-**choco-package-list-backup** supports backing up PERSISTENTPACKAGES.CONFIG if you are using [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)
-
-**choco-package-list-backup** integrates with [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) if installed.
-
-**choco-package-list-backup** saves in computer (name) specific folders so you can backup your Chocolatey package list from multiple computers to the same cloud destination(s). No confusion over what computer gets what packages!
-
-**choco-package-list-backup** saves a list of all your installed programs (AllProgramsList.txt) whether they were installed by Chocolatey or not.
-
-**choco-package-list-backup** is configurable. You can:
-
-* configure which locations you want or don't want to save to (default=all the locations found except the custom location)
-* configure to save package version information or not (default=false)
-* configure to append a date to the saved packages.config (default=false)
-* configure what folder to save to (default=ChocolateyPackageListBackup)
-* easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
-* configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
-
-**choco-package-list-backup** and choco-package-list-backup.xml are saved to Chocolatey's bin folder (\ProgramData\chocolatey\bin), so **choco-package-list-backup** is in your path.
-
-**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations** or become a patron at https://www.patreon.com/bcurran3
+**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
 ###INSTRUCTIONS:
 
@@ -63,6 +59,8 @@
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.
 
 ###CHANGELOG:
+* 2019.01.24 - now saves your pinned package information to pins.bat, added saving to c:\users\Public when run from system account (e.g. scheduled task), fixed error attempting to create files under system account Documents folder which doesn't exist, packages.config now properly UTF-8 encoded, speed optimizations, minor cosmetic changes
+* 2019.01.04 - 2019.01.02 didn't get packaged with the install and uninstall scripts! - fixed (GitHub bit me)
 * 2019.01.02 - Will now write to Documents/MyDocuments if the folder has been moved, thanks Aaron Throckmorton for the enhancement!
 * 2018.08.23 - Added ownCloud support and save all programs list feature
 * 2018.06.21 - Added scheduled task to run every Monday at 6 AM. AppendDate option now saves packages.config AND a packages_date.config. This makes the AppendDate option more useful for a nearline packages.config and archival snapshots as well as fixing compatibility with InstChoco.
