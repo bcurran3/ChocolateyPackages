@@ -1,4 +1,4 @@
-# CNC.ps1 Copyleft 2018-2019 by Bill Curran AKA BCURRAN3
+﻿# CNC.ps1 Copyleft 2018-2019 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -9,50 +9,50 @@ param (
     [string]$path=(Get-Location)
  )
  
-Write-Host "CNC.ps1 v2019.01.15 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -ForeGroundColor White
-Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -ForeGroundColor White
+Write-Host "CNC.ps1 v2019.01.26 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use" -Foreground White
 Write-Host
 
 $AcceptableIconExts=@("png","svg")
-$BinaryExtensions=@("*.exe","*.msi","*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.msu","*.msp") # miss any?
+$BinaryExtensions=@("*.exe","*.msi","*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.msu","*.msp","*.appx","*.appxbundle") # miss any?
 $CDNlist     = "https://www.staticaly.com, https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
 $CNCHeader   = "$ENV:ChocolateyInstall\bin\CNCHeader.txt"
 $CNCFooter   = "$ENV:ChocolateyInstall\bin\CNCFooter.txt"
-
-#if ($path='\') {$path=(Get-Location).Drive.Name + ":" + $path}
-if (!(Test-Path $path)){
-    Write-Host "           ** $path is an invalid path." -ForeGround Red
-	return
-#    $path=Get-Location
-#	Write-Host "  ** Changing path to $path."
-	}
+$global:UpdateNuspec=$False
+$RunFrom=$pwd
 
 if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
-    Write-Host "OPTIONS AND SWITCHES:" -ForeGround Magenta
-	Write-Host
+    Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
 	Write-Host "-help, -?, or /?"
 	Write-Host "   Displays this information."
-	Write-Host "-AddFooter (saving not implemented yet)"
-    Write-Host "   Adds a footer ($CNCFooter) to your .nuspec file and saves it."	
-	Write-Host "-AddHeader (saving not implemented yet)"
-    Write-Host "   Adds a header ($CNCHeader) to your .nuspec file and saves it."
+	Write-Host "-AddFooter"
+    Write-Host "   Adds and saves a footer from $CNCFooter to your <description>."	
+	Write-Host "-AddHeader"
+    Write-Host "   Adds and saves a header from $CNCHeader to your <description>."
 	Write-Host "-EditFooter"
     Write-Host "   Edit $CNCFooter with Notepad++ or Notepad."
 	Write-Host "-EditHeader"
     Write-Host "   Edit $CNCHeader with Notepad++ or Notepad."
 	Write-Host "-OpenURLs"
-    Write-Host "   Open all URLs in your browser for inspection when finished."
+    Write-Host "   Opens all URLs in your browser for inspection when finished."
 	Write-Host "-OpenValidatorInfo"
-    Write-Host "   Open the Chocolatey package-validator info page on GitHub in your default browser."	
+    Write-Host "   Opens the Chocolatey package-validator info page on GitHub in your default browser."	
 	Write-Host "-ShowFooter"
     Write-Host "   Displays $CNCFooter."	
 	Write-Host "-ShowHeader"
     Write-Host "   Displays $CNCHeader."
+	Write-Host "-Update"
+    Write-Host "   Will re-write out your nuspec file; e.g. change to UTF-8 w/o BOM."
+	Write-Host "-UpdateAll"
+    Write-Host "   Same as -UpdateImageURLs with -UpdateXMLDeclaration."
 	Write-Host "-UpdateImageURLs"
     Write-Host "   Updates image URLs with Staticaly CDN URLs."
-	Write-Host
-	Write-Host "To check all your packages' .nuspec files: Change to the root directory of your packages and run (via PowerShell):"
-	Write-Host 'Get-ChildItem -Recurse | ?{if ($_.PSIsContainer){cls;cd $_.Name;cnc;cd ..;pause}}'
+	Write-Host "-UpdateXMLDeclaration"
+    Write-Host "   Updates the XML declaration."
+	Write-Host "-WhatIf"
+    Write-Host "   Don't save changes."
+	Write-Host "To check all your packages' .nuspec files: Change to the root directory of your packages and run (via PowerShell):" -Foreground Magenta
+	Write-Host 'Get-ChildItem | ?{if ($_.PSIsContainer){cls;cd $_.Name;cnc;cd ..;pause}}' -Foreground Magenta
 	return
 }
 
@@ -63,56 +63,101 @@ if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
     }
 
 if ($args -eq "-EditFooter") {
-    Write-Host "  ** Editing contents of $CNCFooter." -ForeGround Magenta
+    Write-Host "  ** Editing contents of $CNCFooter." -Foreground Magenta
 	&$Editor $CNCFooter
 	return
 }
 
 if ($args -eq "-EditHeader") {
-    Write-Host "  ** Editing contents of $CNCHeader." -ForeGround Magenta
+    Write-Host "  ** Editing contents of $CNCHeader." -Foreground Magenta
 	&$Editor $CNCHeader
 	return
 }
 
 if ($args -eq "-ShowFooter") {
-	Write-Host "  ** Displaying contents of $CNCFooter." -ForeGround Magenta
+	Write-Host "  ** Displaying contents of $CNCFooter." -Foreground Magenta
     Write-Host	
     Get-Content $CNCFooter
 	return
 }
 
 if ($args -eq "-ShowHeader") {
-    Write-Host "  ** Displaying contents of $CNCHeader." -ForeGround Magenta
+    Write-Host "  ** Displaying contents of $CNCHeader." -Foreground Magenta
     Write-Host	
     Get-Content $CNCHeader
 	return
 }
 
 if ($args -eq "-OpenValidatorInfo") {
-    Write-Host "  ** Opening https://github.com/chocolatey/package-validator/wiki." -ForeGround Magenta
+    Write-Host "  ** Opening https://github.com/chocolatey/package-validator/wiki." -Foreground Magenta
     Write-Host	
     &start https://github.com/chocolatey/package-validator/wiki
 	return
 }
 
-# NOT implemented yet
-if ($args -eq "-Recurse") {
-    $Recurse=$True
-	return
+if ($args -eq "-AddHeader") {
+     $AddHeader=$True
+   } else {
+     $AddHeader=$False
 }
 
-# Let's you specify a folder to find a .nuspec file
-# Do NOT specify the file itself, just the folder.
-# Defaults to current working directory.
+if ($args -eq "-AddFooter") {
+     $AddFooter=$True
+   } else {
+     $AddFooter=$False
+}
+
+if ($args -eq "-UpdateImageURLs") {
+     $UpdateImageURLs=$True
+   } else {
+     $UpdateImageURLs=$False
+}
+
+if ($args -eq "-UpdateXMLDeclaration") {
+     $UpdateXMLDeclaration=$True
+   } else {
+     $UpdateXMLDeclaration=$False
+}
+
+if ($args -eq "-Update") {
+	 $global:UpdateNuspec=$True
+}
+
+if ($args -eq "-UpdateAll") {
+     $UpdateAll=$True
+	 $UpdateImageURLs=$True
+	 $UpdateXMLDeclaration=$True
+	 $global:UpdateNuspec=$True
+   } else {
+     $UpdateAll=$False
+}
+
+if ($args -eq "-WhatIf") {
+     $WhatIf=$True
+   } else {
+     $WhatIf=$False
+}
+
+if (!(Test-Path $path)){
+    Write-Host "           ** $path is an invalid path." -Foreground Red
+	return
+#    $path=Get-Location
+#	Write-Host "  ** Changing path to $path."
+   }
+
+# Finds nuspec file for processing. Defaults to current working directory.
+# You can specify a directory path, but do NOT specify the file itself, just the directory.
 if (!$path) {$LocalnuspecFile = Get-Item ./*.nuspec}
 if ($path) {$LocalnuspecFile = Get-Item $path\*.nuspec}
 if (!($LocalnuspecFile)) {
     $CurrentDir=$path
-    Write-Host "           ** No .nuspec file found in $CurrentDir" -ForeGround Red
+    Write-Host "           ** No .nuspec file found in $CurrentDir" -Foreground Red
 	return
    }
 
-# borrowed from https://blogs.technet.microsoft.com/samdrey/2014/03/26/determine-the-file-encoding-of-a-file-csv-file-with-french-accents-or-other-exotic-characters-that-youre-trying-to-import-in-powershell/   
+# Borrowed from
+# https://blogs.technet.microsoft.com/samdrey/2014/03/26/determine-the-file-encoding-of-a-file-csv-file-with-french-accents-or-other-exotic-characters-that-youre-trying-to-import-in-powershell/
+# UTF8 w/o BOM sometimes reports as ASCII. UTF8 w/BOM is not desired per "You must save your files with UTF–8 character encoding without BOM."
 function Get-FileEncoding
 {
     [CmdletBinding()] Param (
@@ -121,18 +166,49 @@ function Get-FileEncoding
 
     [byte[]]$byte = get-content -Encoding byte -ReadCount 4 -TotalCount 4 -Path $Path
 
-    if ( $byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf )
-    { Write-Output 'UTF8' }
+    if ($byte[0] -eq 0xef -and $byte[1] -eq 0xbb -and $byte[2] -eq 0xbf)
+    { Write-Output 'UTF-8 with BOM' } 
     elseif ($byte[0] -eq 0xfe -and $byte[1] -eq 0xff)
     { Write-Output 'Unicode' }
     elseif ($byte[0] -eq 0 -and $byte[1] -eq 0 -and $byte[2] -eq 0xfe -and $byte[3] -eq 0xff)
-    { Write-Output 'UTF32' }
+    { Write-Output 'UTF-32' }
     elseif ($byte[0] -eq 0x2b -and $byte[1] -eq 0x2f -and $byte[2] -eq 0x76)
-    { Write-Output 'UTF7'}
+    { Write-Output 'UTF-7'}
     else
-    { Write-Output 'ASCII' } 
+    { Write-Output 'ASCII or UTF-8' } 
 }
-# ^ UTF8 w/o BOM reports as ASCI. UTF8 w/BOM is not desired "You must save your files with UTF–8 character encoding without BOM."
+
+# Borrowed from
+# https://web.archive.org/web/20160430132409/http://powershell.org:80/wp/forums/topic/how-to-check-syntax-of-scripts-automatically/
+function Test-PowerShellSyntax
+{
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+        [string[]]
+        $Path
+    )
+
+    process
+    {
+        foreach ($scriptPath in $Path) {
+            $contents = Get-Content -Path $scriptPath
+
+            if ($null -eq $contents)
+            {
+                continue
+            }
+
+            $errors = $null
+            $null = [System.Management.Automation.PSParser]::Tokenize($contents, [ref]$errors)
+
+            New-Object psobject -Property @{
+                Path = $scriptPath
+                SyntaxErrorsFound = ($errors.Count -gt 0)
+            }
+        }
+    }
+}
 
 # Validate that URL elements are actually URLs and verify the URLs are good
 # Thanks https://stackoverflow.com/questions/23760070/the-remote-server-returned-an-error-401-unauthorized
@@ -147,22 +223,22 @@ if (($url -match "http://") -or ($url -match "https://")){
             # do nothing, it's good!
          } else {
            Write-Host ("  ** $element - $url site might be OK, status code:" + $HTTP_Status)
-		   Write-Host "           ** Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -ForeGround Cyan
+		   Write-Host "           ** Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
          }
          $HTTP_Response.Close()
         } catch {
           $HTTP_Status = [regex]::matches($_.exception.message, "(?<=\()[\d]{3}").Value
           Write-Warning ("  ** $element - ""$url"" is probably bad, status code: " + $HTTP_Status)
-          Write-Host "           ** Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -ForeGround Cyan
+          Write-Host "           ** Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
         }
    }
 }
 
 # Check for license files when binaries are included
 function Check-LicenseFile{
-$LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE*.txt -Recurse)
+$LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE* -Recurse)
 if ($LicenseFile){
-	 Write-Host '           ** Binary files - '  $LicenseFile.Name ' file(s) found.' -ForeGround Green
+	 Write-Host '           ** Binary files - '  $LicenseFile.Name ' file(s) found.' -Foreground Green
 	} else {
 	 Write-Warning "  ** Binary files - LICENSE.txt file NOT found."
    }
@@ -170,9 +246,9 @@ if ($LicenseFile){
 
 # Check for verification file when binaries are included
 function Check-VerificationFile{
-$VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION*.txt -Recurse)
+$VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION* -Recurse)
 if ($VerificationFile){
-     Write-Host '           ** Binary files - '  $VerificationFile.Name ' file(s) found.' -ForeGround Green
+     Write-Host '           ** Binary files - '  $VerificationFile.Name ' file(s) found.' -Foreground Green
 	} else {
 	 Write-Warning "  ** Binary files - VERIFICATION.txt file NOT found."
    }
@@ -183,7 +259,7 @@ function Check-Binaries{
 $IncludedBinaries=(Get-ChildItem -Path $path -Include $BinaryExtensions -Recurse)
 if ($IncludedBinaries){
     Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
-    Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -ForeGround Cyan
+    Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -Foreground Cyan
 	Check-LicenseFile
 	Check-VerificationFile
    }
@@ -192,9 +268,10 @@ if ($IncludedBinaries){
 # add header template to <description>
 function Add-Header{
 if (Test-Path $CNCHeader){
-    $Header=(Get-Content $CNCHeader)
-    $NuspecDescription=$Header+$NuspecDescription
-    $UpdateNuspec=$True
+    $Header=[IO.File]::ReadAllText($CNCHeader)
+    $NuspecDescription="`n" + $Header + $NuspecDescription
+    Write-Host "           ** <description> - added header template." -Foreground Green
+	$global:UpdateNuspec=$True
 	return $NuspecDescription
    } else {
 	Write-Warning "           ** $CNCHeader not found."
@@ -204,9 +281,10 @@ if (Test-Path $CNCHeader){
 # add footer template to <description>
 function Add-Footer{
 if (Test-Path $CNCFooter){
-    $Footer=(Get-Content $CNCFooter)
-    $NuspecDescription=$NuspecDescription+$Footer
-    $UpdateNuspec=$True
+    $Footer=[IO.File]::ReadAllText($CNCFooter)
+    $NuspecDescription=$NuspecDescription + "`n" + $Footer
+    Write-Host "           ** <description> - added footer template." -Foreground Green
+    $global:UpdateNuspec=$True
 	return $NuspecDescription
    } else {
 	Write-Warning "           ** $CNCFooter NOT found."
@@ -217,8 +295,7 @@ if (Test-Path $CNCFooter){
 function Check-Header{
 $NuspecDescription=$NuspecDescription.Trim()
 if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
-    Write-Host "           ** <description> - standardized header found." -ForeGround Green
-	$HeaderFound=$True
+    Write-Host "           ** <description> - header template found." -Foreground Green
    }
 }
 
@@ -226,8 +303,7 @@ if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---"
 function Check-Footer{
 $NuspecDescription=$NuspecDescription.Trim()
 if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
-    Write-Host "           ** <description> - standardized footer found." -ForeGround Green
-	$FooterFound=$True
+    Write-Host "           ** <description> - footer template found." -Foreground Green
    }
 }
 
@@ -247,36 +323,58 @@ if ($NuspecProjectURL){&start $NuspecProjectURL}
 function Update-CDNURL([string]$oldURL){
 if ($oldURL -match 'https://raw.githubusercontent.com'){$StaticalyURL=($oldURL -replace 'https://raw.githubusercontent.com','https://cdn.staticaly.com/gh')}
 if ($oldURL -match 'https://cdn.rawgit.com'){$StaticalyURL=($oldURL -replace 'https://cdn.rawgit.com','https://cdn.staticaly.com/gh')}
-$UpdateNuspec=$True
-Write-Host "           ** $oldURL" -ForeGround Yellow
-Write-Host "              converted to:" -Foreground Magenta
-Write-Host "              $StaticalyURL" -ForeGround Green
-Write-Host "              (saving not implemented yet)" -ForeGround Red
+$global:UpdateNuspec=$True
 return $StaticalyURL
 }
 
-# FUTURE ENHANCEMENT load nuspec file and save changes
+# Update the nuspec XML declaration with encoding info
+function Update-XMLDeclaration{
+Write-Host "           ** XML declaration changed to version=""1.0"" encoding=""utf-8""" -Foreground Green
+$nuspecFile.xml="version=""1.0"" encoding=""utf-8"""
+$global:UpdateNuspec=$True
+}
+
+# Update the nuspec with any changes and save as UTF-8 w/o BOM
+# Thanks https://stackoverflow.com/questions/8160613/powershell-saving-xml-and-preserving-format
 Function Update-nuspec{
-if ($UpdateNuspec){
-    Write-Host "Writing changes to $LocalnuspecFile." -ForeGround Magenta
-    [xml]$Updatednuspec = Get-Content $LocalnuspecFile
-# Need to determine changes then write out file
-    $Updatednuspec.Save("$LocalnuspecFile")
-	}
+if ($global:UpdateNuspec){
+   if ($WhatIf){
+        Write-Host "CNC did NOT update $LocalnuspecFile, -WhatIf parameter was used." -Foreground Magenta
+		return
+   }
+   $UpdatednuspecFile = [xml]([System.IO.File]::ReadAllText($LocalnuspecFile))
+   $UpdatednuspecFile.PreserveWhitespace = $true
+   $settings = New-Object System.Xml.XmlWriterSettings
+   $settings.Indent = $true
+   $settings.NewLineChars ="`r`n"
+   $settings.Encoding = New-Object System.Text.UTF8Encoding($false)   
+
+   # changes
+   if ($nuspecFile.xml) {$UpdatednuspecFile.xml = $nuspecFile.xml}
+   if ($NuspecDescription){$UpdatednuspecFile.package.metadata.description=[string]$NuspecDescription}
+   if ($NuspecIconURL){$UpdatednuspecFile.package.metadata.iconurl=$NuspecIconURL}
+   
+   $xfile = [System.Xml.XmlWriter]::Create($LocalnuspecFile, $settings)
+   try{
+     $UpdatednuspecFile.Save($xfile)
+    } finally {
+     $xfile.Dispose()
+    }
+   Write-Host "CNC updated $LocalnuspecFile." -Foreground Magenta
+  }
 }
 
 # Import package.nuspec file to get values
-# FUTURE ENHANCEMENT change to function
 $nuspecXML = $LocalnuspecFile
 [xml]$nuspecFile = Get-Content $nuspecXML
 $NuspecAuthors = $nuspecFile.package.metadata.authors
 $NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl	
 $NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
 $NuspecCopyright = $nuspecFile.package.metadata.copyright
-$NuspecDependencies = $nuspecFile.package.metadata.dependencies # Not fully implemented yet
+$NuspecDependencies = $nuspecFile.package.metadata.dependencies
 $NuspecDescription = $nuspecFile.package.metadata.description
 $NuspecDocsURL = $nuspecFile.package.metadata.docsurl
-$NuspecFiles = $nuspecFile.package.files.file # Not fully implemented yet
+$NuspecFiles = $nuspecFile.package.files.file
 $NuspecIconURL = $nuspecFile.package.metadata.iconurl
 $NuspecID = $nuspecFile.package.metadata.id
 $NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
@@ -298,25 +396,59 @@ $NuspecDisplayName=$LocalnuspecFile.Name
 $NuspecDisplayName=$NuspecDisplayName.ToUpper()
 
 # Start outputting check results
-Write-Host "CNC Summary of $NuspecDisplayName :" -ForeGroundColor Magenta
+Write-Host "CNC Summary of $NuspecDisplayName :" -Foreground Magenta
 
 # Open all .nuspec URLs for viewing if -OpenURLs is passed
 if ($args -eq "-OpenURLs") {
-    Write-Host "           ** Opening all .nuspec URLs in your default browser for viewing." -ForeGround Magenta
+    Write-Host "           ** Opening all .nuspec URLs in your default browser for viewing." -Foreground Magenta
 	Open-URLs
 	}
 
 # check for UTF8 encoding
 $NuspecEncoding=(Get-FileEncoding -Path $LocalnuspecFile)
-if ($NuspecEncoding -ne "UTF8"){Write-Warning "  ** $NuspecDisplayName is $NuspecEncoding, NOT UTF8 encoded."}
+if ($NuspecEncoding -ne 'ASCII or UTF-8'){
+    Write-Warning "  ** $NuspecDisplayName is encoded using $NuspecEncoding."
+	if ($global:UpdateNuspec) {
+	     Write-Host "           ** $NuspecDisplayName will be converted to UTF-8 w/o BOM and saved." -Foreground Green
+		 } else {
+		   Write-Host "           ** Consider running CNC -Update to re-write`n              $LocalnuspecFile to UTF-8 w/o BOM." -Foreground Cyan
+	}
+}
+
+# check XML declaration
+if ($nuspecFile.xml -eq "version=""1.0"""){
+    Write-Warning "  ** XML declaration is version=""1.0"""
+	if ($UpdateXMLDeclaration){
+	    Update-XMLDeclaration
+	} else {
+      Write-Host "           ** Consider running CNC -UpdateXMLDeclaration to add a UTF-8 encoding statement." -Foreground Cyan
+	}
+}
+
+# check XML comment
+if (!$nuspecFile.'#comment'){
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
+    Write-Warning "  ** The recommended UTF-8 encoding check comment was not found."
+    Write-Host "           ** Consider adding a UTF-8 encoding check comment such as:" -Foreground Cyan
+# Funny how this line requires UTF-8 w/BOM encoding to display correctly
+	Write-Host "              <!-- Do not remove this test for UTF-8: if `“Ω`” doesn’t appear as greek uppercase omega letter enclosed in
+              quotation marks, you should use an editor that supports UTF-8, not this one. -->" -Foreground Cyan
+}
 
 # <authors> checks
-if (!($NuspecAuthors)) {Write-Host "           ** <authors> element is empty, this element is a requirement." -ForeGround Red}
+if (!($NuspecAuthors)) {
+    Write-Host "           ** <authors> element is empty, this element is a requirement." -Foreground Red
+   } else {
+     if ($NuspecAuthors -match "@"){
+	     Write-Warning "  ** <authors> - contains an e-mail address. This will trigger a message from the verifier:"
+	     Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+	 }
+   }
 
 # <bugTrackerUrl> checks
 if (!($NuspecBugTrackerURL)) {
      Write-Warning "  ** <bugTrackerUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: bugTrackerUrl - points to the location where issues and tickets can be accessed' -ForeGround Cyan
+	Write-Host '           ** Suggestion: bugTrackerUrl - points to the location where issues and tickets can be accessed' -Foreground Cyan
    } else {
      Validate-URL "<bugTrackerUrl>" $NuspecBugTrackerURL
 	}
@@ -331,6 +463,10 @@ if (!($NuspecCopyright)) {
 	  if ($NuspecCopyright.Length -lt 5) {
 	      Write-Warning "  ** <copyright> - Please update the copyright field so that it is using at least 4 characters."
 		  }
+	  if ($NuspecAuthors -match "@"){
+	      Write-Warning "  ** <copyright> - contains an e-mail address. This will trigger a message from the verifier:"
+	      Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+	 }
 	}
 
 # <dependencies> checks
@@ -340,28 +476,30 @@ if (!($NuspecDependencies)) {
      if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){Write-Warning "  ** <dependencies> - Deprecated packages must have a dependency."}
 	 if ($NuspecDependencies.dependency.id -eq 'chocolatey'){
 	     Write-Warning "  ** <dependencies> - ""chocolatey"" is a dependency. This will trigger a message from the verifier:"
-	     Write-Host "           ** Note: The package takes a dependency on Chocolatey. The reviewer will ensure the package uses a specific`n              Chocolatey feature that requires a minimum version." -ForeGround Cyan
+	     Write-Host "           ** Note: The package takes a dependency on Chocolatey. The reviewer will ensure the package uses a specific`n              Chocolatey feature that requires a minimum version." -Foreground Cyan
 		 }
-		 
-	 $DependencyNumber=0
+	 $DependencyName=$NuspecDependencies.dependency.id
+	 if ($NuspecDependencies.dependency.id.count -eq 1){
+    	 if ($NuspecDependencies.dependency.version -eq $null){
+	          Write-Warning "  ** <dependencies> - $DependencyName has no version. This will trigger a message from the verifier:"
+      	      Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
+	         }
+	 } else {
+	   $DependencyNumber=0
 	 do{
+	    $DependencyName=$NuspecDependencies.dependency.id[$DependencyNumber]
  	    if ($NuspecDependencies.dependency[$DependencyNumber].version -eq $null){
-		    if ($NuspecDependencies.dependency.id.count -eq 1){
-			    $DependencyName=$NuspecDependencies.dependency.id
-				} else {
-	              $DependencyName=$NuspecDependencies.dependency.id[$DependencyNumber]
-				 }
-	        Write-Warning "  ** <dependencies> - ""$DependencyName"" has no version. This will trigger a message from the verifier:"
-			Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -ForeGround Cyan
+				Write-Warning "  ** <dependencies> - ""$DependencyName"" has no version. This will trigger a message from the verifier:"
+			    Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
 			}
 	   $DependencyNumber++
        } while ($DependencyNumber -lt $NuspecDependencies.dependency.id.count)
 	 }
-	 
+	 }
 
 # <description> checks
 if (!($NuspecDescription)) {
-    Write-Host "           ** <description> - element is empty, this element is a requirement." -ForeGround Red
+    Write-Host "           ** <description> - element is empty, this element is a requirement." -Foreground Red
    } else {
      Check-Header
      Check-Footer
@@ -369,79 +507,95 @@ if (!($NuspecDescription)) {
      if ($NuspecDescription.Length -gt 4000) {Write-Warning "  ** <description> - is greater than 4,000 characters."}
 	 if ($NuspecDescription -match "raw.githubusercontent"){
          Write-Warning "  ** <description> - has a GitHub direct link. Please change to a CDN such as:"
-         Write-Host "           ** $CDNlist" -ForeGround Cyan
+         Write-Host "           ** $CDNlist" -Foreground Cyan
 #         Update-CDNURL - (need to parse and pass URL)
         }
      if ($NuspecDescription -match "cdn.rawgit.com"){
          Write-Warning "  ** <description> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
-         Write-Host "           ** $CDNlist" -ForeGround Cyan
+         Write-Host "           ** $CDNlist" -Foreground Cyan
 #         Update-CDNURL - (need to parse and pass URL)
        }
 	}
 	
+# add header template to <description> if -AddHeader is passed to script
+if ($AddHeader) {
+$NuspecDescription=(Add-Header)
+}
+
+# add footer template to <description> if -AddFooter is passed to script
+if ($AddFooter) {
+$NuspecDescription=(Add-Footer)
+}
+	
 # <docsUrl> checks
 if (!($NuspecDocsURL)) {
     Write-Warning "  ** <docsUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: docsUrl - points to the location of the wiki or docs of the software' -ForeGround Cyan
+	Write-Host '           ** Suggestion: docsUrl - points to the location of the wiki or docs of the software' -Foreground Cyan
    } else {
      Validate-URL "<docsUrl>" $NuspecDocsURL
 	}
 
 # <files> checks
 if (!($NuspecFiles)) {
-    Write-Warning "  ** <files> - element is empty."
-	Write-Host '           ** All of the following files will be packaged:' -ForeGround Cyan
-	Get-ChildItem -Path $path -Exclude *.nupkg
+    Write-Warning "  ** <files> - element is empty. All of the following files will be packaged:"
+#	Get-ChildItem -Path $path -Exclude *.nupkg | Write-Host -Foreground Cyan
+    Get-ChildItem -LiteralPath $pwd -Recurse -Exclude *.nupkg |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
 	}
 
 # <iconUrl> checks
 if (!($NuspecIconURL)) {
     Write-Warning "  ** <iconUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Guideline: The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -ForeGround Cyan
+	Write-Host '           ** Guideline: The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -Foreground Cyan
    } else {
      Validate-URL "<iconUrl>" $NuspecIconURL
 	 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
      if (!($IconExt)){
 	     Write-Warning "  ** <iconUrl> - Your package icon is NOT a .PNG or .SVG. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: As per the packaging guidelines icons should be either a png or svg file.' -ForeGround Cyan
+	Write-Host '           ** Suggestion: As per the packaging guidelines icons should be either a png or svg file.' -Foreground Cyan
        }
 	 if ($NuspecIconURL -match "raw.githubusercontent"){
-         if ($args -eq "-UpdateImageURLs") {
-		    $NewNuspecIconURL=(Update-CDNURL "$NuspecIconURL")
+         if ($UpdateImageURLs) {
+		    $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
+			Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub."
+			Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
 		     Write-Warning "  ** <iconUrl> - Your package icon links directly to GitHub. Please use a CDN such as:"
-             Write-Host "           ** $CDNlist" -ForeGround Cyan
-            }
+             Write-Host "           ** $CDNlist" -Foreground Cyan		   
+		     Write-Host "           ** Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+		   }
 		}
      if ($NuspecIconURL -match "cdn.rawgit.com"){
-	     if ($args -eq "-UpdateImageURLs") {
-		    $NewNuspecIconURL=(Update-CDNURL "$NuspecIconURL")
+         if ($UpdateImageURLs) {
+		    $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
+			Write-Warning "  ** <iconUrl> - Your package icon links RawGit which will be going offline October 2019."
+			Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
-             Write-Warning "  ** <iconUrl> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
-             Write-Host "           ** $CDNlist" -ForeGround Cyan
-			}
+		     Write-Warning "  ** <iconUrl> - RawGit CDN will be going offline October 2019. Please change to a CDN such as:"
+             Write-Host "           ** $CDNlist" -Foreground Cyan
+		     Write-Host "           ** Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+		   }
        }
    }
 
 # <id> checks
 if (!($NuspecID)) {
-    Write-Host "           ** <id> - element is empty, this element is a requirement." -ForeGround Red
+    Write-Host "           ** <id> - element is empty, this element is a requirement." -Foreground Red
 	} else {
      if (($NuspecID.Length -gt 20) -and (!$NuspecID.Contains("-")) -and (!$NuspecID.Contains("."))) {
 	     Write-Warning "  ** <id> - is greater than 20 characters. This will trigger a message from the verifier:"
-	     Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the`n              package for one that will be pushed with a new id that meets the package naming guidelines." -ForeGround Cyan
+	     Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the`n              package for one that will be pushed with a new id that meets the package naming guidelines." -Foreground Cyan
 	    }
 	 if ($NuspecID -cmatch "[A-Z]") {Write-Warning "  ** <id> - includes UPPERcase letters." }
 	 if (($NuspecID.Contains(".")) -and (!$NuspecID.Contains(".install")) -and (!$NuspecID.Contains(".portable")) -and (!$NuspecID.Contains(".extension"))) {
 	      Write-Warning "  ** <id> - includes a '.'. This will trigger a message from the verifier:"
-		  Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the package`n              for one that will be pushed with a new id that meets the package naming guidelines."  -ForeGround Cyan
+		  Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the package`n              for one that will be pushed with a new id that meets the package naming guidelines."  -Foreground Cyan
 		 }
 	 }
 
 # <licenseUrl> checks
 if (!($NuspecLicenseURL)) {
     Write-Warning "  ** <licenseUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host "           ** Guideline: The licenseUrl should be added if there is one. Please correct this in the nuspec,`n              if applicable." -ForeGround Cyan
+	Write-Host "           ** Guideline: The licenseUrl should be added if there is one. Please correct this in the nuspec,`n              if applicable." -Foreground Cyan
    } else {
      Validate-URL "<licenseUrl>" $NuspecLicenseURL
 	}	
@@ -449,7 +603,7 @@ if (!($NuspecLicenseURL)) {
 # <mailingListUrl> checks
 if (!($NuspecMailingListURL)) {
     Write-Warning "  ** <mailingListUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: mailingListUrl - points to the forum or email list group for the software' -ForeGround Cyan
+	Write-Host '           ** Suggestion: mailingListUrl - points to the forum or email list group for the software' -Foreground Cyan
    } else {
      Validate-URL "<mailingListUrl>" $NuspecMailingListURL
 	}
@@ -460,14 +614,14 @@ if (!($NuspecOwners)) {
    } else {
      if ($NuspecAuthors -eq $NuspecOwners){
         Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
-        Write-Host "           ** Note: The package maintainer field (owners) matches the software author field (authors) in the nuspec.`n              The reviewer will ensure that the package maintainer is also the software author." -ForeGround Cyan
+        Write-Host "           ** Note: The package maintainer field (owners) matches the software author field (authors) in the nuspec.`n              The reviewer will ensure that the package maintainer is also the software author." -Foreground Cyan
 		}
    }
 
 # <packageSourceUrl> checks
 if (!($NuspecPackageSourceURL)) {
-    Write-Warning "  ** <packageSourceUrl> - element is empty."
-	Write-Host "           ** Suggestion: Consider publishing your packages on GitHub. Other people might help you improve your package.`n              Users can also notify you of issues or program updates." -ForeGround Cyan
+    Write-Warning "  ** <packageSourceUrl> - element is empty. This will trigger a message from the verifier:"
+	Write-Host "           ** Guideline: The nuspec has been enhanced to allow packageSourceUrl, pointing to the url where the package`n              source resides. This is a strong guideline because it simplifies collaboration.`n              Please add it to the nuspec." -Foreground Cyan
    } else {
      Validate-URL "<packageSourceUrl>" $NuspecPackageSourceURL
 	}		
@@ -475,12 +629,12 @@ if (!($NuspecPackageSourceURL)) {
 # <projectSourceUrl> checks
 if (!($NuspecProjectSourceURL)) {
     Write-Warning "  ** <projectSourceUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: projectSourceUrl - points to the location of the underlying software source' -ForeGround Cyan
+	Write-Host '           ** Suggestion: projectSourceUrl - points to the location of the underlying software source' -Foreground Cyan
    } else {
      Validate-URL "<projectSourceUrl>" $NuspecProjectSourceURL
 	 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
          Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
-         Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -ForeGround Cyan
+         Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -Foreground Cyan
        }
 	}
 	
@@ -497,7 +651,7 @@ if (!($NuspecProjectURL)) {
 # <releaseNotes> checks
 if (!($NuspecReleaseNotes)) {
     Write-Warning "  ** <releaseNotes> element is empty. This will trigger a message from the verifier:"
-	Write-Host "           ** Guideline: Release Notes (releaseNotes) are a short description of changes in each version of a package.`n              Please include releasenotes in the nuspec. NOTE: To prevent the need to continually update this field,`n              providing a URL to an external list of Release Notes is perfectly acceptable." -ForeGround Cyan
+	Write-Host "           ** Guideline: Release Notes (releaseNotes) are a short description of changes in each version of a package.`n              Please include releasenotes in the nuspec. NOTE: To prevent the need to continually update this field,`n              providing a URL to an external list of Release Notes is perfectly acceptable." -Foreground Cyan
    }
 
 # <replaces> checks - Built for the future
@@ -513,7 +667,10 @@ if (!($NuspecRequireLicenseAcceptance)) {
 	  }
 
 # <summary> checks
-if (!($NuspecSummary)) {Write-Warning "  ** <summary> - element is empty."}
+if (!($NuspecSummary)) {
+    Write-Warning "  ** <summary> - element is empty. This will trigger a message from the verifier:"
+    Write-Host '           ** Guideline: Summary (summary) is a short explanation of the software. Please include summary in the nuspec.' -Foreground Cyan
+	}
 
 # <tags> checks
 if (!($NuspecTags)) {
@@ -524,11 +681,11 @@ if (!($NuspecTags)) {
 		}
 	  if ($NuspecTags -match "chocolatey"){
          Write-Warning "  ** Note: There is a tag named ""chocolatey"" which will trigger a message from the verifier:"
-         Write-Host '           ** Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -ForeGround Cyan
+         Write-Host '           ** Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -Foreground Cyan
 		}
 	  if ($NuspecTags -match "notsilent"){
          Write-Warning "  ** Note: There is a tag named ""notsilent"" which will trigger a message from the verifier:"
-         Write-Host '           ** Note: notSilent tag is being used. The reviewer will ensure this is being used appropriately. ' -ForeGround Cyan
+         Write-Host '           ** Note: notSilent tag is being used. The reviewer will ensure this is being used appropriately. ' -Foreground Cyan
 		}		
     }
 
@@ -536,38 +693,37 @@ if (!($NuspecTags)) {
 if (!($NuspecTitle)) {Write-Warning "  ** <title> - element is empty."}
 
 # <version> checks
-if (!($NuspecVersion)) {Write-Host "           ** <version> - element is empty, this element is a requirement." -ForeGround Red}
+if (!($NuspecVersion)) {Write-Host "           ** <version> - element is empty, this element is a requirement." -Foreground Red}
+
+# cocolateyInstall.ps1 and chocolateyUninstall.ps1 script checks
+# out of scope, but nice to have
+    if (Test-Path "$pwd\tools\chocolateyinstall.ps1") {$ScriptError=Test-PowerShellSyntax (Get-Item "$pwd\tools\chocolateyinstall.ps1")}
+    if ($ScriptError.SyntaxErrorsFound){Write-Warning "  ** PowerShell syntax errors found in $pwd\tools\chocolateyinstall.ps1"}
+    $ScriptError=$False
+    if (Test-Path "$pwd\tools\chocolateyUninstall.ps1") {$ScriptError=Test-PowerShellSyntax (Get-Item "$pwd\tools\chocolateyUninstall.ps1")}
+    if ($ScriptError.SyntaxErrorsFound){Write-Warning "  ** PowerShell syntax errors found in $pwd\tools\chocolateyUninstall.ps1"}
 
 # Binaries checks
 Check-Binaries
 
-# add header template to <description> if -AddHeader is passed to script
-if ($args -eq "-AddHeader") {
-$NewNuspecDescription=(Add-Header)
-}
+if ($global:UpdateNuspec) {
+	Update-nuspec
+	}
 
-# add footer template to <description> if -AddFooter is passed to script
-if ($args -eq "-AddFooter") {
-$NewNuspecDescription=(Add-Footer)
-}
-
-Write-Host $NewNuspecDescription -ForeGround Green # temporary debugging
-
-# FUTURE ENHANCEMENT update changes to nuspec
-# Update-nuspec{
-# $NewNuspecIconURL - make global ?
-# $NewNuspecDescription - make global ?
-#}
-
-Write-Host "Found CNC.ps1 useful?" -ForeGroundColor white
-Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForeGroundColor white
-Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForeGroundColor white
+Write-Host "`nFound CNC.ps1 useful?" -Foreground White
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
 return
 
 # TDL
-# add the saving of changes to the nuspec
-# check for e-mail addresses placed instead of links (authors and where else?)
+# BUG: handle multiple nuspecs in same directory (i.e. copy of)
+# inject UTF-8 test comment
+# implement multiple CDN choices for iconURL
+# "Nuspec file contains templated values which should be removed."
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # check http links to see if https links are available and report if so - low priority
 # MAYBE download icon file and check it's dimension - very low priority
+# MAYBE implement a warning and hard error count to report
+# MAYBE error check 0 byte nuspec files (causes error with Get-FileEncoding)
+
 # What else?
