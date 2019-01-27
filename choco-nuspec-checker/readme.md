@@ -14,42 +14,55 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
+***	
+[choco://choco-nuspec-checker](choco://choco-nuspec-checker)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
+	
+![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
+
 #**choco-nuspec-checker** (**CNC**) is a PowerShell script designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and ommisions. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. 
 
 ###FEATURES:
 * **CNC** checks for all .nuspec elements and reports any missing
 * **CNC** checks for all verifier messages (guidelines, suggestions, and notes) and reports them if applicable
-* **CNC** checks for UTF-8 encoding and reports the type of encoding if not UTF-8
 * **CNC** checks for dead URLs and reports them
-* **CNC** checks for GitHub direct links, reports them, and can convert to Staticaly CDN URLs
-* **CNC** checks for RawGit CDN links, reports them, and can convert to Staticaly CDN URLs
+* **CNC** checks for GitHub direct links, reports them, and can convert them to Staticaly CDN URLs
+* **CNC** checks for RawGit CDN links, reports them, and can convert them to Staticaly CDN URLs
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
-* **CNC** can add a standard template header and/or footer to your .nuspec description (saving coming soon)
+* **CNC** can add a standard template header and/or footer to your .nuspec description
+* **CNC** checks for UTF-8 encoding and reports the type of encoding if not UTF-8
+* **CNC** can re-write your nuspec in UTF-8 w/o BOM format (default for all updates)
+* **CNC** checks your chocolateyInstall.ps1 and chocolateyUninstall.ps1 for PowerShell syntax errors (default=no)
 
 ###Helps make packaging Chocolateasy!
 
 ###INSTRUCTIONS:
 * **CNC -help** for help with options and switches
-* Run **CNC** to check the .nuspec in your current directory, run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file itself, just the directory.)
-* To check all your packages' .nuspec files change to the root directory of all your packages and via PowerShell run **Get-ChildItem -Recurse | ?{if ($__.PSIsContainer){cls;cd $__.Name;cnc;cd ..;pause}}**
+* Run **CNC** to check the .nuspec in your current directory, run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
+* To check all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cls;cd $__.Name;cnc;cd ..;pause}}**
+* To update all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cd $__.Name;cnc -UpdateAll;cd ..}}** (no clear screen or pausing)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
+###KNOWN BUG:	
+* CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
+	
 ###CHANGELOG:
+* 2019.01.26 - **CNC is now considered "Ready for Prime Time."** (I still have more updates planned.) **CNC** can now write changes to your nuspec file including the iconUrl, description, and XML declaration (Finally!!!), added ability to update the XML declaration, added -UpdateAll and -Update options, updates are written as UTF-8 w/o BOM, cleaned up UTF-8 reporting, added PowerShell syntax error checking of chocolateyInstall.ps1 and chocolateyUninstall.ps1, new -WhatIf option for testing without saving changes, the normal minor tweaks and cosmetic changes. I will keep making it better though, of course.
+* 2019.01.22 - added XML declaration and UTF-8 comment checking, better dependency version checking, a rare verifier message I missed
 * 2019.01.15 - you can now specify a path to a directory containing a .nuspec file to check, misc minor tweaks
 * 2019.01.13 - finished the dependencies checking, all verifier messages (guidelines, suggestions, and notes) now reporting in **CNC**
 * 2019.01.12 - minor fixes
 * 2019.01.09 - many more checks and warnings added, almost all known verifier guidelines, suggestions and notes added, some beautifications, added option to view Chocolatey validator info page, added optional image GitHub direct and RawGit URL conversions to Staticaly CDN URLs
-* 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (>4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
+* 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (&gt;4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
 * 2019.01.04 - implemented included binary files checking and messages, laid out the groundwork for the future enhancements
 * 2019.01.03 - fixed some URL checking handling that could cause PS errors, updated list of CDN recommendations, added checking for RawGit URLs in description, cosmetic updates
 * 2018.12.22-2018-12.28 - initial release
 
 ###ROADMAP:
-* save desired changes to the .nuspec file
-* take a filespec to check .nuspec files outside of the local path
 * capture and test URLs found in description
 * add packaging tips/tweaks/etc
 
