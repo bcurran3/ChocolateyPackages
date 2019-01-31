@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>wsl-fedoraremix</id>
     <version>1.0.26</version>
@@ -11,39 +10,7 @@
     <projectUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wsl-fedoraremix/wsl-fedoraremix_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-=======
-<<<<<<< HEAD
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
-  <metadata>
-    <id>wsl-fedoraremix</id>
-    <version>1.0.26-pre2</version>
-    <title>Fedora Remix for Windows Subsystem for Linux (WSL) (Install)</title>
-    <authors>Whitewater Foundry, Ltd. Co.</authors>
-    <owners>bcurran3</owners>
-    <licenseUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wsl-fedoraremix/wsl-fedoraremix_icon.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-=======
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
-  <metadata>
-    <id>wsl-fedoraremix</id>
-    <version>1.0.26-pre2</version>
-    <title>Fedora Remix for Windows Subsystem for Linux (WSL) (Install)</title>
-    <authors>Whitewater Foundry, Ltd. Co.</authors>
-    <owners>bcurran3</owners>
-    <licenseUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wsl-fedoraremix/wsl-fedoraremix_icon.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
->>>>>>> 568a289c53f5b67c34d935dde6b9e808d52c1a9b
->>>>>>> 569b2d7294411478d2ee52bfb07a69a9f3a90929
-___
+    <description>___
 [choco://wsl-fedoraremix](choco://wsl-fedoraremix)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
@@ -78,9 +45,7 @@ Whitewater Foundry devs monitor the Fedora Remix for WSL GitHub issues page howe
 
 ___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-<<<<<<< HEAD
-___
-    </description>
+___</description>
     <summary>This packages installs Fedora Remix for Windows Subsystem for Linux (WSL).</summary>
     <releaseNotes>https://docs.fedoraproject.org/en-US/fedora/f29/release-notes/</releaseNotes>
     <copyright>Whitewater Foundry, Ltd. Co.</copyright>
@@ -93,46 +58,4 @@ ___
       <dependency id="wsl" version="1.0.1" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>  
-=======
-<<<<<<< HEAD
-___
-    </description>
-    <summary>This packages installs Fedora Remix for Windows Subsystem for Linux (WSL).</summary>
-    <releaseNotes>https://docs.fedoraproject.org/en-US/fedora/f29/release-notes/</releaseNotes>
-    <copyright>Whitewater Foundry, Ltd. Co.</copyright>
-    <tags>wsl fedora remix linux</tags>
-    <projectSourceUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-fedoraremix</packageSourceUrl>
-    <docsUrl>https://docs.fedoraproject.org/en-US/fedora/f29/</docsUrl>
-    <bugTrackerUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix/issues</bugTrackerUrl>
-    <dependencies>
-      <dependency id="wsl" version="1.0.1" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>  
-=======
-___
-    </description>
-    <summary>This packages installs Fedora Remix for Windows Subsystem for Linux (WSL).</summary>
-    <releaseNotes>https://docs.fedoraproject.org/en-US/fedora/f29/release-notes/</releaseNotes>
-    <copyright>Whitewater Foundry, Ltd. Co.</copyright>
-    <tags>wsl fedora remix linux</tags>
-    <projectSourceUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-fedoraremix</packageSourceUrl>
-    <docsUrl>https://docs.fedoraproject.org/en-US/fedora/f29/</docsUrl>
-    <bugTrackerUrl>https://github.com/WhitewaterFoundry/WSLFedoraRemix/issues</bugTrackerUrl>
-    <dependencies>
-      <dependency id="wsl" version="1.0.1" />
-    </dependencies>
-  </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>  
->>>>>>> 568a289c53f5b67c34d935dde6b9e808d52c1a9b
->>>>>>> 569b2d7294411478d2ee52bfb07a69a9f3a90929
 </package>
