@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-optimize-at</id>
     <version>0.0.1.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectSourceUrl>	
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</packageSourceUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>(unofficial) Choco Optimize at (Task)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-optimize-at/choco-optimize-at_icon.png</iconUrl>
-	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-optimize-at/choco-optimize-at_icon.png</iconUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -41,7 +41,7 @@ You can install **choco-optimize-at** with multiple parameters to make it run "[
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-optimize-at/readme.md)**
 	</description>
-    <releaseNotes>0.0.1.1 - removed unintentional forgotten code that caused WEEKLY with no other parameters to error out.</releaseNotes>	
+    <releaseNotes>0.0.1.1 - removed unintentional forgotten code that caused WEEKLY with no other parameters to error out.</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>

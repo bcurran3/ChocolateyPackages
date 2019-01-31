@@ -1,4 +1,5 @@
-﻿$packageName      = 'choco-cleaner'
+﻿$ErrorActionPreference = 'Stop'
+$packageName      = 'choco-cleaner'
 $script           = 'choco-cleaner.ps1'
 $xml              = 'choco-cleaner.xml'
 $shortcutName     = 'Choco Cleaner.lnk'

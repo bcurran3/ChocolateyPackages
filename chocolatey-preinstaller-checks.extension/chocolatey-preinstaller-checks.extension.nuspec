@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>chocolatey-preinstaller-checks.extension</id>
@@ -11,16 +12,16 @@
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectUrl>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</packageSourceUrl>
-    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <description>
 ***	
 [choco://chocolatey-preinstaller-checks.extension](choco://chocolatey-preinstaller-checks.extension)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
 	
-![Screenshot of chocolatey-preinstaller-checks.extension](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension_extras/chocolatey-preinstaller-checks.extension_screenshot.png)
+![Screenshot of chocolatey-preinstaller-checks.extension](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension_extras/chocolatey-preinstaller-checks.extension_screenshot.png)
 
 ##**Chocolatey Preinstaller Checks Extension** is a Chocolatey extension that intercepts and runs checks before installing or uninstalling a program. This extension will start working automatically once installed and does NOT need to be implemented by package creators/maintainers. **Chocolatey Preinstaller Checks Extension** is meant to be installed and used directly by Chocolatey end users.
 

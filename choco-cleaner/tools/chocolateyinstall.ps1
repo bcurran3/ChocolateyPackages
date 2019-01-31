@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName      = 'choco-cleaner'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $script           = 'choco-cleaner.ps1'

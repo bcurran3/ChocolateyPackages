@@ -1,4 +1,5 @@
-﻿$packageName = 'choco-nuspec-checker' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'choco-nuspec-checker'
 $script      = 'CNC.ps1'
 $CNCHeader   = 'CNCHeader.txt'
 $CNCFooter   = 'CNCFooter.txt'
