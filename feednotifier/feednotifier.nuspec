@@ -16,10 +16,10 @@
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/feednotifier/feednotifier_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
----
+___
 [choco://feednotifier](choco://feednotifier)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
----
+___
 
 Feed Notifier is an application for Windows and Mac OS X that resides in the system tray or status bar and displays pop-up notifications on your desktop when new items arrive in your subscribed RSS or Atom feeds. By default, the pop-ups look like this (on Windows)…
 
