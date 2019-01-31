@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tiny-pxe-server</id>
+    <version>1.0.0.22</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tiny-pxe-server</packageSourceUrl>
+    <title>Tiny PXE Server (Install)</title>
+    <authors>Erwan Labalec</authors>
+    <projectUrl>http://labalec.fr/erwan/?page_id=958</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tiny-pxe-server/tiny-pxe-server.png</iconUrl>
+    <docsUrl>http://mistyrebootfiles.altervista.org/documents/TinyPXEServer/</docsUrl>
+    <mailingListUrl>http://reboot.pro/forum/142-tiny-pxe-server</mailingListUrl>
+    <bugTrackerUrl>http://reboot.pro/topic/18962-bug-reports-requests-howtos-about-tiny-pxe-server/</bugTrackerUrl>
+    <tags>tinypxe pxe dhcp tftp https binl proxydhcp dns network boot server portable</tags>
+    <summary>Tiny PXE Server is a portable DHCP server - it does not need to be installed and can be run from a USB device. </summary>
+    <description>
+___
+[choco://tiny-pxe-server](choco://tiny-pxe-server)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of Tiny PXE Server](http://labalec.fr/erwan/wp-content/uploads/2014/03/rescue.png)
+
+I have been playing with pxe booting for a while, first starting with pxelinux, then gpxe and lately with ipxe.
+
+I am mostly a windows user and as an IT often needs a quick (=no install) and portable (=run from USB) dhcp server including a tftp server and a http server offering me then pxe booting.
+I could use tftp32 or serva but i like to make my own tools and these 2 were missing some features here and there.
+
+So here comes a small portable dhcp server including a tftp and a http server.
+
+This is freeware (and will always be), should be opensource and the unique here idea is to share and contribute.
+
+* dhcp daemon supports an alternative filename based on the user-class thus enabling chainloading (gpxe-&gt;pxelinux, ipxe-&gt;script, etc), and also support settings dhcp options (which can then be used by your boot loader)
+* tftp daemon supports tsize and blksize commands.
+* http daemon support head, range (mandatory for ipxe sanboot options) and over 2gb iso.
+* new in version 1.0.0.7 : BINL (RIS and WDS) support
+* new in version 1.0.0.10 : DNS daemon
+* new in version 1.0.0.14 : ProxyDHCP option
+
+The root home of tftp and http is the folder where you main pxe loader sits.
+I put all my iso files in a sub folder called images.
+I put all my wim files in a sub folder called sources.
+I put all my other loaders, in case I want to chain load, in next to my main loader (bootmgr, pxelinux, gpxe, grldr, etc)
+
+In the attached screenshot, i load ipxe then chainloads a script (menu.ipxe).
+In the script 3 different methods : the classic memdisk, a newer approach with sanboot and a new kid on the block wimboot.	
+
+More info about these loading methods here :
+
+* [http://www.syslinux….dex.php/MEMDISK](http://www.syslinux.org/wiki/index.php?title=MEMDISK)
+* [http://ipxe.org/cmd/sanboot](http://ipxe.org/cmd/sanboot)
+* [http://ipxe.org/wimboot](http://ipxe.org/wimboot)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/tiny-pxe-server/readme.md)**
+	
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
+
+</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
