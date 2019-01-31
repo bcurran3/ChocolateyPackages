@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>expandrive</id>
+    <version>6.4.3</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
+    <title>ExpanDrive (Trial) (Install)</title>
+    <authors>ExpanDrive, Inc.</authors>
+    <projectUrl>http://www.expandrive.com/apps/expandrive/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/expandrive/ExpanDrive_icon.png</iconUrl>
+    <copyright>© ExpanDrive, Inc.</copyright>
+    <licenseUrl>http://www.expandrive.com/license-terms/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.expandrive.com/docs/</docsUrl>
+    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav trial</tags>
+    <summary>Fast Network Drive for Cloud Storage</summary>
+    <description>
+___
+[choco://expandrive](choco://expandrive)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of ExpanDrive](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/expandrive/ExpanDriveScreenshot.png)
+
+##ExpanDrive v6 is up to 500% faster and includes a smart offline sync mode.
+
+###Map a drive to any cloud
+ExpanDrive maps a network drive for macOS and Microsoft Windows that connects to all major cloud storage providers such as Dropbox, Google Drive, Google Team Drives, Amazon Drive, Box, OneDrive, OneDrive for Business, Sharepoint, Openstack Swift, BackBlaze B2, Amazon S3 or your own SFTP, FTP or WebDAV server and SMB/Windows File Sharing.
+
+###Super-fast background uploads
+ExpanDrive 6 comes with a new multi-threaded connection engine that is up to 500% faster that previous version. ExpanDrive performs parallel transfers in the background so that you have a reliable transfer even in the face of unreliable internet. Keep working and stop waiting for transfers to complete.
+
+###Cloud storage in every application
+ExpanDrive is a fast shared drive connected to the cloud. Open, edit, and save files to remote computers from within your favorite programs—even when they are on a server half a world away. Enhance every single application on your computer by transparently connecting it to remote data.
+
+###Access the cloud through Finder and Explorer
+Securely access any remote file server directly from Finder and Explorer, or even the terminal. There’s no need to open a separate transfer client just for file transfer. ExpanDrive 6 extends the way all applications can access data.
+
+###Smart Offline Sync
+ExpanDrive features a smart offline sync mode that lets you access recent files or files you mark as available offline even without an internet connection.
+
+####ExpanDrive runs unlicensed and fully featured for 7 days giving you a chance to try everything out. Once the trial period ends you'll need to buy a license or you will be limited to 20 minutes of use.
+####Single User license is $49.95, lifetime upgrades - +$29.95
+
+[ExpanDrive Blog](http://www.expandrive.com/blog/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/expandrive/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+	</description>
+    <releaseNotes>http://updates.expandrive.com/release_notes/expandrive_win</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
