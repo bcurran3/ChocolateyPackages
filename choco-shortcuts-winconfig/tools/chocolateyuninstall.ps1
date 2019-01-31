@@ -1,5 +1,6 @@
-# v0.0.2.1
+﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'choco-shortcuts-winconfig'
+# v0.0.2.1
 
 # move icon for choco-cleaner if installed
 # https://chocolatey.org/packages/choco-cleaner

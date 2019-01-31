@@ -1,18 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-install-packages-from-web-winconfig</id>
     <version>0.0.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectSourceUrl>	
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</packageSourceUrl>
     <title>(unofficial) Install Chocolatey Packages from your Web Browser (Config)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
-	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -44,7 +44,7 @@ If you like the convienance of this package, you should also check out [(unoffic
 3. Click the result link to view the package page. 
 4. Find the **Package Specific** column on the left and click the **Download** link. 
 5. Wait (seconds) for it to download and... 
-6. Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_opera_example.png)
+6. Browser examples: [Chrome](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_chrome_example.png) | [Firefox](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_firefox_example.png) | [Opera](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-install-packages-from-web-winconfig\choco-install-packages-from-web-winconfig_opera_example.png)
 
 **Easy peasy, Chocolateasy!**
 
@@ -53,7 +53,7 @@ WARNING: Only install one package at a time until such time as Chocolatey v1.x i
 **If you find choco-install-packages-from-web-winconfig useful, please consider donating: 
 https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	</description>
-	<releaseNotes>
+    <releaseNotes>
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-install-packages-from-web-winconfig/readme.md)**	
 	</releaseNotes>
   </metadata>

@@ -1,6 +1,7 @@
-# v0.0.2.1
+﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'choco-shortcuts-winconfig'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+# v0.0.2.1
 
 New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey" -type directory -ea SilentlyContinue| out-null
 New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support" -type directory -ea silentlycontinue| out-null

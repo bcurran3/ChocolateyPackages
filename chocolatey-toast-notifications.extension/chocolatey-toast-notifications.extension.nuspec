@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>chocolatey-toast-notifications.extension</id>
@@ -11,19 +12,19 @@
     <tags>bcurran3 unofficial choco toast notifications extension</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</packageSourceUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
-    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>	
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Chocolatey Toast Notifications Extension is a Chocolatey extension that displays a toast notification after installing or uninstalling a program.</summary>	
+    <summary>Chocolatey Toast Notifications Extension is a Chocolatey extension that displays a toast notification after installing or uninstalling a program.</summary>
     <description>
 ***	
 [choco://chocolatey-toast-notifications.extension](choco://chocolatey-toast-notifications.extension)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
 	
-![Screenshot of Chocolatey Toast Notifications Extension](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.extension_extras/chocolatey-toast-notifications.extension_screenshot.png)
+![Screenshot of Chocolatey Toast Notifications Extension](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.extension_extras/chocolatey-toast-notifications.extension_screenshot.png)
 
 ###It's HERE! The 100% Chocolatey user OPT-IN toast notification extension for Chocolatey and Windows 10 (only).
 
@@ -58,9 +59,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * Attempt to make it work with PORTABLE packages as well.
 
    </releaseNotes>
-    <dependencies>      
+    <dependencies>
       <dependency id="burnttoast-psmodule" />
-      <dependency id="dependency-windows10" />	  
-    </dependencies>   
+      <dependency id="dependency-windows10" />
+    </dependencies>
   </metadata>
 </package>
