@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'choco-optimize-at'
 $pp           = Get-PackageParameters
 $CheckLicense = "$env:ChocolateyInstall\license\chocolatey.license.xml"

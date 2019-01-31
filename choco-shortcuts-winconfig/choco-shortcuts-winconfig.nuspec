@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-shortcuts-winconfig</id>
@@ -6,17 +7,17 @@
     <title>(unofficial) Chocolatey Shortcuts (Config)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
-    <copyright>public domain</copyright>	
+    <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-shortcuts-winconfig</packageSourceUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial choco shortcuts start menu chocolateasy</tags>	
-    <summary>This package creates Windows Start Menu shortcuts to run common Chocolatey functions.</summary>	
+    <tags>bcurran3 unofficial choco shortcuts start menu chocolateasy</tags>
+    <summary>This package creates Windows Start Menu shortcuts to run common Chocolatey functions.</summary>
     <description>
 ***	
 [choco://choco-shortcuts-winconfig](choco://choco-shortcuts-winconfig)
@@ -65,5 +66,5 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>

@@ -59,6 +59,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.
 
 ###CHANGELOG:
+* 2019.01.29 - fixed bug where iCloudDrive preference wasn't checked correctly, thanks sandscap-sc!
 * 2019.01.24 - now saves your pinned package information to pins.bat, added saving to c:\users\Public when run from system account (e.g. scheduled task), fixed error attempting to create files under system account Documents folder which doesn't exist, packages.config now properly UTF-8 encoded, speed optimizations, minor cosmetic changes
 * 2019.01.04 - 2019.01.02 didn't get packaged with the install and uninstall scripts! - fixed (GitHub bit me)
 * 2019.01.02 - Will now write to Documents/MyDocuments if the folder has been moved, thanks Aaron Throckmorton for the enhancement!
