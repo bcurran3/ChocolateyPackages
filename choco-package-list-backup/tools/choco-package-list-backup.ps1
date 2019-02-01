@@ -294,8 +294,8 @@ if ($UseTonidoSync -match "True" -and (Test-Path $ENV:USERPROFILE\Documents\Toni
 If ($ICinstalled){
      Write-Host "To re-install your Chocolatey packages: run INSTCHOCO -Y`n" -Foreground Magenta
    } else {
-     Write-Host "To re-install your Chocolatey packages: run CINST PACKAGES.CONFIG -Y" -Foreground Magenta
      Write-Host "  ** Consider getting InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!`n  ** https://chocolatey.org/packages/InstChoco`n" -Foreground Cyan
+     Write-Host "To re-install your Chocolatey packages: run CINST PACKAGES.CONFIG -Y`n" -Foreground Magenta
    }
 Write-Host "Found choco-package-list-backup.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
