@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntlite-free</id>
-    <version>1.7.2.6680</version>
+    <version>1.7.2.6703</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
     <title>NTLite (Free) (Install)</title>
     <authors>Nlitesoft</authors>
     <projectUrl>https://www.ntlite.com/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/ntlite-free/ntlite-free_icon.png</iconUrl>
-    <copyright>© 2014-2017 Nlitesoft</copyright>
+    <copyright>© Nlitesoft</copyright>
     <licenseUrl>https://www.ntlite.com/shop/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.ntlite.com/support/</docsUrl>
