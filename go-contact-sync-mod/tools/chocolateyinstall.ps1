@@ -1,4 +1,5 @@
-﻿$packageName = 'go-contact-sync-mod'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'go-contact-sync-mod'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\SetupGCSM-$env:ChocolateyPackageVersion.msi"
 
