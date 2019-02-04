@@ -2,9 +2,9 @@
 $packageName       = 'adwcleaner' 
 $toolsDir          = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url               = 'https://downloads.malwarebytes.com/file/adwcleaner'
-$checksum          = '8E75E3F6EAFBEA3C775DFBFD1C61DCB699E69E05265DB6F295777B291F530E19'
+$checksum          = 'CA118DD25B30FA2D829C2D9E65A62C7103E54746E65DCC94A573CEC595A0C54F'
 $shortcutName      = 'AdwCleaner.lnk'
-$portableEXE       = "adwcleaner_$env:packageVersion.exe"
+$portableEXE       = "adwcleaner_$ENV:packageVersion.exe"
 
 $packageArgs = @{
   packageName   = $packageName
@@ -18,13 +18,10 @@ $packageArgs = @{
  
 Get-ChocolateyWebFile @packageArgs
 
-Remove-Item $toolsDir\*.exe -Exclude "adwcleaner_$env:packageVersion.exe" # deleted old versions kept by upgrade
-Remove-Item $ENV:ChocolateyInstall\bin\adwcleaner_*.exe # delete shims from previous packages
-Remove-Item $toolsDir\*.ignore -Exclude "adwcleaner_$env:packageVersion.exe.ignore" # delete old .ignore files (7.2.8.0+)
-Write-Host "" | Out-File "$toolsDir\adwcleaner_$env:packageVersion.exe.ignore" # create .ignore file so shim isn't created
-Install-BinFile -Name adwcleaner -Path "$toolsDir\$portableEXE" # create adwcleaner shim instead of adwcleaner_version shim
+Install-BinFile -Name adwcleaner -Path "$toolsDir\$portableEXE"
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$portableEXE" -WorkingDirectory "$toolsDir\"
 
-# Change this to just rename current ver to adwcleaner so i don't have to make a shim
+Remove-Item $toolsDir\*.exe -Exclude "adwcleaner_$ENV:packageVersion.exe" | Out-Null #del old vers
+Remove-Item $ENV:ChocolateyInstall\bin\adwcleaner_*.exe  | Out-Null #del old vers' shims
