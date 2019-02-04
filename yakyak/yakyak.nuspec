@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>yakyak</id>
     <version>1.5.4</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/yakyak</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/yakyak</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>YakYak (Portable)</title>
     <authors>Davide Bertola and Martin Algesten</authors>
     <projectUrl>https://github.com/yakyak/yakyak</projectUrl>
-	<iconUrl>https://raw.githubusercontent.com/yakyak/yakyak/master/src/icons/icon_256.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/yakyak/yakyak/master/src/icons/icon_256.png</iconUrl>
     <licenseUrl>https://github.com/yakyak/yakyak/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/yakyak/yakyak</projectSourceUrl>
@@ -18,6 +18,11 @@
     <tags>yakyak google hangouts coffeescript portable</tags>
     <summary>Desktop client for Google Hangouts</summary>
     <description>
+___
+[choco://yakyak](choco://yakyak)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of YakYak](https://cloud.githubusercontent.com/assets/123929/16032313/cdba46c2-3204-11e6-912f-a72fef60563a.png)
 
 ###What does it do:
@@ -41,7 +46,8 @@
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
-	</description>
+	
+</description>
     <releaseNotes>https://github.com/yakyak/yakyak/releases</releaseNotes>
   </metadata>
   <files>
