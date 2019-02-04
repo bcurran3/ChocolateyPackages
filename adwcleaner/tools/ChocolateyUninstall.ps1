@@ -1,4 +1,5 @@
-﻿$packageName  = 'adwcleaner' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'adwcleaner'
 $shortcutName = 'AdwCleaner.lnk'
 
 Uninstall-BinFile adwcleaner
