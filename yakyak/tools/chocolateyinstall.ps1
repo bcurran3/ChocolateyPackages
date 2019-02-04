@@ -1,4 +1,5 @@
-﻿$packageName  = 'yakyak' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'yakyak' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'https://github.com/yakyak/yakyak/releases/download/v1.5.4-beta-rolling/yakyak-1.5.4-win32-x64.zip'
 $checksum     = '756EE0758C7B30FFF11F442A611D38CF21DCF63BBD22AC4D2EDE64FB15219077'
@@ -16,6 +17,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"
 
