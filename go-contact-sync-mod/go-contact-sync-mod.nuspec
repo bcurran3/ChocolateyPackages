@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>go-contact-sync-mod</id>
     <title>GO Contact Sync Mod</title>
-    <version>3.10.24</version>
+    <version>3.10.28</version>
     <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>			
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>
     <summary>GO Contact Sync Mod is an open source tool to synchronize your Microsoft Outlook contacts with Google Mail</summary>
     <description>
 ___
@@ -58,7 +58,7 @@ ___
     <dependencies>
       <dependency id="dotnet4.5" version="4.5" />
     </dependencies>
-    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.21/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.28/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
