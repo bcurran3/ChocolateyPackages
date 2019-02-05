@@ -20,20 +20,21 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
-#**choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. Even more useful features have been added outside of it's original scope.
+#**choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix some of them. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** now goes beyond it's original scope also checking your PowerShell scripts.
 
 ###FEATURES:
 * **CNC** checks for all .nuspec elements and reports any missing
 * **CNC** checks for all verifier messages (guidelines, suggestions, and notes) and reports them if applicable
 * **CNC** checks for dead URLs and reports them
-* **CNC** checks for GitHub direct links, reports them, and can convert them to Staticaly CDN URLs
-* **CNC** checks for RawGit CDN links, reports them, and can convert them to Staticaly CDN URLs
+* **CNC** checks for GitHub direct links, reports them, and can convert them to various CDN URLs (default=Staticaly)
+* **CNC** checks for RawGit CDN links, reports them, and can convert them to various CDN URLs (default=Staticaly)
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
 * **CNC** can add a standard template header and/or footer to your .nuspec description and replace tokens
 * **CNC** checks for UTF-8 encoding and reports the type of encoding if not UTF-8
 * **CNC** can re-write your nuspec in UTF-8 w/o BOM format
-* **CNC** checks your chocolateyInstall.ps1 and chocolateyUninstall.ps1 for PowerShell syntax errors
-* **CNC** checks your chocolateyInstall.ps1 and chocolateyUninstall.ps1 for for UTF-8 w/BOM encoding
+* **CNC** checks all your PowerShell scripts for syntax errors
+* **CNC** checks all your PowerShell scripts for UTF-8 w/BOM encoding
+* **CNC** checks for and can add $ErrorActionPreference = 'Stop' to your PowerShell scripts
 * **CNC** can optimize PNG files in your nuspec directory if PNGOptimizer.commandline is installed
 
 ###Helps make packaging Chocolateasy!
@@ -52,6 +53,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
 	
 ###CHANGELOG:
+* 2019.02.04 - New --UpdateScripts will add EAP statement to script files and re-write out to UTF-8 w/BOM, New -UseGitHack, -UseGitCDN, and -UsejsDelivr allows you to use image CDNs other than Staticaly (default), **CNC** now gives a summary count of warnings and fixes, now checks for header/footer before adding so duplicates aren't created, now checks all PowerShell scripts (previously only chocolateyinstall/uninstall)
 * 2019.01.29 - you can now use the following tokens in your header and footer files: $NuspecAuthors, $NuspecID, $NuspecOwners, $NuspecTitle, and $NuspecVersion - they will be parsed and replaced with the values from your nuspec file, added checking iconUrl image dimensions, new -OptimizePNGs option to run PNGOptimizerCL (if installed via Chocolatey) on PNG files in nuspec dir, added checking for lack of BOM in install/uninstall scripts, added checking for $ErrorActionPreference statement in install/uninstall scripts, now aborts when there are multiple nuspec files found in the same directory, now aborts if nuspec appears corrupt, cosmetic enhancements
 * 2019.01.26 - **CNC is now considered "Ready for Prime Time."** (I still have more updates planned.) **CNC** can now write changes to your nuspec file including the iconUrl, description, and XML declaration (Finally!!!), added ability to update the XML declaration, added -UpdateAll and -Update options, updates are written as UTF-8 w/o BOM, cleaned up UTF-8 reporting, added PowerShell syntax error checking of chocolateyInstall.ps1 and chocolateyUninstall.ps1, new -WhatIf option for testing without saving changes, the normal minor tweaks and cosmetic changes. I will keep making it better though, of course.
 * 2019.01.22 - added XML declaration and UTF-8 comment checking, better dependency version checking, a rare verifier message I missed
