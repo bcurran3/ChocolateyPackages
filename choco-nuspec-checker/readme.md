@@ -13,13 +13,6 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
-***	
-[choco://choco-nuspec-checker](choco://choco-nuspec-checker)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
-	
-![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
-
 #**choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix some of them. Find out what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** now goes beyond it's original scope also checking your PowerShell scripts.
 
 ###FEATURES:
