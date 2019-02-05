@@ -388,7 +388,7 @@ $LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE* -Recurse)
 if ($LicenseFile){
 	 Write-Host '           ** Binary files - '  $LicenseFile.Name ' file(s) found.' -Foreground Green
 	} else {
-	 Write-Warning "  ** Binary files - LICENSE.txt file NOT found."
+	 Write-Host "           ** Binary files - LICENSE.txt file NOT found." -Foreground Red
 	 $GLOBAL:Required++
    }
 }
@@ -399,7 +399,7 @@ $VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION* -Recurse)
 if ($VerificationFile){
      Write-Host '           ** Binary files - '  $VerificationFile.Name ' file(s) found.' -Foreground Green
 	} else {
-	 Write-Warning "  ** Binary files - VERIFICATION.txt file NOT found."
+	 Write-Host "           ** Binary files - VERIFICATION.txt file NOT found." -Foreground Red
 	 $GLOBAL:Required++
    }
 }
@@ -720,12 +720,13 @@ if (!($NuspecCopyright)) {
     Write-Warning "  ** <copyright> - element is empty."
 	} else {
 	  if ($NuspecCopyright.Length -lt 5) {
-	      Write-Warning "  ** <copyright> - Please update the copyright field so that it is using at least 4 characters."
+	      Write-Host "           ** <copyright> - Please update the copyright field so that it is using at least 4 characters." -Foreground Red
 		  $GLOBAL:Required++
 		  }
 	  if ($NuspecAuthors -match "@"){
-	      Write-Warning "  ** <copyright> - contains an e-mail address. This will trigger a message from the verifier:"
+	      Write-Host "           ** <copyright> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
 	      Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+          $GLOBAL:Required++
 	 }
 	}
 
@@ -734,7 +735,7 @@ if (!($NuspecDependencies)) {
     Write-Warning "  ** <dependencies> - element is empty."
    } else {
      if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){
-	      Write-Warning "  ** <dependencies> - Deprecated packages must have a dependency."
+	      Write-Host "           ** <dependencies> - Deprecated packages must have a dependency." -Foreground Red
 		  $GLOBAL:Required++
 		  }
 	 if ($NuspecDependencies.dependency.id -eq 'chocolatey'){
@@ -776,9 +777,12 @@ if (!($NuspecDescription)) {
 	 if ($AddFooter) {
          $NuspecDescription=(Add-Footer)
         }
-     if ($NuspecDescription.Length -lt 30) {Write-Warning "  ** <description> - is less than 30 characters."}
+     if ($NuspecDescription.Length -lt 30) {
+	     Write-Host "           ** <description> - is less than 30 characters." -Foreground Red
+		 $GLOBAL:Required++
+		 }
      if ($NuspecDescription.Length -gt 4000) {
-	     Write-Warning "  ** <description> - is greater than 4,000 characters."
+	     Write-Host "           ** <description> - is greater than 4,000 characters." -Foreground Red
 		 $GLOBAL:Required++
 		 }
 	 if ($NuspecDescription -match "raw.githubusercontent"){
@@ -890,7 +894,7 @@ if (!($NuspecID)) {
 		  $GLOBAL:Notes++
 		 }
 	 if ($NuspecID.Contains(".config")){
-	      Write-Warning "  ** <id> - includes a '.config'. This is not allowed."
+	      Write-Host "           ** <id> - includes a '.config'. This is not allowed." -Foreground Red
 		  $GLOBAL:Required++
 		 }
 	 }
@@ -949,7 +953,7 @@ if (!($NuspecProjectSourceURL)) {
 	
 # <projectUrl> checks
 if (!($NuspecProjectURL)) {
-    Write-Warning "  ** <projectUrl> - element is empty."
+    Write-Host "           ** <projectUrl> - element is empty." -Foreground Red
 	$GLOBAL:Required++
    } else {
      Validate-URL "<projectUrl>" $NuspecProjectURL
@@ -973,7 +977,7 @@ if (!($NuspecRequireLicenseAcceptance)) {
     Write-Warning "  ** <requireLicenseAcceptance> - element is empty."
 	} else {
 	  if (($NuspecRequireLicenseAcceptance -eq "true") -and (!($NuspecLicenseURL))) {
-	      Write-Warning "  ** <requireLicenseAcceptance> is set to true but <licenseUrl> is empty."
+	      Write-Host "           ** <requireLicenseAcceptance> is set to true but <licenseUrl> is empty." -Foreground Red
 		  $GLOBAL:Required++
 		  }
 	  }
@@ -987,11 +991,11 @@ if (!($NuspecSummary)) {
 
 # <tags> checks
 if (!($NuspecTags)) {
-     Write-Warning "  ** <tags> - element is empty."
+     Write-Host "           ** <tags> - element is empty." -Foreground Red
 	 $GLOBAL:Required++
 	} else {
 	  if ($NuspecTags -match ","){
-         Write-Warning "  ** <tags> - tags are separated with commas. They should only be separated with spaces."
+         Write-Host "           ** <tags> - tags are separated with commas. They should only be separated with spaces." -Foreground Red
 		 $GLOBAL:Required++
 		}
 	  if ($NuspecTags -match "chocolatey"){
@@ -1013,6 +1017,8 @@ if (!($NuspecVersion)) {Write-Host "           ** <version> - element is empty, 
 
 # check PowerShell script files, out of scope, but nice to have
 Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
+		  $ScriptFile=(Get-Item $_).Name
+		  $ScriptFile=$ScriptFile.toupper()
           $HasPS1EAP=Check-PS1EAP $_ # check ErrorActionPreference
 		  if (!$HasPS1EAP){
 		       $GLOBAL:Suggestions++
@@ -1020,8 +1026,6 @@ Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
 			   }
           $PS1Encoding=Get-FileEncoding $_
 		  if ($PS1Encoding -ne 'UTF-8 w/ BOM'){ # check encoding
-		      $ScriptFile=(Get-Item $_).Name
-			  $ScriptFile=$ScriptFile.toupper()
 		      Write-Warning "  ** $ScriptFile - is encoded using $PS1Encoding."
 			  if ($UpdateScripts -and !$WhatIf) {
 			      Write-Host "           ** $ScriptFile - will be converted to UTF-8 w/ BOM and saved." -Foreground Green
@@ -1033,7 +1037,7 @@ Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
 		  }
 		  $ScriptError=Test-PowerShellSyntax ($_)
 		  if ($ScriptError.SyntaxErrorsFound){
-		     Write-Warning "  ** $ScriptFile - has PowerShell syntax errors."
+		     Write-Host "           ** $ScriptFile - has PowerShell syntax errors." -Foreground Red
 			 $GLOBAL:Required++
 			 }
 	     }
