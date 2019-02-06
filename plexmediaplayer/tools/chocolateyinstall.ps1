@@ -1,9 +1,10 @@
-# https://www.plex.tv/media-server-downloads/#plex-app
+﻿# https://www.plex.tv/media-server-downloads/#plex-app
+$ErrorActionPreference = 'Stop'
 $packageName   = 'plexmediaplayer'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits          = Get-ProcessorBits
-$url           = 'https://downloads.plex.tv/plexmediaplayer/2.25.0.940-485e2ea4/PlexMediaPlayer-2.25.0.940-485e2ea4-windows-x64.exe'
-$checksum      = '3021EC9411EF697334E4F530E69D59D9AD2A8F2C0B9A516A9A0C77BCA160D8B0'
+$url           = 'https://downloads.plex.tv/plexmediaplayer/2.27.0.949-542ba3ed/PlexMediaPlayer-2.27.0.949-542ba3ed-windows-x64.exe'
+$checksum      = '239EFD820E201BF51D3A6A2FE4F408030DEA5B1BF64018057E09CFDBA70B58EA'
 
 if ($bits -eq 32){
     Write-Warning "This program only supports 64 bit OSes. Aborting..."
@@ -13,7 +14,7 @@ if ($bits -eq 32){
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'exe'
+  fileType      = 'EXE'
   url           = $url
   silentArgs    = '/S'
   softwareName  = 'Plex Media Player' 
