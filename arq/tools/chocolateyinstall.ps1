@@ -1,7 +1,8 @@
-﻿$packageName   = 'arq' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName   = 'arq' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://www.arqbackup.com/download/Arq.exe' 
-$checksum      = '51F91CCD95EECC955611E167E40230D4EC55E499DF9BCF31E675010DE89F627A'
+$checksum      = '62CBBEAD0A9DA03740788ADDE4855AE16B2535F15836196804AE019AA299392E'
 $UnzippedMSI   = "$toolsDir\ArqSetup.msi"
 
 $packageArgs = @{
