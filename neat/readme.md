@@ -1,5 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
+* v5.7.1.20190207 is a repack (fix) of v5.7.1.474
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * You will need an account at http://www.neat.com/ to use this software. 
 * Uninstall is not silent. Chocolatey will start the uninstaller, but you will be prompted.
