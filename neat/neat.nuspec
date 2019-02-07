@@ -1,24 +1,28 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>neat</id>
-    <version>5.7.1.474</version>
+    <version>5.7.1.20190207</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neat</packageSourceUrl>
     <title>Neat 5 for Windows (Install)</title>
     <authors>The Neat Company</authors>
     <projectUrl>http://www.neat.com/support/windows-v5/</projectUrl>
-    <iconUrl>https://neat-marketing.s3.amazonaws.com/neat-2015/blog/default-featured.jpg</iconUrl>
-<!-- https://www.macupdate.com/images/icons256/33482.png -->	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/neat/neat_icon.png</iconUrl>
     <copyright>The Neat Company</copyright>
     <licenseUrl>http://www.neat.com/policies/terms-and-conditions/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://s3.amazonaws.com/neat-marketing/UserGuides/Neat5ForPCUserGuideMarch2012.pdf</docsUrl>
-    <tags>neat scan scanner scanning neatdesk notsilent admin</tags>
+    <tags>neat scan scanner scanning neatdesk notsilent</tags>
     <summary>Neat 5 for Windows - scanning software for NeatReceipts, NeatDesk, and NeatConnect scanners</summary>
     <description>
-![Screenshot of Neat 5 for Windows](http://www.neat.com/wp-content/uploads/2015/03/neat5-300x163.png)
+___
+[choco://neat](choco://neat)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of Neat 5 for Windows](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/neat/neat_screenshot.png)
 
 Neat 5 for Windows is the legacy digital filing system (scanning software) used by The Neat Company's line of NeatReceipts, NeatDesk, and NeatConnect scanners; it works with other brand scanners as well.
 
@@ -35,10 +39,15 @@ The Neat Company [announced](http://www.neat.com/helpcenter/ending-support-of-le
 * Available USB port	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/neat/readme.md)**
-	</description>
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
+
+</description>
     <dependencies>
       <dependency id="dotnet3.5" />
-    </dependencies>		
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
