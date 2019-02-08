@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'neat'
 $url            = 'https://s3.amazonaws.com/legacy-installers/latest/Neat_v5.7.1.474_FULL.sfx.exe'
-$checksum       = '19E5C4A1351B948FA6E140AFEF8BD6C0A605BF41032DA5AFDF196E6E349796'
+$checksum       = '19E5C4A1351B948FA6E140AFEF8BD6C0A605BF41032DA5AFDF196E6E34979616'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
 $realInstaller  = 'Neat v5.7.1 FULL.exe'
