@@ -1,10 +1,10 @@
-$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop';
 $packageName = 'sumo'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe      = 'AutoHotKey'
 $ahkFile     = "$toolsDir\SUMo_Install.ahk"
 $url         = 'https://www.kcsoftwares.com/files/sumo_lite.exe'
-$checksum    = 'A857D37FAC7487CDDCE6287D3A026886824E485482FD66F3D605D79774B3C937'
+$checksum    = '51079EB03A6E76AAE79F384FB0999D917A094C0F63AAFD0581EF1DCBD78FF09C'
 
 $packageArgs = @{
     packageName    = $packageName

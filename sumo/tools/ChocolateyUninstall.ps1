@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'sumo'
 $packageSearch = 'KC Softwares SUMo'
 $installerType = 'exe'
