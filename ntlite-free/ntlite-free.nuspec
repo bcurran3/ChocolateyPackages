@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntlite-free</id>
-    <version>1.7.2.6703</version>
+    <version>1.7.2.6717</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
     <title>NTLite (Free) (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.ntlite.com/support/</docsUrl>
     <mailingListUrl>https://www.ntlite.com/discussions/#/categories</mailingListUrl>
-    <tags>nlitesoft ntlite windows depoyment admin</tags>
+    <tags>nlitesoft ntlite windows depoyment</tags>
     <summary>Windows deployment tool</summary>
     <description>
 ___
