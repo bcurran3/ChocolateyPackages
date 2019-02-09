@@ -6,6 +6,4 @@ The direct download links are:
 http://www.softwareok.com/Download/Q-Dir_Installer.zip
 http://www.softwareok.com/Download/Q-Dir_Installer_x64.zip
 
-SHA256 checksums for these .ZIPs are listed in the ChocolateyInstall.ps1 file
-
 ==================== Q-Dir ====================

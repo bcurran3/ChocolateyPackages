@@ -1,21 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>7.37</version>
+    <version>7.43</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg (SOFTWAREOK.COM)</authors>
-    <copyright>Nenad Hrg (SOFTWAREOK.COM)</copyright>	
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/qdir</packageSourceUrl>			
-    <projectUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
-	<docsUrl>http://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
-    <bugTrackerUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</bugTrackerUrl>		
-    <iconUrl>https://rawgit.com/zersh01/chocolatey-q-dir/master/Icon.png</iconUrl>
     <licenseUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
+    <projectUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
+    <iconUrl>https://rawgit.com/zersh01/chocolatey-q-dir/master/Icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>
-***	
+    <description>***	
 [choco://qdir](choco://qdir)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
@@ -44,13 +40,16 @@ Warning! ► [Once Q-Dir, always Q-Dir !!!](http://www.softwareok.com/?seite=faq
 
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+***</description>
     <summary>Q-Dir - Really good quad explorer 4 files and folder</summary>
     <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
+    <copyright>Nenad Hrg (SOFTWAREOK.COM)</copyright>
     <tags>nhrg qdir q-dir file manager management explorer utility binary</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/qdir</packageSourceUrl>
+    <docsUrl>http://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
+    <bugTrackerUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</bugTrackerUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>

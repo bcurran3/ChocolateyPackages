@@ -34,4 +34,4 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 Install-BinFile -Name qdir -Path $env:ProgramFiles\Q-Dir\Q-Dir.exe
-Remove-Item "$toolsDir\q*.zip" | out-null
+Remove-Item "$toolsDir\q*.zip" | Out-Null
