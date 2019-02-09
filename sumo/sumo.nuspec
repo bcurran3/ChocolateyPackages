@@ -1,21 +1,22 @@
-﻿<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
   <metadata>
     <id>sumo</id>
-    <version>5.8.11.414</version>
+    <version>5.8.12.415</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sumo</packageSourceUrl>	
-    <copyright>© KC Softwares</copyright>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sumo</packageSourceUrl>
+    <copyright>© KC Softwares</copyright>
     <licenseUrl>http://www.kcsoftwares.com/legal/ToU.pdf</licenseUrl>
     <projectUrl>http://www.kcsoftwares.com/?sumo</projectUrl>
-    <bugTrackerUrl>http://www.kcsoftwares.com/bugs/view_all_bug_page.php</bugTrackerUrl>	
+    <bugTrackerUrl>http://www.kcsoftwares.com/bugs/view_all_bug_page.php</bugTrackerUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/sumo/sumo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>kcsoftwares sumo update monitor notifier trial notsilent</tags>	
-    <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>	
+    <tags>kcsoftwares sumo update monitor notifier trial notsilent</tags>
+    <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>
     <description>
 ***	
 [choco://sumo](choco://sumo)
@@ -53,5 +54,5 @@ SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>
