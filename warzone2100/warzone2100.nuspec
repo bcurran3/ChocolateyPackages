@@ -1,24 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>warzone2100</id>
-    <version>3.2.3</version>
+    <version>3.2.3.020190213</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/warzone2100</packageSourceUrl>
     <title>Warzone 2100 (Install)</title>
     <authors>buginator, cypr, sendai, the_cybersphinx, vexed-1</authors>
     <projectUrl>https://wz2100.net/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/warzone2100/warzone2100_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/warzone2100/warzone2100_icon.png</iconUrl>
     <licenseUrl>https://github.com/Warzone2100/warzone2100/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Warzone2100/warzone2100</projectSourceUrl>
     <docsUrl>http://betaguide.wz2100.net/</docsUrl>
     <mailingListUrl>http://forums.wz2100.net/</mailingListUrl>
     <bugTrackerUrl>http://developer.wz2100.net/wiki/BugReporting</bugTrackerUrl>
-    <tags>warzone warzone2100 rts game admin</tags>
+    <tags>warzone warzone2100 rts game crossplatform</tags>
     <summary>Warzone 2100 - RTS game with the theme of Strategy by Design</summary>
     <description>
+___
+[choco://warzone2100](choco://warzone2100)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of Warzone 2100](https://wz2100.net/static/img/wz2100-CAM_3A50.png)
 	
 ##Welcome to Warzone 2100!
@@ -30,7 +35,13 @@ The game offers campaign, multi-player, and single-player skirmish modes. An ext
 Warzone 2100 was originally developed as a commercial game by Pumpkin Studios and published in 1999, and was released as open source by them in 2004, for the community to continue working on it.	
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/warzone2100/readme.md)**	
-	</description>
+	
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
+
+</description>
     <releaseNotes>http://wz2100.net/news/</releaseNotes>
   </metadata>
   <files>
