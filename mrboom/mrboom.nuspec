@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mrboom</id>
-    <version>4.5</version>
+    <version>4.7</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mrboom</packageSourceUrl>
     <title>MrBoom (Portable)</title>
     <authors>Remdy Software</authors>
     <projectUrl>https://github.com/Javanaise/mrboom-libretro</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/Javanaise/mrboom-libretro/master/Assets/mrboom.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/Javanaise/mrboom-libretro/master/Assets/mrboom.png</iconUrl>
     <copyright>Copyright (c) Remdy Software</copyright>
     <licenseUrl>https://github.com/Javanaise/mrboom-libretro/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -18,7 +18,12 @@
     <tags>mrboom multiplayer action arcade retroarch game portable bomberman </tags>
     <summary>Mr.Boom is an 8 players Bomberman clone for RetroArch/Libretro </summary>
     <description>
-![screenshot of MrBoom](https://raw.githubusercontent.com/Javanaise/mrboom-libretro/master/Assets/mrb1.png)
+___
+[choco://mrboom](choco://mrboom)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![screenshot of MrBoom](http://mrboom.mumblecore.org/mrboom-5.gif)
 	
 [Mr.Boom](http://mrboom.mumblecore.org) is a Bomberman clone for the RetroArch platform and was converted from DOS assembly using asm2c.
 
@@ -80,7 +85,13 @@ The  goal of the game is to bomb away your enemies and other players.  Bomberman
 * -z, --nomusic No music.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mrboom/readme.md)**
-	</description>
+	
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

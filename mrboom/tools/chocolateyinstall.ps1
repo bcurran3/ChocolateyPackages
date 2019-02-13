@@ -1,14 +1,15 @@
-﻿$packageName   = 'mrboom' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName   = 'mrboom' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://github.com/Javanaise/mrboom-libretro/releases/download/4.5/MrBoom-win64-4.5.zip'
-$checksum      = '6DF7ADE14EEF3443679A15165AD7762799C826ED224E08AF1241F6D0F20A8483'
+$url           = 'https://github.com/Javanaise/mrboom-libretro/releases/download/4.7/MrBoom-win64-4.7.zip'
+$checksum      = '13B64AE7B4BD03AB1CE3807B8F3B6098E94BBEDE24F5224E85FE201A5C3B627A'
 $PortableEXE   = 'MrBoom.exe'
 $ShortcutName  = 'MrBoom.lnk'
 $bits          = Get-ProcessorBits
 
 if ($bits -eq 32)
    {
-	Write-Host "MrBoom is 64 bit Windows only. Aborting..." -foreground red -backgroundcolor blue
+	Write-Warning "  ** MrBoom is 64 bit Windows only. Aborting..."
 	throw
    } 
 
