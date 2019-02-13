@@ -1,16 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>clash-royale</id>
+    <version>0.38.6.0</version>
     <title>Clash Royale (Install)</title>
-    <version>0.28.6.0</version>
     <authors>Supercell</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/clash-royale</packageSourceUrl>	
-    <summary>Clash Royale is a collectible cards + tower defense meets multiplayer online battle arena game that’s all about picking the right power cards to best bring down the opponent’s kingdom.</summary>
-    <description>
-![Clash Royale splash screen](https://www.games.lol/wp-content/uploads/2018/05/clashroyale_image.jpg)	
+    <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
+    <projectUrl>https://games.lol/clash-royale/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/clash-royale/clash-royale_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>___
+[choco://clash-royale](choco://clash-royale)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Clash Royale splash screen](https://games.lol/wp-content/uploads/2018/05/clash-royale-download-full-version.jpg)	
 
 Pit kingdom against kingdom in this popular tower defense strategy game developed by Supercell! Clash Royale is a collectible cards + tower defense meets multiplayer online battle arena game that’s all about picking the right power cards to best bring down the opponent’s kingdom. If you enjoyed Clash of Clans, Hay Day, or Boom Beach, then this game is up your alley too!
 
@@ -21,18 +27,16 @@ Each game lasts for a total of three minutes – the most crucial three minutes 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/clash-royale/readme.md)**
 
-***
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-    </description>
-    <projectUrl>https://games.lol/clash-royale/</projectUrl>
+___</description>
+    <summary>Clash Royale is a collectible cards + tower defense meets multiplayer online battle arena game that’s all about picking the right power cards to best bring down the opponent’s kingdom.</summary>
     <tags>supercell clash royale mobiegame games notsilent</tags>
-    <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/clash-royale/clash-royale_icon.png</iconUrl> 
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/clash-royale</packageSourceUrl>
     <dependencies>
       <dependency id="autohotkey" />
-	  <dependency id="dotnet4.5" />	  
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="dotnet4.5" />
     </dependencies>
   </metadata>
   <files>
