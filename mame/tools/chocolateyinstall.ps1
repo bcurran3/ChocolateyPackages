@@ -1,10 +1,10 @@
-﻿$packageName    = 'mame' 
-$global:packageMaintainer = 'BCURRAN3'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'mame' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://github.com/mamedev/mame/releases/download/mame0205/mame0205b_32bit.exe'
-$checksum       = '2455E0AD52D2AB0157B486981B4F85759BDD7E25CC396718DEC513D414EB820C'
+$checksum       = '70AF593AF5117B3EF6C9F770F9674C239F0CA0DB7ABA16E8DAFC77EBB518A2C7'
 $url64          = 'https://github.com/mamedev/mame/releases/download/mame0205/mame0205b_64bit.exe'
-$checksum64     = '1DB53EF75BD6629A8CFA32AFAC8ACDC71D0D2702163E38F11C4924B8C3025E2A'
+$checksum64     = '25DBDFC6CF4A9F6254BF42904F92381FB5DF639B72851E7C5B467A49C7A836C6'
 $bits           = Get-ProcessorBits
 
 $packageArgs = @{
@@ -30,7 +30,4 @@ if ($bits -eq 64)
     }
 
 $WhoAmI=whoami
-icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null
-  
-
-
+icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | Out-Null

@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mame</id>
-    <version>0.205</version>
+    <version>0.206</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mame</packageSourceUrl>
     <title>MAME (Portable)</title>
@@ -50,7 +50,7 @@ MAME is mostly programmed in C with some core components in C++. MAME can curren
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	</description>
-	<releaseNotes>https://www.mamedev.org/releases/whatsnew_0205.txt</releaseNotes>
+    <releaseNotes>https://www.mamedev.org/releases/whatsnew_0206.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
