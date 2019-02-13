@@ -1,8 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
+* As of v5.6.0.102 this mysteriously changed from Amazon Drive to Amazon Photos.
 * This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the proram released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
 * At some point in the future this package will be setup for creation by Auto Update (when I figure it out) which will solve the above problem.
-* I personaly use and endorse this software, but not for long since Amazon did away with the unlimited storage.
 
 ***
 
