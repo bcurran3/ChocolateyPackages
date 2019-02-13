@@ -1,39 +1,57 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>amazondrive</id>
-    <version>5.2.4.100</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazondrive</packageSourceUrl>		
-    <owners>bcurran3</owners>
-    <title>Amazon Drive (Install)</title>
+    <version>5.6.0.102</version>
+    <title>Amazon Photos (Install)</title>
     <authors>Amazon.com</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.amazon.com/gp/help/customer/display.html/?nodeId=201376540</licenseUrl>
     <projectUrl>https://www.amazon.com/clouddrive</projectUrl>
     <iconUrl>https://images-na.ssl-images-amazon.com/images/G/01/digital/adrive/images/drive_logo.png</iconUrl>
-    <copyright>(C) 1996-2016 Amazon.com Inc.</copyright>
-    <licenseUrl>https://www.amazon.com/gp/help/customer/display.html/?nodeId=201376540</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>amazon amazondrive amazonclouddrive cloud drive</tags>
-    <summary>Unlimited Secure Storage from Amazon</summary>
-    <description>
-![Screenshot of Amazon Drive](https://images-na.ssl-images-amazon.com/images/I/31tbQUopH8L.jpg)
+    <description>___
+[choco://amazondrive](choco://amazondrive)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
 
-##Unlimited Secure Storage from Amazon ($59.99 per year)
-* For photos, videos, music, documents, and more
-* Accessible via phone, tablet, or computer
-* Safe and private with Amazon security
+(Now Amazon Photos)
 
-###You've got important stuff. We keep all of it secure.
-When you upload a file or photo to Amazon Drive, you’re saving a backup copy in Amazon's secure servers. Your content is safe and easy to get to, and we’ll never change or reduce the quality of your images.
+###About Amazon Photos for Desktop
 
-###Take Amazon Drive with you.
-Access your content from nearly any device. Free mobile apps for iOS and Android let you quickly view, organize, and share things when you need to, no matter where you are.
+Amazon Photos for Desktop lets you back up, upload, download, and sync files on your computer without connecting to the Amazon Photos website.
 
-###Install Amazon Drive on your computer.
-Quickly save files from your computer to Amazon Drive. You can upload folders, large files, and multiple items at once.
+The Amazon Photos for Desktop application is compatible with:
+
+Mac computers running Mac OS X 10.10 and higher
+Windows computers running Windows 7 and higher
+
+**Backup**
+
+The Backup feature automatically uploads selected folders containing photos, videos, or files, and creates an alternate copy online. Set the folder of your choice to automatically upload its files to Amazon Photos—either continuously or at a scheduled time you choose. To free up space on your computer, use the Backup feature and then delete the files on your computer. The online copies are still available to view or edit online.
+
+With Amazon Photos for Desktop, you can also manually upload, download, and sync files between your computer and your Amazon Photos account.
+
+**Sync**
+
+Sync works by creating an "Amazon Drive" folder on your computer. Using drag-and-drop, you then upload files to Amazon Photos or download them from Amazon Photos to your computer without opening the full website. You can also use the application to synchronize the "Amazon Drive" folder on your computer or selected folders in your Amazon Photos account.
+
+**Note:** Amazon Photos for Desktop allows you to upload large files, including files larger than 2 GB in size. You can upload individual files up to 48.82 GB in size. In certain cases, the maximum file upload size may be lower than 48.82 GB due to limitations outside of our service. This includes limitations with your computer's web browser settings or specifications.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/amazondrive/readme.md)**
-	</description>
+	
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___</description>
+    <summary>Unlimited Secure Storage from Amazon</summary>
+    <copyright>(C) Amazon.com Inc.</copyright>
+    <tags>amazon amazondrive amazonclouddrive cloud drive</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazondrive</packageSourceUrl>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>	
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
