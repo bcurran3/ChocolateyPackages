@@ -83,6 +83,7 @@ The  goal of the game is to bomb away your enemies and other players.  Bomberman
 * -n, --noautofire No autofire for bomb drop.
 * -v, --version Show version of program.
 * -z, --nomusic No music.
+* -k, --skynet Humans vs. machines mode
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mrboom/readme.md)**
 	
