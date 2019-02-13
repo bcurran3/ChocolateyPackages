@@ -1,6 +1,6 @@
-﻿$packageName  = 'mrboom'
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'mrboom'
 $ShortcutName = 'MrBoom.lnk'
 
-remove-item "$env:Public\Desktop\$ShortcutName" -Force -ErrorAction 'SilentlyContinue'
-remove-item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -Force -ErrorAction 'SilentlyContinue'
-
+Remove-Item "$env:Public\Desktop\$ShortcutName" -Force -ErrorAction SilentlyContinue
+Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -Force -ErrorAction SilentlyContinue
