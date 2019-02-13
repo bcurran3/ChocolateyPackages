@@ -1,20 +1,17 @@
-﻿$packageName    = 'rdpguard'
-$installerType  = 'exe'
-$url            = 'https://rdpguard.com/download/rdpguard-5-2-3.exe'
-$checksum       = '4C009A6362FF29CA950D68EF2B40CFEF9131727744C3E065D749D0DFA631795F'
-$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'rdpguard'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0)
-$softwareName   = 'RdpGuard*'
+$url            = 'https://rdpguard.com/download/rdpguard-5-4-9.exe'
+$checksum       = '9B3F4AF1B626CA6FE7B9FD2771DC718C7DA858CAE50BEB0644E4E05744215B26'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir  
-  fileType      = $installerType
+  fileType      = 'EXE'
   url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
+  validExitCodes= @(0)
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  softwareName  = 'RdpGuard*'
   checksum      = $checksum
   checksumType  = 'sha256' 
 }
