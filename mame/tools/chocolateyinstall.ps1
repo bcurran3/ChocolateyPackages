@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'mame' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://github.com/mamedev/mame/releases/download/mame0205/mame0205b_32bit.exe'
+$url            = 'https://github.com/mamedev/mame/releases/download/mame0206/mame0206b_32bit.exe'
 $checksum       = '70AF593AF5117B3EF6C9F770F9674C239F0CA0DB7ABA16E8DAFC77EBB518A2C7'
-$url64          = 'https://github.com/mamedev/mame/releases/download/mame0205/mame0205b_64bit.exe'
+$url64          = 'https://github.com/mamedev/mame/releases/download/mame0206/mame0206b_64bit.exe'
 $checksum64     = '25DBDFC6CF4A9F6254BF42904F92381FB5DF639B72851E7C5B467A49C7A836C6'
 $bits           = Get-ProcessorBits
 
