@@ -1,7 +1,7 @@
-﻿$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$global:packageMaintainer = 'BCURRAN3'
+﻿$ErrorActionPreference = 'Stop'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://d1x9snl812q4nd.cloudfront.net/installer/com.rovio.angrybirdsstarwars.ads.iap/Angry_Birds_Star_Wars-gameslol.exe'
-$checksum       = '9911327F0BD4E32264150FF2E2F90E6D5FB15EA94B5EE07ECF414F3AFDA39AD9'
+$checksum       = '97B86CFF43A0960407A7FF94A8D5B58ED66AF8896FDA1E861BC999270437595D'
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\ABSWinstall.ahk"
 
@@ -22,4 +22,5 @@ Start-sleep 2
 Remove-Item "$env:AppData\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\GamesLOL.lnk" -ea SilentlyContinue
 Remove-Item "$env:USERPROFILE\Desktop\GamesLOL.lnk" -ea SilentlyContinue
 Remove-Item "$env:AppData\Microsoft\Internet Explorer\Quick Launch\User Pinned\TaskBar\Angry Birds Star Wars.lnk" -ea SilentlyContinue
-
+Start-CheckAndStop "mobinotifier"
+Start-CheckAndStop "mobiplayer"
