@@ -1,22 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>rdpguard</id>
-    <version>5.3.5</version>
-    <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/rdpguard</packageSourceUrl>
-    <title>RdpGuard (Install)</title>
+    <version>5.4.9</version>
+    <title>RdpGuard (Trial Install)</title>
     <authors>NetSDK Software</authors>
-    <projectUrl>https://rdpguard.com/</projectUrl>
-    <iconUrl>https://rdpguard.com/images/rdpguard-logo-64.png</iconUrl>
-    <copyright>Copyright © 2012-2017 NetSDK Software, LLC. All rights reserved. </copyright>
+    <owners>bcurran3</owners>
     <licenseUrl>http://netsdk.com/terms.html</licenseUrl>
+    <projectUrl>https://rdpguard.com/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/rdpguard/rdpguard_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://rdpguard.com/help.aspx</docsUrl>
-    <tags>netsdk rdpguard server security rdp sql ftp smtp iis mysql mssql ms-sql rd intrusion prevention trial</tags>
-    <summary>RdpGuard - Intrusion prevention system for your Windows Server</summary>
     <description>
+
+___
+[choco://rdpguard](choco://rdpguard)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of RdpGuard](https://rdpguard.com/images/index-screenshot.png)	
 
 ###What is RdpGuard and How does it Work?
@@ -43,8 +44,19 @@ For Windows XP, Vista, 7, 8, 8.1, 10 and Windows Server 2003 (R2), 2008 (R2), 20
 [Facebook](https://www.facebook.com/RdpGuard) | [Twitter](https://twitter.com/rdpguard) | [Google+](https://plus.google.com/+RdpGuard)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/rdpguard/readme.md)**
-	</description>
+	
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
+
+    </description>
+    <summary>RdpGuard - Intrusion prevention system for your Windows Server</summary>
     <releaseNotes>https://rdpguard.com/news.aspx</releaseNotes>
+    <copyright>Copyright © NetSDK Software, LLC. All rights reserved.</copyright>
+    <tags>netsdk rdpguard server security rdp sql ftp smtp iis mysql mssql ms-sql rd intrusion prevention trial</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/rdpguard</packageSourceUrl>
+    <docsUrl>https://rdpguard.com/help.aspx</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
