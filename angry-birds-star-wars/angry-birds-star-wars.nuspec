@@ -1,16 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>angry-birds-star-wars</id>
     <title>Angry Birds Star Wars (Install)</title>
-    <version>0.28.6.0</version>
+    <version>0.38.6.0</version>
     <authors>Rovio</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/angry-birds-star-wars</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/angry-birds-star-wars</packageSourceUrl>
     <summary>Developed by Rovio, this addictive strategy game will leave you spellbound with all the gorgeous graphics of the different universes like Tatooine, Death Star, Hoth, Cloud City, Moon of Endor, Death Star 2, and more.</summary>
     <description>
-![Angry Birds Star Wars title screen](https://games.lol/wp-content/uploads/2018/06/angry-birds-star-wars-free-pc-download.jpg)
+___
+[choco://angry-birds-star-wars](choco://angry-birds-star-wars)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Angry Birds Star Wars title screen](https://lh3.ggpht.com/KyORZFfxhp6Gj_JzqJ1DVOYF7rNy7lGc1Eez67M-RukFpdy00zNT7eVFacPjbu3hww)
 
 There exists the Luke Skywalker Bird, Freedom Fighter.
 
@@ -25,18 +30,22 @@ It’s time to protect the galaxy from the dark side. May the force be tweet you
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/angry-birds-star-wars/readme.md)**
 
-***
+    
+
+___
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-    </description>
+___
+
+</description>
     <projectUrl>https://games.lol/angry-birds-star-wars/</projectUrl>
     <tags>rovio angry birds star wars mobiegame games notsilent</tags>
     <licenseUrl>https://games.lol/terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/angry-birds-star-wars/angry-birds-star-wars_icon.png</iconUrl> 
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/angry-birds-star-wars/angry-birds-star-wars_icon.png</iconUrl>
     <dependencies>
       <dependency id="autohotkey" />
-	  <dependency id="dotnet4.5" />	  
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="dotnet4.5" />
     </dependencies>
   </metadata>
   <files>
