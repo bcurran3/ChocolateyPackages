@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* I personally use and endorse this. I install it on every instance of Chrome I find no matter who's computer it is!
+* This installs no software. It installs a registry key for the extension (or app) that Chrome will see and then ask you for permission to enable the extension (or app) if you are in Chrome or on the next run. Chrome will install the latest version of the extension (or app). The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension (or app).
 
 ***
 
