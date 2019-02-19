@@ -1,4 +1,5 @@
-﻿$packageName    = 'drivermax'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'drivermax'
 $softwareName   = 'DriverMax*'
 $installerType  = 'EXE' 
 $silentArgs     = '/VERYSILENT'
