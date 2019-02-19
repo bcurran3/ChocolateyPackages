@@ -1,16 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>drivermax</id>
     <title>DriverMax (Install)</title>
-    <version>10.12.0.10</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>			
+    <version>10.15.0.24</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>
     <authors>Innovative Solutions</authors>
     <owners>bcurran3</owners>
     <summary>DriverMax - Update, backup and restore outdated, missing or faulty drivers </summary>
     <description>
-![alt text](http://www.innovative-sol.com/assets/images/Screenshots/dmx/drivermax-1.PNG)
+___
+[choco://drivermax](choco://drivermax)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of DriverMax](http://www.innovative-sol.com/assets/images/Screenshots/dmx/drivermax-1.PNG)
 
 ##Keep your drivers up to date
 
@@ -45,7 +50,8 @@ DriverMax automatically tests each new driver before installing it on your PC, e
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
-    </description>
+    
+</description>
     <projectUrl>http://www.drivermax.com/</projectUrl>
     <tags>innovativesolutions drivermax drivers updater system utility</tags>
     <copyright>Copyright by Innovative Solutions. All Rights Reserved.</copyright>
@@ -54,9 +60,9 @@ DriverMax automatically tests each new driver before installing it on your PC, e
     <iconUrl>http://www.drivermax.com/images/dmax.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-    </dependencies>		
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>
