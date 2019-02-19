@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2019.02.16</version>
+    <version>2019.02.18</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -12,10 +12,10 @@
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-___
+---
 [choco://choco-nuspec-checker](choco://choco-nuspec-checker)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+---
 	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
@@ -47,10 +47,12 @@ ___
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+
     </description>
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <releaseNotes>
 ###CHANGELOG:
+* 2019.02.18 - now checks download URLs in install scripts, minor message updates
 * 2019.02.16 - -UpdateScripts will re-write PowerShell scripts to UTF-8 w/BOM (even if EAP statement doesn't need to be added), now checks for and reports templated values, adding the XML UTF-8 check comment now implemented, more updates to summary, added checking for SourceForge download links in chocolateyInstall.ps1, -MakeBackups option to create *.CNC.bak files - this is a breaking change from v2019.01.29 where making backups was default, check for CDATA in description and parse it for problems but not change it when saving, some more tweaks that I forgot before writing this
 * 2019.02.04 - New -UpdateScripts will add EAP statement to script files and re-write out to UTF-8 w/BOM, New -UseGitHack, -UseGitCDN, and -UsejsDelivr allows you to use image CDNs other than Staticaly (default), **CNC** now gives a summary count of warnings and fixes, now checks for header/footer before adding so duplicates aren't created, now checks all PowerShell scripts (previously only chocolateyinstall/uninstall), cosmetic changes to highlight required changes
 * 2019.01.29 - you can now use the following tokens in your header and footer files: $NuspecAuthors, $NuspecID, $NuspecOwners, $NuspecTitle, and $NuspecVersion - they will be parsed and replaced with the values from your nuspec file, added checking iconUrl image dimensions, new -OptimizePNGs option to run PNGOptimizerCL (if installed via Chocolatey) on PNG files in nuspec dir, added checking for lack of BOM in install/uninstall scripts, added checking for $ErrorActionPreference statement in install/uninstall scripts, now aborts when there are multiple nuspec files found in the same directory, now aborts if nuspec appears corrupt, cosmetic enhancements, now makes a backup file upon updates.
