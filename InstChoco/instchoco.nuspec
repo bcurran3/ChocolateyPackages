@@ -1,23 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>instchoco</id>
-    <version>2.10-beta1</version>
+    <version>2.10</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
     <authors>Bill Curran</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
-    <copyright>Copyright 2018-2019 Bill Curran</copyright>
+    <copyright>Copyright 2017-2019 Bill Curran</copyright>
     <licenseUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>		
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <tags>bcurran3 instchoco choco chocolatey unofficial installer portable</tags>
     <summary>InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!</summary>
     <description>
+***
+
+**[choco://instchoco](choco://instchoco)**  
+**To use choco:// protocol URLs, install [(unofficial) choco:// protocol support ](https://chocolatey.org/packages/choco-protocol-support)**
+
+***
+
 ![Screenshot of InstChoco in use](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
 
 #InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!
@@ -37,10 +44,13 @@
 ![Screenshot of InstChoco Options](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/InstChoco/readme.md)**	
-	</description>
-	<releaseNotes>
+	
+**If you find InstChoco useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+
+</description>
+    <releaseNotes>
 ###CHANGELOG:
-* 2.10 - Added offline Chocolatey install option.
+* 2.10 - Added -offline Chocolatey install option.
 * 2.02 - Removed legacy date checking and connectivity checking which only worked in English environments.
 * 2.01 - Fixed bug with non-domain joined computers.
 * 2.00 - Added -browse, -popular, -backup, -backupwithversions, -license options as well as many cosmetic changes. Added iCloudDrive support. Commercial use of InstChoco v2+ requires a paid license.
@@ -50,7 +60,7 @@
 * 1.11 - (unreleased) Added -ynp switch to skip installation of packages. (Install Chocolatey only)
 * 1.10 - Added [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup) and [Choco Persistent Packages](https://chocolatey.org/packages/choco-persistent-packages) support for package (re)installation. Cosmetic changes. Checks for year 2018 or greater instead of 2017 or greater. Updated donation info. :)
 * 1.00 - Initial release.
-	</releaseNotes>	
+	</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
