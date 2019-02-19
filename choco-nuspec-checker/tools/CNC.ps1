@@ -8,8 +8,8 @@
 param (
     [string]$path=(Get-Location).path
  )
- 
-Write-Host "CNC.ps1 v2019.02.16 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+
+Write-Host "CNC.ps1 v2019.02.18 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
@@ -386,7 +386,11 @@ if (($url -match "http://") -or ($url -match "https://")){
          } else {
 		   Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
            Write-Warning ("  ** $element - the URL:`n              $url`n site might be OK, status code:" + $HTTP_Status)
-		   Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+		   if ($element -notmatch ".PS1"){
+		        Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+		      } else {
+		        Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+			   }
 		   $GLOBAL:Suggestions++
 		   $GLOBAL:ValidURL=$False
          }
@@ -395,7 +399,11 @@ if (($url -match "http://") -or ($url -match "https://")){
           $HTTP_Status = [regex]::matches($_.exception.message, "(?<=\()[\d]{3}").Value
 		  Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
           Write-Warning ("  ** $element - the URL:`n              $url`n              is probably bad, status code: " + $HTTP_Status)
-          Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+		   if ($element -notmatch ".PS1"){
+		        Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+		      } else {
+		        Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+			   }
 		  $GLOBAL:Suggestions++
 		  $GLOBAL:ValidURL=$False
         }
@@ -409,7 +417,8 @@ function Check-LicenseFile{
 	  Write-Host '           ** Binary files - (FYI)'$LicenseFile.Name'file(s) found.' -Foreground Green
 	  $GLOBAL:FYIs++
 	 } else {
-	   Write-Host "           ** Binary files - LICENSE.txt file NOT found." -Foreground Red
+	   Write-Host "           ** Binary files - LICENSE.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
+	   Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip, etc) have been included without including a LICENSE.txt`n              file. This file is required when including binaries " -Foreground Cyan
 	   $GLOBAL:Required++
       }
 }
@@ -421,7 +430,8 @@ function Check-VerificationFile{
       Write-Host '           ** Binary files - (FYI)'$VerificationFile.Name'file(s) found.' -Foreground Green
 	  $GLOBAL:FYIs++
 	} else {
-	  Write-Host "           ** Binary files - VERIFICATION.txt file NOT found." -Foreground Red
+	  Write-Host "           ** Binary files - VERIFICATION.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip) have been included without including a VERIFICATION.txt`n              file. This file is required when including binaries" -Foreground Cyan
 	  $GLOBAL:Required++
     }
 }
@@ -442,7 +452,7 @@ function Check-Binaries{
 function Check-PNGs{
   $PNGFiles=(Get-ChildItem -Path $path -Include *.PNG -Recurse)
   if ($PNGFiles){
-      Write-Warning '  ** Binary files - (FYI) PNG file(s) found.'
+      Write-Warning '  ** Binary files - FYI: PNG file(s) found.'
 	  $GLOBAL:FYIs++
 	  if (!$OptimizePNGs){
 	  Write-Host '           ** Suggestion: Consider running CNC -OptimizePNGs to optimize your PNG file(s).' -Foreground Cyan
@@ -455,7 +465,7 @@ function Check-PNGs{
 function Check-Header{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
-      Write-Host "           ** <description> - (FYI) header template found." -Foreground Green
+      Write-Host "           ** <description> - FYI: header template found." -Foreground Green
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundHeader=$True
      } else {
@@ -466,7 +476,7 @@ function Check-Header{
 # add header template to <description>
 function Add-Header{
   if ($GLOBAL:FoundHeader){
-      Write-Host "           ** <description> - (FYI) header template previously added." -Foreground Cyan
+      Write-Host "           ** <description> - FYI: header template previously added." -Foreground Cyan
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	  }	
@@ -478,7 +488,7 @@ function Add-Header{
 	  if ($Header -match '\$NuspecTitle') {$Header=$Header -replace '\$NuspecTitle',"$NuspecTitle"}
       if ($Header -match '\$NuspecVersion') {$Header=$Header -replace '\$NuspecVersion',"$NuspecVersion"}
       $NuspecDescription="`n" + $Header + $NuspecDescription + "`n"
-      Write-Host "           ** <description> - header template added." -Foreground Green
+      Write-Host "           ** <description> - ADDED header template." -Foreground Green
 	  $GLOBAL:UpdateNuspec=$True
 	  $GLOBAL:Fixes++
 	  return $NuspecDescription
@@ -492,7 +502,7 @@ function Add-Header{
 function Check-Footer{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
-      Write-Host "           ** <description> - (FYI) footer template found." -Foreground Green
+      Write-Host "           ** <description> - FYI: footer template found." -Foreground Green
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundFooter=$True
      } else {
@@ -503,7 +513,7 @@ function Check-Footer{
 # add footer template to <description>
 function Add-Footer{
   if ($GLOBAL:FoundFooter){
-      Write-Host "           ** <description> - (FYI) footer template previously added." -Foreground Cyan
+      Write-Host "           ** <description> - FYI: footer template previously added." -Foreground Cyan
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	 }	
@@ -515,7 +525,7 @@ function Add-Footer{
 	  if ($Footer -match '\$NuspecTitle') {$Footer=$Footer -replace '\$NuspecTitle',"$NuspecTitle"}
       if ($Footer -match '\$NuspecVersion') {$Footer=$Footer -replace '\$NuspecVersion',"$NuspecVersion"}
       $NuspecDescription=$NuspecDescription + "`n" + $Footer + "`n"
-      Write-Host "           ** <description> - footer template added." -Foreground Green
+      Write-Host "           ** <description> - ADDED footer template." -Foreground Green
       $GLOBAL:UpdateNuspec=$True
 	  $GLOBAL:Fixes++
 	  return $NuspecDescription
@@ -634,7 +644,6 @@ Function Update-nuspec{
       } finally {
         $xfile.Dispose()
       }
-#      Write-Host "CNC updated $LocalnuspecFile." -Foreground Magenta
   }
 }
 
@@ -779,7 +788,7 @@ if (!($NuspecBugTrackerURL)) {
 
 # <copyright> checks
 if (!($NuspecCopyright)) {
-    Write-Warning "  ** <copyright> - (FYI) element is empty."
+    Write-Warning "  ** <copyright> - FYI: element is empty."
 	$GLOBAL:FYIs++
 	} else {
 	  if ($NuspecCopyright.Length -lt 5) {
@@ -801,7 +810,7 @@ if (!($NuspecCopyright)) {
 
 # <dependencies> checks
 if (!($NuspecDependencies)) {
-    Write-Warning "  ** <dependencies> - (FYI) element is empty."
+    Write-Warning "  ** <dependencies> - FYI: element is empty."
 	$GLOBAL:FYIs++
    } else {
      if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){
@@ -855,7 +864,8 @@ if (!$NuspecDescription){
 		 $GLOBAL:Guidelines++
 		 }
      if ($NuspecDescription.Length -gt 4000) {
-	     Write-Host "           ** <description> - is greater than 4,000 characters." -Foreground Red
+	     Write-Host "           ** <description> - is greater than 4,000 characters. Pushing the package will generate the error:" -Foreground Red
+		 Write-Host "           ** Failed to process request. 'This package had an issue pushing: A nuget package's Description property may`n              not be more than 4000 characters long.'. The remote server returned an error: (409) Conflict.." -Foreground Cyan
 		 $GLOBAL:Required++
 		 }
 	 if ($NuspecDescription -match "raw.githubusercontent"){
@@ -903,7 +913,7 @@ if (!$NuspecDescription){
 			  $GLOBAL:Required++
 			 }
        }
-     if ((!$nuspecFile.package.metadata.description.'#cdata-section' -eq $NuspecDescription) -and ($GLOBAL:UpdateNuspec)){
+     if (($nuspecFile.package.metadata.description.'#cdata-section') -and ($GLOBAL:UpdateNuspec)){
         Write-Host "           ** <description> - CDATA found, not saving description changes." -Foreground Magenta
        } 
 }
@@ -925,7 +935,7 @@ if (!($NuspecDocsURL)) {
 
 # <files> checks
 if (!($NuspecFiles)) {
-    Write-Warning "  ** <files> - (FYI) element is empty. All of the following files will be packaged:"
+    Write-Warning "  ** <files> - FYI: element is empty. All of the following files will be packaged:"
     Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
 	$GLOBAL:FYIs++
 }
@@ -954,7 +964,6 @@ if (!($NuspecIconURL)) {
 	 if ($NuspecIconURL -match "raw.githubusercontent"){
          if ($UpdateImageURLs) {
 		    $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
-#			Write-Warning "  ** <iconUrl> - uses a GitHub raw link."
 			Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
 		     Write-Warning "  ** <iconUrl> - uses a GitHub raw link. Please use a CDN such as:"
@@ -965,9 +974,8 @@ if (!($NuspecIconURL)) {
 		}
      if ($NuspecIconURL -match "cdn.rawgit.com"){
          if ($UpdateImageURLs) {
-		    $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
-#			Write-Warning "  ** <iconUrl> - uses RawGit which will be going offline October 2019."
-			Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
+		     $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
+			 Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
 		     Write-Warning "  ** <iconUrl> - uses RawGit which will be going offline October 2019. Please change to a CDN such as:"
              Write-Host "           ** $CDNlist" -Foreground Cyan
@@ -1085,7 +1093,8 @@ if (!$NuspecProjectSourceURL) {
 	
 # <projectUrl> checks
 if (!($NuspecProjectURL)) {
-    Write-Host "           ** <projectUrl> - element is empty." -Foreground Red
+    Write-Host "           ** <projectUrl> - element is empty. This will trigger a message from the verifier:" -Foreground Red
+    Write-Host "           ** Requirement: ProjectUrl (projectUrl) in the nuspec file is required. Please add it to the nuspec." -Foreground Cyan
 	$GLOBAL:Required++
    } else {
      if ($NuspecProjectURL -cmatch "REMOVE"){
@@ -1118,7 +1127,7 @@ if (!($NuspecReleaseNotes)) {
 
 # <requireLicenseAcceptance> checks
 if (!($NuspecRequireLicenseAcceptance)) {
-    Write-Warning "  ** <requireLicenseAcceptance> - (FYI) element is empty."
+    Write-Warning "  ** <requireLicenseAcceptance> - FYI: element is empty."
 	$GLOBAL:FYIs++
 	} else {
 	  if (($NuspecRequireLicenseAcceptance -eq "true") -and (!($NuspecLicenseURL))) {
@@ -1150,7 +1159,7 @@ if (!($NuspecTags)) {
 		 $GLOBAL:Required++
 		}
 	  if ($NuspecTags -match "admin"){
-         Write-Warning "  ** <tags> - (FYI) there is a tag named ""admin"" which is now deemed unnecessary."
+         Write-Warning "  ** <tags> - FYI: there is a tag named ""admin"" which is now deemed unnecessary."
          Write-Host '           ** The majority of Chocolatey packages require admin rights to install, this is considered default behavior.' -Foreground Cyan
 		 $GLOBAL:FYIs++
 		}	
@@ -1204,10 +1213,14 @@ if (!($NuspecVersion)) {
 #    + FullyQualifiedErrorId : MethodNotFound,Microsoft.PowerShell.Commands.ForEachObjectCommand
 
 # check PowerShell script files, out of scope, but nice to have
+# This should probably be broken down into small functions
 Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
+if ($debug){
+write-host "PATH = $path" -foreground red -background white
+write-host "FOREACH = $_" -foreground red -background white
+}
 		  $ScriptFile=(Get-Item $_).Name
 		  $ScriptFile=$ScriptFile.toupper()
-		  if ($Debug){Write-Host ScriptFile = $_ -Foreground Red -Background White}
           $HasPS1EAP=Check-PS1EAP $_ 
 		  if (!$HasPS1EAP){
                Add-PS1EAP $_
@@ -1229,6 +1242,19 @@ Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
 		      Write-Host "           ** $ScriptFile - has PowerShell syntax errors." -Foreground Red
 			  $GLOBAL:Required++
 			 }
+          if ($_ -match "install"){
+              $count=0
+              $InstallScript=Get-Content $_
+              $urlsfound = @()
+              $InstallScript | foreach-object {
+                 if ($_ -match "\b(?:(?:https?|ftp|file)://|www\.|ftp\.)(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[A-Z0-9+&@#/%=~_|$])"){
+                   $urlsfound += $matches[0]
+	               $validateurl=$urlsfound[$count]
+                   Validate-URL "$ScriptFile" "$validateurl"
+	               $count++
+                  }
+              }
+          }
 }
 
 # SourceForge DL link check
@@ -1250,7 +1276,7 @@ Write-Host "$GLOBAL:Required REQUIRED changes, " -NoNewLine -Foreground Red
 Write-Host "$GLOBAL:Guidelines GUIDELINE changes, " -NoNewLine -Foreground Yellow
 Write-Host "$GLOBAL:Suggestions SUGGESTED changes, " -NoNewLine -Foreground Yellow
 Write-Host "$GLOBAL:Notes NOTES, " -NoNewLine -Foreground Yellow
-Write-Host "$GLOBAL:FYIs FYIs " -NoNewLine -Foreground Yellow
+Write-Host "$GLOBAL:FYIs FYIs, " -NoNewLine -Foreground Yellow
 Write-Host "and made $GLOBAL:Fixes changes." -ForeGround Green
 
 if ($GLOBAL:UpdateNuspec) {
@@ -1281,4 +1307,8 @@ return
 # MAYBE check http links to see if https links are available and report if so - low priority
 # MAYBE check $nuspecFile.package.xmlns and re-write if old (not sure if this is a good idea)
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
+# https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded
+# https://github.com/chocolatey/package-validator/wiki/InstallScriptNamedCorrectly
+# https://github.com/chocolatey/package-validator/wiki/ScriptsDoNotContainChocoCommands
+# https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
 # What else?
