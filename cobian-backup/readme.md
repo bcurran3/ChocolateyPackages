@@ -1,3 +1,5 @@
+* For unattended install this program has to have a hard-coded installation path. I used a default of C:\Program Files\Cobian Backup 11. If your Windows System Drive is not C:, don't use this package, download and install it manually.
+
 ***
 
 Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
