@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-advanced-monitoring-agent</id>
     <title>Solarwinds MSP Advanced Monitoring Agent (Install)</title>
-    <version>10.7.12</version>
+    <version>10.7.13</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-advanced-monitoring-agent</packageSourceUrl>
@@ -14,7 +14,7 @@
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-advanced-monitoring-agent/solarwinds-advanced-monitoring-agent_icon.png</iconUrl>
-	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Advanced Monitoring Agent Software for SolarWinds MSP</summary>
     <description>
 ***
@@ -46,8 +46,8 @@ Check out our advanced monitoring agent software for yourself by signing up for 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
-    <releaseNotes>https://dashboard.systemmonitor.us/help/default.php?key=agentreleasenotes/</releaseNotes>
-      </metadata>
+    <releaseNotes>https://dashboard.systemmonitor.us/help/default.php?key=agentreleasenotes</releaseNotes>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
