@@ -1,4 +1,5 @@
-﻿$packageName  = 'tageditor' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'tageditor' 
 $shortcutName = 'Tag Editor.lnk'
 
 remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
