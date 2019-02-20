@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-backup-manager</id>
     <title>SolarWinds Backup Manager (Install)</title>
-    <version>18.12.0.183552</version>
+    <version>18.12.0.190420</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-backup-manager</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-backup-manager</packageSourceUrl>
     <projectUrl>https://www.solarwindsmsp.com/products/remote-management/backup-and-recovery</projectUrl>
     <docsUrl>http://help.solarwinds.com/backup/documentation/Content/backup-manager/backup-manager-installation/ui-installer.htm</docsUrl>
     <tags>solarwinds solarwindsmsp msp backup manager</tags>
@@ -15,7 +15,7 @@
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-backup-manager/solarwinds-backup-manager_icon.png</iconUrl>
-	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Protect Your Users’ Data with Sophisticated Backup and Rapid Disaster Recovery</summary>
     <description>
 ***
@@ -60,7 +60,7 @@ SolarWinds® Remote Monitoring &amp; Management provides a hybrid cloud backup a
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
-	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>	
+    <releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
