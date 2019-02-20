@@ -1,8 +1,9 @@
-﻿$packageName    = 'solarwinds-advanced-monitoring-agent'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'solarwinds-advanced-monitoring-agent'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$CurrentVersion = ($env:ChocolateyPackageVersion -replace '[.]','_')
+$CurrentVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','_')
 $url            = "https://rm-downloads-us.logicnow.com/AGENT_$CurrentVersion.ZIP"
-$checksum       = '7A15778D232FE3B5CF10D1E409FFFE19C0849100FEB056B808E5F81CE10D3167'
+$checksum       = '80D2A60545C1FF72215F0B890B2958B04C9BF1C7DE83EAFDA4D41606BC26CDBA'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -25,5 +26,5 @@ $packageArgs = @{
   
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item "$toolsDir\*.zip" | out-null
-Remove-Item "$toolsDir\*.exe" | out-null
+Remove-Item "$toolsDir\*.zip" | Out-Null
+Remove-Item "$toolsDir\*.exe" | Out-Null
