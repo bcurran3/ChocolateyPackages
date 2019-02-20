@@ -1,13 +1,23 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>cobian-backup</id>
     <title>Cobian Backup 11 (Gravity) (Install)</title>
-    <version>11.2.0.582</version>
+    <version>11.2.0.582001</version>
     <authors>Luis Cobian</authors>
     <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/cobian-backup</packageSourceUrl>
     <summary>Cobian Backup is a multi-threaded program that can be used to schedule and backup your files and directories from their original location to other directories/drives in the same computer or other computer in your network. FTP backup is also supported in both directions (download and upload).</summary>
     <description>
+---
+
+[choco://cobian-backup](choco://cobian-backup)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+(Program version 11.2.0.582, Chocolatey package version 11.2.0.582001)
+
 ![Screenshot of Cobian Backup 11 Gravity](http://www.bleepstatic.com/tutorials/cobian/cobian-backup-main-screen.jpg)
 
 Cobian Backup is a multi-threaded program that can be used to schedule and backup your files and directories from their original location to other directories/drives in the same computer or other computer in your network. FTP backup is also supported in both directions (download and upload).
@@ -15,21 +25,33 @@ Cobian Backup is a multi-threaded program that can be used to schedule and backu
 Cobian Backup exists in two different versions: application and service. The program uses very few resources and can be running on the background on your system, checking your backup schedule and executing your backups when necessary.
 
 Cobian Backup is not an usual backup application: it only copies your files and folders in original or compressed mode to other destination, creating a security copy as a result. So Cobian Backup can be better described as a "Scheduler for security copies". Cobian Backup supports several methods of compression and strong encryption.
-####PACKAGING NOTES: This is a pseudo-silent install. You will see window dialogue boxes pop up and subsequently go away. There is no silent uninstall, use the Control Panel. This program is (has to be) hardcoded to an install path of C:\Program Files\Cobian Backup 11. If your Windows System Drive is not C:, don't use this package.
-    </description>
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/cobian-backup/readme.md)**
+
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <projectUrl>http://www.cobiansoft.com/cobianbackup.htm</projectUrl>
-    <tags>cobian backup gravity sync admin</tags>
+    <tags>cobian backup gravity sync notsilent freeware</tags>
     <licenseUrl>http://www.cobiansoft.com/cobianbackup.htm</licenseUrl>
-    <copyright>� 2000-2012 Luis Cobian, CobianSoft</copyright>
+    <copyright>(C) Luis Cobian, CobianSoft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.cobiansoft.com/images/Gravity.jpg</iconUrl>
-    <mailingListUrl>http://forum.cobiansoft.com/forum/</mailingListUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/cobian-backup/cobian-backup_icon.png</iconUrl>
+    <mailingListUrl>https://forum.cobiansoft.com/</mailingListUrl>
     <bugTrackerUrl>http://www.cobiansoft.com/cbhistory.htm</bugTrackerUrl>
     <docsUrl>http://www.cobiansoft.com/cobianbackup_faq.htm</docsUrl>
     <dependencies>
-      <dependency id="dotnet3.5" />	
-    </dependencies>	
-    <releaseNotes></releaseNotes>
+      <dependency id="dotnet3.5" />
+    </dependencies>
+    <releaseNotes>https://www.cobiansoft.com/news.html</releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
-
