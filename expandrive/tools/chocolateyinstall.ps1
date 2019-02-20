@@ -1,6 +1,7 @@
-﻿$packageName   = 'expandrive' 
-$url           = 'https://expandrive.s3.amazonaws.com/expandrive_win/v6-3-0_published_2018-11-02_at_17_00_12/ExpanDrive_Setup_6.3.0.exe' 
-$checksum      = '3799BEA249E9AC91263AF5AA3F469FD0A8D6BC038E62A3B5AA1C4D1FF34A7432'
+﻿$ErrorActionPreference = 'Stop'
+$packageName   = 'expandrive' 
+$url           = 'https://secure.expandrive.com/expandrive/download_win' 
+$checksum      = '313911494D303BD530CBE8C1ADA145D562B8B60A6368908D0B846DB410432DFD'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -13,7 +14,8 @@ $packageArgs = @{
   checksumType  = 'sha256' 
 }
 
-#Start-CheckandStop "ExpanDrive"
+Start-CheckandStop "ExpanDrive"
 Install-ChocolateyPackage @packageArgs
-#Start-Sleep -s 10
-#if (!($ProcessWasRunning -eq "True")) {Start-CheckandStop "ExpanDrive"}
+Sleep 5
+if ($GLOBAL:ProcessWasRunning -eq $False) {Start-CheckandStop "ExpanDrive"}
+# ^ doesn't necessary work in this case
