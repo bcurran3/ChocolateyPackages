@@ -1,25 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tageditor</id>
-    <version>3.1.2</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tageditor</packageSourceUrl>	
+    <version>3.2.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tageditor</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Tag Editor (Portable)</title>
     <authors>Martchus</authors>
     <projectUrl>https://github.com/Martchus/tageditor</projectUrl>
-	<projectSourceUrl>https://github.com/Martchus/tageditor/releases</projectSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/Martchus/tageditor/master/resources/icons/hicolor/128x128/apps/tageditor.png</iconUrl>
+    <projectSourceUrl>https://github.com/Martchus/tageditor/releases</projectSourceUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/Martchus/tageditor/master/resources/icons/hicolor/128x128/apps/tageditor.png</iconUrl>
     <copyright></copyright>
-	<licenseUrl>https://cdn.rawgit.com/Martchus/tageditor/b19a210f/LICENSE</licenseUrl>
+    <licenseUrl>https://cdn.rawgit.com/Martchus/tageditor/b19a210f/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>https://github.com/Martchus/tageditor/issues</bugTrackerUrl>
-	<docsUrl>https://github.com/Martchus/tageditor/blob/master/README.md</docsUrl>
+    <docsUrl>https://github.com/Martchus/tageditor/blob/master/README.md</docsUrl>
     <tags>martchus tagedior mp4 aac flac vorbis id3 qt-gui opus matroska foss cross-platform binary portable</tags>
     <summary>A tag editor with Qt GUI and command-line interface supporting MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska</summary>
     <description>
-![Screenshot of Tag Editor](https://cdn.rawgit.com/Martchus/tageditor/b19a210f/resources/screenshots/mainwindow.png?raw=true)	
+---
+
+[choco://tageditor](choco://tageditor)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of Tag Editor](https://cdn.staticaly.com/gh/Martchus/tageditor/b19a210f/resources/screenshots/mainwindow.png)	
 A tag editor with Qt GUI and command-line interface. Supports MP4 (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.
 
 ###Supported formats
@@ -44,7 +51,8 @@ It also allows to inspect and validate the element structure of MP4 and Matroska
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
-	</description>
+	
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
