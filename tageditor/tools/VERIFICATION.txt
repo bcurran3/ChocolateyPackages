@@ -1,8 +1,9 @@
 ==================== Tag Editor ====================
 
-BCURRAN3 download and packaged the enclosed tar (ZIP) file from:
+BCURRAN3 downloaded and packaged the enclosed tar (ZIP) file from:
 https://github.com/Martchus/tageditor/releases
-The original file mingw-w64-tageditor-static-3.1.2-1-any.pkg.tar.xz was extracted using WinRAR as the version of 7Zip that comes with Chocolatey could not extract it. A few build files were deleted.
+
+The original file mingw-w64-tageditor-static-version-any.pkg.tar.xz was extracted using WinRAR as the version of 7Zip that comes with Chocolatey could not extract it. A few build files were deleted.
 
 ==================== Tag Editor ====================
 
