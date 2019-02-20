@@ -1,25 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>homeassistant</id>
-    <version>0.74.1</version>
+    <version>0.87.1</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homeassistant</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homeassistant</packageSourceUrl>
     <title>Home Assistant (Install)</title>
     <authors>Home Assistant</authors>
     <projectUrl>https://www.home-assistant.io/</projectUrl>
-	<projectSourceUrl>https://github.com/home-assistant/home-assistant</projectSourceUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/homeassistant/homeassistant_icon.png</iconUrl>	
+    <projectSourceUrl>https://github.com/home-assistant/home-assistant</projectSourceUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/homeassistant/homeassistant_icon.png</iconUrl>
     <copyright>Copyright © Home Assistant</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<licenseUrl>https://github.com/home-assistant/home-assistant/blob/dev/LICENSE.md</licenseUrl>
+    <licenseUrl>https://github.com/home-assistant/home-assistant/blob/dev/LICENSE.md</licenseUrl>
     <docsUrl>https://www.home-assistant.io/docs/</docsUrl>
     <bugTrackerUrl>https://github.com/home-assistant/home-assistant/issues</bugTrackerUrl>
-	<mailingListUrl>https://community.home-assistant.io/</mailingListUrl>	
+    <mailingListUrl>https://community.home-assistant.io/</mailingListUrl>
     <tags>homeassistant python home automation</tags>
     <summary>Home Assistant - Open-source home automation platform running on Python 3</summary>
     <description>
+---
+
+[choco://homeassistant](choco://homeassistant)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 Awaken your home
 
 Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
@@ -53,11 +60,19 @@ Home Assistant in the press:
 * [WIRED.com](https://www.wired.com/2016/07/now-can-hide-smart-home-darknet/)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/homeassistant/readme.md)**
-	</description>
-    <releaseNotes>https://www.home-assistant.io/blog/2018/07/20/release-74/#release-0741---july-24</releaseNotes>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://www.home-assistant.io/blog/2019/02/06/release-87/</releaseNotes>
     <dependencies>
       <dependency id="python3" version="3.6.0" />
-    </dependencies>	
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

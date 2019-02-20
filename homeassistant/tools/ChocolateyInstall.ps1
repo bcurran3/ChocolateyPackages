@@ -3,11 +3,20 @@ $packageName  = 'homeassistant'
 $shortcutName = 'Home Assitant.lnk'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
+$PythonPackages=&pip3 list
+
+if ($PythonPackages -match "homeassistant"){
+# Home Assistant normal upgrade
+    pip3 install --upgrade homeassistant==$ENV:ChocolateyPackageVersion
+	Write-Host "  ** You need to stop and restart HASS for changes to take effect." -Foreground Magenta
+  } else {
 # Home Assistant normal install
-pip3 install homeassistant
+    pip3 install homeassistant==$ENV:ChocolateyPackageVersion
+}
 
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath 'py' -Arguments '-m homeassistant --open-ui' -IconLocation "$toolsDir\homeassistant.ico" -RunAsAdmin
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath 'py' -Arguments '-m homeassistant --open-ui' -IconLocation "$toolsDir\homeassistant.ico" -RunAsAdmin
+Write-Host " ** ""WARNING: 'py' does not exist. If it is not created the shortcut will not be valid."" can be ignored if Python is in your path." -Foreground Magenta
 
 # REFERENCE
 # Home Assistant run command
