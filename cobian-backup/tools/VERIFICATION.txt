@@ -4,4 +4,6 @@ BCURRAN3 downloaded and packaged the installer for this program from the author'
 https://files.cobiansoft.com/programs/cbSetup.exe
 (formerly https://files.cobiansoft.com/programz/cbSetup.exe)
 
+cbSetup.exe SHA256 = 9EC08D76E4B810DE2C3CBC7BD90787CC462DEB0ACCC6996CAB2394AB261C7154
+
 ==================== Cobian Backup ====================
