@@ -20,7 +20,7 @@
     <description>
 ---
 
-[choco://8gadgetpack](choco://8gadgetpack)
+###[choco://8gadgetpack](choco://8gadgetpack)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
