@@ -1,23 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8gadgetpack</id>
-    <version>26.0</version>
+    <version>28.0</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8gadgetpack</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8gadgetpack</packageSourceUrl>
     <title>8GadgetPack (Install)</title>
     <authors>Helmut Buhler</authors>
     <projectUrl>http://8gadgetpack.net/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/8gadgetpack/8GadgetPack_icon.png</iconUrl>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8gadgetpack/8gadgetpack_icon.png</iconUrl>
     <copyright>Copyright © Helmut Buhler</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://8gadgetpack.net/index.html#Howto</docsUrl>
     <bugTrackerUrl>http://8gadgetpack.net/index.html#Versionhistory</bugTrackerUrl>
-	<mailingListUrl>http://8gadgetpack.net/newsletter-v1/subscribe.php</mailingListUrl>	
+    <mailingListUrl>https://twitter.com/8gadgetpack</mailingListUrl>
     <tags>8gadgetpack windows gadgets sidebar</tags>
     <summary>8GadgetPack brings gadgets back in Windows 10 / 8.1 / 8</summary>
     <description>
+---
+
+[choco://8gadgetpack](choco://8gadgetpack)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of 9GadgetPack](http://8gadgetpack.net/Screen8GP.jpg)
 
 ###About 8GadgetPack
@@ -55,11 +62,15 @@ This is actually just a gadget to help you keeping the gadgets organized and vis
 (more on website)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8gadgetpack/readme.md)**
+	
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-	</description>
+
+---
+
+</description>
     <releaseNotes>http://8gadgetpack.net/index.html#Versionhistory</releaseNotes>
   </metadata>
   <files>
