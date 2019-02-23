@@ -1,7 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the .MSI file via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* I used to use 8x8 hosted VOIP for two businesses. I have clients that use it and are 100% happy. It's a great VOIP phone service. I switched to cell phones only because I got an offer that I couldn't refuse. If you read this and choose to use 8x8 - mention me, Bill Curran, and I get a referral kickback from them. :) TIA!
+* Virtual Office Desktop requires (as of June 2018?) TLS 1.1/1.2 to connect to the 8x8 server (sso.8x8.com) - make sure TLS 1.1 + 1.2 are checked in Control Panel/Internet Options/Advanced/Security - otherwise you'll get errors connecting to the server.
+* I used to use 8x8 hosted VOIP for two businesses. I have clients that use it and are 100% happy. It's a great VOIP phone service. I switched exclusively to cell phones only because I got an offer that I couldn't refuse. If you read this and choose to use 8x8 - please mention me, Bill Curran. I'm a referral partner and get paid for referring new clients. :) TIA!
 
 ***
 
