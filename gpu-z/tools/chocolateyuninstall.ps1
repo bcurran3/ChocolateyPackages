@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName='gpu-z' 
 
 remove-item "$ENV:Public\Desktop\GPU-Z.lnk" -Force -ErrorAction SilentlyContinue

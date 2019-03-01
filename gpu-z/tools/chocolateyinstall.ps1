@@ -1,4 +1,5 @@
-﻿#https://www.techpowerup.com/download/techpowerup-gpu-z/
+﻿$ErrorActionPreference = 'Stop'
+#https://www.techpowerup.com/download/techpowerup-gpu-z/
 $packageName = 'gpu-z'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $PortableEXE = "$toolsDir\GPU-Z.$env:packageVersion.exe"
