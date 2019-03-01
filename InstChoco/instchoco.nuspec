@@ -8,19 +8,19 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
     <title>(unofficial) InstChoco (Portable)</title>
     <authors>Bill Curran</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</projectUrl>
+    <projectUrl>http://lacomputerbuddy.com/InstChoco/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <copyright>Copyright 2017-2019 Bill Curran</copyright>
     <licenseUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>bcurran3 instchoco choco chocolatey unofficial installer portable</tags>
+    <tags>bcurran3 instchoco choco chocolatey unofficial installer binary portable</tags>
     <summary>InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!</summary>
     <description>
 ***
 
-**[choco://instchoco](choco://instchoco)**  
+###**[choco://instchoco](choco://instchoco)**  
 **To use choco:// protocol URLs, install [(unofficial) choco:// protocol support ](https://chocolatey.org/packages/choco-protocol-support)**
 
 ***
@@ -33,7 +33,9 @@
 
 ##ANSWER: You need InstChoco for the NEXT time you want to install Chocolatey and automate package (re)installation!
 
-**InstChoco** is the evolution of an old batch file I used over the years to automate installing Chocolatey followed by a bunch of "choco install program -y" commands to install my standard set of packages. I eventually decided to make it a program with additional features. I also integrated with other Chocolatey packages I've created. What you see now is the culmination of many long hard hours of work. I think **InstChoco** is the best it can be, but I'm always open to new features. Feel free to contact me with feedback. You can find **InstChoco.exe** in \ProgramData\chocolatey\lib\instchoco\tools. If you don't already have Chocolatey installed you can download **InstChoco** from [SOFTPEDIA](http://www.softpedia.com/get/System/System-Miscellaneous/InstChoco.shtml), [CNET's Download.com](https://download.cnet.com/InstChoco/3000-2094_4-77751542.html), or [directly from my GitHub repo](https://github.com/bcurran3/ChocolateyPackages/raw/master/InstChoco/tools/InstChoco.exe).
+**InstChoco** is the evolution of an old batch file I’ve used over the years to automate installing Chocolatey followed by a bunch of "choco install packagename -y" commands to install my standard toolset of programs. In 2017 I turned that old batch file into a program with many additional features. Thus, **InstChoco** was born. I also integrated **InstChoco** with other Chocolatey packages I've created. **InstChoco** is especially useful when used along with [Choco Package List Backup to Local and Cloud](https://chocolatey.org/packages/choco-package-list-backup). What you see now is the culmination of many long hard hours of work making **InstChoco** the ULTIMATE Chocolatey and Chocolatey packages (re)installer! **InstChoco** is extremely feature rich, but I'm always open to new ideas and features. Feel free to [contact me](https://chocolatey.org/packages/InstChoco/ContactOwners) with feedback or suggestions.
+
+To download **InstChoco** directly, click [here](http://lacomputerbuddy.com/InstChoco/InstChoco.exe).
 
 ###FEATURES:
 

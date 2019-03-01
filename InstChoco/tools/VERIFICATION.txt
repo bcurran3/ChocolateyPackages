@@ -2,6 +2,9 @@
 
 This InstChoco Chocolatey package was uploaded by the author, Bill Curran aka BCURRAN3.
 
+The original file can be downloaded and verified via it's product page at:
+http://lacomputerbuddy.com/InstChoco/
+
 v2.10 sha256: C3021264215BBE9FC43148F3249D9D96F8E406800A7844189E96D6F526DD09E5
 v2.02 sha256: 811FBE3BD37F40A4253B2D54DD940C9B67F321B94240FC82E63DA37728097E46
 v2.01 sha256: 3E89A851FB69070D09D80CF409C45612CE7678221ADE6AA248844C599D347256
