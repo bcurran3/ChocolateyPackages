@@ -1,4 +1,4 @@
-# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
+﻿# chocolatey-preinstaller-checks.extension v0.0.2 by Bill Curran AKA BCURRAN3 - 2018 Copyleft Bill Curran
 # Get-PendingRebootStatus.ps1 - warns if Windows has a pending reboot
 # See/Edit Chocolatey-Preinstaller-Checks.xml for options
 # If this extension stops your packages from becoming lost and unmanaged, consider becoming a patron of me at https://www.patreon.com/bcurran3 :)

@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿#$ErrorActionPreference = 'Stop'
 $packageName      = 'choco-package-list-backup'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $Date             = Get-Date -UFormat %Y-%m-%d

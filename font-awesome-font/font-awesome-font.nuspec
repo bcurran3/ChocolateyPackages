@@ -1,26 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>font-awesome-font</id>
     <version>5.1.1.0020180724</version>
-    <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/font-awesome-font</packageSourceUrl>
     <title>Font Awesome (Font) (Install)</title>
     <authors>Dave Gandy</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>http://fontawesome.io/license/</licenseUrl>
     <projectUrl>http://fontawesome.io/</projectUrl>
     <iconUrl>http://urbildpunkt.com/ghostwire/content/images/2013/Dec/font_awesome.png</iconUrl>
-    <licenseUrl>http://fontawesome.io/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/FortAwesome/Font-Awesome</projectSourceUrl>
-    <docsUrl>http://fontawesome.io/get-started/</docsUrl>
-    <mailingListUrl>http://fontawesome.io/community/</mailingListUrl>
-    <bugTrackerUrl>https://github.com/FortAwesome/Font-Awesome/issues</bugTrackerUrl>
-    <tags>font awesome otf opentype</tags>
-    <summary>Font Awesome - The iconic font and CSS framework</summary>
-    <description>
-
-Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.
+    <description>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.
 
 ###One Font, 675 Icons
 
@@ -62,14 +52,17 @@ Font Awesome loves screen readers and helps make your icons accessible on the we
 
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
-    <releaseNotes>https://fontawesome.com/changelog/latest</releaseNotes>	
+***</description>
+    <summary>Font Awesome - The iconic font and CSS framework</summary>
+    <releaseNotes>https://fontawesome.com/changelog/latest</releaseNotes>
+    <tags>font awesome otf opentype</tags>
+    <projectSourceUrl>https://github.com/FortAwesome/Font-Awesome</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/font-awesome-font</packageSourceUrl>
+    <docsUrl>http://fontawesome.io/get-started/</docsUrl>
+    <mailingListUrl>http://fontawesome.io/community/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/FortAwesome/Font-Awesome/issues</bugTrackerUrl>
     <dependencies>
-	  <dependency id="chocolatey-font-helpers.extension" version="0.0.1" />
-    </dependencies>		
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.1" />
+    </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
