@@ -9,7 +9,7 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.02.18 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2019.02.22 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
@@ -21,6 +21,7 @@ $CDNlist      = "https://www.staticaly.com, https://raw.githack.com, https://git
 $CNCHeader    = "$ENV:ChocolateyInstall\bin\CNCHeader.txt"
 $CNCFooter    = "$ENV:ChocolateyInstall\bin\CNCFooter.txt"
 $PNGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\PngOptimizerCL.exe)
+$OptimizeImages=$False
 $NewCDN       = "Staticly"
 $StaticlyCDN  = $True
 $GLOBAL:Required=0
@@ -55,8 +56,8 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
     Write-Host "   Displays $CNCFooter."	
 	Write-Host "-ShowHeader"
     Write-Host "   Displays $CNCHeader."
-	Write-Host "-OptimizePNGs"
-    Write-Host "   Runs PNGOptimizerCL on your PNG files."
+	Write-Host "-OptimizeImages, -OptimizePNGs"
+    Write-Host "   Runs PNGOptimizerCL on supported image files."
 	Write-Host "-Update"
     Write-Host "   Will re-write out your nuspec file; e.g. change to UTF-8 w/o BOM."
 	Write-Host "-UpdateAll"
@@ -78,7 +79,7 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
 	Write-Host "-WhatIf"
     Write-Host "   Test run, don't save changes."
 	Write-Host "To check all your packages' nuspec files: Change to the root directory of your packages and run (via PowerShell):" -Foreground Magenta
-	Write-Host '   Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Name;pause}}' -Foreground Magenta
+	Write-Host '   Get-ChildItem | ?{if ($_.PSIsContainer){cls;CNC $_.Fullname;pause}}' -Foreground Magenta
 	Write-Host "...but will give errors on PowerShell script checks." -Foreground Magenta
 	return
 }
@@ -152,11 +153,9 @@ if ($args -eq "-OpenURLs") {
      $OpenURLs=$False
 }
 
-if ($args -eq "-OptimizePNGs") {
-     $OptimizePNGs=$True
-   } else {
-     $OptimizePNGs=$False
-}
+if ($args -eq "-OptimizeImages") {$OptimizeImages=$True}
+
+if ($args -eq "-OptimizePNGs") {$OptimizeImages=$True}
 
 if ($args -eq "-UpdateImageURLs") {
      $UpdateImageURLs=$True
@@ -189,7 +188,7 @@ if ($args -eq "-Update") {
 if ($args -eq "-UpdateAll") {
      $UpdateAll=$True
 	 $UpdateImageURLs=$True
-	 $OptimizePNGs=$True
+	 $OptimizeImages=$True
 	 $UpdateScripts=$True
 	 $UpdateXMLComment=$True
 	 $UpdateXMLDeclaration=$True
@@ -286,6 +285,7 @@ $NuspecXMLComment = $nuspecFile.'#comment'
 
 $NuspecDisplayName=$LocalnuspecFile.Name
 $NuspecDisplayName=$NuspecDisplayName.ToUpper()
+$ENV:ChocolateyPackageVersion=$NuspecVersion
 
 # functions ------------------------------------------------------------------------------------------------
 
@@ -414,7 +414,7 @@ if (($url -match "http://") -or ($url -match "https://")){
 function Check-LicenseFile{
   $LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE* -Recurse)
   if ($LicenseFile){
-	  Write-Host '           ** Binary files - (FYI)'$LicenseFile.Name'file(s) found.' -Foreground Green
+	  Write-Host '           ** Binary files - FYI:'$LicenseFile.Name'file(s) found.' -Foreground Green
 	  $GLOBAL:FYIs++
 	 } else {
 	   Write-Host "           ** Binary files - LICENSE.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
@@ -427,7 +427,7 @@ function Check-LicenseFile{
 function Check-VerificationFile{
   $VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION* -Recurse)
   if ($VerificationFile){
-      Write-Host '           ** Binary files - (FYI)'$VerificationFile.Name'file(s) found.' -Foreground Green
+      Write-Host '           ** Binary files - FYI:'$VerificationFile.Name'file(s) found.' -Foreground Green
 	  $GLOBAL:FYIs++
 	} else {
 	  Write-Host "           ** Binary files - VERIFICATION.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
@@ -450,15 +450,24 @@ function Check-Binaries{
 
 # check for PNG files for possible optimization
 function Check-PNGs{
-  $PNGFiles=(Get-ChildItem -Path $path -Include *.PNG -Recurse)
-  if ($PNGFiles){
-      Write-Warning '  ** Binary files - FYI: PNG file(s) found.'
+  $ImageFiles=(Get-ChildItem -Path $path -Include *.PNG,*.BMP,*.GIF,*.TGA -Recurse)
+  if ($ImageFiles){
+      Write-Warning '  ** Binary files - FYI: PNG, BMP, GIF, or TGA image file(s) found.'
 	  $GLOBAL:FYIs++
-	  if (!$OptimizePNGs){
-	  Write-Host '           ** Suggestion: Consider running CNC -OptimizePNGs to optimize your PNG file(s).' -Foreground Cyan
+	  if (!$OptimizeImages){
+	  Write-Host '           ** Suggestion: Consider running CNC -OptimizeImages to optimize your image file(s).' -Foreground Cyan
 	  $GLOBAL:Suggestions++
 	 }
     }
+}
+
+#TDL
+function Check-PackageInternalFilesIncluded{
+#[Content_Types].xml
+#Files ending in .psmdcp
+#Files ending .rels
+#_rels directory and its contents
+#You have repackaged an existing package that you unpacked without removing some of the packaging files from the original.
 }
 
 # check if header template is already in the description
@@ -535,6 +544,19 @@ function Add-Footer{
     }
 }
 
+# Check package current status on chocolatey.org
+function Check-OnlineStatus{
+  $PackagePageInfo = Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID"
+  if ($PackagePageInfo -match "Package test results have failed"){
+	  Write-Host "           ** FYI: $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+	  $GLOBAL:FYIs++
+	 }
+  if ($PackagePageInfo -match "a trusted package"){
+	  Write-Host "           ** FYI: $NuspecID is a trusted package. (Congrats!)" -Foreground Green
+	  $GLOBAL:FYIs++
+	 }
+}
+
 # Open all .nuspec URLs for viewing
 function Open-URLs{
   if ($NuspecBugTrackerURL){&start $NuspecBugTrackerURL}
@@ -547,24 +569,26 @@ function Open-URLs{
   if ($NuspecProjectURL){&start $NuspecProjectURL}
 }
 
-# Run PNGOptimizerCL on PNG files
+# Run PNGOptimizerCL on supported image files
 function Run-PNGOptimizer{
-  if ($OptimizePNGs){
+  if ($OptimizeImages){
   if (!$PNGOptimizer){
-      Write-Warning "  ** -OptimizePNGs parameter given but PNGOptimizerCL.exe not found."
+      Write-Warning "  ** -OptimizeImages parameter given but PNGOptimizerCL.exe not found."
 	  Write-Host "           ** Run choco install pngoptimizer.commandline first to use this feature." -Foreground Cyan
 	  return
      }
-  $PNGFiles=(Get-ChildItem -Path $path -Include *.PNG -Recurse)
-  if ($PNGFiles -and $PNGOptimizer){
-      Write-Host "           ** Running PNGOptimzerCL on PNG files." -Foreground Green
+  $ImageFiles=(Get-ChildItem -Path $path -Include *.PNG,*.BMP,*.GIF,*.TGA -Recurse)
+  if ($ImageFiles -and $PNGOptimizer){
+      Write-Host "           ** Running PNGOptimzerCL on supported image files." -Foreground Green
 	  if ($WhatIf){
-          Write-Host "CNC did NOT optimize your PNG files, -WhatIf parameter was used." -Foreground Magenta
+          Write-Host "CNC did NOT optimize your image files, -WhatIf parameter was used." -Foreground Magenta
 	    } else {
-# need to strip trailing \ ?
-          Get-ChildItem $path\*.PNG -Recurse | % $_.file {& pngoptimizercl.exe -file:$_}
+          if ($MakeBackups){
+              &pngoptimizercl.exe -file:""$path/"" -recurs -BackupOldPngFiles
+		  } else {
+            &pngoptimizercl.exe -file:""$path/"" -recurs
+		  }
 		  $GLOBAL:Fixes++
-#		 &PngOptimizerCL.exe -file:$path\*.png -recurs #| Out-Null
 		 }
   }
  }
@@ -690,12 +714,17 @@ function Update-PS1($ScriptFile){
 }
 
 # Check chocolateyInstall.ps1 for SourceForge download links
-function Check-SourceForge{
+function Check-DiscouragedDownloadLinks{
 if (Test-Path $path\tools\chocolateyInstall.ps1){
    $test=Get-Content $path\tools\chocolateyInstall.ps1
     if ($test -match "sourceforge"){
         Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses SourceForge as download source. This will trigger a message from the verifier:"
 	    Write-Host "           ** Guideline: Using SourceForge as the download source of installers is not recommended. Please consider an`n              alternative, official distribution location if one is available." -Foreground Cyan
+	    $GLOBAL:Guidelines++
+       }
+    if ($test -match "fosshub"){
+        Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses FossHub as download source."
+	    Write-Host "           ** Guideline: In Dec. 2016 FossHub requested ""Please help us keep our costs down by not using scripts`n              to download software from our site.""" -Foreground Cyan
 	    $GLOBAL:Guidelines++
        }
   }
@@ -712,6 +741,9 @@ if ($OpenURLs) {
 	
 # checks ------------------------------------------------------------------------------------------------
 
+# Trusted package check
+Check-OnlineStatus
+
 # check for UTF8 encoding
 # UTF-8 w/BOM is not desired per "You must save your files with UTF–8 character encoding without BOM."
 $NuspecEncoding=(Get-FileEncoding -Path $LocalnuspecFile)
@@ -723,7 +755,7 @@ if ($NuspecEncoding -ne 'ASCII or UTF-8 w/o BOM'){
 		 } else {
 		   Write-Host "           ** Guideline: You must save your files with UTF–8 character encoding without BOM." -Foreground Cyan
 		   $GLOBAL:Guidelines++
-		   Write-Host "           ** Suggestion: Consider running CNC -Update to re-write`n              $LocalnuspecFile to UTF-8 w/o BOM." -Foreground Cyan
+		   Write-Host "           ** Suggestion: Consider running CNC -Update to re-write`n              $NuspecDisplayName to UTF-8 w/o BOM." -Foreground Cyan
 		   $GLOBAL:Suggestions++
 	}
 }
@@ -861,6 +893,7 @@ if (!$NuspecDescription){
         }
      if ($NuspecDescription.Length -lt 30) {
 	     Write-Warning "  ** <description> - is less than 30 characters." 
+		 Write-Host "           ** Guideline: Description should be sufficient to explain the software. Please fill in the description`n              with more information about the software. Feel free to use use markdown." -Foreground Cyan
 		 $GLOBAL:Guidelines++
 		 }
      if ($NuspecDescription.Length -gt 4000) {
@@ -1257,8 +1290,8 @@ write-host "FOREACH = $_" -foreground red -background white
           }
 }
 
-# SourceForge DL link check
-Check-SourceForge
+# FossHub and SourceForge DL links check
+Check-DiscouragedDownloadLinks
 
 # Binaries checks
 Check-Binaries
@@ -1266,9 +1299,12 @@ Check-Binaries
 #PNG checks
 Check-PNGs
 
+# Check for Internal Packaging Files
+Check-PackageInternalFilesIncluded
+
 # Git 'er done ------------------------------------------------------------------------------------------------
 
-# Optimize any PNG files
+# Optimize any images files supported by PngOptimizerCL.exe
 Run-PNGOptimizer
 
 Write-Host "CNC found " -NoNewLine -Foreground Magenta
@@ -1293,13 +1329,15 @@ if ($UpdateScripts) {
    }
 }
 
+$ENV:ChocolateyPackageVersion=''
+
 Write-Host "`nFound CNC.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
 return
 
 # TDL
-#BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cd $_.Name;cnc;cd ..;pause}}
+#BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
 # check for &'s in links to change to &amp;
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # MAYBE redo file selection by filename instead of directory and implement a -Recurse option - medium low priority
@@ -1307,8 +1345,9 @@ return
 # MAYBE check http links to see if https links are available and report if so - low priority
 # MAYBE check $nuspecFile.package.xmlns and re-write if old (not sure if this is a good idea)
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
-# https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded
+# https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -setup
 # https://github.com/chocolatey/package-validator/wiki/InstallScriptNamedCorrectly
 # https://github.com/chocolatey/package-validator/wiki/ScriptsDoNotContainChocoCommands
 # https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
+# ADD a cumulative report of errors when run against all scripts
 # What else?
