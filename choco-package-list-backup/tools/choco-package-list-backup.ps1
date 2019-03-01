@@ -1,3 +1,4 @@
+﻿#$ErrorActionPreference = 'Stop'
 # choco-package-list-backup.ps1 (to local and cloud) by Bill Curran
 # I couldn't have done this without the list parsing from Ammaar Limbada found at https://gist.github.com/alimbada/449ddf65b4ef9752eff3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html

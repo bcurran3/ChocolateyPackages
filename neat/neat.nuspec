@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neat</packageSourceUrl>
     <title>Neat 5 for Windows (Install)</title>
     <authors>The Neat Company</authors>
-    <projectUrl>http://www.neat.com/support/windows-v5/</projectUrl>
+    <projectUrl>https://web.archive.org/web/20110612064526/http://neatco.com/products/neatdesk/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/neat/neat_icon.png</iconUrl>
     <copyright>The Neat Company</copyright>
     <licenseUrl>http://www.neat.com/policies/terms-and-conditions/</licenseUrl>

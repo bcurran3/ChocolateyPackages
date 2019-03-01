@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>plexpy</id>
+    <version>1.4.21.0020180402</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexpy</packageSourceUrl>	
+    <title>[Deprecated] PlexPy</title>
+    <authors>JohnyWong16</authors>
+    <projectUrl>https://jonnywong16.github.io/plexpy/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>plexpy plex pms python portable</tags>
+    <description>
+##This package has been deprecated and replaced by [Tautulli](https://chocolatey.org/packages/tautulli)
+	</description>
+    <dependencies>
+       <dependency id="tautulli" />
+    </dependencies>
+  </metadata>
+  <files />
+</package>

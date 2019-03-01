@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = '8x8virtualoffice'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://support.8x8.com/@api/deki/files/1947/VOD_5_9_0_20527.msi' 
-$checksum       = 'F6C2D3555834A41BB566D92297009589F28D71B0897B250F15C559EE570672A6'
+$url            = 'https://support.8x8.com/@api/deki/files/1947/VOD_6_0.msi'
+$checksum       = 'C38F76E90F385CA84AC7374EFEDA366406AEF716FE845FBB77A90DEA5DB93CFB'
 
 $packageArgs = @{
   packageName    = $packageName

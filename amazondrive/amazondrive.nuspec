@@ -51,6 +51,7 @@ ___</description>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazondrive</packageSourceUrl>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="dotnet4.6.1" />
     </dependencies>	
   </metadata>
   <files>

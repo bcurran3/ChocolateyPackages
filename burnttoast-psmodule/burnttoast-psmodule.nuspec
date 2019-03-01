@@ -1,23 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>burnttoast-psmodule</id>
-    <version>0.6.2</version>
+    <version>0.6.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/burnttoast-psmodule</packageSourceUrl>
     <title>BurntToast (Install)</title>
     <authors>Joshua King</authors>
     <projectUrl>https://github.com/Windos/BurntToast</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/Windos/BurntToast/52453f7a/Media/BurntToast-Wide.png</iconUrl>
+	<projectSourceUrl>https://github.com/Windos/BurntToast</projectSourceUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/Windos/BurntToast/52453f7a/Media/BurntToast-Wide.png</iconUrl>
     <copyright>Copyright (c) Joshua King</copyright>
-	<docsUrl>https://cdn.rawgit.com/Windos/BurntToast/52453f7a/README.md</docsUrl>
-	<bugTrackerUrl>https://github.com/Windos/BurntToast/issues</bugTrackerUrl>
+    <docsUrl>https://cdn.rawgit.com/Windos/BurntToast/52453f7a/README.md</docsUrl>
+    <bugTrackerUrl>https://github.com/Windos/BurntToast/issues</bugTrackerUrl>
     <licenseUrl>https://cdn.rawgit.com/Windos/BurntToast/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>jking burnttoast toast notifications windows10 utilities powershell</tags>
     <summary>This Windows PowerShell module contains VMware.PowerCLI</summary>
     <description>
+---
+
+[choco://burnttoast-psmodule](choco://burnttoast-psmodule)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ###PowerShell Module for displaying Windows 10 Toast Notifications
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/burnttoast-psmodule/readme.md)**
@@ -25,12 +33,13 @@
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
-	</description>
-	<releaseNotes>https://github.com/Windos/BurntToast</releaseNotes>
+	
+</description>
+    <releaseNotes>https://github.com/Windos/BurntToast</releaseNotes>
     <dependencies>
       <dependency id="powershell" version="5.0" />
-    </dependencies>	  
-  </metadata>	
+    </dependencies>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>

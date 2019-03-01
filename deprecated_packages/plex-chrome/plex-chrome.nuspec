@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>plex-chrome</id>
+    <title>[Deprecated] Plex for Chrome</title>    
+	<version>2.12.8.0020180103</version>
+    <authors>Plex, Inc.</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://forums.plex.tv/discussion/291086/chrome-web-store-announcement</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Plex Chrome extension</summary>	
+    <description>
+This package is deprecated. The Plex extension for Chrome has been removed from the Chrome Web Store. 
+
+You can read Plex's announcement here: https://forums.plex.tv/discussion/291086/chrome-web-store-announcement
+	</description>
+    <releaseNotes>https://forums.plex.tv/discussion/291086/chrome-web-store-announcement</releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>	
+    <tags>plex chrome extension</tags>
+  </metadata>
+</package>

@@ -2,12 +2,15 @@
 $packageName    = 'grub2win' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloads.sourceforge.net/project/grub2win/grub2win.zip'
-$checksum       = '059768A3A6C647EC4F0DB657FF6A2818821B1E3807C31ED2763E344682A4BDC1'
-$silentArgs     = 'setup'
-$validExitCodes = @(0)
-$fileLocation   = "$toolsDir\install\winsource\grub2win.exe"
+$checksum       = 'BC94542625D78312CB3C6C1B1EE5C9AD7800B142EF7517104FF9BC5FFF5531B0'
+$fileLocation   = "$toolsDir\setup.exe"
 $ahkExe         = 'AutoHotKey'
-$ahkFile        = "$toolsDir\g2winstall.ahk"
+
+if (Test-Path $env:SystemDrive\grub2){
+    $ahkFile = "$toolsDir\G2Wupgrade.ahk"
+  } else {
+    $ahkFile = "$toolsDir\G2Winstall.ahk"
+}
 
 $packageArgs = @{
   packageName   = $packageName
@@ -23,15 +26,15 @@ Install-ChocolateyZipPackage @packageArgs "/$bootType"
 Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'EXE'
-  file          = $fileLocation
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = 'grub2win*'
+  packageName    = $packageName
+  fileType       = 'EXE'
+  file           = $fileLocation
+  silentArgs     = 'setup'
+  validExitCodes = @(0)
+  softwareName   = 'grub2win*'
 }
  
 Install-ChocolateyInstallPackage @packageArgs
 
 Sleep 10
-Remove-Item "$toolsDir\install" -recurse | out-null
+Remove-Item $filelocation | Out-Null
