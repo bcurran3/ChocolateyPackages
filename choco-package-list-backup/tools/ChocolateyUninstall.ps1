@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿#$ErrorActionPreference = 'Stop'
 $packageName     = 'choco-package-list-backup' 
 $script          = 'choco-package-list-backup.ps1'
 $xml             = 'choco-package-list-backup.xml'

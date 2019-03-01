@@ -42,7 +42,7 @@
     <dependencies>
       <dependency id="dotnet4.5" />
       <dependency id="futuremark-systeminfo" version="5.1" />	  
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
   <files>

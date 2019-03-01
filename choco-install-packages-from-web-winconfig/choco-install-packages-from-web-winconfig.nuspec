@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-install-packages-from-web-winconfig</id>
-    <version>0.0.1</version>
+    <version>0.0.2</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</packageSourceUrl>
@@ -56,6 +56,9 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
     <releaseNotes>
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-install-packages-from-web-winconfig/readme.md)**	
 	</releaseNotes>
+    <dependencies>
+      <dependency id="sudo" version="1.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

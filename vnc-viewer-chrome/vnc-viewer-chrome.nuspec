@@ -1,12 +1,13 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
   <metadata>
     <id>vnc-viewer-chrome</id>
     <version>1.2.2.15132</version>
     <title>VNC® Viewer for Google Chrome™</title>
     <authors>RealVNC Limited</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/vnc%C2%AE-viewer-for-google-ch/iabmpiboiopbgfabjmgeedhcmjenhbla</projectUrl>
     <iconUrl>http://attach.en.miui.com/forum/201509/05/070938hw44240q4hb0wk90.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

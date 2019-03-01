@@ -1,19 +1,23 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>xmedia-recode</id>
-    <version>3.4.5.0</version>
+    <version>3.4.5.2</version>
     <title>XMedia Recode (Install)</title>
     <authors>Sebastian Dörfler</authors>
     <owners>angga, bcurran3</owners>
     <projectUrl>https://www.xmedia-recode.de/en/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/xmedia-recode/xmedia-recode_icon.png</iconUrl>
-	<bugTrackerUrl>https://www.xmedia-recode.de/en/impressum.html</bugTrackerUrl>
+    <bugTrackerUrl>https://www.xmedia-recode.de/en/impressum.html</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>***
-[choco://xmedia-recode](choco://xmedia-recode)
+    <description>
+---
+
+###[choco://xmedia-recode](choco://xmedia-recode)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
 
 ![XMedia Recode Screenshot](https://cdn.staticaly.com/gh/anggaaja/chocolatey/master/xmedia-recode/assets/xmedia-recodescreenshot.png)
 	
@@ -52,10 +56,15 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
 * Nvidia CUDA: Nvidia GPU driver 347.09 or higher
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/xmedia-recode/readme.md)**
+   
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***</description>
+
+---
+
+</description>
     <summary>XMedia Recode is a free All-In-One video converter and audio converter tool</summary>
     <releaseNotes>https://www.xmedia-recode.de/en/version.html</releaseNotes>
     <copyright>Copyright © Sebastian Dörfler</copyright>
@@ -65,5 +74,5 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>

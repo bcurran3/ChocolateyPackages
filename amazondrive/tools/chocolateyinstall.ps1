@@ -9,7 +9,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
   validExitCodes= @(0)
-  silentArgs    = "-q"
+  silentArgs    = "-quiet"
   softwareName  = 'Amazon Photos'
   checksum      = $checksum
   checksumType  = 'sha256' 
@@ -17,5 +17,5 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs  
 Start-Sleep -s 5
-Start-CheckandStop "amazondrive"
-Start-CheckandStop "amazonphotos"
+#Start-CheckandStop "amazondrive"
+Start-WaitandStop "amazonphotos"

@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName   = 'xmedia-recode'
 $TodaysVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','')
 $url           = "$toolsDir\XMediaRecode"+$TodaysVersion+"_setup.exe"
