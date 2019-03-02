@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>utorrent-webui</id>
+    <title>µTorrent WebUI</title>
+    <version>0.388</version>
+    <authors>BitTorrent, Inc.</authors>
+    <projectUrl>https://forum.utorrent.com/topic/49588-%C2%B5torrent-webui/</projectUrl>
+    <tags>utorrent webui</tags>
+    <copyright>Copyright © 2011, BitTorrent, Inc. All rights reserved.</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/utorrent-webui/utorrent-webui_icon.png</iconUrl>
+    <docsUrl>https://web.archive.org/web/20090315005437/http://www.utorrent.com:80/webui-guide.php</docsUrl>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent-webui</packageSourceUrl>
+    <summary>A web user interface to control uTorrent remotely.</summary>
+    <description>
+---
+
+###[choco://utorrent-webui](choco://utorrent-webui)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+	
+![Screenshot of uTorrent WebUI](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/utorrent-webui/utorrent-webui_screenshot.png)
+
+The Web UI is used to control µTorrent remotely via a modern web browser that supports AJAX.
+
+[SOFTPEDIA's review](https://www.softpedia.com/get/Internet/Remote-Utils/uTorrent-WebUI.shtml)
+[lifehacker's Remote control your torrents with uTorrent's WebUI](https://lifehacker.com/remote-control-your-torrents-with-utorrents-webui-260393)
+[How-To Geek's How to Remote Control uTorrent From Your Mobile Phone](https://www.howtogeek.com/100169/how-to-remote-control-utorrent-from-your-mobile-phone/)
+[HTPC Guides' Setup uTorrent Remote Access WebUI](https://www.htpcguides.com/setup-utorrent-remote-access-webui/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/utorrent-webui/readme.md)**
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <dependencies>
+      <dependency id="utorrent" version="3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
