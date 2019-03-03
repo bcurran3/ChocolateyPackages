@@ -2,9 +2,9 @@
 $packageName      = 'stinger' 
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url              = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger32.exe'
-$checksum         = '91479EB8601B4B224A99B5852F5B255AE79FC6AD5B9A30C8F96537E299373BB8'
+$checksum         = '869C42AA7DF3A2ADA782F978F6E32DB0C39B4B04DB4844E1615604BE8B634EA7'
 $url64            = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger64.exe'
-$checksum64       = 'D0269BB0C44318CAB252256A62C0518F476163C8308F41F92ED749DD159F763B'
+$checksum64       = '80579FD4DAD7478ABD87EABBBDA4EF0ECA3A858E5040200CC9813A1CCABD9891'
 $ExeFile32        = 'stinger32.exe'
 $ExeFile64        = 'stinger64.exe'
 $ShortcutName     = 'McAfee Stinger'
@@ -12,10 +12,10 @@ $bits             = Get-ProcessorBits
 
 if ($bits -eq 64)
    {
-    $installerPackage = Join-Path $toolsDir $ExeFile64
+    $installerPackage = "$toolsDir\$ExeFile64"
 	$ExeFile = $ExeFile64
    } else {
-    $installerPackage = Join-Path $toolsDir $ExeFile32
+    $installerPackage = "$toolsDir\$ExeFile32"
 	$ExeFile = $ExeFile32
  }
 

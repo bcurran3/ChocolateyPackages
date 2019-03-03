@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stinger</id>
-    <version>12.1.0.2997</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/stinger</packageSourceUrl>	
+    <version>12.1.0.3054</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/stinger</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>McAfee Stinger (Portable)</title>
     <authors>McAfee Labs</authors>
     <projectUrl>http://www.mcafee.com/us/downloads/free-tools/stinger.aspx</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/stinger/stinger_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/stinger/stinger_icon.png</iconUrl>
     <copyright>Copyright McAfee, Inc.</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.mcafee.com/us/downloads/free-tools/how-to-use-stinger.aspx</docsUrl>
@@ -17,10 +17,13 @@
     <tags>mcafee stinger virus removal tool portable</tags>
     <summary>McAfee Stinger is a standalone utility used to detect and remove specific viruses.</summary>
     <description>
-***	
-[choco://stinger](choco://stinger)
+---
+
+###[choco://stinger](choco://stinger)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
+
 	
 ![Screenshot of McAfee Stinger] (https://www.mcafee.com/enterprise/en-us/img/screenshots/stinger-2.png?updated)
 
@@ -30,10 +33,15 @@ Stinger now includes Real Protect - a real-time behavior detection technology th
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/stinger/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
     <releaseNotes>http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/Readme.txt</releaseNotes>
   </metadata>
   <files>
