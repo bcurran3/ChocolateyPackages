@@ -42,8 +42,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ###INSTRUCTIONS:
 * **CNC -help** for help with options and switches
 * Run **CNC** to check the .nuspec in your current directory, run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
-* To check all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($_.PSIsContainer){cls;CNC $_.Fullname;pause}}**
-* To update all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($_.PSIsContainer){cls;CNC $_.Fullname -UpdateAll;pause}}** (no clear screen or pausing)
+* To check all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cls;CNC $__.Fullname;pause}}**
+* To update all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cls;CNC $__.Fullname -UpdateAll;pause}}** (no clear screen or pausing)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
 
