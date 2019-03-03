@@ -17,6 +17,13 @@
     <tags>microsoft windows office iso admin</tags>
     <summary>Easily download Windows and Office disk images</summary>
     <description>
+---
+
+###[choco://windows-iso-downloader](choco://windows-iso-downloader)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 	
 ![screenshot of Microsoft Windows and Office ISO Download Tool](https://www.heidoc.net/joomla/images/microsoft/win-downloader.png)
 
@@ -26,7 +33,15 @@ In the past, Microsoft provided disk images for many of their products through t
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-iso-downloader/readme.md)**	
 
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <releaseNotes>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&amp;start=1</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.6.1" />
