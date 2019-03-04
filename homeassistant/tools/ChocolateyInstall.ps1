@@ -1,6 +1,6 @@
 ﻿#$ErrorActionPreference = 'Stop'
 $packageName  = 'homeassistant'
-$shortcutName = 'Home Assitant.lnk'
+$shortcutName = 'Home Assistant.lnk'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $PythonPackages=&pip3 list
@@ -16,7 +16,8 @@ if ($PythonPackages -match "homeassistant"){
 
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath 'py' -Arguments '-m homeassistant --open-ui' -IconLocation "$toolsDir\homeassistant.ico" -RunAsAdmin
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath 'py' -Arguments '-m homeassistant --open-ui' -IconLocation "$toolsDir\homeassistant.ico" -RunAsAdmin
-Write-Host " ** ""WARNING: 'py' does not exist. If it is not created the shortcut will not be valid."" can be ignored if Python is in your path." -Foreground Magenta
+
+Write-Host " ** ^^^ You can ignore the icon creation warnings if Python is in your path." -Foreground Magenta
 
 # REFERENCE
 # Home Assistant run command
