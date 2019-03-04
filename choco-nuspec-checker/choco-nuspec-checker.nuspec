@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2019.02.22</version>
+    <version>2019.03.04</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -53,6 +53,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <releaseNotes>
 ###CHANGELOG:
+* 2019.03.04 - now checks for msiexec calls in scripts, checks for correctly named install script, checks that install scripts don't use choco commands, checks the XML namespace/schema, cosmetic changes
 * 2019.02.22 - now notifies if the package is trusted and if the package is failing tests on chocolatey.org, -OptimizePNGs superseded by -OptimizeImages which will now optimize BMP, GIF, and TGA files as well as PNG files, added checking for FossHub download links in chocolateyInstall.ps1, more minor tweaks
 * 2019.02.18 - now checks download URLs in install scripts, minor message updates
 * 2019.02.16 - -UpdateScripts will re-write PowerShell scripts to UTF-8 w/BOM (even if EAP statement doesn't need to be added), now checks for and reports templated values, adding the XML UTF-8 check comment now implemented, more updates to summary, added checking for SourceForge download links in chocolateyInstall.ps1, -MakeBackups option to create *.CNC.bak files - this is a breaking change from v2019.01.29 where making backups was default, check for CDATA in description and parse it for problems but not change it when saving, some more tweaks that I forgot before writing this

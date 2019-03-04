@@ -9,7 +9,7 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.02.22 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2019.03.04 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
@@ -181,6 +181,12 @@ if ($args -eq "-UpdateXMLDeclaration") {
      $UpdateXMLDeclaration=$False
 }
 
+if ($args -eq "-UpdateXMLNamespace") {
+     $UpdateXMLns=$True
+   } else {
+     $UpdateXMLns=$False
+}
+
 if ($args -eq "-Update") {
 	 $GLOBAL:UpdateNuspec=$True
 }
@@ -192,6 +198,7 @@ if ($args -eq "-UpdateAll") {
 	 $UpdateScripts=$True
 	 $UpdateXMLComment=$True
 	 $UpdateXMLDeclaration=$True
+     $UpdateXMLns=$True
 	 $GLOBAL:AddPS1EAP=$True
 	 $GLOBAL:UpdateNuspec=$True
    } else {
@@ -282,6 +289,7 @@ $NuspecTags = $nuspecFile.package.metadata.tags
 $NuspecTitle = $nuspecFile.package.metadata.title
 $NuspecVersion = $nuspecFile.package.metadata.version
 $NuspecXMLComment = $nuspecFile.'#comment'
+$NuspecXMLNamespace = $nuspecFile.package.xmlns
 
 $NuspecDisplayName=$LocalnuspecFile.Name
 $NuspecDisplayName=$NuspecDisplayName.ToUpper()
@@ -414,10 +422,10 @@ if (($url -match "http://") -or ($url -match "https://")){
 function Check-LicenseFile{
   $LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE* -Recurse)
   if ($LicenseFile){
-	  Write-Host '           ** Binary files - FYI:'$LicenseFile.Name'file(s) found.' -Foreground Green
+	  Write-Host 'FYI:       ** Binary files - '$LicenseFile.Name'file(s) found.' -Foreground Green
 	  $GLOBAL:FYIs++
 	 } else {
-	   Write-Host "           ** Binary files - LICENSE.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
+	   Write-Host "WARNING:   ** Binary files - LICENSE.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
 	   Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip, etc) have been included without including a LICENSE.txt`n              file. This file is required when including binaries " -Foreground Cyan
 	   $GLOBAL:Required++
       }
@@ -427,10 +435,10 @@ function Check-LicenseFile{
 function Check-VerificationFile{
   $VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION* -Recurse)
   if ($VerificationFile){
-      Write-Host '           ** Binary files - FYI:'$VerificationFile.Name'file(s) found.' -Foreground Green
+      Write-Host 'FYI:       ** Binary files - '$VerificationFile.Name'file(s) found.' -Foreground Green
 	  $GLOBAL:FYIs++
 	} else {
-	  Write-Host "           ** Binary files - VERIFICATION.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "WARNING:   ** Binary files - VERIFICATION.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
 	  Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip) have been included without including a VERIFICATION.txt`n              file. This file is required when including binaries" -Foreground Cyan
 	  $GLOBAL:Required++
     }
@@ -452,7 +460,7 @@ function Check-Binaries{
 function Check-PNGs{
   $ImageFiles=(Get-ChildItem -Path $path -Include *.PNG,*.BMP,*.GIF,*.TGA -Recurse)
   if ($ImageFiles){
-      Write-Warning '  ** Binary files - FYI: PNG, BMP, GIF, or TGA image file(s) found.'
+      Write-Host 'FYI:       ** Binary files - PNG, BMP, GIF, or TGA image file(s) found.' -Foreground Yellow
 	  $GLOBAL:FYIs++
 	  if (!$OptimizeImages){
 	  Write-Host '           ** Suggestion: Consider running CNC -OptimizeImages to optimize your image file(s).' -Foreground Cyan
@@ -474,7 +482,7 @@ function Check-PackageInternalFilesIncluded{
 function Check-Header{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
-      Write-Host "           ** <description> - FYI: header template found." -Foreground Green
+      Write-Host "FYI:       ** <description> - header template found." -Foreground Green
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundHeader=$True
      } else {
@@ -485,7 +493,7 @@ function Check-Header{
 # add header template to <description>
 function Add-Header{
   if ($GLOBAL:FoundHeader){
-      Write-Host "           ** <description> - FYI: header template previously added." -Foreground Cyan
+      Write-Host "FYI:       ** <description> - header template previously added." -Foreground Cyan
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	  }	
@@ -511,7 +519,7 @@ function Add-Header{
 function Check-Footer{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
-      Write-Host "           ** <description> - FYI: footer template found." -Foreground Green
+      Write-Host "FYI:       ** <description> - footer template found." -Foreground Green
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundFooter=$True
      } else {
@@ -522,7 +530,7 @@ function Check-Footer{
 # add footer template to <description>
 function Add-Footer{
   if ($GLOBAL:FoundFooter){
-      Write-Host "           ** <description> - FYI: footer template previously added." -Foreground Cyan
+      Write-Host "FYI:       ** <description> - footer template previously added." -Foreground Cyan
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	 }	
@@ -548,11 +556,11 @@ function Add-Footer{
 function Check-OnlineStatus{
   $PackagePageInfo = Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID"
   if ($PackagePageInfo -match "Package test results have failed"){
-	  Write-Host "           ** FYI: $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+	  Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
 	  $GLOBAL:FYIs++
 	 }
   if ($PackagePageInfo -match "a trusted package"){
-	  Write-Host "           ** FYI: $NuspecID is a trusted package. (Congrats!)" -Foreground Green
+	  Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
 	  $GLOBAL:FYIs++
 	 }
 }
@@ -641,6 +649,15 @@ function Update-XMLDeclaration{
   $GLOBAL:UpdateNuspec=$True
 }
 
+# Update the nuspec XML namespace declaration
+function Update-XMLnsDeclaration{
+Write-Host "           ** XML namespace declaration changing not implemented yet." -Foreground Red
+#  Write-Host "           ** XML namespace declaration changed to http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Green
+#  $nuspecFile.package.xmlns='http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd'
+#  $GLOBAL:Fixes++
+#  $GLOBAL:UpdateNuspec=$True
+}
+
 # Update the nuspec with any changes and save as UTF-8 w/o BOM
 # Thanks https://stackoverflow.com/questions/8160613/powershell-saving-xml-and-preserving-format
 Function Update-nuspec{
@@ -654,6 +671,7 @@ Function Update-nuspec{
 # changes
       if ($UpdateXMLComment -and !$nuspecFile.'#comment'){$UpdatednuspecFile.InsertAfter($UpdatednuspecFile.CreateComment($XMLComment), $UpdatednuspecFile.FirstChild) | Out-Null}
       if ($nuspecFile.xml){$UpdatednuspecFile.xml = $nuspecFile.xml}
+#	  if ($UpdateXMLns) {$UpdatednuspecFile.package.xmlns = $nuspecFile.package.xmlns}
       if ($nuspecFile.package.metadata.description.'#cdata-section'){
 #         $NuspecDescription.'#cdata-section' = $NuspecDescription
 #         Write-Host "           ** <description> - CDATA found, not changing it." -Foreground Magenta
@@ -730,6 +748,17 @@ if (Test-Path $path\tools\chocolateyInstall.ps1){
   }
 }
 
+function Check-ScriptNames{
+$ChocoInstallScript=Get-ChildItem "$path\chocolateyinstall.ps1" -Recurse
+$NugetInstallScript=Get-ChildItem "$path\install.ps1" -Recurse
+if (!$ChocoInstallScript -and $NugetInstallScript){
+     Write-Host "WARNING:   ** Install Script Named Incorrectly." -Foreground Red
+	 Write-Host "           ** Your script is named incorrectly and will need to be renamed. A script named chocolateyInstall.ps1 was`n              not found in your package, but another script ending in install.ps1 was found. The install script should`n              be named chocolateyInstall.ps1 and be found in the tools folder." -Foreground Cyan
+	 $GLOBAL:Required++
+   }
+
+}
+
 # Start outputting check results
 Write-Host "CNC Summary of $NuspecDisplayName :" -Foreground Magenta
 
@@ -782,26 +811,38 @@ if (!$nuspecFile.'#comment'){
       Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLComment to add a UTF-8 encoding test XML comment." -Foreground Cyan
 	  $GLOBAL:Suggestions++
 	  if ($nuspecFile.'#comment' -match "Read this before creating packages"){
-          Write-Host "  ** XML comment contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+          Write-Host "WARNING:   ** XML comment contains templated values. This will trigger a message from the verifier:" -Foreground Red
+          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
 	  }
 	 }
 }
 
+# check XML Namespace
+if ($NuspecXMLNamespace -ne 'http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd'){
+    Write-Warning "  ** XML namespace declaration is $NuspecXMLNamespace"
+	if ($UpdateXMLns){
+	    Update-XMLnsDeclaration
+	} else {
+      Write-Host "           ** The current schema is http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Cyan
+      Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLNamespace to update the XML namespace declaration." -Foreground Cyan
+	  $GLOBAL:Suggestions++
+	}
+}
+
 # <authors> checks
 if (!($NuspecAuthors)) {
-    Write-Host "           ** <authors> element is empty, this element is a requirement." -Foreground Red
+    Write-Host "WARNING:   ** <authors> element is empty, this element is a requirement." -Foreground Red
 	$GLOBAL:Required++
    } else {
      if ($NuspecAuthors -match "@"){
-	     Write-Host "           ** <authors> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
+	     Write-Host "WARNING:   ** <authors> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
 	     Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
 		 $GLOBAL:Required++
 	    }
 	 if ($NuspecAuthors -cmatch "REPLACE"){
-         Write-Host "  ** <authors> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <authors> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 		}
    }
@@ -820,33 +861,33 @@ if (!($NuspecBugTrackerURL)) {
 
 # <copyright> checks
 if (!($NuspecCopyright)) {
-    Write-Warning "  ** <copyright> - FYI: element is empty."
+    Write-Host "FYI:       ** <copyright> - element is empty." -Foreground Yellow
 	$GLOBAL:FYIs++
 	} else {
 	  if ($NuspecCopyright.Length -lt 5) {
-	      Write-Host "           ** <copyright> - is less than 4 characters. This will trigger a message from the verifier:" -Foreground Red
+	      Write-Host "WARNING:   ** <copyright> - is less than 4 characters. This will trigger a message from the verifier:" -Foreground Red
 		  Write-Host '           ** Requirements: If you are going to use copyright in the nuspec, please use more than 4 characters.' -Foreground Cyan
 		  $GLOBAL:Required++
 		  }
 	  if ($NuspecAuthors -match "@"){
-	      Write-Host "           ** <copyright> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
+	      Write-Host "WARNING:   ** <copyright> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
 	      Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
           $GLOBAL:Required++
 	 }
 	 if ($NuspecCopyright -eq "Year Software Vendor"){
-         Write-Host "  ** <copyright> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <copyright> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 	    }
 	}
 
 # <dependencies> checks
 if (!($NuspecDependencies)) {
-    Write-Warning "  ** <dependencies> - FYI: element is empty."
+    Write-Host "FYI:       ** <dependencies> - element is empty." -Foreground Yellow
 	$GLOBAL:FYIs++
    } else {
      if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){
-	      Write-Host "           ** <dependencies> - Deprecated packages must have a dependency." -Foreground Red
+	      Write-Host "WARNING:   ** <dependencies> - Deprecated packages must have a dependency." -Foreground Red
 		  $GLOBAL:Required++
 		  }
 	 if ($NuspecDependencies.dependency.id -eq 'chocolatey'){
@@ -880,7 +921,7 @@ if ($NuspecDescription.'#cdata-section'){
     $NuspecDescription=$nuspecFile.package.metadata.description.'#cdata-section'
    }
 if (!$NuspecDescription){
-    Write-Host "           ** <description> - element is empty, this element is a requirement." -Foreground Red
+    Write-Host "WARNING:   ** <description> - element is empty, this element is a requirement." -Foreground Red
 	$GLOBAL:Required++
    } else {
      Check-Header
@@ -897,7 +938,7 @@ if (!$NuspecDescription){
 		 $GLOBAL:Guidelines++
 		 }
      if ($NuspecDescription.Length -gt 4000) {
-	     Write-Host "           ** <description> - is greater than 4,000 characters. Pushing the package will generate the error:" -Foreground Red
+	     Write-Host "WARNING:   ** <description> - is greater than 4,000 characters. Pushing the package will generate the error:" -Foreground Red
 		 Write-Host "           ** Failed to process request. 'This package had an issue pushing: A nuget package's Description property may`n              not be more than 4000 characters long.'. The remote server returned an error: (409) Conflict.." -Foreground Cyan
 		 $GLOBAL:Required++
 		 }
@@ -926,8 +967,8 @@ if (!$NuspecDescription){
 		 }
        }
 	  if ($NuspecDescription -cmatch "REPLACE"){
-          Write-Host "  ** <description> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+          Write-Host "WARNING:   ** <description> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
 	     }
 # below checking doesn't work as PowerShell will already give an error reading the nuspec
@@ -958,8 +999,8 @@ if (!($NuspecDocsURL)) {
 	$GLOBAL:Suggestions++
    } else {
      if ($NuspecDocsURL -match "docs located"){
-	     Write-Host "  ** <docsUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+	     Write-Host "WARNING:   ** <docsUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 		} else {
 		  Validate-URL "<docsUrl>" $NuspecDocsURL
@@ -968,7 +1009,7 @@ if (!($NuspecDocsURL)) {
 
 # <files> checks
 if (!($NuspecFiles)) {
-    Write-Warning "  ** <files> - FYI: element is empty. All of the following files will be packaged:"
+    Write-Host "FYI:       ** <files> - element is empty. All of the following files will be packaged:" -Foreground Yellow
     Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
 	$GLOBAL:FYIs++
 }
@@ -980,8 +1021,8 @@ if (!($NuspecIconURL)) {
 	$GLOBAL:Guidelines++
    } else {
      if ($NuspecIconURL -cmatch "REPLACE"){
-	     Write-Host "  ** <iconUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+	     Write-Host "WARNING:   ** <iconUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 		}
      Validate-URL "<iconUrl>" $NuspecIconURL
@@ -1020,7 +1061,7 @@ if (!($NuspecIconURL)) {
 
 # <id> checks
 if (!($NuspecID)) {
-    Write-Host "           ** <id> - element is empty, this element is a requirement." -Foreground Red
+    Write-Host "WARNING:   ** <id> - element is empty, this element is a requirement." -Foreground Red
 	$GLOBAL:Required++
 	} else {
      if (($NuspecID.Length -gt 20) -and (!$NuspecID.Contains("-")) -and (!$NuspecID.Contains("."))) {
@@ -1038,7 +1079,7 @@ if (!($NuspecID)) {
 		  $GLOBAL:Notes++
 		 }
 	 if ($NuspecID.Contains(".config")){
-	      Write-Host "           ** <id> - includes a '.config'. This is not allowed." -Foreground Red
+	      Write-Host "WARNING:   ** <id> - includes a '.config'. This is not allowed." -Foreground Red
 		  $GLOBAL:Required++
 		 }
 }
@@ -1055,8 +1096,8 @@ if (!($NuspecLicenseURL)) {
 	     $GLOBAL:Guidelines++
 		}
      if ($NuspecLicenseURL -cmatch "REMOVE"){
-         Write-Host "  ** <licenseUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <licenseUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 		} else {
           Validate-URL "<licenseUrl>" $NuspecLicenseURL
@@ -1074,12 +1115,12 @@ if (!($NuspecMailingListURL)) {
 	
 # <owners> checks
 if (!($NuspecOwners)) {
-    Write-Host "  ** <owners> element is empty, this element is a requirement." -Foreground Red
+    Write-Host "WARNING:   ** <owners> element is empty, this element is a requirement." -Foreground Red
 	$GLOBAL:Required++
    } else {
      if ($NuspecID -cmatch "REPLACE"){
-         Write-Host "  ** <owners> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <owners> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 	    }
      if ($NuspecAuthors -eq $NuspecOwners){
@@ -1096,8 +1137,8 @@ if (!($NuspecPackageSourceURL)) {
 	$GLOBAL:Guidelines++
    } else {
      if ($NuspecPackageSourceURL -cmatch "packageSourceUrl"){
-	     Write-Host "  ** <packageSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+	     Write-Host "WARNING:   ** <packageSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 		} else {
           Validate-URL "<packageSourceUrl>" $NuspecPackageSourceURL
@@ -1111,8 +1152,8 @@ if (!$NuspecProjectSourceURL) {
 	$GLOBAL:Suggestions++
    } else {
      if ($NuspecProjectSourceURL -match "Software Source Location"){
-         Write-Host "  ** <projectSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <projectSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 		} else {
           Validate-URL "<projectSourceUrl>" $NuspecProjectSourceURL
@@ -1126,13 +1167,13 @@ if (!$NuspecProjectSourceURL) {
 	
 # <projectUrl> checks
 if (!($NuspecProjectURL)) {
-    Write-Host "           ** <projectUrl> - element is empty. This will trigger a message from the verifier:" -Foreground Red
+    Write-Host "WARNING:   ** <projectUrl> - element is empty. This will trigger a message from the verifier:" -Foreground Red
     Write-Host "           ** Requirement: ProjectUrl (projectUrl) in the nuspec file is required. Please add it to the nuspec." -Foreground Cyan
 	$GLOBAL:Required++
    } else {
      if ($NuspecProjectURL -cmatch "REMOVE"){
-         Write-Host "  ** <projectUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <projectUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 	   } else {
          Validate-URL "<projectUrl>" $NuspecProjectURL
@@ -1149,8 +1190,8 @@ if (!($NuspecReleaseNotes)) {
 	$GLOBAL:Guidelines++
    } else {
      if ($NuspecReleaseNotes -cmatch "REPLACE"){
-         Write-Host "  ** <releaseNotes> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+         Write-Host "WARNING:   ** <releaseNotes> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
 	    }
 	 }
@@ -1160,11 +1201,11 @@ if (!($NuspecReleaseNotes)) {
 
 # <requireLicenseAcceptance> checks
 if (!($NuspecRequireLicenseAcceptance)) {
-    Write-Warning "  ** <requireLicenseAcceptance> - FYI: element is empty."
+    Write-Host "FYI:       ** <requireLicenseAcceptance> - element is empty." -Foreground Yellow
 	$GLOBAL:FYIs++
 	} else {
 	  if (($NuspecRequireLicenseAcceptance -eq "true") -and (!($NuspecLicenseURL))) {
-	      Write-Host "           ** <requireLicenseAcceptance> is set to true but <licenseUrl> is empty." -Foreground Red
+	      Write-Host "WARNING:   ** <requireLicenseAcceptance> is set to true but <licenseUrl> is empty." -Foreground Red
 		  $GLOBAL:Required++
 		  }
 	  }
@@ -1176,23 +1217,23 @@ if (!($NuspecSummary)) {
 	$GLOBAL:Guidelines++
 	} else {
 	  if ($NuspecSummary -cmatch "REPLACE"){
-          Write-Host "  ** <summary> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+          Write-Host "WARNING:   ** <summary> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
 		 }
      }
 
 # <tags> checks
 if (!($NuspecTags)) {
-     Write-Host "           ** <tags> - element is empty." -Foreground Red
+     Write-Host "WARNING:   ** <tags> - element is empty." -Foreground Red
 	 $GLOBAL:Required++
 	} else {
 	  if ($NuspecTags -match ","){
-         Write-Host "           ** <tags> - tags are separated with commas. They should only be separated with spaces." -Foreground Red
+         Write-Host "WARNING:   ** <tags> - tags are separated with commas. They should only be separated with spaces." -Foreground Red
 		 $GLOBAL:Required++
 		}
 	  if ($NuspecTags -match "admin"){
-         Write-Warning "  ** <tags> - FYI: there is a tag named ""admin"" which is now deemed unnecessary."
+         Write-Host "FYI:       ** <tags> - there is a tag named ""admin"" which is now deemed unnecessary." -Foreground Yellow
          Write-Host '           ** The majority of Chocolatey packages require admin rights to install, this is considered default behavior.' -Foreground Cyan
 		 $GLOBAL:FYIs++
 		}	
@@ -1207,8 +1248,8 @@ if (!($NuspecTags)) {
 		 $GLOBAL:Notes++
 		}
 	  if ($NuspecTags -cmatch "SEPARATED"){
-          Write-Host "  ** <tags> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+          Write-Host "WARNING:   ** <tags> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
 		 }
     }
@@ -1227,12 +1268,12 @@ if (!($NuspecTitle)) {
 
 # <version> checks
 if (!($NuspecVersion)) {
-    Write-Host "           ** <version> - element is empty, this element is a requirement." -Foreground Red
+    Write-Host "WARNING:   ** <version> - element is empty, this element is a requirement." -Foreground Red
 	$GLOBAL:Required++
 	} else {
 	  if ($NuspecVersion -match "REPLACE"){
-          Write-Host "  ** <version> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "  ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+          Write-Host "WARNING:   ** <version> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
+          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
 		 }
 	  }
@@ -1272,7 +1313,7 @@ write-host "FOREACH = $_" -foreground red -background white
 	         }
 		  $ScriptError=Test-PowerShellSyntax ($_)
 		  if ($ScriptError.SyntaxErrorsFound){
-		      Write-Host "           ** $ScriptFile - has PowerShell syntax errors." -Foreground Red
+		      Write-Host "WARNING:   ** $ScriptFile - has PowerShell syntax errors." -Foreground Red
 			  $GLOBAL:Required++
 			 }
           if ($_ -match "install"){
@@ -1287,8 +1328,21 @@ write-host "FOREACH = $_" -foreground red -background white
 	               $count++
                   }
               }
+			  if ($InstallScript -match "msiexec"){
+			      Write-Warning "  ** $ScriptFile calls msiexec - This will trigger a message from the verifier:"
+				  Write-Host "           ** Note: Package automation scripts make use of msiexec. The reviewer will ensure there is a valid reason`n              the package has not used the built-in helpers." -Foreground Cyan
+				  $GLOBAL:Notes++
+				  }
+		      if (($InstallScript -match 'cinst') -or ($InstallScript -match 'choco install') -or ($InstallScript -match 'choco upgrade') -or ($InstallScript -match ' cup ')){
+		          Write-Host "WARNING:   ** $ScriptFile - uses a cinst, choco install, cup, or choco upgrade command." -Foreground Red
+			      Write-Host "           ** In automation scripts (.ps1/.psm1), the package has used a chocolatey command that should not be used.`n              Rather a dependency should be taken on a package. Please add dependencies to the nuspec." -Foreground Cyan
+			      $GLOBAL:Required++
+                 }
           }
 }
+
+# Check for correctly named install script
+Check-ScriptNames
 
 # FossHub and SourceForge DL links check
 Check-DiscouragedDownloadLinks
@@ -1337,17 +1391,14 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground Whi
 return
 
 # TDL
-#BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
+# BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
+# check XML Namespace declaration and re-write if old - started
+# https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -started
 # check for &'s in links to change to &amp;
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # MAYBE redo file selection by filename instead of directory and implement a -Recurse option - medium low priority
 # MAYBE do full params statement and get rid of args checking - low priority
 # MAYBE check http links to see if https links are available and report if so - low priority
-# MAYBE check $nuspecFile.package.xmlns and re-write if old (not sure if this is a good idea)
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
-# https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -setup
-# https://github.com/chocolatey/package-validator/wiki/InstallScriptNamedCorrectly
-# https://github.com/chocolatey/package-validator/wiki/ScriptsDoNotContainChocoCommands
 # https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
-# ADD a cumulative report of errors when run against all scripts
 # What else?
