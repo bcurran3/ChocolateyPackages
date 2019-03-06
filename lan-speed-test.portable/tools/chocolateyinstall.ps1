@@ -2,7 +2,7 @@
 $packageName  = 'lan-speed-test.portable'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.totusoft.com/files/LAN_SpeedTestPortable.zip'
-$checksum     = '7E6589CC0C9AA38B73A082E07363F60044166638ECF06891CCF7FDD4DCFE8095'
+$checksum     = '5E7C6AD4B815D72409433AD3AE1ECBC5927963B4B8C709D046E68AD6A6C4A719'
 $shortcutName = 'LAN Speed Test.lnk'
 $portableEXE  = "$toolsDir\LAN_SpeedTestPortable.exe";
 
@@ -16,20 +16,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath $portableEXE -WorkingDirectory $toolsDir
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath $portableEXE -WorkingDirectory $toolsDir
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath $portableEXE -WorkingDirectory $toolsDir
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath $portableEXE -WorkingDirectory $toolsDir

@@ -1,23 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>lan-speed-test.portable</id>
+    <version>4.4.0</version>
     <title>LAN Speed Test (Portable)</title>
-    <version>4.1</version>
     <authors>TotuSoft</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/lan-speed-test.portable</packageSourceUrl>	
-    <projectUrl>http://www.totusoft.com/lanspeed/</projectUrl>
-    <docsUrl>http://www.totusoft.com/lanspeed_doc</docsUrl>	
-    <mailingListUrl>http://www.homenetworkenabled.com/forums/forumdisplay.php?63-LAN-Speed-Test</mailingListUrl>
-    <tags>lan speed test network benchmark utility</tags>
-    <copyright>(C) Totusoft.com</copyright>
     <licenseUrl>http://totusoft.com/about/</licenseUrl>
+    <projectUrl>http://www.totusoft.com/lanspeed/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/lan-speed-test.portable/lan-speed-test.portable_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/lan-speed-test.portable/lan-speed-test.portable_icon.png</iconUrl>	
-    <summary>LAN Speed Test is a LAN speed benchmarking utility.</summary>
     <description>
+---
+
+###[choco://lan-speed-test.portable](choco://lan-speed-test.portable)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+
 ![Screenshot of LAN Speed Test](http://www.totusoft.com/content/media/lanspeed4/beta5_lst04_002.png)
 	
 **After installing LAN Speed Test v4.0, it begins in (Lite) mode.** LAN Speed Test (Lite) is fully functional with no time limits, etc. - only some of the more advanced features are disabled.
@@ -62,8 +64,23 @@ LAN Speed Test was designed from the ground up to be a simple but powerful tool 
 * Unlimited $150  
   
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/lan-speed-test.portable/readme.md)**  
-    </description>
-	<releaseNotes>https://totusoft.com/lanspeed_history</releaseNotes>
+    
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <summary>LAN Speed Test is a LAN speed benchmarking utility.</summary>
+    <releaseNotes>https://totusoft.com/lanspeed_history</releaseNotes>
+    <copyright>(C) Totusoft.com</copyright>
+    <tags>lan speed test network benchmark utility cross-platform portable</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/lan-speed-test.portable</packageSourceUrl>
+    <docsUrl>http://www.totusoft.com/lanspeed_doc</docsUrl>
+    <mailingListUrl>http://www.homenetworkenabled.com/forums/forumdisplay.php?63-LAN-Speed-Test</mailingListUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
