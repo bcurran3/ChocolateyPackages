@@ -2,18 +2,18 @@
 $packageName    = 'drivermax' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.drivermax.com/soft/dmx/drivermax.exe'
-$checksum       = 'D0832CBC1EAC8F38DFA652A54DB2112C2FF5FFFE3BCF05A3BCD204FC9EFDC6EE'
+$checksum       = '6BEEAC4E4F1920995081F94D25D3FD941D222244B60A673FC3B7239EA9B82D3C'
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'exe' 
-  url           = $url
-  validExitCodes= @(0,1)  
-  silentArgs    = '/SP- /VERYSILENT /SUPPRESSMSGBOXES /CLOSEAPPLICATIONS' 
-  softwareName  = 'DriverMax*' 
-  checksum      = $checksum
-  checksumType  = 'sha256'
+  packageName    = $packageName
+  unzipLocation  = $toolsDir
+  fileType       = 'EXE' 
+  url            = $url
+  validExitCodes = @(0,1)
+  silentArgs     = '/SP- /VERYSILENT /SUPPRESSMSGBOXES /CLOSEAPPLICATIONS' 
+  softwareName   = 'DriverMax*' 
+  checksum       = $checksum
+  checksumType   = 'sha256'
   }
   
 Install-ChocolateyPackage @packageArgs
