@@ -4,15 +4,19 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>11.1.3</version>
+    <version>11.2.2</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
     <summary>ADVANCED Codecs for Windows 10/8.1/7 is an audio and video codec package which contains a full suite of codecs.</summary>
-    <description>___
-[choco://advanced-codecs](choco://advanced-codecs)
+    <description>
+---
+
+###[choco://advanced-codecs](choco://advanced-codecs)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 	
 ![Screen shot of Settings Application](http://shark007.net/images/32bit7.jpg)
 
@@ -54,9 +58,15 @@ Things the Shark pack does that other packs cannot do . . .
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advanced-codecs/readme.md)**
 
-___
+    
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___</description>
+
+---
+
+</description>
     <projectUrl>http://shark007.net/advanced.html</projectUrl>
     <docsUrl>http://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
     <mailingListUrl>http://shark007.net/forum/</mailingListUrl>
