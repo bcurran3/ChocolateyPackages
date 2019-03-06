@@ -1,15 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>simple-sticky-notes</id>
     <title>Simple Sticky Notes (Install)</title>
-    <version>4.4</version>
+    <version>4.5</version>
     <authors>Simnet Limited</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>
     <summary>Simple Sticky Notes - fast free sticky notes for your Windows desktop.</summary>
     <description>
+---
+
+###[choco://simple-sticky-notes](choco://simple-sticky-notes)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of Simple Sticky Notes](http://www.simplestickynotes.com/images/simple-sticky-notes-screenshot-2.png)	
 
 What is Simple Sticky Notes? It's a simple, easy-to-use, absolutely free, fast and efficient note taking software.
@@ -21,19 +28,25 @@ Minimum Requirements: Windows® 10 / 8.1 / 8 / 7 / Vista / XP PC with a 1 GHz In
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/simple-sticky-notes/readme.md)**
 
-***
+
+    
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-    </description>
+
+---
+
+</description>
     <projectUrl>http://www.simplestickynotes.com</projectUrl>
     <docsUrl>http://www.simplestickynotes.com/help/</docsUrl>
-    <tags>simple sticky notes postit post-it stickies</tags>
+    <tags>simple sticky notes postit post-it stickies binary</tags>
     <copyright>Simnet Limited</copyright>
     <licenseUrl>http://www.simplestickynotes.com/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.simplestickynotes.com/resources/images/simple-sticky-notes-logo.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/simple-sticky-notes/simple-sticky-notes_icon.png</iconUrl>
     <releaseNotes>http://www.simplestickynotes.com/simple-sticky-notes-version-history/</releaseNotes>
-      </metadata>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
