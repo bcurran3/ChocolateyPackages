@@ -1,24 +1,21 @@
-﻿$packageName    = 'wordweb-free'
-$installerType  = 'exe'
-$url            = 'https://wordweb.info/cgi-bin/geoip/wordweb.exe'
-$checksum       = '8BCE6993A4D28AE72D9D09B84C34A373326C799224FE1E601F088DE4B1CBF370'
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$silentArgs     = '/s'
-$validExitCodes = @(0)
+$packageName    = 'wordweb-free'
+$url            = "$toolsDir\wordweb8.exe"
 $ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "WWFInstall.ahk"
+$ahkFile        = "$toolsDir\wordweb-free-install.ahk"
 
 Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = $installerType
-  url           = $url
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = 'WordWeb'
-  checksum      = $checksum
-  checksumType  = 'sha256'
-}
-
-Install-ChocolateyPackage @packageArgs
+  packageName    = $packageName
+  fileType       = 'EXE'
+  file           = $url
+  validExitCodes = @(0)
+  silentArgs     = '/s'
+  softwareName   = 'WordWeb'
+  }
+  
+Install-ChocolateyInstallPackage @packageArgs
+Remove-Item $toolsDir\*.exe -force | Out-Null
+Remove-Item $toolsDir\*.ignore -force | Out-Null
