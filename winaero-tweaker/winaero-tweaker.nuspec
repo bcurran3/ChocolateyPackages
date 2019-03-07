@@ -1,33 +1,45 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winaero-tweaker</id>
-    <version>0.12.1.0</version>
+    <version>0.14.0.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winaero-tweaker</packageSourceUrl>
     <title>Winaero Tweaker (Install)</title>
     <authors>Sergey Tkachenko</authors>
     <projectUrl>http://winaero.com/index.php</projectUrl>
-    <iconUrl>http://winaero.com/blog/wp-content/uploads/2015/03/WinaeroTweaker.png</iconUrl>
-    <copyright>© Winaero.com</copyright>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/winaero-tweaker/winaero-tweaker_icon.png</iconUrl>
+    <copyright>© Winaero.com</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://winaero.com/blog/winaero-tweaker-faq/</docsUrl>
     <bugTrackerUrl>http://winaero.com/comment.php?comment.news.1836</bugTrackerUrl>
     <tags>winaero tweaker windows aero system utility</tags>
     <summary>Winaero Tweaker allows you to customize the appearance and behavior of the operating system in a flexible way.</summary>
     <description>
+---
+
+###[choco://winaero-tweaker](choco://winaero-tweaker)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of Winaero Tweaker](http://winaero.com/blog/wp-content/uploads/2017/03/Winaero-Tweaker-07-600x463.png)
 	
 After years of development, I decided to release an all-in-one application which will include most options available in my free Winaero apps and extend it as much as possible. I would like to introduce Winaero Tweaker - universal tweaker software which supports Windows 7, Windows 8, Windows 8.1 and Windows 10.	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/winaero-tweaker/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-	</description>
-    <releaseNotes>https://winaero.com/comment.php?comment.news.1836</releaseNotes>
+
+---
+
+</description>
+    <releaseNotes>https://winaero.com/blog/winaero-tweaker-0-14-is-out/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
