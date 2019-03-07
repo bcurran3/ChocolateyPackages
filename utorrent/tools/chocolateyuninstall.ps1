@@ -1,4 +1,5 @@
-﻿$packageName    = 'utorrent'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'utorrent'
 $installerType  = 'EXE' 
 $silentArgs     = '/uninstall /S'
 $validExitCodes = @(0, 3010, 1605, 1614, 1641)

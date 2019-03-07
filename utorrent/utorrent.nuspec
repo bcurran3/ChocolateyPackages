@@ -1,19 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>utorrent</id>
     <title>uTorrent Classic (Install)</title>
-    <version>3.5.5.44954</version>
+    <version>3.5.5.45146</version>
     <authors>BitTorrent, Inc.</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>
     <summary>A (very) tiny BitTorrent client.</summary>
     <description>
-***	
-[choco://utorrent](choco://utorrent)
+---
+
+###[choco://utorrent](choco://utorrent)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
+
 	
 ![Screenshot of uTorrent](https://remote.utorrent.com/static/images/win_ut_toolbar.png)	
 
@@ -43,24 +46,29 @@ Direct access to a over 10,000 artists and 2,000,000 pieces of content. Download
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/utorrent/readme.md)**
 
-***
+    
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-    </description>
+
+---
+
+</description>
     <projectUrl>http://www.utorrent.com</projectUrl>
     <docsUrl>http://help.utorrent.com/</docsUrl>
     <mailingListUrl>https://forum.utorrent.com/</mailingListUrl>
-	<bugTrackerUrl>https://forum.utorrent.com/forum/14-bug-reports/</bugTrackerUrl>
+    <bugTrackerUrl>https://forum.utorrent.com/forum/14-bug-reports/</bugTrackerUrl>
     <tags>utorrent bittorrent torrent client p2p</tags>
     <copyright>© BitTorrent, Inc.</copyright>
     <licenseUrl>http://www.bittorrent.com/legal/eula</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://upload.wikimedia.org/wikipedia/en/9/9f/UTorrent_%28logo%29.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/utorrent/utorrent_icon.png</iconUrl>
     <releaseNotes>http://blog.utorrent.com/releases/windows/</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />		  
-    </dependencies>	
-      </metadata>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
