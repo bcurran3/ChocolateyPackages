@@ -2,7 +2,7 @@
 $packageName    = 'winaero-tweaker' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://winaero.com/e107_files/downloads/winaerotweaker.zip'
-$checksum       = '359AEDA5A637CFD6010810B11AC6A0B582FF3B7B9E361334D13E619E4EF4D6C2'
+$checksum       = 'A73DDF39CC92213106573F974AC032B396B6FF793A48156484416A1F45AA4A98'
 $UnzippedEXE    = "$toolsDir\WinaeroTweaker-$env:packageVersion-setup.exe"
 
 $packageArgs = @{
@@ -31,4 +31,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs						  
-
