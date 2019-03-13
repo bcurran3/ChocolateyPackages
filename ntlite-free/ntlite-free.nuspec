@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ntlite-free</id>
-    <version>1.7.3.6760</version>
+    <version>1.7.3.6761</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ntlite-free</packageSourceUrl>
     <title>NTLite (Free) (Install)</title>
@@ -15,13 +15,16 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.ntlite.com/support/</docsUrl>
     <mailingListUrl>https://www.ntlite.com/discussions/#/categories</mailingListUrl>
-    <tags>nlitesoft ntlite windows depoyment</tags>
+    <tags>nlitesoft ntlite windows deployment</tags>
     <summary>Windows deployment tool</summary>
     <description>
-___
-[choco://ntlite-free](choco://ntlite-free)
+---
+
+###[choco://ntlite-free](choco://ntlite-free)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 
 ![Screenshot of NTLite](https://www.ntlite.com/wp-content/uploads/screen_components.png)
 	
@@ -59,10 +62,15 @@ See license link for Free, Home, Professional, and Business version comparisons.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ntlite-free/readme.md)**
 
-___
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://www.ntlite.com/changelog/</releaseNotes>
   </metadata>
   <files>
