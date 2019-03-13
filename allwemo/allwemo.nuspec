@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>allwemo</id>
-    <version>6.71</version>
+    <version>6.75</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allwemo</packageSourceUrl>
     <title>AllWemo (Install)</title>
     <authors>Enrique Alonso</authors>
     <projectUrl>https://ea.im/p/?r=AllWemo</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/allwemo/allwemo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/allwemo/allwemo_icon.png</iconUrl>
     <copyright>Enrique Alonso (R)</copyright>
     <licenseUrl>http://www.apache.org/licenses/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,7 +17,14 @@
     <tags>allware allwemo wemo smarthome home automation</tags>
     <summary>AllWemo is a Free Software for controlling Wemo Devices with your PC (WINDOWS).</summary>
     <description>
-![Screenshot of AllWemo](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/allwemo/allwemo_screenshot.png)
+---
+
+###[choco://allwemo](choco://allwemo)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of AllWemo](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/allwemo/allwemo_screenshot.png)
 
 ##WEMO FOR PC
 
@@ -36,13 +43,17 @@ For the commands to run, you need to run for the first time Allwemo without comm
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/allwemo/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-

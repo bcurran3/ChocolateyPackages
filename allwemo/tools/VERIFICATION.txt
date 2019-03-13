@@ -1,4 +1,4 @@
-﻿==================== AllWemo ====================
+﻿------------------------------ AllWemo ------------------------------
 
 The included MSI binary included in this package went through through the following process to be obtained:
 * AllWemo_setup_x_xx.zip was  originally downloaded from developers site at https://ea.im/p/?r=AllWemo
@@ -11,5 +11,5 @@ The included MSI binary included in this package went through through the follow
 Checksums are not provided by the developer.
 https://ea.im/p/?r=AllWemo
 
-==================== AllWemo ====================
+------------------------------ AllWemo ------------------------------
 

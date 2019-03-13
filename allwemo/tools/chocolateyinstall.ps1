@@ -1,4 +1,4 @@
-﻿# https://ea.im/Doc.aspx?D=206&dn=AllWemoSetup_6_71.zip
+﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'allwemo'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = "$toolsDir\AllWemoSetup.msi" 

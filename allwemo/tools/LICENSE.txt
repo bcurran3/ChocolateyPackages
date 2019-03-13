@@ -1,4 +1,6 @@
-﻿The installer for AllWemo states the license during manual install as:
+﻿------------------------------ AllWemo ------------------------------
+
+The installer for AllWemo states the license during manual install as:
 
 2. Grant of Copyright License.
 
@@ -20,3 +22,5 @@ You may add Your own copyright statement to Your modifications and may provide a
 
 Also:
 http://www.apache.org/licenses/
+
+------------------------------ AllWemo ------------------------------
