@@ -4,7 +4,7 @@
   <metadata>
     <id>solarwinds-advanced-monitoring-agent</id>
     <title>Solarwinds MSP Advanced Monitoring Agent (Install)</title>
-    <version>10.7.13</version>
+    <version>10.8.6</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-advanced-monitoring-agent</packageSourceUrl>
@@ -17,10 +17,13 @@
     <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Advanced Monitoring Agent Software for SolarWinds MSP</summary>
     <description>
-***
-[choco://solarwinds-advanced-monitoring-agent](choco://solarwinds-advanced-monitoring-agent)
+---
+
+###[choco://solarwinds-advanced-monitoring-agent](choco://solarwinds-advanced-monitoring-agent)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
+
 
 ![Screenshot of Solarwinds MSP Advanced Monitoring Agent](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-advanced-monitoring-agent/solarwinds-advanced-monitoring-agent_screenshot.png)	
 
@@ -42,10 +45,15 @@ Check out our advanced monitoring agent software for yourself by signing up for 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-advanced-monitoring-agent/readme.md)**
 
-***
+    
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-    </description>
+
+---
+
+</description>
     <releaseNotes>https://dashboard.systemmonitor.us/help/default.php?key=agentreleasenotes</releaseNotes>
   </metadata>
   <files>
