@@ -1,9 +1,10 @@
-﻿$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+﻿$ErrorActionPreference = 'Stop'
+$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'hp-universal-print-driver-pcl' 
-$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-19/upd-pcl6-x32-6.6.5.23510.exe'
-$checksum       = '22590F3FAA980AE1C880DFF3DDFDB5BEB5179CD2F8A8C4A216B2CFA0B412F0D1'
-$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99374-19/upd-pcl6-x64-6.6.5.23510.exe'
-$checksum64     = 'E114E230D955EC4A38375F33C98F8A91A1346FCEBDD469B93F47A0A37BB040AD'
+$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-21/upd-pcl6-x32-6.7.0.23989.exe'
+$checksum       = '9980A408EFE31775B69D2C170353030FCA102ABD2C790B607B9CD99C76CB2194'
+$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99374-21/upd-pcl6-x64-6.7.0.23989.exe'
+$checksum64     = 'AC9CC013C416EA50F74A86983D845A4CB925688F89B42A28469A54F6CCD908A5'
 $softwareName   = ''
 $fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 
@@ -21,7 +22,7 @@ try {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-New-Item $fileLocation -type directory | out-null
+New-Item $fileLocation -Type directory | Out-Null
 
 $packageArgs = @{
   packageName    = $packageName
@@ -48,4 +49,4 @@ $packageArgs = @{
  
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item "$toolsDir\unzippedfiles" -recurse | out-null
+Remove-Item "$toolsDir\unzippedfiles" -Recurse | Out-Null
