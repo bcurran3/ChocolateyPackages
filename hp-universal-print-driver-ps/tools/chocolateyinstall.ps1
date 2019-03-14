@@ -1,9 +1,10 @@
-﻿$packageName    = 'hp-universal-print-driver-ps' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'hp-universal-print-driver-ps' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99375-19/upd-ps-x32-6.6.5.23510.exe'
-$checksum       = '9AE75B5A798DD89FCD2B6963ABA40758553D9EF9FD9E00EEB5EF1814C928E8A7'
-$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99376-19/upd-ps-x64-6.6.5.23510.exe'
-$checksum64     = '00C8CA13CBFE99746D62DB7D6413C14DAD566D834DB67AE44A442F152F505456'
+$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99375-21/upd-ps-x32-6.7.0.23989.exe'
+$checksum       = '5D941CA5C5BAA3FDC5F6009FC09E9C8C0F57DA4A3ABB32716437AD16A09F1E4D'
+$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99376-21/upd-ps-x64-6.7.0.23989.exe'
+$checksum64     = '00CEADC3C948E58A6BB7DE9AE0AA03FF7BD57EFAF87DD0106987DDF989ADC8F8'
 $fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 
 # Make sure Print Spooler service is up and running stolen from cutepdf package.
@@ -20,7 +21,7 @@ try {
   Write-Warning "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-New-Item $fileLocation -type directory | out-null
+New-Item $fileLocation -Type directory | Out-Null
 
 $packageArgs = @{
   packageName    = $packageName
@@ -47,4 +48,4 @@ $packageArgs = @{
  
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item "$toolsDir\unzippedfiles" -recurse | out-null
+Remove-Item "$toolsDir\unzippedfiles" -Recurse | Out-Null

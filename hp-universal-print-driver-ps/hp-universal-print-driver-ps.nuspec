@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hp-universal-print-driver-ps</id>
-    <version>6.6.5.23510</version>
+    <version>6.7.0.23989</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hp-universal-print-driver-ps</packageSourceUrl>
     <title>HP Universal Print Driver for Windows PS (Install)</title>
@@ -19,6 +19,13 @@
     <summary>HP Universal Print Driver for Windows (PS) - One versatile print driver for your PC or laptop
 </summary>
     <description>
+---
+
+###[choco://hp-universal-print-driver-ps](choco://hp-universal-print-driver-ps)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ###One versatile print driver for your PC or laptop
 
 Automatically discover and print to supported HP devices and some non‑HP devices, with a single print driver. When you install the free HP Universal Print Driver (UPD) on a PC or laptop, it communicates with the supported devices to determine the unique print capabilities installed on each device.
@@ -42,10 +49,15 @@ Users are more self-sufficient when the HP UPD is deployed, reducing the need fo
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hp-universal-print-driver-ps/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
     <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c03635717</releaseNotes>
   </metadata>
   <files>
