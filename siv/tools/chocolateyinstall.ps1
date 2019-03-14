@@ -1,4 +1,5 @@
-﻿$packageName = 'siv' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'siv' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\siv.zip"
 $bits        = Get-ProcessorBits
