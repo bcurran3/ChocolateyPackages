@@ -1,36 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>siv</id>
-    <version>5.36</version>
+    <version>5.37</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/siv</packageSourceUrl>
     <title>SIV - System Information Viewer (Portable)</title>
     <authors>Ray Hinchliffe</authors>
     <projectUrl>http://rh-software.com/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/siv/system-information-viewer.png</iconUrl>
-	<docsUrl>http://rh-software.com/</docsUrl>
+    <docsUrl>http://rh-software.com/</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>http://rh-software.com/index_arc.html</bugTrackerUrl>
     <tags>rhinchliffe siv system information viewer binary portable</tags>
     <summary>SIV (System Information Viewer) - is a general Windows utility for displaying lots of useful Windows, Network and hardware info.</summary>
     <description>
-___
-[choco://siv](choco://siv)
+---
+
+###[choco://siv](choco://siv)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 	
-![Screenshot of SIV](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/siv/SIV_Screenshot.png)
+![Screenshot of SIV](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/siv/siv_screenshot.png)
 	
 SIV by Ray Hinchliffe. 'System Information Viewer' is a general Windows utility for displaying lots of useful Windows, Network and hardware info - CPU info, PCI info, PCMCIA info, USB info SMBus info, SPD info, ACPI methods, Machine info, Hardware Sensors, Networked computers, Operating System Information and more. SIV is designed for Windows 10, 8.1, 8.0, 7, Vista, XP, 2016, 2012, 2008, 2003, 2000 and NT4. Windows 95, 98 and Me are also supported. Uses pcidevs.txt for the PCI devices, usbdevs.txt for the USB devices, mondevs.txt for monitor descriptions and pcmdevs.txt for PCMCIA device descriptions.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/siv/readme.md)**
 
-___
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
-	</description>
+
+---
+
+</description>
     <releaseNotes>http://rh-software.com/index_arc.html</releaseNotes>
   </metadata>
   <files>
