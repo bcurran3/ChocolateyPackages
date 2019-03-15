@@ -2,7 +2,7 @@
 $packageName   = 'arq' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://www.arqbackup.com/download/Arq.exe' 
-$checksum      = '62CBBEAD0A9DA03740788ADDE4855AE16B2535F15836196804AE019AA299392E'
+$checksum      = 'F68ED08E15E6F1A9FE9CA31634B57DB725EAE3E3393D19F8B5AC7705CFC695A0'
 $UnzippedMSI   = "$toolsDir\ArqSetup.msi"
 
 $packageArgs = @{
@@ -26,5 +26,3 @@ $packageArgs = @{
 }
 
 Install-ChocolateyInstallPackage @packageArgs
-
-
