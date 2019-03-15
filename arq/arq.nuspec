@@ -18,6 +18,13 @@
     <tags>arq backup cloud amazon google dropbox onedrive sftp nas trial</tags>
     <summary>Back up your files automatically to the cloud</summary>
     <description>
+---
+
+###[choco://arq](choco://arq)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ##Product Features
 Everything you wanted in a backup app
 
@@ -58,7 +65,15 @@ You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Clou
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/arq/readme.md)**
 	
-    </description>
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <releaseNotes>https://www.arqbackup.com/download/arq5windows_release_notes.html</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5.2" version="4.5.2" />
