@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>arq</id>
-    <version>5.15.1</version>
+    <version>5.16</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/arq</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Arq (Trial) (Install)</title>
@@ -18,11 +18,6 @@
     <tags>arq backup cloud amazon google dropbox onedrive sftp nas trial</tags>
     <summary>Back up your files automatically to the cloud</summary>
     <description>
-___
-[choco://arq](choco://arq)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
-
 ##Product Features
 Everything you wanted in a backup app
 
@@ -62,15 +57,11 @@ You can back up to your own Amazon Cloud Drive, Amazon Web Services, Google Clou
 [Twitter](https://twitter.com/arqbackup) | [Blog](https://www.arqbackup.com/blog/)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/arq/readme.md)**
-
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
 	
-</description>
+    </description>
     <releaseNotes>https://www.arqbackup.com/download/arq5windows_release_notes.html</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.5.2" />
+      <dependency id="dotnet4.5.2" version="4.5.2" />
     </dependencies>
   </metadata>
   <files>
