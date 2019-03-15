@@ -9,5 +9,5 @@ Remove-Item $toolsDir\*.exe -Exclude "GPU-Z.$env:packageVersion.exe" # deleted o
 Remove-Item $toolsDir\*.ignore -Exclude "GPU-Z.$env:packageVersion.exe.ignore" # delete old .ignore files (2.18.0+)
 Write-Host "" | Out-File "$toolsDir\GPU-Z.$env:packageVersion.exe.ignore" # create .ignore file so shim isn't created
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\GPU-Z.lnk" -targetPath $PortableEXE
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\GPU-Z.lnk" -targetPath $PortableEXE
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\GPU-Z.lnk" -targetPath $PortableEXE
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\GPU-Z.lnk" -targetPath $PortableEXE
