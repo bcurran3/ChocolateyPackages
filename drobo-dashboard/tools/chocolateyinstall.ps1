@@ -2,8 +2,8 @@
 $packageName = 'drobo-dashboard' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe      = 'AutoHotKey'
-$url         = 'http://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.4.0.exe'
-$checksum    = 'B5A303D9D02FC72AAC6FBD8B96269C512CE01161EA147D154CEED5AB6C0965C4'
+$url         = 'https://files.drobo.com/webrelease/dashboard/Drobo-Dashboard-3.4.2.exe'
+$checksum    = 'D4EC8605FF4CF3C6A6532EFA14AD7CBE086CAB16E39C831EB149F18FC8AB85CD'
 
 
 $PreviouslyInstalled = (Test-Path "HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\{863885B3-7C05-421C-8817-568712778745}")
