@@ -4,7 +4,7 @@
   <metadata>
     <id>solarwinds-advanced-monitoring-agent</id>
     <title>Solarwinds MSP Advanced Monitoring Agent (Install)</title>
-    <version>10.8.6</version>
+    <version>10.8.8</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-advanced-monitoring-agent</packageSourceUrl>
