@@ -1,7 +1,8 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'tcc'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://jpsoft.com/downloads/v24/tcc.exe'
-$checksum    = 'BC330C00F1AF9CF2B1D5295731B81076288D427BBA876A50544E3DC92E3EDE3A'
+$checksum    = '9DE5E281AF76656E580DC4E435AFB908E6B564070EF778111EA103BADB791343'
 
 $packageArgs = @{
   packageName   = $packageName
