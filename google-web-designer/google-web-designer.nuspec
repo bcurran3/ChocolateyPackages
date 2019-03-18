@@ -9,7 +9,7 @@
     <title>Google Web Designer (Install)</title>
     <authors>Google Inc.</authors>
     <projectUrl>https://www.google.com/webdesigner/</projectUrl>
-    <iconUrl>https://pbs.twimg.com/profile_images/378800000519773780/c3bbaa4fa2d2be338f2527275c3135c6_bigger.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/google-web-designer/google-web-designer_icon.png</iconUrl>
     <copyright>Google Inc.</copyright>
     <licenseUrl>http://www.google.com/accounts/TOS</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of Google Web Designer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/google-web-designer/GoogleWebDesigner.png)
+![Screenshot of Google Web Designer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/google-web-designer/google-web-designer_screenshot.png)
 
 ###Bring ideas to life across screens
 
