@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>24.0.32.0</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>	
+    <version>24.2.44.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
     <authors>JP Software</authors>
@@ -19,10 +19,13 @@
     <tags>jpsoftware jpsoft take command prompt cmd cli shell trial</tags>
     <summary>Take Command is a comprehensive interactive GUI and command line environment</summary>
     <description>
-***
-[choco://take-command](choco://take-command)
+---
+
+###[choco://take-command](choco://take-command)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
+
 	
 ![Screenshot of Take Command] (https://jpsoft.com/images/takecommand.jpg)
 
@@ -39,10 +42,15 @@ NEW COPY $99.95 UPGRADE $49.95
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/take-command/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://jpsoft.com/help/whats-new-in-version-24.htm</releaseNotes>
   </metadata>
   <files>
