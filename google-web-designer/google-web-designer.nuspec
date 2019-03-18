@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>google-web-designer</id>
-    <version>3.0.1.0319</version>
+    <version>5.0.4.0226</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-web-designer</packageSourceUrl>
     <title>Google Web Designer (Install)</title>
@@ -15,13 +15,18 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.google.com/webdesigner/#topic=3249465</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/gwdbeta</mailingListUrl>
-    <tags>google web designer admin</tags>
+    <tags>google web designer notsilent</tags>
     <summary>Google Web Designer empowers creative professionals to create cutting-edge advertising as well as engaging web content - for free.</summary>
     <description>
-![Screenshot of Google Web Designer](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/google-web-designer/GoogleWebDesigner.png)
+---
 
-	**(Currently BETA)**
-	
+###[choco://google-web-designer](choco://google-web-designer)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of Google Web Designer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/google-web-designer/GoogleWebDesigner.png)
+
 ###Bring ideas to life across screens
 
 Create engaging, interactive HTML5-based designs and motion graphics that can run on any device.	
@@ -47,8 +52,19 @@ If you’re feeling more hands-on, all the code behind your designs is hand-edit
 [Certification](https://getstudiocert.appspot.com/gwd)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-web-designer/readme.md)**
-	</description>
-    <releaseNotes>https://support.google.com/webdesigner/answer/7400635</releaseNotes>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://support.google.com/webdesigner/answer/9177115</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
