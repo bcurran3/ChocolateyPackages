@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pst-merger</id>
-    <version>1.02.5014</version>
+    <version>1.03.5016</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pst-merger</packageSourceUrl>
     <title>Free PST Merger (Install)</title>
@@ -14,9 +14,16 @@
     <licenseUrl>http://www.4team.biz/TermsAndPrivacy.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.pst-merger.com/WebHelp/PSTMergerHelp.htm</docsUrl>
-    <tags>4team outlook pst merger admin</tags>
+    <tags>4team outlook pst merger</tags>
     <summary>Free PST Merger - merge multiple PST files into a single file.</summary>
     <description>
+---
+
+###[choco://pst-merger](choco://pst-merger)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of PST Merger](http://www.pst-merger.com/i/ScreenShots/select_files_and_folders_screenshots.png)
 	
 ##Merge Outlook PST files with Free PST Merger.
@@ -29,10 +36,19 @@ If you have to merge PST files frequently, PST Merger will save your valuable ti
 See [website](http://www.pst-merger.com/) for complete list of features. (Too big to list here.)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/autobootdisk/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+    </description>
+    <releaseNotes>http://www.pst-merger.com/version-history.aspx</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" />
-    </dependencies>	
+      <dependency id="autohotkey.portable" version="1.1.27" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
