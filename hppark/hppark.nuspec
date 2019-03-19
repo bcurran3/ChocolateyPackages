@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hppark</id>
-    <version>1.8.4</version>
+    <version>1.8.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hppark</packageSourceUrl>
     <title>HP Printer Administrator Resource Kit (Portable)</title>
     <authors>HP Inc.</authors>
-    <projectUrl>http://h20331.www2.hp.com/Hpsub/cache/576122-0-0-225-121.html</projectUrl>
+    <projectUrl>https://support.hp.com/us-en/drivers/selfservice/UPD/4157320/model/4157320</projectUrl>
     <iconUrl>https://support.hp.com/static/hp-portal-theme-static/themes/Portal8.0/hp/images/hp-logo-modal.gif</iconUrl>
     <copyright>HP Inc.</copyright>
     <licenseUrl>https://support.hp.com/us-en/document/c00581401</licenseUrl>
@@ -16,6 +16,13 @@
     <tags>hp admin printer resource kit park portable</tags>
     <summary>HP Printer Administrator Resource Kit (PARK) is a collection of tools, scripts and documentation to help print administrators install, deploy, configure and manage the HP Universal Print Driver.</summary>
     <description>
+---
+
+###[choco://hppark](choco://hppark)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 The HP Printer Administrator Resource Kit (PARK) is a collection of tools, scripts and documentation to help print administrators install, deploy, configure and manage the HP Universal Print Driver. The PARK contains both supported and unsupported software tools, scripts and documentation. Supported tools include:
 * HP Driver Configuration Utility
 * HP Driver Deployment Utility
@@ -24,8 +31,19 @@ The HP Printer Administrator Resource Kit (PARK) is a collection of tools, scrip
 * AutoUpgradeUPD	
 * PRNCon
 
+[Product Brief](http://www8.hp.com/h20195/v2/getpdf.aspx/4AA5-3730ENW.pdf)
+
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hppark/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+  </description>
+  <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c03635707</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
