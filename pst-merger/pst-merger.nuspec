@@ -48,6 +48,7 @@ See [website](http://www.pst-merger.com/) for complete list of features. (Too bi
     <releaseNotes>http://www.pst-merger.com/version-history.aspx</releaseNotes>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.27" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
   <files>
