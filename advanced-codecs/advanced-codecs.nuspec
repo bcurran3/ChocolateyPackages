@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>11.2.4</version>
+    <version>11.2.9</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
@@ -75,7 +75,7 @@ Things the Shark pack does that other packs cannot do . . .
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl>
     <dependencies>
-      <dependency id="autohotkey" />
+      <dependency id="autohotkey" version="1.1.27"/>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
