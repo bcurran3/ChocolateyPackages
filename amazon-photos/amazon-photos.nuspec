@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>amazon-photos</id>
-    <version>5.6.0.102</version>
+    <version>5.8.3.230</version>
     <title>Amazon Photos (Install)</title>
     <authors>Amazon.com</authors>
     <owners>bcurran3</owners>
