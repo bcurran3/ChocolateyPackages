@@ -2,7 +2,7 @@
 $packageName   = 'amazon-photos'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://d29x207vrinatv.cloudfront.net/win/AmazonPhotosSetup.exe'
-$checksum      = 'E9C1C2197A39758447047AFC7C2EB219F918D13440734C1B069CAECF50DE61BA'
+$checksum      = '47B668F665973B0B4E85B66D389C4204CD26A646ADCE615DED79C5C35713A047'
 
 $packageArgs = @{
   packageName    = $packageName
