@@ -9,9 +9,9 @@ $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
 $checksum64     = 'FEB0C221737406A4859AEBC2C8D6F676EA9CC32619E1FAE46A3298546D0B4D57'
 
 
-if (Get_IsIntelVideo)
+if (Get-IsIntelVideo)
   {
-   Write-Host "Intel network adapter found." -Foreground Magenta
+   Write-Host "  ** Intel network adapter found." -Foreground Magenta
   } else {
    Write-Host "No Intel network adapters found. Aborting." -Foreground Red
    throw
