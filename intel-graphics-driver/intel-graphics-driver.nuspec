@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-graphics-driver</id>
+    <version>25.20.100.6618</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver_25.20.100.6577</packageSourceUrl>
+    <title>Intel® Graphics Driver for Windows® 10</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://downloadcenter.intel.com/download/28567/Intel-Graphics-Windows-10-DCH-Drivers</projectUrl>
+    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>intel graphics video driver notsilent</tags>
+    <summary>Intel® Graphics Driver for Windows® 10</summary>
+    <description>
+---
+
+###[choco://intel-graphics-driver](choco://intel-graphics-driver)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+###About Intel® Software and Drivers
+
+WARNING: Failure to follow the guidance below may result in system instability
+
+These new drivers labeled as Windows DCH graphics drivers aren't backward compatible with our previous graphics drivers that we are now labeling Legacy. This means if later you want to revert to a Legacy driver you will need to uninstall the driver via Windows Apps and Features and reboot the system before installing a Legacy driver. Failure to do so may result in minor to major system instability.
+
+DO NOT use the INF / Have-Disk method to install or uninstall this driver, as it bypasses the Intel installer designed to install these new drivers, thereby possibly resulting in minor to major system instability. For this reason, we're not providing the ZIP file for the next several driver releases while users transition to this new Microsoft* driver platform.
+
+[For more information about DCH drivers](https://www.intel.com/content/www/us/en/support/articles/000031275/graphics-drivers.html)
+
+HIGHLIGHTS:
+* Launch Driver
+* Dirt Rally 2.0
+* Sid Meier's Civilization VI: Gathering Storm
+* Apex Legends
+* Performance improvements for Arma 3
+* Enhanced support for DirectML
+	
+ ###Operating System(s):   
+ 
+* Microsoft Windows* 10-64 - Fall Creators Update
+* Microsoft Windows* 10-64 - April 2018 Update
+* Microsoft Windows* 10-64 - October 2018 Update
+
+Supports Intel(R) UHD Graphics, Intel(R) HD Graphics, Intel(R) Iris(R) Plus Graphics on:
+* 6th Gen Intel(R) Core(TM) processor family (Codename Skylake)
+* 7th Gen Intel(R) Core(TM) processor family (Codename Kaby Lake)
+* 8th Gen Intel(R) Core(TM) processor family (Codename Kaby Lake-R, Coffee Lake)
+* 9th Gen Intel(R) Core(TM) processor family (Codename Coffee Lake-R)
+* Amber Lake
+* Apollo Lake
+* Gemini Lake
+* Whiskey Lake
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/intel-graphics-driver_25.20.100.6577/readme.md)**
+
+
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/28567/eng/ReadMe.txt</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey" version="1.1.27" />
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="dependency-windows10" version="10.1709" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
