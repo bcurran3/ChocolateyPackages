@@ -1,23 +1,17 @@
-﻿$packageName    = 'vhdattach'
-$installerType  = 'exe'
-$url            = 'https://www.medo64.com/download/vhdattach420.exe'
-$checksum       = 'C84FFE04B19D477DDFA645D5AEC9100C21F4363417B7EC933E4A7F7560CF38F8'
-$silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0,1)
-$softwareName   = 'VHD Attach*'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'vhdattach'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = "$toolsDir\vhdattach421.exe"
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir  
-  fileType      = $installerType
-  url           = $url
-  validExitCodes= $validExitCodes
-  silentArgs    = $silentArgs
-  softwareName  = $softwareName
-  checksum      = $checksum
-  checksumType  = 'sha256' 
-}
-
-Install-ChocolateyPackage @packageArgs
-
+  packageName    = $packageName
+  fileType       = 'EXE'
+  file           = $url
+  validExitCodes = @(0,1)
+  silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  softwareName   = 'VHD Attach*'
+  }
+  
+Install-ChocolateyInstallPackage @packageArgs
+Remove-Item $toolsDir\*.exe -force | Out-Null
+Remove-Item $toolsDir\*.ignore -force | Out-Null
