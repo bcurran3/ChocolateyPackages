@@ -5,7 +5,7 @@
     <id>intel-rst-driver</id>
     <version>17.2.0.1009</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver/intel-rst-driver_16.8.0.1000</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://downloadcenter.intel.com/download/27681/Intel-Rapid-Storage-Technology-Intel-RST-User-Interface-and-Driver?product=55005</projectUrl>
@@ -43,7 +43,7 @@ Note: Contact your system manufacturer prior to installing these applications or
 
 **This version for Windows 10 and Server 2016 only.**
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-rst-driver/intel-rst-driver_16.8.0.1000/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-rst-driver/readme.md)**
 
     
 
