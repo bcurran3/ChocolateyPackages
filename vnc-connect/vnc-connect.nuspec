@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>6.4.0</version>
+    <version>6.4.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
@@ -19,10 +19,14 @@
     <tags>realvnc vnc connect remote control</tags>
     <summary>VNC Connect is the latest version of RealVNC remote control software.</summary>
     <description>
-___
-[choco://vnc-connect](choco://vnc-connect)
+---
+
+###[choco://vnc-connect](choco://vnc-connect)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___	
+
+---
+
+
 ![Screen shot of VNC Connect Viewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-viewer_screenshot.png)
 
 ###VNC Connect business benefits
@@ -80,10 +84,15 @@ Support business and compliance objectives with audit and security functionality
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-connect/readme.md)**
 
-___
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
   </metadata>
   <files>
