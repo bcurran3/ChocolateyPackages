@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>homeassistant</id>
-    <version>0.89.2</version>
+    <version>0.90.2</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homeassistant</packageSourceUrl>
     <title>Home Assistant (Install)</title>
