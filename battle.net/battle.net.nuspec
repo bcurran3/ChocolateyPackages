@@ -7,7 +7,7 @@
     <title>Battle.net</title>
     <authors>BLIZZARD ENTERTAINMENT, INC.</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl></packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/battle.net</packageSourceUrl>
     <licenseUrl>https://www.blizzard.com/legal/</licenseUrl>
     <copyright>BLIZZARD ENTERTAINMENT, INC.</copyright>
     <projectUrl>https://www.blizzard.com/en-us/apps/battle.net/desktop</projectUrl>
