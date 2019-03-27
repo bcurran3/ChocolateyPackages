@@ -15,11 +15,11 @@ $packageArgs = @{
   checksum      = $checksum
   checksumType  = 'sha256'
   silentArgs    = ''
-  validExitCodes= ''
+  validExitCodes= @(0)
 }
 
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-
+Start-Sleep 10
 Start-WaitandStop "Battle.net"
 Start-CheckandStop "AutoHotKey"
