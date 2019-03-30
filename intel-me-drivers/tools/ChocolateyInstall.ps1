@@ -1,11 +1,12 @@
-﻿$packageName   = 'intel-me-drivers' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName   = 'intel-me-drivers' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $pp            = Get-PackageParameters
 $unzipLocation = "$toolsDir\unzippedfiles"
-$url           = 'https://downloadmirror.intel.com/28083/eng/ME_SW_1824.12.0.1140.zip'
-$checksum      = 'A12196D391491F02EE13CCE100C7B4692ECBE09B985C0A6F83C9FBE2DE6D9F26'
+$url           = 'https://downloadmirror.intel.com/28679/eng/ME_SW_1909.12.0.1236.zip'
+$checksum      = 'AF42C06A6322BEACCD4B28FA80997B6679A12E6BB688E099C141369046ECB6EC'
 
-New-Item $unzipLocation -type directory | out-null
+New-Item $unzipLocation -Type Directory | Out-Null
 
 $packageArgs = @{
   packageName    = $packageName
@@ -22,7 +23,7 @@ Install-ChocolateyZipPackage @packageArgs
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
-  file           = "$unzipLocation\ME_SW_1824.12.0.1140\Consumer\ME_SW_MSI\SetupME.exe"
+  file           = "$unzipLocation\ME_SW_$ENV:ChocolateyPackageVersion\Cons\ME_SW_MSI\SetupME.exe"
   silentArgs     = '-overwrite -s -preinst'
   validExitCodes = @(0)
   softwareName   = 'Intel® Management Engine Components'
@@ -32,7 +33,7 @@ $packageArgs = @{
 $packageArgs2 = @{
   packageName    = $packageName
   fileType       = 'EXE'
-  file           = "$unzipLocation\ME_SW_1824.12.0.1140\Corporate\ME_SW_MSI\SetupME.exe"
+  file           = "$unzipLocation\ME_SW_$ENV:ChocolateyPackageVersion\Cor\ME_SW_MSI\SetupME.exe"
   silentArgs     = '-overwrite -s -preinst'
   validExitCodes = @(0)
   softwareName   = 'Intel® Management Engine Components'
@@ -43,21 +44,21 @@ if ($pp["TYPE"] -ne $null -or $pp["TYPE"] -ne '')
     {
      if ($pp["TYPE"] -eq "consumer")
          {
-		  Write-Host "  ** Installing Consumer version of Intel Management Engine Components." -foreground magenta
+		  Write-Host "  ** Installing Consumer version of Intel Management Engine Components." -Foreground Magenta
           Install-ChocolateyInstallPackage @packageArgs
          }
 	 if ($pp["TYPE"] -eq "corporate")
 	     {
-		  Write-Host "  ** Installing Corporate version of Intel Management Engine Components." -foreground magenta
+		  Write-Host "  ** Installing Corporate version of Intel Management Engine Components." -Foreground Magenta
 	      Install-ChocolateyInstallPackage @packageArgs2
 	     }
     }
 
 if ($pp["TYPE"] -eq $null -or $pp["TYPE"] -eq '')
      { 
-	   Write-Host "  ** Installing Consumer version of Intel Management Engine Components." -foreground magenta	  
+	   Write-Host "  ** Installing Consumer version of Intel Management Engine Components." -Foreground Magenta
 	   Install-ChocolateyInstallPackage @packageArgs
      }
 	
 Start-Sleep -s 10
-Remove-Item $unzipLocation -recurse | out-null
+Remove-Item $unzipLocation -Recurse | Out-Null
