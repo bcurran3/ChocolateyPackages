@@ -1,57 +1,63 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>trojan-remover</id>
-    <title>Trojan Remover (Install)</title>
-    <version>6.9.5.2959</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trojan-remover</packageSourceUrl>		
+    <title>Trojan Remover (Trial) (Install)</title>
+    <version>6.9.5.2963</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/trojan-remover</packageSourceUrl>
     <authors>Simply Super Software</authors>
     <owners>bcurran3</owners>
-    <summary>Trojan Remover aids in the removal of Malware - Trojan Horses, Worms, Adware, Spyware - when standard anti-virus software either fails to detect them or fails to effectively eliminate them. Standard antivirus programs are good at detecting this Malware, but not always so good at effectively removing it.</summary>
-    <description>
-![Screenshot of Trojan Remover](http://www.simplysup.com/tremover/images/screen1_small.png)
-![Screenshot of Trojan Remover](http://www.simplysup.com/tremover/images/scanshot_small.png)	
-####Target Platforms 
-Trojan Remover runs on Windows 10, Windows 8/8.1, Windows 7, Windows Vista and Windows XP. (A version still compatible with Windows 98/ME can be downloaded from here).
-####Description 
-Trojan Remover aids in the removal of Malware - Trojan Horses, Worms, Adware, Spyware - when standard anti-virus software either fails to detect them or fails to effectively eliminate them. Standard antivirus programs are good at detecting this Malware, but not always so good at effectively removing it.
-Trojan Remover is designed specifically to disable/remove Malware without the user having to manually edit system files or the Registry. The program also removes the additional system modifications some Malware carries out which are ignored by standard antivirus and trojan scanners.
-
-####What Trojan Remover Does
-Trojan Remover examines all the system files, the Windows Registry and the programs and files loaded at boot time. The majority of malicious programs (once triggered) load this way.
-
-Trojan Remover scans ALL the files loaded at boot time for Adware, Spyware, Remote Access Trojans, Internet Worms and other malware. Trojan Remover also checks to see if Windows loads Services which are hidden by Rootkit techniques and warns you if it finds any.
-
-For each identified Trojan Horse, Worm, or other malware, Trojan Remover pops up an alert screen which shows the file location and name; it offers to remove the program's reference from the system files and allows you to rename the file to stop its activation.
-
-Most modern Malware programs are memory-resident, which makes their de-activation more difficult. How many times have you been told to start your computer in 'Safe' mode, or even worse, in DOS? Trojan Remover does all this for you. When it finds Malware that is memory-resident, Trojan Remover automatically re-starts (on request) your system and completely DISABLES the Malware before Windows restarts.
-
-Trojan Remover writes a detailed logfile every time it performs a scan. This logfile contains information on which programs load at boot-time, and what (if any) actions Trojan Remover carried out. The logfile can be viewed and printed using Notepad.
-
-The FastScan component of Trojan Remover is set to automatically scan for Malware every time you start your PC (you can disable this if you wish). You can also run the FastScan manually any time you wish (START | All Programs | Trojan Remover | FastScan). This FastScan checks all program-loading points - it is a quick and effective check for actively-loading malicious programs.
-
-You can scan the whole drive, or any directories on the drive, by selecting Scan a Drive/Directory from the main Trojan Remover menu.
- 
-You can scan individual files and directories from within Windows Explorer.
- 
-Trojan Remover incorporates an integral Updater allowing for quick and easy Database updates. You can use the Windows Task Scheduler to schedule automatic updates.
- 
-The program comes with a comprehensive help file (this can be viewed online, here).
-Context-sensitive help is also available for most screens by tapping the F1 key.
-
-This essential security utility is available for you to try out FREE. Download a fully-working evaluation copy today. The program will work for 30 days before you need to decide whether you would like to register it.
-####The registration fee for Trojan Remover is US$24.95*. This fee covers all database updates and future program updates for 1 year from the date of registration. The fee for renewals in subsequent years is currently set at US$17.95* per year. You can install Trojan Remover on up to 3 additional computers, for no extra charge.
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/trojan-remover/readme.md)**
-    </description>
     <projectUrl>http://www.simplysup.com/tremover/</projectUrl>
     <docsUrl>http://simplysup.com/tremover/faq.html</docsUrl>
     <bugTrackerUrl>http://www.simplysup.com/tremover/changes.html</bugTrackerUrl>
     <tags>trojan remover malware adware worms spyware virus trial</tags>
     <copyright>Copyright (C) Simply Super Software All Rights Reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.simplysup.com/tremover/images/tricon_256_stretched.jpg</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/trojan-remover/trojan-remover_icon.png</iconUrl>
+    <summary>Trojan Remover aids in the removal of Malware - Trojan Horses, Worms, Adware, Spyware - when standard anti-virus software either fails to detect them or fails to effectively eliminate them. Standard antivirus programs are good at detecting this Malware, but not always so good at effectively removing it.</summary>
+    <description>
+---
+
+###[choco://trojan-remover](choco://trojan-remover)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of Trojan Remover](http://www.simplysup.com/tremover/images/screen1_small.png)
+![Screenshot of Trojan Remover](http://www.simplysup.com/tremover/images/scanshot_small.png)	
+
+
+ 	 	 	
+ 
+Trojan Remover aids in the removal of Malware - Trojan Horses, Worms, Adware, Spyware - when standard anti-virus software either fails to detect them or fails to effectively eliminate them. Standard antivirus programs are good at detecting this Malware, but not always good at effectively removing it.
+
+ 
+
+Trojan Remover runs on Windows XP, Windows Vista, Windows 7 and 8, through to the latest Windows 10.
+
+The majority of Virus and Trojan Scanners are well able to detect malicious software - Trojan Horses, Internet Worms, Adware/Spyware etc. - but are not always very efficient in removing them once they have been triggered. 
+
+Trojan Remover is designed specifically to disable/remove Malware without the user having to manually edit system files or the Registry. The program also removes the additional system modifications some Malware carries out which are ignored by standard antivirus and trojan scanners.
+
+ 
+
+Trojan Remover scans ALL the files loaded at boot time for Adware, Spyware, Remote Access Trojans, Internet Worms and other malware. Trojan Remover also checks to see if Windows loads Files/Services which are hidden by Rootkit techniques and warns you if it finds any.
+
+This essential security utility is available for you to try out FREE. Download a fully-working evaluation copy today. The program will work for 30 days before you need to decide whether you would like to register it.
+
+The registration fee for Trojan Remover is US$24.95. This fee covers all database updates and future program updates for 1 year from the date of registration. The fee for renewals in subsequent years is currently set at US$17.95 per year. You can install Trojan Remover on up to 3 additional computers, for no extra charge. EU residents will also have to pay VAT at the standard rate applicable in their country.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/trojan-remover/readme.md)**
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

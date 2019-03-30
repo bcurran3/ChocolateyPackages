@@ -1,4 +1,5 @@
-﻿$processor = Get-WmiObject Win32_Processor
+﻿$ErrorActionPreference = 'Stop'
+$processor = Get-WmiObject Win32_Processor
 $is64bit = $processor.AddressWidth -eq 64
 if ($is64bit) {
   $unpath = "${Env:ProgramFiles(x86)}\Trojan Remover\unins000.exe"
