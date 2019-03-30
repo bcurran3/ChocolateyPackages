@@ -4,7 +4,7 @@
   <metadata>
     <id>tcc</id>
     <version>24.2.44.0</version>
-    <title>Total Command Console (Trial) (Install)</title>
+    <title>Take Command Console (Trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tcc</packageSourceUrl>
