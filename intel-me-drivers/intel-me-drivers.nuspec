@@ -3,37 +3,55 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-me-drivers</id>
-    <version>1824.12.0.1140 </version>
+    <version>1909.12.0.1236</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-me-drivers</packageSourceUrl>
-    <title>Intel® Management Engine Driver for Windows 7*, 8.1*, and Windows® 10 (Install)</title>
+    <title>Intel® Management Engine Driver for Windows 8.1* and Windows® 10 (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://www.intel.com/content/www/us/en/support/articles/000008927/software/chipset-software.html</projectUrl>
-    <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/28679/Intel-Management-Engine-Driver-for-Windows-8-1-and-Windows-10</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-me-drivers/intel-me-drivers_icon.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>intel management engine me driver drivers windows</tags>
-    <summary>Intel® Management Engine Driver for Windows 7*, 8.1*, and Windows® 10</summary>
+    <summary>IIntel® Management Engine Driver for Windows 8.1* and Windows® 10</summary>
     <description>
-[Alternate projectUrl](https://downloadcenter.intel.com/download/28083/Intel-Management-Engine-Driver-for-Windows-7-8-1-and-Windows-10)
-	
-##Purpose
+---
 
-Installs the Intel® Management Engine (Intel® ME) components for the following platforms and operating systems:
+###[choco://intel-me-drivers](choco://intel-me-drivers)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
-###Operating systems:
+---
 
-* Windows*7 / Windows* 8 / Windows* 8.1 / Windows® 10 / Windows Server* 2008 64-bit versions / Windows Server* 2008 R2 / Windows Server* 2012 / Windows Server* 2016
+Intel® Management Engine Driver for Windows 8.1* and Windows® 10 Supporting SKL, KBL, and KBL-R Consumer and Corporate SKUs.
 
-###Platforms:
-
-* 6th generation Intel® Core™ Processor family (codename Skylake)
-* 7th generation Intel® Core™ Processor family (codename Kaby Lake)
-* 8th generation Intel® Core™ Processor family (codename Kaby Lake R)
-* 9th generation Intel® Core™ Processor family (codename Coffee Lake)
-
-The Intel ME installer detects the Intel ME's capabilities and installs the relevant drivers.
+This download is valid for the product(s) listed below.
+* Intel® B150 Chipset
+* Intel® B250 Chipset
+* Intel® B360 Chipset
+* Intel® B365 Chipset
+* Intel® H110 Chipset
+* Intel® H170 Chipset
+* Intel® H270 Chipset
+* Intel® H310 Chipset
+* Intel® H370 Chipset
+* Intel® Q150 Chipset
+* Intel® Q170 Chipset
+* Intel® Q250 Chipset
+* Intel® Q270 Chipset
+* Intel® Q370 Chipset
+* Intel® X299 Chipset
+* Intel® Z170 Chipset
+* Intel® Z270 Chipset
+* Intel® Z370 Chipset
+* Intel® Z390 Chipset
+* Mobile Intel® HM170 Chipset
+* Mobile Intel® HM175 Chipset
+* Mobile Intel® HM370 Chipset
+* Mobile Intel® QM170 Chipset
+* Mobile Intel® QM175 Chipset
+* Mobile Intel® QM370 Chipset
+* Mobile Intel® QMS380 Chipset
 
 ###INSTALL INSTRUCTIONS:
 There is a **Consumer** and a **Corporate** version of these drivers. You can specify which version to install using package parameters, examples are below. Not specifying a version will default to the Consumer drivers.
@@ -47,10 +65,11 @@ There is a **Consumer** and a **Corporate** version of these drivers. You can sp
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
-	</description>
+	
+</description>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>	
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
