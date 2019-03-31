@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>7.10.3</version>
+    <version>7.12.43</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
@@ -16,6 +16,13 @@
     <tags>logitech options keyboard mouse utility notsilent</tags>
     <summary>Logitech Options software lets you customize your device settings.</summary>
     <description>
+---
+
+###[choco://logitech-options](choco://logitech-options)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ###Logitech Options software lets you customize your device's settings as follows:
 
 * Change function key shortcuts
@@ -63,11 +70,12 @@
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
-	</description>
+	
+</description>
     <dependencies>
-      <dependency id="autohotkey" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  	  
-    </dependencies>	
+      <dependency id="autohotkey" version="1.1.27" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -2,8 +2,8 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe   = 'AutoHotKey'
 $ahkFile  = "$toolsDir\logitech-options_install.ahk"
-$url      = 'https://download01.logi.com/web/ftp/pub/techsupport/options/Options_7.10.3.exe'
-$checksum = '4D74334945E0A2DEE72B4D0EEA5815DF48A7FAEEC71D8FB8754174DC6DBB1DC2'
+$url      = 'https://download01.logi.com/web/ftp/pub/techsupport/options/Options_7.12.43.exe'
+$checksum = 'CC96E05BF0731AC149E59DE4F776BC0E16DE02BD2169359C36ABEB7427460D0F'
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
