@@ -1,31 +1,44 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-processor-identification-utility</id>
-    <version>5.80.20171018</version>
+    <version>6.0.0211</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-processor-identification-utility</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-processor-identification-utility</packageSourceUrl>
     <title>Intel Processor Identification Utility (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/7838/Intel-Processor-Identification-Utility-Windows-Version</projectUrl>
-    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>	
+    <projectUrl>https://downloadcenter.intel.com/download/28539</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-processor-identification-utility/intel-processor-identification-utility_icon.png</iconUrl>
     <copyright>Copyright(C) Intel Corporation. All rights reserved</copyright>
-	<licenseUrl>https://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <licenseUrl>https://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>intel cpu processor utility</tags>
     <summary>Displays information about your Intel processor.</summary>
     <description>
-![Screenshot of Intel Processor Identification Utility ](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-processor-identification-utility/intel-processor-identification-utility_screenshot.png)
+---
 
-This utility identifies current Intel® Processors and technologies and enables you to run and save a processor ID report. The utility also features a frequency test to make sure that the processor is working at the tested and rated speed. [See processors recommended for this utility.](https://www.intel.com/content/www/us/en/support/articles/000005531.html)
+###[choco://intel-processor-identification-utility](choco://intel-processor-identification-utility)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
-* Identifies processor and if it is working at the correct frequency.
-* Provides other processor details and information on certain Intel® technologies.
-* [Intel® Processor ID guided tour video.](https://www.intel.com/content/dam/support/us/en/videos/processors/Intel-Processor-Diagnostic-Tool.mp4)
+---
+
+![Screenshot of Intel Processor Identification Utility ](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-processor-identification-utility/intel-processor-identification-utility_screenshot.png)
+
+Intel® Processor Identification Utility is a free software that you can install on your machine to identify the actual specification of your processor. It displays the Graphics information, Chipset information, Technologies supported by the processor etc.
+
+This version of the application supports automatic software update so you will be notified when there is a new update available. The list of supported processor that the tool can identify is mentioned below. [List](https://downloadcenter.intel.com/download/28539)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-processor-identification-utility/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
