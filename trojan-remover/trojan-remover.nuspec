@@ -11,7 +11,7 @@
     <projectUrl>http://www.simplysup.com/tremover/</projectUrl>
     <docsUrl>http://simplysup.com/tremover/faq.html</docsUrl>
     <bugTrackerUrl>http://www.simplysup.com/tremover/changes.html</bugTrackerUrl>
-    <tags>trojan remover malware adware worms spyware virus trial</tags>
+    <tags>trojan remover malware adware worms spyware virus trial notsilent binary</tags>
     <copyright>Copyright (C) Simply Super Software All Rights Reserved</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/trojan-remover/trojan-remover_icon.png</iconUrl>
