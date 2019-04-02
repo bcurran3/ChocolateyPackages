@@ -1,0 +1,22 @@
+========================= Trojan Remover =========================
+
+From: Simply Super Software (Sales) <sales@simplysup.com> 
+Sent: Monday, April 1, 2019 4:04 PM
+To: Bill Curran <REDACTED>
+Subject: Re: Humble NFR request for Trojan Remover
+
+Hi Bill,
+
+This email confirms that you have our permission to distribute the installation program for Trojan Remover for inclusion within the Chocolatey Community Repository.
+
+
+
+Kind Regards,
+
+Nigel Thomas
+Simply Super Software
+Support: www.simplysup.com/support/
+Frequently Asked Questions: www.simplysup.com/faq/
+
+
+========================= Trojan Remover =========================
