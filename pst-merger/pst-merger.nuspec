@@ -49,6 +49,7 @@ See [website](http://www.pst-merger.com/) for complete list of features. (Too bi
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1.27" />
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="dotnet3.5" version="3.5" />	  
     </dependencies>
   </metadata>
   <files>
