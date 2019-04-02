@@ -1,0 +1,7 @@
+========================= BrowserAddonsView =========================
+
+bcurran3 downloads and packages the zips for BrowserAddonsView
+from the developer's site at:
+https://www.nirsoft.net/utils/web_browser_addons_view.html
+
+========================= BrowserAddonsView =========================
