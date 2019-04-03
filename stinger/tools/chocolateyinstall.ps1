@@ -2,9 +2,9 @@
 $packageName      = 'stinger' 
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url              = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger32.exe'
-$checksum         = '869C42AA7DF3A2ADA782F978F6E32DB0C39B4B04DB4844E1615604BE8B634EA7'
+$checksum         = '3C4F33947F6280CD312F57AE86AF0A462DD2586D263B79ACB1C6481E956BCA0A'
 $url64            = 'http://downloadcenter.mcafee.com/products/mcafee-avert/stinger/stinger64.exe'
-$checksum64       = '80579FD4DAD7478ABD87EABBBDA4EF0ECA3A858E5040200CC9813A1CCABD9891'
+$checksum64       = '7611CD5D66170FCEBD8802BA0840EBEA3D861F8DB31A940CED668294DE389A83'
 $ExeFile32        = 'stinger32.exe'
 $ExeFile64        = 'stinger64.exe'
 $ShortcutName     = 'McAfee Stinger'
