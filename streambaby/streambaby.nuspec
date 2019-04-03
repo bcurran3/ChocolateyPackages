@@ -31,7 +31,7 @@ Remembers your position in the video when you stop watching and automatically st
 * Uses ffmpeg binary executable for transcoding. MPG/MP4 streaming is built-in
 * Uses ffmpeg to generate "preview" views on the fly.
 
-**PACKAGING NOTES:** Read the documentation and edit your streambaby.ini file to get started.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/streambaby/readme.md)**
     
 
 ---
