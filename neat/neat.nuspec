@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>neat</id>
-    <version>5.7.1.20190207</version>
+    <version>5.7.1.20190403</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neat</packageSourceUrl>
     <title>Neat 5 for Windows (Install)</title>
@@ -14,13 +14,15 @@
     <licenseUrl>http://www.neat.com/policies/terms-and-conditions/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://s3.amazonaws.com/neat-marketing/UserGuides/Neat5ForPCUserGuideMarch2012.pdf</docsUrl>
-    <tags>neat scan scanner scanning neatdesk notsilent</tags>
+    <tags>neat scan scanner scanning neatdesk</tags>
     <summary>Neat 5 for Windows - scanning software for NeatReceipts, NeatDesk, and NeatConnect scanners</summary>
     <description>
-___
-[choco://neat](choco://neat)
+---
+
+###[choco://neat](choco://neat)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
 
 ![Screenshot of Neat 5 for Windows](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/neat/neat_screenshot.png)
 
@@ -40,13 +42,17 @@ The Neat Company [announced](http://www.neat.com/helpcenter/ending-support-of-le
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/neat/readme.md)**
 
-___
+
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
+
+---
 
 </description>
     <dependencies>
-      <dependency id="dotnet3.5" />
+      <dependency id="dotnet3.5" version="3.5" />
     </dependencies>
   </metadata>
   <files>
