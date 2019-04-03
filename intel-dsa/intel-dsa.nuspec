@@ -1,27 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>3.7.0.8</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>		
-    <owners>bcurran3</owners>
+    <version>19.3.12.3</version>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
     <authors>Intel Corporation</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <projectUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-dsa/intel-dsa_icon.png</iconUrl>
-    <copyright>Intel Corporation</copyright>
-    <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.intel.com/content/www/us/en/support/topics/idsa-faq.html</docsUrl>
-    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
-    <tags>dsa intel driver support assistant update utility</tags>
-    <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
     <description>
-***	
-[choco://intel-dsa](choco://intel-dsa)
+---
+
+###[choco://intel-dsa](choco://intel-dsa)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
+
 
 ###Purpose
 
@@ -41,14 +38,24 @@ This application does not support older versions of Internet Explorer. We recomm
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
 
-***
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
+
+---
+
 </description>
+    <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
     <releaseNotes>https://downloadcenter.intel.com/download/28425/Intel-Driver-Support-Assistant?v=t</releaseNotes>
+    <copyright>Intel Corporation</copyright>
+    <tags>dsa intel driver support assistant update utility</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>
+    <docsUrl>https://www.intel.com/content/www/us/en/support/topics/idsa-faq.html</docsUrl>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-    </dependencies>		
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
