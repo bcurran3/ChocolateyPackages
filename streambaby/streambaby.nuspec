@@ -1,14 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>streambaby</id>
     <title>streambaby (Install)</title>
-    <version>0.54</version>
+    <version>0.54.0.20190403</version>
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
     <summary>A TiVo HME application for streaming videos</summary>
     <description>
+---
+
+###[choco://streambaby](choco://streambaby)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of streambaby on TiVo menu] (https://a.fsdn.com/con/app/proj/streambaby/screenshots/streambaby.gif)
 ![Screenshot of streambaby] (https://a.fsdn.com/con/app/proj/streambaby/screenshots/Selection_screen.gif)
 
@@ -25,18 +32,27 @@ Remembers your position in the video when you stop watching and automatically st
 * Uses ffmpeg to generate "preview" views on the fly.
 
 **PACKAGING NOTES:** Read the documentation and edit your streambaby.ini file to get started.
-    </description>
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <projectUrl>https://sourceforge.net/projects/streambaby/</projectUrl>
     <projectSourceUrl>https://sourceforge.net/p/streambaby/code/HEAD/tree/</projectSourceUrl>
-    <docsUrl>https://sourceforge.net/p/streambaby/wiki/Home/</docsUrl>	
+	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/streambaby</packageSourceUrl>
+    <docsUrl>https://sourceforge.net/p/streambaby/wiki/Home/</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/streambaby/discussion/general/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/streambaby/tickets/</bugTrackerUrl>
-    <tags>streambaby tivo hme stream streaming video server java admin</tags>
+    <tags>streambaby tivo hme stream streaming video server java oss cross-platform</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>https://sourceforge.net/projects/streambaby/files/</releaseNotes>
     <dependencies>
-      <dependency id="jre8" version="1.6" />	   
+      <dependency id="jre8" version="1.6" />
     </dependencies>
-    <releaseNotes>new version 0.54, package now copies over ini settings from previous version and changes directory permissions so the addons will download without requiring being run as admin</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
