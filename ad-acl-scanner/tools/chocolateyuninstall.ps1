@@ -1,5 +1,5 @@
-﻿$packageName  = 'ad-acl-scanner'
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'ad-acl-scanner'
 $shortcutName = 'AD ACL Scanner' 
 
-remove-item "$env:USERPROFILE\Desktop\$shortcutName.lnk" -Force -ErrorAction 'SilentlyContinue'
-
+Remove-Item "$ENV:USERPROFILE\Desktop\$shortcutName.lnk" -Force -ErrorAction SilentlyContinue
