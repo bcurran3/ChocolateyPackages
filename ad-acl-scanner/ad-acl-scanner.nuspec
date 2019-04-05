@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ad-acl-scanner</id>
-    <version>5.6.1</version>
+    <version>5.6.2</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ad-acl-scanner</packageSourceUrl>
     <title>AD ACL Scanner (Script)</title>
@@ -18,6 +18,13 @@
     <tags>ad active directory acl scanner powershell server</tags>
     <summary>A tool with GUI used to create reports of access control lists (DACLs) and system access control lists (SACLs) in Active Directory .</summary>
     <description>
+---
+
+###[choco://ad-acl-scanner](choco://ad-acl-scanner)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of AD ACL Scanner](https://cdn.staticaly.com/gh/canix1/ADACLScanner/master/src/ADACLScan5.0.jpg)	
 
 
@@ -67,14 +74,19 @@ It has the following features:
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ad-acl-scanner/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-	</description>
-    <releaseNotes>https://github.com/canix1/ADACLScanner/wiki/History</releaseNotes>	
+
+---
+
+</description>
+    <releaseNotes>https://github.com/canix1/ADACLScanner/wiki/History</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.0" />
-      <dependency id="powershell" version="2.0" />	  
+      <dependency id="dotnet4.0" version="4.0" />
+      <dependency id="powershell" version="2.0" />
     </dependencies>
   </metadata>
   <files>
