@@ -8,10 +8,10 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neat</packageSourceUrl>
     <title>Neat 5 for Windows (Install)</title>
     <authors>The Neat Company</authors>
-    <projectUrl>https://web.archive.org/web/20110612064526/http://neatco.com/products/neatdesk/</projectUrl>
+    <projectUrl>https://web.archive.org/web/20130208072345/http://www.neat.com/products/neat-pc</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/neat/neat_icon.png</iconUrl>
     <copyright>The Neat Company</copyright>
-    <licenseUrl>http://www.neat.com/policies/terms-and-conditions/</licenseUrl>
+    <licenseUrl>https://web.archive.org/web/20110612061347/http://neatco.com/our-company/policies.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://s3.amazonaws.com/neat-marketing/UserGuides/Neat5ForPCUserGuideMarch2012.pdf</docsUrl>
     <tags>neat scan scanner scanning neatdesk</tags>
