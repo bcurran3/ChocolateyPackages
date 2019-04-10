@@ -37,6 +37,10 @@ $UseGoogleDrive = $ConfigFile.Settings.Preferences.UseGoogleDrive
 $UseiCloudDrive = $ConfigFile.Settings.Preferences.UseiCloudDrive
 $UseNextcloud = $ConfigFile.Settings.Preferences.UseNextcloud
 $UseOneDrive = $ConfigFile.Settings.Preferences.UseOneDrive
+$UseOneDriveCommercial = $ConfigFile.Settings.Preferences.UseOneDriveCommercial
+$UseOneDriveConsumer = $ConfigFile.Settings.Preferences.UseOneDriveConsumer
+$UseOneDriveCommercial = $ConfigFile.Settings.Preferences.UseOneDriveCommercial
+$UseOneDriveConsumer = $ConfigFile.Settings.Preferences.UseOneDriveConsumer
 $UseownCloud = $ConfigFile.Settings.Preferences.UseownCloud
 $UseReadyCLOUD = $ConfigFile.Settings.Preferences.UseReadyCLOUD
 $UseResilioSync = $ConfigFile.Settings.Preferences.UseResilioSync
@@ -245,6 +249,22 @@ if ($ENV:OneDrive) {$OneDriveExists="True"} else {$OneDriveExists="False"}
 if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
    {
     $SavePath = "$ENV:OneDrive\$SaveFolderName\$ENV:ComputerName"
+    Write-PackagesConfig
+   }      
+   
+   # Backup Chocolatey package names on local computer to packages.config file in OneDriveCommercial directory if it exists
+if ($ENV:OneDriveCommercial) {$OneDriveCommercialExists="True"} else {$OneDriveCommercialExists="False"}
+if ($UseOneDriveCommercial -match "True" -and ($OneDriveCommercialExists -match "True"))
+   {
+    $SavePath = "$ENV:OneDriveCommercial\$SaveFolderName\$ENV:ComputerName"
+    Write-PackagesConfig
+   }      
+   
+   # Backup Chocolatey package names on local computer to packages.config file in OneDriveConsumer directory if it exists
+if ($ENV:OneDriveConsumer) {$OneDriveConsumerExists="True"} else {$OneDriveConsumerExists="False"}
+if ($UseOneDriveConsumer -match "True" -and ($OneDriveConsumerExists -match "True"))
+   {
+    $SavePath = "$ENV:OneDriveConsumer\$SaveFolderName\$ENV:ComputerName"
     Write-PackagesConfig
    }      
 
