@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.3028.0</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>		
+    <version>3.0.4334.0</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
     <authors>Pascal Pharand</authors>
-    <projectUrl>https://hyrules.github.io/WinHue3/</projectUrl>
-    <iconUrl>http://www.philips.ca/c-dam/corporate/homepage-articles/master/HUE/hue_still.jpg</iconUrl>	
+    <projectUrl>https://hyrules.github.io/WinHue/</projectUrl>
+    <iconUrl>http://www.philips.ca/c-dam/corporate/homepage-articles/master/HUE/hue_still.jpg</iconUrl>
     <licenseUrl>https://creativecommons.org/licenses/by-nc/2.0/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Hyrules/WinHue3</projectSourceUrl>
@@ -18,6 +18,11 @@
     <tags>hyrules winhue hue phillips light smarthome automation</tags>
     <summary>WinHue 3 - Controlling the Philips Hue lighting system from your Windows PC.</summary>
     <description>
+___
+###[choco://winhue](choco://winhue)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 (Officially WinHue 3 RC5)
 	
 ![Screenshot of WinHue](https://hyrules.github.io/WinHue3/assets/mainWindow.png)
@@ -58,16 +63,15 @@ WinHue also has a fully-featured console application bundled with the installer.
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***	
-	</description>
+	
+</description>
     <releaseNotes>https://github.com/Hyrules/WinHue3/releases</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.5.2" />
-      <dependency id="vcredist2010" />
+      <dependency id="dotnet4.5.2" version="4.5.2" />
+      <dependency id="vcredist2010" version="10.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
-
