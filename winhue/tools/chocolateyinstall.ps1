@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'winhue'
 $installerType  = 'EXE'
-$url            = 'https://github.com/Hyrules/WinHue3/releases/download/1.0/WinHue.3.0.3028.0.Setup.exe' 
-$checksum       = '963183653C507246DD87DEB8623DAB5EAB9980E42547EC524BC0BFC8100604F2'
+$url            = 'https://github.com/Hyrules/WinHue/releases/download/3.0.4334.0/WinHue.3.0.4334.0.Setup.exe' 
+$checksum       = '01DBC8735A8B854258CEEFA1229D27BD46901669FE0857B114E8090FC56B6A2A'
 
 $packageArgs = @{
   packageName   = $packageName
