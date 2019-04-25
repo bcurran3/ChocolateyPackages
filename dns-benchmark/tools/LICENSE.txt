@@ -1,0 +1,7 @@
+﻿============================== DNS Benchmark ==============================
+
+From inside the DNS Benchmark program under the Introduction tab:
+
+Please Note: This program is Copyright (c) 2010 by Gibson Research Corporation -- ALL RIGHTS RESERVED. This program is FREEWARE. Although it may not be altered in any way, it MAY BE FREELY COPIED AND DISTRIBUTED onto and through any and all computer media in ANY form or fashion. You are hereby granted the right to do so.
+
+============================== DNS Benchmark ==============================
