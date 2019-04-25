@@ -1,5 +1,4 @@
-﻿$packageName = 'flicflac'
-$softwareName = 'FlicFlac*' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'flicflac'
 
-Uninstall-ChocolateyZipPackage
-remove-item "$env:Public\Desktop\FlicFlac.lnk" -Force -ErrorAction 'SilentlyContinue'
+Remove-Item "$ENV:Public\Desktop\FlicFlac.lnk" -Force -ErrorAction SilentlyContinue
