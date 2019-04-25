@@ -1,0 +1,7 @@
+﻿============================== DNS Benchmark ==============================
+
+bcurran3 downloads and packages the executable for Domain Name Speed Benchmark from:
+https://www.grc.com/dns/benchmark.htm
+(https://www.grc.com/files/DNSBench.exe)
+
+============================== DNS Benchmark ==============================
