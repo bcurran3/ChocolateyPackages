@@ -2,7 +2,7 @@
 $packageName    = 'backupper-server'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www2.aomeisoftware.com/download/adb/ABServer.exe'
-$checksum       = 'C541C5572199D4988DCB690FB782E28C1277149A128D4C2135747F9CB0A8EB2D'
+$checksum       = '793C6D95EEEBF0E9711F48A6D8F2A5B4FF098793379F7D023773A62DAD99806C'
 
 if (!(Get-IsWinServer)) {
     Write-Warning "  ** This package is for Windows Server OSes only. Aborting."
@@ -19,4 +19,5 @@ $packageArgs = @{
   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'  
   validExitCodes= @(0,1)  
   }
+
 Install-ChocolateyPackage @packageArgs
