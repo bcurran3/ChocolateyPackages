@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>backupper-server</id>
-    <version>4.6.2</version>
+    <version>4.6.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/backupper-server</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>AOMEI Backupper Server (Install)</title>
@@ -56,7 +56,7 @@ What does Backupper Server include?
 	</description>
     <releaseNotes>http://www.backup-utility.com/changelog.html</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey" />
+      <dependency id="autohotkey" version="1.1.27"/>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
