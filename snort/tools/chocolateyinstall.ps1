@@ -1,17 +1,17 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'snort' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://www.snort.org/downloads/snort/Snort_2_9_11_1_Installer.exe'
-$checksum    = '8650BCB1CAF20B1416E3E50DEBABEEF5875C691D19F402E04DB0A6C5E2C932D5'
+$url         = 'https://www.snort.org/downloads/snort/Snort_2_9_13_Installer.exe'
+$checksum    = '6F5A5E1A69D218D19025BAB8A1BFE1FF86B06438C27DBC9DAFBEB3AF8AA797CB'
 $ahkExe      = 'AutoHotKey'
-$ahkFile     = Join-Path $toolsDir "SnortInstall.ahk"
+$ahkFile     = "$toolsDir\SnortInstall.ahk"
 
 Start-Process $ahkExe $ahkFile
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'exe' 
+  fileType      = 'EXE' 
   url           = $url
   silentArgs    = '/S' 
   checksum      = $checksum
