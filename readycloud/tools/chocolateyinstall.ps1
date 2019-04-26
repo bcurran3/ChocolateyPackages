@@ -2,7 +2,7 @@
 $packageName = 'readycloud' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'http://readycloud.netgear.com/client/install/ReadyCloudSetup.exe'
-$checksum    = '36400DAE69FBE5A695EBBFF54546EA64152D74FCD7386B6DB8BA6A5AD303D618'
+$checksum    = '5CA8918CD53384A6660863601AE528415AC14F1C3A5CA8C5E1DC04411979F67B'
 $ahkExe      = 'AutoHotKey'
 $ahkFile     = "$toolsDir\ReadyCLOUDinstall.ahk"
 
@@ -18,4 +18,5 @@ $packageArgs = @{
   silentArgs    = ''
   softwareName  = 'ReadyCLOUD' 
   }
+  
 Install-ChocolateyPackage @packageArgs
