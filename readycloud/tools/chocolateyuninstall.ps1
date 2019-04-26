@@ -1,4 +1,5 @@
-﻿$packageName = 'readycloud' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'readycloud' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe      = 'AutoHotKey'
 $ahkFile     = "$toolsDir\ReadyCLOUDuninstall.ahk"
