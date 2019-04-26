@@ -1,16 +1,16 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pdq-deploy</id>
-    <version>13.3.0.0</version>
+    <version>17.2.0.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pdq-deploy</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>PDQ Deploy (Install)</title>
     <authors>Admin Arsenal</authors>
     <projectUrl>http://www.adminarsenal.com/pdq-deploy/</projectUrl>
-    <iconUrl>http://cdn.adminarsenal.com/aa/img/logo-deploy.png</iconUrl>
-    <copyright>Copyright (C) 2017 Admin Arsenal Inc</copyright>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/pdq-deploy/pdq-deploy_icon.png</iconUrl>
+    <copyright>Copyright (C) Admin Arsenal Inc</copyright>
     <licenseUrl>http://www.adminarsenal.com/licensing/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.pdq.com/getting-started-pdq-deploy/</docsUrl>
@@ -18,7 +18,7 @@
     <tags>arsenal pdq deploy patch deployment tool trial admin</tags>
     <summary>Deploy software quickly with PDQ Deploy</summary>
     <description>
-![Screenshot of PDQ Deploy](http://cdn.adminarsenal.com/aa/img/choose%20targets.png)	
+![Screenshot of PDQ Deploy](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/pdq-deploy/pdq-deploy_screenshot.png)	
 
 ##What Can PDQ Deploy Do?
 
@@ -54,7 +54,7 @@ To be sure that these files are used during the installation, be sure to check t
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.0" />
+      <dependency id="dotnet4.0" version="4.0" />
     </dependencies>
   </metadata>
   <files>
