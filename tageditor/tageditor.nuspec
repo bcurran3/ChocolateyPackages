@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tageditor</id>
-    <version>3.2.0</version>
+    <version>3.2.1</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tageditor</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Tag Editor (Portable)</title>
@@ -19,12 +19,10 @@
     <tags>martchus tagedior mp4 aac flac vorbis id3 qt-gui opus matroska foss cross-platform binary portable</tags>
     <summary>A tag editor with Qt GUI and command-line interface supporting MP4/M4A/AAC (iTunes), ID3, Vorbis, Opus, FLAC and Matroska</summary>
     <description>
----
-
-[choco://tageditor](choco://tageditor)
+___
+###[choco://tageditor](choco://tageditor)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-
----
+___
 
 ![Screenshot of Tag Editor](https://cdn.staticaly.com/gh/Martchus/tageditor/b19a210f/resources/screenshots/mainwindow.png)	
 A tag editor with Qt GUI and command-line interface. Supports MP4 (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.
@@ -48,10 +46,13 @@ It also allows to inspect and validate the element structure of MP4 and Matroska
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/screenlogic-connect/readme.md)**
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	
+  
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
 </description>
   </metadata>
   <files>
