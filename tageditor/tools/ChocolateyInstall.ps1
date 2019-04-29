@@ -13,5 +13,5 @@ if ($bits -eq 64)
 	Remove-Item "$toolsDir\i686-w64-mingw32" -Recurse -Force
    }
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$exeTarget" -WorkingDirectory "$toolsDir\"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$exeTarget" -WorkingDirectory "$toolsDir\"   
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath "$exeTarget" -WorkingDirectory "$toolsDir\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$exeTarget" -WorkingDirectory "$toolsDir\"   
