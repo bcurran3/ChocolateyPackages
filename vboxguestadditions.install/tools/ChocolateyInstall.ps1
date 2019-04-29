@@ -1,10 +1,8 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'VBoxGuestAdditions.install' 
-$url            = 'https://download.virtualbox.org/virtualbox/5.2.12/VBoxGuestAdditions_5.2.12.iso'
-$checksum       = 'B81D283D9EF88A44E7AC8983422BEAD0823C825CBFE80417423BD12DE91B8046'
-$silentArgs     = '/S'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$validExitCodes = @(0)
-$fileLocation   = "$toolsDir\VBoxWindowsAdditions.exe"
+$url            = 'https://download.virtualbox.org/virtualbox/6.0.6/VBoxGuestAdditions_6.0.6.iso'
+$checksum       = '832152B63630CEB2F89FB460EEB35B74A1218DF903758157F785122392D32CEB'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -21,12 +19,12 @@ Set-Location "$toolsDir\cert"
 & ./VBoxCertUtil.exe add-trusted-publisher vbox-sha256.cer
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'EXE'
-  file          = $fileLocation
-  silentArgs    = $silentArgs
-  validExitCodes= $validExitCodes
-  softwareName  = ''
+  packageName    = $packageName
+  fileType       = 'EXE'
+  file           = "$toolsDir\VBoxWindowsAdditions.exe"
+  silentArgs     = '/S'
+  validExitCodes = @(0)
+  softwareName   = ''
 }
  
 Install-ChocolateyInstallPackage @packageArgs
