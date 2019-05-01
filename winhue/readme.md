@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* If the .NET depedency is installed along with this package, you will see a message saying"WinHue requires Microsoft .NET Framework 4.5.2. Please use Windows Update to install this version, and then re-run the WinHue setup program."
 
 ***
 
