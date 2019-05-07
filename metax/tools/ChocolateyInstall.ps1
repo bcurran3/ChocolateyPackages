@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $url      = 'https://www.danhinsley.com/downloads/MetaXSetup.msi'
-$checksum = '13D60996BF0C3EE78F03223DBE781CB50204BEE84FC7741F0ACF22D3978FFAE0'
+$checksum = '8B45303132C9F491B8EC2F97369F1B281F194BB1AC3167782D4045162B9979E7'
 
 $arguments = @{
     packageName    = $env:ChocolateyPackageName
