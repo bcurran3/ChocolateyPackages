@@ -1,22 +1,23 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-migration-exchange</id>
-    <version>5.0.33.22</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-migration-exchange</packageSourceUrl>	
-    <owners>bcurran3</owners>
+    <version>5.1.20.0</version>
     <title>G Suite Migration for Microsoft® Exchange (Install)</title>
     <authors>Google</authors>
-    <projectUrl>https://tools.google.com/dlpage/exchangemigration</projectUrl>
-	<iconUrl>https://4.bp.blogspot.com/-Pp8TROoyTwc/VeXXFhKQwWI/AAAAAAAACPo/b2g71CJ_Hj8/s1600/inline-googles-new-logo.png</iconUrl>
-    <copyright>Google</copyright>
+    <owners>bcurran3</owners>
     <licenseUrl>https://gsuite.google.com/terms/standard_terms.html</licenseUrl>
+    <projectUrl>https://tools.google.com/dlpage/exchangemigration</projectUrl>
+    <iconUrl>https://4.bp.blogspot.com/-Pp8TROoyTwc/VeXXFhKQwWI/AAAAAAAACPo/b2g71CJ_Hj8/s1600/inline-googles-new-logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.google.com/support/enterprise/static/gapps/docs/admin/en/gapps_exchange_migration/index.html</docsUrl>
-    <tags>gsmme google gsuite gapps migration exchange server</tags>
-    <summary>Tool for migrating from Microsoft Exchange to G Suite (formerly GApps)</summary>
     <description>
+___
+###[choco://gsuite-migration-exchange](choco://gsuite-migration-exchange)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+
 ##G Suite Migration for Microsoft® Exchange
 
 You can migrate email, contacts, calendar, and Public Folder data from on-premise and hosted Microsoft® Exchange to G Suite, whether you have just a few users or tens of thousands. 
@@ -42,8 +43,21 @@ You can also migrate mail, contacts and calendar events with the [Data migration
 * Microsoft Outlook® 2003/2007/2010/2013 (required only for migrating from Microsoft® Exchange or PST files). 64-bit versions and Click-to-Run versions are not supported.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/gsuite-migration-exchange/readme.md)**
-	</description>
-    <releaseNotes>https://support.google.com/a/answer/162794</releaseNotes>	
+
+    
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <summary>Tool for migrating from Microsoft Exchange to G Suite (formerly GApps)</summary>
+    <releaseNotes>https://support.google.com/a/answer/162794</releaseNotes>
+    <copyright>Google</copyright>
+    <tags>gsmme google gsuite gapps migration exchange server</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-migration-exchange</packageSourceUrl>
+    <docsUrl>https://www.google.com/support/enterprise/static/gapps/docs/admin/en/gapps_exchange_migration/index.html</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
