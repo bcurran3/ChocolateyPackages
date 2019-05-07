@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>performancetest</id>
-    <version>9.0.1028</version>
+    <version>9.0.1031</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/performancetest</packageSourceUrl>
     <title>PassMark PerformanceTest (Install)</title>
@@ -18,6 +18,11 @@
     <tags>passmark performancetest benchmark benchmarking trial</tags>
     <summary>PerformanceTest - Easy PC Benchmarking</summary>
     <description>
+___
+###[choco://performancetest](choco://performancetest)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of PerformanceTest](https://www.passmark.com/images/pt9_mainscreen_small.png)
 	
 Fast, easy to use, PC speed testing and benchmarking. PassMark PerformanceTest allows you to objectively benchmark a PC using a variety of different speed tests and compare the results to other computers.
@@ -85,10 +90,14 @@ The application includes the following additional features:
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/performancetest/readme.md)**
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
     <releaseNotes>https://www.passmark.com/products/pt_history.htm</releaseNotes>
   </metadata>
   <files>
