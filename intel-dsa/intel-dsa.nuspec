@@ -55,6 +55,7 @@ This application does not support older versions of Internet Explorer. We recomm
     <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="dotnet4.6.1" version="4.6.1" />
     </dependencies>
   </metadata>
   <files>
