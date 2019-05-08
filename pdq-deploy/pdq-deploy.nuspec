@@ -54,7 +54,7 @@ To be sure that these files are used during the installation, be sure to check t
 	</description>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.0" version="4.0" />
+      <dependency id="dotnet4.5.2" version="4.5.2" />
     </dependencies>
   </metadata>
   <files>
