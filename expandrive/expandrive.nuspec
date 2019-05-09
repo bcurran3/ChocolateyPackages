@@ -17,8 +17,7 @@ ___
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
-##The Best Gets Even Better
-##Say Hello to ExpanDrive 7
+##The Best Gets Even Better - Say Hello to ExpanDrive 7
 
 ExpanDrive is a fast network drive and browser for cloud storage.
 Securely access the cloud from any application, including Finder and Explorer.
@@ -73,7 +72,7 @@ Connect to all major cloud storage providers, or your own server. With a single 
     <summary>Fast Network Drive for Cloud Storage</summary>
     <releaseNotes>http://updates.expandrive.com/release_notes/expandrive_win</releaseNotes>
     <copyright>© ExpanDrive, Inc.</copyright>
-    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav trial</tags>
+    <tags>expandrive cloud backup box amazon dropbox google openstack onedrive sftp webdav nextcloud wasabi backblaze sharepoint cross-platform trial</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/expandrive</packageSourceUrl>
     <docsUrl>http://www.expandrive.com/docs/</docsUrl>
     <dependencies>
