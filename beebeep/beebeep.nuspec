@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>beebeep</id>
-    <version>5.4.2</version>
+    <version>5.6.1</version>
     <owners>bcurran3</owners>
     <title>beeBEEP (Portable)</title>
     <authors>Marco Mastroddi</authors>
@@ -11,11 +11,19 @@
     <iconUrl>https://briian.com/wp-content/uploads/2016/05/BeeBEEP-200.png</iconUrl>
     <copyright>© Marco Mastroddi </copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://sourceforge.net/p/beebeep/code/HEAD/tree/LICENSE.txt</licenseUrl>
     <projectSourceUrl>https://sourceforge.net/p/beebeep/code/HEAD/tree/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/beebeep</packageSourceUrl>
     <bugTrackerUrl>https://sourceforge.net/p/beebeep/tickets/</bugTrackerUrl>
+	<docsUrl>http://beebeep.sourceforge.net/help.php</docsUrl>
     <tags>beebeep IM chat messenger portable</tags>
     <summary>BeeBEEP is an open source, peer to peer, secure LAN messenger.</summary>
     <description>
+___
+###[choco://beebeep](choco://beebeep)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of beeBEEP](http://beebeep.sourceforge.net/images/beebeep-screenshot-1.jpg)
 
 ###What is BeeBEEP?
@@ -35,17 +43,20 @@ BeeBEEP is an open source, peer to peer, lan messenger developed by Marco Mastro
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/beebeep/readme.md)**
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
     <releaseNotes>https://sourceforge.net/p/beebeep/code/HEAD/tree/CHANGELOG.txt</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
-    </dependencies>	
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-
   </files>
 </package>
