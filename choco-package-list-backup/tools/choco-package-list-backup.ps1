@@ -115,6 +115,13 @@ Function Write-PinnedList{
 		}
 	Write-Output $header $body | Out-File "$SavePath\$PinnedPackagesFile" -Encoding ASCII
 	Write-Host "  ** $SavePath\$PinnedPackagesFile SAVED!" -Foreground Green
+	
+# 2nd copy in format pins_date.bat if AppendDate is set to true
+	if ($AppendDate -eq "True"){
+	    $PinnedPackagesArchival = $PinnedPackagesFile.Replace(".bat","")+"_$Date.bat"
+	    Write-Output $header $body | Out-File "$SavePath\$PinnedPackagesArchival" -Encoding ASCII
+		Write-Host "  ** $SavePath\$PinnedPackagesArchival SAVED!" -Foreground Green
+	}
 }
   
 # Write out the saved list of packages to packages.config
