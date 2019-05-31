@@ -1,7 +1,8 @@
-﻿$packageName    = 'irfanviewplugins'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'irfanviewplugins'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\iview452_plugins_setup.exe"
-$url64          = "$toolsDir\iview452_plugins_x64_setup.exe"
+$url            = "$toolsDir\iview453_plugins_setup.exe"
+$url64          = "$toolsDir\iview453_plugins_x64_setup.exe"
 					  
 $packageArgs = @{
   packageName    = $packageName
@@ -15,5 +16,5 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs  
 
-Remove-Item $url | out-null
-Remove-Item $url64 | out-null
+Remove-Item $url | Out-Null
+Remove-Item $url64 | Out-Null

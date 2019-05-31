@@ -1,17 +1,23 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.52</version>
+    <version>4.53</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>
     <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.jpg</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+___
+###[choco://irfanviewplugins](choco://irfanviewplugins)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ###Available PlugIns and current versions:
 
 There are too many plugins to list in the space of the description. 
@@ -19,22 +25,25 @@ There are too many plugins to list in the space of the description.
 Please see the [IrfanView PlugIns](http://www.irfanview.com/plugins.htm) web page for the current list and versions.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanviewplugins/readme.md)**
+	
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-	</description>
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
     <summary>Additional plugins for IrFanView</summary>
     <copyright>© Irfan Skiljan</copyright>
     <tags>irfanview image photo viewer plugin plugins</tags>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
-    <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>	
+    <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.52" />	  	
+      <dependency id="irfanview" version="4.53" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>  
+  </files>
 </package>
