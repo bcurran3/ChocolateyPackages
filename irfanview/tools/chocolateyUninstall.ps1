@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'irfanview'
 
 if (Test-Path -Path $ENV:ProgramFiles\IrfanView\iv_uninstall.exe)
