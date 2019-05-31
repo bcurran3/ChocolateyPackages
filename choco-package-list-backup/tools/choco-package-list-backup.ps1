@@ -17,6 +17,7 @@ $ICinstalled = Test-Path "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.e
 $PinnedPackages=choco pin list -r
 $PinnedPackagesFile = 'pins.bat'
 $PPCinstalled = Test-Path $ENV:ChocolateyInstall\config\persistentpackages.config
+$OneDriveDisabled = (Get-ItemProperty -path 'HKLM:\Software\Policies\Microsoft\Windows\OneDrive\').DisableFileSyncNGSC
 
 # Import preferences - see choco-package-list-backup.xml in Chocolatey's bin dir
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml"
@@ -244,8 +245,12 @@ if ($UseNextcloud -match "True" -and (Test-Path $ENV:USERPROFILE\Nextcloud))
 if ($ENV:OneDrive) {$OneDriveExists="True"} else {$OneDriveExists="False"}
 if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
    {
-    $SavePath = "$ENV:OneDrive\$SaveFolderName\$ENV:ComputerName"
-    Write-PackagesConfig
+    if ($OneDriveDisabled -match "1") {Write-Host "  ** OneDrive disabled by Group Policy, not saving to OneDrive folder" -Foreground Yellow}
+	else 
+	    {
+	    $SavePath = "$ENV:OneDrive\$SaveFolderName\$ENV:ComputerName"
+	    Write-PackagesConfig
+	    }
    }      
 
 # Backup Chocolatey package names on local computer to packages.config file in ownCloud directory if it exists
