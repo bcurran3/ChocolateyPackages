@@ -1,4 +1,5 @@
-﻿$packageName    = 'solarwinds-recovery-console'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'solarwinds-recovery-console'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://install.mob.system-monitor.com/backup-and-recovery-rc-windows-x86.exe'
 $checksum       = 'E5F9501A729DEC392A6CFBD7C94E9C6078D231278B70D4F9E25C70E1216566B8'
