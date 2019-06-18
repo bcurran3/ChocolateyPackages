@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-recovery-console</id>
     <title>SolarWinds Recovery Console (Install)</title>
-    <version>18.6.0.18205</version>
+    <version>18.12.0.19042</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-recovery-console</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-recovery-console</packageSourceUrl>
     <projectUrl>https://www.solarwindsmsp.com/products/backup</projectUrl>
     <docsUrl>http://help.solarwinds.com/backup/documentation/Content/advanced-recovery/recovery-console/home.htm</docsUrl>
     <tags>solarwinds solarwindsmsp msp backup recovery console</tags>
@@ -15,13 +15,13 @@
     <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-recovery-console/solarwinds-recovery-console_icon.png</iconUrl>
-	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Get More Done with Automation without Learning a New Scripting Language</summary>
     <description>
-***
-[choco://solarwinds-recovery-console](choco://solarwinds-recovery-console)
+___
+###[choco://solarwinds-recovery-console](choco://solarwinds-recovery-console)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+___
 
 ![Screenshot of SolarWinds Recovery Console](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-recovery-console/solarwinds-recovery-console_screenshot.png)	
 
@@ -37,16 +37,19 @@ Increase your efficiency using deduplication - the full dataset for any system i
 SpeedVault, a local cache capability, gives you the option to help recover data in minutes and meet, or better yet, exceed your Recovery Time Objectives (RTO). 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-recovery-console/readme.md)**
+    
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-    </description>
-	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>	
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
-      </metadata>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
