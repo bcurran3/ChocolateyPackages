@@ -1,8 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the program via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* You should consider pinning this package as upgrades will most likely fail. Forcing install over the current version will result in a -2147213312 error/exit code.
-* Uninstall is NOT silent, you will be prompted.
+* Program installs to C:\Program Files (x86)\SADPTool. If C: is not where you want it, don't install the package.
 
 ***
 
