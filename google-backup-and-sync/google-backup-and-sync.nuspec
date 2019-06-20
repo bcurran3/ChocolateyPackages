@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <version>3.43.2448.9071</version>
+    <version>3.44.4943.6229</version>
     <id>google-backup-and-sync</id>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-backup-and-sync</packageSourceUrl>
@@ -30,7 +30,7 @@ Backup and Sync is an app for Mac and PC that backs up files and photos safely i
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***</description>
-	<releaseNotes>https://support.google.com/a/answer/7573023</releaseNotes>
+    <releaseNotes>https://support.google.com/a/answer/7573023</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
