@@ -15,7 +15,7 @@
     <docsUrl>https://support.plex.tv/hc/en-us/articles/208050647-Getting-Started</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://forums.plex.tv/</mailingListUrl>
-    <tags>plex plexmediaplayer streaming video music plexmediaserver htpc dlna</tags>
+    <tags>plex plexmediaplayer streaming video music plexmediaserver htpc dlna admin</tags>
     <summary>Plex Media Player is the go-to app for Home Theater PCs (HTPCs) connected to big screen TVs. Your collection of videos, music, and photos never looked so good!</summary>
     <description>
 	
@@ -48,7 +48,7 @@ ___
 ___
 
     </description>
-    <releaseNotes>https://forums.plex.tv/t/plex-media-player/120475/69</releaseNotes>
+    <releaseNotes>https://forums.plex.tv/t/plex-media-player/120475/last</releaseNotes>
     <dependencies>
       <dependency id="KB2919355" />
     </dependencies>
