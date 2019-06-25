@@ -1,25 +1,19 @@
 ﻿# https://www.plex.tv/media-server-downloads/#plex-app
 $ErrorActionPreference = 'Stop'
-$packageName   = 'plexmediaplayer'
-$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$bits          = Get-ProcessorBits
-$url           = 'https://downloads.plex.tv/plexmediaplayer/2.27.0.949-542ba3ed/PlexMediaPlayer-2.27.0.949-542ba3ed-windows-x64.exe'
-$checksum      = '239EFD820E201BF51D3A6A2FE4F408030DEA5B1BF64018057E09CFDBA70B58EA'
-
-if ($bits -eq 32){
-    Write-Warning "This program only supports 64 bit OSes. Aborting..."
-    throw
-   }
+$packageName = 'plexmediaplayer'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url64       = 'https://downloads.plex.tv/plexmediaplayer/2.36.0.988-0150ae52/PlexMediaPlayer-2.36.0.988-0150ae52-windows-x64.exe'
+$checksum64  = '56541BE706CCC8365D4DED0AF651D3C89D7727624522D45909E47DCA505651E6'
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  url           = $url
-  silentArgs    = '/S'
-  softwareName  = 'Plex Media Player' 
-  checksum      = $checksum
-  checksumType  = 'sha256'  
+  packageName    = $packageName
+  unzipLocation  = $toolsDir
+  fileType       = 'EXE'
+  url64          = $url64
+  silentArgs     = '/S'
+  softwareName   = 'Plex Media Player' 
+  checksum64     = $checksum64
+  checksumType64 = 'sha256'  
  }
 
 Install-ChocolateyPackage @packageArgs
