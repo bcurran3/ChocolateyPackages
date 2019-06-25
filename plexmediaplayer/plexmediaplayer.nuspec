@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>plexmediaplayer</id>
-    <version>2.27.0.949</version>
+    <version>2.36.0.988</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexmediaplayer</packageSourceUrl>
     <title>Plex Media Player for Windows (Install)</title>
@@ -18,9 +18,8 @@
     <tags>plex plexmediaplayer streaming video music plexmediaserver htpc dlna</tags>
     <summary>Plex Media Player is the go-to app for Home Theater PCs (HTPCs) connected to big screen TVs. Your collection of videos, music, and photos never looked so good!</summary>
     <description>
-	
 ___
-[choco://plexmediaplayer](choco://plexmediaplayer)
+###[choco://plexmediaplayer](choco://plexmediaplayer)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
@@ -42,15 +41,17 @@ Plex Media Player gives you both a beautiful HTPC experience and a slick desktop
 [Facebook](https://www.facebook.com/plexapp) | [Twitter](https://twitter.com/plex) | [Google+](https://plus.google.com/+plex) | [YouTube](https://www.youtube.com/user/plextvapp) | [blog](https://www.plex.tv/blog/) | [LinkedIn](https://www.linkedin.com/company/1175144/)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/plexmediaplayer/readme.md)**	
+    
 
 ___
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
 ___
 
-    </description>
+</description>
     <releaseNotes>https://forums.plex.tv/t/plex-media-player/120475/69</releaseNotes>
     <dependencies>
-      <dependency id="KB2919355" />
+      <dependency id="KB2919355" version="1.0" />
     </dependencies>
   </metadata>
   <files>
