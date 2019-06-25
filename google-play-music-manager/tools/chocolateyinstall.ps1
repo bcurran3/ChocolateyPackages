@@ -1,11 +1,11 @@
-﻿$packageName    = 'google-play-music-manager' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'google-play-music-manager' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-#$url            = 'https://dl.google.com/androidjumper/win/musicmanagerinstaller.exe'
 $url            = 'https://dl.google.com/tag/s/appguid%3D%7BEA25377A-280A-4539-8FED-21FACE57594F%7D%26iid%3D%7B4902BC13-D0C8-BD14-94C9-7CE1F3EAB86D%7D%26lang%3Den%26browser%3D4%26usagestats%3D0%26appname%3DMusic%2520Manager%26needsadmin%3Dfalse/androidjumper/win/musicmanagerinstaller.exe'
-$checksum       = '157A9CB59E40A98E1CEBDF7F4797177900FFA4A9124BA4DC7F7032AD89A126DD'
+$checksum       = '415E50769EF1BA285DDC93E8B5492E3CEA411C298D17FCAB686E4EF8FC93928C'
 $validExitCodes = @(0)
 $ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "GPMMinstall.ahk"
+$ahkFile        = "$toolsDir\GPMMinstall.ahk"
 
 Start-Process $ahkExe $ahkFile
 
@@ -23,11 +23,7 @@ $packageArgs = @{
   
 Install-ChocolateyPackage @packageArgs
 
-if((get-process "MusicManager" -ea SilentlyContinue) -eq $Null){ 
-    Write-Host "MusicManager currently NOT running." 
-  }else{ 
-    Write-Host "Stopping MusicManager process..."
-    Stop-Process -processname "MusicManager"
-  }
-
-
+Start-CheckandStop "MusicManager"
+Start-Process $ahkExe $ahkFile
+Install-ChocolateyPackage @packageArgs
+if ($ProcessWasRunning -eq "True") {$ProcessFullPath}

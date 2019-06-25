@@ -7,6 +7,3 @@ WinWait, Music Manager Installer , Installation complete. , 120
 WinActivate
 Send {Tab}
 Send {Enter}
-
-
-
