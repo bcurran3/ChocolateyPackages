@@ -52,7 +52,7 @@ ___
 * **CPLB** is configurable. You can:
      1. configure which locations you want or don't want to save to (default=all the locations found except the custom location)
      2. configure to save package version information or not (default=false)
-     3. configure to append a date to the saved packages.config and AllProgramsList.txt files(default=false)
+     3. configure to append a date to the saved packages.config, AllProgramsList.txt, and pins.bat files(default=false)
      4. configure what folder to save to (default=ChocolateyPackageListBackup)
      5. easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
      6. configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
@@ -69,7 +69,7 @@ ___
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 	
 ###CHANGELOG:
-* 2019.06.27 - now backups the config file
+* 2019.06.27 - now backups the config file, can now also make archival versions of pins.bat, edited config comments to not add quotes to custom path.
 * 2019.01.31 - file saving functions re-written and optimized, check for errors caused by other Chocolatey instances
 * 2019.01.29 - fixed bug where iCloudDrive preference wasn't checked correctly, thanks sandscap-sc!
 * 2019.01.24 - now saves your pinned package information to pins.bat, added saving to c:\Users\Public when run from system account (e.g. scheduled task), fixed error attempting to create files under system account Documents folder which doesn't exist, packages.config now properly UTF-8 encoded, speed optimizations, minor cosmetic changes
