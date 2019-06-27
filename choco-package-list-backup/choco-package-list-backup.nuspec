@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2019.01.31.01</version>
+    <version>2019.06.27</version>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -11,11 +11,12 @@
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>***	
-[choco://choco-package-list-backup](choco://choco-package-list-backup)
+    <description>
+___
+###[choco://choco-package-list-backup](choco://choco-package-list-backup)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
-	
+___
+
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup_screenshot.png)
 	
 #**choco-package-list-backup** solves your Chocolatey migration and package re-installation problems!
@@ -56,9 +57,11 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
      5. easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
      6. configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
 
-**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**</description>
+**If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+</description>
     <summary>(unofficial) Choco Package List Backup to Cloud and Local - a PowerShell script to backup your Chocolatey packages list for easy re-installation</summary>
-    <releaseNotes>###INSTRUCTIONS:
+    <releaseNotes>
+###INSTRUCTIONS:
 
 * Edit C:\ProgramData\chocolatey\bin\choco-package-list-backup.xml to customize your backup(s). It's easy, there are comments.
 * From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
@@ -66,6 +69,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 	
 ###CHANGELOG:
+* 2019.06.27 - now backups the config file
 * 2019.01.31 - file saving functions re-written and optimized, check for errors caused by other Chocolatey instances
 * 2019.01.29 - fixed bug where iCloudDrive preference wasn't checked correctly, thanks sandscap-sc!
 * 2019.01.24 - now saves your pinned package information to pins.bat, added saving to c:\Users\Public when run from system account (e.g. scheduled task), fixed error attempting to create files under system account Documents folder which doesn't exist, packages.config now properly UTF-8 encoded, speed optimizations, minor cosmetic changes
@@ -92,7 +96,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ###ROADMAP:
 * Investigate running the schedule task from the installing user account.
 * Add other cloud services support by request
-* I'm open to suggestions - open a GitHub issue please.</releaseNotes>
+* I'm open to suggestions - open a GitHub issue please.
+    </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 choco unofficial package packages.config backup script cloud</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</projectSourceUrl>
