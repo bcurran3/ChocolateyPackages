@@ -7,16 +7,16 @@
 # Save --packageparameters
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-Write-Host "choco-package-list-backup.ps1 v2019.01.31 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "choco-package-list-backup.ps1 v2019.06.27 - backup Chocolatey packages list locally and to the cloud" -Foreground White
 Write-Host "Copyleft 2017-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
 $Date = Get-Date -UFormat %Y-%m-%d
 $ErrorArray=@("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)
 $ICinstalled = Test-Path "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe"
-$PinnedPackages=choco pin list -r
+$PinnedPackages="choco pin list -r"
 $PinnedPackagesFile = 'pins.bat'
-$PPCinstalled = Test-Path $ENV:ChocolateyInstall\config\persistentpackages.config
+$PPCinstalled = Test-Path "$ENV:ChocolateyInstall\config\persistentpackages.config"
 
 # Import preferences - see choco-package-list-backup.xml in Chocolatey's bin dir
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml"
@@ -61,6 +61,12 @@ Function Check-SaveLocation{
       New-Item $SavePath -Type Directory -Force | Out-Null
      }   
     }
+
+# Copy choco-package-list-backup.xml to the same location as packages.config
+Function Copy-Config{
+   Copy-Item "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml" $SavePath -Force | Out-Null
+   Write-Host "  ** $SavePath\choco-package-list-backup.xml SAVED!" -Foreground Green 
+  }
 
 # Copy persistentpackages.config if it exists to the same location as packages.config
 Function Copy-PPConfig{
@@ -139,6 +145,7 @@ Function Write-PackagesConfig{
 	    Write-Output $header $body $footer | Out-File "$SavePath\$PackagesListArchival" -Encoding ASCII #ASCII is a subset of UTF8 (w/o BOM)
 		Write-Host "  ** $SavePath\$PackagesListArchival SAVED!" -Foreground Green
 		}
+    Copy-Config
 	if ($PPCinstalled) {Copy-PPConfig}
 	if ($SaveAllProgramsList -eq "True"){Write-AllProgramsList}
 	if (!$PinnedPackages){Remove-Item "$SavePath\$PinnedPackagesFile" -ea SilentlyContinue | Out-Null }
