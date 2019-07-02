@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2019.06.27</version>
+    <version>2019.07.02</version>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -31,7 +31,7 @@ ___
      4. Dropbox Personal and Business
      5. Google Drive and Drive File Stream
      6. iCloudDrive
-     7. Microsoft OneDrive
+     7. Microsoft OneDrive (free, paid consumer, and corporate)
      8. NETGEAR ReadyCLOUD
      9. Nextcloud
      10. ownCloud

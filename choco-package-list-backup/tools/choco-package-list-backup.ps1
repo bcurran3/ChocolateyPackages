@@ -7,7 +7,7 @@
 # Save --packageparameters
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-Write-Host "choco-package-list-backup.ps1 v2019.06.27 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "choco-package-list-backup.ps1 v2019.07.02 - backup Chocolatey packages list locally and to the cloud" -Foreground White
 Write-Host "Copyleft 2017-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
@@ -253,13 +253,27 @@ if ($UseNextcloud -match "True" -and (Test-Path $ENV:USERPROFILE\Nextcloud))
     Write-PackagesConfig
    } 
    
-# Backup Chocolatey package names on local computer to packages.config file in OneDrive directory if it exists
+# Backup Chocolatey package names on local computer to packages.config file in various OneDrive directories if they exists
 if ($ENV:OneDrive) {$OneDriveExists="True"} else {$OneDriveExists="False"}
 if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
    {
     $SavePath = "$ENV:OneDrive\$SaveFolderName\$ENV:ComputerName"
     Write-PackagesConfig
-   }      
+   }
+   
+if ($ENV:OneDriveConsumer) {$OneDriveExists="True"} else {$OneDriveExists="False"}
+if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
+   {
+    $SavePath = "$ENV:OneDriveConsumer\$SaveFolderName\$ENV:ComputerName"
+    Write-PackagesConfig
+   }
+   
+if ($ENV:OneDriveCommercial) {$OneDriveExists="True"} else {$OneDriveExists="False"}
+if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
+   {
+    $SavePath = "$ENV:OneDriveCommercial\$SaveFolderName\$ENV:ComputerName"
+    Write-PackagesConfig
+   }
 
 # Backup Chocolatey package names on local computer to packages.config file in ownCloud directory if it exists
 if ($UseownCloud -match "True" -and (Test-Path "$ENV:USERPROFILE\ownCloud"))
