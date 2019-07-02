@@ -23,7 +23,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 4. Dropbox Personal and Business
 5. Google Drive and Drive File Stream
 6. iCloudDrive
-7. Microsoft OneDrive
+7. Microsoft OneDrive (free, paid consumer, and corporate)
 8. NETGEAR ReadyCLOUD
 9. Nextcloud
 10. ownCloud
@@ -59,6 +59,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.
 
 ###CHANGELOG:
+* 2019.07.02 - now saves OneDrive backups to free, paid, and corporate folders
 * 2019.06.27 - now backups the config file, can now also make archival versions of pins.bat, edited config comments to not add quotes to custom path.
 * 2019.01.31 - file saving functions re-written and optimized, check for errors caused by other Chocolatey instances
 * 2019.01.29 - fixed bug where iCloudDrive preference wasn't checked correctly, thanks sandscap-sc!
