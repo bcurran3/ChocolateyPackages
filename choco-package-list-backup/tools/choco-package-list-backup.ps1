@@ -14,7 +14,7 @@ Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 $Date = Get-Date -UFormat %Y-%m-%d
 $ErrorArray=@("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)
 $ICinstalled = Test-Path "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe"
-$PinnedPackages="choco pin list -r"
+$PinnedPackages=choco pin list -r
 $PinnedPackagesFile = 'pins.bat'
 $PPCinstalled = Test-Path "$ENV:ChocolateyInstall\config\persistentpackages.config"
 
