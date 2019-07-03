@@ -1,76 +1,56 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>getdataback-simple</id>
-    <version>5.00</version>
+    <version>5.50</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/getdataback-simple</packageSourceUrl>
-    <title>GetDataBack Simple (Install)</title>
+    <title>GetDataBack Pro (Trial)(Install)</title>
     <authors>Runtime Software</authors>
     <projectUrl>https://www.runtime.org/data-recovery-software.htm</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/getdataback-simple/GetDataBackSimple_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/getdataback-simple/GetDataBackSimple_icon.png</iconUrl>
     <copyright>(c) 2001-2017 by Runtime Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.runtime.org/data-recovery-documentation.htm</docsUrl>
     <tags>runtime getdataback simple data recovery utility ntfs fat12 fat16 fat32 exfat ext ext2 ext3 ext4 trial</tags>
     <summary>GetDataBack Simple - The simplest Data Recovery Software ever.</summary>
     <description>
+___
+###[choco://getdataback-simple](choco://getdataback-simple)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of GetDataBack Simple](http://www.runtime.org/images/gdbsim1.gif) ![Screenshot of GetDataBack Simple 2](http://www.runtime.org/images/gdbsim2.gif)	
 
-###GetDataBack Simple Data Recovery
+###GetDataBack Pro Data Recovery
 
-The simplest Data Recovery Software ever. Lightning fast, for NTFS, FAT, exFAT, and EXT. You can recover it now.
+Our flagship product GetDataBack Pro is the most powerful Data Recovery software. Lightning fast, for NTFS, FAT, exFAT, EXT, HFS+, and APFS. Recover your lost data now!
 
-NEW: Linux EXT and Windows exFAT are now supported as well.
-
-**GetDataBack Simple:** Free demo - [Buy Now](http://www.runtime.org/buy_now.htm)
-
-**Free Updates:** Lifetime updates for licensed users. 
-
-**Price:** USD 79 (includes all versions of GetDataBack)
-
-**System Requirements:** 1 GB RAM, Windows Server 2008, 2012, Vista, Windows 7, Windows 8, Windows 10, 32 or 64-bit
-
-###GetDataBack Simple Highlights
+###GetDataBack Pro Highlights
 * Recover ALL your drive's data
 * Restore file names and directory structure
 * Safe, read-only design
-* One easy click, it is simple, simpler, simplest
+* Intuitive user interface
 * Lightning fast operation
 * Supports all hard drives, SSD, flash cards, USB
+* Native 64-bit application under 64-bit Windows
+* Recovery of very large drives
 * New, redesigned and rewritten, using the newest technologies
-* Supports NTFS, FAT12, FAT16, FAT32, exFAT, EXT, EXT2, EXT3, EXT4
+* Supports NTFS, FAT12, FAT16, FAT32, exFAT, EXT, EXT2, EXT3, EXT4, HFS+, APFS
 * Free to try
 * Free lifetime updates with purchase
 * Run GetDataBack from the Runtime Live CD or a WinPE Boot Medium
 
-###Redesigned and rewritten
-
-GetDataBack Simple is a completely redesigned and rewritten Data Recovery solution for Windows and Linux file systems. Our developers have combined decades of data recovery experience with the newest technologies.
-
-GetDataBack Simple's clean interface guides you to your lost data in no time. You are literally one click away from your files. GetDataBack Simple is the data recovery software for the 99%. You can recover it now. No manual to read, no ostentatious options, no kidding.
-
-GetDataBack Simple combines recovery capabilities for NTFS, FAT, exFAT, and EXT. You do not need to find out beforehand which files system your drive was formatted with. GetDataBack Simple's recovery engine internally uses four distinguished sophistication levels that automatically escalate until good results have been achieved.
-
-###One license for three program versions
-
-While we believe you don't want to use anything else once you tried GetDataBack Simple, the price of $79 includes licenses for our classic GetDataBack software as well. Customers who bought GetDataBack for FAT or GetDataBack for NTFS in the past can use their existing license key for GetDataBack Simple. This is the lifetime update promise.
-
-###GetDataBack is more than an undelete or file recovery program or a system restore
-
-GetDataBack Simple will recover your data if the hard drive's partition table, boot record, FAT/MFT or root directory are lost or damaged, data was lost due to a virus attack, the drive was formatted or re-partitioned, a power failure has caused a system crash, files were lost due to a software failure, or files were accidentally deleted. GetDataBack Simple can even recover your data when the drive is no longer recognized by Windows. GetDataBack Simple works on hard drives, SSD, flash card, USB sticks, etc.
-
-###Get everything back, the safe, easy, and fast way
-
-Advanced algorithms make sure that all files and directories are put together as they were, and that file names are reconstructed correctly. GetDataBack employs a number of approaches to your data, depending on the actual condition of your drive. Four different escalating sophistication levels ensure your files are recovered. GetDataBack Simple
-
-GetDataBack is read-only, meaning the program will not attempt to "fix" or write to the drive you are about to recover.
-
-GetDataBack Simple's user interface is so simple, it enables even the most inexperienced users to conduct their own data recovery with just one click.
-
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/getdataback-simple/readme.md)**
-	</description>
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
