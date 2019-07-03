@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'hppark' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://ftp.hp.com/pub/softlib/software13/COL40860/ds-99433-22/PARK-v1.8.6.zip'
-$checksum     = '392B5A330951E38DA123DCCEB4B5CA3C6EE5DFE46E0C7DDABA085E25132D4130'
+$url          = 'https://ftp.hp.com/pub/softlib/software13/COL40860/ds-99433-23/PARK-v1.8.7.zip'
+$checksum     = 'E19193F95185A5668F724696B083653BF19AF24045A694200FF2957A2A6B02C1'
 $shortcutName = 'HP PARK.lnk'
 $subfolder    = "HP PARK-v$ENV:ChocolateyPackageVersion"
 
