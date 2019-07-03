@@ -2,7 +2,7 @@
 $packageName    = 'utorrent'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'http://download.ap.bittorrent.com/track/stable/endpoint/utorrent/os/windows'
-$checksum       = '5F4AD19AF5D2DC9B9AEDD94EB74077FEC1A3CA7F677AE59C4879FE70827420AD'
+$checksum       = 'D5FFE0BF0F8676C7EF6AD4A1E84EC22580BD9224C1B91F8F54BEFC330CAD9E6B'
 $extractDir     = "$toolsDir\extracted"
 $fileLocation   = "$extractDir\Carrier.exe"
 
