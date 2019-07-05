@@ -4,7 +4,7 @@
   <metadata>
     <id>solarwinds-backup-manager</id>
     <title>SolarWinds Backup Manager (Install)</title>
-    <version>19.3.0.19132</version>
+    <version>19.6.0.19171</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-backup-manager</packageSourceUrl>
