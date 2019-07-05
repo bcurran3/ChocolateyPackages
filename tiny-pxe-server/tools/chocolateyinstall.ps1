@@ -1,7 +1,8 @@
-﻿$packageName  = 'tiny-pxe-server' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'tiny-pxe-server' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'http://erwan.labalec.fr/tinypxeserver/pxesrv.zip'
-$checksum     = '5105834F0ED2ACC002A335CCFA6DE7964FB0E2F1338FC07EF7732748074712A3'
+$url          = "$toolsDir\pxesrv.zip"
+$checksum     = 'D310CDDFB0BEACD5649A2F4BE49373697A3F3615FAD62CADEFB762970B565020'
 $shortcutName = 'TinyPXE Server.lnk'
 $exe          = 'pxesrv.exe'
 
@@ -11,8 +12,6 @@ $packageArgs = @{
   unzipLocation  = $toolsDir
   fileType       = 'ZIP' 
   url            = $url
-  checksum       = $checksum
-  checksumType   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
@@ -23,3 +22,4 @@ icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exe"       
 
+Remove-Item $url -Force | Out-Null
