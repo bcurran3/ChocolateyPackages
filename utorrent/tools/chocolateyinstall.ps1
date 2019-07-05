@@ -32,4 +32,4 @@ Install-ChocolateyPackage @packageArgs
 
 Start-Sleep -s 10
 if ($ProcessWasRunning -eq "True") {$ProcessFullPath} else {Start-CheckandStop "uTorrent"}
-Remove-Item $extractDir -Recurse | Out-Null
+Remove-Item $extractDir -Recurse -Force -EA SilentlyContinue | Out-Null
