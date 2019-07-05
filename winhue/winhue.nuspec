@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>winhue</id>
-    <version>3.0.4334.0</version>
+    <version>3.0.4718.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/winhue</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>WinHue (Install)</title>
     <authors>Pascal Pharand</authors>
     <projectUrl>https://hyrules.github.io/WinHue/</projectUrl>
-    <iconUrl>http://www.philips.ca/c-dam/corporate/homepage-articles/master/HUE/hue_still.jpg</iconUrl>
-    <licenseUrl>https://creativecommons.org/licenses/by-nc/2.0/</licenseUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/winhue/winhue_icon.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/Hyrules/WinHue/master/LICENCE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Hyrules/WinHue3</projectSourceUrl>
     <docsUrl>https://github.com/Hyrules/WinHue3/wiki/Basic%20Usage</docsUrl>
     <bugTrackerUrl>https://github.com/Hyrules/WinHue3/issues</bugTrackerUrl>
-    <tags>hyrules winhue hue phillips light smarthome automation</tags>
+    <tags>hyrules winhue hue phillips light smarthome automation binary</tags>
     <summary>WinHue 3 - Controlling the Philips Hue lighting system from your Windows PC.</summary>
     <description>
 ___
@@ -25,7 +25,7 @@ ___
 
 (Officially WinHue 3 RC5)
 	
-![Screenshot of WinHue](https://hyrules.github.io/WinHue3/assets/mainWindow.png)
+![Screenshot of WinHue](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/winhue/winhue_screenshot.png)
 
 ###Introduction
 WinHue is a desktop application that can control the Philips Hue lighting system. It is easy to install and use, and is one of the few fully-featured Hue apps on Windows.
