@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'irfanviewplugins'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = Join-Path $toolsDir "iview453_setup.exe"
-$url64          = Join-Path $toolsDir "iview453_x64_setup.exe"
+$url            = Join-Path $toolsDir "iview453_plugins_setup.exe"
+$url64          = Join-Path $toolsDir "iview453_plugins_x64_setup.exe"
 					  
 $packageArgs = @{
   packageName    = $packageName
@@ -13,9 +13,9 @@ $packageArgs = @{
   validExitCodes = @(0)
   silentArgs     = '/silent'
   softwareName   = ''
-  checksum       = '7ebcf9fe4f4e41293d8808d2ad4b369577209dc64db04d79b1bce370e2c79b69'
+  checksum       = '0dd3763a6b789273633a052b25d5674a26af0d7edc98c2a95abf2fe8b11bb391'
   checksumType   = 'sha256'
-  checksum64     = '57b12aed758d5beb84263cdca2d4fa38d0bcffa882d9994921453b170edf149a'
+  checksum64     = 'ac8d27b1241ef91e80a73bfc672342be7317f7d8bf47a615a00d01f5090f3d43'
   checksumType64 = 'sha256'
 }
 
