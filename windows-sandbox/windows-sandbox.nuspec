@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>windows-sandbox</id>
+    <version>1.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-sandbox</packageSourceUrl>
+    <title>Windows Sandbox (Install)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://techcommunity.microsoft.com/t5/Windows-Kernel-Internals/Windows-Sandbox/ba-p/301849</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/windows-sandbox/windows-sandbox_icon.png</iconUrl>
+    <copyright>© Microsoft</copyright>
+    <licenseUrl>https://image.freepik.com/free-icon/not-applicable_318-37305.jpg</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>microsoft windows sandbox feature</tags>
+    <summary>Installs Windows Sandbox feature.</summary>
+    <description>
+___
+###[choco://windows-sandbox](choco://windows-sandbox)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+###Windows Sandbox is a new lightweight desktop environment tailored for safely running applications in isolation.
+
+NOTE: The version is Chocolatey package related only. Windows Sandbox version corresponds with your Windows build version. The actual version of Windows Sandbox will depend on your version of Windows.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-sandbox/readme.md)**
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="dependency-windows10" version="10.1903" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
