@@ -1,4 +1,5 @@
-﻿$packageName = 'sardu'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'sardu'
 $shortcutName = 'SARDU.lnk'
 
 remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
