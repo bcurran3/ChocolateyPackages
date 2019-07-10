@@ -1,14 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sardu</id>
     <title>SARDU (Portable)</title>
-    <version>3.2.4</version>
+    <version>3.3.0</version>
     <authors>Davide Costa</authors>
     <owners>bcurran3</owners>
+	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sardu</packageSourceUrl>
     <summary>Multiboot USB and DVD creator customized with rescue disk, utility, linux live, windows installer</summary>
     <description>
+___
+###[choco://sardu](choco://sardu)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
 ![Screenshot of SARDU](http://www.sarducd.it/images/Antivirus_rid.png)
 
 SARDU MultiBoot Creator is a useful application designed to help you create an emergency rescue CD or USB drive. These drives can be used to check and to repair your system in case of a failure.
@@ -30,14 +36,21 @@ Although it prompts you to install other components such as toolbars, SARDU is a
 ####Please register your copy of SARDU at [SARDU Pro's Homepage](http://sardu.pro) to enable auto update and more features.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sardu/readme.md)**
-    </description>
+    
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
     <projectUrl>http://www.sarducd.it/</projectUrl>
     <docsUrl>https://www.sarducd.it/tutorial-en</docsUrl>
     <mailingListUrl>http://www.sarducd.it/forum/</mailingListUrl>
     <tags>sardu usb dvd boot multiboot util utility recovery portable</tags>
     <licenseUrl>http://creativecommons.org/licenses/by-nc-nd/3.0/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>http://www.sarducd.it/images/logo.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/sardu/sardu_icon.png</iconUrl>
     <releaseNotes>https://www.sardu.pro/news</releaseNotes>
   </metadata>
   <files>
