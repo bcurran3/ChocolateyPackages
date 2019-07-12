@@ -1,15 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'windows-sandbox'
-$OSBuild = Get-WinVerBuild
-$OSFound = (Get-WinName) + " " + (Get-WinVerMajor) + "." + (Get-WinVerMinor) + "." + (Get-WinVerBuild)
-Write-Host "  ** OS Found: $OSFound" -Foreground Magenta
 
-if ((Get-IsWinPro) -or (Get-IsWinEnt)) {
-    Enable-WindowsOptionalFeature -Online -FeatureName  Containers-DisposableClientVM -NoRestart |Out-Null
-    if (Get-PendingReboot) {
-	   Write-Warning "A reboot is required to use Windows Sandbox."
-	   }
+$test=(Get-WindowsOptionalFeature -Featurename "Containers-DisposableClientVM" -Online)
+if (!$test) {
+    Write-Warning "Unsupported Operating System. Windows 10 Pro or Enterprise 1903 or greater required."
+	throw
+	}
+if ($test.state = 'Enabled') {
+    Write-Host "  ** Sandbox already installed!" -Foreground Magenta
+	return
 	} else {
-	  Write-Host "  ** Windows Sandbox requires Windows 10 Pro or Windows 10 Enterprise."
-	  throw
+	  Enable-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -NoRestart
 	  }

@@ -35,10 +35,6 @@ ___
 
 </description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
-      <dependency id="dependency-windows10" version="10.1903" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
