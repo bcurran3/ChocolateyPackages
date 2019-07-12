@@ -1,4 +1,4 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'windows-sandbox'
 
-Disable-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -NoRestart | Out-Null
+Disable-WindowsOptionalFeature -Online -FeatureName Containers-DisposableClientVM -NoRestart
