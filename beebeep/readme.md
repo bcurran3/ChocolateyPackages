@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* This package has embedded binaries and is a "forever package." This package does not require downloading anything externally from the Internet.
 
 ***
 
