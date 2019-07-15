@@ -1,10 +1,8 @@
-﻿$packageName    = 'nubasic' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'nubasic' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
-$url            = ''
-$checksum       = ''
-$url64          = 'https://downloads.sourceforge.net/project/nubasic/binary/Windows/nubasic-ide-1.49-setup_x64.zip'
-$checksum64     = 'AD6263B4AB714BBC9B6489FCF9D620E22D5A12D6E72B5E02052C3E79AB22B6EE'
+$url64          = "$toolsDir\nubasic-ide-"+$ENV:ChocolateyPackageVersion+"-setup_x64.zip"
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\nubasic-install.ahk"
 $EXELocation    = "$toolsDir\setup-vs64.exe"
@@ -15,18 +13,7 @@ if ($bits -eq 32)
     throw
    }
 
-$packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'ZIP' 
-  url           = $url
-  checksum      = $checksum
-  url64         = $url64
-  checksum64    = $checksum64
-  checksumType  = 'sha256'
-}
-
-Install-ChocolateyZipPackage @packageArgs 
+Get-ChocolateyUnzip -FileFullPath $url64 -Destination $toolsDir
 
 $packageArgs = @{
   packageName    = $packageName
@@ -38,9 +25,10 @@ $packageArgs = @{
 }
 
 Start-Process $ahkExe $ahkFile
-Write-Host "  ** Please wait up to 30 seconds to cancel Microsoft Visual C++ 2017 Redistributabe install." -foreground magenta
-Write-Host "  ** Microsoft Visual C++ 2017 Redistributabe should already be installed as a dependency." -foreground magenta
+Write-Host "  ** Please wait up to 30 seconds to cancel Microsoft Visual C++ 2017 Redistributabe install." -Foreground Magenta
+Write-Host "  ** Microsoft Visual C++ 2017 Redistributabe should already be installed as a dependency." -Foreground Magenta
  
 Install-ChocolateyInstallPackage @packageArgs
 
-remove-item $EXELocation -Force -ErrorAction 'SilentlyContinue'
+Remove-Item $url64 -Force -ErrorAction SilentlyContinue
+Remove-Item $EXELocation -Force -ErrorAction SilentlyContinue
