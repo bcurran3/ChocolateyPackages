@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-network-drivers-win10</id>
-    <version>23.5.2</version>
+    <version>24.1.0.7</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-network-drivers-win10</packageSourceUrl>
     <title>Intel® Network Adapter Driver for Windows® 10 (Install)</title>
@@ -23,22 +23,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-##Detailed Description
+##Overview
 
-###Overview
-
-Information for Teams and VLANs supported on Microsoft Windows® 10.
-
-* If you are running Windows 10 Anniversary edition (RS1) you will need to install Intel LAN software v22.1 or newer.
-* If you are running Windows 10 Creators Update (RS2) you will need to install Intel LAN software v22.3 or newer.
-
-**Note:** If you are running Windows 10 Creators Update (RS2) and are using Intel LAN software release v22.1 or v22.2, then ANS will not function until you update to the Intel LAN software v22.3 or newer.
-
-###Purpose
-
-This download installs base drivers, Intel® PROSet for Windows Device Manager*, advanced networking services for teaming and VLANs (ANS), and SNMP for Intel® Network Adapters with Windows 10.
-
-**Note:** The drivers contained in this download are not compatible with Windows Server 2016*.
+This download installs base drivers, Intel® PROSet for Windows Device Manager*, and Intel® PROSet Adapter Configuration Utility for Intel® Network Adapters with Windows 10.
  
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-network-drivers-win10/readme.md)**
 	

@@ -4,9 +4,9 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzippedfiles"
 $bits           = Get-ProcessorBits
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = 'F7CBF8EC152B31F2AC10FF4865B54F16A24C618836A381358C072ECDA0680A73'
+$checksum       = '362099EA0289ACD3F6849F962CA374641BBF7E7E24F7321623C886FAFBB509DF'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = 'FEB0C221737406A4859AEBC2C8D6F676EA9CC32619E1FAE46A3298546D0B4D57'
+$checksum64     = 'DDAAF1E4D3031C231D8A60D716FD24EAC5D43A05FD431A3539A3156B1C6188AF'
 
 
 if (Get-IsIntelVideo)
@@ -54,3 +54,4 @@ Install-ChocolateyInstallPackage @packageArgs
 Start-Sleep -s 10
 
 Remove-Item $unzipLocation -Recurse | Out-Null
+#Start-CheckandStop "AutoHotkey" - future use?
