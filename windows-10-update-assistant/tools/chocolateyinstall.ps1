@@ -2,7 +2,7 @@
 $packageName = 'windows-10-update-assistant' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://download.microsoft.com/download/B/C/F/BCF2D763-F118-4A85-9E63-AEAED1B9E98E/Windows10Upgrade9252.exe'
-$checksum    = '7C66B15B4C16D489E83A72418E8048C3C3906FE9F0F2F04512C008B4BDE6E4D3'
+$checksum    = '373170C1B35CD0380808ADBE3FB43A312D0BD70F6DB411CAE71BBD34166EE75B'
 
 $packageArgs = @{
   packageName   = $packageName

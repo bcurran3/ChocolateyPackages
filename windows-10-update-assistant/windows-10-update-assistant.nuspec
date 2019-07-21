@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-10-update-assistant</id>
-    <version>1.4.9200.22749</version>
+    <version>1.4.9200.22808</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-10-update-assistant</packageSourceUrl>
     <title>Windows 10 Update Assistant (Portable)</title>
@@ -14,20 +14,31 @@
     <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.microsoft.com/en-us/help/12373/windows-update-faq</docsUrl>
-    <tags>microsoft windows 10 win10 update assistant 1809 redstone5</tags>
-    <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 version 1809</summary>
+    <tags>microsoft windows 10 win10 update assistant 1903 redstone6</tags>
+    <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 version 1903</summary>
     <description>
-##Get the Windows 10 May 2019 Update now
+---
+
+###[choco://windows-10-update-assistant](choco://windows-10-update-assistant)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+##Get the Windows 10 May 2019 Update now 
 
 The Windows 10 Update Assistant can help you update to the latest version of Windows 10.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-10-update-assistant/readme.md)**
+	
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
-    <releaseNotes>https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1809</releaseNotes>
+
+---
+
+</description>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-1903</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
