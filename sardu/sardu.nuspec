@@ -48,10 +48,10 @@ ___
     <docsUrl>https://www.sarducd.it/tutorial-en</docsUrl>
     <mailingListUrl>http://www.sarducd.it/forum/</mailingListUrl>
     <tags>sardu usb dvd boot multiboot util utility recovery portable</tags>
-    <licenseUrl>http://creativecommons.org/licenses/by-nc-nd/3.0/</licenseUrl>
+    <licenseUrl>https://www.sarducd.it/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/sardu/sardu_icon.png</iconUrl>
-    <releaseNotes>https://www.sardu.pro/news</releaseNotes>
+    <releaseNotes>https://www.sarducd.it/changelog.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
