@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'utorrent'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://download.ap.bittorrent.com/track/stable/endpoint/utorrent/os/windows'
-$checksum       = 'D5FFE0BF0F8676C7EF6AD4A1E84EC22580BD9224C1B91F8F54BEFC330CAD9E6B'
+$url            = 'https://www.utorrent.com/downloads/complete/track/stable/os/win'
+$checksum       = '94F906A69CC3498BDEC87E6C8C4647484C41D4B52D4B7A062FB1FF6BFD8B795C'
 $extractDir     = "$toolsDir\extracted"
 $fileLocation   = "$extractDir\Carrier.exe"
 
@@ -32,4 +32,4 @@ Install-ChocolateyPackage @packageArgs
 
 Start-Sleep -s 10
 if ($ProcessWasRunning -eq "True") {$ProcessFullPath} else {Start-CheckandStop "uTorrent"}
-Remove-Item $extractDir -Recurse -Force -EA SilentlyContinue | Out-Null
+Remove-Item $extractDir -Recurse | Out-Null

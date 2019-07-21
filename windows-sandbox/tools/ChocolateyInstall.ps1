@@ -6,7 +6,7 @@ if (!$test) {
     Write-Warning "Unsupported Operating System: Windows 10 Pro or Enterprise 1903 or greater required."
 	throw
 	}
-if ($test.state = 'Enabled') {
+if ($test.state -eq 'Enabled') {
     Write-Host "  ** Sandbox already installed!" -Foreground Magenta
 	return
 	} else {
