@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -6,21 +6,40 @@
     <title>Logitech Firmware Update Tool (Portable)</title>
     <version>1.0.48</version>
     <authors>Logitech</authors>
-    <owners>bcurran3</owners>
-    <summary>Updates the firmware on your Unifying receiver and some devices.</summary>
-    <description>
-
-	Logitech Unifying firmware updates to address potential security vulnerabilities found by Bastille Security in 2016.
-	
-    </description>
+    <copyright>Copyright Logitech</copyright>
     <projectUrl>http://support.logitech.com/en_us/software/unifying</projectUrl>
     <docsUrl>https://support.logi.com/hc/en-us/community/posts/360032078393-Logitech-Response-to-Research-Findings</docsUrl>
     <tags>logitech unifying software mouse util utility fw firmware</tags>
-    <copyright>Copyright Logitech</copyright>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/unifying-fut/unifying-fut_icon.png</iconUrl>
     <licenseUrl>http://www.logitech.com/en-us/footer/terms-of-use</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/6467b6ee7894eedd629c4cc22d4fdf85bfabfb05/icons/unifying.png</iconUrl>
-    <releaseNotes>added checksum and screenshot</releaseNotes>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/unifying-fut</packageSourceUrl>
+    <summary>Updates the firmware on your Unifying receiver and some devices.</summary>
+    <description>
+___
+###[choco://unifying-fut](choco://unifying-fut)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+
+	Logitech Unifying firmware updates to address potential security vulnerabilities found by Bastille Security in 2016.
+	
+	REFERENCE: https://support.logi.com/hc/en-us/community/posts/360032078393-Logitech-Response-to-Research-Findings
+	REFERENCE: https://betanews.com/2019/07/16/logitech-wireless-dongle-mousejack/
+	
+	**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/unifying-fut/readme.md)**
+    
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <dependencies>
+      <dependency id="autohotkey" version="1.1.27"/>
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
