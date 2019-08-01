@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>unifying-fut</id>
+    <title>Logitech Firmware Update Tool (Portable)</title>
+    <version>1.0.48</version>
+    <authors>Logitech</authors>
+    <owners>bcurran3</owners>
+    <summary>Updates the firmware on your Unifying receiver and some devices.</summary>
+    <description>
+
+	Logitech Unifying firmware updates to address potential security vulnerabilities found by Bastille Security in 2016.
+	
+    </description>
+    <projectUrl>http://support.logitech.com/en_us/software/unifying</projectUrl>
+    <docsUrl>https://support.logi.com/hc/en-us/community/posts/360032078393-Logitech-Response-to-Research-Findings</docsUrl>
+    <tags>logitech unifying software mouse util utility fw firmware</tags>
+    <copyright>Copyright Logitech</copyright>
+    <licenseUrl>http://www.logitech.com/en-us/footer/terms-of-use</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/6467b6ee7894eedd629c4cc22d4fdf85bfabfb05/icons/unifying.png</iconUrl>
+    <releaseNotes>added checksum and screenshot</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
