@@ -2,39 +2,42 @@
 $ErrorActionPreference = 'Stop'
 $packageName    = 'vnc-viewer'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-$ENV:ChocolateyPackageVersion-Windows-32bit.exe"
-$checksum       = 'A8FB44F338D744D3E85745CD17FAAEB7686E1F434361EFB33E6C26897B6A2A79'
-$url64          = "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-$ENV:ChocolateyPackageVersion-Windows-64bit.exe"
-$checksum64     = 'C23C58236CA2D7EC2F5923B41A9064D08471C57627908E64639C4418AC6E2AA9'
-$shortcutName   = 'VNC Viewer' 
-$fileName32     = "VNC-Viewer-$ENV:ChocolateyPackageVersion-Windows-32bit.exe"
-$fileName64     = "VNC-Viewer-$ENV:ChocolateyPackageVersion-Windows-64bit.exe"
+$bits           = Get-ProcessorBits
+$extractDir     = "$toolsDir\extracted"
+$url            = "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-$ENV:ChocolateyPackageVersion-Windows-msi.zip"
+$checksum       = 'F18BC40E6D30844218D611BEA71F4688433668C92094461443413399C8A256F3'
 
-#Start-CheckandThrow("VNC-Viewer")
-
-if ((Get-OSArchitectureWidth -eq 64) -and ($ENV:chocolateyForceX86 -ne $True))
-    {
-     $FileFullpath = "$ToolsDir\$fileName64"
-    } else {
-     $FileFullpath = "$ToolsDir\$fileName32"
-    }
-	
 $packageArgs = @{
-  packageName    = $packageName
-  fileType       = 'EXE'
-  url            = $url
-  checksum       = $checksum
-  checksumType   = 'sha256'  
-  url64bit       = $url64  
-  checksum64     = $checksum64
-  checksumType64 = 'sha256'    
-  FileFullPath   = $FileFullpath
+  packageName   = $packageName
+  unzipLocation = $extractDir
+  fileType      = 'ZIP' 
+  url           = $url
+  checksum      = $checksum
+  checksumType  = 'sha256'
 }
 
-Get-ChocolateyWebFile @packageArgs
+Install-ChocolateyZipPackage @packageArgs 
 
-Rename-Item $FileFullpath "VNC-Viewer.exe"
-$FileFullPath = "$ToolsDir\VNC-Viewer.exe"
-  
-Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName.lnk" -TargetPath $FileFullpath -WorkingDirectory "$toolsDir"
-Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName.lnk" -TargetPath $FileFullpath
+if ($bits -eq 64)
+   {
+    $Installer = "$extractDir\VNC-Viewer-"+$ENV:packageVersion+"-Windows-en-64bit.msi"
+   } else {
+    $Installer = "$extractDir\VNC-Viewer-"+$ENV:packageVersion+"-Windows-en-32bit.msi"
+   }
+
+$packageArgs = @{
+  packageName    = $packageName
+  fileType       = 'MSI'
+  file           = $Installer
+  silentArgs     = '/quiet /qn /norestart'
+  validExitCodes = @(0, 3010, 1641)
+  softwareName   = 'VNC *'
+}
+ 
+Install-ChocolateyInstallPackage @packageArgs
+
+Remove-Item $extractDir -Recurse -Force | Out-Null
+# Remove portable version from packages versions 6.18.907 -  6.19.325
+Remove-Item "$toolsDir\VNC-Viewer.exe" -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$ENV:PUBLIC\Desktop\VNC Viewer.lnk" -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\VNC Viewer" -Force -ErrorAction SilentlyContinue | Out-Null
