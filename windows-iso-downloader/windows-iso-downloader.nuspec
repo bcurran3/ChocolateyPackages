@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-iso-downloader</id>
-    <version>8.09</version>
+    <version>8.16</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-iso-downloader</packageSourceUrl>
     <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>
@@ -44,7 +44,7 @@ In the past, Microsoft provided disk images for many of their products through t
 </description>
     <releaseNotes>https://www.heidoc.net/joomla/technology-science/microsoft/67-microsoft-windows-and-office-iso-download-tool?showall=&amp;start=1</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.6.1" />
+      <dependency id="dotnet4.6.1" version="4.6.1" />
     </dependencies>
   </metadata>
   <files>
