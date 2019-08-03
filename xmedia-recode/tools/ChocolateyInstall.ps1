@@ -16,5 +16,4 @@ $packageArgs = @{
  
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item $url | Out-Null
-Remove-Item $url64 | Out-Null
+Remove-Item "$toolsDir\*.exe" -ErrorAction SilentlyContinue | Out-Null
