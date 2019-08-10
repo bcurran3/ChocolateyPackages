@@ -61,7 +61,7 @@ ___
     <dependencies>
       <dependency id="autohotkey" version="1.1.27"/>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2"/>
-      <dependency id="vcredist2014" version="14.11.25325" />
+      <dependency id="vcredist2017" version="14.11.25325.0" />
     </dependencies>
   </metadata>
   <files>
