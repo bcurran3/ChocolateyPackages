@@ -1,9 +1,10 @@
-﻿$packageName    = 'cms-magic-series'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'cms-magic-series'
 $installerType  = 'MSI'
-$url            = 'http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS-IPT-2.2.5.2029-win32.msi' 
-$checksum       = '317EDF3D8E632DF2C4786EB0003EC6A3C95100E33D9B521E0078BD858D7D07D5'
-$url64          = 'http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS-IPT-2.2.5.2029-win64.msi' 
-$checksum64     = '18D6DFFB8615352F732C96772326100499A33CC7FCC5EE9386C4A890F83248F3'
+$url            = 'https://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS-IPT-2.4.4.2056-win32.msi' 
+$checksum       = '00732509B4E8078A2DE7B78613F845C9A121D5DCA236AA262B9219555E3E6ACE'
+$url64          = 'https://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/CMS-IPT-2.4.4.2056-win64.msi' 
+$checksum64     = 'EF6ECA7C367D249CD212E77A48ED6405D64A93D59EBBF48437F9ACB0FF269AED'
 $silentArgs     = '/quiet /qn /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
