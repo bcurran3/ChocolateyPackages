@@ -18,8 +18,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
-[choco://orangec](choco://orangec)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+###[choco://orangec](choco://orangec)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol  support](https://chocolatey.org/packages/choco-protocol-support)
+
 ---
 	
 The Orange C/C++ Compiler is new work which includes an optimizing compiler, a tool chain, and an IDE.  The compiler itself uses various standard techniques, as well as some interesting techniques mentioned in literature.
@@ -37,7 +39,9 @@ This compiler will run on WIN32 and also on DOS, and generate 32-bit programs fo
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/orangec/readme.md)**
 
 ---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
 ---
     </description>
     <summary>OrangeC Compiler And Tool Chain</summary>
