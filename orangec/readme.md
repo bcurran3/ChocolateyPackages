@@ -1,8 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* At some point in the future this package will be setup for creation by Auto Update (when I figure it out).
-* As of v3.5.3 binaries are included in the package. No more URL downloads. This version will always be available to install.
-* This program does not support silent uninstall. Use the Control Panel to uninstall. I'll make it automatic sometime in the future.
+* Binaries are included in the package. This version will always be available to install.
 
 ***
 
