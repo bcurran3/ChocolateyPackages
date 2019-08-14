@@ -9,7 +9,7 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.08.13 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2019.08.14 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
@@ -260,6 +260,41 @@ if ($LocalnuspecFile.length -lt 168){ # approximate value of a minimal blank nus
     Write-Host "           ** $LocalnuspecFile file appears to be blank or corrupt." -Foreground Red
 	return
    }
+
+# borrowed from https://www.jonathanmedd.net/2012/05/quick-and-easy-powershell-test-xmlfile.html
+function Test-XMLFile {
+    <#
+        .SYNOPSIS
+        Test the validity of an XML file
+    #>
+    [CmdletBinding()]
+    param (
+        [parameter(mandatory=$true)][ValidateNotNullorEmpty()][string]$xmlFilePath
+    )
+
+    # Check the file exists
+    if (!(Test-Path -Path $xmlFilePath)){
+        throw "$xmlFilePath is not valid. Please provide a valid path to the .xml fileh"
+    }
+    # Check for Load or Parse errors when loading the XML file
+    $xml = New-Object System.Xml.XmlDocument
+    try {
+        $xml.Load((Get-ChildItem -Path $xmlFilePath).FullName)
+        return $true
+    }
+    catch [System.Xml.XmlException] {
+        Write-Verbose "$xmlFilePath : $($_.toString())"
+        return $false
+    }
+}
+
+if (!(Test-XMLFile $LocalnuspecFile)){
+Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
+Write-Host "FYI:       ** Common problems include not closing elements and not converting ""&""'s to ""&amp;""" -Foreground Cyan
+Write-Host "              choco pack will report ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
+Write-Host "              choco pack will report ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s.`n" -Foreground Cyan
+break
+}
 
 # Import package.nuspec file to get values
 $nuspecXML = $LocalnuspecFile
