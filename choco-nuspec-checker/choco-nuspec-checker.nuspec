@@ -53,7 +53,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <releaseNotes>
 ###CHANGELOG:
-* 2019.08.14 - now validates the nuspec as a valid XML file and reports common errors
+* 2019.08.14 - now validates the nuspec as a valid XML file and reports common errors, notifies if there is a submitted/unapproved version on chocolatey.org, better checking for failed and trusted package notifications 
 * 2019.08.13 - minor fix to cinst checking in chocolateyinstall.ps1
 * 2019.03.04 - now checks for msiexec calls in scripts, checks for correctly named install script, checks that install scripts don't use choco commands, checks the XML namespace/schema, cosmetic changes
 * 2019.02.22 - now notifies if the package is trusted and if the package is failing tests on chocolatey.org, -OptimizePNGs superseded by -OptimizeImages which will now optimize BMP, GIF, and TGA files as well as PNG files, added checking for FossHub download links in chocolateyInstall.ps1, more minor tweaks
