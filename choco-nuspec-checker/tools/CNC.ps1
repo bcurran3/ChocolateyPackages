@@ -590,12 +590,16 @@ function Add-Footer{
 # Check package current status on chocolatey.org
 function Check-OnlineStatus{
   $PackagePageInfo = Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID"
-  if ($PackagePageInfo -match "Package test results have failed"){
+  if ($PackagePageInfo -match "Package test results have failed. Follow the link for more information."){
 	  Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
 	  $GLOBAL:FYIs++
 	 }
-  if ($PackagePageInfo -match "a trusted package"){
+  if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
 	  Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
+	  $GLOBAL:FYIs++
+	 }
+  if ($PackagePageInfo -match "submitted"){
+	  Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Green
 	  $GLOBAL:FYIs++
 	 }
 }
