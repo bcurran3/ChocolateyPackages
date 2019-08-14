@@ -1,6 +1,7 @@
-﻿$packageName    = 'pelles-c'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'pelles-c'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe         = 'AutoHotKey'
-$ahkFile        = Join-Path $toolsDir "PellesCUninstall.ahk"
+$ahkFile        = "$toolsDir\PellesCUninstall.ahk"
 
 Start-Process $ahkExe $ahkFile
