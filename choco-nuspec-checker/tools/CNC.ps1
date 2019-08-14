@@ -9,7 +9,7 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.03.04 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2019.08.13 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
@@ -1333,7 +1333,7 @@ write-host "FOREACH = $_" -foreground red -background white
 				  Write-Host "           ** Note: Package automation scripts make use of msiexec. The reviewer will ensure there is a valid reason`n              the package has not used the built-in helpers." -Foreground Cyan
 				  $GLOBAL:Notes++
 				  }
-		      if (($InstallScript -match 'cinst') -or ($InstallScript -match 'choco install') -or ($InstallScript -match 'choco upgrade') -or ($InstallScript -match ' cup ')){
+		      if (($InstallScript -match 'cinst ') -or ($InstallScript -match 'choco install') -or ($InstallScript -match 'choco upgrade') -or ($InstallScript -match ' cup ')){
 		          Write-Host "WARNING:   ** $ScriptFile - uses a cinst, choco install, cup, or choco upgrade command." -Foreground Red
 			      Write-Host "           ** In automation scripts (.ps1/.psm1), the package has used a chocolatey command that should not be used.`n              Rather a dependency should be taken on a package. Please add dependencies to the nuspec." -Foreground Cyan
 			      $GLOBAL:Required++
