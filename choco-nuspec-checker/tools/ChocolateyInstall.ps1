@@ -1,28 +1,27 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'choco-nuspec-checker'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$scriptDir   = "$(Get-ToolsLocation)\BCURRAN3"
 $script      = 'CNC.ps1'
-$CNCHeader   = 'CNCHeader.txt'
-$CNCFooter   = 'CNCFooter.txt'
-$CheckExecutionPolicy = Get-ExecutionPolicy
 
-Write-Host "  ** $packageName - FYI: Your PowerShell Execution Policy is currently set to $CheckExecutionPolicy" -ForeGround Yellow
+# Setup
+# New storage location moving forward for all my Chocolatey scripts
+if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$ENV:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "directory" | Out-Null }
 
-Move-Item "$toolsDir\$script" $ENV:ChocolateyInstall\bin -Force 
+# Conversion
+# Move files before v2019.08.26 from old to new storage location
+if (Test-Path "$ENV:ChocolateyInstall\bin\$script") { Remove-Item "$ENV:ChocolateyInstall\bin\$script" -Force }
+if (Test-Path "$ENV:ChocolateyInstall\bin\CNCHeader.txt") { Move-Item "$ENV:ChocolateyInstall\bin\CNCHeader.txt" "$scriptDir" -Force }
+if (Test-Path "$ENV:ChocolateyInstall\bin\CNCFooter.txt") { Move-Item "$ENV:ChocolateyInstall\bin\CNCFooter.txt" "$scriptDir" -Force }
 
-if (!(Test-Path $ENV:ChocolateyInstall\bin\$CNCHeader)) {
-    Move-Item "$toolsDir\$CNCHeader" $ENV:ChocolateyInstall\bin -Force
-	$WhoAmI=whoami
-    $Acl = Get-Acl "$ENV:ChocolateyInstall\bin\$CNCHeader"
-    $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI,"FullControl","Allow")
-    $Acl.SetAccessRule($Ar)
-    Set-Acl "$ENV:ChocolateyInstall\bin\$CNCHeader" $Acl
-   }
-if (!(Test-Path $ENV:ChocolateyInstall\bin\$CNCFooter)) {
-    Move-Item "$toolsDir\$CNCFooter" $ENV:ChocolateyInstall\bin -Force
-	$WhoAmI=whoami
-    $Acl = Get-Acl "$ENV:ChocolateyInstall\bin\$CNCFooter"
-    $Ar = New-Object  system.security.accesscontrol.filesystemaccessrule($WhoAmI,"FullControl","Allow")
-    $Acl.SetAccessRule($Ar)
-    Set-Acl "$ENV:ChocolateyInstall\bin\$CNCFooter" $Acl	
-   }
+# Install
+# Move new files and support files (if applicable)
+Move-Item "$toolsDir\$script" "$scriptDir" -Force
+Move-Item "$toolsDir\CNC.CMD" "$scriptDir" -Force
+if (!(Test-Path "$scriptDir\CNCHeader.txt")) { Move-Item "$toolsDir\CNCHeader.txt" "$scriptDir" -Force }
+if (!(Test-Path "$scriptDir\CNCFooter.txt")) { Move-Item "$toolsDir\CNCFooter.txt" "$scriptDir" -Force }
+
+# Cleanup
+Remove-Item "$toolsDir\*.txt" -Force -ErrorAction SilentlyContinue | Out-Null
+if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" }
+refreshenv
