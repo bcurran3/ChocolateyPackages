@@ -9,17 +9,18 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.08.14 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2019.08.26 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
 
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
 $AcceptableIconExts=@("png","svg")
-$BinaryExtensions=@("*.exe","*.msi","*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.msu","*.msp","*.appx","*.appxbundle") # What others?
+# All 7Zip supported formats plus EXE, MSU, MSP, APPX, APPXBUNDLE, IMG - What else is needed?
+$BinaryExtensions=@("*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7z","*.xz","*.bzip2","*.gzip","*.tar","*.zip","*.wim","*.ar","*.arj","*.cab","*.chm","*.cpio","*.cramfs","*.dmg","*.ext","*.fat","*.gpt""*.hfs","*.ihex","*.iso","*.lzh","*.lzma","*.mbr","*.msi","*.nsis","*.ntfs","*.qcow2","*.rar","*.rpm","*.squashfs","*.udf","*.uefi","*.vdi","*.vhd","*.vmdk","*.xar","*.z")
 $CDNlist      = "https://www.staticaly.com, https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
-$CNCHeader    = "$ENV:ChocolateyInstall\bin\CNCHeader.txt"
-$CNCFooter    = "$ENV:ChocolateyInstall\bin\CNCFooter.txt"
+$CNCHeader    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCHeader.txt"
+$CNCFooter    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCFooter.txt"
 $PNGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\PngOptimizerCL.exe)
 $OptimizeImages=$False
 $NewCDN       = "Staticly"
@@ -32,7 +33,10 @@ $GLOBAL:Fixes=0
 $GLOBAL:FYIs=0
 $GLOBAL:UpdateNuspec=$False
 $GLOBAL:TemplateError=0
+$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
 $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one."
+$XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
+# <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 
 if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
     Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
@@ -123,73 +127,31 @@ if ($args -eq "-OpenValidatorInfo") {
 	return
 }
 
-if ($args -eq "-AddHeader") {
-     $AddHeader=$True
-   } else {
-     $AddHeader=$False
-}
+if ($args -eq "-AddHeader") {$AddHeader=$True} else {$AddHeader=$False}
 
-if ($args -eq "-AddFooter") {
-     $AddFooter=$True
-   } else {
-     $AddFooter=$False
-}
+if ($args -eq "-AddFooter") {$AddFooter=$True} else {$AddFooter=$False}
 
-if ($args -eq "-MakeBackups") {
-     $MakeBackups=$True
-   } else {
-     $MakeBackups=$False
-}
+if ($args -eq "-MakeBackups") {$MakeBackups=$True} else {$MakeBackups=$False}
 
-if ($args -eq "-Debug") {
-     $Debug=$True
-   } else {
-     $Debug=$False
-}
+if ($args -eq "-Debug") {$Debug=$True} else {$Debug=$False}
 
-if ($args -eq "-OpenURLs") {
-     $OpenURLs=$True
-   } else {
-     $OpenURLs=$False
-}
+if ($args -eq "-OpenURLs") {$OpenURLs=$True} else {$OpenURLs=$False}
 
 if ($args -eq "-OptimizeImages") {$OptimizeImages=$True}
 
 if ($args -eq "-OptimizePNGs") {$OptimizeImages=$True}
 
-if ($args -eq "-UpdateImageURLs") {
-     $UpdateImageURLs=$True
-   } else {
-     $UpdateImageURLs=$False
-}
+if ($args -eq "-UpdateImageURLs") {$UpdateImageURLs=$True} else {$UpdateImageURLs=$False}
 
-if ($args -eq "-UpdateScripts") {
-     $UpdateScripts=$True
-   } else {
-     $UpdateScripts=$False
-}
+if ($args -eq "-UpdateScripts") {$UpdateScripts=$True} else {$UpdateScripts=$False}
 
-if ($args -eq "-UpdateXMLComment") {
-     $UpdateXMLComment=$True
-   } else {
-     $UpdateXMLComment=$False
-}
+if ($args -eq "-UpdateXMLComment") {$UpdateXMLComment=$True} else {$UpdateXMLComment=$False}
 
-if ($args -eq "-UpdateXMLDeclaration") {
-     $UpdateXMLDeclaration=$True
-   } else {
-     $UpdateXMLDeclaration=$False
-}
+if ($args -eq "-UpdateXMLDeclaration") {$UpdateXMLDeclaration=$True} else {$UpdateXMLDeclaration=$False}
 
-if ($args -eq "-UpdateXMLNamespace") {
-     $UpdateXMLns=$True
-   } else {
-     $UpdateXMLns=$False
-}
+if ($args -eq "-UpdateXMLNamespace") {$UpdateXMLns=$True} else {$UpdateXMLns=$False}
 
-if ($args -eq "-Update") {
-	 $GLOBAL:UpdateNuspec=$True
-}
+if ($args -eq "-Update") {$GLOBAL:UpdateNuspec=$True}
 
 if ($args -eq "-UpdateAll") {
      $UpdateAll=$True
@@ -229,11 +191,7 @@ if ($args -eq "-UsejsDelivr") {
      $jsDelivrCDN=$False
 }
 
-if ($args -eq "-WhatIf") {
-     $WhatIf=$True
-   } else {
-     $WhatIf=$False
-}
+if ($args -eq "-WhatIf") {$WhatIf=$True} else {$WhatIf=$False}
 
 if ($path -eq "\"){
     $path=(Get-Location).Drive.Name + ":" + "\"
@@ -289,11 +247,29 @@ function Test-XMLFile {
 }
 
 if (!(Test-XMLFile $LocalnuspecFile)){
-Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
-Write-Host "FYI:       ** Common problems include not closing elements and not converting ""&""'s to ""&amp;""" -Foreground Cyan
-Write-Host "              choco pack will report ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
-Write-Host "              choco pack will report ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s.`n" -Foreground Cyan
-break
+    Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
+    Write-Host "FYI:       ** Common problems include not closing elements and not converting ""&""'s to ""&amp;""" -Foreground Cyan
+    Write-Host "              choco pack will report ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
+    Write-Host "              choco pack will report ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s.`n" -Foreground Cyan
+    break
+}
+
+# Update the nuspec XML namespace declaration
+# Only checks for the common 2011/08/nuspec.xsd namespace, could be much better using regex.
+# Messages related to this happening or not (-WhatIf) are difficult to implement because this change happens independly of other changes to the .nuspec, notifications need to be implemented in most cases.
+function Update-XMLnsDeclaration{
+  if ($MakeBackups){Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.CNC.XMLnamespace.bak" -Force}
+  ((Get-Content -Path $LocalnuspecFile -Raw) -Replace 'http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd','http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd') | Set-Content -Path $LocalnuspecFile
+  $GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$True
+  $GLOBAL:Fixes++
+}
+
+if ($UpdateXMLns){
+    if ($WhatIf){
+		$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
+       } else {
+         Update-XMLnsDeclaration
+        }
 }
 
 # Import package.nuspec file to get values
@@ -513,7 +489,7 @@ function Check-PackageInternalFilesIncluded{
 #You have repackaged an existing package that you unpacked without removing some of the packaging files from the original.
 }
 
-# check if header template is already in the description
+# check if header template is in the description
 function Check-Header{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
@@ -550,7 +526,7 @@ function Add-Header{
      }
 }
 
-# check if footer template is already in the description
+# check if footer template is in the description
 function Check-Footer{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
@@ -587,6 +563,15 @@ function Add-Footer{
     }
 }
 
+# check if package release notes are in the description
+function Check-PackageReleaseNotes{
+  $NuspecDescription=$NuspecDescription.Trim()
+  if (($NuspecDescription -match "PACKAGE NOTES") -or ($NuspecDescription -match "PACKAGE RELEASE NOTES")){
+      Write-Host "FYI:       ** <description> - package release notes found." -Foreground Green
+	  $GLOBAL:FYIs++
+	  }
+}
+
 # Check package current status on chocolatey.org
 function Check-OnlineStatus{
   $PackagePageInfo = Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID"
@@ -599,7 +584,7 @@ function Check-OnlineStatus{
 	  $GLOBAL:FYIs++
 	 }
   if ($PackagePageInfo -match "submitted"){
-	  Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Green
+	  Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
 	  $GLOBAL:FYIs++
 	 }
 }
@@ -688,15 +673,6 @@ function Update-XMLDeclaration{
   $GLOBAL:UpdateNuspec=$True
 }
 
-# Update the nuspec XML namespace declaration
-function Update-XMLnsDeclaration{
-Write-Host "           ** XML namespace declaration changing not implemented yet." -Foreground Red
-#  Write-Host "           ** XML namespace declaration changed to http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Green
-#  $nuspecFile.package.xmlns='http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd'
-#  $GLOBAL:Fixes++
-#  $GLOBAL:UpdateNuspec=$True
-}
-
 # Update the nuspec with any changes and save as UTF-8 w/o BOM
 # Thanks https://stackoverflow.com/questions/8160613/powershell-saving-xml-and-preserving-format
 Function Update-nuspec{
@@ -710,7 +686,6 @@ Function Update-nuspec{
 # changes
       if ($UpdateXMLComment -and !$nuspecFile.'#comment'){$UpdatednuspecFile.InsertAfter($UpdatednuspecFile.CreateComment($XMLComment), $UpdatednuspecFile.FirstChild) | Out-Null}
       if ($nuspecFile.xml){$UpdatednuspecFile.xml = $nuspecFile.xml}
-#	  if ($UpdateXMLns) {$UpdatednuspecFile.package.xmlns = $nuspecFile.package.xmlns}
       if ($nuspecFile.package.metadata.description.'#cdata-section'){
 #         $NuspecDescription.'#cdata-section' = $NuspecDescription
 #         Write-Host "           ** <description> - CDATA found, not changing it." -Foreground Magenta
@@ -799,7 +774,7 @@ if (!$ChocoInstallScript -and $NugetInstallScript){
 }
 
 # Start outputting check results
-Write-Host "CNC Summary of $NuspecDisplayName :" -Foreground Magenta
+Write-Host "CNC Summary of $NuspecDisplayName (v$NuspecVersion):" -Foreground Magenta
 
 # Open all .nuspec URLs for viewing if -OpenURLs is passed
 if ($OpenURLs) {
@@ -858,16 +833,14 @@ if (!$nuspecFile.'#comment'){
 }
 
 # check XML Namespace
-if ($NuspecXMLNamespace -ne 'http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd'){
+if ($NuspecXMLNamespace -ne "$XMLNamespace"){
     Write-Warning "  ** XML namespace declaration is $NuspecXMLNamespace"
-	if ($UpdateXMLns){
-	    Update-XMLnsDeclaration
-	} else {
-      Write-Host "           ** The current schema is http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Cyan
-      Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLNamespace to update the XML namespace declaration." -Foreground Cyan
-	  $GLOBAL:Suggestions++
-	}
+    Write-Host "           ** The current schema is $XMLNamespace" -Foreground Cyan
+    Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLNamespace to update the XML namespace declaration." -Foreground Cyan
+	$GLOBAL:Suggestions++
 }
+
+if ($GLOBAL:DelayedUpdateXMLnsDeclarationMessage) {Write-Host "           ** XML namespace declaration changed to http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Green}
 
 # <authors> checks
 if (!($NuspecAuthors)) {
@@ -971,6 +944,7 @@ if (!$NuspecDescription){
 	 if ($AddFooter) {
          $NuspecDescription=(Add-Footer)
         }
+	 Check-PackageReleaseNotes
      if ($NuspecDescription.Length -lt 30) {
 	     Write-Warning "  ** <description> - is less than 30 characters." 
 		 Write-Host "           ** Guideline: Description should be sufficient to explain the software. Please fill in the description`n              with more information about the software. Feel free to use use markdown." -Foreground Cyan
@@ -1430,8 +1404,8 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground Whi
 return
 
 # TDL
+# Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
 # BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
-# check XML Namespace declaration and re-write if old - started
 # https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -started
 # check for &'s in links to change to &amp;
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)

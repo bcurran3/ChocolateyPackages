@@ -1,9 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'choco-nuspec-checker'
-$script      = 'CNC.ps1'
-$CNCHeader   = 'CNCHeader.txt'
-$CNCFooter   = 'CNCFooter.txt'
+$scriptDir   = "$(Get-ToolsLocation)\BCURRAN3"
 
-Remove-Item "$ENV:ChocolateyInstall\bin\$script" -Force | Out-Null
-Remove-Item "$ENV:ChocolateyInstall\bin\$CNCHeader" -Force -ErrorAction SilentlyContinue | Out-Null
-Remove-Item "$ENV:ChocolateyInstall\bin\$CNCFooter" -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$scriptDir\CNC*.*" -Force -ErrorAction SilentlyContinue | Out-Null
