@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>kmttg</id>
     <title>kmttg</title>
-    <version>2.4.12</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/kmttg</packageSourceUrl>			
+    <version>2.4.13</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/kmttg</packageSourceUrl>
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
     <summary>TiVo To Go and advanced Remote Control</summary>
@@ -29,22 +29,18 @@ Also has ability to capture video output directly from Slingbox Pro or later mod
 * Use AutoSkip functionality for hands free commercial skipping for your TiVos
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/kmttg/readme.md)**
-
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
     </description>
     <projectUrl>https://sourceforge.net/projects/kmttg/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/kmttg/kmttg_icon.png</iconUrl>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/kmttg/kmttg_icon.png</iconUrl>
     <projectSourceUrl>https://sourceforge.net/p/kmttg/code/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/kmttg/wiki/Home/</docsUrl>
     <licenseUrl>https://sourceforge.net/p/kmttg/code/HEAD/tree/trunk/LICENSE</licenseUrl>
     <mailingListUrl>https://sourceforge.net/p/kmttg/discussion/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/kmttg/tickets/</bugTrackerUrl>
-    <tags>kmttg tivo tivotogo java</tags>
+    <tags>kmttg tivo tivotogo java foss cross-platform</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
-      <dependency id="javaruntime" />
+      <dependency id="javaruntime" version="8.0.40" />
     </dependencies>
     <releaseNotes>https://sourceforge.net/p/kmttg/wiki/release_notes/</releaseNotes>
   </metadata>
