@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2019.07.02</version>
+    <version>2019.08.27</version>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -52,23 +52,23 @@ ___
 * **CPLB** is configurable. You can:
      1. configure which locations you want or don't want to save to (default=all the locations found except the custom location)
      2. configure to save package version information or not (default=false)
-     3. configure to append a date to the saved packages.config, AllProgramsList.txt, and pins.bat files(default=false)
-     4. configure what folder to save to (default=ChocolateyPackageListBackup)
-     5. easily add a custom location by editing CustomPath and UseCustomPath in the .xml configuration file
-     6. configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
+     3. configure to save package title and summary information or not (default=false)
+     4. configure to append a date to the saved packages.config, AllProgramsList.txt, and pins.bat files(default=false)
+     5. configure what folder to save to (default=ChocolateyPackageListBackup)
+     6. easily add a custom location by editing CustomPath and UseCustomPath in the .config file
+     7. configure to save a list of all your installed Windows programs whether installed by Chocolatey or not to AllProgramsList.txt (default=true)
 
 **If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 </description>
     <summary>(unofficial) Choco Package List Backup to Cloud and Local - a PowerShell script to backup your Chocolatey packages list for easy re-installation</summary>
     <releaseNotes>
 ###INSTRUCTIONS:
-
-* Edit C:\ProgramData\chocolatey\bin\choco-package-list-backup.xml to customize your backup(s). It's easy, there are comments.
-* From PowerShell, type CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
-* From Command Prompt, type POWERSHELL CHOCO-PACKAGE-LIST-BACKUP.PS1 to backup your Chocolatey packages list. 
+* Edit C:\tools\BCURRAN3\choco-package-list-backup.config to customize your backup(s). It's easy, there are comments.
+* From PowerShell or the Command Prompt, type CHOCO-PACKAGE-LIST-BACKUP to backup your Chocolatey packages list. 
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 	
 ###CHANGELOG:
+* 2019.08.27 - can now put title and summary info into the packages.config file, new -EditConfig parameter to edit the config file, **Now works from Command Prompt as well as PowerShell**, script installation endpoint changed, config file renamed from .xml to .config
 * 2019.07.02 - now saves OneDrive backups to free, paid, and corporate folders
 * 2019.06.27 - now backups the config file, can now also make archival versions of pins.bat, edited config comments to not add quotes to custom path.
 * 2019.01.31 - file saving functions re-written and optimized, check for errors caused by other Chocolatey instances
