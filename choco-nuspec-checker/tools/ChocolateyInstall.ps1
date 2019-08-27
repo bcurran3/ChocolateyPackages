@@ -23,5 +23,4 @@ if (!(Test-Path "$scriptDir\CNCFooter.txt")) { Move-Item "$toolsDir\CNCFooter.tx
 
 # Cleanup
 Remove-Item "$toolsDir\*.txt" -Force -ErrorAction SilentlyContinue | Out-Null
-if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" }
-refreshenv
+if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
