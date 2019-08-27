@@ -7,21 +7,31 @@
 # Save --packageparameters
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-Write-Host "choco-package-list-backup.ps1 v2019.07.02 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "choco-package-list-backup.ps1 v2019.08.27 - backup Chocolatey packages list locally and to the cloud" -Foreground White
 Write-Host "Copyleft 2017-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
-$Date = Get-Date -UFormat %Y-%m-%d
-$ErrorArray=@("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)
-$ICinstalled = Test-Path "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe"
+$Date          = Get-Date -UFormat %Y-%m-%d
+$ErrorArray    = @("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)
+$ICinstalled   = Test-Path "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe"
 $PinnedPackages=choco pin list -r
 $PinnedPackagesFile = 'pins.bat'
-$PPCinstalled = Test-Path "$ENV:ChocolateyInstall\config\persistentpackages.config"
+$PPCinstalled  = Test-Path "$ENV:ChocolateyInstall\config\persistentpackages.config"
+$scriptDir     = "$ENV:ChocolateyToolsLocation\BCURRAN3"
+$ScriptConfig  = 'choco-package-list-backup.config'
 
-# Import preferences - see choco-package-list-backup.xml in Chocolatey's bin dir
-[xml]$ConfigFile = Get-Content "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml"
+if ($args -eq "-EditConfig") {
+    Write-Host "  ** Editing contents of $scriptDir\$ScriptConfig." -Foreground Magenta
+    if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){$Editor="notepad++.exe"} else {$Editor="notepad.exe"}
+	&$Editor "$scriptDir\$ScriptConfig"
+	return
+}
+
+# Import preferences - see comments in choco-package-list-backup.config for settings 
+[xml]$ConfigFile = Get-Content "$scriptDir\choco-package-list-backup.config"
 $PackagesListFile = $ConfigFile.Settings.Preferences.PackagesListFile
 $SaveFolderName = $ConfigFile.Settings.Preferences.SaveFolderName
+$SaveTitleSummary = $ConfigFile.Settings.Preferences.SaveTitleSummary
 $SaveVersions = $ConfigFile.Settings.Preferences.SaveVersions
 $AppendDate = $ConfigFile.Settings.Preferences.AppendDate
 $CustomPath = $ConfigFile.Settings.Preferences.CustomPath
@@ -62,10 +72,10 @@ Function Check-SaveLocation{
      }   
     }
 
-# Copy choco-package-list-backup.xml to the same location as packages.config
+# Copy choco-package-list-backup.config to the same location as packages.config
 Function Copy-Config{
-   Copy-Item "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml" $SavePath -Force | Out-Null
-   Write-Host "  ** $SavePath\choco-package-list-backup.xml SAVED!" -Foreground Green 
+   Copy-Item "$scriptDir\$ScriptConfig" $SavePath -Force | Out-Null
+   Write-Host "  ** $SavePath\$ScriptConfig SAVED!" -Foreground Green 
   }
 
 # Copy persistentpackages.config if it exists to the same location as packages.config
@@ -96,57 +106,57 @@ Function Copy-InstChoco{
 # ENHANCEMENT: Below for future release adding extra description info to packages.config
 # Import package.nuspec file to get extended package info
 function Get-NuspecInfo($PackageName,$NuspecTagRequest){
-   $nuspecXML = "$env:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
+   $nuspecXML = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
    [xml]$nuspecFile = Get-Content $nuspecXML
-   $NuspecAuthors = $nuspecFile.package.metadata.authors
-   $NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl
-   $NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
-   $NuspecCopyright = $nuspecFile.package.metadata.copyright
-   $NuspecDependencies = $nuspecFile.package.metadata.dependencies # Not fully implemented yet
-   $NuspecDescription = $nuspecFile.package.metadata.description
-   $NuspecDocsURL = $nuspecFile.package.metadata.docsurl
-   $NuspecFiles = $nuspecFile.package.files.file # Not fully implemented yet
-   $NuspecIconURL = $nuspecFile.package.metadata.iconurl
-   $NuspecID = $nuspecFile.package.metadata.id
-   $NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
-   $NuspecMailingListURL = $nuspecFile.package.metadata.mailinglisturl
-   $NuspecOwners = $nuspecFile.package.metadata.owners
-   $NuspecPackageSourceURL = $nuspecFile.package.metadata.packagesourceurl
-   $NuspecProjectSourceURL = $nuspecFile.package.metadata.projectsourceurl
-   $NuspecProjectURL = $nuspecFile.package.metadata.projecturl
-   $NuspecProvides = $nuspecFile.package.metadata.provides # Built for the future
-   $NuspecReleaseNotes = $nuspecFile.package.metadata.releasenotes
-   $NuspecReplaces = $nuspecFile.package.metadata.replaces # Built for the future
-   $NuspecRequireLicenseAcceptance = $nuspecFile.package.metadata.requirelicenseacceptance
+#   $NuspecAuthors = $nuspecFile.package.metadata.authors
+#   $NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl
+#   $NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
+#   $NuspecCopyright = $nuspecFile.package.metadata.copyright
+#   $NuspecDependencies = $nuspecFile.package.metadata.dependencies # Not fully implemented yet
+#   $NuspecDescription = $nuspecFile.package.metadata.description
+#   $NuspecDocsURL = $nuspecFile.package.metadata.docsurl
+#   $NuspecFiles = $nuspecFile.package.files.file # Not fully implemented yet
+#   $NuspecIconURL = $nuspecFile.package.metadata.iconurl
+#   $NuspecID = $nuspecFile.package.metadata.id
+#   $NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
+#   $NuspecMailingListURL = $nuspecFile.package.metadata.mailinglisturl
+#   $NuspecOwners = $nuspecFile.package.metadata.owners
+#   $NuspecPackageSourceURL = $nuspecFile.package.metadata.packagesourceurl
+#   $NuspecProjectSourceURL = $nuspecFile.package.metadata.projectsourceurl
+#   $NuspecProjectURL = $nuspecFile.package.metadata.projecturl
+#   $NuspecProvides = $nuspecFile.package.metadata.provides # Built for the future
+#   $NuspecReleaseNotes = $nuspecFile.package.metadata.releasenotes
+#   $NuspecReplaces = $nuspecFile.package.metadata.replaces # Built for the future
+#   $NuspecRequireLicenseAcceptance = $nuspecFile.package.metadata.requirelicenseacceptance
    $NuspecSummary = $nuspecFile.package.metadata.summary
-   $NuspecTags = $nuspecFile.package.metadata.tags
+#   $NuspecTags = $nuspecFile.package.metadata.tags
    $NuspecTitle = $nuspecFile.package.metadata.title
-   $NuspecVersion = $nuspecFile.package.metadata.version
+#   $NuspecVersion = $nuspecFile.package.metadata.version
 
-   If ($NuspecTagRequest -eq "authors") {return $NuspecAuthors}
-   If ($NuspecTagRequest -eq "bugtrackerurl") {return $NuspecBugTrackerURL}
-   If ($NuspecTagRequest -eq "conflicts") {return $NuspecConflicts}
-   If ($NuspecTagRequest -eq "copyright") {return $NuspecCopyright}
-   If ($NuspecTagRequest -eq "dependencies") {return $NuspecDependencies} # Not fully implemented yet
-   If ($NuspecTagRequest -eq "description") {return $NuspecDescription}
-   If ($NuspecTagRequest -eq "docsurl") {return $NuspecDocsURL}
-   If ($NuspecTagRequest -eq "files") {return $NuspecFiles} # Not fully implemented yet
-   If ($NuspecTagRequest -eq "iconurl") {return $NuspecIconURL}
-   If ($NuspecTagRequest -eq "id") {return $NuspecID}
-   If ($NuspecTagRequest -eq "licenseurl") {return $NuspecLicenseURL}
-   If ($NuspecTagRequest -eq "mailinglisturl") {return $NuspecMailingListURL}
-   If ($NuspecTagRequest -eq "owners") {return $NuspecOwners}
-   If ($NuspecTagRequest -eq "packagesourceurl") {return $NuspecPackageSourceURL}
-   If ($NuspecTagRequest -eq "projectsourceurl") {return $NuspecProjectSourceURL}
-   If ($NuspecTagRequest -eq "projecturl") {return $NuspecProjectURL}
-   If ($NuspecTagRequest -eq "provides") {return $NuspecProvides}
-   If ($NuspecTagRequest -eq "releasenotes") {return $NuspecReleaseNotes}
-   If ($NuspecTagRequest -eq "replaces") {return $NuspecReplaces}
-   If ($NuspecTagRequest -eq "requirelicenseacceptance") {return $NuspecRequireLicenseAcceptance}
+#   If ($NuspecTagRequest -eq "authors") {return $NuspecAuthors}
+#   If ($NuspecTagRequest -eq "bugtrackerurl") {return $NuspecBugTrackerURL}
+#   If ($NuspecTagRequest -eq "conflicts") {return $NuspecConflicts}
+#   If ($NuspecTagRequest -eq "copyright") {return $NuspecCopyright}
+#   If ($NuspecTagRequest -eq "dependencies") {return $NuspecDependencies} # Not fully implemented yet
+#   If ($NuspecTagRequest -eq "description") {return $NuspecDescription}
+#   If ($NuspecTagRequest -eq "docsurl") {return $NuspecDocsURL}
+#   If ($NuspecTagRequest -eq "files") {return $NuspecFiles} # Not fully implemented yet
+#   If ($NuspecTagRequest -eq "iconurl") {return $NuspecIconURL}
+#   If ($NuspecTagRequest -eq "id") {return $NuspecID}
+#   If ($NuspecTagRequest -eq "licenseurl") {return $NuspecLicenseURL}
+#   If ($NuspecTagRequest -eq "mailinglisturl") {return $NuspecMailingListURL}
+#   If ($NuspecTagRequest -eq "owners") {return $NuspecOwners}
+#   If ($NuspecTagRequest -eq "packagesourceurl") {return $NuspecPackageSourceURL}
+#   If ($NuspecTagRequest -eq "projectsourceurl") {return $NuspecProjectSourceURL}
+#   If ($NuspecTagRequest -eq "projecturl") {return $NuspecProjectURL}
+#   If ($NuspecTagRequest -eq "provides") {return $NuspecProvides}
+#   If ($NuspecTagRequest -eq "releasenotes") {return $NuspecReleaseNotes}
+#   If ($NuspecTagRequest -eq "replaces") {return $NuspecReplaces}
+#   If ($NuspecTagRequest -eq "requirelicenseacceptance") {return $NuspecRequireLicenseAcceptance}
    If ($NuspecTagRequest -eq "summary") {return $NuspecSummary}
-   If ($NuspecTagRequest -eq "tags") {return $NuspecTags}
+#   If ($NuspecTagRequest -eq "tags") {return $NuspecTags}
    If ($NuspecTagRequest -eq "title") {return $NuspecTitle}
-   If ($NuspecTagRequest -eq "version") {return $NuspecVersion}
+#   If ($NuspecTagRequest -eq "version") {return $NuspecVersion}
 }
 
 # Write out the saved list of ALL installed programs to AllProgramsList.txt
@@ -187,17 +197,20 @@ Function Write-PinnedList{
   
 # Write out the saved list of packages to packages.config
 Function Write-PackagesConfig{
-
-# ENHANCEMENT: Below for future release adding extra description info to packages.config
-# choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" title=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title")"" summary=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary")""/>" }
-
     Check-SaveLocation
-	$header="<?xml version=`"1.0`" encoding=`"utf-8`"?>`n<packages>"
-	if ($SaveVersions -match $True){
+	$header="<?xml version=`"1.0`" encoding=`"utf-8`"?>`n<packages>"	
+	if (($SaveVersions -eq "True") -and ($SaveTitleSummary -eq "True")){
+        $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" title=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title")"" summary=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary")""/>" }
+	   }
+	if (($SaveVersions -eq "True") -and ($SaveTitleSummary -eq "False")){
 	    $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" />" }
-		} else {
-	      $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`"/>" } 
-	    }
+	   }
+	if (($SaveVersions -eq "False") -and ($SaveTitleSummary -eq "True")){
+        $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" title=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title")"" summary=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary")""/>" }
+	   }
+	if (($SaveVersions -eq "False") -and ($SaveTitleSummary -eq "False")){
+	    $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`"/>" }
+	   }
 	$footer="</packages>"
 	if ($body -match $ErrorArray[0-3]) {
 	    Write-Warning "  ** Another instance of choco.exe was running and corrupted the output. Aborting..."
@@ -383,7 +396,7 @@ If ($ICinstalled){
      Write-Host "To re-install your Chocolatey packages: run INSTCHOCO -Y`n" -Foreground Magenta
    } else {
      Write-Host "  ** Consider getting InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!`n  ** https://chocolatey.org/packages/InstChoco`n" -Foreground Cyan
-     Write-Host "To re-install your Chocolatey packages: run CINST PACKAGES.CONFIG -Y`n" -Foreground Magenta
+     Write-Host "To re-install your Chocolatey packages: run CHOCO INSTALL PACKAGES.CONFIG -Y`n" -Foreground Magenta
    }
 Write-Host "Found choco-package-list-backup.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
