@@ -1,16 +1,23 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>font-awesome-font</id>
-    <version>5.1.1.0020180724</version>
+    <version>5.10.1</version>
     <title>Font Awesome (Font) (Install)</title>
     <authors>Dave Gandy</authors>
+	<copyright>© Fonticons, Inc.</copyright>
     <owners>bcurran3</owners>
     <licenseUrl>http://fontawesome.io/license/</licenseUrl>
     <projectUrl>http://fontawesome.io/</projectUrl>
-    <iconUrl>http://urbildpunkt.com/ghostwire/content/images/2013/Dec/font_awesome.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/font-awesome-font/font-awesome-font_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.
+    <description>
+___
+###[choco://font-awesome-font](choco://font-awesome-font)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS.
 
 ###One Font, 675 Icons
 
@@ -49,13 +56,17 @@ To use on the desktop or for a complete set of vectors, check out the cheatsheet
 Font Awesome loves screen readers and helps make your icons accessible on the web.	
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/font-awesome-font/readme.md)**
+    
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***</description>
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
     <summary>Font Awesome - The iconic font and CSS framework</summary>
     <releaseNotes>https://fontawesome.com/changelog/latest</releaseNotes>
-    <tags>font awesome otf opentype</tags>
+    <tags>font awesome otf opentype binary</tags>
     <projectSourceUrl>https://github.com/FortAwesome/Font-Awesome</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/font-awesome-font</packageSourceUrl>
     <docsUrl>http://fontawesome.io/get-started/</docsUrl>
@@ -65,4 +76,7 @@ Font Awesome loves screen readers and helps make your icons accessible on the we
       <dependency id="chocolatey-font-helpers.extension" version="0.0.1" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
