@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tcc</id>
-    <version>24.2.50.0</version>
+    <version>25.5.12.0</version>
     <title>Take Command Console (Trial) (Install)</title>
     <authors>JP Software</authors>
     <owners>bcurran3</owners>
@@ -15,7 +15,7 @@
     <docsUrl>https://jpsoft.com/help/tcc.htm</docsUrl>
     <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
     <copyright>Copyright © Rex Conn and JP Software Inc.</copyright>
-    <tags>jpsoft tcc tccle 4nt cmd command prompt cli trial</tags>
+    <tags>jpsoft tcc tccle 4nt cmd command prompt cli trial binary</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -51,7 +51,7 @@ ___
 ___
     
 </description>
-    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-24.htm</releaseNotes>
+    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-25.htm</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

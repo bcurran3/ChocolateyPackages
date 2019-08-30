@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>take-command</id>
-    <version>24.2.50.0</version>
+    <version>25.0.12.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/take-command</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Take Command (30-Day Trial) (Install)</title>
@@ -16,7 +16,7 @@
     <docsUrl>https://jpsoft.com/help/index.htm?overview.htm</docsUrl>
     <mailingListUrl>https://jpsoft.com/forums/</mailingListUrl>
     <bugTrackerUrl>https://jpsoft.com/forums/forums/announcements.17/</bugTrackerUrl>
-    <tags>jpsoftware jpsoft take command prompt cmd cli shell trial</tags>
+    <tags>jpsoftware jpsoft take command prompt cmd cli shell trial binary</tags>
     <summary>Take Command is a comprehensive interactive GUI and command line environment</summary>
     <description>
 ---
@@ -51,7 +51,7 @@ NEW COPY $99.95 UPGRADE $49.95
 ---
 
 </description>
-    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-24.htm</releaseNotes>
+    <releaseNotes>https://jpsoft.com/help/whats-new-in-version-25.htm</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
