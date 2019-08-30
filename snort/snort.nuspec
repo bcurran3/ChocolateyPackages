@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snort</id>
-    <version>2.9.13</version>
+    <version>2.9.14.1</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snort</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Snort (Install)</title>
@@ -17,7 +17,7 @@
     <docsUrl>https://www.snort.org/documents</docsUrl>
     <mailingListUrl>https://www.snort.org/community</mailingListUrl>
     <bugTrackerUrl>https://www.snort.org/downloads</bugTrackerUrl>
-    <tags>snort network intrusion security utility packet sniffer</tags>
+    <tags>snort network intrusion security utility packet sniffer binary</tags>
     <summary>Snort is an open source network intrusion prevention system.</summary>
     <description>
 ___
@@ -42,7 +42,7 @@ Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package mainta
 ___
 
 </description>
-    <releaseNotes>https://blog.snort.org/2019/04/snort-29130-has-been-released.html</releaseNotes>
+    <releaseNotes>https://www.snort.org/downloads/snort/release_notes_2.9.14.1.txt</releaseNotes>
     <dependencies>
       <dependency id="autohotkey" version="1.1.27" />
       <dependency id="winpcap" version="4.1.1" />

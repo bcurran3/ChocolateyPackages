@@ -4,7 +4,7 @@
   <metadata>
     <id>unifying-fut</id>
     <title>Logitech Firmware Update Tool (Portable)</title>
-    <version>1.0.48</version>
+    <version>1.0.48.0020190829</version>
     <authors>Logitech</authors>
     <copyright>Copyright Logitech</copyright>
     <projectUrl>http://support.logitech.com/en_us/software/unifying</projectUrl>
@@ -37,9 +37,6 @@ Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package mainta
 ___
 
 </description>
-    <dependencies>
-      <dependency id="autohotkey" version="1.1.27"/>
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
