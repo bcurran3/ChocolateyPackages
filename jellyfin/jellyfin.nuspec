@@ -8,13 +8,14 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/jellyfin</packageSourceUrl>
     <authors>The Jellyfin Project</authors>
-    <copyright></copyright>
+    <copyright>Copyright (c) Jellyfin</copyright>
     <licenseUrl>https://raw.githubusercontent.com/jellyfin/jellyfin/master/LICENSE</licenseUrl>
     <projectUrl>https://jellyfin.github.io/</projectUrl>
 	<projectSourceUrl>https://github.com/jellyfin/jellyfin</projectSourceUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/jellyfin/jellyfin_icon.png</iconUrl>
     <docsUrl>https://jellyfin.readthedocs.io</docsUrl>
     <bugTrackerUrl>https://github.com/jellyfin/jellyfin/issues</bugTrackerUrl>
+	<mailingListUrl>https://forum.jellyfin.org/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
