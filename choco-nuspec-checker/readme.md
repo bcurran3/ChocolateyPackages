@@ -22,6 +22,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** checks for GitHub direct links, reports them, and can convert them to various CDN URLs (default=Staticaly)
 * **CNC** checks for RawGit CDN links, reports them, and can convert them to various CDN URLs (default=Staticaly)
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
+* **CNC** checks and reports current status of your package on chocolatey.org
 * **CNC** can add a standard template header and/or footer to your .nuspec description and replace tokens in it
 * **CNC** checks nuspec and PowerShell scripts for correct UTF-8 encoding and reports if the encoding is incorrect
 * **CNC** can re-write your nuspec in UTF-8 w/o BOM format
@@ -29,6 +30,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** checks all your PowerShell scripts for syntax errors
 * **CNC** checks for and can add $ErrorActionPreference = 'Stop' to your PowerShell scripts
 * **CNC** can optimize PNG files in your nuspec directory if PNGOptimizer.commandline is installed
+* **CNC** can be run from the Command Prompt AND PowerShell
 
 ###Helps make packaging Chocolateasy!
 
@@ -46,7 +48,10 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
 	
 ###CHANGELOG:
-* 2019.08.21 - added checking for package release notes in description (ability to add them is coming in a future version)
+* 2019.09.01 - Added Powershell v3 as a dependency due to Invoke-WebRequest use. Eliminated iwr error for new packages that weren't pushed to chocolatey.org yet, added reporting for packages that are in submitted or waiting for maintainer status.
+* 2019.08.26 - "Kicked out of bin release" - script installation endpoint changed. **Now works from Command Prompt as well as PowerShell.** Additional 7Zip supported formats checked for as binaries.
+* 2019.08.22 - -UpdateXMLNamespace implemented (unreleased due to new moderation demands)
+* 2019.08.21 - added checking for package release notes in description (unreleased due to new moderation demands)
 * 2019.08.14 - now validates the nuspec as a valid XML file and reports common errors, notifies if there is a submitted/unapproved version on chocolatey.org, better checking for failed and trusted package notifications 
 * 2019.08.13 - minor fix to cinst checking in chocolateyinstall.ps1
 * 2019.03.04 - now checks for msiexec calls in scripts, checks for correctly named install script, checks that install scripts don't use choco commands, checks the XML namespace/schema, cosmetic changes
