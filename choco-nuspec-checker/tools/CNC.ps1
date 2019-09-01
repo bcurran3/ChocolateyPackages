@@ -1,4 +1,5 @@
-﻿# CNC.ps1 Copyleft 2018-2019 by Bill Curran AKA BCURRAN3
+﻿# $ErrorActionPreference = 'Stop'
+# CNC.ps1 Copyleft 2018-2019 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -9,7 +10,7 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.08.26 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2019.09.01 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # parameters and variables -------------------------------------------------------------------------------------
@@ -574,19 +575,29 @@ function Check-PackageReleaseNotes{
 
 # Check package current status on chocolatey.org
 function Check-OnlineStatus{
-  $PackagePageInfo = Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID"
-  if ($PackagePageInfo -match "Package test results have failed. Follow the link for more information."){
-	  Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+$PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packages/$NuspecID" -UseBasicParsing -DisableKeepAlive).StatusCode } catch [Net.WebException]{ [int]$_.Exception.Response.StatusCode } 
+  if ($PackagePageInfo -eq '404'){
+	  Write-Host "FYI:       ** This appears to be a brand new package. Cool!" -Foreground Green
 	  $GLOBAL:FYIs++
-	 }
-  if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
-	  Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
-	  $GLOBAL:FYIs++
-	 }
-  if ($PackagePageInfo -match "submitted"){
-	  Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
-	  $GLOBAL:FYIs++
-	 }
+	  return
+	 } 
+   $PackagePageInfo = (Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID")
+   if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
+	   Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
+	   $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match "Package test results have failed. Follow the link for more information"){
+	   Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+	   $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match "<td>submitted</td>"){
+	   Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
+	   $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match "<td>waiting for maintainer</td>"){
+	   Write-Host "FYI:       ** $NuspecID may have a version waiting for corrective action." -Foreground Yellow
+	   $GLOBAL:FYIs++
+	  }
 }
 
 # Open all .nuspec URLs for viewing
@@ -1407,7 +1418,6 @@ return
 # Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
 # BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
 # https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -started
-# check for &'s in links to change to &amp;
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # MAYBE redo file selection by filename instead of directory and implement a -Recurse option - medium low priority
 # MAYBE do full params statement and get rid of args checking - low priority
