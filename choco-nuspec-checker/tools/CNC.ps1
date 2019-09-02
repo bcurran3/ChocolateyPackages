@@ -39,7 +39,7 @@ $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appea
 $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 
-if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
+if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
     Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
 	Write-Host "-help, -?, or /?"
 	Write-Host "   Displays this information."
@@ -75,6 +75,8 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
     Write-Host "   Updates the XML comment for UTF-8 checking."
 	Write-Host "-UpdateXMLDeclaration"
     Write-Host "   Updates the XML declaration."
+	Write-Host "-UpdateXMLNamespace"
+	Write-Host "   Updates the XML Namespace"
 	Write-Host "-UseGitHack"
     Write-Host "   Use GitHack for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
 	Write-Host "-UseGitCDN"
@@ -249,9 +251,10 @@ function Test-XMLFile {
 
 if (!(Test-XMLFile $LocalnuspecFile)){
     Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
-    Write-Host "FYI:       ** Common problems include not closing elements and not converting ""&""'s to ""&amp;""" -Foreground Cyan
-    Write-Host "              choco pack will report ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
-    Write-Host "              choco pack will report ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s.`n" -Foreground Cyan
+    Write-Host "FYI:     ** Common problems:" -Foreground Cyan
+    Write-Host "            choco pack will report: ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s." -Foreground Cyan
+    Write-Host "            choco pack will report: ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
+    Write-Host "            choco pack will report: ""The <tag> start tag on line x position x does not match the end tag of <tag>`n.                                    Line x, position x."" for elements with mismatched case.`n" -Foreground Cyan
     break
 }
 
@@ -586,7 +589,7 @@ $PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packag
 	   Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
 	   $GLOBAL:FYIs++
 	  }
-   if ($PackagePageInfo -match "Package test results have failed. Follow the link for more information"){
+   if (($NuspecID -ne 'choco-nuspec-checker') -and ($PackagePageInfo -match "Package test results have failed. Follow the link for more information")){
 	   Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
 	   $GLOBAL:FYIs++
 	  }
