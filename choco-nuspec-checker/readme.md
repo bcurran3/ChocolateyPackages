@@ -48,7 +48,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
 	
 ###CHANGELOG:
-* 2019.09.01 - Added Powershell v3 as a dependency due to Invoke-WebRequest use. Eliminated iwr error for new packages that weren't pushed to chocolatey.org yet, added reporting for packages that are in submitted or waiting for maintainer status.
+* 2019.09.01 - Added Powershell v3 as a dependency due to Invoke-WebRequest use. Eliminated iwr error for new packages that weren't pushed to chocolatey.org yet, added reporting for packages that are in submitted or waiting for maintainer status, added to the common problems for not a valid XML file messages.
 * 2019.08.26 - "Kicked out of bin release" - script installation endpoint changed. **Now works from Command Prompt as well as PowerShell.** Additional 7Zip supported formats checked for as binaries.
 * 2019.08.22 - -UpdateXMLNamespace implemented (unreleased due to new moderation demands)
 * 2019.08.21 - added checking for package release notes in description (unreleased due to new moderation demands)
