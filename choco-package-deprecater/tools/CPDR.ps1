@@ -42,10 +42,9 @@ if ($args -eq "-EditConfig") {
 }
 
 if ($args -eq "-Deprecate") {$Deprecate=$True} else {$Deprecate=$False}
-
 if ($args -eq "-Retire") {$Retire=$True} else {$Retire=$False}
-
 if ($args -eq "-AddIcon") {$AddIcon=$True} else {$AddIcon=$False}
+if ($args -eq "-Debug") {$Debug=$True} else {$Debug=$False}
 
 if ($path -eq "\"){
     $path=(Get-Location).Drive.Name + ":" + "\"
@@ -104,8 +103,6 @@ $NuspecDisplayName=$NuspecDisplayName.ToUpper()
 
 if ($deprecate) {Write-Host "Deprecating $NuspecDisplayName`:" -Foreground Magenta}
 if ($retire){Write-Host "Retiring $NuspecDisplayName`:" -Foreground Magenta}
-Copy-Item $LocalnuspecFile $LocalnuspecFile.CPDR.bak -Force | Out-Null # ALWAYS make backup copy!
-Write-Host "  ** Backup saved ("$LocalnuspecFile.CPDR.bak")" -Foreground Green
 
 # Update the nuspec with changes and save as UTF-8 w/o BOM # Thanks https://stackoverflow.com/questions/8160613/powershell-saving-xml-and-preserving-format
 Function Update-nuspec{
@@ -172,18 +169,32 @@ $UpdatednuspecFile.package.metadata.version='99.99.99.99'
       }
 }
 
+if ($debug) {
+Write-Host "  ** DEBUG: path=$path" -Foreground Cyan
+Write-Host "  ** DEBUG: LocalnuspecFile=$LocalnuspecFile" -Foreground Cyan
+Write-Host "  ** DEBUG: LocalnuspecFile.CPDR.bak=$LocalnuspecFile.CPDR.bak" -Foreground Cyan
+Write-Host "  ** DEBUG: test-path result = $((Test-Path $path\$LocalnuspecFile.CPDR.bak))" -Foreground Cyan
+}
+
 if ($deprecate -or $retire) {
+    if (Test-Path $path\$LocalnuspecFile.CPDR.bak) {Write-Host "  ** Please delete your current backup before continuing." -Foreground Red ; break} # <<<-- doesn't work for some reason
+    Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.CPDR.bak" -Force | Out-Null # ALWAYS make backup copy!
+    Write-Host "  ** Backup saved to $LocalnuspecFile.CPDR.bak." -Foreground Green
     Update-nuspec
-	if ($retire){Write-Output 'Write-Host ""  ** This package has been retired."" -Foreground Magenta' | Out-File "$path\tools\chocolateyInstall.ps1"}
+	if ($retire){
+	    if (!(Test-Path "$path\tools")) {New-Item -Path $path -Name "tools" -ItemType "directory" | Out-Null}
+	    Write-Output 'Write-Host ""  ** This package has been retired."" -Foreground Magenta' | Out-File "$path\tools\chocolateyInstall.ps1"
+	    }
 	Write-Host "  ** Done!" -Foreground Green
 	} else {
-	  Write-Host "  ** Nothing done." -Foreground Magenta
+	  Write-Host "  ** Nothing done. You must specify -Deprecate or -Retire." -Foreground Magenta
 	}
 
 
 Write-Host "`nFound CPDR.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
+if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3\CNC.ps1")) {Write-Host "You need CNC!" -Foreground Magenta }
 
 #TDL
 # check deprecated/retired title prefacing so it's not duplicated
