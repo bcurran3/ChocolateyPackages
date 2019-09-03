@@ -17,30 +17,31 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
+![Screenshot of (unofficial) Chocolatey Package Deprecater/Retirer (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-deprecater/choco-package-deprecater_screenshot.png)
 
-##**choco-package-deprecater** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix most of them! Find out AND FIX what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** also goes beyond it's original scope and checks for common Chocolatey install/uninstall script errors and omissions as well.
+##**choco-package-deprecater** (**CDEPRECATE**) is a PowerShell script I designed for Chocolatey package maintainers/creators to easily deprecate or retire a package. Probably not something you have to do often but **CDEPRECATE** will save you the time of having to look up what you need to do to your .nuspec file.
 
 ###FEATURES:
-* **CNC** checks all .nuspec elements and reports any missing or template default values
-
+* **CDEPRECATE** rewrites a .nuspec file modifying it ready for deprecation or retirement.
+* **CDEPRECATE** backups up your original .nuspec file, always!
+* **CDEPRECATE** will create the necessary chocolateyInstall.ps1 for retired packages.
+* **CDEPRECATE** can add a "cute" iconUrl.
 
 ###Helps make packaging Chocolateasy!
 
 ###INSTRUCTIONS:
-* **CNC -help** for help with options and switches
-
+* **CDEPRECATE -help** for help with options and switches
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-deprecater/readme.md)**
 
 **If you find choco-package-deprecater useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**</description>
-    <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
+    <summary>(unofficial) Chocolatey Package Deprecater/Retirer rewrites a .nuspec file modifying it for deprecation or retirement.</summary>
     <releaseNotes>###CHANGELOG:
-* 2018.12.22-2018-12.28 - initial release</releaseNotes>
+* 2019.09.03 - initial release. Does most of what's needed. Finishing touches and improvements to come. MIWMIP - "Make it work. Make it pretty."</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
-    <tags>bcurran3 cnc choco unofficial nuspec checker validator script chocolateasy</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
+    <tags>bcurran3 cdeprecate choco unofficial package deprecate retire script chocolateasy</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-deprecater</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-deprecater</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
   </metadata>
