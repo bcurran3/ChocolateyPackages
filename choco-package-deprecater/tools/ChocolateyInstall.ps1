@@ -12,6 +12,7 @@ if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$ENV
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force
 Install-ChocolateyPowershellCommand -PackageName 'CPDR' -PSFileFullPath "$scriptDir\$script"
+if (!(Test-Path "$scriptDir\CPDR.config")) {Move-Item "$toolsDir\CPDR.config" "$scriptDir" -Force} else {Remove-Item "$toolsDir\CPDR.config" | Out-Null}
 
 # Cleanup
 if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
