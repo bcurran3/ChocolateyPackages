@@ -1,21 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tautulli</id>
-    <version>2.1.14</version>
+    <version>2.1.34</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tautulli</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tautulli</packageSourceUrl>
     <title>Tautulli for Plex</title>
     <authors> JonnyWong16, WilliamComartin</authors>
     <projectUrl>http://tautulli.com/</projectUrl>
-    <iconUrl>http://tautulli.com/images/logo.png</iconUrl>
-    <copyright>Copyright © | JonnyWong16 / WilliamComartin</copyright>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/tautulli/tautulli_icon.png</iconUrl>
+    <copyright>Copyright © | JonnyWong16 / WilliamComartin</copyright>
     <licenseUrl>https://github.com/Tautulli/Tautulli/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Tautulli/Tautulli</projectSourceUrl>
     <docsUrl>https://github.com/Tautulli/Tautulli-Wiki/wiki</docsUrl>
     <mailingListUrl>https://forums.plex.tv/discussion/307821/tautulli-monitor-your-plex-media-server</mailingListUrl>
-    <tags>tautulli plexpy plex pms python portable</tags>
+    <tags>tautulli plexpy plex pms python portable foss cross-platform binary</tags>
     <summary>Tautulli - Monitor your Plex Media Server</summary>
     <description>
 [Screenshots](http://tautulli.com/images/screenshots/activity.png)
@@ -61,9 +62,9 @@ Related Programs: [Plex Media Server](https://chocolatey.org/packages/plexmedias
 	</description>
     <releaseNotes>https://github.com/Tautulli/Tautulli/releases</releaseNotes>
     <dependencies>
-<!-- plexmediaserver is an assumed dependency but purposely not forced -->	
-       <dependency id="python2" version="2.7" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  	   
+      <!-- plexmediaserver is an assumed dependency but purposely not forced -->
+      <dependency id="python2" version="2.7" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
   <files>

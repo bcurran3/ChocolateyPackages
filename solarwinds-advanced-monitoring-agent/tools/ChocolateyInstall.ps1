@@ -3,7 +3,7 @@ $packageName    = 'solarwinds-advanced-monitoring-agent'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $CurrentVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','_')
 $url            = "https://rm-downloads-us.logicnow.com/AGENT_$CurrentVersion.ZIP"
-$checksum       = 'F19423CCF7B370E70EF1D76621C2E4935A14E162DAA65E075E4170D1B6575A1F'
+$checksum       = 'B8BCFF3247DE725BE2741465808BD3C2014DDB86DDCD8D57743F98F6F8316214'
 
 $packageArgs = @{
   packageName   = $packageName
