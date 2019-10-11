@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>17.5.1.1021</version>
+    <version>17.7.0.1006</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/27681/Intel-Rapid-Storage-Technology-Intel-RST-User-Interface-and-Driver?product=55005</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/29094/Intel-Rapid-Storage-Technology-Intel-RST-User-Interface-and-Driver?product=55005</projectUrl>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
@@ -26,7 +26,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ###Purpose
 	
-The Intel® Rapid Storage Technology (Intel® RST) Driver (16.8.0.1000) supports the configuration and enabling of multiple features including:
+The Intel® Rapid Storage Technology (Intel® RST) Driver (17.7.0.1006) supports the configuration and enabling of multiple features including:
 
 * System Acceleration with Intel® Optane™ Memory
 * Configuration and maintenance of RAID 0/1/5/10
