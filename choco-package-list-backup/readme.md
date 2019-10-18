@@ -4,16 +4,44 @@
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
 
-***	
+*** 
 [choco://choco-package-list-backup](choco://choco-package-list-backup)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
-	
+    
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup.ps1_screenshot.png)
-	
+    
 #**choco-package-list-backup** solves your Chocolatey migration and package re-installation problems!
 
 ##**choco-package-list-backup (CPLB)** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **CPLB** backs up your package list locally AND to multiple cloud services!
+
+### Re-installation
+
+#### WARNING
+
+Before packages re-installation, check, that `SYSTEM` group name has a full control for your `shell:Local AppData` → `Temp/chocolatey` folder:
+
+![Expected permissions](https://i.imgur.com/y7dV7bt.png)
+
+**If** no **or** you haven't `SYSTEM`:
+
+![No System](https://i.imgur.com/PjjPdFI.png)
+
+you can't re-install some applications; you will get errors `Error reading from file` like this:
+
+![Agent Ransack Setup](https://i.imgur.com/xVuVKHp.png)
+
+In this case, follow the instructions from [**this answer**](https://qa.mythicsoft.com/11593/why-do-get-error-reading-from-file-error-when-trying-install?show=11595#a11595) with one difference — you need to add full control for `SYSTEM` in `Temp/chocolatey`, not `Temp` folder.
+
+#### Command
+
+For re-installation all your Chocolatey packages, run:
+
+```text
+cinst "path/to/packages.config" -y
+```
+
+Default path to `packages.config` for Windows 10 is `shell:Personal` → `ChocolateyPackageListBackup`.
 
 ###FEATURES:
 * **CPLB** supports saving PACKAGES.CONFIG to all of the following:
