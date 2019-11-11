@@ -1,9 +1,9 @@
 ﻿$packageName  = 'advancedrun' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.nirsoft.net/utils/advancedrun.zip'
-$checksum     = '1826158A41EDE17BC4A0736A22EC68C2F18FAED3839CE04BAFDC7B19D5E853EE'
+$checksum     = '788D3FAA45F4A8C206CA30573B9B955CD5F9D42633E7072E8DE781BCDBA18FE5'
 $url64        = 'http://www.nirsoft.net/utils/advancedrun-x64.zip'
-$checksum64   = '34743C6E9E940B2CD7A65447E2B0A9A033CF3BA0027BAD1929948A427CE4FB83'
+$checksum64   = '9E541267B9A722FBEB2765992C7494F75C4F80E16929E360991FE2E424BBEEE3'
 $shortcutName = 'AdvancedRun.lnk'
 $exe          = 'AdvancedRun.exe'
 
