@@ -18,7 +18,7 @@
     <summary>8x8 Virtual Office Desktop for PC (Windows)</summary>
     <description>
 ___
-###[choco://8x8virtualoffice](choco://8x8virtualoffice)
+### [choco://8x8virtualoffice](choco://8x8virtualoffice)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
