@@ -18,7 +18,7 @@
     <summary>OSFMount - Mount dd image files in Windows</summary>
     <description>
 ___
-###[choco://osfmount](choco://osfmount)
+### [choco://osfmount](choco://osfmount)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
@@ -26,7 +26,7 @@ ___
 
 OSFMount is a free utility designed for use with [PassMark OSForensics](https://www.osforensics.com/index.html)™
 
-##Overview
+## Overview
 
 OSFMount allows you to mount local disk image files (bit-for-bit copies of an entire disk or disk partition) in Windows as a physical disk or a logical drive letter. You can then analyze the disk image file with [PassMark OSForensics](https://www.osforensics.com/index.html)™ by using the physical disk name (eg. \\.\PhysicalDrive1) or logical drive letter (eg. Z:).
 
