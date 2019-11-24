@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tageditor</id>
-    <version>3.2.1</version>
+    <version>3.3.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tageditor</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Tag Editor (Portable)</title>
