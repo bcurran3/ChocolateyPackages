@@ -3,22 +3,22 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>osfmount</id>
-    <version>3.0.1004</version>
+    <version>3.0.1005.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/osfmount</packageSourceUrl>
     <title>OSFMount (Install)</title>
     <authors>PassMark® Software Pty Ltd</authors>
     <projectUrl>http://www.osforensics.com/tools/mount-disk-images.html</projectUrl>
-    <iconUrl>http://www.osforensics.com/images/osfmount-banner.jpg</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/osfmount/osfmount_icon.png</iconUrl>
     <copyright>Copyright (C) PassMark Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>http://www.passmark.com/forum/osforensics-osfmount-osfclone</mailingListUrl>
     <bugTrackerUrl>http://www.osforensics.com/tools/mount-disk-images.html</bugTrackerUrl>
-    <tags>osfmount virtual disk mount img dd bin iso oon nrg sdi aff afm afd vmdk e01 s01 vhd</tags>
+    <tags>osfmount virtual disk mount img dd bin iso oon nrg sdi aff afm afd vmdk e01 s01 vhd binary</tags>
     <summary>OSFMount - Mount dd image files in Windows</summary>
     <description>
 ___
-###[choco://osfmount](choco://osfmount)
+### [choco://osfmount](choco://osfmount)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
@@ -26,7 +26,7 @@ ___
 
 OSFMount is a free utility designed for use with [PassMark OSForensics](https://www.osforensics.com/index.html)™
 
-##Overview
+## Overview
 
 OSFMount allows you to mount local disk image files (bit-for-bit copies of an entire disk or disk partition) in Windows as a physical disk or a logical drive letter. You can then analyze the disk image file with [PassMark OSForensics](https://www.osforensics.com/index.html)™ by using the physical disk name (eg. \\.\PhysicalDrive1) or logical drive letter (eg. Z:).
 
@@ -47,6 +47,9 @@ Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package mainta
 ___
 
 </description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
