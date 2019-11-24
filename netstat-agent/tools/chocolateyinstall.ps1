@@ -1,5 +1,4 @@
 ﻿$ErrorActionPreference = 'Stop'
-
 $packageName= 'netstat-agent' 
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'http://netstatagent.com/files/netagent-setup.exe' 
@@ -10,7 +9,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   url           = $url
   softwareName  = 'NetStat Agent*' 
-  checksum      = '85DD56241F89FB26C40FAB4DA2C1A22997D8A93F5FCBF6F4E11EC9D01C693C17'
+  checksum      = 'D6AF04B6315BD5FA6E4F434F32EA228B9F6C699BB9104E9D64AEBC9EC38D39CA'
   checksumType  = 'sha256'
   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes= @(0)

@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>netstat-agent.portable</id>
-    <version>3.5</version>
+    <version>3.6</version>
     <owners>bcurran3</owners>
     <title>NetStat Agent (Trial) (Portable)</title>
     <authors>Flexbyte Software</authors>
@@ -13,17 +13,23 @@
     <licenseUrl>http://netstatagent.com/help/license-agreement/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.netstatagent.com/help/interface-overview/</docsUrl>
-    <bugTrackerUrl>http://www.netstatagent.com/support/</bugTrackerUrl>
-    <tags>flexbyte netstat agent network utility trial admin</tags>
-    <summary>NetStat Agent 3.5 – Fast Lookup Tool for Available TCP/UDP Connections</summary>
+    <bugTrackerUrl>http://netstatagent.com/support/</bugTrackerUrl>
+    <tags>flexbyte netstat agent network utility trial</tags>
+    <summary>NetStat Agent – Fast Lookup Tool for Available TCP/UDP Connections</summary>
     <description>
-##NetStat Agent 3.5 – Fast Lookup Tool for Available TCP/UDP Connections
+---
+### [choco://netstat-agent.portable](choco://netstat-agent.portable)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## NetStat Agent – Fast Lookup Tool for Available TCP/UDP Connections
 
 Whenever you open a website connection through your browser or download files, you are opening TCP/UDP connections. TCP/UDP connections link your client computer to the remote host machine which may be local or out in the cloud.
 
 The big problem is knowing what available connections you have available on your own computer. Opening TCP/UDP connections is essential if you are to master control over your network, but you need to take the guesswork out of the equation in order to manage resources effectively.
 
-##Now you can with NetStat Agent
+## Now you can with NetStat Agent
 
 NetStat Agent provides a fast and easy way to establish what ports and connections are available from your client computer. In addition, you are able to simply monitor what existing connections are currently being made and diagnose connectivity issues without delay.
 
@@ -48,8 +54,17 @@ At a glance information includes:
 With NetStat Agent you fully control network connectivity and can simply manage connection resources. NetStat Agent allows you to hide important connections, manage and close unwanted connections and help to quickly identify suspect traffic entering or leaving the network.
 All this without the need to open and close disparate network management utilities – now you can access your full range of network management utilities from one dashboard.
 
-###NetStat Agent is not freeware and distributed as try-before-you-buy. If you find NetStat Agent useful and wish to continue using it without any limitations (nag screen), please find the time to register it.
-	</description>
+### NetStat Agent is not freeware and distributed as try-before-you-buy. If you find NetStat Agent useful and wish to continue using it without any limitations (nag screen), please find the time to register it.
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+
+</description>
     <releaseNotes></releaseNotes>
   </metadata>
   <files>

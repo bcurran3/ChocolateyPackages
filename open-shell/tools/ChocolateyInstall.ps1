@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
-$url = "$toolsDir\OpenShellSetup_4_4_131.exe"
+$url = "$toolsDir\OpenShellSetup_4_4_142.exe"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
