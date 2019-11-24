@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'wsl-fedoraremix'
 $shortcutName = 'Fedora Remix.lnk'
 
