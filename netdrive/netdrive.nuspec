@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>netdrive</id>
-    <version>3.6.571</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netdrive</packageSourceUrl>			
+    <version>3.8.921</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netdrive</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>NetDrive (Install)</title>
     <authors>Bdrive Inc.</authors>
     <projectUrl>https://www.netdrive.net/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/netdrive/NetDrive_icon.png</iconUrl>
     <copyright>Copyright © Bdrive Inc.</copyright>
-    <licenseUrl>https://www.netdrive.net/NetDrive-terms.pdf</licenseUrl>
+    <licenseUrl>http://www.netdrive.net/wiki/netdrive/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://discourse.bdrive.com/c/netdrive3</mailingListUrl>
     <tags>netdrive net drive amazon box dropbox ftp google hubic onedrive openstack owncloud webdav owncloud android airdrive</tags>
@@ -72,9 +72,8 @@ Microsoft Windows 10, Windows 8, Windows 8.1, Windows 7, Windows Vista, Windows 
 	</description>
     <releaseNotes>https://accounts.bdrive.com/product_history/NetDrive3/</releaseNotes>
     <dependencies>
-      <dependency id="vcredist2012"/>
-      <dependency id="vcredist140"/>	  
-    </dependencies>		
+      <dependency id="vcredist2012" version="11.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
