@@ -1,18 +1,17 @@
-﻿$packageName    = 'intel-proset-drivers' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'intel-proset-drivers' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzippedfiles"
 $bits           = Get-ProcessorBits
-$url            = 'https://downloadmirror.intel.com/28358/a08/WiFi_20.100_PROSet32_Win10.exe'
-$checksum       = 'E58627DD0079E087CF0BD61F7707520A4D36B28F1A8509D075B4E8643BBA37A0'
-$url64          = 'https://downloadmirror.intel.com/28358/a08/WiFi_20.100_PROSet64_Win10.exe'
-$checksum64     = '4F698B3AF33299831B94BDB4C98D099BBDE8B5236CD0B87BD47F675E72FF19C9'
+$url            = 'https://downloadmirror.intel.com/29003/a08/WiFi_21.30.3_Driver32_Win10.exe'
+$checksum       = 'B99D12F6AEB6E6D210EB3C630DA0CF84B2D49772DA2C44C4E8051E72B070CD38'
+$url64          = 'https://downloadmirror.intel.com/29003/a08/WiFi_21.30.3_Driver64_Win10.exe'
+$checksum64     = 'A343C316F9E918CC8BC31A219F47B30424338D828B77A93603386DA243BE367A'
 
 # Verify Windows 10 and throw if not
 if (!(Test-Dependency "dependency-windows10")) {throw}
 
 # No need to check for hardware, drivers install even if an Intel PROSet/Wireless card is not found
-
-New-Item $unzipLocation -type directory | out-null
 
 $packageArgs = @{
   packageName    = $packageName
@@ -26,7 +25,7 @@ $packageArgs = @{
   checksumType64 = 'sha256'  
 }
 
-Install-ChocolateyZipPackage @packageArgs
+#Install-ChocolateyZipPackage @packageArgs
 
 $packageArgs = @{
   packageName    = $packageName
@@ -41,6 +40,4 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Start-Sleep -s 10
 
-Remove-Item $unzipLocation -recurse | out-null
-
-
+Remove-Item $unzipLocation -Recurse | Out-Null

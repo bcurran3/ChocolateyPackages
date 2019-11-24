@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-proset-drivers</id>
-    <version>20.100.0</version>
+    <version>21.30.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
-    <title>Intel® PROSet/Wireless Software and Drivers for Windows® 10 (Install)</title>
+    <title>Windows® 10 Wi-Fi Drivers for Intel® Wireless Adapters (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://www.intel.com/content/www/us/en/support/articles/000005649/network-and-i-o/wireless-networking.html</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/29003</projectUrl>
     <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
@@ -18,28 +18,23 @@
     <description>
 [Alternate projectUrl](https://downloadcenter.intel.com/download/28359)
 	
-##Purpose
+###Purpose
 
-Intel® PROSet/Wireless Software is recommended for IT administrators, large corporations, universities, and medical centers. Smaller organizations may also find the installation and deployment features useful.
+The 21.30.3 package installs the Windows® 10 Wi-Fi drivers for the following Intel® Wireless Adapters:
 
-##Wi-Fi Driver
+* 21.30.3.2 for AX201/AX200/9560/9260/9462/9461 (Only available in 64-bit version)
+* 20.70.11.3 for 8265/8260 (Only available in 64-bit version)
+* 19.51.23.1 for 7265(Rev. D)/3165/3168
 
-The Intel® PROSet/Wireless Software package includes Wi-Fi drivers for different Intel® Wireless Adapters supported by this package. The Wi-Fi driver version you install to your system may be different than the Intel PROSet/Wireless Software package version containing this driver.
-For example, in Intel PROSet/Wireless Software 19.50.1, the Wi-Fi driver version for Intel® Dual Band Wireless-AC 7260 is 18.33.6.2.
-
-See [Understanding the Intel® PROSet/Wireless Software Version and the Driver Version](https://www.intel.com/content/www/us/en/support/articles/000026008/network-and-i-o/wireless-networking.html) for further details.
+Note: This software release version does not include new drivers for the Intel® Wireless 7265 Family (Rev.C), Intel® Dual Band Wireless-AC 3160 and Intel® Wireless 7260 Family adapters. Please refer to the following link for latest available drivers [here](https://www.intel.com/content/www/us/en/support/articles/000006507/network-and-i-o/wireless-networking.html?wapkw=wireless+product+discontinue). 
  
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-proset-drivers/readme.md)**
-
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
 	</description>
-    <releaseNotes>https://downloadmirror.intel.com/28358/eng/ReleaseNotes_WiFi_20_100_0.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29003/eng/ReleaseNotes_WiFi_21.30.3.pdf</releaseNotes>
     <dependencies>
-	  <dependency id="chocolatey-misc-helpers.extension" />	
-      <dependency id="dependency-windows10" />
-    </dependencies>	
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.3.1" />
+      <dependency id="dependency-windows10" version="10.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
