@@ -4,8 +4,8 @@ $packageName    = 'vnc-connect'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $extractDir     = "$toolsDir\extracted"
-$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.5.0-Windows-msi.zip'
-$checksum       = 'C621F46E3840FFF6F7E652E353C09DB1520A6FE1483BF06585755E0F24EC9154'
+$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.6.0-Windows-msi.zip'
+$checksum       = 'CB4D395099F14A322219492AFF3FC0A86CF15F97EFB6196655DF88D78492171C'
 
 
 $packageArgs = @{
