@@ -1,8 +1,9 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.5.5</version>
+    <version>3.6.2</version>
     <title>Angry IP Scanner (Installer)</title>
     <authors>angryziber</authors>
     <owners>bcurran3</owners>
@@ -50,10 +51,10 @@ It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as 
     <releaseNotes>https://raw.githubusercontent.com/angryip/ipscan/master/RELEASE-NOTES</releaseNotes>
     <tags>angryziber angryip ipscan angry scanner network ip foss cross-platform</tags>
     <dependencies>
-      <dependency id="javaruntime" />
+      <dependency id="javaruntime" version="8.0" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>   
+  </files>
 </package>

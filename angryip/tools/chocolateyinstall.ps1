@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'angryip'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = "$toolsDir\ipscan-$env:ChocolateyPackageVersion-setup.exe"

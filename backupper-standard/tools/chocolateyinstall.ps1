@@ -2,7 +2,7 @@
 $packageName   = 'backupper-standard'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://www2.aomeisoftware.com/download/adb/BackupperFull.exe'
-$checksum      = '7DCABDBACED24ADA789B0FC084BB3AE8889420A06BD33B6DF72E439B3C0892BF'
+$checksum      = 'BD99C793F5F7B3FB9DC68CDFFBB00EA25D26F1C2219F16CFA28102CBC8BE9D9C'
 
 $packageArgs = @{
   packageName   = $packageName

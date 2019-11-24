@@ -2,7 +2,7 @@
 $packageName    = 'backupper-server'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www2.aomeisoftware.com/download/adb/ABServer.exe'
-$checksum       = '793C6D95EEEBF0E9711F48A6D8F2A5B4FF098793379F7D023773A62DAD99806C'
+$checksum       = '8E98F3979DAEC0B834DC0426A7DBF4581F13D7058112EAAB1E27AF3DFF8BA03D'
 
 if (!(Get-IsWinServer)) {
     Write-Warning "  ** This package is for Windows Server OSes only. Aborting."
