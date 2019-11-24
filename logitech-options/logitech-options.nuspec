@@ -75,7 +75,6 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <dependencies>
       <dependency id="autohotkey" version="1.1.27" />
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-      <dependency id="dotnet4.5.2" version="4.5.2" />
     </dependencies>
   </metadata>
   <files>
