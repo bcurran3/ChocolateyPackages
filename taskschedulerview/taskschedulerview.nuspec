@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskschedulerview</id>
-    <version>1.46</version>
+    <version>1.53</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskschedulerview</packageSourceUrl>
     <title>TaskSchedulerView (Portable)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</projectUrl>
-	<docsUrl>https://www.nirsoft.net/utils/task_scheduler_view.html</docsUrl>
-    <iconUrl>https://www.nirsoft.net/utils/taskschedulerview_icon.png</iconUrl>
+    <docsUrl>https://www.nirsoft.net/utils/task_scheduler_view.html</docsUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/taskschedulerview/taskschedulerview_icon.png</iconUrl>
     <copyright>Copyright (c) Nir Sofer</copyright>
     <licenseUrl>http://www.nirsoft.net/utils/task_scheduler_view.html</licenseUrl>
-	<bugTrackerUrl>https://www.nirsoft.net/contact-new.html</bugTrackerUrl>
+    <bugTrackerUrl>https://www.nirsoft.net/contact-new.html</bugTrackerUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>nirsoft taskschedulerview task scheduler utility portable binary</tags>
     <summary>TaskSchedulerView lets you easily view and edit Windows Scheduled Tasks in a GUI.</summary>
@@ -37,7 +37,7 @@ This tool works on any version of Windows, starting from Windows Vista and up to
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***</description>
-	<releaseNotes>https://www.nirsoft.net/utils/task_scheduler_view.html</releaseNotes>
+    <releaseNotes>https://www.nirsoft.net/utils/task_scheduler_view.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
