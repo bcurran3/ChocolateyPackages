@@ -5,6 +5,7 @@
     <id>netstat-agent</id>
     <version>3.6</version>
     <owners>bcurran3</owners>
+	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/netstat-agent</packageSourceUrl>
     <title>NetStat Agent (Trial) (Install)</title>
     <authors>Flexbyte Software</authors>
     <projectUrl>http://netstatagent.com/</projectUrl>
@@ -13,7 +14,7 @@
     <licenseUrl>http://netstatagent.com/help/license-agreement/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://netstatagent.com/help/interface-overview/</docsUrl>
-    <bugTrackerUrl>http://netstatagent.com/support/</bugTrackerUrl>
+    <bugTrackerUrl>https://www.netstatagent.com/support/</bugTrackerUrl>
     <tags>flexbyte netstat agent network utility trial</tags>
     <summary>NetStat Agent – Fast Lookup Tool for Available TCP/UDP Connections</summary>
     <description>
@@ -65,7 +66,6 @@ All this without the need to open and close disparate network management utiliti
 
 
 </description>
-    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
