@@ -1,29 +1,39 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>2.1.3.0</version>
+    <version>3.0.1.160</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>			
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update (Install)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/us/en/04/Drivers/DriversDetails?driverId=V3DT0</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
+    <projectUrl>https://www.dell.com/support/home/us/en/09/drivers/driversdetails?driverid=4985d</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
     <licenseUrl>http://www.dell.com/learn/us/en/uscorp1/legal~terms-conditions~en/documents~dell-emc-sw-eula.pdf</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>dell update dup</tags>
-    <summary>Dell Update supports Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10.</summary>
+    <summary>Dell Update supports Inspiron, Vostro, XPS and Alienware systems running Windows 10.</summary>
     <description>
-This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware systems running Windows 7, Windows 8.1, and Windows 10. 
+---
+###[choco://dell-update](choco://dell-update)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
-Dell Update automates the installation of driver and application updates specific for your device. This application is needed in order to receive these updates. 
+---
 
-A list of support devices can be found [here](https://www.dell.com/support/home/us/en/19/Drivers/DriversDetails?driverId=31YHC).
+This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware Windows 10, &gt; = RS1+ (build 14393) systems.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
-    </description>
+    
+
+---
+
+Dell Update (Install) packaged with pride by bcurran3.
+
+---
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>go-contact-sync-mod</id>
+    <version>3.10.61</version>
     <title>GO Contact Sync Mod</title>
-    <version>3.10.56</version>
     <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>
-    <summary>GO Contact Sync Mod is an open source tool to synchronize your Microsoft Outlook contacts with Google Mail</summary>
-    <description>
----
+    <licenseUrl>http://googlesyncmod.sourceforge.net/</licenseUrl>
+    <projectUrl>https://googlesyncmod.sourceforge.io/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/go-contact-sync-mod/go-contact-sync-mod_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>---
 
-###[choco://go-contact-sync-mod](choco://go-contact-sync-mod)
+### [choco://go-contact-sync-mod](choco://go-contact-sync-mod)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -30,7 +31,7 @@ Since version 3.7.0 it also syncs your Outlook Calendar Appointments on demand t
 
 Please find some guidelines how to sync your mobile phone contacts with Google Contacts here: http://www.google.com/mobile/sync
 
-###Features
+### Features
 
 * Full support of OAuth2 - no need for your password!
 * Outlook Contacts sync
@@ -50,22 +51,18 @@ Please find some guidelines how to sync your mobile phone contacts with Google C
 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 
----
-
-</description>
-    <projectUrl>https://googlesyncmod.sourceforge.io/</projectUrl>
+---</description>
+    <summary>GO Contact Sync Mod is an open source tool to synchronize your Microsoft Outlook contacts with Google Mail</summary>
+    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.29/</releaseNotes>
+    <tags>GO Contact Sync Mod Outlook Gmail Google email e-mail synchronization binary</tags>
     <projectSourceUrl>https://sourceforge.net/p/googlesyncmod/code/HEAD/tree/</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>
     <docsUrl>http://googlesyncmod.sourceforge.net/</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/googlesyncmod/mailman/?source=navbar</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/googlesyncmod/bugs/</bugTrackerUrl>
-    <tags>GO Contact Sync Mod Outlook Gmail Google email e-mail synchronization binary</tags>
-    <licenseUrl>http://googlesyncmod.sourceforge.net/</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/go-contact-sync-mod/go-contact-sync-mod_icon.png</iconUrl>
     <dependencies>
       <dependency id="dotnet4.5" version="4.5" />
     </dependencies>
-    <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.29/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

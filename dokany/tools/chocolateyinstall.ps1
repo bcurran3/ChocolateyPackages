@@ -15,4 +15,5 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-Remove-Item $toolsDir\*.msi -Force -EA SilentlyContinue | Out-Null
+Remove-Item $url -Force -EA SilentlyContinue | Out-Null
+Remove-Item $url64 -Force -EA SilentlyContinue | Out-Null

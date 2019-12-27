@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'drivermax' 
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://www.drivermax.com/soft/dmx/drivermax.exe'
-$checksum       = '218F86C9D1E042C065DBBA3ACED69C22D1DBD25EE4FDEC9F7C9EC88B1A5B72D2'
+$packageName = 'drivermax' 
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = 'https://www.drivermax.com/soft/dmx/drivermax.exe'
+$checksum    = '149D72FB1177B56A2F0F19F6C327E35E54BE22ADF5DA69FAE793D185D6A1ED9A'
 
 $packageArgs = @{
   packageName    = $packageName

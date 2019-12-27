@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>expandrive</id>
-    <version>7.4.1</version>
+    <version>7.3.0</version>
     <title>ExpanDrive (Trial) (Install)</title>
     <authors>ExpanDrive, Inc.</authors>
     <owners>bcurran3</owners>
@@ -13,34 +13,34 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ___
-### [choco://expandrive](choco://expandrive)
+###[choco://expandrive](choco://expandrive)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
-## The Best Gets Even Better - Say Hello to ExpanDrive 7
+##The Best Gets Even Better - Say Hello to ExpanDrive 7
 
 ExpanDrive is a fast network drive and browser for cloud storage.
 Securely access the cloud from any application, including Finder and Explorer.
 
-### Built into Finder and Explorer
+###Built into Finder and Explorer
 ExpanDrive adds cloud storage like Google Drive, Dropbox, Amazon S3, SFTP, Box, OneDrive and Sharepoint to Finder and Explorer. Don’t bother with an extra app just to move data around. ExpanDrive connects cloud storage to every application on your computer including Office 365, Photoshop, and VS Code.
 
-### Smart Offline Sync 
+###Smart Offline Sync 
 Choose files for offline access and work without an internet connection. Synchronization to the cloud takes place automatically when you’re back online. Other files are accessed on-demand from the cloud, taking no disk space.
 
-### Hello, Linux 
+###Hello, Linux 
 Major storage providers have left you behind and we’re here to help. ExpanDrive adds native cloud storage access into Linux for all major Linux distributions, including Ubuntu, Mint, CentOS, Redhat, and more.
 
-### Integrated Search 
+###Integrated Search 
 ExpanDrive hooks into Spotlight Search on Mac and Windows file search. Quickly search your remote storage for whatever you’re looking for. The integrated storage browser has additional support for blazing-fast server side search.
 
-### Multi-user file locking 
+###Multi-user file locking 
 ExpanDrive now propagates lock files in Microsoft Office documents across the cloud. If a user is editing an Office document, other users will only be able to open that document read-only until the editing user closes it.
 
-### File Version Management 
+###File Version Management 
 Easily access older versions of files on cloud storage backends that support versioning, including Box, Dropbox, S3, Google Drive, OneDrive and Sharepoint.
 
-### Connect to any Cloud
+###Connect to any Cloud
 Connect to all major cloud storage providers, or your own server. With a single app you can connect to:
 * Dropbox
 * Google Drive and Google Team Drives 
@@ -54,7 +54,7 @@ Connect to all major cloud storage providers, or your own server. With a single 
 * SFTP/FTP, WebDAV
 * SMB/Windows File Sharing
 
-#### ExpanDrive runs unlicensed and fully featured for 7 days giving you a chance to try everything out. Once the trial period ends you'll need to buy a license or you will be limited to 20 minutes of use.
+####ExpanDrive runs unlicensed and fully featured for 7 days giving you a chance to try everything out. Once the trial period ends you'll need to buy a license or you will be limited to 20 minutes of use.
 ####Single User license is $49.95, lifetime upgrades - +$29.95
 
 [ExpanDrive Blog](http://www.expandrive.com/blog/)
