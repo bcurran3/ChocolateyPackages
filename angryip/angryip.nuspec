@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.6.2</version>
+    <version>3.6.1</version>
     <title>Angry IP Scanner (Installer)</title>
     <authors>angryziber</authors>
     <owners>bcurran3</owners>
@@ -51,7 +51,7 @@ It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as 
     <releaseNotes>https://raw.githubusercontent.com/angryip/ipscan/master/RELEASE-NOTES</releaseNotes>
     <tags>angryziber angryip ipscan angry scanner network ip foss cross-platform</tags>
     <dependencies>
-      <dependency id="javaruntime" version="8.0" />
+      <dependency id="javaruntime" />
     </dependencies>
   </metadata>
   <files>

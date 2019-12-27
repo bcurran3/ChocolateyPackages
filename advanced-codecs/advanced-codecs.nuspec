@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>12.7.1</version>
+    <version>13.0.0</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
@@ -12,7 +12,7 @@
     <description>
 ---
 
-###[choco://advanced-codecs](choco://advanced-codecs)
+### [choco://advanced-codecs](choco://advanced-codecs)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -20,7 +20,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	
 ![Screen shot of Settings Application](http://shark007.net/images/32bit7.jpg)
 
-##ADVANCED Codecs for Windows 10/8.1/7
+## ADVANCED Codecs for Windows 10/8.1/7
 
 Current releases introduce 3D decoding of files, ISO's and disks.
 
