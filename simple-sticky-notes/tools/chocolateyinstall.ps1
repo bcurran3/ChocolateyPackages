@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'simple-sticky-notes'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\Setup_SimpleStickyNotes.exe"
+$packageName = 'simple-sticky-notes'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = "$toolsDir\Setup_SimpleStickyNotes.exe"
 
 $packageArgs = @{
   packageName    = $packageName
@@ -13,5 +13,5 @@ $packageArgs = @{
   }
   
 Install-ChocolateyInstallPackage @packageArgs
-Remove-Item $toolsDir\*.exe -force | Out-Null
-Remove-Item $toolsDir\*.ignore -force | Out-Null
+Remove-Item $toolsDir\*.exe -Force | Out-Null
+Remove-Item $toolsDir\*.ignore -Force | Out-Null

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.10.1.436</version>
+    <version>5.10.4.439</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
@@ -18,7 +18,7 @@
     <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>
     <description>
 ___
-###[choco://sumo](choco://sumo)
+### [choco://sumo](choco://sumo)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
@@ -26,7 +26,7 @@ ___
 
 SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the most recent version of your favorite software ! Unlike built-in auto update features, SUMo tells you if updates are available before you need to use your software.
 
-###Features
+### Features
 * Automatic detection of installed software
 * Detects required updates / patchs for your software
 * Detects required drivers update (requires [DUMo](http://www.kcsoftwares.com/?page=dumo))

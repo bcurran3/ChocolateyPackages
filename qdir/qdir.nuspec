@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>7.92</version>
+    <version>7.99</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg (SOFTWAREOK.COM)</authors>
     <owners>bcurran3</owners>
@@ -14,14 +14,14 @@
     <description>
 ---
 
-###[choco://qdir](choco://qdir)
+### [choco://qdir](choco://qdir)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 ![Screenshot of Q-Dir](http://www.softwareok.com/img/ss/g_en/Q-Dir2.jpg)
 
-##The Quad-Directory-Explorer makes your files and folders easy to manage, either installed or as a portable Windows program.
+## The Quad-Directory-Explorer makes your files and folders easy to manage, either installed or as a portable Windows program.
 
 Fast and easy access to your hard disks, network folders, USB-sticks, floppy disks and other storage devices. 
 
