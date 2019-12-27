@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>homeassistant</id>
-    <version>0.101.2</version>
+    <version>0.102.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/homeassistant</packageSourceUrl>
     <title>Home Assistant (Install)</title>
@@ -22,7 +22,7 @@
     <description>
 ---
 
-###[choco://homeassistant](choco://homeassistant)
+### [choco://homeassistant](choco://homeassistant)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -31,17 +31,17 @@ Awaken your home
 
 Open source home automation that puts local control and privacy first. Powered by a worldwide community of tinkerers and DIY enthusiasts. Perfect to run on a Raspberry Pi or a local server.
 
-###Observe
+### Observe
 
 Home Assistant will track the state of all the devices in your home, so you don't have to.
 
-###Control
+### Control
 
 Control all your devices from a single, mobile-friendly, interface.
 
 Home Assistant allows you to control all your devices without storing any of your data in the cloud. We like to keep your privacy private.
 
-###Automate
+### Automate
 
 Set up advanced rules to control devices and bring your home alive.
 

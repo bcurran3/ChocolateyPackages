@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>jellyfin</id>
-    <version>10.4.0</version>
+    <version>10.4.2</version>
     <title>Jellyfin (Install)</title>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/jellyfin</packageSourceUrl>
