@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'windows-10-update-assistant' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://download.microsoft.com/download/B/C/F/BCF2D763-F118-4A85-9E63-AEAED1B9E98E/Windows10Upgrade9252.exe'
-$checksum    = '373170C1B35CD0380808ADBE3FB43A312D0BD70F6DB411CAE71BBD34166EE75B'
+$url         = 'https://download.microsoft.com/download/9/6/4/96409c48-4ad8-4660-8482-0ca61f05d58b/Windows10Upgrade9252.exe'
+$checksum    = 'A63308B3BA7B050A68AF88E3A235F04F9649116AF689E78840CF682B64600B95'
 
 $packageArgs = @{
   packageName   = $packageName

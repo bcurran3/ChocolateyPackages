@@ -1,4 +1,5 @@
-﻿$packageName    = 'vnc-viewer'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'vnc-viewer'
 $shortcutName   = 'VNC Viewer' 
 
 Remove-Item "$ENV:PUBLIC\Desktop\$shortcutName.lnk" -Force -ErrorAction SilentlyContinue
