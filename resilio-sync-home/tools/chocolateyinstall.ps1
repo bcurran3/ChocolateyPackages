@@ -1,9 +1,10 @@
-﻿$packageName    = 'resilio-sync-home'
+$packageName    = 'resilio-sync-home'
+$version        = '2.6.4'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://download-cdn.resilio.com/stable/windows/Resilio-Sync.exe'
-$checksum       = 'CB1B2DC027B40DD307C6667140ACC504D4885CABC05D6DB84A9634A7674188DA'
-$url64          = 'https://download-cdn.resilio.com/stable/windows64/Resilio-Sync_x64.exe'
-$checksum64     = '283EDE4157D34337B4CBCB3DF79DC17CE97AD58C54AD6B0115AB0311C657F35A'
+$url            = "https://download-cdn.resilio.com/$version/windows/Resilio-Sync.exe"
+$checksum       = 'D8B12A6455B4FD9C1C98E892E1204A8EFF7A924C2EC6DDB2B3A664AC15F313AF'
+$url64          = "https://download-cdn.resilio.com/$version/windows/Resilio-Sync_x64.exe"
+$checksum64     = 'C46B4C00EA7CEE5168E791096834426F31FDD46E960C1A42D97A6FAD3FB4AC1D'
 
 $packageArgs = @{
   packageName    = $packageName
