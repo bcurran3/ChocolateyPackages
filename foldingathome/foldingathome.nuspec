@@ -9,7 +9,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/folding@home</packageSourceUrl>
     <authors>Folding@home</authors>
     <projectUrl>https://foldingathome.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/dtgm/chocolatey-packages/e145d13e7f7bc677a6a22da74d0ff1441a554289/icons/fah.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/foldingathome/foldingathome_icon.png</iconUrl>
     <docsUrl>https://foldingathome.org/support/faq/</docsUrl>
     <mailingListUrl>https://foldingforum.org/</mailingListUrl>
     <copyright>Copyright 2001-2018. FoldingAtHome.org. All Rights Reserved.</copyright>
@@ -17,8 +17,15 @@
     <tags>distributed-computing protein-folding biology science</tags>
     <summary>Folding@home (FAH or F@h) is a distributed computing project for simulating protein dynamics.</summary>
     <description>
+---
+### [choco://foldingathome](choco://foldingathome)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 Folding@home (FAH or F@h) is a distributed computing project for simulating protein dynamics, including the process of protein folding and the movements of proteins implicated in a variety of diseases. It brings together citizen scientists who volunteer to run simulations of protein dynamics on their personal computers. Insights from this data are helping scientists to better understand biology, and providing new opportunities for developing therapeutics.
-   </description>
+   
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
