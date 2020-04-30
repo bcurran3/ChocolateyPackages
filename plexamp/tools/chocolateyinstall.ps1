@@ -1,7 +1,7 @@
 ﻿$packageName    = 'plexamp'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/Plexamp%20Setup%201.1.0.exe'
-$checksum       = 'C38DE045826C02273C65563221676A9FCBC4638E167CAFEA9CC5B2400ACD2357'
+$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp%20Setup%203.0.2.exe'
+$checksum       = '2DC003DC7E97DBC96F5448E115E3617F1722D99D2E7E77D73F4831E06E7D1BB8'
 
 $packageArgs = @{
   packageName   = $packageName
