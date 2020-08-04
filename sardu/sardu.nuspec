@@ -4,16 +4,19 @@
   <metadata>
     <id>sardu</id>
     <title>SARDU (Portable)</title>
-    <version>3.3.0</version>
+    <version>3.4.0</version>
     <authors>Davide Costa</authors>
     <owners>bcurran3</owners>
-	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sardu</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sardu</packageSourceUrl>
     <summary>Multiboot USB and DVD creator customized with rescue disk, utility, linux live, windows installer</summary>
     <description>
-___
-###[choco://sardu](choco://sardu)
+---
+
+### [choco://sardu](choco://sardu)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 
 ![Screenshot of SARDU](http://www.sarducd.it/images/Antivirus_rid.png)
 
@@ -33,15 +36,17 @@ The interface of the application is easy to use and allows you to download or ma
 
 Although it prompts you to install other components such as toolbars, SARDU is a practical tool for all the users that want to create a bootable recovery disk with minimum effort. It includes features for both novice and experienced users, as well as a documentation for the most important operations.
 
-####Please register your copy of SARDU at [SARDU Pro's Homepage](http://sardu.pro) to enable auto update and more features.
+#### Please register your copy of SARDU at [SARDU Pro's Homepage](http://sardu.pro) to enable auto update and more features.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sardu/readme.md)**
-    
 
-___
 
-Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
-___
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
 
 </description>
     <projectUrl>http://www.sarducd.it/</projectUrl>

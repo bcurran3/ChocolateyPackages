@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'allway-sync' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://allwaysync.com/content/download/allwaysync-17-2-17.exe'
-$checksum    = '7C8E33C85AF40A12C792A6E8CEBD302749EE74C2196061674B57764A68D2E8A6'
-$url64       = 'https://allwaysync.com/content/download/allwaysync-x64-17-2-17.exe'
-$checksum64  = '05813F2247CF89A3DCFD9570AFFC5B4A781F4B2DC314A2F4D9EAE860587333DD'
+$url         = 'https://allwaysync.com/content/download/allwaysync.exe'
+$checksum    = 'E7549AB6A57A8453C0AB35A5F874436A661151D28A7D33BCC1FBFAB30064529B'
+$url64       = 'https://allwaysync.com/content/download/allwaysync-x64.exe'
+$checksum64  = '5E6FAF4E74759242ED6C92D852123FBCDB019DCCD3BF0D2B15F3EF687B245C24'
 $silentArgs  = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
 
 $packageArgs = @{
@@ -17,7 +17,8 @@ $packageArgs = @{
   url64bit      = $url64
   checksum64    = $checksum64
   checksumType64= 'sha256'
-  silentArgs    = $silentArgs
+  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' 
   softwareName  = 'Allway Sync*' 
   }
+  
 Install-ChocolateyPackage @packageArgs

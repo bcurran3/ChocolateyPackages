@@ -1,23 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-network-drivers-win10' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$unzipLocation  = "$toolsDir\unzippedfiles"
+$unzipLocation  = "$toolsDir\unzipped"
 $bits           = Get-ProcessorBits
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = '362099EA0289ACD3F6849F962CA374641BBF7E7E24F7321623C886FAFBB509DF'
+$checksum       = '1EB55DAC4FF6C9A3652829B04C585E77E3E760672783C1EF5043636FFD9ADE41'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = 'DDAAF1E4D3031C231D8A60D716FD24EAC5D43A05FD431A3539A3156B1C6188AF'
-
-
-if (Get-IsIntelVideo)
-  {
-   Write-Host "  ** Intel network adapter found." -Foreground Magenta
-  } else {
-   Write-Host "No Intel network adapters found. Aborting." -Foreground Red
-   throw
-   }
-
-New-Item $unzipLocation -Type Directory | Out-Null
+$checksum64     = 'C4B12B57987492BBCD433758908D6913EB5504B2C667A7886CD18204E636F14E'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -53,5 +42,5 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Start-Sleep -s 10
 
-Remove-Item $unzipLocation -Recurse | Out-Null
+Remove-Item $unzipLocation -Recurse -EA SilentlyContinue | Out-Null
 #Start-CheckandStop "AutoHotkey" - future use?

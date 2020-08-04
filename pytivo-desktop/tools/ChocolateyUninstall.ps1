@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'pytivo-desktop'
 
 remove-item "$env:Public\Desktop\pyTivo.lnk" -Force -ErrorAction 'SilentlyContinue'

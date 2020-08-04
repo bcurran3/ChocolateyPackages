@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-viewer</id>
-    <version>6.19.715</version>
+    <version>6.20.529</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-viewer</packageSourceUrl>
     <title>VNC Viewer (Install)</title>
@@ -18,10 +18,13 @@
     <tags>realvnc vnc connect viewer remote control</tags>
     <summary>VNC Viewer is used to remote control RealVNC and VNC Connect hosts.</summary>
     <description>
-___
-[choco://vnc-viewer](choco://vnc-viewer)
+---
+
+### [choco://vnc-viewer](choco://vnc-viewer)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___	
+
+---
+
 ![Screen shot of VNC Viewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-viewer/vnc-viewer_screenshot.png)
 
 Make sure you've downloaded VNC Connect to the computer you want to control.
@@ -39,10 +42,15 @@ VNC Viewer is used to remote control RealVNC and VNC Connect hosts.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-viewer/readme.md)**
 
-___
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://www.realvnc.com/docs/desktop-release-notes.html</releaseNotes>
   </metadata>
   <files>

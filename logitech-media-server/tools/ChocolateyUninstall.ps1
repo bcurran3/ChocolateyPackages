@@ -1,4 +1,5 @@
-﻿$packageName = 'logitech-media-server'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'logitech-media-server'
 $bits = Get-ProcessorBits
 
 if ($bits -eq 64){

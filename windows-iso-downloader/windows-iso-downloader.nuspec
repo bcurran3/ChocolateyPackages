@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-iso-downloader</id>
-    <version>8.16</version>
+    <version>8.37.0.0144</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-iso-downloader</packageSourceUrl>
     <title>Microsoft Windows and Office ISO Download Tool (Portable)</title>
@@ -19,7 +19,7 @@
     <description>
 ---
 
-###[choco://windows-iso-downloader](choco://windows-iso-downloader)
+### [choco://windows-iso-downloader](choco://windows-iso-downloader)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---

@@ -1,9 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* At some point in the future this package will be setup for creation by Auto Update (when I figure it out).
-* As of v7.11 I've made English the default language. In the future I plan to check system language and set Q-Dir to use that as default.
-* as of v7.13 binaries are included in the package. No more URL downloads. This version will always be available to install.
-* Uninstall via Control Panel
+* This package has the binaries included, it is a forever package and should always work.
 
 
 ***

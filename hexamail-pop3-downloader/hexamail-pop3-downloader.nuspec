@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hexamail-pop3-downloader</id>
-    <version>5.9.22.002</version>
+    <version>5.9.34.001</version>
     <title>Hexamail POP3 Downloader (Trial Install)</title>
     <authors>Hexamail Ltd.</authors>
     <owners>bcurran3</owners>
@@ -12,10 +12,13 @@
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/hexamail-pop3-downloader/hexamail-pop3-downloader_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-___
-###[choco://hexamail-pop3-downloader](choco://hexamail-pop3-downloader)
+---
+
+### [choco://hexamail-pop3-downloader](choco://hexamail-pop3-downloader)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 	
 ![Screenshot of Hexamail POP3 Downloader](https://www.hexamail.com/hexamailpop3downloader/images/pop3acc.png)
 
@@ -51,12 +54,14 @@ Download your POP/IMAP Connector today!
 [Pricing Info](https://www.hexamail.com/pricing.html?puid=hexamailpop3downloader)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hexamail-pop3-downloader/readme.md)**
-    
 
-___
 
-Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
-___
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
 
 </description>
     <summary>POP3 Downloader is a high performance, scalable, real-time POP/IMAP Connector for your mailserver.</summary>

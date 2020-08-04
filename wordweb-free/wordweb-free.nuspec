@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wordweb-free</id>
-    <version>8.23</version>
+    <version>9.01</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wordweb-free</packageSourceUrl>
     <title>WordWeb Free (Install)</title>
@@ -21,14 +21,14 @@
     <description>
 ---
 
-###[choco://wordweb-free](choco://wordweb-free)
+### [choco://wordweb-free](choco://wordweb-free)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 ![Screenshot of WordWeb](http://uk.wordwebsoftware.com/wordweb/main16_pleasant@1x.png)
 
-###WordWeb Free version
+### WordWeb Free version
 
 * One-click lookup in any almost any Windows program
 * Hundreds of thousands of definitions and synonyms

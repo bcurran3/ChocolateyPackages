@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>6.5.0</version>
+    <version>6.7.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
@@ -21,7 +21,7 @@
     <description>
 ---
 
-###[choco://vnc-connect](choco://vnc-connect)
+### [choco://vnc-connect](choco://vnc-connect)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -29,49 +29,49 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screen shot of VNC Connect Viewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-viewer_screenshot.png)
 
-###VNC Connect business benefits
+### VNC Connect business benefits
 
 VNC Connect, the industry’s most flexible and secure remote access software. Choose the VNC Connect annual subscription that meets your business needs.	
 
-###Home
+### Home
 
 Easy-to-use remote access for friends and family
 
-###Professional
+### Professional
 
 Feature-rich and secure remote access for departments and small businesses
  
-###Enterprise
+### Enterprise
 
 Powerful, flexible and ultra-secure remote access for the enterprise
 
-##Saving you time, money and much more
+## Saving you time, money and much more
 
-###Reduce cost
+### Reduce cost
 
 Decrease support call repeat rates, call handling time and on-site travel costs
 
-###Save time
+### Save time
 
 Reduce the need for specialized training and documentation for remote support
 
-###Improve quality
+### Improve quality
 
 Provide engaging, real-time service that improves employee and customer satisfaction
 
-###Mitigate risk
+### Mitigate risk
 
 Anticipate and prevent system failures and the risk associated with on-site service
 
-###Increase uptime
+### Increase uptime
 
 Avoid downtime with faster problem identification and resolution
 
-###Meet goals
+### Meet goals
 
 Support business and compliance objectives with audit and security functionality
 
-###Pricing
+### Pricing
 * HOME = $0
 * PROFESSIONAL = $40/year
 * ENTERPRISE = $55/year
@@ -83,8 +83,6 @@ Support business and compliance objectives with audit and security functionality
 [Windows Client](https://chocolatey.org/packages/vnc-viewer) | [Android App](http://play.google.com/store/apps/details?id=com.realvnc.viewer.android) | [iOS App](https://itunes.apple.com/us/app/vnc-viewer/id352019548?mt=8) | [Chrome Extension](https://chocolatey.org/packages/vnc-viewer-chrome/1.2.2.15132) | [macOS Client](https://www.realvnc.com/download/viewer/macos/) | [Linux Client](https://www.realvnc.com/download/viewer/linux/)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vnc-connect/readme.md)**
-
-	
 
 ---
 

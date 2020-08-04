@@ -1,44 +1,52 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-xtu</id>
-    <version>6.4.1.25</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>		
+    <version>6.5.2.40</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/24075/Intel-Extreme-Tuning-Utility-Intel-XTU</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_icon.png</iconUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/29183/Intel-Extreme-Tuning-Utility-Intel-XTU</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_icon.png</iconUrl>
     <copyright>Intel Corporation</copyright>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.intel.com/content/www/us/en/support/articles/000006022/processors/processor-utilities-and-programs.html</docsUrl>
-    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
     <tags>xtu intel tuning utility</tags>
     <summary>Intel XTU is a simple Windows*-based performance-tuning software for novice and experienced enthusiasts to overclock, monitor, and stress a system</summary>
     <description>
-![Screenshot of Intel XTU](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_screenshot.png)	
+---
 
-###Purpose
+### [choco://intel-xtu](choco://intel-xtu)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
-This download installs the Intel® Extreme Tuning Utility (Intel® XTU) version 6.4.1.23, including platform support for the next-generation Intel® Core™ Processor Family.
+---
 
-Intel XTU is a simple Windows*-based performance-tuning software for novice and experienced enthusiasts to overclock, monitor, and stress a system. The software interface exposes a set of robust capabilities common in most enthusiast platforms along with special new features available on new Intel® Application Processors and Intel® Motherboards.
 
-See the release notes for installation instructions, supported hardware, what is new, bug fixes, and known issues.
+![Screenshot of Intel XTU](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_screenshot.png)	
+
+### Purpose
+
+Intel XTU is a Windows*-based performance-tuning software that enables novice and experienced enthusiasts to overclock, monitor, and stress a system. The software interface exposes a set of robust capabilities common in most enthusiast platforms along with new features available on new Intel® application processors and Intel® motherboards.
+
+See the release notes for installation instructions, supported hardware, what is new, bug fixes, and known issues. Intel XTU may or may not work on unsupported processors.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-xtu/readme.md)**
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
+
+---
+
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/24075/eng/XTU-6_4-MR-ReleaseNotes.pdf</releaseNotes>
-	<dependencies>
+    <releaseNotes>https://downloadcenter.intel.com/downloads/eula/29183/Intel-Extreme-Tuning-Utility-Intel-XTU-?httpDown=https%3A%2F%2Fdownloadmirror.intel.com%2F29183%2Feng%2FXTU-6.5.2.40-ReleaseNotes.docx</releaseNotes>
+    <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
-      <dependency id="dotnet3.5" />	  
-    </dependencies>			
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

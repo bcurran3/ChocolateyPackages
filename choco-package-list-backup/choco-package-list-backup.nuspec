@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2019.08.27</version>
+    <version>2020.04.06</version>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -13,17 +13,17 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ___
-###[choco://choco-package-list-backup](choco://choco-package-list-backup)
+### [choco://choco-package-list-backup](choco://choco-package-list-backup)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
 ![Screenshot of (unofficial) Choco Package List Backup to Local and Cloud (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-list-backup/choco-package-list-backup_screenshot.png)
 	
-#**choco-package-list-backup** solves your Chocolatey migration and package re-installation problems!
+# **choco-package-list-backup** solves your Chocolatey migration and package re-installation problems!
 
-##**choco-package-list-backup (CPLB)** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **CPLB** backs up your package list locally AND to multiple cloud services! But wait, there's more! **CPBL** also saves your pinned package info. But wait, there's even more! **CPBL** also saves a list of ALL your programs even if they weren't installed by Chocolatey. Pretty darn cool huh?
+## **choco-package-list-backup (CPLB)** is a script I wrote that will backup the list of your currently installed Chocolatey packages and save them to a PACKAGES.CONFIG file. You can then use that PACKAGES.CONFIG file to re-install all your packages on another computer or even the same computer later if it crashes. "How can I re-install on the same computer if it crashed and I lost the PACKAGES.CONFIG file?" Thanks for asking! **CPLB** backs up your package list locally AND to multiple cloud services! But wait, there's more! **CPBL** also saves your pinned package info. But wait, there's even more! **CPBL** also saves a list of ALL your programs even if they weren't installed by Chocolatey. Pretty darn cool huh?
 
-###FEATURES:
+### FEATURES:
 * **CPLB** supports saving PACKAGES.CONFIG to all of the following:
      1. your local Documents folder
      2. your Active Directory assigned HOMESHARE
@@ -62,12 +62,13 @@ ___
 </description>
     <summary>(unofficial) Choco Package List Backup to Cloud and Local - a PowerShell script to backup your Chocolatey packages list for easy re-installation</summary>
     <releaseNotes>
-###INSTRUCTIONS:
+### INSTRUCTIONS:
 * Edit C:\tools\BCURRAN3\choco-package-list-backup.config to customize your backup(s). It's easy, there are comments.
 * From PowerShell or the Command Prompt, type CHOCO-PACKAGE-LIST-BACKUP to backup your Chocolatey packages list. 
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 	
-###CHANGELOG:
+### CHANGELOG:
+* 2020.04.06 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)Acronymized CPLB.cmd added for command line running.
 * 2019.08.27 - can now put title and summary info into the packages.config file, new -EditConfig parameter to edit the config file, **Now works from Command Prompt as well as PowerShell**, script installation endpoint changed, config file renamed from .xml to .config
 * 2019.07.02 - now saves OneDrive backups to free, paid, and corporate folders
 * 2019.06.27 - now backups the config file, can now also make archival versions of pins.bat, edited config comments to not add quotes to custom path.

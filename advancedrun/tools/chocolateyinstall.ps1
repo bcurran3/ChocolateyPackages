@@ -1,4 +1,5 @@
-﻿$packageName  = 'advancedrun' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'advancedrun' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.nirsoft.net/utils/advancedrun.zip'
 $checksum     = '1826158A41EDE17BC4A0736A22EC68C2F18FAED3839CE04BAFDC7B19D5E853EE'
@@ -9,17 +10,14 @@ $exe          = 'AdvancedRun.exe'
 
 $packageArgs = @{
   packageName    = $packageName
-  unzipLocation  = $toolsDir
-  fileType       = 'ZIP' 
-  url            = $url
-  checksum       = $checksum
-  checksumType   = 'sha256'
-  url64          = $url64
-  checksum64     = $checksum64
-  checksumType64 = 'sha256'  
+  Destination    = $toolsDir
+  FileFullPath   = "$toolsDir\advancedrun.zip"
+  FileFullPath64 = "$toolsDir\advancedrun-x64.zip"
 }
 
-Install-ChocolateyZipPackage @packageArgs
+Get-ChocolateyUnzip @packageArgs
 
-Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir"
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exe"    
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exe"
+Remove-Item "$toolsDir\*.zip" -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\*.ignore" -ErrorAction SilentlyContinue | Out-Null

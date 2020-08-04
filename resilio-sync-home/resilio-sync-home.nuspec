@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resilio-sync-home</id>
-    <version>2.6.2.1330</version>
+    <version>2.7.1.1370</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-home</packageSourceUrl>
     <title>Resilio Sync Home (Install)</title>
     <authors>Resilio, Inc.</authors>
     <projectUrl>https://www.resilio.com/individuals/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/resilio-sync-home/resilio-sync-home_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/resilio-sync-home/resilio-sync-home_icon.png</iconUrl>
     <copyright>© Resilio, Inc.</copyright>
     <licenseUrl>https://www.resilio.com/legal/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -17,27 +17,27 @@
     <tags>resilio sync btsync bittorrent backup</tags>
     <summary>Resilio Sync -A fast, reliable, and simple file sync and share solution.</summary>
     <description>
-###Have Your Files Anywhere
+### Have Your Files Anywhere
 
 Sync any folder to all your devices. Sync photos, videos, music, PDFs, docs or any other file types to/from your mobile phone, laptop, or NAS.	
 
-###Keep Your Files Safe
+### Keep Your Files Safe
 
 Backup your files automatically to another device you own. Create your own Disaster Recovery site.
 
 Setup your phone to backup all photos to your laptop, or backup all your documents from your laptop to your NAS.  Protect yourself from losing information on a crashed or misplaced device.
 
-###Send Large Files Fast
+### Send Large Files Fast
 
 Sync skips the cloud and finds the shortest path between devices when transferring data.
 
 No size limits. Easily sync and share folders that contain gigabytes (or terabytes) of data.
 
-###Access Files On The Go
+### Access Files On The Go
 
 Sync photos, videos, music, PDFs, docs or any other file types to/from your mobile phone or tablet. Using 'Selective Sync', you can choose to sync only the files you need, whenever you need them.
 
-###Use on Any Device
+### Use on Any Device
 
 Keep folders synced between multiple platforms and operating systems. Sync is available for OS X, Windows, Linux, iOS, Android, all major NAS devices, and more.
 
@@ -49,13 +49,10 @@ Keep folders synced between multiple platforms and operating systems. Sync is av
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/resilio-sync-home/readme.md)**
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
 	</description>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-    </dependencies>		
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

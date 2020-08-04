@@ -7,5 +7,5 @@ Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutNam
 
 if (Test-Path "$ENV:LOCALAPPDATA\jellyfin") {
     Write-Host "  ** Found $ENV:LOCALAPPDATA\jellyfin data directory." -Foreground Magenta
-	Write-Host "  ** Manually delete it if you no longer need the data." -Foreground Magenta
+	Write-Host "  ** Manually delete it if you no longer want the data." -Foreground Magenta
 	}

@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $packageName    = 'wordweb-free'
-$url            = "$toolsDir\wordweb8.exe"
+$url            = "$toolsDir\wordweb9.exe"
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\wordweb-free-install.ahk"
 

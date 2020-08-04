@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'forticlientvpn'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://filestore.fortinet.com/forticlient/downloads/FortiClientVPNSetup_6.2.0.exe'
-$checksum      = '354E93E1B79AFE1F401F6FCDF5F0D84781C24AA30CC5443BC2C1AC87D1BA0188'
-$url64         = 'https://filestore.fortinet.com/forticlient/downloads/FortiClientVPNSetup_6.2.0_x64.exe'
-$checksum64    = '9202AF4D28A7306645A4B34DEA45EFBCFFE5C94B5DAC8333BC68185B63F88A16'
+$url           = 'https://d3gpjj9d20n0p3.cloudfront.net/forticlient/downloads/FortiClientVPNSetup_6.2.6.0951.exe'
+$checksum      = 'B85F5E9AECC86FF4FBBA25EA064604B48D3CA723FC4AFA7F5CEF3D289E21D84E'
+$url64         = 'https://d3gpjj9d20n0p3.cloudfront.net/forticlient/downloads/FortiClientVPNSetup_6.2.6.0951_x64.exe'
+$checksum64    = '4A0E4D3BB2F969FBBD61D67180604E035D89A44FC1D664B5CBA14368BB3FA671'
 
 $packageArgs = @{
   packageName   = $packageName

@@ -1,18 +1,17 @@
-﻿$packageName    = 'intel-proset-drivers' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'intel-proset-drivers' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$unzipLocation  = "$toolsDir\unzippedfiles"
+$unzipLocation  = "$toolsDir\unzipped"
 $bits           = Get-ProcessorBits
-$url            = 'https://downloadmirror.intel.com/28358/a08/WiFi_20.100_PROSet32_Win10.exe'
-$checksum       = 'E58627DD0079E087CF0BD61F7707520A4D36B28F1A8509D075B4E8643BBA37A0'
-$url64          = 'https://downloadmirror.intel.com/28358/a08/WiFi_20.100_PROSet64_Win10.exe'
-$checksum64     = '4F698B3AF33299831B94BDB4C98D099BBDE8B5236CD0B87BD47F675E72FF19C9'
+$url            = "https://downloadmirror.intel.com/29536/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver32_Win10.zip"
+$checksum       = '9F156E64EC83A2F07B38AB672CB3EA6695BC9AA265D900914E89E39B7F8B25EA'
+$url64          = "https://downloadmirror.intel.com/29536/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver64_Win10.zip"
+$checksum64     = 'DFCE02C068003F38C549CB586C1848F47323F001C3B32CFD624DB10610002500'
 
-# Verify Windows 10 and throw if not
-if (!(Test-Dependency "dependency-windows10")) {throw}
-
+# Last Windows 7+8 version was 21.40.5
 # No need to check for hardware, drivers install even if an Intel PROSet/Wireless card is not found
 
-New-Item $unzipLocation -type directory | out-null
+if (!(Test-Dependency "dependency-windows10")) {throw}
 
 $packageArgs = @{
   packageName    = $packageName
@@ -28,19 +27,6 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-$packageArgs = @{
-  packageName    = $packageName
-  fileType       = 'EXE'
-  file           = "$unzipLocation\Setup.exe"
-  silentArgs     = '-q -passive -norestart'
-  validExitCodes = @(0)
-  softwareName   = 'Intel® PROSet/Wireless Software'
-}
- 
-Install-ChocolateyInstallPackage @packageArgs
+pnputil /add-driver $unzipLocation\*.inf /install
 
-Start-Sleep -s 10
-
-Remove-Item $unzipLocation -recurse | out-null
-
-
+Remove-Item $unzipLocation -Recurse | Out-Null

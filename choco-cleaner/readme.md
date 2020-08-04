@@ -61,6 +61,10 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
+* 0.0.7.2 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)
+* 0.0.7.1 - Added checking to make sure that $env:ChocolateyToolsLocation exists. If you receive a "$env:ChocolateyToolsLocation not defined error message," you might simply need to close your CLI and reopen it if $env:ChocolateyToolsLocation was created during choco-cleaner's install.
+* 0.0.7 - Added some info about what and what isn't being deleted, added #Requires -RunAsAdministrator statement to script (PS v4+)
+* 0.0.6 - Fixed long standing bug where the config options set to false were ignored. **Now works from Command Prompt as well as PowerShell.** Additional 7Zip supported archives deleted.
 * 0.0.5.2 - minor update to delete .img (alternate .iso name), and .msi,.msu, and .msp files in toolsDir, as well as minor cosmetic changes
 * 0.0.5.1 - made PowerShell Core compatible
 * 0.0.5 - added deletion of cacheLocation if defined in chocolatey.config, cosmetic changes, removed 7Zip dependency and now using the version of 7Zip packaged with Chocolatey.

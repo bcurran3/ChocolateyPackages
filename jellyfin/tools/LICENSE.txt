@@ -1,5 +1,7 @@
 ============================== jellyfin ==============================
 
+(From the Jellyfin\Server directory.)
+
 GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 

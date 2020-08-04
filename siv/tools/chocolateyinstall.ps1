@@ -1,15 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'siv' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = "$toolsDir\siv.zip"
 $bits        = Get-ProcessorBits
 
 $packageArgs = @{
   packageName    = $packageName
   unzipLocation  = $toolsDir
   fileType       = 'ZIP' 
-  url            = $url
+  url            = "$toolsDir\siv_v$env:ChocolateyPackageVersion.zip"
   }
+
 Install-ChocolateyZipPackage @packageArgs
 
 if ($bits -eq 64)
@@ -20,4 +20,4 @@ if ($bits -eq 64)
     Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\SIV.lnk" -targetPath "$toolsDir\SIV32X.exe" -WorkingDirectory "$toolsDir"
     Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\SIV.lnk" -targetPath "$toolsDir\SIV32X.exe"       
    }
-Remove-Item $url | out-null
+Remove-Item "$toolsDir\*.zip" | Out-Null

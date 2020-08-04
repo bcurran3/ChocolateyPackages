@@ -25,6 +25,7 @@ if ($Migration) { SchTasks /Delete /TN choco-package-list-backup /F ; $GotTask=$
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force
 Move-Item "$toolsDir\choco-package-list-backup.cmd" "$scriptDir" -Force
+Move-Item "$toolsDir\CPLB.cmd" "$scriptDir" -Force
 if (!(Test-Path "$scriptDir\$ScriptConfig")) { Move-Item "$toolsDir\$ScriptConfig" "$scriptDir" -Force }
 
 # Cleanup

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>drobo-dashboard</id>
-    <version>3.4.2</version>
+    <version>3.5.0</version>
     <title>Drobo Dashboard (Install)</title>
     <authors>Drobo, Inc</authors>
     <owners>bcurran3</owners>
@@ -14,7 +14,7 @@
     <description>
 ---
 
-###[choco://drobo-dashboard](choco://drobo-dashboard)
+### [choco://drobo-dashboard](choco://drobo-dashboard)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---

@@ -11,5 +11,6 @@ $packageArgs = @{
   softwareName   = 'WinHue*'
 }
 
+Start-Process 'AutoHotKey' "$toolsDir\winhue_install.ahk"
 Install-ChocolateyInstallPackage @packageArgs
   

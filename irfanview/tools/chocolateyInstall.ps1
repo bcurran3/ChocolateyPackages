@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'irfanview'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\iview453_setup.exe"
-$url64          = "$toolsDir\iview453_x64_setup.exe"
+$TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
+$url            = "$toolsDir\iview"+$TodaysVersion+"_setup.exe"
+$url64          = "$toolsDir\iview"+$TodaysVersion+"_x64_setup.exe"
 $arguments      = @{}
 $packageParameters = $env:chocolateyPackageParameters
 
@@ -92,5 +93,5 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs 	
 
-Remove-Item $url | Out-Null
-Remove-Item $url64 | Out-Null
+Remove-Item $url -EA SilentlyContinue | Out-Null
+Remove-Item $url64 -EA SilentlyContinue | Out-Null

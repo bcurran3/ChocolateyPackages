@@ -1,8 +1,9 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.5.5</version>
+    <version>3.7.2</version>
     <title>Angry IP Scanner (Installer)</title>
     <authors>angryziber</authors>
     <owners>bcurran3</owners>
@@ -16,7 +17,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
-[choco://angryip](choco://angryip)
+### [choco://angryip](choco://angryip)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ---
 	
@@ -28,7 +29,7 @@ It is widely used by network administrators and just curious users around the wo
 
 It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as well.
 
-####Features
+#### Features
 * Scans local networks as well as Internet
 * IP Range, Random or file in any format
 * Exports results into many formats
@@ -55,5 +56,5 @@ It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
-  </files>   
+  </files>
 </package>

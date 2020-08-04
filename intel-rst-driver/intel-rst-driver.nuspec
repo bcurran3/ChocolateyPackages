@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>17.5.1.1021</version>
+    <version>17.8.0.1065</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
@@ -19,12 +19,12 @@
     <description>
 ---
 
-###[choco://intel-rst-driver](choco://intel-rst-driver)
+### [choco://intel-rst-driver](choco://intel-rst-driver)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
-###Purpose
+### Purpose
 	
 The Intel® Rapid Storage Technology (Intel® RST) Driver (16.8.0.1000) supports the configuration and enabling of multiple features including:
 
@@ -34,7 +34,7 @@ The Intel® Rapid Storage Technology (Intel® RST) Driver (16.8.0.1000) supports
 
 Note: Contact your system manufacturer prior to installing these applications or requesting technical support from Intel. They may provide software that is specifically configured for your system. 
 
-###Platforms supported
+### Platforms supported
 
 * Intel® 300/240 Series Chipset Family
 * Intel® 200 Series Chipset Family SATA AHCI/RAID Controller
@@ -54,7 +54,7 @@ Note: Contact your system manufacturer prior to installing these applications or
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/28650/eng/Readme.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29007/eng/Readme.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
     </dependencies>

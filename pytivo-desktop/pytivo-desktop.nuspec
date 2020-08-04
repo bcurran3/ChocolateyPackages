@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pytivo-desktop</id>
-    <version>1.6.16.0020180601</version>
+    <version>1.6.22</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pytivo-desktop</packageSourceUrl>
     <title>pyTivo Desktop (Install)</title>
@@ -17,9 +17,9 @@
     <description>
 ![Screenshot of pyTivo Desktop](http://www.pytivodesktop.com/assets/img/transfer_new.png)
 	
-##pyTivo Desktop
+## pyTivo Desktop
 
-###Download shows from, and share music, photos and videos with, your TiVo© DVR	
+### Download shows from, and share music, photos and videos with, your TiVo© DVR	
 
 I hope wmcbrine doesn't mind me posting this here. My name is Dan and I'm a moderator over on TiVo Community as well as a software developer for VideoReDo. I have recently forked wmcbrine's version of pyTivo and built it into a Windows install package that includes a more user friendly UI and does NOT require python to be installed on the users machine. Everything in the package is compiled into standard exe files. I've used pyinstaller for the python code and electron for my Angular based UI. If anyone is interested it can be downloaded for free here.. 
 
@@ -27,8 +27,8 @@ I hope wmcbrine doesn't mind me posting this here. My name is Dan and I'm a mode
 	</description>
     <releaseNotes>http://www.pytivodesktop.com/windows.html</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey" />
-    </dependencies>		
+      <dependency id="autohotkey" version="1.1.30" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

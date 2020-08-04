@@ -1,0 +1,9 @@
+==================== AdvancedRun ====================
+
+bcurran3 downloads and packages the included .ZIPs for AdvancedRun from the developer's website. 
+
+The direct download links are:
+https://www.nirsoft.net/utils/advancedrun.zip
+https://www.nirsoft.net/utils/advancedrun-x64.zip
+
+==================== AdvancedRun ====================

@@ -1,28 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'arq' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://www.arqbackup.com/download/Arq.exe' 
-$checksum      = 'F68ED08E15E6F1A9FE9CA31634B57DB725EAE3E3393D19F8B5AC7705CFC695A0'
-$UnzippedMSI   = "$toolsDir\ArqSetup.msi"
-
-$packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'ZIP' 
-  url           = $url
-  checksum      = $checksum
-  checksumType  = 'sha256'
-}
-
-Install-ChocolateyZipPackage @packageArgs
+$url           = 'https://www.arqbackup.com/download/arqbackup/Arq6.msi' 
+$checksum      = '2909BEB12BDEED423234CE7EF638304B18886A0DDC3E247AC14EB4A8D6455ED1'
+$UnzippedMSI   = "$toolsDir\Arq6.msi"
 
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'MSI'
-  file          = $UnzippedMSI
-  silentArgs    = '/passive ACCEPT=YES'
+  url           = $url
   validExitCodes= @(0, 3010, 1641)
-  softwareName  = 'Arq*'   
+  silentArgs    = '/quiet /norestart'
+  softwareName  = ''
+  checksum      = $checksum
+  checksumType  = 'sha256' 
 }
 
-Install-ChocolateyInstallPackage @packageArgs
+Install-ChocolateyPackage @packageArgs

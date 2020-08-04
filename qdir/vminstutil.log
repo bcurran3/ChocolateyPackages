@@ -1,0 +1,70 @@
+2020-05-28T06:31:33.387-07:00| inst-build-15785246| I0: [Resource] LOG_INST_NAME = <not defined>
+2020-05-28T06:31:33.387-07:00| inst-build-15785246| I0: [Resource] LOG_MSI_NAME = <not defined>
+2020-05-28T06:31:33.389-07:00| BootStrapper-build-15785246| E1: InstCreateLogFile: Unable to log to intended file C:\Users\bcurran\AppData\Local\Temp\vminst.log| posix code 13 (Permission denied)
+2020-05-28T06:31:33.389-07:00| BootStrapper-build-15785246| I0: Operating system info:
+2020-05-28T06:31:33.389-07:00| BootStrapper-build-15785246| I0:    Admin install = TRUE
+2020-05-28T06:31:33.391-07:00| BootStrapper-build-15785246| I0:    Major version = 10
+2020-05-28T06:31:33.391-07:00| BootStrapper-build-15785246| I0:    Minor version = 0
+2020-05-28T06:31:33.392-07:00| BootStrapper-build-15785246| I0:    Service pack  = 0
+2020-05-28T06:31:33.392-07:00| BootStrapper-build-15785246| I0:    Build number  = 18363
+2020-05-28T06:31:33.393-07:00| BootStrapper-build-15785246| I0:    Bitness       = 64-bit
+2020-05-28T06:31:33.393-07:00| BootStrapper-build-15785246| I0:    Platform      = NT
+2020-05-28T06:31:33.393-07:00| BootStrapper-build-15785246| I0: Running from: "C:\Users\bcurran\AppData\Local\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\TempState\WinGet\VMware.WorkstationPlayer.15.5.2.exe"
+2020-05-28T06:31:33.394-07:00| BootStrapper-build-15785246| I0: [Resource] LOG_CMD = <not defined>
+2020-05-28T06:31:33.394-07:00| BootStrapper-build-15785246| I0: Setup feature: LOG_CMD is enabled
+2020-05-28T06:31:33.395-07:00| BootStrapper-build-15785246| I0: Command line: /s /v/qn REBOOT=ReallySuppress EULAS_AGREED=1
+2020-05-28T06:31:33.395-07:00| BootStrapper-build-15785246| I0: [Resource] MINORUPGRADE = 0
+2020-05-28T06:31:33.395-07:00| BootStrapper-build-15785246| I0: Performing standard MSI install/major upgrade
+2020-05-28T06:31:33.396-07:00| BootStrapper-build-15785246| I0: [Resource] PRODUCT_REG_NAME = <not defined>
+2020-05-28T06:31:33.396-07:00| BootStrapper-build-15785246| I0: Silent installation = TRUE
+2020-05-28T06:31:33.396-07:00| BootStrapper-build-15785246| I0: Upgrade at shutdown = FALSE
+2020-05-28T06:31:33.397-07:00| BootStrapper-build-15785246| I0: [Resource] SKIPADMINCHECK = <not defined>
+2020-05-28T06:31:33.397-07:00| BootStrapper-build-15785246| I0: [Resource] OPERATION = INSTALLUPD
+2020-05-28T06:31:33.397-07:00| BootStrapper-build-15785246| I0: [Resource] PRODUCTNAME = VMware Player
+2020-05-28T06:31:33.397-07:00| BootStrapper-build-15785246| I0: [Resource] UPGRADECODE = {217329DA-42FA-11E2-B26F-FAF46088709B}
+2020-05-28T06:31:33.398-07:00| BootStrapper-build-15785246| I0: [Resource] PRODUCTCODE = {D5A2C427-CD60-46C5-826C-42FAF79DFA56}
+2020-05-28T06:31:33.398-07:00| BootStrapper-build-15785246| I0: [Resource] LANGUAGES = 1041 2052
+2020-05-28T06:31:33.398-07:00| BootStrapper-build-15785246| I0: [Resource] VM_DATABASE64 = <not defined>
+2020-05-28T06:31:33.398-07:00| BootStrapper-build-15785246| I0: [Resource] VM_DATABASE = VMwarePlayer.msi
+2020-05-28T06:31:33.399-07:00| BootStrapper-build-15785246| I0: [Resource] SFXINSERT = 1907200
+2020-05-28T06:31:33.399-07:00| BootStrapper-build-15785246| I0: [Resource] VMIOPTION = one
+2020-05-28T06:31:33.399-07:00| BootStrapper-build-15785246| I0: [Resource] CACHEMSI = 1
+2020-05-28T06:31:33.400-07:00| BootStrapper-build-15785246| I0: Cache MSI set to TRUE
+2020-05-28T06:31:33.400-07:00| BootStrapper-build-15785246| I0: [Resource] MINIMUM_9X_MSI = 200
+2020-05-28T06:31:33.400-07:00| BootStrapper-build-15785246| I0: [Resource] MINIMUM_NT_MSI = 300
+2020-05-28T06:31:33.401-07:00| BootStrapper-build-15785246| I0: [Resource] INSTMSIW = <not defined>
+2020-05-28T06:31:33.401-07:00| BootStrapper-build-15785246| I0: [Resource] VCRUNTIME32 = vcredist_x86.exe
+2020-05-28T06:31:33.402-07:00| BootStrapper-build-15785246| I0: [Resource] VCRUNTIME64 = vcredist_x64.exe
+2020-05-28T06:31:33.402-07:00| BootStrapper-build-15785246| I0: [Resource] VCRUNTIME32_ALT = <not defined>
+2020-05-28T06:31:33.402-07:00| BootStrapper-build-15785246| I0: [Resource] VCRUNTIME64_ALT = <not defined>
+2020-05-28T06:31:33.403-07:00| BootStrapper-build-15785246| I0: [Resource] PROPERTIES = <not defined>
+2020-05-28T06:31:33.403-07:00| BootStrapper-build-15785246| I0: [Resource] OLDCODES = 
+2020-05-28T06:31:33.403-07:00| BootStrapper-build-15785246| I0: [Resource] HELPER_UI = <not defined>
+2020-05-28T06:31:33.404-07:00| BootStrapper-build-15785246| I0: The user's default locale is 1033
+2020-05-28T06:31:33.405-07:00| BootStrapper-build-15785246| I0: Total unpacked size will be 0 MB (0 bytes)
+2020-05-28T06:31:33.405-07:00| BootStrapper-build-15785246| I0: [Resource] REQ_MB_SPACE = <not defined>
+2020-05-28T06:31:33.405-07:00| BootStrapper-build-15785246| I0: Total space required to unpack is 51 MB (52428800 bytes)
+2020-05-28T06:31:33.406-07:00| BootStrapper-build-15785246| I0: Attempting to find best location for unpacking temporary installation files
+2020-05-28T06:31:33.406-07:00| BootStrapper-build-15785246| I0: Examining drive for temp folder "C:\Users\bcurran\AppData\Local\Temp\"
+2020-05-28T06:31:33.407-07:00| BootStrapper-build-15785246| I0: Local fixed drive C: has 384650 MB (403334578176 bytes) free
+2020-05-28T06:31:33.407-07:00| BootStrapper-build-15785246| I0: Local fixed drive E: has 504 MB (527646720 bytes) free
+2020-05-28T06:31:33.410-07:00| BootStrapper-build-15785246| I0: Removable drive G: has 0 MB (0 bytes) free
+2020-05-28T06:31:33.411-07:00| BootStrapper-build-15785246| I0: Remote drive L: has 108702 MB (113982103552 bytes) free
+2020-05-28T06:31:33.414-07:00| BootStrapper-build-15785246| I0: Remote drive N: has 108702 MB (113982103552 bytes) free
+2020-05-28T06:31:33.418-07:00| BootStrapper-build-15785246| I0: Remote drive P: has 165942 MB (174002249728 bytes) free
+2020-05-28T06:31:33.421-07:00| BootStrapper-build-15785246| I0: Remote drive Q: has 233254 MB (244584415232 bytes) free
+2020-05-28T06:31:33.457-07:00| BootStrapper-build-15785246| I0: Remote drive S: has 322314 MB (337970417664 bytes) free
+2020-05-28T06:31:33.461-07:00| BootStrapper-build-15785246| I0: Remote drive Z: has 2547863 MB (2671627251712 bytes) free
+2020-05-28T06:31:33.469-07:00| BootStrapper-build-15785246| I0: ERROR: Setup did not find a suitable unpack location. Stopping installation.
+2020-05-28T06:31:33.469-07:00| BootStrapper-build-15785246| I0: ERROR: Failed to find drive with enough space.
+2020-05-28T06:31:33.470-07:00| BootStrapper-build-15785246| I0: Needed Bytes: 52428800
+2020-05-28T06:31:33.470-07:00| BootStrapper-build-15785246| I0: DisplayMessageBox: "VMware Product Installation" - "There is not enough free disk space for setup to proceed.  To continue, one drive must have at least 51 MB of free space.  Otherwise, click Cancel to abort setup."
+2020-05-28T06:31:33.470-07:00| BootStrapper-build-15785246| I0: PickButton: Running silent, assume button id 0
+2020-05-28T06:31:33.471-07:00| BootStrapper-build-15785246| I0: Install cancelled by the user.
+2020-05-28T06:31:33.471-07:00| BootStrapper-build-15785246| I0: Cleaning up temp dir ""
+2020-05-28T06:31:33.472-07:00| BootStrapper-build-15785246| E1: Util_DeleteDirectory: Invalid empty path specified for deletion
+2020-05-28T06:31:33.472-07:00| BootStrapper-build-15785246| I0: Failed to cleanup extracted files in ""
+2020-05-28T06:31:33.472-07:00| BootStrapper-build-15785246| I0: Setup exit code is: 0
+2020-05-28T06:31:33.474-07:00| inst-build-15785246| E1: InstCreateLogFile: Unable to log to intended file C:\Users\bcurran\AppData\Local\Temp\vminst.log| posix code 13 (Permission denied)
+2020-05-28T06:31:33.474-07:00| inst-build-15785246| I2: Util_FileExists: Did not find file/directory: "C:\Users\bcurran\AppData\Local\Temp\vminst.log"| posix code 2 (No such file or directory)
+2020-05-28T06:31:33.475-07:00| inst-build-15785246| I2: Util_FileExists: Did not find file/directory: "C:\Users\bcurran\AppData\Local\Temp\vmmsi.log"| posix code 2 (No such file or directory)

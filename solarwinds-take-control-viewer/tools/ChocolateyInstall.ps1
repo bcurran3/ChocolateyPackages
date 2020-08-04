@@ -2,7 +2,7 @@
 $packageName    = 'solarwinds-take-control-viewer'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://rm-downloads-us.logicnow.com/MSP/TakeControlViewerInstall.exe'
-$checksum       = 'F9489CE2C0AAAD5F50B6BEE9D1C66636513F5FD21FDEE54161046C9A5FA43FF3'
+$checksum       = '7A095B96984894FF9EA0A3DBD66FE11089083B1CC68558C08CE0D80017372590'
 
 $packageArgs = @{
   packageName    = $packageName

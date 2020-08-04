@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>cms-magic-series</id>
-    <version>2.4.4.2056</version>
+    <version>2.5.2.2069</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/cms-magic-series</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>CMS (Central Management System) for MAGIC Series DVRs (Install)</title>
@@ -17,7 +17,7 @@
     <description>
 ---
 
-###[choco://cms-magic-series](choco://cms-magic-series)
+### [choco://cms-magic-series](choco://cms-magic-series)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---

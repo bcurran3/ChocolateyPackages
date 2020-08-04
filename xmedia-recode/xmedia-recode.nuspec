@@ -3,18 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xmedia-recode</id>
-    <version>3.4.7.4</version>
+    <version>3.5.1.0</version>
     <title>XMedia Recode (Install)</title>
     <authors>Sebastian Dörfler</authors>
+    <copyright>Copyright © Sebastian Dörfler</copyright>
     <owners>angga, bcurran3</owners>
     <projectUrl>https://www.xmedia-recode.de/en/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/xmedia-recode/xmedia-recode_icon.png</iconUrl>
-    <bugTrackerUrl>https://www.xmedia-recode.de/en/impressum.html</bugTrackerUrl>
+    <bugTrackerUrl>https://www.xmedia-recode.de/en/impressum.php</bugTrackerUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/xmedia-recode</packageSourceUrl>
+    <docsUrl>https://www.xmedia-recode.de/en/help/</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
 
-###[choco://xmedia-recode](choco://xmedia-recode)
+### [choco://xmedia-recode](choco://xmedia-recode)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -47,7 +50,7 @@ WAV to AAC, WAV to AC3, WAV to MP2, WAV to MP3, WAV to Opus, WAV to Vorbis,
 WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM	
 
 
-####System Requirements
+#### System Requirements
 
 * Processor: Intel / AMD compatible at 1 GHz or higher
 * RAM: 1 GB
@@ -67,10 +70,7 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
 </description>
     <summary>XMedia Recode is a free All-In-One video converter and audio converter tool</summary>
     <releaseNotes>https://www.xmedia-recode.de/en/version.html</releaseNotes>
-    <copyright>Copyright © Sebastian Dörfler</copyright>
     <tags>sdorfler dvd-ripper video-converter audio-converter binary</tags>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/xmedia-recode</packageSourceUrl>
-    <docsUrl>http://www.xmedia-recode.de/hilfe/xmediarecode.html</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

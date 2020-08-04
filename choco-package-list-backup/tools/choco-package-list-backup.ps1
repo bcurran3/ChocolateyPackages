@@ -1,4 +1,7 @@
-﻿#$ErrorActionPreference = 'Stop'
+﻿#
+# TDL modify to use Install-ChocolateyPowershellCommand.ps1 during install
+#
+#$ErrorActionPreference = 'Stop'
 # choco-package-list-backup.ps1 (to local and cloud) by Bill Curran
 # I couldn't have done this without the list parsing from Ammaar Limbada found at https://gist.github.com/alimbada/449ddf65b4ef9752eff3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
@@ -7,9 +10,13 @@
 # Save --packageparameters
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-Write-Host "choco-package-list-backup.ps1 v2019.08.27 - backup Chocolatey packages list locally and to the cloud" -Foreground White
-Write-Host "Copyleft 2017-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "choco-package-list-backup.ps1 v2020.04.06 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "Copyleft 2017-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
+
+# Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
+if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
+if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
 
 $Date          = Get-Date -UFormat %Y-%m-%d
 $ErrorArray    = @("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)

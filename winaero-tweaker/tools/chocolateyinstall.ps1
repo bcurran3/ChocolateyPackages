@@ -2,7 +2,7 @@
 $packageName    = 'winaero-tweaker' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://winaero.com/e107_files/downloads/winaerotweaker.zip'
-$checksum       = 'E97AE74FE86C9A2E2E588F925D0932890D1B6A9318AFF0061D3E4E4882A9049E'
+$checksum       = 'FFEDF3A94036B07B1EFB14B3A3F7319D115FEC1D969BD6B0F58D6EF1C35F001F'
 $UnzippedEXE    = "$toolsDir\WinaeroTweaker-$env:packageVersion-setup.exe"
 
 $packageArgs = @{
