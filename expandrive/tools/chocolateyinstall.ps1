@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'expandrive' 
 $url           = 'https://secure.expandrive.com/expandrive/download_win' 
-$checksum      = '946C0FB0068F3C76002B84ED4BF6B99DBF67E95B3EC586105B8BA3A24E4E1FBE'
+$checksum      = '640EDD703AE800582661D44C2713D5278AFA262B167824CD33C86B3050E3602B'
 
 $packageArgs = @{
   packageName   = $packageName

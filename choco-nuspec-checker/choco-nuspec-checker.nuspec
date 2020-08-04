@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2019.08.26</version>
+    <version>2020.04.06.0001</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -11,23 +11,25 @@
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>---
-###[choco://choco-nuspec-checker](choco://choco-nuspec-checker)
+    <description>
+---
+### [choco://choco-nuspec-checker](choco://choco-nuspec-checker)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
-##**choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix most of them! Find out AND FIX what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** also goes beyond it's original scope and checks for common Chocolatey install/uninstall script errors and omissions as well.
+## **choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix most of them! Find out AND FIX what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** also goes beyond it's original scope and checks for common Chocolatey install/uninstall script errors and omissions as well.
 
-###FEATURES:
+### FEATURES:
 * **CNC** checks all .nuspec elements and reports any missing or template default values
 * **CNC** checks for all verifier messages (guidelines, suggestions, and notes) and reports them if applicable
 * **CNC** checks for dead URLs and reports them
 * **CNC** checks for GitHub direct links, reports them, and can convert them to various CDN URLs (default=Staticaly)
 * **CNC** checks for RawGit CDN links, reports them, and can convert them to various CDN URLs (default=Staticaly)
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
+* **CNC** checks and reports current status of your package on chocolatey.org
 * **CNC** can add a standard template header and/or footer to your .nuspec description and replace tokens in it
 * **CNC** checks nuspec and PowerShell scripts for correct UTF-8 encoding and reports if the encoding is incorrect
 * **CNC** can re-write your nuspec in UTF-8 w/o BOM format
@@ -35,10 +37,11 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** checks all your PowerShell scripts for syntax errors
 * **CNC** checks for and can add $ErrorActionPreference = 'Stop' to your PowerShell scripts
 * **CNC** can optimize PNG files in your nuspec directory if PNGOptimizer.commandline is installed
+* **CNC** can be run from the Command Prompt AND PowerShell
 
-###Helps make packaging Chocolateasy!
+### Helps make packaging Chocolateasy!
 
-###INSTRUCTIONS:
+### INSTRUCTIONS:
 * **CNC -help** for help with options and switches
 * Run **CNC** to check the .nuspec in your current directory, run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
 * To check all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cls;CNC $__.Fullname;pause}}**
@@ -48,7 +51,13 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**</description>
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
-    <releaseNotes>###CHANGELOG:
+    <releaseNotes>
+### CHANGELOG:
+* 2020.04.06.0001 - Updated CNC.cmd for ChocolateyToolsLocation handling. Fixed markdown heading error in CNCHeader.txt.
+* 2020.04.06 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)
+* 2020.01.16 - Updated message related to Markdown heading issues (now a requirement to fix), added Operating System index files checking, added verification that $env:ChocolateyToolsLocation exists (variable, not location)
+* 2019.12.14 - Added checking for Markdown heading declarations that are incompatible with the Sept. 2019 changes to chocolatey.org. (Plan to autofix in a future update.)
+* 2019.09.01 - Added Powershell v3 as a dependency due to Invoke-WebRequest use. Eliminated iwr error for new packages that weren't pushed to chocolatey.org yet, added reporting for packages that are in submitted or waiting for maintainer status, added to the common problems for not a valid XML file messages.
 * 2019.08.26 - "Kicked out of bin release" - script installation endpoint changed. **Now works from Command Prompt as well as PowerShell.** Additional 7Zip supported formats checked for as binaries.
 * 2019.08.22 - -UpdateXMLNamespace implemented (unreleased due to new moderation demands)
 * 2019.08.21 - added checking for package release notes in description (unreleased due to new moderation demands)
@@ -76,6 +85,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="powershell" version="3.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

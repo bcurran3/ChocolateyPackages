@@ -1,10 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-graphics-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64       = 'https://downloadmirror.intel.com/28567/a08/dch_win64_25.20.100.6577.exe'
-$checksum64  = 'FAE0769994067E99A0EFD0F55C17A4177EE06D3C0626C41BE878FE830A22EE7D'
-$ahkExe      = 'AutoHotKey'
-$ahkFile     = "$toolsDir\intel-graphics-driver_install.ahk"
+$url64       = 'https://downloadmirror.intel.com/29274/a08/igfx_win10_100.7584.exe'
+$checksum64  = '702503DF87126284C469EF3E669CA2856F48E840A0798BD7BC285E935C846F3C'
 
 if (!(Get-IsWin10)){
     Write-Warning "  ** This version is only for Windows 10."
@@ -31,9 +29,8 @@ $packageArgs = @{
   url64bit      = $url64
   checksum64    = $checksum64
   checksumType64= 'sha256'
-  silentArgs    = ''
-  softwareName  = 'Intel® Graphics Driver'
+  silentArgs    = '-overwrite -s -report $env:tmp\igfx_win10.txt'
+  softwareName  = ''
   }
 
-Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs

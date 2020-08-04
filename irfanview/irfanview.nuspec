@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanview</id>
-    <version>4.53</version>
+    <version>4.54</version>
     <title>IrfanView (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -14,7 +14,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ___
-###[choco://irfanview](choco://irfanview)
+### [choco://irfanview](choco://irfanview)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 

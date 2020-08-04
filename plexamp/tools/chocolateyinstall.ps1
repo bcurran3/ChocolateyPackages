@@ -1,18 +1,19 @@
-﻿$packageName    = 'plexamp'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'plexamp'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://plexamp.plex.tv/plexamp.plex.tv/Plexamp%20Setup%201.1.0.exe'
-$checksum       = 'C38DE045826C02273C65563221676A9FCBC4638E167CAFEA9CC5B2400ACD2357'
+$url64          = "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp%20Setup%20$env:ChocolateyPackageVersion.exe"
+$checksum64     = '6E29C386853D078EE48C30B00A63FB1B09E7E80E4C23D81981E6BFF3F324A02B'
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir  
-  fileType      = 'EXE'
-  url           = $url
-  validExitCodes= @(0,1)
-  silentArgs    = '/S'
-  softwareName  = 'Plexamp*'
-  checksum      = $checksum
-  checksumType  = 'sha256' 
+  packageName    = $packageName
+  unzipLocation  = $toolsDir  
+  fileType       = 'EXE'
+  url64          = $url64
+  validExitCodes = @(0,1)
+  silentArgs     = '/S'
+  softwareName   = 'Plexamp*'
+  checksum64     = $checksum64
+  checksumType64 = 'sha256' 
 }
 
 Install-ChocolateyPackage @packageArgs

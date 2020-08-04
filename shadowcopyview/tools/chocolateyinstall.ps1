@@ -1,9 +1,10 @@
-﻿$packageName  = 'shadowcopyview' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'shadowcopyview' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'http://www.nirsoft.net/utils/shadowcopyview.zip'
-$checksum     = 'C89A84F28552F347DFF09B00D996C7F0DA3819419B546B431FCEDF8C88F4A6EF'
-$url64        = 'http://www.nirsoft.net/utils/shadowcopyview-x64.zip'
-$checksum64   = 'C7A67B199BE34756A3CA3E10701E7FF6B6F37FEBE7D481B78E5AA873DC1886C8'
+$url          = 'https://www.nirsoft.net/utils/shadowcopyview.zip'
+$checksum     = 'F6BA78F19E0949393E33A82916664A6467B455B09A5E610769B52FEDD63C484E'
+$url64        = 'https://www.nirsoft.net/utils/shadowcopyview-x64.zip'
+$checksum64   = '627A0D2855BF7E4922F1A22610C44D880BE7D32BDCA2C3044097B07EE5E4BB81'
 $shortcutName = 'ShadowCopyView.lnk'
 $exe          = 'ShadowCopyView.exe'
 

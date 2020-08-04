@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-network-drivers-win10</id>
-    <version>24.1.0.7</version>
+    <version>25.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-network-drivers-win10</packageSourceUrl>
     <title>Intel® Network Adapter Driver for Windows® 10 (Install)</title>
@@ -18,12 +18,12 @@
     <description>
 ---
 
-###[choco://intel-network-drivers-win10](choco://intel-network-drivers-win10)
+### [choco://intel-network-drivers-win10](choco://intel-network-drivers-win10)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
-##Overview
+## Overview
 
 This download installs base drivers, Intel® PROSet for Windows Device Manager*, and Intel® PROSet Adapter Configuration Utility for Intel® Network Adapters with Windows 10.
  
@@ -39,7 +39,6 @@ This download installs base drivers, Intel® PROSet for Windows Device Manager*,
 </description>
     <releaseNotes>https://downloadmirror.intel.com/25016/eng/readme.txt</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="dependency-windows10" version="10.0"/>
     </dependencies>
   </metadata>

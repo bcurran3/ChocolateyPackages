@@ -1,21 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName = 'snort' 
-$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://www.snort.org/downloads/snort/Snort_2_9_13_Installer.exe'
-$checksum    = '6F5A5E1A69D218D19025BAB8A1BFE1FF86B06438C27DBC9DAFBEB3AF8AA797CB'
-$ahkExe      = 'AutoHotKey'
-$ahkFile     = "$toolsDir\SnortInstall.ahk"
-
-Start-Process $ahkExe $ahkFile
+$packageName   = 'snort' 
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$TodaysVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','_')
+$url           = "$toolsDir\Snort_"+$TodaysVersion+"_Installer.exe"
+$ahkExe        = 'AutoHotKey'
+$ahkFile       = "$toolsDir\snort_install.ahk"
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE' 
-  url           = $url
-  silentArgs    = '/S' 
-  checksum      = $checksum
-  checksumType  = 'sha256'  
+  packageName  = $packageName
+  fileType     = 'EXE'
+  file         = $url
+  silentArgs   = '/S'
+  softwareName = "Snort"
   }
 
-Install-ChocolateyPackage @packageArgs
+Start-Process $ahkExe $ahkFile
+Install-ChocolateyInstallPackage @packageArgs
+Remove-Item $url -Force -ErrorAction SilentlyContinue | Out-Null

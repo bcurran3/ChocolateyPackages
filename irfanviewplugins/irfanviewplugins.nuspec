@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.53</version>
+    <version>4.54</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -14,11 +14,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ___
-###[choco://irfanviewplugins](choco://irfanviewplugins)
+### [choco://irfanviewplugins](choco://irfanviewplugins)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
-###Available PlugIns and current versions:
+### Available PlugIns and current versions:
 
 There are too many plugins to list in the space of the description. 
 
@@ -40,7 +40,7 @@ ___
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.53" />
+      <dependency id="irfanview" version="4.54" />
     </dependencies>
   </metadata>
   <files>

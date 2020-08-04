@@ -4,7 +4,7 @@
   <metadata>
     <id>solarwinds-backup-manager</id>
     <title>SolarWinds Backup Manager (Install)</title>
-    <version>19.6.0.19171</version>
+    <version>20.5.0.20125</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-backup-manager</packageSourceUrl>
@@ -18,14 +18,16 @@
     <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Protect Your Users’ Data with Sophisticated Backup and Rapid Disaster Recovery</summary>
     <description>
-***
-[choco://solarwinds-backup-manager](choco://solarwinds-backup-manager)
+---
+
+### [choco://solarwinds-backup-manager](choco://solarwinds-backup-manager)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
 
 ![Screenshot of SolarWinds Recovery Console](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-recovery-console/solarwinds-recovery-console_screenshot.png)	
 
-###Protect Your Users’ Data with Sophisticated Backup and Rapid Disaster Recovery
+### Protect Your Users’ Data with Sophisticated Backup and Rapid Disaster Recovery
 
 Data loss can cause serious financial hardships for a company, and system downtime can cripple productivity, preventing a business from providing good service to customers. That’s why it’s critical to be prepared with the right technology.
 
@@ -36,7 +38,7 @@ SolarWinds® Remote Monitoring &amp; Management provides a hybrid cloud backup a
 * **Best of both worlds:** Leverage a hybrid cloud architecture that gives you the control and speed of on-premises backup combined with the convenience and added redundancy of a cloud-based approach.
 * **Back up a number of devices at almost any level:** Back up everything, including workstations, servers, and even virtual machines and servers. Additionally, backups can be set for anything from individual files to applications all the way to full systems.
 
-###Back Up Fast, Recover Fast
+### Back Up Fast, Recover Fast
 
 * **Fast backup:** Take advantage of our True Delta technology, which backs up changes rather than full files. This helps to reduce the time it takes to run the backup process, allowing you to back up more frequently.
 * **Fast recovery:** Get rapid recovery after a disaster using our hybrid cloud architecture that restores from either cloud-based or local copies—whichever is faster.
@@ -46,7 +48,7 @@ SolarWinds® Remote Monitoring &amp; Management provides a hybrid cloud backup a
 * **Bandwidth throttling:** Restrict upload and download bandwidth during a user-defined backup window.
 * **Standby image backup:** Automatically create a local .VHD/X file of your backup selections during each scheduled backup.
 
-###Leverage Enterprise-Grade Features
+### Leverage Enterprise-Grade Features
 
 * **Virtual machine support:** Back up your virtual environments with host-level VMware® and Hyper-V® backups. You can restore to an existing or alternate virtual environment.
 * **Ultra secure:** Leverage AES 256 or 448-bit Blowfish encryption to help with keeping data safe on-premises, during transfers, and in the cloud.
@@ -55,11 +57,15 @@ SolarWinds® Remote Monitoring &amp; Management provides a hybrid cloud backup a
 * **Data archiving:** Choose how long you want to retain backup copies, allowing you to keep specific datasets and backups indefinitely. 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-backup-manager/readme.md)**
+    
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-    </description>
+
+---
+
+</description>
     <releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
   </metadata>
   <files>

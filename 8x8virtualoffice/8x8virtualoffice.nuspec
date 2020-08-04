@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8x8virtualoffice</id>
-    <version>6.2.4.4</version>
+    <version>6.8.5.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8x8virtualoffice</packageSourceUrl>
     <title>8x8 Virtual Office (Install)</title>
@@ -17,10 +17,12 @@
     <tags>8x8 voip phone phones virtual office</tags>
     <summary>8x8 Virtual Office Desktop for PC (Windows)</summary>
     <description>
-___
-###[choco://8x8virtualoffice](choco://8x8virtualoffice)
+---
+
+### [choco://8x8virtualoffice](choco://8x8virtualoffice)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
 
 
 ![8x8 Virtual Office screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_screenshot.png)
@@ -30,12 +32,12 @@ Virtual Office Desktop is a comprehensive Unified Communications client applicat
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8x8virtualoffice/readme.md)**
 
 
-    
 
-___
+---
 
-Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
-___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
 
 </description>
     <releaseNotes>http://www.get8x8.com/8x8WebHelp/VirtualOfficeDesktop5_0/Default.htm#VOD5_0/WhatIsNew.htm</releaseNotes>

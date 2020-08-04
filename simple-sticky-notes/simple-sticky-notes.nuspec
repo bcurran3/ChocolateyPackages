@@ -4,7 +4,7 @@
   <metadata>
     <id>simple-sticky-notes</id>
     <title>Simple Sticky Notes (Install)</title>
-    <version>4.5</version>
+    <version>4.9.5</version>
     <authors>Simnet Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>
@@ -12,7 +12,7 @@
     <description>
 ---
 
-###[choco://simple-sticky-notes](choco://simple-sticky-notes)
+### [choco://simple-sticky-notes](choco://simple-sticky-notes)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -27,9 +27,6 @@ Minimum Requirements: Windows® 10 / 8.1 / 8 / 7 / Vista / XP PC with a 1 GHz In
 [Facebook](https://www.facebook.com/SimpleStickyNotes) | [Google+](https://plus.google.com/+SimpleStickyNotes) | [Twitter](https://twitter.com/SimpleSticky)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/simple-sticky-notes/readme.md)**
-
-
-    
 
 ---
 

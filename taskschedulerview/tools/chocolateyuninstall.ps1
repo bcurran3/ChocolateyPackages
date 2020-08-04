@@ -1,4 +1,5 @@
-﻿$packageName  = 'taskschedulerview' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'taskschedulerview' 
 $shortcutName = 'TaskSchedulerView.lnk'
 
 remove-item "$ENV:Public\Desktop\$shortcutName" -Force -ErrorAction SilentlyContinue

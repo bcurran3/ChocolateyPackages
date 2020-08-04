@@ -9,8 +9,9 @@ Send !n
 Send {SPACE}
 Send !n
 ; ---------------- need for upgrade
-; WinWaitActive, Setup - pyTivo, Which additional tasks should be performed?, 300
-; Send !n
+;WinWaitActive, Setup - pyTivo, Which additional tasks should be performed?, 300
+WinWaitActive, Setup - pyTivo, Select Additional Tasks, 300
+Send !n
 ; Send !n
 ; Send !i
 ; then jump to Setup has finished...

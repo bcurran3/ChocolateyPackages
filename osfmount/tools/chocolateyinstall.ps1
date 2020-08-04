@@ -2,7 +2,7 @@
 $packageName = 'osfmount' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64       = 'http://www.osforensics.com/downloads/osfmount.exe'
-$checksum64  = 'CAB9D41CADF68A21BE72C80CE998B08AFBB696CF7C54467BDE4A6036D40CF74E'
+$checksum64  = 'CDCEFCA0912ED3C0DF1F5754B90265756D2A2A2A29943DD14ECEF2E623055B10'
 
 $packageArgs = @{
   packageName    = $packageName

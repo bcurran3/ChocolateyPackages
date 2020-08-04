@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>stinger</id>
-    <version>12.1.0.3231</version>
+    <version>12.1.0.3432</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/stinger</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>McAfee Stinger (Portable)</title>
@@ -19,7 +19,7 @@
     <description>
 ---
 
-###[choco://stinger](choco://stinger)
+### [choco://stinger](choco://stinger)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---

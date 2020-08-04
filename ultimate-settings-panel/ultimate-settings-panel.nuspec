@@ -1,8 +1,9 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ultimate-settings-panel</id>
-    <version>6.3</version>
+    <version>6.5</version>
     <title>Ultimate Settings Panel (Install)</title>
     <authors>A.J. Armstrong</authors>
     <owners>bcurran3</owners>
@@ -48,16 +49,17 @@ ___
     </description>
     <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>
     <copyright>A.J. Armstrong / techygeekshome.info</copyright>
-    <tags>ultimate settings panel system utility configuration control</tags>
+    <tags>ultimate settings panel system utility configuration control binary</tags>
     <projectSourceUrl>https://github.com/techygeekshome/Ultimate-Settings-Panel</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>
     <docsUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/ultimate-settings-panel-instructions/</docsUrl>
+	<bugTrackerUrl>https://blog.techygeekshome.info/contact/</bugTrackerUrl>
     <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
     <dependencies>
       <dependency id="dotnet4.5.2" />
     </dependencies>
   </metadata>
- <files>
+  <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>

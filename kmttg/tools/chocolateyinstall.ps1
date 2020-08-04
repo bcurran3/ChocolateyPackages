@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'kmttg' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$file        = "$toolsDir\kmttg_v2.4m.zip"
+$file        = "$toolsDir\kmttg_v2.4o.zip"
 
 Get-ChocolateyUnzip -FileFullPath "$file" -Destination "$toolsDir"
 

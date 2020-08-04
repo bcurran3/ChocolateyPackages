@@ -1,4 +1,5 @@
-﻿# CNC.ps1 Copyleft 2018-2019 by Bill Curran AKA BCURRAN3
+﻿# $ErrorActionPreference = 'Stop'
+# CNC.ps1 Copyleft 2018-2020 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -9,8 +10,12 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2019.08.26 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
-Write-Host "Copyleft 2018-2019 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "CNC.ps1 v2020.04.06 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "Copyleft 2018-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+
+# Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
+if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
+if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
 
 # parameters and variables -------------------------------------------------------------------------------------
 
@@ -38,7 +43,7 @@ $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appea
 $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 
-if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
+if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
     Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
 	Write-Host "-help, -?, or /?"
 	Write-Host "   Displays this information."
@@ -74,6 +79,8 @@ if (($args -eq "-help") -or ($args -eq "-?") -or ($args -eq "/?")) {
     Write-Host "   Updates the XML comment for UTF-8 checking."
 	Write-Host "-UpdateXMLDeclaration"
     Write-Host "   Updates the XML declaration."
+	Write-Host "-UpdateXMLNamespace"
+	Write-Host "   Updates the XML Namespace"
 	Write-Host "-UseGitHack"
     Write-Host "   Use GitHack for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
 	Write-Host "-UseGitCDN"
@@ -248,9 +255,10 @@ function Test-XMLFile {
 
 if (!(Test-XMLFile $LocalnuspecFile)){
     Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
-    Write-Host "FYI:       ** Common problems include not closing elements and not converting ""&""'s to ""&amp;""" -Foreground Cyan
-    Write-Host "              choco pack will report ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
-    Write-Host "              choco pack will report ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s.`n" -Foreground Cyan
+    Write-Host "FYI:     ** Common problems:" -Foreground Cyan
+    Write-Host "            choco pack will report: ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s." -Foreground Cyan
+    Write-Host "            choco pack will report: ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
+    Write-Host "            choco pack will report: ""The <tag> start tag on line x position x does not match the end tag of <tag>`n.                                    Line x, position x."" for elements with mismatched case.`n" -Foreground Cyan
     break
 }
 
@@ -467,6 +475,17 @@ function Check-Binaries{
      }
 }
 
+# check for OS index files that should be excluded
+function Check-OSIndexFiles{
+  $NotWanted=(Get-ChildItem -Path $path -Include "*.ds_store","thumbs.db" -Recurse)
+  if ($NotWanted){
+      Write-Host "WARNING:   ** Operating System index files found in directory. If found in the package, this will trigger a message`n              from the verifier:" -Foreground Red
+      Write-Host "           ** Required: The package contains Operating System index files, .ds_store or thumbs.db. Please remove all`n              index files from the package. " -Foreground Cyan
+	   $GLOBAL:Required++
+     }
+}
+
+
 # check for PNG files for possible optimization
 function Check-PNGs{
   $ImageFiles=(Get-ChildItem -Path $path -Include *.PNG,*.BMP,*.GIF,*.TGA -Recurse)
@@ -563,6 +582,17 @@ function Add-Footer{
     }
 }
 
+# check Markdown header problems after chocolatey.org Sept. 2019 updates
+# Needs update to pass string and element to check releaseNotes as well in one function
+#function Check-Markdown{
+function Check-Markdown([string]$element,[string]$text){
+  if ($NuspecDescription -match "#\w") { # alphanumeric whitespace only (no /, [, etc)
+      Write-Host "WARNING:   ** $element - invalid Markdown heading syntax found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "           ** Required: Package Description should not contain invalid Markdown Headings."  -Foreground Cyan
+      $GLOBAL:Required++
+	  }
+}
+
 # check if package release notes are in the description
 function Check-PackageReleaseNotes{
   $NuspecDescription=$NuspecDescription.Trim()
@@ -574,19 +604,29 @@ function Check-PackageReleaseNotes{
 
 # Check package current status on chocolatey.org
 function Check-OnlineStatus{
-  $PackagePageInfo = Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID"
-  if ($PackagePageInfo -match "Package test results have failed. Follow the link for more information."){
-	  Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+$PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packages/$NuspecID" -UseBasicParsing -DisableKeepAlive).StatusCode } catch [Net.WebException]{ [int]$_.Exception.Response.StatusCode } 
+  if ($PackagePageInfo -eq '404'){
+	  Write-Host "FYI:       ** This appears to be a brand new package. Cool!" -Foreground Green
 	  $GLOBAL:FYIs++
-	 }
-  if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
-	  Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
-	  $GLOBAL:FYIs++
-	 }
-  if ($PackagePageInfo -match "submitted"){
-	  Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
-	  $GLOBAL:FYIs++
-	 }
+	  return
+	 } 
+   $PackagePageInfo = (Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID")
+   if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
+	   Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
+	   $GLOBAL:FYIs++
+	  }
+   if (($NuspecID -ne 'choco-nuspec-checker') -and ($PackagePageInfo -match "Package test results have failed. Follow the link for more information")){
+	   Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+	   $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match "<td>submitted</td>"){
+	   Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
+	   $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match "<td>waiting for maintainer</td>"){
+	   Write-Host "FYI:       ** $NuspecID may have a version waiting for corrective action." -Foreground Yellow
+	   $GLOBAL:FYIs++
+	  }
 }
 
 # Open all .nuspec URLs for viewing
@@ -944,7 +984,8 @@ if (!$NuspecDescription){
 	 if ($AddFooter) {
          $NuspecDescription=(Add-Footer)
         }
-	 Check-PackageReleaseNotes
+     Check-Markdown "<description>" $NuspecDescription
+     	 Check-PackageReleaseNotes
      if ($NuspecDescription.Length -lt 30) {
 	     Write-Warning "  ** <description> - is less than 30 characters." 
 		 Write-Host "           ** Guideline: Description should be sufficient to explain the software. Please fill in the description`n              with more information about the software. Feel free to use use markdown." -Foreground Cyan
@@ -1202,6 +1243,7 @@ if (!($NuspecReleaseNotes)) {
 	Write-Host "           ** Guideline: Release Notes (releaseNotes) are a short description of changes in each version of a package.`n              Please include releasenotes in the nuspec. NOTE: To prevent the need to continually update this field,`n              providing a URL to an external list of Release Notes is perfectly acceptable." -Foreground Cyan
 	$GLOBAL:Guidelines++
    } else {
+     Check-Markdown "<releaseNotes>" $NuspecReleaseNotes
      if ($NuspecReleaseNotes -cmatch "REPLACE"){
          Write-Host "WARNING:   ** <releaseNotes> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
@@ -1363,6 +1405,9 @@ Check-DiscouragedDownloadLinks
 # Binaries checks
 Check-Binaries
 
+# OS index files check
+Check-OSIndexFiles
+
 #PNG checks
 Check-PNGs
 
@@ -1404,10 +1449,11 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground Whi
 return
 
 # TDL
+# Check validity of URLs in description, checked by the package verifier as of 01/11/2020
+# Reformat invalid Markdown headings automagically
 # Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
 # BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
 # https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -started
-# check for &'s in links to change to &amp;
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # MAYBE redo file selection by filename instead of directory and implement a -Recurse option - medium low priority
 # MAYBE do full params statement and get rid of args checking - low priority

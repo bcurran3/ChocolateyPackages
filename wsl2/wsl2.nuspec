@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>wsl2</id>
+    <version>1.0.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl2</packageSourceUrl>
+    <title>Windows Subsystem for Linux 2 (Install)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://docs.microsoft.com/nl-nl/windows/wsl/install-win10#update-to-wsl-2</projectUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/15cb498f3d11b3687c99e98d077031ad85a62c96/icons/win10mct.png</iconUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
+    <copyright>© Microsoft</copyright>
+    <licenseUrl>https://image.freepik.com/free-icon/not-applicable_318-37305.jpg</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>microsoft wsl wsl2 windows feature</tags>
+    <summary>Installs Windows Subsystem for Linux 2</summary>
+    <description>
+---
+
+### [choco://wsl2](choco://wsl2)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+### The Windows Subsystem for Linux 2 (WSL2) is a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows, alongside your traditional Windows desktop and modern store apps.
+
+NOTE: The version is Chocolatey package related only. WSL 2 version corresponds with your Windows build version. The actual version of WSL2 will depend on your version of Windows.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl/readme.md)**
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
+    <dependencies>
+      <dependency id="wsl" version="1.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
