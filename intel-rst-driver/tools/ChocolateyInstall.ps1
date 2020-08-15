@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-rst-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://downloadmirror.intel.com/29339/eng/SetupRST.exe'
-$checksum    = '4EEA31E2987CC33D5E5A76EF7289BC495A66D9A3B0EAAE392BBE21C401D16187'
+$url         = 'https://downloadmirror.intel.com/29647/eng/SetupRST.exe'
+$checksum    = '957D8353537032E4D49A0B15FC3C1C46CFCCC6D4BB180A0BBAAE6C91BCBFE452'
 
 if ((Get-IsWin10 -eq $false) -and (Get-IsWinServer2016 -eq $false)){
    Write-Warning "  ** This version is Windows 10 and Windows Server 2016 only."
