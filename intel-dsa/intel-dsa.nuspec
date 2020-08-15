@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>20.8.30.6</version>
+    <version>20.8.30.7</version>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
