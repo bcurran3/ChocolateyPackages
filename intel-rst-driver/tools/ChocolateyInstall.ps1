@@ -21,7 +21,7 @@ $packageArgs = @{
   url            = $url
   checksum       = $checksum
   checksumType   = 'sha256'  
-  silentArgs     = '-s' 
+  silentArgs     = '-s /acceptEULA' 
   softwareName   = 'Intel(R) Rapid Storage Technology' 
   validExitCodes = @(0, 3010, 1641)
   }
