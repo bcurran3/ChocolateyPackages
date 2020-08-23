@@ -4,9 +4,9 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
 $bits           = Get-ProcessorBits
 $url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = '1EB55DAC4FF6C9A3652829B04C585E77E3E760672783C1EF5043636FFD9ADE41'
+$checksum       = '449936899A494E56B91EDB62C341066825B476C25A94BAF0685DD7B1898BCCFD'
 $url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = 'C4B12B57987492BBCD433758908D6913EB5504B2C667A7886CD18204E636F14E'
+$checksum64     = 'F39C87CA4F1CEE10921F29C1F11EA24E6E266EF075008F3485EE57321E9B2222'
 
 $packageArgs = @{
   packageName    = $packageName
