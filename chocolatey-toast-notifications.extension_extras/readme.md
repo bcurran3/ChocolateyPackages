@@ -15,7 +15,7 @@
 
 * Chocogeeky fun!
 
-###FEATURES: 
+### FEATURES: 
 * **Chocolatey Toast Notifications Extension** will display a toast notification with the package name, program name, program version, status message (installed or uninstalled), and a link to the package page on the chocolatey.org website after a program is installed or uninstalled.
 
 ### WHAT IT WON'T DO:
