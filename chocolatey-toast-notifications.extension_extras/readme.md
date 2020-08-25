@@ -21,7 +21,6 @@
 ### WHAT IT WON'T DO:
 * **Chocolatey Toast Notifications Extension** will NOT work on anything other than Windows 10, this is a limitation of the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module and its use of the [UWP Community Toolkit](https://github.com/Microsoft/WindowsCommunityToolkit). (Yes, I tried it on Windows Server 2016 and it did NOT work.)
 * **Chocolatey Toast Notifications Extension** will NOT display messages for programs that don't use standard installers, i.e. portable programs.
-* **Chocolatey Toast Notifications Extension** will NOT display messages for programs installed/uninstalled via any background processes; i.e. my **[choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup)**, **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)**, and **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)** packages... YET!
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolatey-toast-notifications.extension/readme.md)**
 
