@@ -4,11 +4,11 @@
   <metadata>
     <id>solarwinds-take-control-viewer</id>
     <title>SolarWinds Take Control Viewer (Install)</title>
-    <version>7.00.10</version>
+    <version>7.00.13</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-take-control-viewer</packageSourceUrl>
-    <projectUrl>https://www.solarwindsmsp.com/products/remote-management/remote-access</projectUrl>
+    <projectUrl>https://www.solarwindsmsp.com/products/rmm/remote-access</projectUrl>
     <docsUrl>http://help.logicnow.com/remote-management/helpcontents/index.html?take_control.htm</docsUrl>
     <tags>solarwinds solarwindsmsp remote take control support tool</tags>
     <copyright>© SolarWinds MSP</copyright>
