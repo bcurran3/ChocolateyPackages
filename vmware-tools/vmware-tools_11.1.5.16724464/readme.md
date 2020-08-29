@@ -2,6 +2,7 @@
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
 * "REBOOT=R" argument implemented supress reboots.
+* "ADDLOCAL=ALL" argument implemented complete install.
 * I personally use and endorse this program.
 
 ***
