@@ -14,7 +14,7 @@ $packageArgs = @{
   url            = $url
   url64bit       = $url64
   validExitCodes = @(0)
-  silentArgs     = '/S /v /qn REBOOT=R'
+  silentArgs     = '/S /v /qn REBOOT=R ADDLOCAL=ALL'
   softwareName   = 'VMware Tools'
   checksum       = $checksum 
   checksumType   = 'sha256' 
