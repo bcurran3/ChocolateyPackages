@@ -4,15 +4,15 @@
   <metadata>
     <id>solarwinds-backup-manager</id>
     <title>SolarWinds Backup Manager (Install)</title>
-    <version>20.5.0.20125</version>
+    <version>20.7.0.20181</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-backup-manager</packageSourceUrl>
-    <projectUrl>https://www.solarwindsmsp.com/products/remote-management/backup-and-recovery</projectUrl>
+    <projectUrl>https://solarwindsmsp.com/products/remote-management/backup-and-recovery</projectUrl>
     <docsUrl>http://help.solarwinds.com/backup/documentation/Content/backup-manager/backup-manager-installation/ui-installer.htm</docsUrl>
     <tags>solarwinds solarwindsmsp msp backup manager</tags>
     <copyright>© SolarWinds MSP</copyright>
-    <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <licenseUrl>https://solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-backup-manager/solarwinds-backup-manager_icon.png</iconUrl>
     <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>

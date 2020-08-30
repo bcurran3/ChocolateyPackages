@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>3.1.2</version>
+    <version>3.1.3</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update (Install)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=ckwj2</projectUrl>
-	<docsUrl>https://www.dell.com/support/manuals/us/en/19/dell-update/dellupdate_3.1_ug/dell-update?guid=guid-3527787d-8c0c-4306-ba9f-0e258caf9faa</docsUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=5P2R9</projectUrl>
+	<docsUrl>https://www.dell.com/support/home/en-us/product-support/product/command-update/docs</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
     <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/legal_terms-conditions_dellgrmwebpage/art-software-license-agreements</licenseUrl>
@@ -23,7 +23,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-This package provides the Dell Update Application and is supported on Inspiron, Vostro, XPS and Alienware Windows 10, &gt; = RS1+ (build 14393) systems.
+This package provides the Dell Command | Update Application and is supported on Inspiron, Vostro, XPS and Alienware Windows systems.
+
+This version of Dell Command Update (DCU) now includes a Command Line Interface. DCU 2.X is upgradable to this version.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     
@@ -33,9 +35,8 @@ This package provides the Dell Update Application and is supported on Inspiron, 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 
 ---
-
-
 </description>
+<releaseNotes>https://topics-cdn.dell.com/pdf/command-update_release-notes_en-us.pdf</releaseNotes>
     <dependencies>
       <dependency id="DotNet4.6.1" version="4.6.1" />
     </dependencies>

@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = '8gadgetpack'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://8gadgetpack.net/dl-280/8GadgetPackSetup.msi'
-$checksum       = 'B262D8A5F727EBEC72BA68C7D3E86B2310B42F674E222B1D5A5E57CFA9062618'
+$url            = 'https://8gadgetpack.net/dl_330/8GadgetPackSetup.msi'
+$checksum       = '04b45032bebfca4d6a3e7d4082e9871e8d7432950a05ee1a087f75959e428473'
 
 $packageArgs = @{
   packageName   = $packageName
