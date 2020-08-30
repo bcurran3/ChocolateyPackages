@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8gadgetpack</id>
-    <version>28.0</version>
+    <version>33.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8gadgetpack</packageSourceUrl>
     <title>8GadgetPack (Install)</title>
@@ -20,18 +20,18 @@
     <description>
 ---
 
-###[choco://8gadgetpack](choco://8gadgetpack)
+### [choco://8gadgetpack](choco://8gadgetpack)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 ![Screenshot of 9GadgetPack](http://8gadgetpack.net/Screen8GP.jpg)
 
-###About 8GadgetPack
+### About 8GadgetPack
 
 8GadgetPack makes it possible to use gadgets on Windows 10 / 8.1 / 8.
 
-###FAQ
+### FAQ
 Is it free?
 Yes, completely
 

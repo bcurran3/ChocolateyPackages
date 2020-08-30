@@ -1,21 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-automation-manager</id>
     <title>SolarWinds Automation Manager (Install)</title>
-    <version>2.4.0.43</version>
+    <version>2.15.1.1</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-automation-manager</packageSourceUrl>		
-    <projectUrl>https://www.solarwindsmsp.com/products/n-central/automation</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-automation-manager</packageSourceUrl>
+    <projectUrl>https://solarwindsmsp.com/products/n-central/automation</projectUrl>
     <docsUrl>http://help.logicnow.com/remote-management/helpcontents/index.html?script_builder.htm</docsUrl>
     <tags>solarwinds solarwindsmsp msp automation manager</tags>
     <copyright>© SolarWinds MSP</copyright>
-    <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <licenseUrl>https://solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-automation-manager/solarwinds-automation-manager_icon.png</iconUrl>
-	<mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Get More Done with Automation without Learning a New Scripting Language</summary>
     <description>
 ***
@@ -25,27 +25,27 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of Automation Manager](https://www.solarwindsmsp.com/sites/solarwindsmsp/files/2017-09/ncentral-automation-manager.jpg)	
 
-###Get More Done with Automation without Learning a New Scripting Language
+### Get More Done with Automation without Learning a New Scripting Language
 
 As an IT service provider, you know the dramatic difference that automation can make for your business. Yet, many IT service management software platforms offer the bare minimum when it comes to automation and often require you to learn complex scripting languages.
 
 Automation Manager from SolarWinds MSP gives you the power to go beyond simple automation, allowing you to create processes for nearly everything. With our drag-and-drop editor, you can set up sophisticated automated tasks without having to learn complicated scripting languages or proprietary code. With over 100 common tasks ready to go out of the box and more than 600 elements to choose from when building your tasks, it helps make it easier to take on more clients, service larger and more complex environments, and scale your business fast. Whether you want to speed up the onboarding process for new clients or create automatic remediation steps in case a check fails, SolarWinds N-central® Automation Manager has you covered.
 
-###Boost Effectiveness
+### Boost Effectiveness
 
 * Helps efficiency: Complete lower-level repetitive tasks on autopilot, freeing technicians to take on more work or focus on higher-value activities.
 * Self-healing: Set up automatic fixes for problem scenarios such as an application failing. This allows you to fix problems quickly, often before customers know about them.
 * Detailed reporting: View detailed reports on automated steps taken by the system. For example, if the system fixes a server outage, the reports help you uncover the failure's root cause.
 * Automated onboarding: Create tasks to automatically set up and configure new endpoints, servers, or other devices on customers’ networks.
 
-###Customize Nearly Anything
+### Customize Nearly Anything
 
 * Drag and drop: Automate tasks using our drag-and-drop editor. This feature allows team members, even those with little or no coding experience, to create sophisticated automation scripts without writing any code.
 * Prewritten policies: Select from over 100 prewritten automated tasks to run out of the box. Additionally, you can use these prewritten policies as a basis for creating new, tailored automated policies.
 * Integration with other scripting languages: Import your own PowerShell, Visual Basic, and Bash scripts if you prefer to write your own code.
 * Complete control: Create and apply complex automation rules to a group of devices with just a few clicks, helping to save you time and allowing you to deliver complex services with less effort.
 
-###Sample Automation Tasks
+### Sample Automation Tasks
 
 * Discovering and importing new devices
 * Configuring monitoring and notifications
@@ -67,8 +67,8 @@ And this is just a short sample.
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
-	<releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
-      </metadata>
+    <releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>

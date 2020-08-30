@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'dell-update' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://dl.dell.com/FOLDER06240517M/1/Dell-Update-Application_CKWJ2_WIN_3.1.2_A00.EXE'
-$checksum    = '2A4913ABE6A2BA36168B96BDFC636A15438F5D1E7B1665FB580A57D02D342BAD'
+$url         = 'https://dl.dell.com/FOLDER06445000M/1/Dell-Command-Update_5P2R9_WIN_3.1.3_A00.EXE'
+$checksum    = 'B4538B52DB52F7F7AC7A7C0FDA602EBD374DF6AF8EA15A592E7866C3F5EF5A06'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -11,9 +11,9 @@ $packageArgs = @{
   url           = $url
   checksum      = $checksum
   checksumType  = 'sha256'
-  silentArgs    = '/s /l="c:\test\DUPlog.txt"'
+  silentArgs    = '/s /f'
   validExitCodes= @(0,2)
-  softwareName  = 'Dell Update for Windows 10' 
+  softwareName  = 'Dell Update' 
 }
 
 Install-ChocolateyPackage @packageArgs
