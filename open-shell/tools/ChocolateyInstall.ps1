@@ -1,11 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
-$url = "$toolsDir\OpenShellSetup_4_4_142.exe"
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'EXE'
-  file           = $url
+  file           = "$toolsDir\OpenShellSetup_4_4_152.exe"
   softwareName   = 'Open-Shell'
   silentArgs     = '/passive'
   validExitCodes = @(0)
@@ -13,4 +12,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item $url -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\*.exe" -Force -EA SilentlyContinue | Out-Null
