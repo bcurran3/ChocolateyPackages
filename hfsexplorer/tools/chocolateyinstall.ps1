@@ -7,7 +7,7 @@ $packageArgs = @{
   fileType      = 'EXE'
   file          = "$toolsDir\hfsexplorer-0.23.1-setup.exe"
   silentArgs    = '/S'
-  softwareName  = 'HFSExplorer*'
+  softwareName  = 'HFSExplorer 0.23.1'
   }
   
 Install-ChocolateyInstallPackage @packageArgs
