@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>warzone2100</id>
-    <version>3.2.3.020190213</version>
+    <version>3.4.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/warzone2100</packageSourceUrl>
     <title>Warzone 2100 (Install)</title>
