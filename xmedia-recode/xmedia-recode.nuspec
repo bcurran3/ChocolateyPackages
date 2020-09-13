@@ -3,14 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xmedia-recode</id>
-    <version>3.5.1.6</version>
+    <version>3.5.1.7</version>
     <title>XMedia Recode (Install)</title>
     <authors>Sebastian Dörfler</authors>
     <copyright>Copyright © Sebastian Dörfler</copyright>
     <owners>angga, bcurran3</owners>
     <projectUrl>https://www.xmedia-recode.de/en/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/xmedia-recode/xmedia-recode_icon.png</iconUrl>
-    <bugTrackerUrl>https://www.xmedia-recode.de/en/impressum.php</bugTrackerUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/xmedia-recode</packageSourceUrl>
     <docsUrl>https://www.xmedia-recode.de/en/help/</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
