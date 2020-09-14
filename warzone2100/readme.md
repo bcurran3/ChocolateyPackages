@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* This program is GNU licensed. I plan toinclude the binary in the future to make these packages "forever packages."
 
 ***
 
