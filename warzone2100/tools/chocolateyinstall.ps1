@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'warzone2100'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://downloads.sourceforge.net/project/warzone2100/archives/unsupported/Warzone2100-3.2/3.2.3/warzone2100-3.2.3.exe' 
-$checksum       = 'D32F78545C63767D6E51D2A3BFA2C8BB46BF3238284B0471F8F939950EBF98D1'
+$url            = 'https://downloads.sourceforge.net/project/warzone2100/releases/3.4.1/warzone2100_win_x86_installer.exe' 
+$checksum       = '379E7016AE282ACE7D672BE87C1AB447135E254BF00B0C71E979F64D8BEDFFAD'
 
 $packageArgs = @{
   packageName    = $packageName
