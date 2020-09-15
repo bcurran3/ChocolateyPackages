@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xmedia-recode</id>
-    <version>3.5.1.7</version>
+    <version>3.5.1.8</version>
     <title>XMedia Recode (Install)</title>
     <authors>Sebastian Dörfler</authors>
     <copyright>Copyright © Sebastian Dörfler</copyright>
@@ -69,7 +69,7 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
 </description>
     <summary>XMedia Recode is a free All-In-One video converter and audio converter tool</summary>
     <releaseNotes>https://www.xmedia-recode.de/en/version.html</releaseNotes>
-    <tags>sdorfler dvd-ripper video-converter audio-converter binary</tags>
+    <tags>sdorfler dvd-ripper video-converter audio-converter binary embedded</tags>
     <dependencies>
       <dependency id="vcredist140" version="14.27.29016.0" />
     </dependencies>
