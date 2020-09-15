@@ -17,7 +17,7 @@
     <docsUrl>http://betaguide.wz2100.net/</docsUrl>
     <mailingListUrl>http://forums.wz2100.net/</mailingListUrl>
     <bugTrackerUrl>http://developer.wz2100.net/wiki/BugReporting</bugTrackerUrl>
-    <tags>warzone warzone2100 rts game crossplatform</tags>
+    <tags>warzone warzone2100 rts game crossplatform embedded binary</tags>
     <summary>Warzone 2100 - RTS game with the theme of Strategy by Design</summary>
     <description>
 ---
