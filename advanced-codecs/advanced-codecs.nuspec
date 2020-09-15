@@ -4,11 +4,11 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>13.9.5</version>
+    <version>13.9.7</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
-    <summary>ADVANCED Codecs for Windows 10/8.1/7 is an audio and video codec package which contains a full suite of codecs.</summary>
+    <summary>ADVANCED Codecs for Windows 10/8.1/7 is an audio and video codec package which contains a full suite of all the best codecs available.</summary>
     <description>
 ---
 
@@ -67,8 +67,9 @@ Things the Shark pack does that other packs cannot do . . .
 </description>
     <projectUrl>http://shark007.net/advanced.html</projectUrl>
     <docsUrl>http://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
+	<releaseNotes>(unofficial) https://www.videohelp.com/software/Win7codecs/version-history</releaseNotes>
     <mailingListUrl>http://shark007.net/forum/</mailingListUrl>
-    <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m notsilent</tags>
+    <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m binary embedded notsilent</tags>
     <licenseUrl>http://shark007.net/disclaimer.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl>
