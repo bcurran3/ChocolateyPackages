@@ -2,9 +2,9 @@
 $packageName = 'google-backup-and-sync' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://dl.google.com/drive/gsync_enterprise.msi'
-$checksum    = 'ECC306B50E37F90856AE041C84705E2C582FB5C634A614F2BEEAB7ABE97BDC00'
+$checksum    = 'FB5A3205F4D5D5243FDB16104C707521DC1BD8C36195575BAB61A64085DA8F67'
 $url64       = 'https://dl.google.com/drive/gsync_enterprise64.msi'
-$checksum64  = 'A3804311E55503EC75AA5FC76489C7C164DDA4E8C9BC61BA428D3CF266CC4C7F'
+$checksum64  = '8C723ED84CF0B8EF69B041943D742F84C59710F524AF76919EE279ABDA795BB8'
 
 $packageArgs = @{
   packageName    = $packageName
