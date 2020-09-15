@@ -45,4 +45,4 @@ function global:au_GetLatest {
   return $result
 }
 
-Update-Package -nocheckchocoversion
+Update-Package
