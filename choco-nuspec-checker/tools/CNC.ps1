@@ -1466,7 +1466,12 @@ if ($UpdateScripts) {
 
 $ENV:ChocolateyPackageVersion=''
 
+if ($recurse) {
+    #leave space between output if recursing
+    Write-Host "`n" 
 }
+
+}#main recurse foreach loop ends here 
 
 Write-Host "`nFound CNC.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
