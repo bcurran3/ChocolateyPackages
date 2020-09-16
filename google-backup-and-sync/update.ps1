@@ -3,7 +3,7 @@
 Import-Module AU
 Import-Module MSI
 Import-Module "$env:ChocolateyInstall/helpers/chocolateyInstaller.psm1"
-. ".\scripts\Update-OnETagChanged.ps1"
+. "..\scripts\Update-OnETagChanged.ps1"
 
 #declare the URLs globally, because they do not change between versions
 $url32 = 'https://dl.google.com/drive/gsync_enterprise.msi'
