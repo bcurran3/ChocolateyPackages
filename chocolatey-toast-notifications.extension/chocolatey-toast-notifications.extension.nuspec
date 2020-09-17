@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-toast-notifications.extension</id>
-    <version>0.0.3.1</version>
+    <version>0.0.4-pre</version>
     <title>Chocolatey Toast Notifications Extension</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -36,6 +36,7 @@
     <summary>Chocolatey Toast Notifications Extension is a Chocolatey extension that displays a toast notification after installing or uninstalling a program.</summary>
     <releaseNotes>
 ### CHANGE LOG:
+* 0.0.4 - Toasts now always broadcast to all logged in users. The WinRM service must be running for this to work.
 * 0.0.3.1 - bug fix for background tasks sending foreground notifications
 * 0.0.3 - Notifications will now display in the foreground when sent from a background task using the system account.
 * 0.0.2 - baked in compatibility with [chocolatey-preinstaller-checks.extension](https://chocolatey.org/packages/chocolatey-preinstaller-checks.extension) if installed, added win10 dependency
@@ -44,7 +45,7 @@
 ### ROADMAP:
 * Possibly make it Windows 8 compatible after packaging up an old version of [BurntToast](https://github.com/Windos/BurntToast)
 * Possibly make it Windows Server 2016 compatible.
-* Attempt to make it work with PORTABLE packages as well.</releaseNotes>
+* Attempt to make it work with PORTABLE packages as well. (Most likely impossible.)</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco toast notifications extension</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectSourceUrl>
