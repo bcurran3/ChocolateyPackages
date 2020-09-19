@@ -16,6 +16,7 @@
 Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
 ###CHANGELOG:
+* 0.0.2.2 - only load chocolatey-core extension if it's actully installed
 * 0.0.2.1 - minor cosmetic and help improvements
 * 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
 * 0.0.1 - initial release.
