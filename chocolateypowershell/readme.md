@@ -9,11 +9,11 @@
 ### Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.	
 	
 ### WHO IS THIS FOR?
- **chocolateypowershell** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run ChocolateyPowerShell and test away! 
+ **ChocolateyPowerShell** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions' functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run **ChocolateyPowerShell** and test away! 
 
 
 ### INSTRUCTIONS:
-Just click the ChocolateyPowerShell icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
+Just click the **ChocolateyPowerShell** icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
 ### CHANGELOG:
 * 0.0.2.2 - remove forceful load of chocolatey-core extension (it'll load automatically with any other extensions)
