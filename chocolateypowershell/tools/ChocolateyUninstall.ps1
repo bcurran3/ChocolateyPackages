@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop'
+﻿# ChocolateyPowerShell v0.0.2.2 (09-18-2020) Copyleft 2018-2020 by Bill Curran AKA BCURRAN3
+$ErrorActionPreference = 'Stop'
 $packageName  = 'chocolateypowershell' 
 $shortcutName = 'ChocolateyPowerShell.lnk'
 
