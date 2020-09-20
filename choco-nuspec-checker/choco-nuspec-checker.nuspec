@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2020.04.06.0001</version>
+    <version>2020.09.15</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -53,6 +53,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <releaseNotes>
 ### CHANGELOG:
+* 2020.09.15 - CNC will now ignore update.ps1 files.
 * 2020.04.06.0001 - Updated CNC.cmd for ChocolateyToolsLocation handling. Fixed markdown heading error in CNCHeader.txt.
 * 2020.04.06 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)
 * 2020.01.16 - Updated message related to Markdown heading issues (now a requirement to fix), added Operating System index files checking, added verification that $env:ChocolateyToolsLocation exists (variable, not location)
@@ -78,7 +79,22 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * 2019.01.07 - added help, added option to open and view all URLs in your default browser, added options to view, edit, and add "standard" (template) headers and footers to the description (can't save yet), added reporting of standard header and footer if found, added more verifier messages, added checking for descriptions that are too large (&gt;4,000), now checks for license files other than LICENSE.txt, probably more I don't remember :)
 * 2019.01.04 - implemented included binary files checking and messages, laid out the groundwork for the future enhancements
 * 2019.01.03 - fixed some URL checking handling that could cause PS errors, updated list of CDN recommendations, added checking for RawGit URLs in description, cosmetic updates
-* 2018.12.22-2018-12.28 - initial release</releaseNotes>
+* 2018.12.22-2018-12.28 - initial release
+
+### ROADMAP:
+* native recurse option
+* Check validity of URLs in description, checked by the package verifier as of 01/11/2020
+* Reformat invalid Markdown headings automagically
+* Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
+* https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -started
+* option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
+* MAYBE do full params statement and get rid of args checking - low priority
+* MAYBE check http links to see if https links are available and report if so - low priority
+* MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
+* https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
+* add packaging tips/tweaks/etc
+* What else? (PRs accepted)
+    </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 cnc choco unofficial nuspec checker validator script chocolateasy</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</projectSourceUrl>

@@ -4,7 +4,7 @@
   <metadata>
     <id>allway-sync</id>
     <title>allway-sync (Install)</title>
-    <version>19.1.5</version>
+    <version>20.0.5</version>
     <authors>Botkind, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/allway-sync</packageSourceUrl>
@@ -21,16 +21,18 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 Allway Sync uses innovative synchronization algorithms to synchronize your data between desktop PCs, laptops, USB drives, remote FTP/SFTP and WebDAV servers, various online data storages and more. Data compression and encryption are supported. It combines bulletproof reliability with extremely easy-to-use interface. Allway Sync also can synchronize your PC data with a Mac via Sync Gateway.
 
 **SOCIAL MEDIA:**
-[Facebook](https://www.facebook.com/AllwaySync)
+[Facebook](https://www.facebook.com/AllwaySync) [Twitter](https://twitter.com/allwaysync)
 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/allway-sync/readme.md)**
-
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
     
-</description>
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+    </description>
     <projectUrl>http://allwaysync.com/</projectUrl>
     <docsUrl>http://allwaysync.com/support/faq</docsUrl>
     <mailingListUrl>http://allwaysync.com/support/</mailingListUrl>
@@ -41,9 +43,6 @@ Allway Sync uses innovative synchronization algorithms to synchronize your data 
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://allwaysync.com/themes/allwaysync/img/logo.png</iconUrl>
     <releaseNotes>https://allwaysync.com/news</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

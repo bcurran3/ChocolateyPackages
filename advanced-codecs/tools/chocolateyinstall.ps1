@@ -4,14 +4,13 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe         = 'AutoHotKey'
 $ahkFile        = "$toolsDir\advanced-codecs_install.ahk"
 $TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
-$url            = "$toolsDir\ADVANCED_Codecs_v"+$TodaysVersion+".exe"
 
 $packageArgs = @{
   packageName    = 'advanced-codecs'
-  softwareName   = 'Shark007 ADVANCED Codecs*'
+  softwareName   = 'Shark007 ADVANCED*'
   fileType       = 'EXE'
   silentArgs     = '/S /v/qn'
-  file           = $url
+  file           = "$toolsDir\ADVANCED_Codecs_v"+$TodaysVersion+".exe"
   validExitCodes = @(0, 3010, 1641)
   }
   

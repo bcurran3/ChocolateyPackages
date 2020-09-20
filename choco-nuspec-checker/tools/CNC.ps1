@@ -10,7 +10,7 @@ param (
     [string]$path=(Get-Location).path
  )
 
-Write-Host "CNC.ps1 v2020.04.06 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2020.09.15 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -745,7 +745,8 @@ Function Update-nuspec{
 
 # checks PowerShell scripts for $ErrorActionPreference statement
 function Check-PS1EAP($ScriptFile){
-    $CheckEAP=Get-Content $ScriptFile -First 5
+  if ($scriptFile -match "UPDATE.PS1") {return}
+  $CheckEAP=Get-Content $ScriptFile -First 5
   if ($checkEAP -match '\$ErrorActionPreference') {
       return $True
      } else {
@@ -764,6 +765,7 @@ function Check-PS1EAP($ScriptFile){
 
 # Add EAP statement to top of PowerShell script
 function Add-PS1EAP($ScriptFile){
+  if ($scriptFile -match "UPDATE.PS1") {return}
   if ($UpdateScripts -and !$WhatIf){
       if ($MakeBackups){Copy-Item "$ScriptFile" "$ScriptFile.CNC.bak" -Force}
       $header = "`$ErrorActionPreference = 'Stop'"
@@ -776,6 +778,7 @@ function Add-PS1EAP($ScriptFile){
 
 # Re-write PS script as UTF-8 w/BOM
 function Update-PS1($ScriptFile){
+  if ($scriptFile -match "UPDATE.PS1") {return}
   if ($UpdateScripts -and !$WhatIf){
       if ($MakeBackups){Copy-Item "$ScriptFile" "$ScriptFile.CNC.bak" -Force}
 #	  Write-Host "           ** $ScriptFile - will be converted to UTF-8 w/ BOM and saved." -Foreground Green
@@ -1357,6 +1360,7 @@ write-host "FOREACH = $_" -foreground red -background white
           $PS1Encoding=Get-FileEncoding $_
 		  if ($PS1Encoding -ne 'UTF-8 w/ BOM'){
 		      if (!$UpdateScripts){
+			  if ($scriptFile -match "UPDATE.PS1") {return}
 		          Write-Warning "  ** $ScriptFile - is encoded using $PS1Encoding."
 			      Write-Host "           ** PowerShell scripts need to be saved in UTF–8 with BOM." -Foreground Cyan
 		          Write-Host "           ** Suggestion: Consider running CNC -UpdateScripts to re-write $ScriptFile to UTF-8 w/ BOM." -Foreground Cyan

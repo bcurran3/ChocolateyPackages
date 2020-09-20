@@ -2,14 +2,14 @@
 $packageName    = 'irfanviewplugins'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
-$url            = "$toolsDir\iview"+$TodaysVersion+"_plugins_setup.exe"
-$url64          = "$toolsDir\iview"+$TodaysVersion+"_plugins_x64_setup.exe"
 					  
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
-  file           = $url
-  file64         = $url64
+#  file           = "$toolsDir\iview"+$TodaysVersion+"a_plugins_setup.exe"
+#  file64         = "$toolsDir\iview"+$TodaysVersion+"_plugins_x64_setup.exe"
+  file           = "$toolsDir\iview454a_plugins_setup.exe"
+  file64         = "$toolsDir\iview454_plugins_x64_setup.exe"
   validExitCodes = @(0)
   silentArgs     = '/silent'
   softwareName   = ''
@@ -17,5 +17,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs  
 
-Remove-Item $url -EA SilentlyContinue | Out-Null
-Remove-Item $url64 -EA SilentlyContinue | Out-Null
+Remove-Item "toolsDir\*.exe" -EA SilentlyContinue | Out-Null

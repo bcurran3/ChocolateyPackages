@@ -1,0 +1,8 @@
+﻿============================== Warzone 2100 ==============================
+
+bcurran3 downloads and packages the included .EXE for Warzone 2100 from the developer's website. 
+
+The direct download link can be found at:
+https://github.com/Warzone2100/warzone2100/releases
+
+============================== Warzone 2100 ==============================

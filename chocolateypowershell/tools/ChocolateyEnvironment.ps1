@@ -1,4 +1,5 @@
-﻿# SUGGESTION: Manually edit the ChocolateyPowerShell icon properties' Colors tab Selected Color Values to rgb(84,42,12) or rgb(160,85,45) for a unique Chocolatey brown background.
+﻿# ChocolateyPowerShell v0.0.2.2 (09-18-2020) Copyleft 2018-2020 by Bill Curran AKA BCURRAN3
+# SUGGESTION: Manually edit the ChocolateyPowerShell icon properties' Colors tab Selected Color Values to rgb(84,42,12) or rgb(160,85,45) for a unique Chocolatey brown background.
 
 function global:CPSHelpersWeb {start 'https://chocolatey.org/docs/helpers-reference'}
 
@@ -17,8 +18,6 @@ function global:CPSHelp{
 Set-Location $env:ChocolateyInstall\helpers
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 Import-Module $env:ChocolateyInstall\helpers\chocolateyInstaller.psm1
-Set-Location $env:ChocolateyInstall\extensions\chocolatey-core
-Import-Module $env:ChocolateyInstall\extensions\chocolatey-core\chocolatey-core.psm1
 Set-Location $env:SystemDrive\
 Write-Host 'Welcome to ChocolateyPowerShell! - Chocolatey functions and extensions are now loaded.' -ForeGround cyan
 Write-Host 'Type ' -ForeGround white -NoNewLine

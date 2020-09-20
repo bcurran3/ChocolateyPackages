@@ -1,18 +1,15 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'warzone2100'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://downloads.sourceforge.net/project/warzone2100/archives/unsupported/Warzone2100-3.2/3.2.3/warzone2100-3.2.3.exe' 
-$checksum       = 'D32F78545C63767D6E51D2A3BFA2C8BB46BF3238284B0471F8F939950EBF98D1'
+﻿# https://sourceforge.net/projects/warzone2100/files/latest/download
+$ErrorActionPreference = 'Stop'
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  packageName    = $packageName
-  fileType       = 'EXE'
-  url            = $url
-  validExitCodes = @(0)
-  silentArgs     = '/S'
-  softwareName   = 'Warzone 2100*'
-  checksum       = $checksum 
-  checksumType   = 'sha256' 
-}
-
-Install-ChocolateyPackage @packageArgs  
+  packageName  = 'warzone2100'
+  fileType     = 'EXE'
+  file         = "$toolsDir\warzone2100_win_x86_installer"
+  silentArgs   = '/S'
+  softwareName = 'Warzone 2100*'
+  }
+  
+Install-ChocolateyInstallPackage @packageArgs
+Remove-Item $toolsDir\*.exe -Force | Out-Null
+Remove-Item $toolsDir\*.ignore -Force | Out-Null
