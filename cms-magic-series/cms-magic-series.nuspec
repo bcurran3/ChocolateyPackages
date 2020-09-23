@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>cms-magic-series</id>
+    <version>2.5.2.2069</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/cms-magic-series</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>CMS (Central Management System) for MAGIC Series DVRs (Install)</title>
+    <authors>Unknown/Unbranded</authors>
+    <projectUrl>http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/CMS/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/cms-magic-series/cms-magic-series_icon.png</iconUrl>
+    <docsUrl>http://download.eyemaxdvr.com/XVST%20MAGIC%20SERIES/MANUAL/CMS_ENG_1050_01.pdf</docsUrl>
+    <tags>cms central management system cctv magic dvr</tags>
+    <summary>CMS is a remote viewing program for MAGIC Series DVRs.</summary>
+    <description>
+---
+
+### [choco://cms-magic-series](choco://cms-magic-series)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of CMS](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/cms-magic-series/cms-magic-series_screenshot.png)
+
+	
+The Windows Central Management Software for [MAGIC Series](http://www.magicdvr.com/) DVRs allows users to connect to and view security cameras from multiple DVR locations from a central client application. The software lets the user configure groups of connections, then picks and choose which cameras should be displayed.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/cms-magic-series/readme.md)**
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.4" />
+#      <dependency id="KB2919355" version="1.0.20160915" />
+      <dependency id="vcredist140" version="14.26" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
