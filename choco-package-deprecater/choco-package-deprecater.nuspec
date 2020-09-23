@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-package-deprecater</id>
+    <version>2019.09.03</version>
+    <title>(unofficial) Chocolatey Package Deprecater/Retirer (Script)</title>
+    <authors>Bill Curran</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-deprecater</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>---
+###[choco://choco-package-deprecater](choco://choco-package-deprecater)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of (unofficial) Chocolatey Package Deprecater/Retirer (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-deprecater/choco-package-deprecater_screenshot.png)
+
+##**choco-package-deprecater** (**CDEPRECATE**) is a PowerShell script I designed for Chocolatey package maintainers/creators to easily deprecate or retire a package. Probably not something you have to do often but **CDEPRECATE** will save you the time of having to look up what you need to do to your .nuspec file.
+
+###FEATURES:
+* **CDEPRECATE** rewrites a .nuspec file modifying it ready for deprecation or retirement.
+* **CDEPRECATE** backups up your original .nuspec file, always!
+* **CDEPRECATE** will create the necessary chocolateyInstall.ps1 for retired packages.
+* **CDEPRECATE** can add a "cute" iconUrl.
+
+###Helps make packaging Chocolateasy!
+
+###INSTRUCTIONS:
+* **CDEPRECATE -help** for help with options and switches
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-deprecater/readme.md)**
+
+**If you find choco-package-deprecater useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**</description>
+    <summary>(unofficial) Chocolatey Package Deprecater/Retirer rewrites a .nuspec file modifying it for deprecation or retirement.</summary>
+    <releaseNotes>###CHANGELOG:
+* 2019.09.03 - initial release. Does most of what's needed. Finishing touches and improvements to come. MIWMIP - "Make it work. Make it pretty."</releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 cdeprecate choco unofficial package deprecate retire script chocolateasy</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-deprecater</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-deprecater</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

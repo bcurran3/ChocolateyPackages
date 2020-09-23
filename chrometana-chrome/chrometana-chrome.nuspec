@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chrometana-chrome</id>
+    <version>2.0.1</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chrometana-chrome</packageSourceUrl>	
+    <title>Chrometana for Chrome</title>
+    <authors>Theo</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/wLhNKizfdoUs6TrxossCXLGW8oCAPMB7LbjKINu0Baqp3HaO6XUK0xWU5rx4rayWO-XjkFjgjto=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Chrometana lets your redirect Bing to the search engine of your choice.</summary>	
+    <description>
+###Redirect all Bing (and therefore Cortana) searches to a search engine of your choice!
+
+Recommended by Engadget, CNET, Gizmodo, IBTimes, WIndowsClub and more!
+
+"This handy Chrome extension thwarts Microsoft's attempt to make Bing a thing." - CNET
+
+Bing is an unfortunate thing. Defeat it with Chrometana, allowing for all Bing search requests to redirect to a search engine of your choice. Currently supports Google, Yahoo, and DuckDuckGo redirects for all Bing searches, even Cortana ones! Make sure you're using Chrome as your default browser for this to work properly.
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chrometana-chrome/readme.md)**	
+	</description>
+    <tags>chrometana redirect bing chrome extension</tags>
+	<releaseNotes>http://chrometana.theo.li/</releaseNotes>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

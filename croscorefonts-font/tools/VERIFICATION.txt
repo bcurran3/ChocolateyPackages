@@ -1,0 +1,5 @@
+﻿==================== Croscore Fonts ====================
+
+bcurran3 downloaded, unzipped, and packaged the Croscore fonts from https://gsdview.appspot.com/chromeos-localmirror/distfiles/croscorefonts-1.31.0.tar.bz2
+
+==================== Croscore Fonts ====================

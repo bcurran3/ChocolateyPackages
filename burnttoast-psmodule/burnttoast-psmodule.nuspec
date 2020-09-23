@@ -14,7 +14,7 @@
     <copyright>Copyright (c) Joshua King</copyright>
     <docsUrl>https://cdn.rawgit.com/Windos/BurntToast/52453f7a/README.md</docsUrl>
     <bugTrackerUrl>https://github.com/Windos/BurntToast/issues</bugTrackerUrl>
-    <licenseUrl>https://cdn.rawgit.com/Windos/BurntToast/master/LICENSE</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/Windos/BurntToast/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>jking burnttoast toast notifications windows10 utilities powershell</tags>
     <summary>Module for creating and displaying Toast Notifications on Microsoft Windows 10.</summary>
