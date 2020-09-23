@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>shadowexplorer</id>
+    <version>0.9.462</version>
+    <owners>bcurran3</owners>
+    <title>ShadowExplorer (Install)</title>
+    <authors>ShadowExplorer.com</authors>
+    <projectUrl>http://www.shadowexplorer.com/</projectUrl>
+    <iconUrl>http://www.shadowexplorer.com/uploads/images/manual/manual_1.png</iconUrl>
+    <copyright>© Copyright 2007-2016 - ShadowExplorer.com</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.shadowexplorer.com/documentation/manual.html</docsUrl>
+    <bugTrackerUrl>http://www.shadowexplorer.com/downloads.html</bugTrackerUrl>
+    <tags>shadowexplorer admin</tags>
+    <summary>ShadowExplorer allows you to browse the Shadow Copies created by the Windows Vista / 7 / 8 Volume Shadow Copy Service. </summary>
+    <description>
+![Screenshot of ShadowExplorer] (http://www.shadowexplorer.com/uploads/images/manual/manual_4.png)
+
+###About
+
+ShadowExplorer allows you to browse the Shadow Copies created by the Windows Vista / 7 / 8 Volume Shadow Copy Service. It's especially thought for users of the home editions, who don't have access to the shadow copies by default, but it's also useful for users of the other editions.
+
+###Shadow Copy
+From time to time, Windows Vista / 7 / 8 creates point-in-time copies of your files. This allows you to retrieve older versions from files you accidentally deleted or altered. This service is turned on by default on all versions of Windows Vista/7, but Microsoft grants access to these copies only in Ultimate, Business, and Enterprise editions. This is where ShadowExplorer comes into play. For more information on Shadow Copy, visit Microsofts website.
+
+###ShadowExplorer
+Since the Volume Shadow Copy Service is included, and turned on by default, in all editions of Windows Vista / 7 / 8, why not take advantage of it? All it takes is an additional tool like ShadowExplorer, that can access the shadow storage and make the point-in-time copies accessible to the user.
+
+###Features
+* Show available point-in-time copies
+* Browse through Shadow Copies
+* Retrieve versions of files and folders
+
+###Limitations
+Shadow Copies and ShadowExplorer are in no way a replacement for regular backups! This is very important and can't be stressed enough. A Shadow Copy is kept on the same disc as the original data. In case of a disc failure all data is lost, including the Shadow Copies. ShadowExplorer is a good addition to regular backups, but not a replacement.
+	</description>
+	<dependencies>
+      <dependency id="dotnet3.5" version="" />	
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

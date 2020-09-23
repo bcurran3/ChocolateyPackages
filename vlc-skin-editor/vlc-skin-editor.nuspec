@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vlc-skin-editor</id>
+    <version>0.8.5</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vlc-skin-editor</packageSourceUrl>		
+    <owners>bcurran3</owners>
+    <title>VLC media player Skin Editor (Portable)</title>
+    <authors>VideoLAN Organization</authors>
+    <projectUrl>https://www.videolan.org/vlc/skineditor.html</projectUrl>
+    <iconUrl>https://rawgit.com/chocolatey/chocolatey-coreteampackages/3952380efd0776bea6d964ed4e28efa979b434d2/icons/vlc.png</iconUrl>
+    <licenseUrl>https://www.videolan.org/legal.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.videolan.org/vlc/skinedhlp/</docsUrl>
+    <mailingListUrl>https://forum.videolan.org/viewforum.php?f=15</mailingListUrl>
+	<bugTrackerUrl>http://d-gfx.kognetwork.ch/VLC/skineditor/</bugTrackerUrl>
+    <tags>vlc skins editor portable admin</tags>
+    <summary>A VLC media player Skin Editor</summary>
+    <description>
+![Screenshot of VLC Skin Editor](https://images.videolan.org/images/screenshots/skineditor/leopard_zoom.jpg)
+
+The VLC Skin Editor aims at giving designers an easy opportunity to create skins for the VLC Media Player without having to know about the internal structure of VLC's skin files.
+
+The skin editor is WYSIWYG editor for VLC skins that helps designers to create skins faster and easier.
+
+###Features
+* Absolutely no XML knowledge required
+* Add images and fonts directly from files
+* Helpful visual aid to create SubBitmaps
+* Direct preview of how the skin will look
+* Preview of how your skin looks in different situations (playing, paused, etc.)
+* Import and export of VLT files (packed VLC Skins)
+* Easily add and modify items of your skin
+* Position your skin's items with the mouse or the arrow keys
+* Hierarchic display of skins content
+* Makes the creation of action sequences comfortable
+* Can handle all skins created by hand
+* Available in different languages
+	</description>
+    <releaseNotes>According to the download notes "This pack is updated daily" but all files are from 2011/02/03.</releaseNotes>
+    <dependencies>
+      <dependency id="vlc" />
+      <dependency id="javaruntime" />	  
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

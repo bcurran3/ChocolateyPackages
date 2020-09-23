@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Revo.Uninstaller</id>
+    <version>2.0.2.020180924</version>
+    <title>[Deprecated] Revo Uninstaller</title>
+    <authors>VS Revo Group</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chocolatey.org/packages/revo-uninstaller</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>![](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png)
+##This package has been deprecated and replaced by [Revo Uninstaller Free (Install)](https://chocolatey.org/packages/revo-uninstaller) to conform with current package naming guidelines.</description>
+    <summary>deprecated</summary>
+    <tags>deprecated</tags>
+    <dependencies>
+      <dependency id="revo-uninstaller" />
+    </dependencies>
+  </metadata>
+</package>

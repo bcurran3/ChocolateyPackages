@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>robomirror</id>
+    <title>RoboMirror (Install)</title>
+    <version>2.0.20161009</version>
+    <authors>Martin Kinkelin</authors>
+    <owners>bcurran3</owners>
+    <summary>RoboMirror is a GUI front-end for the quite popular Robocopy.exe command-line utility for Windows.</summary>
+    <description>
+RoboMirror is a GUI front-end for the quite popular Robocopy.exe command-line utility for Windows.
+
+Robocopy is shipped with Windows since Vista and available as free SDK tool for previous Windows versions (RoboMirror already includes it).
+It allows to robustly synchronize two directory trees, both locally and across the network. It is therefore often used for mirroring purposes, e.g., as a powerful yet free backup utility.
+
+![alt text](http://robomirror.sourceforge.net/MainForm.png)
+
+RoboMirror's aim is to make Robocopy more accessible by providing a very simple and user-centered GUI, because most users simply don't want to work directly with the console or are overwhelmed by Robocopy's flexibility.
+
+Additionally, RoboMirror supports volume shadow copies. This allows to copy files locked by running processes (Outlook, SQL Server...).
+
+####Requirements:
+
+* Windows XP/Server 2003 or newer
+* .NET Framework 4.0
+    </description>
+    <projectUrl>http://external.informer.com/robomirror.sourceforge.net/</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/projects/robomirror/files/RoboMirror%20source/</projectSourceUrl>
+    <docsUrl>http://external.informer.com/robomirror.sourceforge.net/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/robomirror/discussion/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/robomirror/tickets/</bugTrackerUrl>
+    <tags>robomirror robocopy sync synchronize backup admin</tags>
+    <copyright>Copyright (c) Martin Kinkelin</copyright>
+    <licenseUrl>https://sourceforge.net/directory/os:windows/license:gpl/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://img.informer.com/icons/png/48/5505/5505163.png</iconUrl>
+    <dependencies>
+      <dependency id="dotnet4.0" />
+    </dependencies>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

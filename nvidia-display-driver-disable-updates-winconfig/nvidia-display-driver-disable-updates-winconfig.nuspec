@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>nvidia-display-driver-disable-updates-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nvidia-display-driver-disable-updates-winconfig</packageSourceUrl>
+	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>		
+    <title>Disable NVIDIA Display Driver Daily Checks (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nvidia-display-driver-disable-updates-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/bcurran3_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nvidia-display-driver-disable-updates-winconfig</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 nvidia-display-driver nvidia disable checks updater</tags>
+    <summary>This package disables NVIDIA display driver daily update checks.</summary>
+    <description>
+##This package disables the NVIDIA display driver daily update checks. (Updates will be installed only by Chocolatey.)
+
+##Uninstalling the package will re-enable NVIDIA display driver daily update checks.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/nvidia-display-driver-disable-updates-winconfig/readme.md)**	
+	</description>
+    <dependencies>
+      <dependency id="nvidia-display-driver" />
+    </dependencies>	
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

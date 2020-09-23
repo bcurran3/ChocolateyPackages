@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>genius-chrome</id>
+    <title>Genius Web Annotator for Chrome</title>
+    <version>0.1.2</version>
+    <authors>genius.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/genius-chrome</packageSourceUrl>		
+    <projectUrl>https://genius.com/web-annotator</projectUrl>
+    <bugTrackerUrl>https://genius.com/bugs</bugTrackerUrl>	
+    <iconUrl>https://images.genius.com/8ed669cadd956443e29c70361ec4f372.1000x1000x1.png</iconUrl>
+    <licenseUrl>https://genius.com/static/terms</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Genius Web Annotator](https://lh3.googleusercontent.com/qG8wl8x5Ldd1LxGPBPTYBHuknspRmSn6Cdey_KmcH77JzQZjODHwZJj4fSCKoDcfOz24YRWeagM=w640-h400-e365)
+	
+##Genius is making the annotated web a reality.
+
+Bringing the dreams of the original internet into the future…
+
+The earliest web browsers were meant to include annotation, but couldn't for technical reasons. 20 years later, Genius is making the annotated web a reality.
+
+Add your thoughts and commentary to any page on the Internet.	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/genius-chrome/readme.md)**	
+	</description>
+    <summary>Genius lets you add line-by-line annotations to any page on the Internet</summary>
+    <tags>genius web annotator chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

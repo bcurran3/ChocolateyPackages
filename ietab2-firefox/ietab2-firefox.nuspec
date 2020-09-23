@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ietab2-firefox</id>
+    <title>IE Tab v2 for Firefox (Install)</title>
+    <version>6.2.18.120161009</version>
+    <authors>ietab.net</authors>
+    <owners>bcurran3</owners>
+    <summary>IE Tab v2 allows you to use IE to display web pages in a tab within FireFox.</summary>
+    <description>
+![IE Tab v2 Screenshot](https://addons.cdn.mozilla.net/user-media/previews/full/43/43447.png)
+
+About this Add-on
+
+The updated, fully supported IE Tab. Embed IE in a Firefox tab. IE Tab Features: FF 4+ support, IE 7-9 compatibility modes, old IE Tab settings import.
+
+Just like the classic IE Tab, this updated version of IE Tab allows you to use IE to display web pages in a tab within FireFox. This updated version includes support for FireFox 3.6 and will continue to be updated with new features and enhancements.
+
+PACKAGING NOTE: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. The package should always install the latest version, independent of the package version. Subsequent updates should be dealt with automatically by Firefox.
+    </description>
+    <projectUrl>https://addons.mozilla.org/en-US/firefox/addon/ie-tab-2-ff-36/</projectUrl>
+    <projectSourceUrl>http://code.google.com/p/ietabv2/</projectSourceUrl>
+    <bugTrackerUrl>https://www.ietab.net/ie-tab-2-updated-whats-new</bugTrackerUrl>
+    <tags>ietab2 ie internet explorer firefox extension admin</tags>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl-2.1.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://addons.cdn.mozilla.net/user-media/addon_icons/92/92382-64.png</iconUrl>
+    <dependencies>
+      <dependency id="firefox" version="3.0"/>
+    </dependencies>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

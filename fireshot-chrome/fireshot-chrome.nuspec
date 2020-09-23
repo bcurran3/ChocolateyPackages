@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>fireshot-chrome</id>
+    <version>0.98.93.2</version>
+    <title>FireShot for Chrome</title>
+    <authors>screenshot-program.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/fireshot-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/take-webpage-screenshots/mcbpblocgmgfnpjjppndjkmgjaogfceg</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/sTGXWpma84YhcUrAB1erN0X0sXtSKRK-dibgvWVuKv-6rInBIor8oZAT3I5nT0No-mak-zPSYlQ</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![FireShot for Chrome info graphic](https://lh3.googleusercontent.com/Wbq_HGWq8vKaDvboaQCKTVE1yfdl0f4pUEQ9cgMFdo80XvIG3uKAzlM8K-dQnkgrSfc3mR7m=w640-h400-e365)	
+
+#Take FULL webpage screenshots. Capture, edit and save them to PDF/JPEG/GIF/PNG, upload, print, send to OneNote, clipboard or email.
+
+FireShot takes full web page screenshots. You can edit and annotate captures. 
+
+You can capture web pages entirely to PDF (with links) / JPEG / PNG files, print, or copy to clipboard. FireShot can work offline.
+
+* NEW: send screenshots directly to Gmail.
+
+"The Best Free Google Chrome Extension" by PCMAG.COM.
+
+The screenshots are instant and produce no traffic. 
+
+### What you can do with FireShot:
+
+* Capture full web pages entirely
+* Capture only visible part of the page
+* Capture selection
+* Save screenshot to disk as PDF (with links), PNG, and JPEG
+* Copy screenshot to clipboard
+* Print screenshot
+
+### A FREE upgrade is available. Activate it directly from the menu and:
+
+* Capture specific elements, such as scrolling areas on web pages
+* Capture all tabs in one click and save to single PDF
+* Edit screenshot: crop, resize, add text and arrow annotations, blur areas and apply other effects
+* Print
+* Save screenshot to PDF files
+* Save captures to disk as PDF, PNG, GIF, JPEG, BMP
+* Send to OneNote (Pro version)
+* Upload to Twitter, Google Picasa, Facebook, ImageShack, Flickr, EasyCaptures
+* Copy screenshot to clipboard
+* Print screenshot
+* E-Mail
+* Export to external editor
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/fireshot-chrome/readme.md)**
+	</description>
+    <summary>The FireShot Chrome extension takes full web page screenshots.</summary>
+    <tags>fireshot photos screen capture screenshot chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

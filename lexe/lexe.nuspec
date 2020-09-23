@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lexe</id>
+    <title>LExE (Portable)</title>
+    <version>1.1</version>
+    <authors>Mischel Internet Security</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>http://www.misec.net/freeware/</projectUrl>
+    <summary>LExE is a small freeware utility that lists all executable extensions on your system..</summary>
+    <description>
+![Screenshot of LExE](http://www.misec.net/i/lexe.png)
+
+LExE is a small freeware utility that lists all executable extensions on your system. The Windows registry entries that determine which files are executable can vary from system to system, and this program will find those extensions that are marked as executable on your particular Windows installation. You will also be able to see if there are any suspicious entries marked as executable - on most systems the list should just read .exe, .scr, .com, .bat and .pif.
+    </description>
+    <tags>lexe executables system util utility portable</tags>
+    <copyright>Copyright © 2002 Mischel Internet Security</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <releaseNotes></releaseNotes>
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

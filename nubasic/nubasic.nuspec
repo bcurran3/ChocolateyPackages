@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>nubasic</id>
+    <version>1.51</version>
+    <title>nuBASIC (Install)</title>
+    <authors>Antonino Calderone</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://github.com/eantcal/nubasic/blob/master/COPYING</licenseUrl>
+    <projectUrl>http://www.nubasic.eu/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/nubasic/nubasic_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>___
+###[choco://nubasic](choco://nubasic)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of NuBASIC](https://user-images.githubusercontent.com/13032534/27808819-69aaa2c2-6042-11e7-9132-675d1c71d162.png)	
+
+nuBASIC has been designed and implemented mainly for educational purposes both for C++ developers that can deal with a non-trivial example of modern C++ programming and for beginners, which may get hooked on programming.
+
+It is suitable for simple games, educational or small business programs.
+
+Anyone who has previously worked with other BASIC languages will quickly become accustomed to nuBASIC. Large sections of the basic constructs of nuBASIC are compatible with other BASIC dialects.
+
+nuBASIC is also very simple. It is an excellent tool for teaching programming to a complete beginner, despite this, it has all the features of a modern programming language.
+
+It allows you to write both classic BASIC programs (which use line numbers and GoTo or GoSub control structures) and procedure oriented programs, based on procedural programming paradigm.
+
+Features
+* Free and Open Source (distributed under GPLv2 License)
+* Easy to use and simple enough for 8-year-old-child to understand
+* Fully-developed procedural programming language
+* Multiplatform. Runs on 32-bit and 64-bit Linux/Windows x86/amd64
+* Built-in help
+* Documented (English and Italian Guides)
+* IDE for Windows
+* Examples include Tetris, Mine Hunter, Breakout, Calculator, TicTacToe
+* Tiny version is suitable for embedded systems
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/nubasic/readme.md)**
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___</description>
+    <summary>BASIC language interpreter for Linux and Windows</summary>
+    <releaseNotes>https://github.com/eantcal/nubasic/releases/</releaseNotes>
+    <copyright>(c) Antonino Calderone 2014 - 2017</copyright>
+    <tags>acalderone nubasic basic interpreter programming language ide notsilent</tags>
+    <projectSourceUrl>https://github.com/eantcal/nubasic</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nubasic</packageSourceUrl>
+    <docsUrl>http://www.nubasic.eu/user-guide</docsUrl>
+    <mailingListUrl>https://sourceforge.net/projects/nubasic/support</mailingListUrl>
+    <bugTrackerUrl>https://github.com/eantcal/nubasic/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="autohotkey" version="1.1.27" />
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="vcredist2017" version="14.11.25325.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

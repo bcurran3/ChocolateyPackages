@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>forticlientvpn</id>
+    <version>6.2.6.0951</version>
+    <title>FortiClient VPN (Install)</title>
+    <authors>Fortinet Inc</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/forticlientvpn</packageSourceUrl>
+    <projectUrl>https://www.forticlient.com/downloads</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/forticlientvpn/forticlientvpn_icon.png</iconUrl>
+    <copyright>Copyright © Fortinet Inc</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
+    <docsUrl>https://docs.fortinet.com/product/forticlient/6.2</docsUrl>
+    <mailingListUrl>https://forum.fortinet.com/</mailingListUrl>
+    <tags>fortinet fortigate forticlient vpn</tags>
+    <summary>SSL and IPSec VPN client for Fortinet firewalls.</summary>
+    <description>
+___
+### [choco://forticlientvpn](choco://forticlientvpn)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of FortiClient VPN](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/forticlientvpn/forticlientvpn_screenshot.png)	
+
+This is a free version of FortiClient VPN software which supports limited features and does not include technical support.
+Upgrade to the full version to access additional features and receive technical support.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/forticlientvpn/readme.md)**
+  
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <releaseNotes>https://docs.fortinet.com/document/forticlient/6.2.6/windows-release-notes/371487/introduction</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

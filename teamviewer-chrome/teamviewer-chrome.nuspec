@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>teamviewer-chrome</id>
+    <version>13.0.281</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/teamviewer-chrome</packageSourceUrl>	
+    <title>TeamViewer for Chrome</title>
+    <authors>TeamViewer</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/teamviewer/oooiobdokpcfdlahlmcddobejikcmkfo</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/CoTTAQUyyv_t3QPbosg8bpu_QyVzCpoGt5N0Vwj3J_rD5Qbm7M3CTXzwHOKwu0dEo31bUuudwQ=w50-h50-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>TeamViewer Chrome app.</summary>	
+    <description>
+![Screenshot of TeamViewer for Chrome](https://lh3.googleusercontent.com/O5rvuVR_CO5u6O0tQneOZEY_j5gBfT2We5QP7Cdz3MmwumUyzNOMz5U2lJjABQJAaniOoIiPmw=w640-h400-e365)
+	
+###TeamViewer - the All-In-One Software for Remote Support and Home Office
+
+With TeamViewer, you can control computers remotely from your Chromebook or Chrome browser in an easy, fast and secure way, as if you were sitting right in front of them.
+Provide support via Chrome or access your office PC.
+
+##Features
+* Access your computers and contacts and connect to them 
+* Connect to other devices by using ID and password 
+* Multimonitor support 
+* Smooth operation - even behind firewalls
+* Chat during the session
+* …and much more
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/teamviewer-chrome/readme.md)**	
+	</description>
+    <tags>teamviewer chrome app</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

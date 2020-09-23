@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>svchost-process-analyzer.portable</id>
+    <title>Svchost Process Analyzer (Portable)</title>
+    <version>1.0.20161106</version>
+    <authors>Neuber Software</authors>
+    <owners>bcurran3</owners>
+    <summary>Svchost Process Analyzer lists all svchost instances and checks the services they contain.</summary>
+    <description>
+![alt text](http://www.neuber.com/free/svchost-analyzer/svchost.gif)
+
+Svchost.exe is the most mysterious Windows process. Svchost.exe is a generic host process name for services that run from dynamic-link libraries (DLLs). The authentic svchost.exe file is located in C:\Windows\System32, but numerous viruses and trojans use the same file and process name to hide their activities.
+The free Svchost Process Analyzer lists all svchost instances and checks the services they contain. This makes it easy to uncover Svchost worms like the infamous Conficker worm.
+Svchost Process Analyzer is a 100% freeware program from www.neuber.com. There is absolutely no installation required. Simply download and run the software.
+Read also the [svchost.exe user comments](http://www.neuber.com/taskmanager/process/svchost.exe.html).
+
+####Features
+* 100% freeware
+* doesn't require runtimes
+* doesn't require installation
+* doesn't write to the registry
+* doesn't modify files outside of its own directories
+* isn't adware
+
+####System requirements
+* Windows 10, 8, 7, Vista, XP, 2003, 2008 (32/64 Bit)
+* 528 KB free disk space
+    </description>
+    <projectUrl>http://www.neuber.com/free/svchost-analyzer/</projectUrl>
+    <tags>svchost process analyzer neuber system tool util utility portable</tags>
+    <copyright>Copyright © 1993-2016 Neuber Software</copyright>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.neuber.com/free/svchost-analyzer/svchost100.gif</iconUrl>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>vmware-tools</id>
+    <version>10.3.10.12406962</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-tools</packageSourceUrl>
+    <title>VMWare Tools for Windows (Install)</title>
+    <authors> VMware, Inc</authors>
+    <projectUrl>https://kb.vmware.com/kb/340</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vmware-tools/vmware-tools_icon.png</iconUrl>
+    <copyright>VMware, Inc.</copyright>
+    <licenseUrl>https://www.vmware.com/download/eula/universal_eula.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.vmware.com/pdf/vmware-tools-installation-configuration.pdf</docsUrl>
+    <mailingListUrl>https://communities.vmware.com/welcome</mailingListUrl>
+    <tags>vmware vsphere esxi tools</tags>
+    <summary>Windows system utilities for VMs running under VSphere</summary>
+    <description>
+---
+
+###[choco://vmware-tools](choco://vmware-tools)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+###Overview of VMware Tools
+VMware Tools is a suite of utilities that enhances the performance of the virtual machines guest operating system and improves management of the virtual machine. Without VMware Tools installed in your guest operating system, guest performance lacks important functionality. Installing VMware Tools eliminates or improves these issues:
+* Low video resolution
+* Inadequate color depth
+* Incorrect display of network speed
+* Restricted movement of the mouse
+* Inability to copy and paste and drag-and-drop files
+* Missing sound
+* Provides the ability to take quiesced snapshots of the guest OS
+* Synchronizes the time in the guest operating system with the time on the host
+
+VMware Tools includes these components:
+* VMware Tools service
+* VMware device drivers
+* VMware user process
+* VMware Tools control panel	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-tools/readme.md)**
+
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://docs.vmware.com/en/VMware-Tools/10.3/rn/vmware-tools-10310-release-notes.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

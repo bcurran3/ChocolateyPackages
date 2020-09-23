@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>windv</id>
+    <version>1.2.3</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windv</packageSourceUrl>
+    <title>WinDV (Portable)</title>
+    <authors>Petr Mourek</authors>
+    <projectUrl>http://windv.mourek.cz/</projectUrl>
+    <iconUrl>http://windv.mourek.cz/img/windv.gif</iconUrl>
+    <copyright>(C) Petr Mourek 2002-2003</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://windv.mourek.cz/</projectSourceUrl>
+    <tags>windv dv digital video capture digitize firewire 1394 portable</tags>
+    <summary>WinDV - A small Windows utility for DV (FireWire digital video) input/output.</summary>
+    <description>
+![Screenshot of WinDV](http://windv.mourek.cz/img/null.gif)
+
+WinDV is a small and easy to use Windows application for capturing videos from DV device (camcorder) into AVI-files and for recording AVI-files into DV device via FireWire (IEEE 1394) interface. Capturing is very reliable thanks to use of large buffer queue.	Timestamps recorded on DV tape by camcorder can be used to automatically split captured video into multiple files. During transmitting to DV, several AVI-files can be joined together to form final video recording. 
+Internals: DirectShow "filters" are used for communication with DV devices, video-preview and for reading/writing AVI. Additional code handles memory buffering, timestamp decoding and simple user interface.
+
+###Main features
+* small and handy less than100kB one-file WinDV.exe
+* input / output - capturing from DV device to AVI files (both type-1 and type-2 supported) and recording vice versa
+* no dropped frames - memory buffering
+* automatic AVI splitting according to the timestamps on DV recordings - every video sequence can be saved into unique file
+* easy AVI joining - record multiple files joined to the DV device just using wildcards
+* preview of transmitted video in the window
+* free - you can download it and use it as you like at no cost
+
+###Requirements:
+Windows 98SE/ME/2000/XP -> Works on Windows 10! - bcurran3/PACKAGER
+DirectX 8.1+
+FireWire (IEEE 1394) controller (OHCI)
+DV camcorder (with DV-in for recording)
+or DV-videorecorder
+
+###Discontinued
+Development of WinDV has been stopped. DV format is getting superceded by MPEG4 HD video, so further development of WinDV makes no sense for me.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

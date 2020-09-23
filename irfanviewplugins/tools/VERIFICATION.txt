@@ -1,0 +1,7 @@
+﻿==================== irfanView All Plugins ====================
+
+Binaries included in this package were downloaded by the packager, bcurran3. 
+
+Checksums can be verified at http://www.irfanview.com/plugins.htm
+
+==================== irfanView All Plugins ====================

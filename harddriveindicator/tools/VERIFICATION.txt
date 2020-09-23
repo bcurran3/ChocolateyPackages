@@ -1,0 +1,7 @@
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+http://harddriveindicator.en.softonic.com/
+http://www.softpedia.com/get/System/Hard-Disk-Utils/HardDriveIndicator.shtml
+http://www.majorgeeks.com/files/details/harddriveindicator.html
+https://web.archive.org/web/20120516130342/http://optionalreaction.com/software/hdi/HardDriveIndicator_%5BOptionalReaction%5D.zip

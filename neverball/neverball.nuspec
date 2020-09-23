@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>neverball</id>
+    <version>1.6.0</version>
+    <title>Neverball (Portable)</title>
+    <authors>Robert Kooima, Jean Privat, Jānis Rūcis</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://github.com/Neverball/neverball/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://neverball.org</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Neverball/neverball/master/data/icon/neverball.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>![Screenshot of Neverball](http://neverball.org/images/shots/01-neverball-easy/easy-12-01.jpg)
+
+Tilt the floor to roll a ball through an obstacle course within the given time. If the ball falls or time expires, a ball is lost.
+
+Collect coins to unlock the exit and earn extra balls. Red coins are worth 5. Blue coins are worth 10. A ball is awarded for 100 coins.
+
+Also includes Neverputt.</description>
+    <summary>Tilt the floor to roll a ball through an obstacle course before time runs out.</summary>
+    <releaseNotes>http://neverball.org/release.php</releaseNotes>
+    <tags>neverball neverputt game ball obstacle portable</tags>
+    <projectSourceUrl>https://github.com/Neverball/neverball</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neverball</packageSourceUrl>
+    <docsUrl>https://github.com/Neverball/neverball/blob/master/doc/manual.txt</docsUrl>
+    <mailingListUrl>http://neverforum.com</mailingListUrl>
+  </metadata>
+</package>

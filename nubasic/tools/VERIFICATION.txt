@@ -1,0 +1,9 @@
+﻿============================== nuBASIC ==============================
+
+bcurran3 downloads and packages the included .ZIP for nuBASIC from the developer's distribution points. 
+
+The direct download links can be found at:
+https://github.com/eantcal/nubasic/releases/
+https://sourceforge.net/projects/nubasic/files/binary/Windows/
+
+============================== nuBASIC ==============================

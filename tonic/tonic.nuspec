@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>tonic</id>
+    <version>1.0.990</version>
+    <owners>bcurran3</owners>
+    <title>Tonic (Install)</title>
+    <authors>Cliff Cawley</authors>
+    <projectUrl>http://www.r2.com.au/page/products/show/tonic/</projectUrl>
+    <copyright>r2 Studios</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.r2.com.au/page/products/documentation/tonic/</docsUrl>
+    <bugTrackerUrl>http://www.r2.com.au/page/products/download/tonic/</bugTrackerUrl>
+    <tags>tonic chat IM messenger admin</tags>
+    <summary>Tonic is an instant messenger client intended to be used only on a private LAN.</summary>
+    <description>
+![Screenshot of Tonic](http://www.r2.com.au/static/images/products/tonic/tonic-screenshot-01.jpg)
+
+You want the power and convenience of instant messaging, but don't need or want the clients to talk to the outside world. Be it a bunch of friends having a LAN party, or a large corporation - instant messaging makes working together easy. Unfortunately, existing instant messengers allow users to communicate with the entire planet, not just your local network.
+
+Tonic changes this. With Tonic, you get all of the convenience, versatility and power of instant messaging, with none of the interference. Ideal for the smallest home network to the largest corporation.
+
+Tonic features the ability to have icons that can represent your feeling, mood, or character. You can use any of the hundreds of included icons or create your own, which will be automatically sent to other users on the network.
+
+####Tonic has been Archived
+
+Tonic is no longer under active development and has been Archived.
+
+It is possible that sometime in the future, development will be re-started.
+
+PACKAGING NOTE: Uninstall is NOT silent.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>save-to-google-drive-chrome</id>
+    <version>2.1.1</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/save-to-google-drive-chrome</packageSourceUrl>	
+    <title>Save to Google Drive for Chrome</title>
+    <authors>Google Drive team</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/save-to-google-drive/gmbmikajjgmnabiglmofipeabaddhgne</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/BjEoTf5LtJenRfAf8Xmmdh3JzbyOEKaerqnRyNcwZ9l1ZQocnJP0h1QvuLelI16PNs9LilHQ=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Save web content or screen capture directly to Google Drive.</summary>	
+    <description>
+![Screenshot of Save to Google Drive for Chrome](https://lh3.googleusercontent.com/RIwojH2Yw0_ql6NwicftfB2fso3UjO7kuMRoCsBBcSphRBU_sXfzWA7vuv76LXG7AzAzeYFO=w640-h400-e365)
+	
+##Save web content or screen capture directly to Google Drive.
+
+The Save to Google Drive Chrome extension helps you save web content or browser screenshots to your Google Drive.
+* Adds a browser action to save the current page.
+* Adds a right-click context menu to save hyperlinks and media.
+* Configurable through an options page.
+
+
+This extension allow you to save web content directly to Google Drive through a browser action or context menu. You can save documents, images, and HTML5 audio and video all by right clicking and selecting 'Save to Google Drive'. You can save the currently viewed page using the 'Save to Google Drive' browser action. The directory location and format of saved HTML pages can be controlled with the extension's options page (Choice of Entire image (default), Visible image, Raw HTML, MHTML, or Google Doc). You can automatically convert Microsoft Office files or comma separated files to Google Docs format.
+
+After your content is saved, the progress dialog allows you to open the file, rename, or view the file in the Google Drive document list. From the document list, you can organize and share your new document.
+
+To save a file:// URLs, or to enable in incognito mode, go to chrome://extensions/ and enable the associated checkbox.
+
+Due to security restrictions, this extension cannot capture chrome:// pages or Chrome Web Store pages.
+
+[Windows Client](https://chocolatey.org/packages/googledrive) | [Android Client](https://play.google.com/store/apps/details?id=com.google.android.apps.docs) | [iOS Client](https://itunes.apple.com/us/app/google-drive/id507874739)
+ 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/save-to-google-drive-chrome/readme.md)**	
+	</description>
+    <tags>google drive chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

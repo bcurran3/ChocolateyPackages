@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>galaxian</id>
+    <version>2010.05.07</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/galaxian</packageSourceUrl>
+    <title>Galaxian (Portable)</title>
+    <authors>PJ Crossley</authors>
+    <projectUrl>http://pjsfreeware.synthasite.com/</projectUrl>
+    <iconUrl>http://pjsfreeware.synthasite.com/resources/Rendered5.jpg</iconUrl>
+	<copyright>PJ Crossley</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pjcrossley galaxian retro game portable</tags>
+    <summary>PJ Crossley's remake of the classic Galaxian game.</summary>
+    <description>
+![screen shot of Galaxian](http://pjsfreeware.synthasite.com/resources/galaxian.png)
+
+************** A remake of the classic shoot em up Galaxian. ***************
+
+Added joystick control and you can redefine keys
+
+(pj) Crossley 2009
+This game is freeware,  if you have been sold it then you have been ripped off.
+more games at http://pjsfreeware.synthasite.com/
+
+###KEYS:
+* Arrow keys for movement
+* Anykey to fire. 
+* F4 Fullscreen
+* An extra life every 10000+ points
+* PRESS Esc TO CLOSE
+10/04/09/gm7
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/galaxian/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>filebot-free</id>
+    <version>4.7.9</version>
+    <title>FileBot Free (Install)</title>
+	<owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/filebot-free</packageSourceUrl>
+    <authors>Reinhard Pointner</authors>
+    <docsUrl>https://www.filebot.net/getting-started/index.html</docsUrl>
+    <mailingListUrl>https://www.filebot.net/forums/</mailingListUrl>
+    <bugTrackerUrl>https://www.filebot.net/report.html</bugTrackerUrl>	
+    <licenseUrl>https://github.com/filebot/filebot/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://sourceforge.net/projects/filebot/</projectUrl>
+    <iconUrl>https://www.filebot.net/icon.png</iconUrl>
+    <copyright>Reinhard Pointner</copyright>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>rpointner filebot file tv movie multimedia renamer foss binary</tags>	
+    <summary>The ultimate TV and Movie Renamer / Subtitle Downloader</summary>	
+    <description>
+![Screenshot of FileBot](https://www.filebot.net/getting-started/images/rename.screenshot.png)	
+	
+###FileBot is the ultimate tool for organizing and renaming your Movies, TV Shows and Anime as well as fetching subtitles and artwork. It's smart and just works.
+
+##Some Features
+
+* A simple user-interface tuned for drag-n-drop (no need to bother with file dialogs)
+* Platform-independent and straight-forward application deployment
+* Powerful and full-featured cmdline interface and scripting interface for any kind of automation
+* Episode naming scheme
+* Rename files
+* Rename and move hundreds of media files in a matter of seconds
+* Fetch episode info from TheTVDB, AniDB or TVmaze
+* Accurate and robust and simply awesome file / episode matching logic
+* Series / Anime / Movie name auto-detection
+* Powerful and highly customizable episode naming scheme
+* MediaInfo optional
+* Supports language preferences for series and episode titles
+* Supports movie identification and renaming via TheMovieDB
+* Reverse rename files using internal history or the original torrent file
+* Download subtitles
+* Download subtitles from OpenSubtitles
+* Advanced logic for matching files to most suitable subtitles
+* Find exact subtitles on OpenSubtitles
+* Upload subtitles with movie hash to OpenSubtitles
+* Integrated subtitle viewer for srt, ass and sub files
+* Transcode any subtitle as UTF-8 encoded srt
+* Verify SFV files
+* Easily create and verify sfv, md5, sha1 and sha256 files
+* Aware of checksums that are embedded in the filename
+* common in anime releases
+* Directly compare two or more directory trees
+* Auto-lookup of any existing file verification
+* Identify and rename music using AcoustID audio-fingerprints and MusicBrainz info.
+* Extract files from zip, multi-volume rar and 7zip archives as well as ISO images.
+
+v4.7.9 was the last free release. The latest package of the trial edition can be found [here](https://chocolatey.org/packages/filebot).
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/filebot-free/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+    </description>
+    <releaseNotes>https://www.filebot.net/forums/viewtopic.php?f=7&amp;t=3709</releaseNotes>	
+  </metadata>
+</package>

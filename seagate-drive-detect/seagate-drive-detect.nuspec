@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>seagate-drive-detect</id>
+    <title>Seagate Drive Detect (Portable)</title>
+    <version>3.1.1.1</version>
+    <authors>Seagate Technology</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/seagate-drive-detect</packageSourceUrl>	
+    <summary>Identify your drive, retrieve the model number, serial number and firmware revision without removing your drive.</summary>
+    <description>
+![screenshot of Seagate Drive Detect](http://support.seagate.com/kbimg/207921-1.jpg)
+
+A small utility by Seagate to retrieve the model number, serial number, and firmware revision without removing your drive. It will also help you search to find newer firmware if available.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/seagate-drive-detect/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+    </description>
+    <projectUrl>http://support.seagate.com/firmware/drive_config.html</projectUrl>
+    <docsUrl>http://knowledge.seagate.com/articles/en_US/FAQ/004206en</docsUrl>
+    <tags>seagate drive detect portable</tags>
+    <copyright>(C) Seagate Technology, LLC. All Rights Reserved</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://www.seagate.com/www-content/investors/_shared/_images/seagate-stacked-pos-2015.jpg</iconUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

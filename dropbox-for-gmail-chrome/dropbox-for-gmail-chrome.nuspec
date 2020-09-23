@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>dropbox-for-gmail-chrome</id>
+    <version>1.1.6</version>
+    <title>Dropbox for Gmail for Chrome</title>
+    <authors>dropbox.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dropbox-for-gmail-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/dropbox-for-gmail/dpdmhfocilnekecfjgimjdeckachfbec</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/797be4455d8f66a1989713e741137ed8293dd322/icons/dropbox.svg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Dropbox for Gmail for Chrome](https://lh3.googleusercontent.com/ONoNPq3uq_ExZd6fhogcZbqCjU8_8VaMQsN5RVm0vfo5qryDJKW3TkUSdRMdQfs_V-TG8ayPvQ=w640-h400-e365)
+
+
+Send and preview Dropbox files and links without leaving your Gmail window.
+Save time sharing and reviewing important stuff with the Dropbox for Gmail extension.
+
+By adding a Dropbox button to Gmail Compose, it becomes really easy to send Dropbox shared links in email - allowing you to seamlessly share large files and save space inside your growing inbox.
+
+Quickly access any important files with the Recent Files tab or use our supercharged Search tool to find the file you need to send.
+
+And, see rich previews of Dropbox links shared in emails. Like attachments, you can use these links to download the file directly from Gmail or add it to your Dropbox.
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dropbox-for-gmail-chrome/readme.md)**
+	</description>
+    <summary>Send and preview Dropbox files and links without leaving your Gmail window.</summary>
+    <tags>dropbox gmail chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

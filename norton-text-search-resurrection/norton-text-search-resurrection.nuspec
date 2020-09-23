@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>norton-text-search-resurrection</id>
+    <title>Norton Text Search Resurrection (Portable)</title>
+    <version>1.0.0.1</version>
+    <authors>Geert Verkade</authors>
+    <owners>bcurran3</owners>
+	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/norton-text-search-resurrection</packageSourceUrl>	
+    <summary>Modern OS equivelant of Norton Text Search from Norton Utilities in the 80s/90s</summary>
+    <description>
+![Screenshot of Norton Text Search Resurrection](http://gverkade.home.xs4all.nl/ts/images/ts_screenshot1.jpg)
+
+##Norton Text Search Resurrection
+
+Do you still miss the Norton Text Search utility from the late '80's? Then download the modern remake.
+It is still a command line utility, but now it can handle long filenames, gives you the opportunity to skip files and is aware of the size of your command prompt.
+
+Never heard of the the Norton Text search? It is a command line utility that allows you to search for a certain text within files; either text-files or binary files.
+    </description>
+    <projectUrl>http://gverkade.home.xs4all.nl/ts/</projectUrl>
+    <tags>ts norton utilities text search resurrection CLI portable</tags>
+    <copyright>Copyright (C) 2008 Geert Verkade</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>I've been searching for something like this for years!</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

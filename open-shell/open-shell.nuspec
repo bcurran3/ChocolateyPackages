@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>open-shell</id>
+    <version>4.4.152</version>
+    <title>Open-Shell (Install)</title>
+    <authors>Ivo Beltchev</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/open-shell</packageSourceUrl>
+    <copyright>Copyright Ivo Beltchev</copyright>
+    <licenseUrl>https://github.com/Open-Shell/Open-Shell-Menu/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Open-Shell/Open-Shell-Menu</projectUrl>
+    <projectSourceUrl>https://github.com/Open-Shell/Open-Shell-Menu/tree/master/Src</projectSourceUrl>
+    <docsUrl>http://www.classicshell.net/faq/</docsUrl>
+    <mailingListUrl>http://www.classicshell.net/forum/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/Open-Shell/Open-Shell-Menu/issues</bugTrackerUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/open-shell/open-shell_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Classic style Start Menu for Windows 7, 8, 8.1, 10</summary>
+    <tags>classic-shell open-shell shell freeware start-menu binary</tags>
+    <description>
+---
+
+### [choco://open-shell](choco://open-shell)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of Open-Shell](http://www.classicshell.net/images/startmenu3.png)
+
+### Originally Classic Shell by Ivo Beltchev
+
+## Features
+
+* Classic style Start Menu for Windows 7, 8, 8.1, 10
+* Toolbar for Windows Explorer
+* Classic copy UI (Windows 7 only)
+* Show file size in Explorer status bar
+* Title bar and status bar for Internet Explorer
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/open-shell/readme.md)**
+
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://github.com/Open-Shell/Open-Shell-Menu/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,5 @@
+﻿==================== Open-Shell ====================
+
+bcurran3 downloads and packages the executable for Open-Shell from https://github.com/Open-Shell/Open-Shell-Menu/releases
+
+==================== Open-Shell ====================

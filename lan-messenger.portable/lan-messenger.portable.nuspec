@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lan-messenger.portable</id>
+    <version>1.2.37</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/lan-messenger.portable</packageSourceUrl>				
+    <title>LAN Messenger (Portable)</title>
+    <authors>Qualia Digital Solutions</authors>
+    <projectUrl>https://lanmessenger.github.io/</projectUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/lanmsngr/icon</iconUrl>
+    <copyright>Copyright (C) 2010 - 2012 Qualia Digital Solutions.</copyright>
+    <licenseUrl>https://sourceforge.net/directory/os:windows/license:gplv3/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://lanmessenger.github.io/</projectSourceUrl>
+    <docsUrl>http://lanmsngr.sourceforge.net/faq.php</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/lanmessenger</mailingListUrl>
+    <bugTrackerUrl>https://github.com/lanmessenger/lanmessenger/issues</bugTrackerUrl>
+    <tags>lan messenger im chat messenger admin</tags>
+    <summary>An intranet chat application that does not require a server.</summary>
+    <description>
+![Screenshot of LAN Messenger](http://lanmsngr.sourceforge.net/screenshots/1.2.25/lmc_1225_win7_1.jpg)
+
+LAN Messenger, which is currently available for Windows, Mac, and Linux is a free and open-source instant messaging application. Through a local network, this application will foster instant communication, eliminating the need for having a server and internet connection. More than just for instant messaging, it also comes with extra features, such as transferring files, archiving of past messages, and being notified of upcoming events.
+
+The following are some of the features of LAN Messenger:
+
+* Instant Messaging: You can instantly connect with other users on the network and start a conversation.
+
+* Private Network: No need to worry about your privacy. AES encryption with RSA offers industry-leading security.
+
+* Broadcast messages: You will have the option to notify all users within the network or choose specific users.
+
+* Transfer Files: Forget about email attachments. This app makes it easy and hassle-free to transfer files to other users within the network.
+
+* Group Contacts: You can also easily organize people in your contact list. This will make it easy to find people when needed.
+
+* Log Messages: Previous conversations can also be archived, which you can access at any given time.
+
+* Works without Server: One of the best things about this instant messaging application is the lack of server that is required, making it less complicated.
+
+* Works without Internet Connection: This messaging application utilizes a local network, which means that you can send messages even without internet, which is beneficial in minimizing possible threats.
+
+* Supports Multiple Languages: You can choose from the different languages that will be used as the medium for the user interface.
+
+* Multi-platform Support: Regardless of your operating system, whether you are on Mac, Windows, or Linux, you can use this messaging application.
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

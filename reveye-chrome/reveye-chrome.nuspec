@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>reveye-chrome</id>
+    <version>1.4.4</version>
+    <title>RevEye Reverse Image Search for Chrome</title>
+    <authors>Steven Van Vaerenbergh</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/reveye-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/reveye-reverse-image-sear/keaaclcjhehbbapnphnmpiklalfhelgf</projectUrl>
+	<projectSourceUrl>https://github.com/steven2358/reveye</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/steven2358/reveye/issues</bugTrackerUrl>	
+    <iconUrl>https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRwppDyKtlydZrWLV48QewNTLY4Y_yO1kv3OtJGSq4mNRqNqu8I</iconUrl>
+    <licenseUrl>https://github.com/steven2358/reveye/blob/master/LICENSE.txt</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of RevEye Reverse Image Search for Chrome](https://lh5.googleusercontent.com/P09YjtIoz0YaED8xgB4PT16FP1rlkd-cP3IOyBA3b2rsW7zCasuz3aFuVeugmYhrFCG-Ma5FKzo=s640-h400-e365-rw)
+Perform a search by image. Choose between the image search engines Google, Bing, Yandex, TinEye and Baidu.
+This extension allows to perform an inverse image search by right-clicking onto any image in a web site.
+
+You can configure the context menu to contain either a single button with your default search engine, or a cascaded menu with all included search engines.
+	
+####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
+	</description>
+    <summary>Right click an image to search for it on Google, Bing, Yandex, TinEye, and Baidu</summary>
+    <tags>reveye image search google bing yandex tineye baidu chrome extension</tags>
+    <releaseNotes></releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

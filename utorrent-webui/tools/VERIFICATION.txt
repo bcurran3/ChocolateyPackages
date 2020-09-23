@@ -1,0 +1,9 @@
+﻿--------------------- µTorrent WebUI -----------------------------
+
+
+The binary included in this package was downloaded from https://sites.google.com/site/ultimasites/files/utorrent-webui.2013052820184444.zip?attredirects=0&d=1 as provided on the product page at
+https://forum.utorrent.com/topic/49588-%C2%B5torrent-webui/ and renamed to webui.zip as per instructions on the product page. The SHA256 checksum found by me was 6106852AF6B3EF7995FFF0B22214C87DA8AA9EB45273B507727896EF65807BF2
+
+
+--------------------- µTorrent WebUI -----------------------------
+

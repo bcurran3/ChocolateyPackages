@@ -1,0 +1,9 @@
+﻿=================== IrfanView ===================
+
+
+Binaries included in this package were downloaded by the packager, bcurran3. 
+
+Checksums can be verified (assumably by the author) at https://www.fosshub.com/IrfanView.html
+
+=================== IrfanView ===================
+

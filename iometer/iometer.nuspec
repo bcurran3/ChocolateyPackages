@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>iometer</id>
+    <title>Iometer (Install)</title>
+    <version>1.1.0.20161009</version>
+    <authors>Intel Corporation, Sean Hefty, David Levine, and Fab Tillier</authors>
+    <owners>bcurran3</owners>
+    <summary>I/O performance Analysis Tool</summary>
+    <description>
+![Screenshot of Iometer](https://a.fsdn.com/con/app/proj/iometer/screenshots/11336.jpg)
+
+Iometer is an I/O subsystem measurement and characterization tool for single and
+clustered systems. Iometer is pronounced “eye-OM-i-ter,” to rhyme with
+“thermometer.” Iometer does for a computer’s I/O subsystem what a dynamometer
+does for an engine: it measures performance under a controlled load. Iometer was
+formerly known as “Galileo.”
+
+Iometer is both a workload generator (that is, it performs I/O operations in order to
+stress the system) and a measurement tool (that is, it examines and records the
+performance of its I/O operations and their impact on the system). It can be configured
+to emulate the disk or network I/O load of any program or benchmark, or can be used
+to generate entirely synthetic I/O loads. It can generate and measure loads on single or
+multiple (networked) systems.
+
+Iometer can be used for measurement and characterization of:
+
+* Performance of disk and network controllers.
+* Bandwidth and latency capabilities of buses.
+* Network throughput to attached drives.
+* Shared bus performance.
+* System-level hard drive performance.
+* System-level network performance.
+    </description>
+    <projectUrl>http://www.iometer.org/</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/p/iometer/svn/</projectSourceUrl>
+    <docsUrl>http://www.iometer.org/doc/documents.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/iometer/mailman</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/iometer/bugs</bugTrackerUrl>
+    <tags>iometer benchmark hardware networking admin</tags>
+    <copyright>Copyright (c) 1996-1999 Intel Corporation Enterprise Server Group</copyright>
+    <licenseUrl>https://sourceforge.net/p/iometer/svn/HEAD/tree/trunk/IOmeter/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://a.fsdn.com/allura/p/iometer/icon</iconUrl>
+    <releaseNotes>added checksum</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

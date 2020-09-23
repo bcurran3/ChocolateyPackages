@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>uninstall-onedrive-win10-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/uninstall-onedrive-win10-winconfig</packageSourceUrl>
+    <title>Uninstall OneDrive in Windows 10 (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/uninstall-onedrive-win10-winconfig</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/bcurran3_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/uninstall-onedrive-win10-winconfig</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 disable uninstall onedrive win10</tags>
+    <summary>This package disables Windows OneDrive on Windows 10.</summary>
+    <description>
+![Secondary icon](https://betanews.com/wp-content/uploads/2015/08/No-OneDrive-Windows-10.png)	
+	
+#THIS IS TECHNICALLY A PRE-RELEASE FOR TESTING - IT NEEDS MORE TESTING
+#MODERATORS DO NOT PASS UNTIL A NEW VERSION IS PUSHED WITHOUT THIS MESSAGE
+#THIS PACKAGE COMES AT THE REQUEST OF CHOCOLATEY USER jfail-at-RedHat
+	
+##This package uninstalls and disables OneDrive on Windows 10
+
+##Uninstalling the package will re-install OneDrive
+
+REF: https://techjourney.net/disable-or-uninstall-onedrive-completely-in-windows-10/
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/uninstall-onedrive-win10-winconfig/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	</description>
+	<dependencies>
+      <dependency id="chocolatey-fastanswers.extension" />
+    </dependencies>			
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
