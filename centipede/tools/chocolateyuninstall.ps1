@@ -1,4 +1,5 @@
-﻿$packageName = 'centipede' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'centipede' 
 $Shortcut    = 'Centipede.lnk'
 
 remove-item "$env:Public\Desktop\$Shortcut" -Force -ErrorAction 'SilentlyContinue'

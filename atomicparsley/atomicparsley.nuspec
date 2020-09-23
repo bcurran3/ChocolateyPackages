@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>atomicparsley</id>
-    <version>0.9.0</version>	
-    <owners>bcurran3</owners>	
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/atomicparsley</packageSourceUrl>	
+    <version>0.9.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/atomicparsley</packageSourceUrl>
     <title>AtomicParsley (Portable)</title>
     <authors>BStory, puck_lock</authors>
-	<iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/atomicparsley/atomicparsley_icon.png</iconUrl>
-    <projectUrl>http://atomicparsley.sourceforge.net/</projectUrl>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/atomicparsley/atomicparsley_icon.png</iconUrl>
+    <projectUrl>http://atomicparsley.sourceforge.net/</projectUrl>
     <licenseUrl>https://sourceforge.net/directory/os:windows/license:gpl/</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
-    <projectSourceUrl>https://sourceforge.net/p/atomicparsley/code/HEAD/tree/</projectSourceUrl>	
-    <docsUrl>http://atomicparsley.sourceforge.net/documents.html</docsUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/atomicparsley/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>http://atomicparsley.sourceforge.net/documents.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/atomicparsley/discussion/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/atomicparsley/bugs/</bugTrackerUrl>
     <tags>atomicparsley metadata editor portable</tags>

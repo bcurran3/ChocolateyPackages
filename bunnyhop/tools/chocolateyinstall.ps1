@@ -1,4 +1,5 @@
-﻿$packageName = 'bunnyhop' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'bunnyhop' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\bunnyhop.zip"
 $checksum    = '5D1C045C4B7DB3760DCAC459DBE36A0F6ECBAE2C50096A701854ADCAD4BAEE2A'

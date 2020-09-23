@@ -1,4 +1,5 @@
-﻿$packageName = 'blitz' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'blitz' 
 $Shortcut    = 'Blitz.lnk'
 
 remove-item "$env:Public\Desktop\$Shortcut" -Force -ErrorAction 'SilentlyContinue'

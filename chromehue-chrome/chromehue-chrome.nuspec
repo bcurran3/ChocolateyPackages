@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromehue-chrome</id>
@@ -6,9 +7,9 @@
     <title>ChromeHue for Philips Hue for Chrome</title>
     <authors>Nicolas VARROT</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromehue-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromehue-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/chromehue-for-philips-hue/ofhimkkaomaoilmnmfhmdoekoaeclkoa</projectUrl>
-    <bugTrackerUrl>https://chrome.google.com/webstore/detail/chromehue-for-philips-hue/ofhimkkaomaoilmnmfhmdoekoaeclkoa</bugTrackerUrl>	
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/chromehue-for-philips-hue/ofhimkkaomaoilmnmfhmdoekoaeclkoa</bugTrackerUrl>
     <iconUrl>https://lh3.googleusercontent.com/OIQJh8j4tB60WJLJrj8ppciA70drYMn5vVz00pXbepYXNaCkc2foBN6IAEqBP7UiYWZbrUN_Zg=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -32,7 +33,7 @@ ChromeHue allows you to control the Philips Hue bulbs from your browser by using
 	</description>
     <summary>A Chrome extention to control your Phillips Hue lights.</summary>
     <tags>phillips hue chromehue chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

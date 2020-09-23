@@ -1,4 +1,5 @@
-﻿$packageName = 'bunnyhop' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'bunnyhop' 
 $Shortcut    = 'Bunnyhop.lnk'
 
 remove-item "$env:Public\Desktop\$Shortcut" -Force -ErrorAction 'SilentlyContinue'

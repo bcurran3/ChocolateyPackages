@@ -60,3 +60,4 @@ PowerShell Core 6.0.0 and later do not require this module. Invoke-WebRequest an
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

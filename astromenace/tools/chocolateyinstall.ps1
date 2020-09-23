@@ -1,4 +1,5 @@
-﻿$packageName    = 'astromenace'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'astromenace'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloads.sourceforge.net/project/openastromenace/1.3.2/astromenace-win-1.3.2.exe' 

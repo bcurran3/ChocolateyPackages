@@ -1,4 +1,5 @@
-﻿$packageName = 'blitz' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'blitz' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\blitz.zip"
 $checksum    = '4EB8203AB1821F1685330873304AC38886930F7D4338FAC140E37E4449236CA0'

@@ -1,4 +1,5 @@
-﻿# ChocolateyPowerShell v0.0.2.2 (09-18-2020) Copyleft 2018-2020 by Bill Curran AKA BCURRAN3
+﻿$ErrorActionPreference = 'Stop'
+# ChocolateyPowerShell v0.0.2.2 (09-18-2020) Copyleft 2018-2020 by Bill Curran AKA BCURRAN3
 # SUGGESTION: Manually edit the ChocolateyPowerShell icon properties' Colors tab Selected Color Values to rgb(84,42,12) or rgb(160,85,45) for a unique Chocolatey brown background.
 
 function global:CPSHelpersWeb {start 'https://chocolatey.org/docs/helpers-reference'}

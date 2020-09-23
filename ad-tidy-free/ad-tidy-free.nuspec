@@ -64,3 +64,4 @@ PACKAGING NOTE: Uninstall through Control Panel.
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

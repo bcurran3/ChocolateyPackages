@@ -1,4 +1,5 @@
-﻿$packageName    = 'blocktality'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'blocktality'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloads.sourceforge.net/project/blocktality/blocktality/1.0.1/blocktality-1.0.1.exe' 

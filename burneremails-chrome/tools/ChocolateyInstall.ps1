@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'burneremails-chrome'
 $extensionID = 'dnnmaoecogobjdiieopljefemjdkkaja'
 if ($bits -eq 64)

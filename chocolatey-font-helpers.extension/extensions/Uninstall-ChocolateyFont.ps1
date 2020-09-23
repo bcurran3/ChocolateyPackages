@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 # chocolatey-font-helpers.extension v0.0.1 (07-24-2018) by Bill Curran - public domain
 # Uninstall-ChocolateyFont.ps1 -uses Microsoft's Remove-Font.ps1 v1.0.1 Copyright (C) 2010 Microsoft Corporation
 # Usage example: Uninstall-ChocolateyFont "FontName.ext"

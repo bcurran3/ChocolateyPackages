@@ -1,4 +1,5 @@
-﻿$packageName  = 'captureflux' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'captureflux' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://paul.glagla.free.fr/fichiers/captureflux_60en.zip'
 $checksum     = '5CBD61413D72F15446B980F7A8AE5AC0D572A93BD3C103F11CC78032DC32F49C'

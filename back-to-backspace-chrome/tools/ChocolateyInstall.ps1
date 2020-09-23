@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'back-to-backspace-chrome'
 $extensionID = 'cldokedgmomhbifmiiogjjkgffhcbaec'
 if ($bits -eq 64)

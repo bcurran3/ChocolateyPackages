@@ -1,4 +1,5 @@
-﻿$packageName    = 'betterhash'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'betterhash'
 $softwareName   = 'BetterHash'
 
 if((get-process "BetterHash" -ea SilentlyContinue) -eq $Null){ 

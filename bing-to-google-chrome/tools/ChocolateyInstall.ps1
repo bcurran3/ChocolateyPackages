@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'bing-to-google-chrome'
 $extensionID = 'klncmpknmcddjhglodllibbglcdmdmbi'
 if ($bits -eq 64)

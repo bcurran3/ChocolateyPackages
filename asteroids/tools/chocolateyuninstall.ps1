@@ -1,4 +1,5 @@
-﻿$packageName = 'asteroids' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'asteroids' 
 $Shortcut    = 'Asteroids.lnk'
 
 remove-item "$env:Public\Desktop\$Shortcut" -Force -ErrorAction 'SilentlyContinue'

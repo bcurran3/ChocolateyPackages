@@ -1,4 +1,5 @@
-﻿$packageName  = 'bulk-ad-users' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'bulk-ad-users' 
 $shortcutName = 'Bulk AD Users.lnk'
 
 remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'

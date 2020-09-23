@@ -79,3 +79,4 @@ PACKAGING NOTE: Uninstall is not silent.
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

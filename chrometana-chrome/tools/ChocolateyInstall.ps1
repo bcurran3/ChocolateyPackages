@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'chrometana-chrome'
 $extensionID = 'kaicbfmipfpfpjmlbpejaoaflfdnabnc'
 if ($bits -eq 64)

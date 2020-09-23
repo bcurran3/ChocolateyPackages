@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -6,11 +6,11 @@
     <version>0.0.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adobereader-disable-updates-winconfig</packageSourceUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>		
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>Disable Adobe Reader and Acrobat Manager (ARM) (Config)</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adobereader-disable-updates-winconfig</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/bcurran3_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/bcurran3_icon.png</iconUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -27,7 +27,7 @@
 	</description>
     <dependencies>
       <dependency id="adobereader" version="10.1" />
-    </dependencies>	
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

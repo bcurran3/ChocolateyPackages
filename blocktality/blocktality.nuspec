@@ -27,3 +27,4 @@ Blocktality is a top-down shooter in which the main character 'Sphero' is fighti
     <file src="tools\**" target="tools" />
   </files>
 </package>
+
