@@ -16,4 +16,5 @@ $packageArgs = @{
 }
 
 Start-WaitandStop "Amazon Music Helper"
+Start-WaitandStop "Amazon Music"
 Install-ChocolateyPackage @packageArgs 
