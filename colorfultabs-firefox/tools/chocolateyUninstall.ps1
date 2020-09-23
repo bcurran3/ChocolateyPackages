@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'colorfultabs-firefox'
 $extensionID = "{0545b830-f0aa-4d7e-8820-50a4629a56fe}"
 

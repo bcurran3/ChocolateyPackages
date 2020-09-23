@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'chrome-remote-desktop-chrome'
 $extensionID = 'gbchcmhmhahfdphkhkmpfmihenigjmpp'
 if ($bits -eq 64)

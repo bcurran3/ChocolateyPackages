@@ -40,3 +40,4 @@ AudioShell 2 is a freeware Windows Explorer shell extension which allows you to 
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

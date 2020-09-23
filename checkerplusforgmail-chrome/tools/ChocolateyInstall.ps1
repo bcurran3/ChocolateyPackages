@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'checkerplusforgmail-chrome'
 $extensionID = 'oeopbcgkkoapgobdbedcemjljbihmemj'
 if ($bits -eq 64)

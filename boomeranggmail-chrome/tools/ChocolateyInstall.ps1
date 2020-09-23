@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'boomeranggmail-chrome'
 $extensionID = 'mdanidgdpmkimeiiojknlnekblgmpdll'
 if ($bits -eq 64)

@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>amazon-music-chrome</id>
@@ -6,7 +7,7 @@
     <title>Amazon Music for Chrome</title>
     <authors>https://music.amazon.com</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazon-music-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/amazon-music-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/amazon-music/cfkfgcfgfpgmkogcnibdjcckkpdiajgp</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/v0d3lF7ZsFPI1-LUFXppJ6G15HQnIzP09HkZn16vCNje0QT0ZbX7_o0790X7ka66MC4gmX8W=s50-h50-e365-rw</iconUrl>
     <licenseUrl>https://goo.gl/p9o41Q</licenseUrl>
@@ -42,7 +43,7 @@ We’re changing the way you find and play the music you love.
 	</description>
     <summary></summary>
     <tags>amazon music player streaming chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

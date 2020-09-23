@@ -1,4 +1,5 @@
-﻿$packageName = 'asteroids' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'asteroids' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\asteroids.zip"
 $checksum    = 'CB994A1700249149D713B1833C6B83A0D8B3716265E9453FD8328894D55E34EB'

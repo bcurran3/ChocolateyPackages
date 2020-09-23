@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $bits = Get-ProcessorBits
 $packageName = 'chrome-remote-desktop-chrome'
 $extensionID = 'gbchcmhmhahfdphkhkmpfmihenigjmpp'

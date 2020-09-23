@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'chromelpass-chrome'
 $extensionID = 'ompiailgknfdndiefoaoiligalphfdae'
 if ($bits -eq 64)

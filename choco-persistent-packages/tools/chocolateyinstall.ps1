@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'choco-persistent-packages'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $pp          = Get-PackageParameters

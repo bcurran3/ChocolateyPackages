@@ -55,3 +55,4 @@ File sharing between Windows and Android is also supported in AMIDuOS, so you ca
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

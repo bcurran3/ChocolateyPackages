@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -9,7 +9,7 @@
     <title>BetterHash (Install)</title>
     <authors>Innovative Solutions</authors>
     <projectUrl>https://www.betterhash.net</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/betterhash/bettertash_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/betterhash/bettertash_icon.png</iconUrl>
     <copyright>© BetterHash</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.betterhash.net/faq/</docsUrl>

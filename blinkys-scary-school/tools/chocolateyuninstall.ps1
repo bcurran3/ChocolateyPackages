@@ -1,4 +1,5 @@
-﻿$packageName = 'blinkys-scary-school' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'blinkys-scary-school' 
 $Shortcut    = 'Blinkys Scary School.lnk'
 
 remove-item "$env:Public\Desktop\$Shortcut" -Force -ErrorAction 'SilentlyContinue'

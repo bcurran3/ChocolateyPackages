@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName= 'audioshell'
 $installerType = 'exe'
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'

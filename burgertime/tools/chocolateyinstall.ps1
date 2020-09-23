@@ -1,4 +1,5 @@
-﻿$packageName = 'burgertime' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'burgertime' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\burgertime.zip"
 $checksum    = 'E2783211370F5D910D43966B1A0517713D97C085918F35C44647E5A7AA34000E'

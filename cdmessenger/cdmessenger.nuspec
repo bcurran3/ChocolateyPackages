@@ -45,3 +45,4 @@ PACKAGING NOTE: Make an account after install for 30-day try before you buy.
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

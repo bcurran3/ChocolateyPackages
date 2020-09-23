@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName = 'colorfultabs-firefox'
 $url = 'https://addons.mozilla.org/firefox/downloads/file/502726/colorfultabs-31.0.8-fx+sm.xpi'
 $extensionID = "{0545b830-f0aa-4d7e-8820-50a4629a56fe}"
