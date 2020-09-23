@@ -59,6 +59,9 @@ See [list of manufacturers’ Support websites](http://www.intel.com/content/www
 
 </description>
     <releaseNotes>https://downloadmirror.intel.com/29634/eng/readme.txt</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5" version="4.5.20120822"/>
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

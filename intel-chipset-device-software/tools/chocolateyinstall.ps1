@@ -19,9 +19,10 @@ $packageArgs = @{
   packageName    = $packageName
   softwareName   = 'Intel(R) Chipset Device Software'
   fileType       = 'EXE'
-  silentArgs     = '-s -norestart'
+  silentArgs     = '-s -norestart -log install.log'
   file           = "$toolsDir\unzipped\SetupChipset.exe"
   validExitCodes = @(0)
   }
 
 Install-ChocolateyInstallPackage @packageArgs
+Remove-Item "$toolsDir\unzipped" –Recurse | Out-Null
