@@ -1,6 +1,0 @@
-﻿============================== FlicFlac ==============================
-
-bcurran3 downloaded and unzipped the files included from the developer's website at:
-https://sector-seven.com/software/flicflac
-
-============================== FlicFlac ==============================s

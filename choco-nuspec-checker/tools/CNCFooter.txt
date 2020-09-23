@@ -1,5 +1,0 @@
----
-
-$NuspecTitle packaged with pride by $NuspecOwners.
-
----

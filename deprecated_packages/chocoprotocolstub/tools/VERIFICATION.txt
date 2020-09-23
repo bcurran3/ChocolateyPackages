@@ -1,6 +1,0 @@
-﻿============================== chocoProtocolStub ==============================
-
-The chocoprotocolstub package and accompanying chocoProtocolStub
-program was uploaded by the author, Bill Curran aka BCURRAN3.
-
-============================== chocoProtocolStub ==============================
