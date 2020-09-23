@@ -2,12 +2,11 @@
 $ErrorActionPreference = 'Stop'
 $packageName = 'angryip'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = "$toolsDir\ipscan-$ENV:ChocolateyPackageVersion-setup.exe"
 
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
-  file          = $url
+  file          = "$toolsDir\ipscan-$ENV:ChocolateyPackageVersion-setup.exe"
   silentArgs    = '/S'
   softwareName  = 'Angry IP Scanner*' 
   }

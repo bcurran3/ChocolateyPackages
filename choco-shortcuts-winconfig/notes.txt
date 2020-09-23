@@ -1,1 +1,0 @@
-add check for C:\ProgramData\chocolatey\lib\chocolatey.extension\tools\packagebuilder\packagebuilder.exe

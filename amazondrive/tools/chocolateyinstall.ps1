@@ -19,3 +19,4 @@ Install-ChocolateyPackage @packageArgs
 Start-Sleep -s 5
 #Start-CheckandStop "amazondrive"
 Start-WaitandStop "amazonphotos"
+

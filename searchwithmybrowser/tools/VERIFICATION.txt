@@ -1,9 +1,0 @@
-﻿--------------------- SearchWithMyBrowser -----------------------------
-
-VERIFICATION
-
-The binary included in this package was downloaded by the packager, bcurran3. 
-
-File and checksums can be verified at https://github.com/sylveon/SearchWithMyBrowser/releases
-
---------------------- SearchWithMyBrowser -----------------------------

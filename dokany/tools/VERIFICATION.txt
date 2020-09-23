@@ -1,7 +1,0 @@
-========================= dokany =========================
-
-bcurran3 downloads and packages the executable for dokany
-from the developer's site at:
-https://github.com/dokan-dev/dokany/releases
-
-========================= dokany =========================
