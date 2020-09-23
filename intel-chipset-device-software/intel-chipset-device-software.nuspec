@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-chipset-device-software</id>
+    <version>10.1.18383.8213</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-chipset-device-software</packageSourceUrl>
+    <title>Intel Chipset Device Software (Install)</title>
+    <authors>Intel Corporation</authors>
+    <projectUrl>https://downloadcenter.intel.com/download/29634</projectUrl>
+    <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
+    <copyright>Intel Corporation</copyright>
+    <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.intel.com/content/www/us/en/support/software/chipset-software/intel-chipset-software-installation-utility.html</docsUrl>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>intel chipset 82801 ICH MCH</tags>
+    <summary>Installs Windows 10, Server 2012R2/2016/2019 Intel INF files update.</summary>
+    <description>
+---
+
+### [choco://intel-chipset-device-software](choco://intel-chipset-device-software)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Detailed Description
+
+Not sure if this is the right driver or software for your component? Run Intel® Driver &amp; Support Assistant to automatically detect driver or software updates.
+
+Running this easy-to-use Intel® Driver &amp; Support Assistant tells you if you need to update your chipset INF file and will prompt you to install. This will save you a lot of time on your chipset download and common file downloads needed for your system.
+
+## Name changes
+
+Intel® Chipset Device Software is the new name for the Intel® Chipset Software Installation Utility; this name will be seen when running the installation package.
+
+## About this file/download
+
+The Intel Chipset Device Software installs the Windows* INF files. An INF is a text file that provides the operating system with information about a piece of hardware on the system. In the case of the current Intel Chipset Device Software, that information is primarily the product name for the piece of hardware. This allows the operating system to show the correct name for that piece of hardware in Device Manager.
+
+**Note:** The Intel Chipset Device Software does not install drivers for AGP or USB. Do not download this utility if your device manufacturer is recommending it to correct an "AGP driver," "AGP GART," or "USB driver" issue; it will not correct your issue.
+
+Read attached readme and release notes files before installing.
+
+**About Intel® drivers**
+
+The driver or software for your Intel® component might have been changed or replaced by the computer manufacturer. We recommend you work with your computer manufacturer before installing our driver so you don’t lose features or customizations.
+
+See [list of manufacturers’ Support websites](http://www.intel.com/content/www/us/en/support/topics/oems.html).
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-chipset-device-software/readme.md)**
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/29634/eng/readme.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

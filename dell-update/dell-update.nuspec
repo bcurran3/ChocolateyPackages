@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dell-update</id>
+    <version>3.1.3</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
+    <title>Dell Update (Install)</title>
+    <authors>Dell Inc.</authors>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=5P2R9</projectUrl>
+	<docsUrl>https://www.dell.com/support/home/en-us/product-support/product/command-update/docs</docsUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
+    <copyright>(c) Dell Inc.</copyright>
+    <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/legal_terms-conditions_dellgrmwebpage/art-software-license-agreements</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>dell update dup</tags>
+    <summary>Dell Update supports Inspiron, Vostro, XPS and Alienware systems running Windows 10.</summary>
+    <description>
+---
+### [choco://dell-update](choco://dell-update)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+This package provides the Dell Command | Update Application and is supported on Inspiron, Vostro, XPS and Alienware Windows systems.
+
+This version of Dell Command Update (DCU) now includes a Command Line Interface. DCU 2.X is upgradable to this version.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+</description>
+<releaseNotes>https://topics-cdn.dell.com/pdf/command-update_release-notes_en-us.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="DotNet4.6.1" version="4.6.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

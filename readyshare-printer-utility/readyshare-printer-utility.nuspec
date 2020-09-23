@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>readyshare-printer-utility</id>
+    <version>1.36</version>
+    <title>NETGEAR ReadySHARE Printer Utility (Install)</title>
+    <authors>NETGEAR, Inc.</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readyshare-printer-utility</packageSourceUrl>	
+    <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
+    <projectUrl>https://www.netgear.com/support/product/ReadySHARE_USB_Printer.aspx</projectUrl>
+    <iconUrl>https://www.netgear.com/images/LandingPagesandEvents/Newsletter/GearupforSpring/gear-up-for-spring-netgear-logo-large.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of NETGEAR ReadySHARE Printer Utility](http://support1.gearguy.com/useruploads/images/Scanner.PNG)
+
+Available on many NETGEAR routers, ReadySHARE USB lets you plug in even more capabilities and convenient features through your router’s USB port. These include USB storage you can wirelessly access at home, free software to easily backup your PC or Mac, wirelessly printing from any PC or Mac and the ability to play, view, listen to, and share your videos, photos, and music on DNLA connected TVs, game consoles, or media players.
+
+The ReadySHARE Printer utility lets you share a USB printer that is connected to a USB port on
+your router. You can share this USB printer among the Windows and Mac computers on your
+network. 
+    </description>
+    <summary>ReadyCLOUD gives you remote access over the Internet to a USB storage device that is connected to your router's USB port.</summary>
+    <releaseNotes />
+    <copyright>(C) 2016 NETGEAR, Inc.</copyright>
+    <tags>netgear readyshare router nighthawk print printer utility admin</tags>
+    <docsUrl>http://www.downloads.netgear.com/files/GDC/ReadySHARE_Apps/ReadySHARE_Printer_UM_19Aug2015.pdf</docsUrl>
+    <mailingListUrl>https://community.netgear.com/</mailingListUrl>
+  </metadata>
+</package>

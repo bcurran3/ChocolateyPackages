@@ -1,0 +1,6 @@
+==================== Fedora Remix for Windows Subsystem for Linux ====================
+
+bcurran3 downloads and packages the included binary file from the developer's repository at:
+https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases
+
+==================== Fedora Remix for Windows Subsystem for Linux ====================

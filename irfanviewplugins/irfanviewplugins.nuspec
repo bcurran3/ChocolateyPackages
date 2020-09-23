@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>irfanviewplugins</id>
+    <version>4.54.0.20200909</version>
+    <title>IrfanView All Plugins (Install)</title>
+    <authors>Irfan Skiljan</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>
+    <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
+    <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+___
+### [choco://irfanviewplugins](choco://irfanviewplugins)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+### Available PlugIns and current versions:
+
+There are too many plugins to list in the space of the description. 
+
+Please see the [IrfanView PlugIns](http://www.irfanview.com/plugins.htm) web page for the current list and versions.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanviewplugins/readme.md)**
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <summary>Additional plugins for IrFanView</summary>
+    <copyright>© Irfan Skiljan</copyright>
+    <tags>irfanview image photo viewer plugin plugins</tags>
+    <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
+    <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
+    <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>
+    <dependencies>
+      <dependency id="irfanview" version="4.54" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

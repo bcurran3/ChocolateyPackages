@@ -1,0 +1,31 @@
+﻿==================== SIV - System Information Viewer ====================
+
+SIV has no published license or distribution permissions. The closest thing found to it is "If you find SIV useful, please consider making a donation towards its development. SIV is free for home use but if you wish to use it commercially then contact me for further information." at http://rh-software.com/
+
+I contacted the author, Ray Hinchliffe, and he was given permission to distribute the binaries.
+
+From: Ray Hinchliffe [mailto:ray@rh-software.com] 
+Sent: Monday, July 3, 2017 2:29 AM
+To: 'Bill Curran' <REDACTED>
+Subject: RE: SIV redistribution rights or direct download link
+
+Hi Bill,
+
+I think you are basically talking about how you would mirror siv.zip and am happy for you to use whatever works for you.
+
+I am wondering how you would deal with a new SIV being released? Would you like to receive the e-mail I BCC to the other mirrors with siv.zip attached?
+
+Regards, Ray
+
+From: Ray Hinchliffe [mailto:ray@rh-software.com] 
+Sent: Monday, July 3, 2017 3:27 AM
+To: 'Bill Curran' REDACTED>
+Subject: RE: SIV redistribution rights or direct download link
+
+I hereby confirm I am OFFICAILLY OK about this.
+
+
+
+bcurran3 07/03/2017
+
+==================== SIV - System Information Viewer ====================

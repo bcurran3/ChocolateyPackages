@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>exifviewer-chrome</id>
+    <version>2.4.4</version>
+    <title>EXIF Viewer for Chrome</title>
+    <authors>Rodrigue</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/exifviewer-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/exif-viewer/nafpfdcmppffipmhcpkbplhkoiekndck</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/aBtyiLG2yO2VCRG5-Fwv3IIfrk2pulPFNQwWGXiot-a5XNbw15iYwv2eyxXfr6WaYqAQkD52mg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of EXIF Viewer for Chrome](https://lh3.googleusercontent.com/z--LEERASs1pkZYviFqaI5EoEUVrWlBkQv-LyvB96rBS_X_5kqkyZ-VDeRtDKlm3vjAr6ESw3g=w640-h400-e365)	
+	
+#Quick viewing EXIF
+
+###View EXIF data just mouse over the image
+###Supportes Template, Cache, Exclude (in Options page)	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/exifviewer-chrome/readme.md)**
+	</description>
+    <summary>EXIF Viewer is a Chrome extension that allows you to quickly view EXIF information in pictures.</summary>
+    <tags>exif viewer pictures chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>readycloud</id>
+    <version>1.17.1301.560</version>
+    <title>NETGEAR ReadyCLOUD (Install)</title>
+    <authors>NETGEAR, Inc.</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/readycloud</packageSourceUrl>
+    <licenseUrl>https://www.netgear.com/about/terms-and-conditions/</licenseUrl>
+    <projectUrl>https://www.netgear.com/support/product/ReadyCLOUD</projectUrl>
+    <iconUrl>https://www.netgear.com/images/support/CategoryIcons/icon-readynas-software.png</iconUrl>
+    <copyright>(C) NETGEAR, Inc.</copyright>
+    <docsUrl>http://kb.netgear.com/29785/ReadyCLOUD-FAQ</docsUrl>
+    <mailingListUrl>https://community.netgear.com/t5/ReadyCLOUD/bd-p/readycloud</mailingListUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>netgear readycloud nas router nighthawk remote access file sharing</tags>
+    <summary>ReadyCLOUD gives you remote access over the Internet to a USB storage device that is connected to your router's USB port.</summary>
+    <description>
+___
+###[choco://readycloud](choco://readycloud)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+![Screenshot of NETGEAR ReadyCLOUD](http://www.downloads.netgear.com/files/answer_media/images/readycloud/downloadlink5.png)
+
+##ReadyCLOUD
+
+###Easily add a personal cloud to your home network
+
+ReadyCLOUD is a free service that allows you to access files on your ReadyNAS or on storage connected to your Nighthawk anytime, anywhere, or from any web-enabled device.
+
+###Which solution is right for you?	Router*	ReadyNAS
+
+No monthly fees - Router ✔ ReadyNAS ✔
+
+Anywhere access to your files - Router ✔ ReadyNAS ✔
+
+Additional storage for your devices - Router ✔ ReadyNAS ✔
+
+Easy file sharing - Router ✔ ReadyNAS ✔
+
+Automatic Backup &amp; Sync - Router X ReadyNAS ✔
+
+5 levels of file protection - Router X ReadyNAS ✔
+
+Movie &amp; music streaming - Router X ReadyNAS ✔
+
+*Requires an attached USB storage device
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/readycloud/readme.md)**
+
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <dependencies>
+      <dependency id="autohotkey" version="1.1.27" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

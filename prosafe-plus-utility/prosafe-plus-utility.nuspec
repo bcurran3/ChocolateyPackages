@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>prosafe-plus-utility</id>
+    <version>2.7.5</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/prosafe-plus-utility</packageSourceUrl>
+    <title>NETGEAR ProSAFE Plus Utility (Install)</title>
+    <authors>NETGEAR</authors>
+    <projectUrl>https://www.netgear.com/support/product/prosafe%20plus%20utility.aspx</projectUrl>
+    <iconUrl>https://www.netgear.com/images/LandingPagesandEvents/Newsletter/GearupforSpring/gear-up-for-spring-netgear-logo-large.jpg</iconUrl>
+    <copyright>(C) NETGEAR</copyright>
+    <licenseUrl>http://www.netgear.com/about/terms-and-conditions/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://www.downloads.netgear.com/files/GDC/GS105E/ProSAFE_Plus_Utility_UM_EN.pdf</docsUrl>
+    <mailingListUrl>https://community.netgear.com/t5/English/ct-p/English</mailingListUrl>
+    <tags>netgear prosafe plus utility network switch management</tags>
+    <summary>NETGEAR Smart Control Center for upgrading and maintaining NETGEAR switches.</summary>
+    <description>
+	![Screenshot of NETGEAR ProSAFE Plus Utility](https://www.netgear.com/images/support/security/prosafe_main_tcm122-87599.png)
+	
+##A utility to upgrade and maintain NETGEAR ProSAFE switches.
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/prosafe-plus-utility/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+	</description>
+    <releaseNotes>https://kb.netgear.com/000055538/prosafe-plus-utility-2-7-2</releaseNotes>
+    <dependencies>
+      <dependency id="adobeair" version="3.7.0.2090"/>
+      <dependency id="autohotkey" />
+      <dependency id="dotnet3.5" />	  
+      <dependency id="winpcap" version="4.1.3" />
+    </dependencies>	
+      </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

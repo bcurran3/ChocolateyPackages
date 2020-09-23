@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>harddriveindicator</id>
+    <title>HardDriveIndicator</title>
+    <version>1.3.0.0</version>
+    <authors>Keith Gordon</authors>
+    <owners>bcurran3</owners>
+    <summary>System Tray H.D.D. meter.</summary>
+    <description>
+![alt text](https://cdn.rawgit.com/dtgm/chocolatey-packages/042c0e26f3690af4b6fa9aefaac480c89bc01f67/licenses/harddriveindicator.png)
+
+Displays a system tray load indicator for your local physical disks.
+Has a 5 bar resolution for both read and write operations.
+Has a small memory footprint and low CPU utilisation.
+Auto-calibrates itself to ensure that the output is relative to the disk usage for the previous 60 seconds (Read and write scales are not relative).
+Shows a 'governor' to indicate wether the System Tray Icon is actually being updated.
+Especially useful for situations where the (hardware) hard drive LED is hidden, missing or broken. Works inside of virtual machines.
+Stand-alone executable.
+PACKAGE NOTES: Works with Windows 2000 through Windows 10 and in virtual machines. Self contained package.
+    </description>
+    <tags>hdd hard disk drive led indicator utility tool</tags>
+    <projectUrl>https://web.archive.org/web/20120516130342/http://optionalreaction.com/software/hdi/</projectUrl>
+    <copyright>Copyright 2006 Keith Gordon - All Rights Reserved</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://web.archive.org/web/20120516130342/http://optionalreaction.com/software/hdi/hdi.png</iconUrl>
+    <releaseNotes>No longer an active project.</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

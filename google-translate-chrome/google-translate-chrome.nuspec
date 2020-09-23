@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>google-translate-chrome</id>
+    <version>2.0.7</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-translate-chrome</packageSourceUrl>	
+    <title>Google Translate for Chrome</title>
+    <authors>translate.google.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/iaysb2R0atkr6DbSAhdN4bStgkYqm3F9rNaCLc3DxKoxvUYTKe4XynKGgiPqtlatTdreiFLMUw=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://www.google.com/intl/en/policies</licenseUrl>
+    <summary>Google Translate - View translations easily as you browse the web. By the Google Translate team.</summary>	
+    <description>
+![Screenshot of Google Translate for Chrome](https://lh3.googleusercontent.com/0m8JW2q7W8Q0HdUDiahs8gaoYJ2H_WHmNlo3475gGAxFiQ1kfvvwE_du5XGZxz3n6xncoW0q=w640-h400-e365)
+	
+##Easily check Google Calendar and add new events from websites you visit.
+
+Highlight or right-click on a section of text and click on Translate icon next to it to translate it to your language. Or, to translate the entire page you're visiting, click the translate icon on the browser toolbar. 
+
+UPDATE (v.2.0): Now you can highlight or right-click a text and translate it vs. translate the entire page. You can also change extension options to automatically show translation every time you highlight text.
+
+[Android Client](https://play.google.com/store/apps/details?id=com.google.android.apps.translate) | [iOS Client](https://itunes.apple.com/us/app/google-translate/id414706506)
+ 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-translate-chrome/readme.md)**	
+	</description>
+    <tags>google translate chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

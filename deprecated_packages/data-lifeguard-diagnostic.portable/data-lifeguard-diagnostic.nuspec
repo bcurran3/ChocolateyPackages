@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>data-lifeguard-diagnostic.portable</id>
+    <title>[Deprecated] Western Digital Data Lifeguard Diagnostic for Windows (Portable)</title>
+    <version>1.36</version>
+    <authors>Western Digital</authors>
+    <owners>bcurran3</owners>
+	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/data-lifeguard-diagnostic.portable</packageSourceUrl>	
+    <description>
+![Deprecated](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png)	
+	
+##This package has been deprecated. 
+
+##Western Digital Data Lifeguard Diagnostic for Windows is no longer a portable program and must be installed.
+
+##This package has been replaced by [Western Digital Data Lifeguard Diagnostic for Windows (Install)](https://chocolatey.org/packages/data-lifeguard-diagnostic).
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/data-lifeguard-diagnostic.portable/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+    </description>
+    <projectUrl>http://support.wdc.com/downloads.aspx?lang=en</projectUrl>
+    <bugTrackerUrl>http://support.wdc.com/download/notes/WinDLG_v1_36_Release_Notes.pdf</bugTrackerUrl>
+    <tags>western digital wd data lifeguard hdd diagnostic dlgdiag windlg deprecated</tags>
+    <copyright>Copyright (C) Western Digital</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>http://support.wdc.com/images/wdlogo.png</iconUrl>
+    <dependencies>
+      <dependency id="data-lifeguard-diagnostic" />
+    </dependencies>	
+  </metadata>
+  <files />
+</package>

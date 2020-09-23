@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>spaceinvaders</id>
+    <version>2013.08.01</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/spaceinvaders</packageSourceUrl>
+    <title>Space Invaders (Portable)</title>
+    <authors>PJ Crossley</authors>
+    <projectUrl>http://pjsfreeware.synthasite.com/</projectUrl>
+    <iconUrl>http://pjsfreeware.synthasite.com/resources/Rendered5.jpg</iconUrl>
+	<copyright>PJ Crossley</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pjcrossley space invaders retro game portable</tags>
+    <summary>PJ Crossley's remake of the classic Space Invaders game.</summary>
+    <description>
+![screen shot of Space Invaders](http://pjsfreeware.synthasite.com/resources/newinv.png)
+
+****************          Space invaders with a difference.         **************
+
+(C) PJ Crossley 2008
+
+(Thanks to mordi for the Waving text script) 
+also a modified version of the script is used for the wave patterns by me
+
+###controls.
+* MOVEMENT=arrows keys 
+* FIRE =Space
+* AND JOYSTICK CONTROL
+* Press keys 1-4 on mainscreen for different wave patterns
+* F4 toggle fullscreen
+
+Enjoy.
+
+GM5/06/11/09
+
+More games at:
+http://www.synthasite.com/home
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/spaceinvaders/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
+

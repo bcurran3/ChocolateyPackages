@@ -1,0 +1,62 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+  <metadata>
+    <id>gmailnotifier-firefox</id>
+    <version>0.7.0</version>
+    <title>Gmail™ Notifier (restartless) for Firefox</title>
+    <authors>InBasic</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gmailnotifier-firefox</packageSourceUrl>		
+    <licenseUrl>https://www.mozilla.org/en-US/MPL/1.1/</licenseUrl>
+	<docsUrl>http://firefox.add0n.com/gmail-notifier.html</docsUrl>
+    <projectUrl>https://addons.mozilla.org/en-US/firefox/addon/gmail-notifier-restartless/?src=search</projectUrl>
+    <iconUrl>https://addons.cdn.mozilla.net/user-media/addon_icons/406/406178-64.png?modified=1476454818</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/inbasic/ignotifier</projectSourceUrl>	
+	<bugTrackerUrl>https://addons.mozilla.org/en-US/firefox/addon/gmail-notifier-restartless/versions</bugTrackerUrl>
+    <summary>Multiple account (or label) Gmail notifier (without storing passwords)</summary>
+    <description>
+![Screenshot of Gmail Notifier](https://addons.cdn.mozilla.net/user-media/previews/thumbs/81/81914.png?modified=1413278017)
+
+###About this Add-on
+
+Gmail™ Notifier is an open-source project that notifies you about incoming emails from all your Google Mail accounts and labels.
+
+####Features:
+1. No requirement to enter your credentials.
+2. Multiple account support
+3. Multiple label support
+4. Low bandwidth usage by using RSS technology
+5. Mark as read, report spam, trash or archive messages right from browser's toolbar
+6. Get unread message notifications on Windows taskbar notification area (system tray)
+
+####Source Code:
+Source code of the extension is available on Github: https://github.com/inbasic/ignotifier
+To report bugs and track them submit them: https://github.com/inbasic/ignotifier/issues?state=open
+
+####FAQs:
+Addon's homepage has a FAQ section. Some of the QAs are listed here:
+
+How can I sign-in into multiple accounts at once?
+Why is multiple account notification not working anymore?
+How can I adjust Gmail™ Notifier to get label-specific notifications?
+Is it possible to disable specific accounts from receiving notifications?
+...
+
+###Need more help:
+Check this page for more instructions: http://firefox.add0n.com/gmail-notifier.html
+
+	
+Note: This addon will be installed for all profiles. You can not remove the addon through Firefox - only manually by removing the folder from \extensions or by uninstalling the package. You will have to confirm in Firefox if you want to enable the addon (thats a security feature of Firefox). You can Disable it within Firefox. Subsequent updates should be dealt with automatically by Firefox.
+</description>
+    <releaseNotes></releaseNotes>
+    <tags>inbasic gmail notifier extension firefox</tags>
+    <dependencies>
+      <dependency id="firefox" version="38.0"/>
+    </dependencies>
+  </metadata>
+</package>
+
+
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>inbox-chrome</id>
+    <version>1.0.0.1929</version>
+    <title>Inbox by Gmail for Chrome</title>
+    <authors>inbox.google.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/inbox-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/inbox-by-gmail/gkljgfmjocfalijkgoogmfffkhmkbgol</projectUrl>
+    <iconUrl>https://www.google.com/inbox/assets/images/intro/intro-logo.png</iconUrl>
+    <licenseUrl>https://www.google.com/intl/en/policies/</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Inbox by Gmail for Chrome](https://lh3.googleusercontent.com/WNv0HXcA2jeLgE-RhqLnactJePxj7I_jgennyr9eN3BWHpcpXZ9zxFvjDlA7V-RDOybHJEen=w640-h400-e365)	
+
+##Save links to web pages for later or share via email with one click.
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/inbox-chrome/readme.md)**
+	</description>
+    <summary>Inbox by Gmail - Save links to web pages for later or share via email with one click.</summary>
+    <tags>inbox gmail chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

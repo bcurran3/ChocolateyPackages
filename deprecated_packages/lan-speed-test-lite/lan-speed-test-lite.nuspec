@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lan-speed-test-lite</id>
+    <title>[Deprecated] LAN Speed Test (Lite)</title>
+    <version>1.3.2.20180101</version>
+    <authors>TotuSoft</authors>
+    <owners>bcurran3</owners>
+    <summary>LAN speed benchmarking utility.</summary>
+    <description>
+This package has been superseded by [LAN Speed Test](https://chocolatey.org/packages/lan-speed-test.portable).
+    </description>
+    <projectUrl>http://totusoft.com/lanspeed1/</projectUrl>
+    <tags>lan speed test network benchmark utility deprecated</tags>
+    <copyright>(C) 2008-2015 Totusoft.com</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<dependencies>
+      <dependency id="lan-speed-test.portable" />	
+    </dependencies>	
+  </metadata>
+</package>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>disabledefender-winconfig</id>
+    <version>0.0.1</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disabledefender-winconfig</packageSourceUrl>
+    <title>Disable Windows Defender (Config)</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disabledefender-winconfig</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/disabledefender-winconfig/disabledefender-winconfig_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disabledefender-winconfig</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 disable defender</tags>
+    <summary>This package disables Windows Defender</summary>
+    <description>
+##This package disables Windows Defender
+
+##Uninstalling the package will re-enable Windows Defender	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/disabledefender-winconfig/readme.md)**	
+	</description>
+	<dependencies>
+      <dependency id="chocolatey-fastanswers.extension" />
+    </dependencies>			
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

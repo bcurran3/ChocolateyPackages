@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ultimate-settings-panel</id>
+    <version>6.5</version>
+    <title>Ultimate Settings Panel (Install)</title>
+    <authors>A.J. Armstrong</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/ultimate-settings-panel/ultimate-settings-panel_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+___
+[choco://ultimate-settings-panel](choco://ultimate-settings-panel)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+![Screenshot of Ultimate Settings Panel](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/ultimate-settings-panel/ultimate-settings-panel_screenshot.png)
+
+###Windows based all in one settings and configuration solution
+
+An all in one settings solution for a multitude of configuration options in Windows, Office and internet browsers. We have covered the following systems; Windows XP, Vista, 7, 8 &amp; 10 &amp; Outlook 2010 &amp; 2013.
+
+Ultimate Settings Panel is a tab based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a tab and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
+
+###Features
+* Windows Admin Tab
+* General Admin Tab
+* Windows 10 Admin Tab
+* Outlook Admin Tab
+* Server Admin Tab
+* Windows 8 Tab
+* Google Chrome Tab
+* Internet Explorer Tab
+* Firefox Tab
+* Advanced Tab
+* Windows 7, 8.1 and 10 Compatibility
+* Windows 7 Tab
+* Theme and Colour Scheme Changer
+* CPU Information
+* RAM Information
+* Battery Information
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ultimate-settings-panel/readme.md)**
+
+___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+___
+    </description>
+    <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>
+    <copyright>A.J. Armstrong / techygeekshome.info</copyright>
+    <tags>ultimate settings panel system utility configuration control binary</tags>
+    <projectSourceUrl>https://github.com/techygeekshome/Ultimate-Settings-Panel</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>
+    <docsUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/ultimate-settings-panel-instructions/</docsUrl>
+	<bugTrackerUrl>https://blog.techygeekshome.info/contact/</bugTrackerUrl>
+    <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
+    <dependencies>
+      <dependency id="dotnet4.5.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

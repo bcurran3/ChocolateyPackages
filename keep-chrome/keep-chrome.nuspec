@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>keep-chrome</id>
+    <version>3.1.16302.1110</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/keep-chrome</packageSourceUrl>	
+    <title>Google Keep Chrome Extension</title>
+    <authors>google.com</authors>
+    <owners>bcurran3</owners>
+    <projectUrl>https://chrome.google.com/webstore/detail/google-keep-chrome-extens/lpcaedmchfhocbbapmcbpinfpgnhiddi</projectUrl>
+    <iconUrl>https://lh3.googleusercontent.com/j51B5DhK4UIyEbwG0NNKiMqEI_YrFTBBXYFK4jVqt2nBkl9JKimoXsnoqkgYhG69ivewzKpV=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <summary>Google Keep Chrome Extension</summary>	
+    <description>
+![Screenshot of Google Keep Chrome Extension](https://lh3.googleusercontent.com/AREyFzev3wVPpGJf0edj0HBFGRD7lj_XVw35c1jZ0JdPATsjrx0XXKaibJMAchPJJzdueJIYHA=w640-h400-e365)
+	
+###Save to Google Keep in a single click!
+
+Found a webpage, image, or quote that you want to save for later? With the Google Keep Chrome Extension, easily save the things  you care about  to Keep and have them synced across all of the platforms that you use — including web, Android, iOS, and Wear. Take notes for additional detail and add labels to quickly categorize your note for later retrieval.
+
+Features:
+ • Save URLs, text, and images
+ • Take notes on saved content
+ • Add labels to your notes
+ • Automatically saves to Google Keep
+
+[Android Client](https://play.google.com/store/apps/details?id=com.google.android.keep) | [iOS Client](https://itunes.apple.com/us/app/google-keep/id1029207872?mt=8)
+ 
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/keep-chrome/readme.md)**	
+	</description>
+    <tags>google keep chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+</package>

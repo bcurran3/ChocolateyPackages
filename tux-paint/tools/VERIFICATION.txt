@@ -1,0 +1,8 @@
+﻿==================== Tux Paint ====================
+
+bcurran3 downloaded and packaged the included .EXE for Tux Paint from the developer's website. 
+
+The direct download link can be found at:
+https://sourceforge.net/projects/tuxpaint/files/tuxpaint/ + version #
+
+==================== Tux Paint ====================

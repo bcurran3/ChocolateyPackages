@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>scramble</id>
+    <version>2010.09.16</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/scramble</packageSourceUrl>
+    <title>Scramble (Portable)</title>
+    <authors>PJ Crossley</authors>
+    <projectUrl>http://pjsfreeware.synthasite.com/</projectUrl>
+    <iconUrl>http://pjsfreeware.synthasite.com/resources/Rendered5.jpg</iconUrl>
+	<copyright>PJ Crossley</copyright>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>pjcrossley scramble retro game portable</tags>
+    <summary>PJ Crossley's remake of the classic Scramble game with two extra levels.</summary>
+    <description>
+![screen shot of Scramble](http://pjsfreeware.synthasite.com/resources/scramblex2.png)
+
+****************** A remake of scramble with 2 extra levels *****************	
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/scramble/readme.md)**
+	</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

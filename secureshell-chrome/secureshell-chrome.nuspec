@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>secureshell-chrome</id>
+    <version>0.8.43</version>
+    <title>Secure Shell Extension for Chrome</title>
+    <authors>chrome-secure-shell-publishers</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/secureshell-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/secure-shell-extension/iodihamcpbpeioajjeobimgagajmlibd</projectUrl>
+	<projectSourceUrl>https://chromium.googlesource.com/apps/libapps/</projectSourceUrl>
+    <docsUrl>https://chromium.googlesource.com/apps/libapps/+/master/nassh/doc/FAQ.md</docsUrl>	
+	<mailingListUrl>https://groups.google.com/a/chromium.org/forum/#!forum/chromium-hterm</mailingListUrl>
+    <iconUrl>https://lh3.googleusercontent.com/XtlVAe4r7K3jWFFhqHuUe6ZVhUk-YjIqxge2wYqMfmk9pIo9LfHOZVpH9XmVA61f3GAXOUY5</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+#Terminal emulator and SSH client.
+
+Secure Shell is an xterm-compatible terminal emulator and stand-alone ssh client for Chrome.  It uses Native-Client to connect directly to ssh servers without the need for external proxies.
+
+If you are using Chrome OS, this is the App version for you.  All other platforms should use the extension version instead.
+
+It has been well tested for a couple of years.	
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/secureshell-chrome/readme.md)**
+	</description>
+    <summary>Secure Shell (nassh) is a Chrome App that combines hterm with a NaCl build of OpenSSH to provide a PuTTY-like app for Chrome users.</summary>
+    <tags>secure shell ssh terminal emulator chrome extension</tags>
+    <releaseNotes>https://chromium.googlesource.com/apps/libapps/+/HEAD/nassh/doc/ChangeLog.md</releaseNotes>	
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

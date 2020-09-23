@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>plex-home-theater</id>
+    <version>1.4.1.469001</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plex-home-theater</packageSourceUrl>	
+    <title>Plex Home Theater (Install)</title>
+    <authors>Plex</authors>
+    <licenseUrl>https://github.com/plexinc/plex-home-theater-public/blob/pht-frodo/LICENSE.GPL</licenseUrl>
+    <projectUrl>https://web.archive.org/web/20131207120402/https://www.plexapp.com/desktop/</projectUrl>
+	<projectSourceUrl>https://github.com/plexinc/plex-home-theater-public</projectSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/miketweaver/packages-for-chocolatey/master/icons/plex-home-theater.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<copyright>Copyright © Plex</copyright>
+    <tags>media plex plexhometheater htpc binary</tags>	
+    <summary>For those of you with a dedicated computer for your TV, Plex Home Theater celebrates your personal videos, music and photos and gives them the stage they deserve.</summary>	
+    <description>
+###Plex Home Theater bridges the gap between your computer and your home theater, doing so with a visually appealing user interface that provides instant access to your media. Download Plex Home Theater, and your television will thank you.
+	
+This is a discontinued project, you can read about it [here](https://support.plex.tv/articles/212178138-why-plex-media-player-instead-of-continuing-with-plex-home-theater/)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/plex-home-theater/readme.md)**	
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***	
+	</description>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />	  
+    </dependencies>		
+  </metadata>
+</package>

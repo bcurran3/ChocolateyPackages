@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>grammarly-chrome</id>
+    <version>14.821.1.1383</version>
+    <title>Grammarly for Chrome</title>
+    <authors>grammarly.com</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/grammarly-chrome</packageSourceUrl>
+    <projectUrl>https://chrome.google.com/webstore/detail/grammarly-for-chrome/kbfnbcaeplbcioakkpcpgfkobkghlhen</projectUrl>
+    <iconUrl>http://dy6j70a9vs3v1.cloudfront.net/funnel_wap/static/files/00d420b35697a31360f37dd173163763/logo.svg</iconUrl>
+    <licenseUrl>http://www.grammarly.com/terms</licenseUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Grammarly for Chrome](https://lh3.googleusercontent.com/TFYW8P3Q5s5-zVTlWFO3-GUF4oyYddHjo4na5kqXczlWdxfv9BuYjNSdLVjKPH5U0OyWTmI5JA=w640-h400-e365)
+
+##Enhance your written communication everywhere you type!
+
+Grammarly will make sure your messages, documents, and social media posts are clear, mistake-free, and impactful. Adding Grammarly to Chrome means that your spelling and grammar will be vetted on Gmail, Facebook, Twitter, Linkedin, Tumblr, and nearly everywhere else you write on the web. Once you register your new account, you will start to receive weekly emails with personalized insights and performance stats (one of our most popular new features). Working on a large project, an essay, or a blog post? No sweat. You can create and store all of your documents in your new online editor.
+
+###Contextual spelling checker
+Grammarly detects correctly spelled words used in the wrong context. You can stop worrying about misusing homophones like lose/loose, affect/effect, lie/lay, there/their/they’re, and many other commonly confused words.
+
+###Grammar checker
+Grammarly can fix hundreds of complex grammatical errors, including subject-verb agreement, article use, and modifier placement, to name just a few.
+
+###Trusted by millions of users
+Grammarly is trusted by students, writers, business professionals, bloggers, and plenty of people who just want to write better. Grammarly adapts to your needs and writing style, giving you the confidence of mistake-free communication every time you write.
+
+###Grammarly in the news
+Forbes: “Grammarly quickly and easily makes your writing better and makes you sound like a pro, or at least helps you avoid looking like a fool.”
+Harvard Business Review: “...good grammar is instrumental in conveying ideas with clarity, professionalism, and precision...Good grammar is simply good business.”
+ABC News: “Poor grammar is just as offensive as gross pick-up lines.”
+
+###Grammarly Premium
+If you want to supercharge your writing performance and leave no error unchecked, Grammarly Premium is your answer. Here’s what you can do with Premium:
+
+* Check for over a hundred additional types of errors
+* Get vocabulary enhancement suggestions
+* Detect plagiarism and get citation suggestions
+* Get suggestions for different writing styles, including academic, technical, and creative
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/grammarly-chrome/readme.md)**
+	</description>
+    <summary>Grammarly leaves outdated spelling and grammar checkers in the dust.</summary>
+    <tags>grammarly spellchecker spell checker grammar chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

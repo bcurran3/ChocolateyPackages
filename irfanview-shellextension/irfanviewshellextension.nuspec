@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>irfanview-shellextension</id>
+    <version>1.06</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanview-shellextension</packageSourceUrl>
+    <title>IrfanView Shell Extension (Install)</title>
+    <authors>Irfan Skiljan</authors>
+    <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
+    <iconUrl>http://www.irfanview.com/images/kater_li_oben.gif</iconUrl>
+    <copyright>© Irfan Skiljan</copyright>
+    <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>irfanview image photo viewer plugin shell extension</tags>
+    <summary>Shell extension for IrfanView</summary>
+    <description>
+
+*******	IrfanView Shell Extension *******
+	This PlugIn shows a Context menu for some IrfanView (4.38 and later) 
+        operations in Windows Explorer, Total Commander or other file managers.
+	You can select several (picture) files and perform IrfanView operations:
+	- Play slideshow with selected files (using current IrfanView slideshow dialog settings)
+	- Open selected files in IrfanView Thumbnails window
+	- JPG Lossless Rotation (automatic rotation, based on EXIF orientation, optimize ON, keep all markers ON)
+	- Convert pictures/images to another format (same folder, copies will be created if the result file already exists)
+	Thanks to Michael Dunn!
+*******
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview-shellextension/readme.md)**	
+	</description>
+    <dependencies>
+      <dependency id="irfanview" version="4.51" />	  	
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

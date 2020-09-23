@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>news-feed-eradicator-for-facebook-chrome</id>
+    <version>1.0.6</version>
+    <title>News Feed Eradicator for Facebook for Chrome</title>
+    <authors>Jordan West</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/news-feed-eradicator-for-facebook-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/news-feed-eradicator-for/fjcldmjmjhkklehbacihaiopjklihlgg</projectUrl>
+	<projectSourceUrl>https://github.com/jordwest/news-feed-eradicator</projectSourceUrl>
+    <iconUrl>https://raw.githubusercontent.com/jordwest/news-feed-eradicator/master/assets/icon128.jpg</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+	<licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <description>
+![Screenshot of News Feed Eradicator](https://raw.githubusercontent.com/jordwest/news-feed-eradicator/master/assets/CWS_Screenshot_1.png)
+
+###Find yourself spending too much time on Facebook? Eradicate distractions by replacing your entire news feed with an inspiring quote
+Do you often want to check Facebook, and then find yourself disappearing for hours as you are consumed by the bottomless pit that is the News Feed? Do you want your life back, but can't bear to delete Facebook altogether?
+
+Enter News Feed Eradicator. Your life will never be the same again.
+
+News Feed Eradicator removes your news feed (and live ticker) and replaces it instead with an inspirational quote. 
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/news-feed-eradicator-for-facebook-chrome/readme.md)**
+	</description>
+    <summary>News Feed Eradicator helps you cut out the crap and get back to communicating with friends over the internets.</summary>
+    <tags>news feed eradicator jwest facebook chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

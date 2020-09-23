@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>neat-update</id>
+    <version>5.7.1.474</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/neat-update</packageSourceUrl>
+    <title>Neat 5 for Windows (Update)</title>
+    <authors>The Neat Company</authors>
+    <projectUrl>http://www.neat.com/support/windows-v5/</projectUrl>
+    <iconUrl>https://neat-marketing.s3.amazonaws.com/neat-2015/blog/default-featured.jpg</iconUrl>
+    <copyright>The Neat Company</copyright>
+    <licenseUrl>http://www.neat.com/policies/terms-and-conditions/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://s3.amazonaws.com/neat-marketing/UserGuides/Neat5ForPCUserGuideMarch2012.pdf</docsUrl>
+    <tags>neat scan scanner scanning neatdesk notsilent admin</tags>
+    <summary>Neat 5 for Windows - scanning software for NeatReceipts, NeatDesk, and NeatConnect scanners</summary>
+    <description>
+###Neat v5.7 Update
+
+Please update your Neat for Windows software to the latest version.
+
+This update includes the following changes:
+
+* Windows 10 support
+* UI enhancements
+* Bug fixes and stability improvements
+ 
+
+**Note:** v5.7 is not compatible with Windows XP and Vista Operating Systems. If you are an XP or Vista user, please download Neat v5.4
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/neat-update/readme.md)**
+	</description>
+    <releaseNotes>http://www.neat.com/support/desktop-notifications/v5-7update/</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet3.5" />
+      <dependency id="neat" version="5.4.1.273" />	  
+    </dependencies>		
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

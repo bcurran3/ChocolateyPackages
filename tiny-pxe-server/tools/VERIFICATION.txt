@@ -1,0 +1,8 @@
+﻿==================== Tiny PXE Server ====================
+
+bcurran3 downloads and packages the included .ZIP from the developer's website. 
+
+The direct download link is:
+http://erwan.labalec.fr/tinypxeserver/pxesrv.zip
+
+==================== Tiny PXE Server ====================

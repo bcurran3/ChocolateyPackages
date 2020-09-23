@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>windows-10-update-assistant</id>
+    <version>1.4.9200.23072</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-10-update-assistant</packageSourceUrl>
+    <title>Windows 10 Update Assistant (Portable)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/windows-10-update-assistant/windows-10-update-assistant_icon.png</iconUrl>
+    <copyright>© Microsoft</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://support.microsoft.com/en-us/help/12373/windows-update-faq</docsUrl>
+    <tags>microsoft windows 10 win10 update assistant 2004 20H1</tags>
+    <summary>Windows 10 Update Assistant downloads and starts the setup for Windows 10 version 2004</summary>
+    <description>
+---
+
+### [choco://windows-10-update-assistant](choco://windows-10-update-assistant)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Get the Windows 10 May 2020 (20H1) Update now 
+
+The Windows 10 Update Assistant can help you update to the latest version of Windows 10.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-10-update-assistant/readme.md)**
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://docs.microsoft.com/en-us/windows/whats-new/whats-new-windows-10-version-2004</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

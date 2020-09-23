@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>erpxe</id>
+    <version>1.2</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/erpxe</packageSourceUrl>
+    <title>ERPXE (Install)</title>
+    <authors>Adam Mallul (RaveMaker) and Etay Cohen-Solal (ET)</authors>
+    <projectUrl>http://erpxe.org</projectUrl>
+    <iconUrl>http://erpxe.org/images/thumb128.png</iconUrl>
+    <copyright>All rights reserved ERPXE (c) 2007-2013</copyright>
+    <licenseUrl>https://en.wikipedia.org/wiki/GNU_General_Public_License#Version_3</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ERPXE/erpxe</projectSourceUrl>
+    <docsUrl>http://erpxe.org/Windows_installation_instructions</docsUrl>
+    <mailingListUrl>http://erpxe.net/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ERPXE/erpxe/issues</bugTrackerUrl>
+    <tags>erpxe pxe server admin</tags>
+    <summary>ERPXE project simplifies the process of installing and customizing a Multi-Boot PXE server.</summary>
+    <description>
+![Screenshot of ERPXE](http://erpxe.org/images/2/2b/Sc-er-main.jpg)
+
+###About ERPXE
+
+* ERPXE is a complete PXE solution featuring a broad range of recovery tools and various OS installations in one box.
+* ERPXE is a free and open source project, which uses the GNU General Public License version 3.
+* Our primary goal is to make the PXE experience less "painful" for the entire IT society.
+
+###What can i do with ERPXE? (and any PXE)
+
+you can do alot!
+
+* fix/manipulate the installed OS from outside.
+* clean viruses
+* change partitions include system
+* backup/restore your entire HD
+* run hardware diagnostic tests
+
+and lot more....
+
+**PACKAGING NOTES:** The "tftpboot" directory the documentation refers to can be found inside the erpxe package tools directory.
+	</description>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="tftpd32" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

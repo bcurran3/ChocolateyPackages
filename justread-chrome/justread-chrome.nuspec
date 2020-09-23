@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>justread-chrome</id>
+    <version>1.1.12</version>
+    <title>Just Read for Chrome</title>
+    <authors>Zach Saucier</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/justread-chrome</packageSourceUrl>		
+    <projectUrl>https://chrome.google.com/webstore/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod</projectUrl>
+	<docsUrl>https://github.com/ZachSaucier/Just-Read</docsUrl>
+    <iconUrl>https://lh3.googleusercontent.com/WseKDCOtXlDKnrLFlN1VOHnaiFMElSarvvEAScNmERP5RYxvq8rEFTSRNJ0_PoaqUMYcNi1W=w26-h26-e365</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+![Screenshot of Just Read for Chrome](https://lh3.googleusercontent.com/tGWmdYSGdfZTVeMMPZy0NhL0gac55-dDCu8l79zMuV1T1AcF86TUSBc8RR4G8LT2sAjrUKqusA=w640-h400-e365)	
+
+###A customizable reader extension.
+
+With one click (or less!), you can remove distractions like:
+* The page's styling
+* Ads
+* Popups
+* Comments
+
+And read the article in a customizable, simplified format - like a read mode but better! No login and completely free!
+
+Users can:
+* Use the default theme
+* Modify the default theme using a graphical editor or CSS
+* Use a theme someone else has made (found at https://goo.gl/Z59SM4 )
+* Use their very own custom styling
+* Auto-run Just Read format on specific sites
+* Auto-enable fullscreen when Just Read is started
+* Use a keyboard shortcut to run Just Read
+* Print the custom-styled version of the article
+* Use the selection mode to choose exactly which text they want to select for reading
+* Use the deletion mode to remove any unwanted content after selection
+* Edit incorrect meta information generated
+* Control which options Just Read uses
+
+Just Read is a feature-packed and more customizable alternative to the now-defunct Clearly extension, working like a specialized reader view, and includes support for special needs like MathJax and right to left languages.
+
+Just Read collects no data from any user, so you have nothing to worry about in terms of privacy.
+
+Just Read is completely open source and can be found on GitHub here https://github.com/ZachSaucier/Just-Read
+
+Please read the README in the GitHub link above for more details about Just Read!
+	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/justread-chrome/readme.md)**
+	</description>
+    <summary>Just Read - The extension makes it easy to view web articles in a more readable, attractive, and custom format - like a read mode, but better. It removes the distractions like ads, modals, and navigation from vision, letting the user just read the content.</summary>
+    <tags>just read zachsaucier reader chrome extension</tags>
+    <dependencies>
+      <dependency id="googlechrome" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
