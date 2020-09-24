@@ -1,11 +1,11 @@
-﻿$ErrorActionPreference = 'Stop'
-# download page without login - https://www.realvnc.com/en/connect/download/vnc/
+﻿# download page without login - https://www.realvnc.com/en/connect/download/vnc/
+$ErrorActionPreference = 'Stop'
 $packageName    = 'vnc-connect'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $extractDir     = "$toolsDir\extracted"
-$url            = 'https://www.realvnc.com/download/file/vnc.files/VNC-Server-6.7.0-Windows-msi.zip'
-$checksum       = '840B7D744C53142706C26BC3606B961781D0A8D4F8EFA95447E6CFB050623B57'
+$url            = "https://www.realvnc.com/download/file/vnc.files/VNC-Server-$env:ChocolateyPackageVersion-Windows-msi.zip"
+$checksum       = 'dd8550e602c1ae873e60b6ac7d5135c044bb610c7fc552f2dd2a01586f1a436a'
 
 
 $packageArgs = @{

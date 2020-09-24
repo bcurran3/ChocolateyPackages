@@ -1,4 +1,5 @@
-﻿$packageName = 'centipede' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'centipede' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\centipede.zip"
 $checksum    = 'FD9DF178F85EFBD7A9594C25514AF1C0C0940D261778998ACA975EF78C999CE6'

@@ -16,7 +16,7 @@ $packageArgs = @{
   
 Start-Process $ahkExe $ahkFile  
 Install-ChocolateyInstallPackage @packageArgs
-Start-Sleep -s 10
+Start-Sleep -s 20
 Start-CheckandStop "Settings32"
 Start-CheckandStop "Settings64"
 Start-CheckandStop "AutoHotkey"

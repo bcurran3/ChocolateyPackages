@@ -1,4 +1,5 @@
-﻿$packageName   = 'acddokannet'
+﻿$ErrorActionPreference = 'Stop'
+$packageName   = 'acddokannet'
 $installerType = 'msi'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'https://github.com/Rambalac/ACDDokanNet/releases/download/v1.7.3/ACDDokanNetInstaller.msi' 

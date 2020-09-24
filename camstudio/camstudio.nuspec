@@ -28,3 +28,4 @@ CamStudio records screen and audio activity on your computer to create AVI video
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

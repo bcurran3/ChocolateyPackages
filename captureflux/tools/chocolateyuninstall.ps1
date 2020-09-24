@@ -1,4 +1,5 @@
-﻿$packageName  = 'captureflux' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'captureflux' 
 $shortcutName = 'CaptureFlux.lnk'
 
 remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'

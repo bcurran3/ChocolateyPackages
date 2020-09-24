@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>bing-to-google-chrome</id>
@@ -6,9 +7,9 @@
     <title>Bing To Google™ for Chrome</title>
     <authors>niko109.com</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/bing-to-google-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/bing-to-google-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/bing-to-google/klncmpknmcddjhglodllibbglcdmdmbi</projectUrl>
-    <bugTrackerUrl>https://chrome.google.com/webstore/detail/bing-to-google/klncmpknmcddjhglodllibbglcdmdmbi</bugTrackerUrl>	
+    <bugTrackerUrl>https://chrome.google.com/webstore/detail/bing-to-google/klncmpknmcddjhglodllibbglcdmdmbi</bugTrackerUrl>
     <iconUrl>https://lh4.googleusercontent.com/pdSm59pybpN7UH3teKZMrHdjWbBx_0PuHP2EUJMP7qpd-I58tv6ofXDxBK71HgpeQF-4P-frJQ=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -24,7 +25,7 @@ It will also redirect Cortana searches in Windows 10 to Google
 	</description>
     <summary>Redirects Bing searches to Google searches</summary>
     <tags>chrome extension bing google redirect search engine</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

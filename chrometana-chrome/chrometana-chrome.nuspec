@@ -1,16 +1,17 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chrometana-chrome</id>
     <version>2.0.1</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chrometana-chrome</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chrometana-chrome</packageSourceUrl>
     <title>Chrometana for Chrome</title>
     <authors>Theo</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/chrometana-redirect-bing/kaicbfmipfpfpjmlbpejaoaflfdnabnc</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/wLhNKizfdoUs6TrxossCXLGW8oCAPMB7LbjKINu0Baqp3HaO6XUK0xWU5rx4rayWO-XjkFjgjto=w26-h26-e365</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Chrometana lets your redirect Bing to the search engine of your choice.</summary>	
+    <summary>Chrometana lets your redirect Bing to the search engine of your choice.</summary>
     <description>
 ###Redirect all Bing (and therefore Cortana) searches to a search engine of your choice!
 
@@ -23,7 +24,7 @@ Bing is an unfortunate thing. Defeat it with Chrometana, allowing for all Bing s
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chrometana-chrome/readme.md)**	
 	</description>
     <tags>chrometana redirect bing chrome extension</tags>
-	<releaseNotes>http://chrometana.theo.li/</releaseNotes>
+    <releaseNotes>http://chrometana.theo.li/</releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

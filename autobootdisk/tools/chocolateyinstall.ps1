@@ -1,4 +1,5 @@
-﻿$packageName    = 'autobootdisk'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'autobootdisk'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.simpodex.com/autobootdisk5.7.msi' 

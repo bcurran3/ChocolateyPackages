@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $bits = Get-ProcessorBits
 $packageName = 'amazon-music-chrome'
 $extensionID = 'cfkfgcfgfpgmkogcnibdjcckkpdiajgp'

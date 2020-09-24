@@ -1,7 +1,5 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'wsl-ubuntu-1604'
 
-wslconfig /unregister Ubuntu
+wslconfig /unregister Ubuntu-16.04
 wslconfig /list
-
-Uninstall-BinFile -Name Ubuntu1604

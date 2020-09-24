@@ -4,7 +4,7 @@
   <metadata>
     <id>logitech-media-server</id>
     <title>Logitech Media Server (Install)</title>
-    <version>7.9.2</version>
+    <version>7.9.3</version>
     <authors>Logitech</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-media-server</packageSourceUrl>
@@ -27,8 +27,6 @@ It doesn't matter if your library includes 100 tracks or 100,000. Or if you rip 
 Download Logitech Media Server software today and start listening to your personal music collection on a Squeezebox in any room in your home.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/logitech-media-server/readme.md)**
-
-    
 
 ---
 

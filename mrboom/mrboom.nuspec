@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mrboom</id>
-    <version>4.7</version>
+    <version>4.9</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mrboom</packageSourceUrl>
     <title>MrBoom (Portable)</title>
@@ -15,13 +15,15 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/Javanaise/mrboom-libretro</projectSourceUrl>
     <bugTrackerUrl>https://github.com/Javanaise/mrboom-libretro/issues</bugTrackerUrl>
-    <tags>mrboom multiplayer action arcade retroarch game portable bomberman </tags>
+    <tags>mrboom multiplayer action arcade retroarch game portable bomberman binary embedded</tags>
     <summary>Mr.Boom is an 8 players Bomberman clone for RetroArch/Libretro </summary>
     <description>
-___
-[choco://mrboom](choco://mrboom)
+---
+
+### [choco://mrboom](choco://mrboom)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
 
 ![screenshot of MrBoom](http://mrboom.mumblecore.org/mrboom-5.gif)
 	
@@ -37,7 +39,7 @@ Check the [Downloading and Playing Mr. Boom Core](https://www.youtube.com/watch?
 
 You can find netplay games by joining the retroarch discord channel or #mrboom on freenode!
 
-####Options available:
+#### Options available:
 
 * Team mode by color or by sex.
 * No monster mode.
@@ -47,15 +49,15 @@ This manual page documents briefly the mrboom command.
 
 mrboom is an SDL2 version of the original 1999 version of Mr. Boom
 
-####USAGE
+#### USAGE
 The  goal of the game is to bomb away your enemies and other players.  Bomberman is controlled with the keyboard or with (up to 8) joy-pads.
 
-####Keys   
+#### Keys   
 * Space - Add a bomberman bot
 * Return - Start a game
 * ESC - Quit
 
-####1st player
+#### 1st player
 * Left - Left
 * Right - Right
 * Up - Up
@@ -64,7 +66,7 @@ The  goal of the game is to bomb away your enemies and other players.  Bomberman
 * Right Alt or PageDown - Ignite bomb
 * Right Shift or Home - Jump
 
-####2nd player
+#### 2nd player
 * A - Left
 * D - Right
 * W - Up
@@ -74,7 +76,7 @@ The  goal of the game is to bomb away your enemies and other players.  Bomberman
 * Left Shift - Jump
 
 
-####COMMAND LINE OPTIONS
+#### COMMAND LINE OPTIONS
 * -f, --fx x FX volume: with x from 0 to 10.
 * -h, --help Show summary of options.
 * -m, --nomonster No monster mode.
@@ -86,13 +88,15 @@ The  goal of the game is to bomb away your enemies and other players.  Bomberman
 * -k, --skynet Humans vs. machines mode
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/mrboom/readme.md)**
-	
+  
 
-___
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
 
-</description>
+---
+
+  </description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

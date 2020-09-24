@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>bulk-ad-users</id>
     <version>1.0.3267.32645</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/bulk-ad-users</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/bulk-ad-users</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Bulk AD Users (Portable)</title>
     <authors>David Wiseman</authors>
     <projectUrl>http://www.wisesoft.co.uk/software/bulkadusers/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/bulk-ad-users/BulkADUsers_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/bulk-ad-users/BulkADUsers_icon.png</iconUrl>
     <copyright>Wisesoft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <bugTrackerUrl>http://www.wisesoft.co.uk/forum/forum19-bulk-ad-users--bugs.aspx</bugTrackerUrl>
-	<mailingListUrl>http://www.wisesoft.co.uk/forum/forum18-bulk-ad-users.aspx</mailingListUrl>
+    <mailingListUrl>http://www.wisesoft.co.uk/forum/forum18-bulk-ad-users.aspx</mailingListUrl>
     <tags>wisesoft bulk ad users active directory util utility admin portable</tags>
     <summary>Bulk AD Users - A tool that allows bulk updates to Active Directory User Attributes</summary>
     <description>

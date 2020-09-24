@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Start-WaitandStopActual.ps1 - Stops process $ProcessName anywhere up to 5 minutes after being called.
 # This function is called by Start-WaitandStop.ps1 and should not be used directly.
 

@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'chrono-chrome'
 $extensionID = 'mciiogijehkdemklbdcbfkefimifhecn'
 if ($bits -eq 64)

@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Show-Patreon.ps1 - Displays a message and link to your Patreon account.
 # If you define $global:packageMaintainer in your chocolateyinstall.ps1, 
 # i.e. $global:packageMaintainer = 'BCURRAN3' it will use that too.

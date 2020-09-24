@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Tests to verify a dependency is installed and returns true/false. Does NOT check version. 
 # Designed for use with my OS dependency packages but can be used for anything to verify that SOME VERISION 
 # of the dependency is installed; i.e. Chocolatey v0.10.11 will continue trying to install a package even

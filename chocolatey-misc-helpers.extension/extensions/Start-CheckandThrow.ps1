@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Checks for and throws install if $ProcessName is running
 # Good for aborting installation of portable programs if they are running. Otherwise Chocolatey might think the package installed but you're still running the old version. This is an alternative to just stopping the process.
 

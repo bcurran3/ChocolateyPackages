@@ -1,4 +1,5 @@
-﻿$packageName = 'betterhash' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'betterhash' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://www.betterhash.net/download/BetterHash_Setup.exe'
 $checksum    = '2007E7B9AA715E8D92F91C8B697261028245AC58DEDB5D0A0FC60594E745A89B'

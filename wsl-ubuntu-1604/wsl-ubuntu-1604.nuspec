@@ -1,37 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-<!-- Unfortunately there are not a lot of truly specific URLs for this package, a lot of allowances needed to be made.  -->  
+    <!-- Unfortunately there are not a lot of truly specific URLs for this package, a lot of allowances needed to be made.  -->
     <id>wsl-ubuntu-1604</id>
-    <version>16.04.3.020181002</version>
+    <version>16.04.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-ubuntu-1604</packageSourceUrl>
-	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>
-    <title>Ubuntu 16.04.3 LTS for Windows Subsystem for Linux (Install)</title>
+    <projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>
+    <title>Ubuntu 16.04.6 LTS for Windows Subsystem for Linux (Install)</title>
     <authors>Canonical Ltd.</authors>
-    <iconUrl>https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/wsl-ubuntu-1604/ubuntu_orange_hex.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wsl-ubuntu-1604/ubuntu_orange_hex.png</iconUrl>
     <copyright>© Canonical Ltd.</copyright>
     <licenseUrl>https://www.ubuntu.com/legal</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
-	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
-    <tags>wsl ubuntu xenial linux notsilent</tags>
+    <bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
+    <tags>wsl ubuntu xenial linux binary</tags>
     <summary>This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux</summary>
     <description>
-###This packages installs Ubuntu 16.04.3 LTS (xenial) for Windows Subsystem for Linux
+---
+
+### [choco://wsl-ubuntu-1604](choco://wsl-ubuntu-1604)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+### This packages installs Ubuntu 16.04.6 LTS xenial) for Windows Subsystem for Linux
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-ubuntu-1604/readme.md)**
+	
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
-	  <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-      <dependency id="wsl" version="1.0.1" />	
-    </dependencies>		
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="wsl" version="1.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

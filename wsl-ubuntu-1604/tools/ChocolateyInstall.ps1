@@ -1,76 +1,51 @@
-﻿# Ubuntu-1604 doesn't support being silently installed. This script kludges it.
-$ErrorActionPreference = 'Stop'
-$packageName    = 'wsl-ubuntu-1604'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://aka.ms/wsl-ubuntu-1604'
-$checksum       = '24F2926D359B6ABAE595CDA7300AEDC567C294777D4BFC8AACC0E6598DB9680A'
-$unzipLocation  = "$toolsDir\wslfiles"
+﻿$ErrorActionPreference = 'Stop'
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$unzipLocation = "$toolsDir\wslfiles"
+$shortcutName  = 'WSL Ubuntu 16.04.lnk'
+$exe           = 'ubuntu1604.exe'
+$appx          = 'Ubuntu_1604.2019.523.0_x64.appx'
 
-# When Chocolatey moves the package files in the lib directory to lib-bkp upon upgrade it will cause a 
-# disconnection between WSL and the registered location of the WSL distribution files. 
-# It was considered to unregister the distribution and reinstall, but anything created, installed, or upgraded 
-# in the current distribution's filesystem would be lost. Decided: Best to abort. 
-if (Test-Path $env:ChocolateyInstall\lib-bkp\$packageName){
-   Write-Warning "  * Upgrades are not supported. Please uninstall and reinstall the package."
-   Write-Warning "  * Consider pinning this package to avoid attempted package updates and preserve your configuration:"
-   Write-Warning "  * ""choco pin add -n=$packageName"""
-   throw
-  } 
-  
-$packageArgs = @{
-  packageName    = $packageName
-  unzipLocation  = $unzipLocation
-  fileType       = 'ZIP' 
-  url            = $url
-  checksum       = $checksum
-  checksumType   = 'sha256'
+$Upgrade = ((Test-Path "$ENV:ChocolateyInstall\lib\wsl-ubuntu-1604\tools\wslfiles\ubuntu1604.exe") -or (Test-Path "$ENV:ChocolateyInstall\lib\wsl-ubuntu-1604\tools\wslfiles\ubuntu.exe"))
+
+if ($Upgrade){
+    Write-Host "  ** Existing version of Ubuntu 16.04 found." -Foreground Magenta
+    Write-Host "  ** Upgrading packages." -Foreground Magenta
+	ubuntu1604 run apt update
+	ubuntu1604 run apt upgrade -y
+    return
 }
 
-Install-ChocolateyZipPackage @packageArgs
+Write-Host "  ** Unzipping files. ""Maxima enim, patientia virtus."" (Look it up, you've got time.)" -Foreground Magenta
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\$appx" -Destination "$toolsDir\wslfiles"
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\wslfiles\install.tar.gz" -Destination "$toolsDir\wslfiles"
+Get-ChocolateyUnzip -FileFullPath "$toolsDir\wslfiles\install.tar" -Destination "$toolsDir\wslfiles"
 
-# run Ubuntu-1604 installer in a new window
-Set-Location -Path $unzipLocation
-Start-Process ubuntu.exe
+$packageArgs = @{
+  packageName    = 'wsl-ubuntu-1604'
+  softwareName   = ''
+  fileType       = 'EXE'
+  silentArgs     = 'install --root'  
+  file           = "$toolsDir\wslfiles\$exe"
+  validExitCodes = @(0,1)
+ }
+Install-ChocolateyInstallPackage @packageArgs
 
-Write-Host "  **********************************************************************************" -foreground magenta
-Write-Host "  * When you see ""Installation successful!"" in the other window, you may close it. *" -foreground magenta
-Write-Host "  * Otherwise, just wait up to 25 seconds and it will close automatically.         *" -foreground magenta
-Write-Host "  * Unsuccessful installs will abort and close automatically after 15 minutes.     *" -foreground magenta
-Write-Host "  **********************************************************************************" -foreground magenta
+ubuntu1604 run lsb_release -a
 
-# Make sure Ubuntu-1604 starts setting up and doesn't give an error
-Start-Sleep -Seconds 5
-if (Test-Path $unzipLocation\rootfs)
-   {
-# wait for Ubuntu-1604 installer to finish extracting files
-    $LoopMePlease=0
-    while (!(Test-Path $unzipLocation\rootfs\var\tmp)){
-           Start-Sleep -Seconds 15
-		   $LoopMePlease++
-# break out of the loop after 15 minutes in case of error
-		   if ($LoopMePlease -gt 60) { 
-			  $SomethingWentWrong=$true
-	          Write-Warning "Something went wrong. Possibly Ubuntu-1604 already installed or corrupt."
-			  wslconfig /list
-		      break
-			 } 
-          }
-    } else {
-	  Write-Warning "Something went wrong. Possibly you haven't rebooted since enabling WSL."
-	  $SomethingWentWrong=$true
-	 }
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath "$toolsDir\wslfiles\$exe" -WorkingDirectory "$toolsDir\wslfiles"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\wslfiles\$exe" -WorkingDirectory "$toolsDir\wslfiles"
 
-# wait 10 more seconds to make sure the files IN rootfs\var\tmp get extracted
-if (!($SomethingWentWrong)) {Start-Sleep -Seconds 10}
+Remove-Item "$toolsDir\*.appx" -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\AppxMetadata" -Recurse -Force  -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\Assets" -Recurse -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\*.gz" -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\*.p7x" -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\*.pri" -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\*.tar" -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\wslfiles\*.xml" -Force -EA SilentlyContinue | Out-Null
 
-# terminate ubuntu.exe ~when it hits the "Enter new UNIX username:" prompt (meaning installation has finished)
-Start-CheckandStop "ubuntu"
-Start-CheckandStop "wsl"
+$WhoAmI=whoami
+icacls.exe "$toolsDir\wslfiles" /grant $WhoAmI":"'(OI)(CI)'F /T | Out-Null
 
-if ($SomethingWentWrong) {throw}
-
-Install-BinFile -Name Ubuntu1604 -Path "$unzipLocation\ubuntu.exe"
-# The normal prompting for creation of a default user and password is bypassed (aborted) by this script,
-# necessitated for automated install.
-Write-Host "  ** root is the default user upon running WSL/Ubuntu." -foreground magenta
 wslconfig /list
+Write-Host "  ** To run Ubuntu 16.04, type ""ubuntu1604"" from your CLI." -Foreground Magenta

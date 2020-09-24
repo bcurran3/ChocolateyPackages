@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>addtoany-chrome</id>
@@ -6,11 +7,11 @@
     <title>AddToAny: Share Anywhere for Chrome</title>
     <authors>www.addtoany.com</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/addtoany-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/addtoany-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/addtoany-share-anywhere/ffpgijchhhkhnokafdeklpllijgnbche</projectUrl>
     <iconUrl>https://lh3.googleusercontent.com/n6kpA-xZE_0iEy9A8WkJpGT45XB6MEq09t9UdBoIrCfwIoBm3CA9gqI13AqbBN6yx7GwVDjx=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>Chrome extension to add share options to MANY popular sites.</summary>	
+    <summary>Chrome extension to add share options to MANY popular sites.</summary>
     <description>
 ![Screenshot of AddToAny: Share Anywhere](https://lh3.googleusercontent.com/W5V5FWwVI_kbVs5akBuu2BAKdFpGpI7cd_9sVtd2GQtrsheysDSQuiBgqdmTR8hRoqdmaag_BA=s640-h400-e365-rw)
 	
@@ -49,7 +50,7 @@ Facebook, Twitter, Pinterest, Telegram, Gmail, Google Plus, Pinboard, WordPress,
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
     <tags>addtoany share social media chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

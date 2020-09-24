@@ -10,7 +10,7 @@
 # Save --packageparameters
 # Open to suggestions - open a GitHub issue please if you have a suggestion/request.
 
-Write-Host "choco-package-list-backup.ps1 v2020.04.06 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "choco-package-list-backup.ps1 v2020.09.22 - backup Chocolatey packages list locally and to the cloud" -Foreground White
 Write-Host "Copyleft 2017-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
@@ -370,7 +370,8 @@ if ($UseReadyCLOUD -match "True" -and (Test-Path $ENV:USERPROFILE\ReadyCLOUD))
    }
 
 # Backup Chocolatey package names on local computer to packages.config file in Public directory if running under system account (only place it will save running under system except $CustomPath
-if ($ENV:computername -eq $ENV:username.trim('$'))
+#if ($ENV:computername -eq $ENV:username.trim('$'))
+if ($ENV:username -eq 'system')
    {
     $SavePath = "$ENV:PUBLIC\$SaveFolderName"
     Write-PackagesConfig

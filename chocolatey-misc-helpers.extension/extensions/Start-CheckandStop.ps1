@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Start-WaitandStop.ps1 - Checks for and stops $ProcessName if running.
 # $ProcessWasRunning can be checked later in scripts to re-run $ProcessName if it was running before stopped.
 # $ProcessFullPath is the full path and executable of the stopped process.

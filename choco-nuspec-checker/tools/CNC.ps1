@@ -7,10 +7,11 @@
 # REF: https://github.com/chocolatey/package-validator/wiki
 
 param (
-    [string]$path=(Get-Location).path
+    [string]$path=(Get-Location).path,
+	[switch]$recurse
  )
 
-Write-Host "CNC.ps1 v2020.09.15 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2020.09.20 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -26,19 +27,11 @@ $BinaryExtensions=@("*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7
 $CDNlist      = "https://www.staticaly.com, https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
 $CNCHeader    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCHeader.txt"
 $CNCFooter    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCFooter.txt"
+$CNCPackageNotes = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCPackageNotes.txt"
 $PNGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\PngOptimizerCL.exe)
 $OptimizeImages=$False
 $NewCDN       = "Staticly"
 $StaticlyCDN  = $True
-$GLOBAL:Required=0
-$GLOBAL:Guidelines=0
-$GLOBAL:Suggestions=0
-$GLOBAL:Notes=0
-$GLOBAL:Fixes=0
-$GLOBAL:FYIs=0
-$GLOBAL:UpdateNuspec=$False
-$GLOBAL:TemplateError=0
-$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
 $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one."
 $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
@@ -51,10 +44,14 @@ if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
     Write-Host "   Adds and saves a footer from $CNCFooter to your <description>."	
 	Write-Host "-AddHeader"
     Write-Host "   Adds and saves a header from $CNCHeader to your <description>."
+	Write-Host "-AddPackageNotes"
+    Write-Host "   Adds and saves a package notes link from $CNCPackageNotes to your <description>."
 	Write-Host "-EditFooter"
     Write-Host "   Edit $CNCFooter with Notepad++ or Notepad."
 	Write-Host "-EditHeader"
     Write-Host "   Edit $CNCHeader with Notepad++ or Notepad."
+	Write-Host "-EditPackageNotes"
+    Write-Host "   Edit $CNCPackageNotes with Notepad++ or Notepad."
 	Write-Host "-MakeBackups"
     Write-Host "   Make filename.ext.CNC.BAK of all modified files."
 	Write-Host "-OpenURLs"
@@ -67,6 +64,8 @@ if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
     Write-Host "   Displays $CNCHeader."
 	Write-Host "-OptimizeImages, -OptimizePNGs"
     Write-Host "   Runs PNGOptimizerCL on supported image files."
+	Write-Host "-Recurse"
+    Write-Host "   Runs CNC recursively."
 	Write-Host "-Update"
     Write-Host "   Will re-write out your nuspec file; e.g. change to UTF-8 w/o BOM."
 	Write-Host "-UpdateAll"
@@ -89,9 +88,7 @@ if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
     Write-Host "   Use jsDeliver for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
 	Write-Host "-WhatIf"
     Write-Host "   Test run, don't save changes."
-	Write-Host "To check all your packages' nuspec files: Change to the root directory of your packages and run (via PowerShell):" -Foreground Magenta
-	Write-Host '   Get-ChildItem | ?{if ($_.PSIsContainer){cls;CNC $_.Fullname;pause}}' -Foreground Magenta
-	Write-Host "...but will give errors on PowerShell script checks." -Foreground Magenta
+	Write-Host "From your packages' root directory, run CNC -Recurse to check all your packages." -Foreground Magenta
 	return
 }
 
@@ -113,6 +110,12 @@ if ($args -eq "-EditHeader") {
 	return
 }
 
+if ($args -eq "-EditPackageNotes") {
+    Write-Host "  ** Editing contents of $CNCPackageNotes." -Foreground Magenta
+	&$Editor $CNCPackageNotes
+	return
+}
+
 if ($args -eq "-ShowFooter") {
 	Write-Host "  ** Displaying contents of $CNCFooter." -Foreground Magenta
     Write-Host	
@@ -127,6 +130,13 @@ if ($args -eq "-ShowHeader") {
 	return
 }
 
+if ($args -eq "-ShowPackageNotes") {
+    Write-Host "  ** Displaying contents of $CNCPackageNotes." -Foreground Magenta
+    Write-Host	
+    Get-Content $CNCPackageNotes
+	return
+}
+
 if ($args -eq "-OpenValidatorInfo") {
     Write-Host "  ** Opening https://github.com/chocolatey/package-validator/wiki." -Foreground Magenta
     Write-Host	
@@ -137,6 +147,8 @@ if ($args -eq "-OpenValidatorInfo") {
 if ($args -eq "-AddHeader") {$AddHeader=$True} else {$AddHeader=$False}
 
 if ($args -eq "-AddFooter") {$AddFooter=$True} else {$AddFooter=$False}
+
+if ($args -eq "-AddPackageNotes") {$AddPackageNotes=$True} else {$AddPackageNotes=$False}
 
 if ($args -eq "-MakeBackups") {$MakeBackups=$True} else {$MakeBackups=$False}
 
@@ -208,112 +220,7 @@ if (!(Test-Path $path)){
     Write-Host "           ** $path is an invalid path." -Foreground Red
 	return
    }
-
-# Finds nuspec file for processing. Defaults to current working directory.
-# You can specify a directory path, but do NOT specify the file itself, just the directory.
-#if (!$path) {$LocalnuspecFile = Get-Item -Path $path\*.nuspec}
-if ($path) {$LocalnuspecFile = Get-Item $path\*.nuspec}
-if (!($LocalnuspecFile)) {
-    Write-Host "           ** No .nuspec file found in $path" -Foreground Red
-	return
-   }
-if ($LocalnuspecFile.count -gt 1){
-    Write-Host "           ** Multiple .nuspec files found in $path. Please remove or rename the extras." -Foreground Red
-	return
-   }
-if ($LocalnuspecFile.length -lt 168){ # approximate value of a minimal blank nuspec template
-    Write-Host "           ** $LocalnuspecFile file appears to be blank or corrupt." -Foreground Red
-	return
-   }
-
-# borrowed from https://www.jonathanmedd.net/2012/05/quick-and-easy-powershell-test-xmlfile.html
-function Test-XMLFile {
-    <#
-        .SYNOPSIS
-        Test the validity of an XML file
-    #>
-    [CmdletBinding()]
-    param (
-        [parameter(mandatory=$true)][ValidateNotNullorEmpty()][string]$xmlFilePath
-    )
-
-    # Check the file exists
-    if (!(Test-Path -Path $xmlFilePath)){
-        throw "$xmlFilePath is not valid. Please provide a valid path to the .xml fileh"
-    }
-    # Check for Load or Parse errors when loading the XML file
-    $xml = New-Object System.Xml.XmlDocument
-    try {
-        $xml.Load((Get-ChildItem -Path $xmlFilePath).FullName)
-        return $true
-    }
-    catch [System.Xml.XmlException] {
-        Write-Verbose "$xmlFilePath : $($_.toString())"
-        return $false
-    }
-}
-
-if (!(Test-XMLFile $LocalnuspecFile)){
-    Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
-    Write-Host "FYI:     ** Common problems:" -Foreground Cyan
-    Write-Host "            choco pack will report: ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s." -Foreground Cyan
-    Write-Host "            choco pack will report: ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
-    Write-Host "            choco pack will report: ""The <tag> start tag on line x position x does not match the end tag of <tag>`n.                                    Line x, position x."" for elements with mismatched case.`n" -Foreground Cyan
-    break
-}
-
-# Update the nuspec XML namespace declaration
-# Only checks for the common 2011/08/nuspec.xsd namespace, could be much better using regex.
-# Messages related to this happening or not (-WhatIf) are difficult to implement because this change happens independly of other changes to the .nuspec, notifications need to be implemented in most cases.
-function Update-XMLnsDeclaration{
-  if ($MakeBackups){Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.CNC.XMLnamespace.bak" -Force}
-  ((Get-Content -Path $LocalnuspecFile -Raw) -Replace 'http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd','http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd') | Set-Content -Path $LocalnuspecFile
-  $GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$True
-  $GLOBAL:Fixes++
-}
-
-if ($UpdateXMLns){
-    if ($WhatIf){
-		$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
-       } else {
-         Update-XMLnsDeclaration
-        }
-}
-
-# Import package.nuspec file to get values
-$nuspecXML = $LocalnuspecFile
-[xml]$nuspecFile = Get-Content $nuspecXML
-$NuspecAuthors = $nuspecFile.package.metadata.authors
-$NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl	
-$NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
-$NuspecCopyright = $nuspecFile.package.metadata.copyright
-$NuspecDependencies = $nuspecFile.package.metadata.dependencies
-$NuspecDescription = $nuspecFile.package.metadata.description
-$NuspecDocsURL = $nuspecFile.package.metadata.docsurl
-$NuspecFiles = $nuspecFile.package.files.file
-$NuspecIconURL = $nuspecFile.package.metadata.iconurl
-$NuspecID = $nuspecFile.package.metadata.id
-$NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
-$NuspecMailingListURL = $nuspecFile.package.metadata.mailinglisturl
-$NuspecOwners = $nuspecFile.package.metadata.owners
-$NuspecPackageSourceURL = $nuspecFile.package.metadata.packagesourceurl
-$NuspecProjectSourceURL = $nuspecFile.package.metadata.projectsourceurl
-$NuspecProjectURL = $nuspecFile.package.metadata.projecturl
-$NuspecProvides = $nuspecFile.package.metadata.provides # Built for the future
-$NuspecReleaseNotes = $nuspecFile.package.metadata.releasenotes
-$NuspecReplaces = $nuspecFile.package.metadata.replaces # Built for the future
-$NuspecRequireLicenseAcceptance = $nuspecFile.package.metadata.requirelicenseacceptance
-$NuspecSummary = $nuspecFile.package.metadata.summary
-$NuspecTags = $nuspecFile.package.metadata.tags
-$NuspecTitle = $nuspecFile.package.metadata.title
-$NuspecVersion = $nuspecFile.package.metadata.version
-$NuspecXMLComment = $nuspecFile.'#comment'
-$NuspecXMLNamespace = $nuspecFile.package.xmlns
-
-$NuspecDisplayName=$LocalnuspecFile.Name
-$NuspecDisplayName=$NuspecDisplayName.ToUpper()
-$ENV:ChocolateyPackageVersion=$NuspecVersion
-
+   
 # functions ------------------------------------------------------------------------------------------------
 
 # Borrowed and slightly modified from
@@ -425,13 +332,16 @@ if (($url -match "http://") -or ($url -match "https://")){
         } catch {
           $HTTP_Status = [regex]::matches($_.exception.message, "(?<=\()[\d]{3}").Value
 		  Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
-          Write-Warning ("  ** $element - the URL:`n              $url`n              is probably bad, status code: " + $HTTP_Status)
-		   if ($element -notmatch ".PS1"){
-		        Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
-		      } else {
-		        Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
-			   }
-		  $GLOBAL:Suggestions++
+		  if ($element -notmatch ".PS1"){  	      
+		      Write-Host "WARNING:   ** $element - the URL:`n              $url`n              is probably bad, status code: $HTTP_Status. This will trigger a message from the verifier:" -Foreground Red
+	          Write-Host "           ** Requirement: The $element element in the nuspec file should be a valid Url. Please correct this" -Foreground Cyan
+		      Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+	          $GLOBAL:Required++
+		  } else {
+		    Write-Warning ("  ** $element - the URL:`n              $url`n              site might be OK, status code: $HTTP_Status.")
+		    Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+		    $GLOBAL:Suggestions++
+		    }
 		  $GLOBAL:ValidURL=$False
         }
    }
@@ -499,13 +409,28 @@ function Check-PNGs{
     }
 }
 
-#TDL
+# I'm making an educated guess that these are requirements to be fixed, not verified.
 function Check-PackageInternalFilesIncluded{
-#[Content_Types].xml
-#Files ending in .psmdcp
-#Files ending .rels
-#_rels directory and its contents
-#You have repackaged an existing package that you unpacked without removing some of the packaging files from the original.
+  if (Test-Path '`[Content_Types`].xml') {
+      Write-Host "WARNING:   ** [Content_Types].xml file found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	   $GLOBAL:Required++
+     }
+  if (Test-Path *.psmd) {
+      Write-Host "WARNING:   ** PSMD file(s) found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	   $GLOBAL:Required++
+     }
+  if (Test-Path *.rels) {
+      Write-Host "WARNING:   ** RELS file(s) found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	   $GLOBAL:Required++
+     }
+  if (Test-Path _rels) {
+      Write-Host "WARNING:   ** _RELS directory found. This will trigger a message from the verifier:" -Foreground Red
+	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	   $GLOBAL:Required++
+     }
 }
 
 # check if header template is in the description
@@ -517,6 +442,10 @@ function Check-Header{
 	  $GLOBAL:FoundHeader=$True
      } else {
        $GLOBAL:FoundHeader=$False
+       $GLOBAL:Suggestions++
+       if (!($AddPackageNotes)) {	 
+	       Write-Host '           ** Suggestion: Consider adding a header and help propagate (unofficial) choco:// Protocol support' -Foreground Cyan
+	      }
 	   }
 }
 
@@ -582,9 +511,49 @@ function Add-Footer{
     }
 }
 
+# TDL - check only head and tail of the description; maybe 5 lines
+# check if package release notes are in the description
+function Check-PackageNotes{
+  $NuspecDescription=$NuspecDescription.Trim()
+  if (($NuspecDescription -match 'PACKAGE NOTES') -or ($NuspecDescription -match 'PACKAGE RELEASE NOTES')){
+      Write-Host "FYI:       ** <description> - package release notes found." -Foreground Green
+	  $GLOBAL:FYIs++
+	  $GLOBAL:FoundPackageNotes=$True
+     } else {
+       $GLOBAL:FoundPackageNotes=$False
+       $GLOBAL:Suggestions++
+       if (!($AddPackageNotes)) {
+	       Write-Host '           ** Suggestion: Consider adding PACKAGE NOTES to inform users of any special information about the package.' -Foreground Cyan
+	      }
+	  }
+}
+
+# add package notes template to <description>
+function Add-PackageNotes{
+  if ($GLOBAL:FoundPackageNotes){
+      Write-Host "FYI:       ** <description> - package notes template previously added." -Foreground Cyan
+	  $GLOBAL:FYIs++
+	  return $NuspecDescription
+	 }	
+  if (Test-Path $CNCPackageNotes){
+      $PackageNotes=[IO.File]::ReadAllText($CNCPackageNotes)
+	  if ($PackageNotes -match '\$NuspecAuthors') {$PackageNotes=PackageNotes -replace '\$NuspecAuthors',"$NuspecAuthors"}
+	  if ($PackageNotes -match '\$NuspecID') {$PackageNotes=$PackageNotes -replace '\$NuspecID',"$NuspecID"}
+	  if ($PackageNotes -match '\$NuspecOwners') {$PackageNotes=$PackageNotes -replace '\$NuspecOwners',"$NuspecOwners"}
+	  if ($PackageNotes -match '\$NuspecTitle') {$PackageNotes=$PackageNotes -replace '\$NuspecTitle',"$NuspecTitle"}
+      if ($PackageNotes -match '\$NuspecVersion') {$PackageNotes=$PackageNotes -replace '\$NuspecVersion',"$NuspecVersion"}
+      $NuspecDescription=$NuspecDescription + "`n" + $PackageNotes + "`n"
+      Write-Host "           ** <description> - ADDED package notes template." -Foreground Green
+      $GLOBAL:UpdateNuspec=$True
+	  $GLOBAL:Fixes++
+	  return $NuspecDescription
+    } else {
+	  Write-Warning "           ** $CNCPackageNotes NOT found."
+	  return $NuspecDescription
+    }
+}
+
 # check Markdown header problems after chocolatey.org Sept. 2019 updates
-# Needs update to pass string and element to check releaseNotes as well in one function
-#function Check-Markdown{
 function Check-Markdown([string]$element,[string]$text){
   if ($NuspecDescription -match "#\w") { # alphanumeric whitespace only (no /, [, etc)
       Write-Host "WARNING:   ** $element - invalid Markdown heading syntax found. This will trigger a message from the verifier:" -Foreground Red
@@ -593,13 +562,9 @@ function Check-Markdown([string]$element,[string]$text){
 	  }
 }
 
-# check if package release notes are in the description
-function Check-PackageReleaseNotes{
-  $NuspecDescription=$NuspecDescription.Trim()
-  if (($NuspecDescription -match "PACKAGE NOTES") -or ($NuspecDescription -match "PACKAGE RELEASE NOTES")){
-      Write-Host "FYI:       ** <description> - package release notes found." -Foreground Green
-	  $GLOBAL:FYIs++
-	  }
+# TDL
+# Add whitespace after #, ##, and ### when found followed by characters
+function Fix-Markdown{
 }
 
 # Check package current status on chocolatey.org
@@ -615,15 +580,21 @@ $PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packag
 	   Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
 	   $GLOBAL:FYIs++
 	  }
-   if (($NuspecID -ne 'choco-nuspec-checker') -and ($PackagePageInfo -match "Package test results have failed. Follow the link for more information")){
-	   Write-Host "FYI:       ** $NuspecID is currently failing tests on chocolatey.org." -Foreground Red
+   if ($PackagePageInfo -match 'All Checks are Passing'){
+	   Write-Host "FYI:       ** $NuspecID current status: All Checks are Passing" -Foreground Green
 	   $GLOBAL:FYIs++
 	  }
-   if ($PackagePageInfo -match "<td>submitted</td>"){
+   if (($NuspecID -ne 'choco-nuspec-checker') -and ($PackagePageInfo -match '
+Some Checks Have Failed or Are Not Yet Complete')){
+	   Write-Host "FYI:       ** $NuspecID current status: 
+Some Checks Have Failed or Are Not Yet Complete" -Foreground Red
+	   $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match 'There are versions of this package awaiting moderation'){
 	   Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
 	   $GLOBAL:FYIs++
 	  }
-   if ($PackagePageInfo -match "<td>waiting for maintainer</td>"){
+   if ($PackagePageInfo -match 'Waiting for Maintainer'){
 	   Write-Host "FYI:       ** $NuspecID may have a version waiting for corrective action." -Foreground Yellow
 	   $GLOBAL:FYIs++
 	  }
@@ -666,6 +637,7 @@ function Run-PNGOptimizer{
  }
 }
 
+# TODO check for "main" when GH stops making new repos with "master" in 10/2020
 # Convert RawGit and non-CDN URLs to supported CDN URLs
 function Update-CDNURL([string]$oldURL){
   if ($StaticlyCDN){
@@ -816,6 +788,132 @@ if (!$ChocoInstallScript -and $NugetInstallScript){
 
 }
 
+# borrowed from https://www.jonathanmedd.net/2012/05/quick-and-easy-powershell-test-xmlfile.html
+function Test-XMLFile {
+    <#
+        .SYNOPSIS
+        Test the validity of an XML file
+    #>
+    [CmdletBinding()]
+    param (
+        [parameter(mandatory=$true)][ValidateNotNullorEmpty()][string]$xmlFilePath
+    )
+
+    # Check the file exists
+    if (!(Test-Path -Path $xmlFilePath)){
+        throw "$xmlFilePath is not valid. Please provide a valid path to the .xml fileh"
+    }
+    # Check for Load or Parse errors when loading the XML file
+    $xml = New-Object System.Xml.XmlDocument
+    try {
+        $xml.Load((Get-ChildItem -Path $xmlFilePath).FullName)
+        return $true
+    }
+    catch [System.Xml.XmlException] {
+        Write-Verbose "$xmlFilePath : $($_.toString())"
+        return $false
+    }
+}
+
+# Update the nuspec XML namespace declaration
+# Only checks for the common 2011/08/nuspec.xsd namespace, could be much better using regex.
+# Messages related to this happening or not (-WhatIf) are difficult to implement because this change happens independly of other changes to the .nuspec, notifications need to be implemented in most cases.
+function Update-XMLnsDeclaration{
+  if ($MakeBackups){Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.CNC.XMLnamespace.bak" -Force}
+  ((Get-Content -Path $LocalnuspecFile -Raw) -Replace 'http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd','http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd') | Set-Content -Path $LocalnuspecFile
+  $GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$True
+  $GLOBAL:Fixes++
+}
+
+#Start running the actual script --------------------------------------------------------------------------------------------
+
+if ($recurse) {
+	$folderlist = Split-Path (Get-ChildItem -Path $path -Recurse -Filter "*.nuspec").fullname
+    } else {
+	  $folderlist = $path
+}
+
+ForEach ($path in $folderlist) {
+# Finds nuspec file for processing. Defaults to current working directory.
+# You can specify a directory path, but do NOT specify the file itself, just the directory.
+#if (!$path) {$LocalnuspecFile = Get-Item -Path $path\*.nuspec}
+if ($path) {$LocalnuspecFile = Get-Item $path\*.nuspec}
+if (!($LocalnuspecFile)) {
+    Write-Host "           ** No .nuspec file found in $path" -Foreground Red
+	return
+   }
+if ($LocalnuspecFile.count -gt 1){
+    Write-Host "           ** Multiple .nuspec files found in $path. Please remove or rename the extras." -Foreground Red
+	return
+   }
+if ($LocalnuspecFile.length -lt 168){ # approximate value of a minimal blank nuspec template
+    Write-Host "           ** $LocalnuspecFile file appears to be blank or corrupt." -Foreground Red
+	return
+   }
+
+if (!(Test-XMLFile $LocalnuspecFile)){
+    Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
+    Write-Host "FYI:     ** Common problems:" -Foreground Cyan
+    Write-Host "            choco pack will report: ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s." -Foreground Cyan
+    Write-Host "            choco pack will report: ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
+    Write-Host "            choco pack will report: ""The <tag> start tag on line x position x does not match the end tag of <tag>`n.                                    Line x, position x."" for elements with mismatched case.`n" -Foreground Cyan
+    break
+}
+
+if ($UpdateXMLns){
+    if ($WhatIf){
+		$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
+       } else {
+         Update-XMLnsDeclaration
+        }
+}
+
+# variables for end results
+$GLOBAL:Required=0
+$GLOBAL:Guidelines=0
+$GLOBAL:Suggestions=0
+$GLOBAL:Notes=0
+$GLOBAL:Fixes=0
+$GLOBAL:FYIs=0
+$GLOBAL:UpdateNuspec=$False
+$GLOBAL:TemplateError=0
+$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
+
+# Import package.nuspec file to get values
+$nuspecXML = $LocalnuspecFile
+[xml]$nuspecFile = Get-Content $nuspecXML
+$NuspecAuthors = $nuspecFile.package.metadata.authors
+$NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl	
+$NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
+$NuspecCopyright = $nuspecFile.package.metadata.copyright
+$NuspecDependencies = $nuspecFile.package.metadata.dependencies
+$NuspecDescription = $nuspecFile.package.metadata.description
+$NuspecDocsURL = $nuspecFile.package.metadata.docsurl
+$NuspecFiles = $nuspecFile.package.files.file
+$NuspecIconURL = $nuspecFile.package.metadata.iconurl
+$NuspecID = $nuspecFile.package.metadata.id
+$NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
+$NuspecMailingListURL = $nuspecFile.package.metadata.mailinglisturl
+$NuspecOwners = $nuspecFile.package.metadata.owners
+$NuspecPackageSourceURL = $nuspecFile.package.metadata.packagesourceurl
+$NuspecProjectSourceURL = $nuspecFile.package.metadata.projectsourceurl
+$NuspecProjectURL = $nuspecFile.package.metadata.projecturl
+$NuspecProvides = $nuspecFile.package.metadata.provides # Built for the future
+$NuspecReleaseNotes = $nuspecFile.package.metadata.releasenotes
+$NuspecReplaces = $nuspecFile.package.metadata.replaces # Built for the future
+$NuspecRequireLicenseAcceptance = $nuspecFile.package.metadata.requirelicenseacceptance
+$NuspecSummary = $nuspecFile.package.metadata.summary
+$NuspecTags = $nuspecFile.package.metadata.tags
+$NuspecTitle = $nuspecFile.package.metadata.title
+$NuspecVersion = $nuspecFile.package.metadata.version
+$NuspecXMLComment = $nuspecFile.'#comment'
+$NuspecXMLNamespace = $nuspecFile.package.xmlns
+
+$NuspecDisplayName=$LocalnuspecFile.Name
+$NuspecDisplayName=$NuspecDisplayName.ToUpper()
+$ENV:ChocolateyPackageVersion=$NuspecVersion
+
+
 # Start outputting check results
 Write-Host "CNC Summary of $NuspecDisplayName (v$NuspecVersion):" -Foreground Magenta
 
@@ -829,6 +927,11 @@ if ($OpenURLs) {
 
 # Trusted package check
 Check-OnlineStatus
+
+if (Test-Path 'update.ps1') {
+    Write-Host "FYI:       ** UPDATE.PS1 found. You must be smarter than the average bear..." -Foreground Green
+	$GLOBAL:FYIs++
+	}
 
 # check for UTF8 encoding
 # UTF-8 w/BOM is not desired per "You must save your files with UTF–8 character encoding without BOM."
@@ -983,12 +1086,15 @@ if (!$NuspecDescription){
 	 if ($AddHeader) {
          $NuspecDescription=(Add-Header)
         }
+     Check-PackageNotes
+	 if ($AddPackageNotes) {
+         $NuspecDescription=(Add-PackageNotes)
+        }
      Check-Footer
 	 if ($AddFooter) {
          $NuspecDescription=(Add-Footer)
         }
      Check-Markdown "<description>" $NuspecDescription
-     	 Check-PackageReleaseNotes
      if ($NuspecDescription.Length -lt 30) {
 	     Write-Warning "  ** <description> - is less than 30 characters." 
 		 Write-Host "           ** Guideline: Description should be sufficient to explain the software. Please fill in the description`n              with more information about the software. Feel free to use use markdown." -Foreground Cyan
@@ -1447,21 +1553,30 @@ if ($UpdateScripts) {
 
 $ENV:ChocolateyPackageVersion=''
 
+if ($recurse) {
+    #leave space between output if recursing
+    Write-Host "`n" 
+}
+
+# main recurse foreach loop ends here
+}
+
 Write-Host "`nFound CNC.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
 return
 
 # TDL
+# Update CDN checking for "main" as well as "master" post 10/2020
 # Check validity of URLs in description, checked by the package verifier as of 01/11/2020
 # Reformat invalid Markdown headings automagically
+# Move header, footer, and package notes into one XML config file
 # Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
-# BUG: script checking has error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cnc $_.Fullname;pause}}
-# https://github.com/chocolatey/package-validator/wiki/PackageInternalFilesIncluded -started
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
-# MAYBE redo file selection by filename instead of directory and implement a -Recurse option - medium low priority
+# Add option to save to an error log when recursivly checking files
 # MAYBE do full params statement and get rid of args checking - low priority
 # MAYBE check http links to see if https links are available and report if so - low priority
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
 # https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
+# There may be more new validator checking that can be addressed
 # What else?

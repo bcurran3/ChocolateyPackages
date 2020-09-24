@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>chromelpass-chrome</id>
@@ -6,10 +7,10 @@
     <title>chromeIPass for Chrome</title>
     <authors>Perry Nguyen</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromelpass-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chromelpass-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/chromeipass/ompiailgknfdndiefoaoiligalphfdae</projectUrl>
     <iconUrl>http://keepass.info/help/images/plockb_64.png</iconUrl>
-	<docsUrl>https://github.com/pfn/passifox/blob/master/documentation/chromeIPass.md#2-installation</docsUrl>
+    <docsUrl>https://github.com/pfn/passifox/blob/master/documentation/chromeIPass.md#2-installation</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ![Screenshot of chromelpass](https://lh3.googleusercontent.com/kIQanVjID-0As07I4exLsZB9CRxQwd0C-Wasgg4twqe9A-gha49g3j7WlkVmtoQHjWIwAbmE6w=s640-h400-e365-rw)
@@ -28,7 +29,7 @@ Please visit us on https://github.com/pfn/passifox for detailed and illustrated 
 	</description>
     <summary>KeePass integration for Chrome using KeePassHttp</summary>
     <tags>chromelpass chromeipass keepass keepasshttp chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
       <dependency id="keepass" />

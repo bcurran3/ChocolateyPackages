@@ -1,4 +1,4 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 
 $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
 
@@ -11,7 +11,8 @@ $publicFunctions = @(
 	'Start-CheckandThrow',
 	'Start-WaitandStop',
 	'Start-WaitandStopActual',
-    'Test-Dependency'
+    'Test-Dependency',
+    'Test-URL'
 )
  
 Get-ChildItem -Path "$scriptRoot\*.ps1" | ForEach-Object { . $_ }

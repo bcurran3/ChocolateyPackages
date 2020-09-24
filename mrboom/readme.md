@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the program via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* As of v4.9 the binary is included in the package. No more URL downloads. This version will always be available to install.
 * I was contacted by the author of this program and asked to package it up for Chocolatey.
 
 ***

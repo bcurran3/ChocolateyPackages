@@ -71,7 +71,7 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
     <releaseNotes>https://www.xmedia-recode.de/en/version.html</releaseNotes>
     <tags>sdorfler dvd-ripper video-converter audio-converter binary embedded</tags>
     <dependencies>
-      <dependency id="vcredist140" version="14.27.29016.0" />
+      <dependency id="vcredist140" version="14.26.28720.3" />
     </dependencies>
   </metadata>
   <files>

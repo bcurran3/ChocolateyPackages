@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Show-ToastMessage.ps1 - Sends a Windows toast message.
 # Uses BurntToast (https://github.com/Windos/BurntToast) if installed. NOTE: v0.5.0+ no longer works on Windows 8.
 # Otherwise uses the code I blatantly stole from https://gist.github.com/Windos/9aa6a684ac583e0d38a8fa68196bc2dc

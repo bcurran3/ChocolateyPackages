@@ -1,0 +1,2 @@
+
+**[PACKAGE NOTES](https://github.com/$NuspecOwners/ChocolateyPackages/blob/master/$NuspecID/readme.md)**

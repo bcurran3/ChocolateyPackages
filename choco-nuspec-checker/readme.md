@@ -3,7 +3,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original!
-* I personally use and endorse this script.
+* I personally use and endorse this script. What started off as a script to automate changing image URLs in my packages to use CDN links has become a monster!
 * In your header and footer files, if you want to add lines above and below your header and/or footer text like I do, I recommend using "___" for a line in markdown as apposed to "***" or "---". Chocolatey.org's package pages are fickle with "***" and "---" where sometimes the lines will be different shades of gray. "___" seems to consistently get displayed as a dark gray line. I've played with white space before and after "***" and "---" and I can't find any rhyme or reason to why I'll get a light gray line in one place and a dark gray line in another. I give up. "___" works.
 
 ***
@@ -23,7 +23,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** checks for RawGit CDN links, reports them, and can convert them to various CDN URLs (default=Staticaly)
 * **CNC** can open all your .nuspec element URLs in your default browser for quick viewing
 * **CNC** checks and reports current status of your package on chocolatey.org
-* **CNC** can add a standard template header and/or footer to your .nuspec description and replace tokens in it
+* **CNC** can add a standard template header, footer, and/or package notes to your .nuspec description with variables
 * **CNC** checks nuspec and PowerShell scripts for correct UTF-8 encoding and reports if the encoding is incorrect
 * **CNC** can re-write your nuspec in UTF-8 w/o BOM format
 * **CNC** can re-write your PowerShell scripts in UTF-8 w/ BOM format
@@ -48,6 +48,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
 	
 ### CHANGELOG:
+* 2020.09.20 - An AddPackageNotes feature has been added, works the same as the AddHeader and AddFooter options. Updated nuspec URL errors as requirements to be fixed. Added "PackageInternalFilesIncluded" checking. Minor cosmetic updates.
 * 2020.09.15 - CNC will now ignore update.ps1 files.
 * 2020.04.06.0001 - Updated CNC.cmd for ChocolateyToolsLocation handling. Fixed markdown heading error in CNCHeader.txt.
 * 2020.04.06 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)

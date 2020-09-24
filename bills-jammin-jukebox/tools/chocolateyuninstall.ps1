@@ -1,4 +1,5 @@
-﻿$packageName = 'bills-jammin-jukebox'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'bills-jammin-jukebox'
 $installerType = 'EXE' 
 $silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 $validExitCodes = @(0)

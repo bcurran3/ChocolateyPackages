@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'adblockpluschrome'
 $extensionID = 'cfhdojbkjhnklbpkdaibdccddilifddb'
 if ($bits -eq 64)

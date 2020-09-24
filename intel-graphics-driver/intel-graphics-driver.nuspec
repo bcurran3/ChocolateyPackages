@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>27.20.100.8190</version>
+    <version>27.20.100.8681</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver_25.20.100.6577</packageSourceUrl>
     <title>Intel® Graphics - Windows® 10 DCH Drivers</title>
@@ -30,18 +30,24 @@ _______________________
 
 ### Highlights
 
-* Windows® 10 May 2020 Update Ready
-* Intel Graphics Installer Changes5
+Get back on the pitch with eFootball PES 2021 Season update* and return to familiar ground and uncover the motivations behind the Covenant’s invasion of New Mombasa in Halo 3: ODST* on Intel® Iris® Plus graphics or better.
 
-This driver is WDDM 2.7 compliant and ready for the Windows 10 May 2020 Update. It introduces support for Dolby Vision and the new DirectX* 12 Shader Model 6.5 compiler on 7th Generation Intel® Core processors or higher (Intel® HD Graphics 610 or higher).
+*2 Are you still experiencing an error preventing the driver update? Look here for why and a solution.
 
-Gears Tactics*, XCOM: Chimera Squad*, and Call of Duty: Modern Warfare 2 Campaign Remastered* verified playable on Intel® Iris® Plus graphics or better.
+Any graphics issues found using Intel generic graphics drivers should be reported directly to Intel. Corporate customers should always use OEM drivers and report all issues through the vendor they purchased the platforms and support through.
 
-**Unlocked drivers:** We heard how much our users want the freedom to upgrade their systems to our regularly released generic graphics drivers and enable our latest game enhancements, feature updates, and fixes. As of this release, Intel Graphics DCH drivers are now unlocked to upgrade freely between Computer Manufacturer (OEM) drivers and the Intel generic graphics drivers on Download Center. Simply use the EXE and enjoy the update on your 6th Generation Intel Processor platform or higher, and don’t worry about your OEM customizations, they remain intact with each upgrade and the OEMs can maintain customizations separately via Microsoft* Windows Update. See the Release Notes section *2 for important information about this update.
+Install the Intel® Driver &amp; Support Assistant, which automatically checks for drivers on a regular basis and can provide notifications when new drivers are available.
 
-Any graphics issues found using Intel generic graphics drivers should be [reported directly to Intel](https://www.intel.com/content/www/us/en/support/contact-support.html). Corporate customers should always use OEM drivers and report all issues through the vendor they purchased the platforms and support through.
+This is a DCH driver. Click for more information about DCH drivers.
 
-Are you still seeing the OEM error preventing the update? See here for [why and a solution](https://www.intel.com/content/www/us/en/support/articles/000056629/graphics-drivers.html).
+Supported OS versions
+
+Microsoft Windows® 10-64 - Fall Creators Update (1709)(RS3)
+Microsoft Windows 10-64 - April 2018 Update (1803)(RS4)
+Microsoft Windows 10-64 - October 2018 Update (1809)(RS5)
+Microsoft Windows 10-64 – May 2019 Update (1903)(19H1)
+Microsoft Windows 10-64 – November 2019 Update (1909)(19H2)
+Microsoft Windows 10-64 – May 2020 Update (2004)(20H1)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
 
@@ -52,7 +58,7 @@ Are you still seeing the OEM error preventing the update? See here for [why and 
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29557/eng/ReadMe.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29855/eng/ReadMe.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="dependency-windows10" version="10.1709" />
