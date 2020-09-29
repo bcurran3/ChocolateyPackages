@@ -1,12 +1,11 @@
-﻿$ErrorActionPreference = 'Stop'
-$packageName = 'go-contact-sync-mod'
+﻿# https://sourceforge.net/projects/googlesyncmod/files/
+$ErrorActionPreference = 'Stop'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = "$toolsDir\SetupGCSM-$ENV:ChocolateyPackageVersion.msi"
 
 $packageArgs = @{
-  packageName    = $packageName
+  packageName    = 'go-contact-sync-mod'
   fileType       = 'MSI'
-  file           = $url
+  file           = "$toolsDir\SetupGCSM-$ENV:ChocolateyPackageVersion.msi"
   silentArgs     = '/quiet /qn /norestart'
   softwareName   = 'Go Contact Sync Mod*' 
   validExitCodes = @(0, 3010, 1641)
