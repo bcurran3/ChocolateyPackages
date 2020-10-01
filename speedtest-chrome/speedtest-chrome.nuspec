@@ -8,7 +8,7 @@
     <authors>speedtest.net</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://chrome.google.com/webstore/detail/speedtest-by-ookla/pgjjikdiikihdfpoppgaidccahalehjh</projectUrl>
-    <iconUrl>https://lh3.googleusercontent.com/GX4RKLVb8xWiL6_4gxNHKP8LTrelyM6tXTl5DRvZDci1S0y6Sr28EAP0Be5GT55-Wp3_SlhG=s26-h26-e365-rw</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/xmha97/chocolatey-coreteampackages/master/icons/speedtest.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Speedtest by Ooka Chrome extension</summary>	
     <description>
