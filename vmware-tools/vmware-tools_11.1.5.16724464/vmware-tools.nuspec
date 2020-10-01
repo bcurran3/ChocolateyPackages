@@ -1,29 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vmware-tools</id>
     <version>11.1.5.16724464</version>
-    <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-tools</packageSourceUrl>
     <title>VMWare Tools for Windows (Install)</title>
-    <authors> VMware, Inc</authors>
+    <authors>VMware, Inc</authors>
+    <owners>bcurran3 virtualex</owners>
+    <licenseUrl>https://www.vmware.com/download/eula/universal_eula.html</licenseUrl>
     <projectUrl>https://kb.vmware.com/kb/340</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vmware-tools/vmware-tools_icon.png</iconUrl>
-    <copyright>VMware, Inc.</copyright>
-    <licenseUrl>https://www.vmware.com/download/eula/universal_eula.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.vmware.com/pdf/vmware-tools-installation-configuration.pdf</docsUrl>
-    <mailingListUrl>https://communities.vmware.com/welcome</mailingListUrl>
-    <tags>vmware vsphere esxi tools</tags>
-    <summary>Windows system utilities for VMs running under VSphere</summary>
-    <description>
----
+    <description>---
 
 ### [choco://vmware-tools](choco://vmware-tools)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
+
+### Package Parameters
+* `/ALL` - Performs a Complete Install of VMware Tools (Optional)
+Example: `choco install vmware-tools --params "/ALL"`
 
 ### Overview of VMware Tools
 VMware Tools is a suite of utilities that enhances the performance of the virtual machines guest operating system and improves management of the virtual machine. Without VMware Tools installed in your guest operating system, guest performance lacks important functionality. Installing VMware Tools eliminates or improves these issues:
@@ -50,12 +46,13 @@ VMware Tools includes these components:
 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 
----
-
-</description>
+---</description>
+    <summary>Windows system utilities for VMs running under VSphere</summary>
     <releaseNotes>https://docs.vmware.com/en/VMware-Tools/11.0.1/rn/VMware-Tools-1101-Release-Notes.html</releaseNotes>
+    <copyright>VMware, Inc.</copyright>
+    <tags>vmware vsphere esxi tools</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-tools</packageSourceUrl>
+    <docsUrl>https://www.vmware.com/pdf/vmware-tools-installation-configuration.pdf</docsUrl>
+    <mailingListUrl>https://communities.vmware.com/welcome</mailingListUrl>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
