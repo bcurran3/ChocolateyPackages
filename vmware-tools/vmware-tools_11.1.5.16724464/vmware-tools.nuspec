@@ -56,7 +56,7 @@ VMware Tools includes these components:
 
 ---
 
-</description>
+    </description>
     <releaseNotes>https://docs.vmware.com/en/VMware-Tools/11.1/rn/VMware-Tools-1115-Release-Notes.html</releaseNotes>
   </metadata>
   <files>
