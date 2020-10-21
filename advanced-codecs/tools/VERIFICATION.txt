@@ -1,9 +1,8 @@
 ﻿==================== Shark007's Advanced Codecs ====================
 
 bcurran3 downloads and packages the executable for Shark007's Advanced Codecs from 
-http://www.majorgeeks.com/files/details/win7codecs.html which is the official mirror.
+https://shark007.net/advanced.html or the official mirror at http://www.majorgeeks.com/files/details/win7codecs.html.
 
-Shark007's statement and current MD5 checksum can be found at http://shark007.net/win7codecs.html
-along with a direct download link that has never worked for me since it appeared.
+Shark's posting of the MD5 checksum can be viewed at https://shark007.net/advanced.html
 
 ==================== Shark007's Advanced Codecs ====================
