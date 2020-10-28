@@ -2,8 +2,6 @@
 $packageName    = 'irfanview'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
-$url            = "$toolsDir\iview"+$TodaysVersion+"_setup.exe"
-$url64          = "$toolsDir\iview"+$TodaysVersion+"_x64_setup.exe"
 $arguments      = @{}
 $packageParameters = $env:chocolateyPackageParameters
 
@@ -82,16 +80,15 @@ if ($folder) { $silentArgs += " /folder=" + $folder }
 Write-Debug "Silent arguments Chocolatey will use are: $silentArgs"
 
 $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'EXE'
-  file           = $url
-  file64      = $url64
-  validExitCodes= @(0)
-  silentArgs    = $silentArgs
-  softwareName  = 'IrfanView*'
+  packageName    = $packageName
+  fileType       = 'EXE'
+  file           = "$toolsDir\iview"+$TodaysVersion+"_setup.exe"
+  file64         = "$toolsDir\iview"+$TodaysVersion+"_x64_setup.exe"
+  validExitCodes = @(0)
+  silentArgs     = $silentArgs
+  softwareName   = 'IrfanView*'
 }
 
 Install-ChocolateyInstallPackage @packageArgs 	
 
-Remove-Item $url -EA SilentlyContinue | Out-Null
-Remove-Item $url64 -EA SilentlyContinue | Out-Null
+Remove-Item $toolsDir\*.exe -EA SilentlyContinue | Out-Null
