@@ -399,7 +399,9 @@ namespace FontResource
     }
 }
 '@
-Add-Type $fontCSharpCode
+if (-not ([System.Management.Automation.PSTypeName][FontResource.AddRemoveFonts]).Type) {
+    Add-Type $fontCSharpCode
+}
 
 
 #*******************************************************************
