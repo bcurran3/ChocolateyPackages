@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>17.9.1.1009</version>
+    <version>17.9.1.1010</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
@@ -23,6 +23,8 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
+
+### Program verison 17.9.1.1009.3
 
 ### Purpose
 	

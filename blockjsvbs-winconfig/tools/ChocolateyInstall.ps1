@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'blockjsvbs-winconfig'
 
 cmd.exe /c assoc .js=txtfile

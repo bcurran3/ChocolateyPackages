@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>open-shell</id>
-    <version>4.4.142</version>
+    <version>4.4.152</version>
     <title>Open-Shell (Install)</title>
     <authors>Ivo Beltchev</authors>
     <owners>bcurran3</owners>
@@ -21,6 +21,7 @@
     <tags>classic-shell open-shell shell freeware start-menu binary</tags>
     <description>
 ---
+
 ### [choco://open-shell](choco://open-shell)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
@@ -40,10 +41,13 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/open-shell/readme.md)**
 
-***
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-  
+
+---
+
 </description>
     <releaseNotes>https://github.com/Open-Shell/Open-Shell-Menu/releases</releaseNotes>
   </metadata>

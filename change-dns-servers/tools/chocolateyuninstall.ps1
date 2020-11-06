@@ -1,4 +1,5 @@
-﻿$packageName= 'change-dns-servers'
+﻿$ErrorActionPreference = 'Stop'
+$packageName= 'change-dns-servers'
 $IconName   = 'Change DNS Servers'
 
 remove-item "$env:Public\Desktop\$IconName.lnk" -Force -ErrorAction 'SilentlyContinue'

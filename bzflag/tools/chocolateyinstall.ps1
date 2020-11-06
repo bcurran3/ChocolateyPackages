@@ -1,4 +1,5 @@
-﻿$packageName    = 'bzflag'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'bzflag'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://download.bzflag.org/bzflag/windows/2.4.10/bzflag-2.4.10.exe'

@@ -49,3 +49,4 @@ Outlook 2010, Lync, and Sharepoint can display a photo for each user account or 
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

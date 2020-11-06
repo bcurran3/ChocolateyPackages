@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Runs a background job to kill $ProcessName within 5 minutes
 # You would typically run this before Install-ChocolateyPackage
 

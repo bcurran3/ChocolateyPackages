@@ -2,7 +2,7 @@
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <version>3.50.3166.0017</version>
+    <version>3.52.3372.2621</version>
     <id>google-backup-and-sync</id>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/google-backup-and-sync</packageSourceUrl>
@@ -16,28 +16,29 @@
     <docsUrl>https://support.google.com/drive/answer/2374987</docsUrl>
     <tags>google backup sync photos drive</tags>
     <summary>Google Backup and Sync - Automatically back up photos from your Mac or PC, connected cameras and SD cards</summary>
-    <description>
----
+    <description><![CDATA[* This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
+* At some point in the future this package will be setup for creation by Auto Update (when I figure it out) which will solve the above problem.
 
-### [choco://google-backup-and-sync](choco://google-backup-and-sync)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+***
 
----
+Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
-You probably keep your most important files and photos in different places—your computer, your phone, various SD cards, and that digital camera you use from time to time. It can be a challenge to keep all these things safe, backed up, and organized, so today we’re introducing Backup and Sync. It’s a simpler, speedier and more reliable way to protect the files and photos that mean the most to you. This new tool replaces the existing Google Photos desktop uploader and Drive for Mac/PC.
 
-Backup and Sync is an app for Mac and PC that backs up files and photos safely in Google Drive and Google Photos, so they're no longer trapped on your computer and other devices. Just choose the folders you want to back up, and we’ll take care of the rest.
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/google-backup-and-sync/readme.md)**
-   
+[![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 
----
+<h1>Better yet... Keep me incentivized by Patreonizing me!</h1>
 
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+[![Patreonize me!](https://c5.patreon.com/external/logo/downloads_wordmark_white_on_coral.png)](https://www.patreon.com/bcurran3)
 
----
 
-</description>
+If applicable, please always consider donating or purchasing the software you installed - including [Chocolatey's licensed editions](https://chocolatey.org/pricing).
+
+<h3>TIA,</h3>
+
+<h3>Bill</h3>
+]]></description>
     <releaseNotes>https://support.google.com/a/answer/7573023</releaseNotes>
   </metadata>
   <files>

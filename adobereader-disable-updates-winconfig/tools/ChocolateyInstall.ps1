@@ -1,4 +1,5 @@
-﻿$packageName = 'adobereader-disable-updates-winconfig'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'adobereader-disable-updates-winconfig'
 
 SchTasks /Change /Disable /TN "Adobe Acrobat Update Task" | Out-Null
 Stop-Service "AdobeARMservice" -force | Out-Null

@@ -1,4 +1,5 @@
-﻿$packageName   = 'activeexit'
+﻿$ErrorActionPreference = 'Stop'
+$packageName   = 'activeexit'
 $installerType = 'EXE'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url           = 'http://www.winability.com/files/ActiveExitLite-17.3.0-setup.exe' 

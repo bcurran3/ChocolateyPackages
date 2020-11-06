@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'adaudit-plus'
 $installerType = 'exe'
 $silentArgs    = ''

@@ -1,4 +1,5 @@
-﻿$packageName = 'blinkys-scary-school' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'blinkys-scary-school' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = "$toolsDir\blinky.zip"
 $checksum    = 'BD89D5F042F55B30A52E3CF9B3929E987528DEB00523ED9BD622F69F90EFA0B9'

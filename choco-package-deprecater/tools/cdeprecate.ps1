@@ -1,4 +1,5 @@
-﻿# cdeprecate.ps1 Copyleft 2019 by Bill Curran AKA BCURRAN3
+﻿$ErrorActionPreference = 'Stop'
+# cdeprecate.ps1 Copyleft 2019 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 

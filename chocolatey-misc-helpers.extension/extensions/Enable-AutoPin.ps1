@@ -1,4 +1,5 @@
-# chocolatey-misc-helpers.extension v0.0.3.1 (01-12-2019) by Bill Curran - public domain
+﻿$ErrorActionPreference = 'Stop'
+# chocolatey-misc-helpers.extension v0.0.4 (08-24-2020) by Bill Curran - public domain
 # Creates a .pin file in \programdata\chocolatey\.chocolatey\packagename.packageversion folder to AutoPin a package
 # Implementation should be via a user opt-in installation package parameter; i.e. AUTOPIN:YES
 # REF: https://github.com/chocolatey/choco/issues/1607

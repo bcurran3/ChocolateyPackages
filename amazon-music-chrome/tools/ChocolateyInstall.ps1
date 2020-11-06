@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'amazon-music-chrome'
 $extensionID = 'cfkfgcfgfpgmkogcnibdjcckkpdiajgp'
 if ($bits -eq 64)

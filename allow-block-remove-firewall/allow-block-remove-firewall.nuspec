@@ -58,3 +58,4 @@ If for any reason you move the files to a new folder you need to run the "Add Ri
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

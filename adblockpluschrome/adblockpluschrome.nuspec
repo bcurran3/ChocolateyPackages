@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>adblockpluschrome</id>
@@ -6,9 +7,9 @@
     <title>Adblock Plus for Chrome</title>
     <authors>adblockplus.org</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adblockpluschrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/adblockpluschrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb</projectUrl>
-	<bugTrackerUrl>https://adblockplus.org/forum/viewforum.php?f=10http://adblockplus.org/releases/</bugTrackerUrl>
+    <bugTrackerUrl>https://adblockplus.org/forum/viewforum.php?f=10http://adblockplus.org/releases/</bugTrackerUrl>
     <iconUrl>https://lh6.googleusercontent.com/Z5w32sck7DXK5JzX3iVxIi1aC-1AwKr_zcUQej-w4Lbue0zTlfLLYgmsKxPPrU5Op9KjKd2jjg=s26-h26-e365-rw</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>

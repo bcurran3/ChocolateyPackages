@@ -1,4 +1,5 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>back-to-backspace-chrome</id>
@@ -6,14 +7,14 @@
     <title>Back to Backspace for Chrome</title>
     <authors>J Delaney</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/back-to-backspace-chrome</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/back-to-backspace-chrome</packageSourceUrl>
     <projectUrl>https://chrome.google.com/webstore/detail/back-to-backspace/cldokedgmomhbifmiiogjjkgffhcbaec</projectUrl>
-    <bugTrackerUrl>https://github.com/j-delaney/back-to-backspace/issues</bugTrackerUrl>	
+    <bugTrackerUrl>https://github.com/j-delaney/back-to-backspace/issues</bugTrackerUrl>
     <iconUrl>https://lh3.googleusercontent.com/pOrcsROLipZAtYpCLGi1f05F51k-mPYvxKEu2NGEdiEuSVUHQc9syxbgnhtTVRyyVlP1D6F8=s26-h26-e365-rw</iconUrl>
-    <projectSourceUrl>https://github.com/j-delaney/back-to-backspace</projectSourceUrl>	
-    <licenseUrl>https://github.com/j-delaney/back-to-backspace/blob/master/LICENSE.md</licenseUrl>	
+    <projectSourceUrl>https://github.com/j-delaney/back-to-backspace</projectSourceUrl>
+    <licenseUrl>https://github.com/j-delaney/back-to-backspace/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <summary>This Chrome extension re-enables the backspace key to go back a page.</summary>	
+    <summary>This Chrome extension re-enables the backspace key to go back a page.</summary>
     <description>
 ###Use backspace to go back to the previous page you were on.
 
@@ -24,7 +25,7 @@ Special thanks to Google for the icon. Taken from https://design.google.com/icon
 ####PACKAGING NOTE: This installs no software. It installs a registry key for the extension that Chrome will see and then ask you for permission to enable the extension if you are in Chrome or on the next run. Chrome will install the latest version of the extension. The mentioned version is the version at time of packaging, you can ignore it. Chrome will handle updates to the extension.
 	</description>
     <tags>jdelaney back to backspace chrome extension</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
     <dependencies>
       <dependency id="googlechrome" />
     </dependencies>

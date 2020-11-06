@@ -1,7 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
-* This package is ONLY for Windows 10/Server 2016. It will throw an exception and fail on non Windows 10/Server 2016 OSes.
+* This package may not upgrade gracefully from previous versions. If it fails (probably exit code 4) then manually remove the old version via Control Panel and then try installing again via Chocolatey.
 
 
 ***

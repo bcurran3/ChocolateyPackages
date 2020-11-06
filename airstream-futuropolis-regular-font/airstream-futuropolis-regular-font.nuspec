@@ -43,3 +43,4 @@ http://birdfont.org/
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

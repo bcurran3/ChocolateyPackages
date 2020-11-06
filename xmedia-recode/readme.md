@@ -1,6 +1,7 @@
 <h3>BCURRAN3'S PACKAGE NOTES:</h3>
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* As of v3.4.5.0 binaries are included in the package. No more URL downloads. This version will always be available to install.
+* Uninstall via Control Panel
 
 ***
 

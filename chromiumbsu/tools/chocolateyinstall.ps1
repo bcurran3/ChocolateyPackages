@@ -1,4 +1,5 @@
-﻿$packageName    = 'chromiumbsu'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'chromiumbsu'
 $installerType  = 'exe'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloads.sourceforge.net/project/chromium-bsu/Chromium%20B.S.U.%20Win32%20binary/chromium-0.9.13.2.exe' 

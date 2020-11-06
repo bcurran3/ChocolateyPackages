@@ -42,3 +42,4 @@ To learn how to manually identify your AMD graphics card, please see:
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

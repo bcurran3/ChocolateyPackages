@@ -21,7 +21,10 @@ Move-Item "$toolsDir\$script" "$scriptDir" -Force
 Install-ChocolateyPowershellCommand -PackageName 'CNC' -PSFileFullPath "$scriptDir\$script"
 if (!(Test-Path "$scriptDir\CNCHeader.txt")) { Move-Item "$toolsDir\CNCHeader.txt" "$scriptDir" -Force }
 if (!(Test-Path "$scriptDir\CNCFooter.txt")) { Move-Item "$toolsDir\CNCFooter.txt" "$scriptDir" -Force }
+if (!(Test-Path "$scriptDir\CNCPackageNotes.txt")) { Move-Item "$toolsDir\CNCPackageNotes.txt" "$scriptDir" -Force }
+#if (!(Test-Path "$scriptDir\CNC.config")) { Move-Item "$toolsDir\CNC.config" "$scriptDir" -Force }
 if ($ENV:Path -NotMatch '\BCURRAN3'){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
 # Cleanup
 Remove-Item "$toolsDir\*.txt" -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\*.config" -Force -ErrorAction SilentlyContinue | Out-Null

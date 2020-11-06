@@ -1,4 +1,5 @@
-﻿$packageName = 'blockjsvbs-winconfig'
+﻿$ErrorActionPreference = 'Stop'
+$packageName = 'blockjsvbs-winconfig'
 
 cmd.exe /c assoc .js=JSFile
 cmd.exe /c assoc .jse=JSEFile

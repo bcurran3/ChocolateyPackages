@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'addtoany-chrome'
 $extensionID = 'ffpgijchhhkhnokafdeklpllijgnbche'
 if ($bits -eq 64)

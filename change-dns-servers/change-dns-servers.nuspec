@@ -23,3 +23,4 @@ This program can be used to easily set your computers DNS servers.
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

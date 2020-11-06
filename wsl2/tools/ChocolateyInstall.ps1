@@ -1,5 +1,5 @@
-﻿
-# https://docs.microsoft.com/nl-nl/windows/wsl/install-win10#update-to-wsl-2
+﻿# https://docs.microsoft.com/nl-nl/windows/wsl/install-win10#update-to-wsl-2
+# https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/
 
 $ErrorActionPreference = 'Stop'
 $packageName = 'wsl2'
@@ -17,11 +17,24 @@ $packageArgs = @{
   checksumType  = 'sha256' 
 }
 
-# Win10: 2004 / 20H1 + required
+# Win10: 2004 / 20H1 + required before 08/20/20 and 1903 + 1909 supported afterwards
 if ((Get-IsWinWorkstation) -and (Get-IsWin10)){
 $OSBuild=Get-WinVerBuild
 $OSFound = (Get-WinName) + " " + (Get-WinVerMajor) + "." + (Get-WinVerMinor) + "." + (Get-WinVerBuild)
 Write-Host "  ** OS Found: $OSFound`n" -foreground magenta
+
+
+
+here check build 18362 and 18363 for minor build 1049 and set true
+change install to if true
+
+
+
+
+
+
+
+
     if ($OSBuild -ge 19041){
 	    dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart | Out-Null
 		"$ENV:SystemRoot\system32\wsl --set-default-version 2"

@@ -1,4 +1,5 @@
-﻿$bits = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'
+$bits = Get-ProcessorBits
 $packageName = 'chromehue-chrome'
 $extensionID = 'ofhimkkaomaoilmnmfhmdoekoaeclkoa'
 if ($bits -eq 64)
