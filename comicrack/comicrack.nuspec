@@ -8,7 +8,8 @@
     <authors>Alexander Bätz, cYo Soft</authors>
     <owners>bcurran3</owners>
     <projectUrl>http://comicrack.cyolito.com</projectUrl>
-    <iconUrl>http://comicrack.cyolito.com/media/kunena/attachments/365/ComicRack.png</iconUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/comicrack</packageSourceUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/comicrack/comicrack_icon.png</iconUrl>
     <docsUrl>https://web.archive.org/web/20191005041913/http://comicrack.cyolito.com:80/support/wiki</docsUrl>
     <copyright>(C) cYo Soft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
