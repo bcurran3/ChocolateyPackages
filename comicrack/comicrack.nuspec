@@ -1,18 +1,25 @@
-﻿<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>comicrack</id>
     <title>ComicRack (Install)</title>
-    <version>0.9.178.20161008</version>
+    <version>0.9.178.20201116</version>
     <authors>Alexander Bätz, cYo Soft</authors>
     <owners>bcurran3</owners>
     <projectUrl>http://comicrack.cyolito.com</projectUrl>
     <iconUrl>http://comicrack.cyolito.com/media/kunena/attachments/365/ComicRack.png</iconUrl>
-    <docsUrl>http://comicrack.cyolito.com/support/wiki</docsUrl>
-    <mailingListUrl>http://comicrack.cyolito.com/forum</mailingListUrl>
-    <copyright>(C) 2006-2016 cYo Soft</copyright>
+    <docsUrl>https://web.archive.org/web/20191005041913/http://comicrack.cyolito.com:80/support/wiki</docsUrl>
+    <copyright>(C) cYo Soft</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
+---
+
+### [choco://comicrack](choco://comicrack)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 As a reader ComicRack supports all the state of the art features you can expect: different display modes, full screen, information overlays, magnifier, color adjustments, automatic backcolor matching and a multi tab interface to quickly switch between eComics.
 
 As a manager you can browse and search your eComics in the library, create folders and lists to organize them. You can customize the lists to show just the information you need and use advanced tools to tag and edit the information for your eComics. Or create Smart lists to display dynamic lists based on eComic info (never read, author, series etc.)
@@ -49,9 +56,20 @@ Exports: cbz, cbt, cb7, pdf, djvu
 [Android App](https://play.google.com/store/apps/details?id=com.cyo.comicrack.viewer.free) | [iOS App](https://apps.apple.com/us/app/comicrack/id660025721)
 
 PACKAGING NOTES: Use Control Panel to uninstall.
-    </description>
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <summary>ComicRack is the best eComic reader and manager for Windows computers. It is an all-in-one solution to read and manage your eComic library.</summary>
     <releaseNotes>added checksums</releaseNotes>
     <tags>comicrack comic book reader cbr cbz home server</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
