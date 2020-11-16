@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>program-install-and-uninstall-troubleshooter</id>
-    <version>1.0</version>
+    <version>1.0.0.20201116</version>
     <owners>bcurran3</owners>
     <title>Microsoft Program Install and Uninstall Troubleshooter (Portable)</title>
     <authors>Microsoft Corporation</authors>
@@ -13,21 +13,40 @@
     <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>microsoft install uninstalltroubleshooter portable</tags>
-    <summary>Fix problems that block programs from being installed or removed</summary>
+    <summary>The Program Install and Uninstall troubleshooter helps you automatically repair issues when you're blocked from installing or removing programs. It also fixes corrupted registry keys.</summary>
     <description>
-###What it fixes
+---
+
+### [choco://program-install-and-uninstall-troubleshooter](choco://program-install-and-uninstall-troubleshooter)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+The Program Install and Uninstall troubleshooter helps you automatically repair issues when you're blocked from installing or removing programs. It also fixes corrupted registry keys.
+
+The troubleshooter provides steps for you to follow. If a program isn't listed in the uninstall options, you'll be asked for that program's product code. To access the code, you'll need a tool for reading MSI files—which is typically available to IT professionals. You'll find the product code in the property table of the MSI file.
+
+### What it fixes
 * Corrupted registry keys on 64-bit operating systems
 * Corrupted registry keys that control the update data
 * Problems that prevent new programs from being installed
 * Problems that prevent existing programs from being completely uninstalled or updated
 * Problems that block you from uninstalling a program through Add or Remove Programs (or Programs and Features) in Control Panel
 
-###Runs on
+### Runs on
 * Windows 7
 * Windows 8
 * Windows 8.1
 * Windows 10	
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <releaseNotes>Nobody is ever going to type this long package name.</releaseNotes>
   </metadata>
   <files>
