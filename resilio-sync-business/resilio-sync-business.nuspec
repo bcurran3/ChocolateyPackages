@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -17,24 +17,31 @@
     <tags>resilio sync business btsync bittorrent backup trial</tags>
     <summary>Resilio Sync - A fast, reliable, and simple file sync and share solution.</summary>
     <description>
-###Make Sure Sensitive Data Stays In Your Control
+---
+
+### [choco://resilio-sync-business](choco://resilio-sync-business)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+### Make Sure Sensitive Data Stays In Your Control
 
 Protect your work with two-step authentication, decide who has permission to edit and view files, share your folders using expiring links.
 No cloud or any 3rd party servers. Just your private cloud.
 
-###Collaborate On Large Files
+### Collaborate On Large Files
 
 Share files of all types and sizes.  Synchronize folders. Move data as fast as your network allows - several times faster than any cloud based solution.
 
-###Access Files From Anywhere
+### Access Files From Anywhere
 
 Use any device to access your folders.  Sync supports all desktop, mobile, and NAS operating systems. Easily create an automated backup.
 
-###One Time Send
+### One Time Send
 
 The fastest way to send files around the office.  Send one or more files to multiple recipients without sharing the whole folder or creating a permanent sync connection.  Send design documents, video files, VMs, logs, memory dumps, or any other large file. Peer-to-peer, secure, and cloud free.
 
-###14 Day free trial.
+### 14 Day free trial.
 
 Resilio Sync Business Plus is $79/mo for up to 20 users, Premium is $199/mo for up to 60 users.
 
@@ -45,12 +52,21 @@ Resilio Sync Business Plus is $79/mo for up to 20 users, Premium is $199/mo for 
 [Android App](https://play.google.com/store/apps/details?id=com.resilio.sync) | [iOS App](https://itunes.apple.com/us/app/id1126282325) | [Windows App](https://www.microsoft.com/en-us/store/p/resilio-sync/9wzdncrdmw96?rtc=1)  
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/resilio-sync-business/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.1" />
-    </dependencies>		
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
+

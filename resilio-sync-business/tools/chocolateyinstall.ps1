@@ -1,4 +1,5 @@
-﻿$packageName    = 'resilio-sync-business'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'resilio-sync-business'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://download-cdn.resilio.com/stable/windows/cc/2501/Resilio-Sync.exe'
 $checksum       = '3E3D9BC73EC6F33B5002E2B4D96E7F4CC2B3E4081AE7A9F63A4EFD7C85008240'
