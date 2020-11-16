@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>resilio-sync-home</id>
-    <version>2.7.1.1370</version>
+    <version>2.7.2.1375</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/resilio-sync-home</packageSourceUrl>
     <title>Resilio Sync Home (Install)</title>
@@ -17,6 +17,13 @@
     <tags>resilio sync btsync bittorrent backup</tags>
     <summary>Resilio Sync -A fast, reliable, and simple file sync and share solution.</summary>
     <description>
+---
+
+### [choco://resilio-sync-home](choco://resilio-sync-home)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ### Have Your Files Anywhere
 
 Sync any folder to all your devices. Sync photos, videos, music, PDFs, docs or any other file types to/from your mobile phone, laptop, or NAS.	
@@ -49,7 +56,15 @@ Keep folders synced between multiple platforms and operating systems. Sync is av
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/resilio-sync-home/readme.md)**
 
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
