@@ -1,27 +1,34 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>javauninstalltool</id>
-    <version>1.1.0.0020180704</version>	
-    <owners>bcurran3</owners>	
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/javauninstalltool</packageSourceUrl>	
+    <version>15.0.0.0</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/javauninstalltool</packageSourceUrl>
     <title>Java Uninstall Tool (Portable)</title>
     <authors>Oracle</authors>
-    <projectUrl>https://www.java.com/en/download/faq/uninstaller_toolfaq.xml</projectUrl>	
-    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/java.svg</iconUrl>	
-    <copyright></copyright>	
+    <projectUrl>https://www.java.com/en/download/faq/uninstaller_toolfaq.xml</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/chocolatey/chocolatey-coreteampackages/50fd97744110dcbce1acde889c0870599c9d5584/icons/java.svg</iconUrl>
+    <copyright>Oracle</copyright>
     <licenseUrl>https://www.java.com/en/download/uninstall-app/terms.jsp</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>	
-    <docsUrl>https://www.java.com/en/download/faq/uninstaller_toolfaq.xml</docsUrl>	
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.java.com/en/download/faq/uninstaller_toolfaq.xml</docsUrl>
     <tags>oracle java uninstaller tool portable</tags>
-    <summary>Java Uninstall Tool - Uninstall old Java Versions</summary>
+    <summary>Out-of-date versions of Java on your computer may present a serious security risk. If out-of-date versions are found, this tool will help you remove them.</summary>
     <description>
-##Information about the Java Uninstall Tool for Windows
+---
+
+### [choco://javauninstalltool](choco://javauninstalltool)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Information about the Java Uninstall Tool for Windows
 
 The Java Uninstall tool helps you improve your computer security by simplifying the process of finding and uninstalling versions of Java. The Uninstall tool shows you a list of the Java versions on your computer and then allows you to select which versions to remove.
 
-##Highlights of the Java Uninstall tool
+## Highlights of the Java Uninstall tool
 
 * Versions of Java detected will be presented to the user for removal
 * The user can choose to remove all or select specific versions of Java to remove
@@ -30,7 +37,15 @@ The Java Uninstall tool helps you improve your computer security by simplifying 
 * Only Java versions installed using the Java installer are detected. If Java is bundled with any application that uses its own installer, that version of Java will not be offered for removal.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/javauninstalltool/readme.md)**
-    </description>
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
