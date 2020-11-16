@@ -1,21 +1,29 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nfopad.portable</id>
-    <version>1.74</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nfopad.portable</packageSourceUrl>		
+    <version>1.75</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nfopad.portable</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>NFOPad (Portable)</title>
     <authors>Anders Nivfors</authors>
     <iconUrl>http://abload.de/img/new1bu8u.png</iconUrl>
     <projectUrl>http://truehumandesign.se/s_nfopad.php</projectUrl>
-    <copyright>True Human Design 2016</copyright>
+    <copyright>True Human Design</copyright>
     <licenseUrl>http://truehumandesign.se/s_nfopad.php</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>http://truehumandesign.se/subscribe.php</mailingListUrl>
     <bugTrackerUrl>http://truehumandesign.se/forum.php</bugTrackerUrl>
+	<summary>NFOPad is a small, fast and flexible text editor and nfo viewer. </summary>
     <description>
+---
+
+### [choco://nfopad.portable](choco://nfopad.portable)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of NFOPad](http://truehumandesign.se/nfopad_sd1.png)
 	
 NFOPad is a small, fast and flexible combined nfo viewer and text editor. It is a clone of Microsoft's Notepad but much more customizable and with some additional features. Of course NFOPad also supports nfo files with ASCII art. The file extension is used to determine whether to use an ANSI or ASCII font. NFOPad also fully supports Unicode.
@@ -51,7 +59,7 @@ Features:
 
 The only difference from regular NFOPad is that an ini file is provided that defaults NFOPad to never write to the Windows registry. You can change this setting anytime you want from the Options dialog.
 
-###Please notice
+### Please notice
 Not allowing NFOPad to write to the registry will disable some features, such as:
 * Changing NFOPad's language (see below)
 * Associating files from NFOPad
@@ -59,12 +67,23 @@ Not allowing NFOPad to write to the registry will disable some features, such as
 * Making NFOPad searchable from the Start menu without adding a shortcut
 
 
-###Changing NFOPad's language without writing to the registry
+### Changing NFOPad's language without writing to the registry
 NFOPad will default to use the language of the country selected in Windows. If you want to use a different language go to the installation directory of NFOPad and rename the language files so the desired one is loaded.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/nfopad.portable/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <releaseNotes>http://www.truehumandesign.se/s_nfopad.php#versionhistory</releaseNotes>
     <tags>true human design nfopad nfo portable</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>  
 </package>
