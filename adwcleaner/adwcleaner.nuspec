@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>adwcleaner</id>
-    <version>8.0.7</version>
+    <version>8.0.8</version>
     <title>AdwCleaner (Portable)</title>
     <authors>Malwarebytes</authors>
     <owners>bcurran3</owners>
@@ -67,3 +67,4 @@ Doesn’t use much memory or processor power, and there’s nothing to install. 
     <file src="tools\**" target="tools" />
   </files>
 </package>
+
