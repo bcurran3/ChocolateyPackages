@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>8.97</version>
+    <version>8.99.2</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg (SOFTWAREOK.COM)</authors>
     <owners>bcurran3</owners>
