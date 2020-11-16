@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hexamail-pop3-downloader</id>
-    <version>5.9.34.001</version>
+    <version>5.9.38.003</version>
     <title>Hexamail POP3 Downloader (Trial Install)</title>
     <authors>Hexamail Ltd.</authors>
     <owners>bcurran3</owners>
