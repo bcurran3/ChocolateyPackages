@@ -3,10 +3,10 @@ $packageName    = 'intel-network-drivers-win10'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
 $bits           = Get-ProcessorBits
-$url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.exe'
-$checksum       = '1EB55DAC4FF6C9A3652829B04C585E77E3E760672783C1EF5043636FFD9ADE41'
-$url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.exe'
-$checksum64     = 'C4B12B57987492BBCD433758908D6913EB5504B2C667A7886CD18204E636F14E'
+$url            = 'https://downloadmirror.intel.com/25016/eng/PROWin32.zip'
+$checksum       = 'C4B35D6C70CE5CFDF7C55A73E4C4E554FFAF07E23358D5CCEF4CAB4F55F033CD'
+$url64          = 'https://downloadmirror.intel.com/25016/eng/PROWinx64.zip'
+$checksum64     = '7F48BF346C92EA4EA7F615CF78E50D73F24D6BB0BE43516A7D7415228B858DDF'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -22,17 +22,21 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-if ($bits -eq 64)
-   {
-	$url = "$unzipLocation\APPS\PROSETDX\Winx64\DxSetup.exe"
-   } else {
-	$url = "$unzipLocation\APPS\PROSETDX\Win32\DxSetup.exe"
-   }
+$packageArgs = @{
+  packageName    = $packageName
+  Destination    = $unzipLocation
+  FileFullPath   = "$unzipLocation\PROWin32.exe"
+  FileFullPath64 = "$unzipLocation\PROWinx64.exe"
+}
+
+Get-ChocolateyUnzip @packageArgs
+
 
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
-  file           = $url
+  file           = "$unzipLocation\APPS\PROSETDX\Win32\DxSetup.exe"
+  file64         = "$unzipLocation\APPS\PROSETDX\Winx64\DxSetup.exe"
   silentArgs     = '/qn'
   validExitCodes = @(0)
   softwareName   = 'Intel(R) Network Connections*'
@@ -43,4 +47,3 @@ Install-ChocolateyInstallPackage @packageArgs
 Start-Sleep -s 10
 
 Remove-Item $unzipLocation -Recurse -EA SilentlyContinue | Out-Null
-#Start-CheckandStop "AutoHotkey" - future use?
