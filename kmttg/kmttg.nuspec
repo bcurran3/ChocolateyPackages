@@ -4,12 +4,19 @@
   <metadata>
     <id>kmttg</id>
     <title>kmttg</title>
-    <version>2.4.15</version>
+    <version>2.4.16</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/kmttg</packageSourceUrl>
     <authors>Kevin Moye</authors>
     <owners>bcurran3</owners>
     <summary>TiVo To Go and advanced Remote Control</summary>
     <description>
+---
+
+### [choco://kmttg](choco://kmttg)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of main window showing various options above tablature of TV shows metadata and job status log output](https://a.fsdn.com/con/app/proj/kmttg/screenshots/kmttg.png)
 
 kmttg is a Java based program I wrote to facilitate TivoToGo (TTG) transfers that can download, create pyTivo metadata, decrypt, run comskip and comcut (commercial detection and removal), create closed captions files and re-encode multiple shows you select from your Tivos all automatically. The program also has the capability to transfer and process shows automatically from your Tivos based on titles and keywords you setup.
@@ -20,7 +27,7 @@ Also has AutoSkip functionality where you can enjoy hands free commercial skip v
 
 Also has ability to capture video output directly from Slingbox Pro or later models either on the LAN or WAN.
 
-####Features
+#### Features
 * Graphical and/or automated TiVo To Go downloads
 * Automated flow for download, decrypt, commercial cut, encode
 * Advanced TiVo remote control capabilities including Season Passes backup/restore etc.
@@ -29,7 +36,15 @@ Also has ability to capture video output directly from Slingbox Pro or later mod
 * Use AutoSkip functionality for hands free commercial skipping for your TiVos
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/kmttg/readme.md)**
-    </description>
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <projectUrl>https://sourceforge.net/projects/kmttg/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/kmttg/kmttg_icon.png</iconUrl>
     <projectSourceUrl>https://sourceforge.net/p/kmttg/code/</projectSourceUrl>
