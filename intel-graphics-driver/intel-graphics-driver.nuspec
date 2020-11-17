@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>27.20.100.8783</version>
+    <version>27.20.100.8935</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
     <title>Intel® Graphics - Windows® 10 DCH Drivers</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/29904</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/29988/Intel-Graphics-Windows-10-DCH-Drivers</projectUrl>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
@@ -28,40 +28,26 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 **Note:** Installing this Intel generic graphics driver will overwrite your Computer Manufacturer (OEM) customized driver. OEM drivers are handpicked and include customized features and solutions to platform-specific issues. The generic Intel driver provides users the latest and greatest feature enhancements and bug fixes that OEMs may not have customized yet to address platform-specific needs. Users can check for matching OEM versions at OEM websites.
 _______________________
 
-### Highlights
+## IMPROVEMENTS:
 
-* Launch driver for 11th Gen Intel® Core™ processors with Iris® Xe graphics, supporting earlier generations
+Performance improvements when using Chrome YouTube Media Playback.
+*2 Are you still experiencing an error preventing the driver update? Look here for why and a solution.
 
-#### Intel® Iris® Xe Graphics New Features:
+Any graphics issues found using Intel generic graphics drivers should be reported directly to Intel. Corporate customers should always use OEM drivers and report all issues through the vendor they purchased the platforms and support through.
 
-* Media Enhancements
- * HDR video playback enhancements
- * Dolby* Vision with video encoding acceleration.
- * Decode Support for HEVC 12-bit 4:2:0, 4:2:2, 4:4:4 and VP9 12-bit 4:2:0, 4:4:4.
- * Support for 16K picture HEVC and VP9 video decode
- * HEVC and VP9 Decoder performance enhancements to support 4K60 4:4:4
- * 4K60 HEVC encoder performance improvements
- * HEVC and VP9 4:4:4 speed mode support
-* Sampler Feedback support
-* Graphics Profile Guided Optimization for Compute Shader SIMD
-* Intel® Turbo Technology Power and Performance Enhancements
-* Display Enhancements
- * 5K LACE DPST enabled by default
- * LRR 2.5 for Adaptive sync panels to dynamically reduce panel RR to lowest possible RR or to media * multiple RR (e.g. 48Hz) for idle/media playback scenarios to work alongside Panel Self Refresh
- * Additional power savings on battery when combining internal display with external displays.
- * 12 bits-per-channel support on single DisplayPort
- * LACE Improvement for Dark Content Treatment
+Install the Intel® Driver &amp; Support Assistant, which automatically checks for drivers on a regular basis and can provide notifications when new drivers are available.
 
 This is a DCH driver. Click for more information about DCH drivers.
 
-Supported OS versions
+## Supported OS versions
 
-Microsoft Windows® 10-64 - Fall Creators Update (1709)(RS3)
-Microsoft Windows 10-64 - April 2018 Update (1803)(RS4)
-Microsoft Windows 10-64 - October 2018 Update (1809)(RS5)
-Microsoft Windows 10-64 – May 2019 Update (1903)(19H1)
-Microsoft Windows 10-64 – November 2019 Update (1909)(19H2)
-Microsoft Windows 10-64 – May 2020 Update (2004)(20H1)
+* Microsoft Windows® 10-64 - Fall Creators Update (1709)(RS3)
+* Microsoft Windows 10-64 - April 2018 Update (1803)(RS4)
+* Microsoft Windows 10-64 - October 2018 Update (1809)(RS5)
+* Microsoft Windows 10-64 - May 2019 Update (1903)(19H1)
+* Microsoft Windows 10-64 - November 2019 Update (1909)(19H2)
+* Microsoft Windows 10-64 - May 2020 Update (2004)(20H1)
+* Microsoft Windows 10-64 - October 2020 Update (20H2)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
 
@@ -72,7 +58,7 @@ Microsoft Windows 10-64 – May 2020 Update (2004)(20H1)
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29904/eng/ReadMe.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29988/eng/ReadMe.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="dependency-windows10" version="10.1709" />
