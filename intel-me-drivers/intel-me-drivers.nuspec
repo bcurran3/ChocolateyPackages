@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-me-drivers</id>
-    <version>1909.12.0.1236</version>
+    <version>1909.12.0.1237</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-me-drivers</packageSourceUrl>
     <title>Intel® Management Engine Driver for Windows 8.1* and Windows® 10 (Install)</title>
@@ -18,45 +18,25 @@
     <description>
 ---
 
-###[choco://intel-me-drivers](choco://intel-me-drivers)
+### [choco://intel-me-drivers](choco://intel-me-drivers)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
-Intel® Management Engine Driver for Windows 8.1* and Windows® 10 Supporting SKL, KBL, and KBL-R Consumer and Corporate SKUs.
+## NOTE: Actual driver version 1909.12.0.1236
 
-This download is valid for the product(s) listed below.
-* Intel® B150 Chipset
-* Intel® B250 Chipset
-* Intel® B360 Chipset
-* Intel® B365 Chipset
-* Intel® H110 Chipset
-* Intel® H170 Chipset
-* Intel® H270 Chipset
-* Intel® H310 Chipset
-* Intel® H370 Chipset
-* Intel® Q150 Chipset
-* Intel® Q170 Chipset
-* Intel® Q250 Chipset
-* Intel® Q270 Chipset
-* Intel® Q370 Chipset
-* Intel® X299 Chipset
-* Intel® Z170 Chipset
-* Intel® Z270 Chipset
-* Intel® Z370 Chipset
-* Intel® Z390 Chipset
-* Mobile Intel® HM170 Chipset
-* Mobile Intel® HM175 Chipset
-* Mobile Intel® HM370 Chipset
-* Mobile Intel® QM170 Chipset
-* Mobile Intel® QM175 Chipset
-* Mobile Intel® QM370 Chipset
-* Mobile Intel® QMS380 Chipset
+## Detailed Description
 
-###INSTALL INSTRUCTIONS:
+Intel® Management Engine Driver for Windows 8.1* and Windows® 10 supporting
+
+* 6th Generation Intel® Core™ Processor Family (Sky Lake)
+* 7th Generation Intel® Core™ Processor Family (Kaby Lake)
+* 8th Generation Intel® Core™ Processor Family (Kaby Lake R)
+
+### INSTALL INSTRUCTIONS:
 There is a **Consumer** and a **Corporate** version of these drivers. You can specify which version to install using package parameters, examples are below. Not specifying a version will default to the Consumer drivers.
 
-###INSTALL EXAMPLES:
+### INSTALL EXAMPLES:
 * choco install intel-me-drivers --params "'/TYPE:consumer'" (default)
 * choco install intel-me-drivers --params "'/TYPE:corporate'"
 
