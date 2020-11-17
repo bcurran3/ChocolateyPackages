@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>17.9.1.1010</version>
+    <version>18.0.0.633</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
@@ -24,24 +24,19 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-### Program verison 17.9.1.1009.3
+### Detailed Description
+
+Note: Intel recommends that end users utilize driver updates provided by their system manufacturer/provider or via Windows* Update to eliminate the potential impact caused by loading non-customized drivers. System manufacturers regularly customize Intel generic drivers to meet the needs of their specific system design. In such cases, use of the Intel generic driver update is not recommended.
 
 ### Purpose
 	
-The Intel® Rapid Storage Technology (Intel® RST) Driver (16.8.0.1000) supports the configuration and enabling of multiple features including:
+The Intel® Rapid Storage Technology (Intel® RST) Driver 18.0.1.1138 supports the configuration and enabling of multiple features including:
 
-* System Acceleration with Intel® Optane™ Memory
+* System acceleration with Intel® Optane™ memory
 * Configuration and maintenance of RAID 0/1/5/10
-* Intel® RST
+* Intel® VMD support on 11th Gen platforms (See more details here)
 
-Note: Contact your system manufacturer prior to installing these applications or requesting technical support from Intel. They may provide software that is specifically configured for your system. 
-
-### Platforms supported
-
-* Intel® 300/240 Series Chipset Family
-* Intel® 200 Series Chipset Family SATA AHCI/RAID Controller
-* 7th Generation Intel® Core™ Processor Family Platform I/O SATA AHCI/RAID Controller
-* Intel® 100 Series/C230 Series Chipset Family SATA AHCI/RAID Controller
+To manage these capabilities, download the Intel® Optane™ Memory and Storage Management application found on the Microsoft Store.
 
 **This version for Windows 10 and Server 2016 only.**
 
@@ -56,7 +51,7 @@ Note: Contact your system manufacturer prior to installing these applications or
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29007/eng/Readme.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29978/eng/Readme_enduser_18.0.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
     </dependencies>
