@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'allwemo'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\AllWemoSetup.msi" 
 
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'MSI'
-  url            = $url
+  file           = "$toolsDir\AlWemoSetup.msi"
   validExitCodes = @(0, 3010, 1641)
   silentArgs     = '/quiet /qn /norestart'
   softwareName   = 'AllWemo*'
-}
+  }
+  
+Install-ChocolateyInstallPackage @packageArgs
 
-Install-ChocolateyPackage @packageArgs
-Remove-Item $url
+Remove-Item "$toolsDir\*.msi" -EA SilentlyContinue | Out-Null
