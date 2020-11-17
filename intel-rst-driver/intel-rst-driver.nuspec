@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>18.0.0.633</version>
+    <version>18.0.1.1138</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/29647/Intel-Rapid-Storage-Technology-Intel-RST-User-Interface-and-Driver?product=55005</projectUrl>
+    <projectUrl>hhttps://downloadcenter.intel.com/download/29978/Intel-Rapid-Storage-Technology-Driver-Installation-Software-with-Intel-Optane-Memory</projectUrl>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
