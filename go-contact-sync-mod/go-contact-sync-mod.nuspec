@@ -4,7 +4,7 @@
   <metadata>
     <id>go-contact-sync-mod</id>
     <title>GO Contact Sync Mod</title>
-    <version>3.11.3</version>
+    <version>3.11.4</version>
     <authors>WebGear Ltd, New Zealand + Create Software + Stru.be + saller.NET + Big-R</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/go-contact-sync-mod</packageSourceUrl>
@@ -63,7 +63,7 @@ Please find some guidelines how to sync your mobile phone contacts with Google C
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/go-contact-sync-mod/go-contact-sync-mod_icon.png</iconUrl>
     <dependencies>
-      <dependency id="dotnet4.5" version="4.5" />
+      <dependency id="dotnet4.6.1" version="4.6.01055.20170308"/>
     </dependencies>
     <releaseNotes>https://sourceforge.net/projects/googlesyncmod/files/Releases/3.10.29/</releaseNotes>
   </metadata>
