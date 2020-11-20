@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>taskschedulerview</id>
-    <version>1.56</version>
+    <version>1.57</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/taskschedulerview</packageSourceUrl>
     <title>TaskSchedulerView (Portable)</title>
@@ -18,10 +18,12 @@
     <tags>nirsoft taskschedulerview task scheduler utility portable binary</tags>
     <summary>TaskSchedulerView lets you easily view and edit Windows Scheduled Tasks in a GUI.</summary>
     <description>
-***
+---
+
 ### [choco://taskschedulerview](choco://taskschedulerview)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
 
 ![Screenshot of TaskSchedulerView](http://www.nirsoft.net/utils/taskschedulerview.png)
 	
@@ -34,10 +36,15 @@ This tool works on any version of Windows, starting from Windows Vista and up to
 **TaskSchedulerView** is also included with [NirLauncher](https://chocolatey.org/packages/nirlauncher)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/taskschedulerview/readme.md)**
+    
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***</description>
+
+---
+
+</description>
     <releaseNotes>https://www.nirsoft.net/utils/task_scheduler_view.html</releaseNotes>
   </metadata>
   <files>

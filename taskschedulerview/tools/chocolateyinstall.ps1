@@ -12,7 +12,7 @@ $packageArgs = @{
 }
 
 Get-ChocolateyUnzip @packageArgs
-Remove-Item "$toolsDir\*.zip" | out-null
+Remove-Item "$toolsDir\*.zip" -EA SilentlyContinue | Out-Null
 
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName" -targetPath "$toolsDir\$exe" -WorkingDirectory "$toolsDir"
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exe"    
