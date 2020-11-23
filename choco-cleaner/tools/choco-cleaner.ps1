@@ -12,7 +12,7 @@ if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:Syste
 if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
 
 # All 7Zip supported formats plus EXE, MSU, MSP, APPX, APPXBUNDLE, IMG - What else is needed?
-$BinaryExtensions=@("*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7z","*.xz","*.bzip2","*.gzip","*.tar","*.zip","*.wim","*.ar","*.arj","*.cab","*.chm","*.cpio","*.cramfs","*.dmg","*.ext","*.fat","*.gpt","*.hfs","*.ihex","*.iso","*.lzh","*.lzma","*.mbr","*.msi","*.nsis","*.ntfs","*.qcow2","*.rar","*.rpm","*.squashfs","*.udf","*.uefi","*.vdi","*.vhd","*.vmdk","*.xar","*.z")
+$BinaryExtensions=@("*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7z","*.xz","*.bzip2","*.gzip","*.tar","*.zip","*.wim","*.ar","*.arj","*.cab","*.chm","*.cpio","*.cramfs","*.dmg","*.ext","*.fat","*.gpt","*.hfs","*.ihex","*.iso","*.lzh","*.lzma","*.mbr","*.msi","*.nsis","*.ntfs","*.qcow2","*.rar","*.rpm","*.squashfs","*.udf","*.uefi","*.vdi","*.vhd","*.vmdk","*.xar","*.z","*.dll")
 
 # Import preferences from choco-cleaner.config
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.config"
