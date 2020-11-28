@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This program is updated semi-frequently. The download URL in this package will always download the latest version. Versions of the program released after this package will fail checksums. If you get an error installing this package please try --ignore-checksums and open a GitHub Issue requesting the package to be updated.
+* Binary is included in the package as of v3.0.1006, it's a forever package.
+* OSFMount is updated 2-3 times a year. Please open an issue on GitHub to notify me of newer versions.
 
 ***
 
