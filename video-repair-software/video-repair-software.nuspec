@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>video-repair-software</id>
-    <version>3.1.0.1</version>
+    <version>4.0.0.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/video-repair-software</packageSourceUrl>
     <title>Video Repair Tool (Portable)</title>
@@ -17,10 +17,17 @@
     <tags>grau video repair ac1 mpg2 mpg4 mp4 mp4v dvc dvpp dvhp xdvc xd5d xd5e h264 avc apch apcn apcs apco ap4h portable</tags>
     <summary>Do-It-Yourself Video Repair Tool (VRT)</summary>
     <description>
-![screenshot of Video Repair Tool](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/video-repair-software/video-repair-software_screenshot.png)
+---
+
+### [choco://video-repair-software](choco://video-repair-software)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![screenshot of Video Repair Tool](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/video-repair-software/video-repair-software_screenshot.png)
 
 
-###Video Repair Software
+### Video Repair Software
 
 Do-It-Yourself Video Repair Tool (VRT)  –  MP4视频文件修复工具 – MP4 Repair
 
@@ -55,7 +62,15 @@ System requirements:
 LICENSE cost 29 EUR for 5 video repairs or 99 EUR for single use unlimited video repairs and can be purchased from the website.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/video-repair-software/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
