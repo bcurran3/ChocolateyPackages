@@ -2,7 +2,7 @@
 $packageName    = 'plexamp'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url64          = "https://plexamp.plex.tv/plexamp.plex.tv/desktop/Plexamp%20Setup%20$env:ChocolateyPackageVersion.exe"
-$checksum64     = '6E29C386853D078EE48C30B00A63FB1B09E7E80E4C23D81981E6BFF3F324A02B'
+$checksum64     = '2E9F31D9B06ED5A48D79FC10FEB87D576EE4A9EA05C1651B25CF7F13B8898DB2'
 
 $packageArgs = @{
   packageName    = $packageName
