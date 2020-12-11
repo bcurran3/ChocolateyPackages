@@ -49,10 +49,17 @@ if (Test-Path $ENV:ChocolateyInstall\bin\_processed.txt){
 
 if ($DeleteIgnoreFiles -eq "True"){
 	 $GotIgnoreFiles=Get-ChildItem -Path $ENV:ChocolateyInstall *.ignore -Recurse
-	 $IgnoreFiles=$GotIgnoreFiles.count
+     $GotIgnoreFiles | ForEach-Object {
+        #Check if the corresponding .exe for the .ignore file still exists
+        if (-not (Test-Path $_.fullname.trim('ignore').trim('\.'))) {
+            [array]$ToRemoveIgnoreFiles += $_
+        }
+     }
+	 $IgnoreFiles=$ToRemoveIgnoreFiles.count
 	 if ($IgnoreFiles -ge 1){
         Write-Host "  **  Deleting $IgnoreFiles unnecessary Chocolatey .ignore files..." -Foreground Green
-        Remove-Item -Path $ENV:ChocolateyInstall -Include *.ignore -Recurse
+        #Only remove the .ignore files that don't have their corresponding .exe
+        $ToRemoveIgnoreFiles.fullname | Remove-Item
 	   } else {Write-Host "  **  NO unnecessary Chocolatey .ignore files to delete." -Foreground Green}
 	}
 
