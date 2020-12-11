@@ -1,7 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* Binary is included in the package as of v3.0.1006, it's a forever package.
-* OSFMount is updated 2-3 times a year. Please open an issue on GitHub to notify me of newer versions.
+* This package has the binary included. It will work forever. 
+* If you find a newer release, please let me know via an issue.
 
 ***
 

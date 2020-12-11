@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'sardu' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://www.sarducd.it/download/SARDU_340.zip'
-$checksum      = '286EA566AA82E6DBFDA29F1F20CC5CA1960C8DD4885999E4D82719C96F303181'
 $TodaysVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','')
+$url           = "https://www.sarducd.it/download/SARDU_"+$TodaysVersion+".zip"
+$checksum      = '1BD42ED3FA2BE6E02E2E04A8E8F1A411652BA2ECD5A61DFF1779797D2D63BFD3'
 $shortcutName  = 'SARDU.lnk'
 $workingDir    = "SARDU_$TodaysVersion"
 $exe           = 'sardu_3.exe'
