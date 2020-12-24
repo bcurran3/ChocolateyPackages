@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-graphics-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64       = 'https://downloadmirror.intel.com/30066/a08/igfx_win10_100.9030.exe'
-$checksum64  = 'FCEFD5531E8F5EEBF38E72762D17B09BB45A3BC6725F003126927A02AC386903'
+$url64       = 'https://downloadmirror.intel.com/30079/a08/igfx_win10_100.9079.exe'
+$checksum64  = 'E1EAD2C04E78311309ABBA72DF6CAA2943F3F816EE66D06ABA59501641C87CA9'
 
 if (!(Get-IsWin10)){
     Write-Warning "  ** This version is only for Windows 10."
