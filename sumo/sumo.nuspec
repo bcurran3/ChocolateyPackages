@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.11.9.470</version>
+    <version>5.12.1.473</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
@@ -44,15 +44,13 @@ SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sumo/readme.md)**
 
-
-
 ---
 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 
 ---
 
-</description>
+    </description>
     <releaseNotes>https://www.kcsoftwares.com/sumo/bugs.php</releaseNotes>
     <dependencies>
       <dependency id="autohotkey" version="1.1.27.07" />
