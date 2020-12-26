@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'; 
 $packageName = 'setpoint' 
-$url         = 'https://www.logitech.com/pub/techsupport/mouse/SetPoint6.69.123_32.exe'
-$checksum    = '20BD1FA910B0F93A90D578273756D9E1D9A17DCCBF7E82EAD7C3BAF98B7AC8A1'
-$url64       = 'https://www.logitech.com/pub/techsupport/mouse/SetPoint6.69.123_64.exe'
-$checksum64  = '49E819BC4DE417299274E492871DB0086A48EA01F4CCB982EC0D7C72B20401DA'
+$url         = 'https://download01.logi.com/web/ftp/pub/techsupport/mouse/SetPoint6.70.55_32.exe'
+$checksum    = '6692518B9443284E661F824465B1FE35B096411CF98F22D60B6AE6441E041871'
+$url64       = 'https://download01.logi.com/web/ftp/pub/techsupport/mouse/SetPoint6.70.55_64.exe'
+$checksum64  = '77D4F313F4112BBB6D414804D71810AF918AB4EF71F55DABC2007B4086CB7BDE'
 
 $packageArgs = @{
   packageName   = $packageName
