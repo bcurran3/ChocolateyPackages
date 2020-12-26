@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xmedia-recode</id>
-    <version>3.5.2.0</version>
+    <version>3.5.2.4</version>
     <title>XMedia Recode (Install)</title>
     <authors>Sebastian Dörfler</authors>
     <copyright>Copyright © Sebastian Dörfler</copyright>
@@ -71,7 +71,7 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
     <releaseNotes>https://www.xmedia-recode.de/en/version.html</releaseNotes>
     <tags>sdorfler dvd-ripper video-converter audio-converter binary embedded</tags>
     <dependencies>
-      <dependency id="vcredist140" version="14.26.28720.3" />
+      <dependency id="vcredist2017" version="14.16.27033" />
     </dependencies>
   </metadata>
   <files>
