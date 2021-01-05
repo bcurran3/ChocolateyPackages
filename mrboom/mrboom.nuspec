@@ -9,7 +9,7 @@
     <title>MrBoom (Portable)</title>
     <authors>Remdy Software</authors>
     <projectUrl>https://github.com/Javanaise/mrboom-libretro</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/Javanaise/mrboom-libretro/master/Assets/mrboom.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mrboom/mrboom_icon.png</iconUrl>
     <copyright>Copyright (c) Remdy Software</copyright>
     <licenseUrl>https://github.com/Javanaise/mrboom-libretro/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of MrBoom](https://github.com/Javanaise/mrboom-libretro/blob/master/tools/tests/screenshots/mrboom-5.gif)
+![screenshot of MrBoom](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mrboom/mrboom_screenshot.gif)
 	
 [Mr.Boom](http://mrboom.mumblecore.org) is a Bomberman clone for the RetroArch platform and was converted from DOS assembly using asm2c.
 
