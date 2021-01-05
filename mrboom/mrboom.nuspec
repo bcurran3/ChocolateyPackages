@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>mrboom</id>
-    <version>4.9</version>
+    <version>5.2</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/mrboom</packageSourceUrl>
     <title>MrBoom (Portable)</title>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of MrBoom](http://mrboom.mumblecore.org/mrboom-5.gif)
+![screenshot of MrBoom](https://github.com/Javanaise/mrboom-libretro/blob/master/tools/tests/screenshots/mrboom-5.gif)
 	
 [Mr.Boom](http://mrboom.mumblecore.org) is a Bomberman clone for the RetroArch platform and was converted from DOS assembly using asm2c.
 
