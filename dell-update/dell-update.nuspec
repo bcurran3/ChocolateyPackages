@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>3.1.3</version>
+    <version>4.0.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
-    <title>Dell Update (Install)</title>
+    <title>Dell Update Application for Windows 10 (Install)</title>
     <authors>Dell Inc.</authors>
     <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=5P2R9</projectUrl>
 	<docsUrl>https://www.dell.com/support/home/en-us/product-support/product/command-update/docs</docsUrl>
