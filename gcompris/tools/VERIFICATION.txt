@@ -5,6 +5,4 @@ bcurran3 downloaded and packaged the included .EXEs for GCompris from the develo
 The direct download links are at:
 https://gcompris.net/downloads-en.html
 
-SHA256 checksum for the .EXE is listed in the ChocolateyInstall.ps1 file
-
 ==================== GCompris ====================
