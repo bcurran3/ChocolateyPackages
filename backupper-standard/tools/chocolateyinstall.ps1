@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'backupper-standard'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://www2.aomeisoftware.com/download/adb/BackupperFull.exe'
-$checksum      = 'BD99C793F5F7B3FB9DC68CDFFBB00EA25D26F1C2219F16CFA28102CBC8BE9D9C'
+$url           = 'https://www2.aomeisoftware.com/download/adb/AOMEIBackupperStd.exe'
+$checksum      = '15F7687F8EEA678B7527F1C90623673B36A26618C005CC3BE35FBD69BDE01A78'
 
 $packageArgs = @{
   packageName   = $packageName
