@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>beebeep</id>
-    <version>5.8.2</version>
+    <version>5.8.4</version>
     <owners>bcurran3</owners>
     <title>beeBEEP (Portable)</title>
     <authors>Marco Mastroddi</authors>
@@ -20,17 +20,17 @@
     <summary>BeeBEEP is an open source, peer to peer, secure LAN messenger.</summary>
     <description>
 ___
-###[choco://beebeep](choco://beebeep)
+### [choco://beebeep](choco://beebeep)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
 ![Screenshot of beeBEEP](http://beebeep.sourceforge.net/images/beebeep-screenshot-1.jpg)
 
-###What is BeeBEEP?
+### What is BeeBEEP?
 
 BeeBEEP is an open source, peer to peer, lan messenger developed by Marco Mastroddi. You can talk and share files with all the people inside your local area network such of an office, home or internet cafe. You don't need a server, just download, unzip and start it. Simple, fast and secure.
 
-####Main Features:
+#### Main Features:
 * Free: BeeBEEP is free and always will be.
 * Multiple OS: there are releases for Windows, MacOSX, Linux, OS/2 and eComStation.
 * Easy to use: BeeBEEP is a serverless application. Download, unzip and start.
@@ -60,3 +60,4 @@ ___
     <file src="tools\**" target="tools" />
   </files>
 </package>
+
