@@ -1,49 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>vmware-powercli-psmodule</id>
-    <version>11.2.0.12780525</version>
-    <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vmware-powercli-psmodule</packageSourceUrl>
-    <title>VMware.PowerCLI (Install)</title>
+    <version>12.1.0.17009493</version>
+    <title>VMware.PowerCLI (PowerShell Module)</title>
     <authors>VMware</authors>
-    <projectUrl>https://www.powershellgallery.com/packages/VMware.PowerCLI</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vmware-powercli-psmodule/vmware-powercli-psmodule_icon.png</iconUrl>
-    <copyright>Copyright (c) VMware, Inc. All rights reserved.</copyright>
-    <docsUrl>https://code.vmware.com/docs/7634/cmdlet-reference</docsUrl>
-    <mailingListUrl>https://code.vmware.com/forums/2530/vmware-powercli</mailingListUrl>
+    <owners>bcurran3 virtualex</owners>
     <licenseUrl>https://www.vmware.com/help/legal.html</licenseUrl>
+    <projectUrl>https://www.powershellgallery.com/packages/VMware.PowerCLI</projectUrl>
+    <iconUrl>https://rawcdn.githack.com/virtualex-itv/choco-vmware-powercli-psmodule/9bcd403832a016addc1344be75e628d36c2a0b1c/_icon/PowerCLI.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>vmware powercli vsphere automation client virtual machine virtualization esx esxi powershell</tags>
+    <description>---
+
+      ###[choco://vmware-powercli-psmodule](choco://vmware-powercli-psmodule)
+      To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+      ---
+
+      ###VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell, and provides more than 600 cmdlets for managing and automating vSphere, vCloud, vRealize Operations Manager, vSAN, NSX-T, VMware Cloud on AWS, and VMware Horizon environments.
+
+      **[VIRTUALEX'S PACKAGE NOTES](https://github.com/virtualex-itv/choco-vmware-powercli-psmodule/blob/master/docs/README.md)**
+      **[BCURRAN3'S PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-powercli-psmodule/readme.md)**
+      ---
+
+      **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+      ---</description>
     <summary>This Windows PowerShell module contains VMware.PowerCLI</summary>
-    <description>
----
-
-###[choco://vmware-powercli-psmodule](choco://vmware-powercli-psmodule)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-
----
-
-###VMware PowerCLI is a command-line and scripting tool built on Windows PowerShell, and provides more than 600 cmdlets for managing and automating vSphere, vCloud, vRealize Operations Manager, vSAN, NSX-T, VMware Cloud on AWS, and VMware Horizon environments.
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/vmware-powercli-psmodule/readme.md)**
-
-    
----
-
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-
----
-
-</description>
-    <releaseNotes>https://vdc-repo.vmware.com/vmwb-repository/dcr-public/69fd6538-637b-486c-abcb-84207962cf16/47059d34-3ed5-45da-a3d8-e313810029f7/changelog.html</releaseNotes>
+    <releaseNotes>https://code.vmware.com/docs/12645/vmware-powercli-12-1-0-release-notes</releaseNotes>
+    <copyright>Copyright (c) 2020 VMware, Inc. All rights reserved.</copyright>
+    <tags>vmware powercli vsphere automation client virtual machine virtualization esx esxi powershell hcx nsx-t</tags>
+    <packageSourceUrl>https://github.com/virtualex-itv/choco-vmware-powercli-psmodule/tree/master</packageSourceUrl>
+    <docsUrl>https://code.vmware.com/docs/12648/powercli-12-1-0-user-s-guide</docsUrl>
+    <mailingListUrl>https://code.vmware.com/forums/2530/vmware-powercli</mailingListUrl>
     <dependencies>
-      <dependency id="dotnet4.5" version="4.5" />
+      <dependency id="dotnet4.5" />
       <dependency id="powershell" version="5.0" />
     </dependencies>
   </metadata>
-  <files>
-    <file src="tools\**" target="tools" />
-  </files>
 </package>
