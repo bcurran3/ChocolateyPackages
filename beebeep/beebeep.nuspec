@@ -11,11 +11,11 @@
     <iconUrl>https://briian.com/wp-content/uploads/2016/05/BeeBEEP-200.png</iconUrl>
     <copyright>© Marco Mastroddi </copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<licenseUrl>https://sourceforge.net/p/beebeep/code/HEAD/tree/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://sourceforge.net/p/beebeep/code/HEAD/tree/LICENSE.txt</licenseUrl>
     <projectSourceUrl>https://sourceforge.net/p/beebeep/code/HEAD/tree/</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/beebeep</packageSourceUrl>
     <bugTrackerUrl>https://sourceforge.net/p/beebeep/tickets/</bugTrackerUrl>
-	<docsUrl>http://beebeep.sourceforge.net/help.php</docsUrl>
+    <docsUrl>http://beebeep.sourceforge.net/help.php</docsUrl>
     <tags>beebeep IM chat messenger portable</tags>
     <summary>BeeBEEP is an open source, peer to peer, secure LAN messenger.</summary>
     <description>
@@ -24,7 +24,7 @@ ___
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
-![Screenshot of beeBEEP](http://beebeep.sourceforge.net/images/beebeep-screenshot-1.jpg)
+![Screenshot of beeBEEP](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/beebeep/beebeep_screenshot.jpg)
 
 ### What is BeeBEEP?
 
@@ -60,4 +60,3 @@ ___
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
