@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>backupper-standard</id>
-    <version>6.2.0</version>
+    <version>6.3.0</version>
     <title>AOMEI Backupper Standard (Install)</title>
     <authors>AOMEI</authors>
     <owners>bcurran3</owners>
     <licenseUrl>http://www.backup-utility.com/terms.html</licenseUrl>
-    <projectUrl>http://www.aomeitech.com/ab/standard.html</projectUrl>
+    <projectUrl>https://www.ubackup.com/free-backup-software.html</projectUrl>
     <iconUrl>http://www.backup-utility.com/images/public/header/aomei-backupper-logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
