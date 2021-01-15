@@ -110,11 +110,36 @@ Function Copy-InstChoco{
 	   }
   }
 
+#For getting the chocolatey.nuspec from the chocolatey.nupkg
+Function Read-NuspecFromNupkg ($nupkgPath) {
+    #needed for accessing dotnet zip functions
+    Add-Type -AssemblyName System.IO.Compression.FileSystem
+
+    $archive = [System.IO.Compression.ZipFile]::OpenRead($nupkgPath)
+
+    $nuspecStream = ($archive.Entries | Where-Object { $_.FullName -like "*.nuspec" }).open()
+    $nuspecReader = New-Object Io.streamreader($nuspecStream)
+    $nuspecString = $nuspecReader.ReadToEnd()
+
+    #cleanup opened variables
+    $nuspecStream.close()
+    $nuspecReader.close()
+    $archive.dispose()
+
+    return ([XML]$nuspecString)
+}
+
 # ENHANCEMENT: Below for future release adding extra description info to packages.config
 # Import package.nuspec file to get extended package info
 function Get-NuspecInfo($PackageName,$NuspecTagRequest){
-   $nuspecXML = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
-   [xml]$nuspecFile = Get-Content $nuspecXML
+    #chocolatey does not have the it's .nuspec unpacked from the .nupkg
+    if ($PackageName -eq "Chocolatey") {
+        $nupkgPath = "$ENV:ChocolateyInstall\lib\chocolatey\chocolatey.nupkg"
+        [xml]$nuspecFile = Read-NuspecFromNupkg $nupkgPath
+    } else {
+        $nuspecXML = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
+        [xml]$nuspecFile = Get-Content $nuspecXML
+    }
 #   $NuspecAuthors = $nuspecFile.package.metadata.authors
 #   $NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl
 #   $NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
