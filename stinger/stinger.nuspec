@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ---
 
 	
-![Screenshot of McAfee Stinger] (https://www.mcafee.com/enterprise/en-us/img/screenshots/stinger-2.png?updated)
+![Screenshot of McAfee Stinger](https://www.mcafee.com/enterprise/en-us/img/screenshots/stinger-2.png)
 
 McAfee Stinger is a standalone utility used to detect and remove specific viruses. It is not a substitute for full anti-virus protection, but a specialized tool to assist administrators and users when dealing with infected system. Details on new or enhanced signatures added with each Stinger build are listed in the Readme details.
 
