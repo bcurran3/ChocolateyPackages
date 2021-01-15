@@ -57,6 +57,7 @@ $AllProgramsListFile = $ConfigFile.Settings.Preferences.AllProgramsListFile
 $DefaultUserProfile  = $ConfigFile.Settings.Preferences.DefaultUserProfile
 $PreProcessScript    = $ConfigFile.Settings.Preferences.PreProcessScript
 $PostProcessScript   = $ConfigFile.Settings.Preferences.PostProcessScript
+$SaveArguments = $ConfigFile.Settings.Preferences.SaveArguments
 
 $UseCustomPath  = $ConfigFile.Settings.Preferences.UseCustomPath
 $UseDocuments   = $ConfigFile.Settings.Preferences.UseDocuments
@@ -132,6 +133,33 @@ Function Copy-InstChoco{
 	        }
 	   }
   }
+
+#Un-encrypt .arguments file
+Add-Type -AssemblyName System.Security
+$entropyBytes = [System.Text.UTF8Encoding]::UTF8.GetBytes("Chocolatey")
+Function Unprotect-Arguments {
+    param([string]$data)
+    $encryptedByteArray = [System.Convert]::FromBase64String($data)
+    $decryptedByteArray = [System.Security.Cryptography.ProtectedData]::Unprotect(
+        $encryptedByteArray,
+        $entropyBytes,
+        [System.Security.Cryptography.DataProtectionScope]::LocalMachine
+    )
+    return [System.Text.UTF8Encoding]::UTF8.GetString($decryptedByteArray)
+}
+
+function Read-Arguments {
+    param([string]$packageName)
+    $dirList = Get-ChildItem $env:ChocolateyInstall\.chocolatey -directory
+    $directory = $dirList | Where { $_.Name -match ("$packageName" + "\.[\d\.]+") } | select -Last 1
+    if (!($directory)) { return }
+    $argsFile = Join-Path $directory.fullname ".arguments"
+    if (Test-Path $argsFile) {
+        $argsData = Get-Content $argsFile
+        $args = Unprotect-Arguments -data $argsData
+        '<![CDATA[' + $args + ']]>'
+    }
+}
 
 # ENHANCEMENT: Below for future release adding extra description info to packages.config
 # Import package.nuspec file to get extended package info
@@ -230,18 +258,20 @@ Function Write-PinnedList{
 Function Write-PackagesConfig{
     Check-SaveLocation
 	$header="<?xml version=`"1.0`" encoding=`"utf-8`"?>`n<packages>"	
-	if (($SaveVersions -eq "True") -and ($SaveTitleSummary -eq "True")){
-        $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" title=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title")"" summary=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary")""/>" }
-	   }
-	if (($SaveVersions -eq "True") -and ($SaveTitleSummary -eq "False")){
-	    $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" version=`"$($_.SubString($_.IndexOf("|") + 1))`" />" }
-	   }
-	if (($SaveVersions -eq "False") -and ($SaveTitleSummary -eq "True")){
-        $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`" title=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title")"" summary=""$(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary")""/>" }
-	   }
-	if (($SaveVersions -eq "False") -and ($SaveTitleSummary -eq "False")){
-	    $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`"/>" }
-	   }
+    $localPackageInfo = & choco list -lo -r -y
+    $body = $localPackageInfo | % {
+        $packageName = $($_.SubString(0, $_.IndexOf("|")))
+        $line = '   <package id="' + $packageName + '" '
+        if ($SaveTitleSummary -eq "True") {
+            $line = $line + 'title="' + $(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title") + '" '
+            $line = $line + 'summary="' + $(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary") + '" '
+        }
+        if ($SaveArguments -eq "True") {
+            $line = $line + 'arguments="' + $(Read-Arguments $packageName) + '" '
+        }
+        $line = $line + '/>'
+        $line
+        }
 	$footer="</packages>"
 	if ($body -Match $ErrorArray[0-3]) {
 	    Write-Warning "  ** Another instance of choco.exe was running and corrupted the output. Aborting..."
