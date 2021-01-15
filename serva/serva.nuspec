@@ -1,19 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>serva</id>
     <title>Serva Community Build (Portable)</title>
-    <version>3.2.0</version>
+    <version>4.0.0</version>
     <authors>Patrick Masotta </authors>
     <owners>bcurran3</owners>
-	<packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/serva</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/serva</packageSourceUrl>
     <summary>Serva is an Automated PXE Server Solution Accelerator based on an all-in-one portable multi-server engine.</summary>
     <description>
-***	
-[choco://serva](choco://serva)
+---
+
+### [choco://serva](choco://serva)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
+
 
 ![Screenshot of Serva](http://www.vercot.com/~serva/Imgs/Serva_30.png)
 
@@ -55,10 +58,15 @@ This package installs Serva Community which is licensed for personal, non-commer
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/serva/readme.md)**
 
-***
+    
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-    </description>
+
+---
+
+</description>
     <projectUrl>http://www.vercot.com/~serva/</projectUrl>
     <docsUrl>http://www.vercot.com/~serva/an/WindowsPXE1.html</docsUrl>
     <bugTrackerUrl>http://www.vercot.com/~serva/download.html</bugTrackerUrl>

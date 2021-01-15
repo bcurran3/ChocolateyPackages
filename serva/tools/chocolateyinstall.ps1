@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'serva' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://www.vercot.com/~serva/download/Serva_Community_32_64_v3.2.0.zip'
-$checksum    = 'AC7C9EE0DD322A373C6CA4616435E4EA359A14C13FD069F16EEDD95073331B3A'
+$url         = 'https://www.vercot.com/~serva/download/Serva_Community_v4.0.0.zip'
+$checksum    = '1FE1443144BECB46E16E07B679C8E1070BBE87E2422F9AD9B6A0396E62698FD5'
 
 $packageArgs = @{
   packageName   = $packageName
