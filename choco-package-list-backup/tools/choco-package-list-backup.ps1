@@ -132,12 +132,17 @@ Function Read-NuspecFromNupkg ($nupkgPath) {
 # ENHANCEMENT: Below for future release adding extra description info to packages.config
 # Import package.nuspec file to get extended package info
 function Get-NuspecInfo($PackageName,$NuspecTagRequest){
+    $nuspecXML = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
+    
     #chocolatey does not have the it's .nuspec unpacked from the .nupkg
-    if ($PackageName -eq "Chocolatey") {
-        $nupkgPath = "$ENV:ChocolateyInstall\lib\chocolatey\chocolatey.nupkg"
+    if (!($nuspecXML)) {
+        $nupkgPath = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nupkg"
+        if (!(Test-Path $nupkgPath)) {
+            Write-Warning "$PackageName does not have a nupkg or nuspec file"
+            Return "null"
+        }
         [xml]$nuspecFile = Read-NuspecFromNupkg $nupkgPath
     } else {
-        $nuspecXML = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
         [xml]$nuspecFile = Get-Content $nuspecXML
     }
 #   $NuspecAuthors = $nuspecFile.package.metadata.authors
