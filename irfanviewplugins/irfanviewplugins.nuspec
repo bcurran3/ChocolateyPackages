@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.56.0.20201224</version>
+    <version>4.57</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -40,7 +40,7 @@ ___
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.56" />
+      <dependency id="irfanview" version="4.57" />
     </dependencies>
   </metadata>
   <files>
