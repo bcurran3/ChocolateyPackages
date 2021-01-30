@@ -1,22 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>screenlogic-connect</id>
-    <version>5.2.736.0</version>
-    <owners>bcurran3</owners>
-    <title>Pentair ScreenLogic2 Connect (Install)</title>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/screenlogic-connect</packageSourceUrl>
+    <version>5.2.738.0020210130</version>
+    <title>Pentair ScreenLogic Connect (Install)</title>
     <authors>Pentair</authors>
-    <projectUrl>http://www.pentairpool.com/support/screenlogic2-update.html</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/screenlogic-connect/screenlogic-connect_icon.png</iconUrl>
-    <copyright>(C) Pentair</copyright>
-    <licenseUrl>http://www.pentair.com/site-navigation/global-footer/terms-of-use</licenseUrl>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.pentair.com/legal/terms-of-use.html</licenseUrl>
+    <projectUrl>https://www.pentair.com/en/knowledge-base/pool-spa-equipment/pentair-pool-and-spa-software-downloads/screenlogic-update.html</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/screenlogic-connect/screenlogic-connect_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>pentair screenlogic screenlogic2 pool home automation</tags>
-    <summary>Pentair ScreenLogic® Software for Consumers</summary>
     <description>
-![Screenshot of Pentair ScreenLogic2 Connect](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/screenlogic-connect/screenlogic-connect_screenshot.png)
+---
+
+### [choco://screenlogic-connect](choco://screenlogic-connect)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of Pentair ScreenLogic2 Connect](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/screenlogic-connect/screenlogic-connect_screenshot.png)
 	
 Welcome! Your Pentair Aquatic Systems the ScreenLogic2 Interface® will change the way you view pool and spa
 controls. the ScreenLogic2 Interface supports IntelliTouch® and EasyTouch® Control Systems. This innovation in
@@ -27,13 +30,25 @@ pool, spa and lighting equipment and also records pool, spa, and air temperature
 convenient way to help you conserve energy. Using the wireless Digital Tablet, iPhone®, or iPad® you can now
 control your pool and spa from anywhere inside or outside your home. An in-wall Touch Screen and a program for
 your PC are also available. the ScreenLogic2 Interface is a scalable system that can be upgraded to a completely
-integrated home automation solution including audio, security, climate, irrigation and more.
-
-[Download the corresponding Protocol Adapter update tool](https://pentairpool.com/~/media/websites/pool/software/screenlogic/build-5-2-736/step1-updateprotocoladapterfirmware736.exe?la=en)
-
+integrated home automation solution including audio, security, climate, irrigation and more. 	
+	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/screenlogic-connect/readme.md)**
-	</description>
-    <releaseNotes>https://pentairpool.com/en/support/tools/software%20downloads</releaseNotes>
+
+    
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <summary>Control Pentair IntelliTouch Automation System from your computer.</summary>
+    <releaseNotes>https://www.pentair.com/content/dam/extranet/product-related/software/ScreenLogicUpdate-Basic-3_v2.pdf</releaseNotes>
+    <copyright>(C) Pentair</copyright>
+    <tags>pentair screenlogic screenlogic2 pool home automation</tags>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/screenlogic-connect</packageSourceUrl>
+    <docsUrl>https://www.pentair.com/content/dam/extranet/pentair-pool/residential/manuals/automation/screenlogic2/screenlogic2-interface-installation-users-guide-english.pdf</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
