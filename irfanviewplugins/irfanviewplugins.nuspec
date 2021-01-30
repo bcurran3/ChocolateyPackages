@@ -40,7 +40,7 @@ ___
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.56" />
+      <dependency id="irfanview" version="4.57" />
     </dependencies>
   </metadata>
   <files>
