@@ -26,7 +26,7 @@ Move-Item "$toolsDir\$script" "$scriptDir" -Force -ErrorAction SilentlyContinue
 if (!(Test-Path "$scriptDir\$ScriptConfig")) { Move-Item "$toolsDir\$ScriptConfig" "$scriptDir" -Force }
 
 # Cleanup
-Remove-Item "$toolsDir\choco-cleaner.*" -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\choco-cleaner.*" -Exclude choco-cleaner.ico -Force -ErrorAction SilentlyContinue | Out-Null
 if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
 Function Update-Config{
@@ -72,9 +72,9 @@ if ($GotTask -ne $null){
 #	}
 	
 If (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
-      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $scriptDir\$script" -WorkingDirectory "$scriptDir" -RunAsAdmin
+      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $scriptDir\$script" -WorkingDirectory "$scriptDir" -IconLocation "$toolsDir\choco-cleaner.ico" -RunAsAdmin
     } else {
-      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $scriptDir\$script" -WorkingDirectory "$scriptDir" -RunAsAdmin
+      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $scriptDir\$script" -WorkingDirectory "$scriptDir" -IconLocation "$toolsDir\choco-cleaner.ico" -RunAsAdmin
 	}	
 if ($GotTask -ne $null){ exit }
 SchTasks /Create /SC WEEKLY /D SUN /RU SYSTEM /RL HIGHEST /TN "choco-cleaner" /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-cleaner.ps1" /ST 23:00 /F
