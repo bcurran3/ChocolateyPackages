@@ -2,7 +2,6 @@
 
 **BCURRAN3'S PACKAGE NOTES:**
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* If you don't like the default PowerShell icon for (unofficial) Chocolatey PowerShell because you get it confused with your normal PowerShell icon, you can manually choose to change the icon to use the Chocolatey logo found at C:\ProgramData\Chocolatey\choco.ico which the Chocolatey Team won't let me use since they believe you might become confused and think this is an official Chocolatey package instead of the aptly named "(unofficial) Chocolatey Powershell." Of course you have the power to manually change the icon to anything you want including a picture of Winnie the Poo if you so desire. 
 * If you wish to set the console colors to stand out from other PowerShell windows edit the icon, go to the Colors tab and change the RGB values to either 84,42,12 or 160,85,45 for a more unique Chocolatey brown background.
 
 	
