@@ -32,6 +32,18 @@ $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 # new configuration items since implementation of XML config in v0.0.3
 $DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
 
+if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
+     $Editor="notepad++.exe"
+    } else {
+      $Editor="notepad.exe"
+    }
+
+if ($args -eq "-EditConfig") {
+    Write-Host "  ** Editing contents of choco-cleaner.config." -Foreground Magenta
+	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.config"
+	return
+}
+
 # run shim and report if the target program exists or not
 function Test-ShimTargetExists {
     param ( [Object][Parameter(Mandatory=$true, ValueFromPipeline=$true)]$ShimFile )

@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_icon.png" width="139" height="88">
 
 ![Screenshot of Choco-Cleaner](https://cdn.rawgit.com/bcurran3/ChocolateyPackages/bd713cc4/choco-cleaner/choco-cleaner_screenshot.png)	
 
@@ -8,18 +8,18 @@
 * If you don't like the default scheduled time to run, you can easily change it using Window's TaskScheduler.
 * I'm open to suggestions - open a GitHub issue please.
 
-##DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY RESIDUAL CHOCOLATEY FILES? 
+## DO YOU WANT TO RECOVER SOME DISK SPACE USED BY UNNECESSARY RESIDUAL CHOCOLATEY FILES? 
 
-##YOU JUST FOUND THE EASY WAY!
+## YOU JUST FOUND THE EASY WAY!
 
 ####This package creates a Windows Scheduled Task to run Choco-Cleaner.ps1 every Sunday at 11:00 PM.
 
-##**BEFORE and AFTER Choco-Cleaner: (198 packages installed and does not include temp folder deletions.)**
+## **BEFORE and AFTER Choco-Cleaner: (198 packages installed and does not include temp folder deletions.)**
 ![schreenshot of files and diskspace  before Choco-Cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_before.png) ![schreenshot of files and diskspace after choco-cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_after.png)
 
 **Sure, you're probably not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as 6 byte .ignore files actually take up 4 KB of HDD space each.**
 
-##FEATURES:
+## FEATURES:
 
 Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation every Sunday at 11 PM in the background so you don't have to be bothered with it.
 
@@ -45,8 +45,13 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * \users\username\AppData\Local\Nuget\Cache if Nuget client is installed and caching files there
 * \Windows\Temp\chocolatey 
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools (NOT default)
+* orphaned shim files for programs that no longer exist
 
-##INSTRUCTIONS:
+### INSTALL EXAMPLES:
+* **choco install choco-cleaner - (default) installs **Choco-Cleaner** to run every Sunday at 11:00 PM
+* **choco install choco-cleaner --params "'/NOTASK:TRUE'"** - installs **Choco-Cleaner** without the scheduled task.
+
+## INSTRUCTIONS:
 
 To manually run **Choco-Cleaner**:
 
@@ -61,6 +66,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
+* 0.0.8 - Added checking and deleting of orphaned shim files thanks to TheCakeIsNaOH and Teknowledgist! New icon thanks to Teknowledgist. Added parameter to install without scheduled task. Added -EditConfig to easily edit the config file.
 * 0.0.7.2 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)
 * 0.0.7.1 - Added checking to make sure that $env:ChocolateyToolsLocation exists. If you receive a "$env:ChocolateyToolsLocation not defined error message," you might simply need to close your CLI and reopen it if $env:ChocolateyToolsLocation was created during choco-cleaner's install.
 * 0.0.7 - Added some info about what and what isn't being deleted, added #Requires -RunAsAdministrator statement to script (PS v4+)
@@ -74,7 +80,7 @@ CHANGELOG:
 * 0.0.2 - Unreleased version with two scripts with different default settings; "Bill's way" and "Rob's way" and a package parameter to choose which one to use/install. Shelved.
 * 0.0.1 - Initial release. Did not pass Chocolatey moderation due to mandated changes of default parameters. Only "secretly" available.
 
-###ROADMAP:
+### ROADMAP:
 * Clean up C:\ProgramData\chocolatey\.chocolatey
 * Clean up C:\ProgramData\chocolatey\lib-synced (licensed versions)
 
