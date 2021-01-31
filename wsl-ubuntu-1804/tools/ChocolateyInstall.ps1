@@ -2,7 +2,7 @@
 $packageName    = 'wsl-ubuntu-1804'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://aka.ms/wsl-ubuntu-1804'
-$checksum       = '96E4E3E336F08DDE1DF81FA9C266C5C7750BA92729857E92BDE36BF84A1DB002'
+$checksum       = '0B1ABE8D5DC3FF416A06C9524E4F61A1FDF6CED583CB9B297EE72DF1732FF403'
 $unzipLocation  = "$toolsDir\unzipped"
 $exe            = "ubuntu1804.exe"
 
