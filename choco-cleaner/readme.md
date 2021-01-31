@@ -48,7 +48,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * orphaned shim files for programs that no longer exist
 
 ### INSTALL EXAMPLES:
-* **choco install choco-cleaner - (default) installs **Choco-Cleaner** to run every Sunday at 11:00 PM
+* **choco install choco-cleaner** - (default) installs **Choco-Cleaner** to run every Sunday at 11:00 PM
 * **choco install choco-cleaner --params "'/NOTASK:TRUE'"** - installs **Choco-Cleaner** without the scheduled task.
 
 ## INSTRUCTIONS:
