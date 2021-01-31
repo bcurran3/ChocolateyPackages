@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolateypowershell</id>
-    <version>0.0.2.2</version>
+    <version>0.0.2.3</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</packageSourceUrl>
@@ -11,7 +11,7 @@
     <title>(unofficial) Chocolatey PowerShell</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
@@ -19,6 +19,13 @@
     <tags>bcurran3 unofficial chocolatey powershell test environment packagers maintainers</tags>
     <summary>Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.</summary>
     <description>
+---
+
+### [choco://chocolateypowershell](choco://chocolateypowershell)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot example of Chocolatey PowerShell](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_screenshot.png)
 	
 ### Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.	
@@ -38,9 +45,11 @@ Just click the **ChocolateyPowerShell** icon on your desktop and hit yes to the 
 
 ---
 
-    </description>
+    
+</description>
     <releaseNotes>
 ### CHANGELOG:
+* 0.0.2.3 - new icon by Teknowledgist. Thanks!
 * 0.0.2.2 - remove forceful load of chocolatey-core extension (it'll load automatically with any other extensions)
 * 0.0.2.1 - minor cosmetic and help improvements
 * 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
