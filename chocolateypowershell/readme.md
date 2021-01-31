@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 * A BCURRAN3 original! So of course I endorse and use it. :)
@@ -16,6 +16,7 @@
 Just click the **ChocolateyPowerShell** icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
 ### CHANGELOG:
+* 0.0.2.3 - new icon by Teknowledgist. Thanks!
 * 0.0.2.2 - remove forceful load of chocolatey-core extension (it'll load automatically with any other extensions)
 * 0.0.2.1 - minor cosmetic and help improvements
 * 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
