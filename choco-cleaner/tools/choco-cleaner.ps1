@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Continue'
 #Requires -RunAsAdministrator
-# Choco-Cleaner.ps1 Copyleft 2017-2020 by Bill Curran AKA BCURRAN3
+# Choco-Cleaner.ps1 Copyleft 2017-2021 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Cleaner.ps1 v0.0.7.2 (04/06/2020) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
-Write-Host "Copyleft 2017-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v0.0.8 (01/31/2021) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
@@ -31,6 +31,19 @@ $DeleteCache = $ConfigFile.Settings.Preferences.DeleteCache
 $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 # new configuration items since implementation of XML config in v0.0.3
 $DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
+
+# run shim and report if the target program exists or not
+function Test-ShimTargetExists {
+    param ( [Object][Parameter(Mandatory=$true, ValueFromPipeline=$true)]$ShimFile )
+
+    $TargetExists = & "$ShimFile" "--shimgen-help" |
+                     Select-String -pattern "Target Exists: 'True'"
+    if (-not $TargetExists) {
+       Return $false
+    } else {
+       Return $true
+    }
+}
 
 # Import chocolatey.config and get cacheLocation if set
 [xml]$ChocoConfigFile = Get-Content "$ENV:ChocolateyInstall\config\chocolatey.config"
@@ -226,7 +239,23 @@ if ($DeleteReadmes -eq "True"){
 		 } else {
 		   Write-Host "  **  NO unnecessary Chocolatey package embedded various read me files to delete." -Foreground Green
 		   }
-	}	
+	}
+
+$BadShimCount=0
+Write-Host "  **  Checking shim files..." -NoNewline -Foreground Green
+Get-ChildItem $ENV:ChocolateyInstall\bin\*.exe | % {
+    if (-not (Test-ShimTargetExists $PSItem) ) {
+	   $BadShimCount = $BadShimCount +1
+       Remove-Item "$PSItem" | Out-Null
+    }
+}
+Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                            `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
+if ($BadShimCount) {
+	Write-Host "  **  Deleted $BadShimCount unnecessary Chocolatey orphaned shim files." -Foreground Green
+	} else {
+	Write-Host "  **  NO unnecessary Chocolatey orphaned shim files to delete." -Foreground Green
+}
+
 
 if ($ENV:ChocolateyInstall -Match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:")
     {

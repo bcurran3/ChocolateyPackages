@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>0.0.7.3-pre</version>
+    <version>0.0.8</version>
     <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -55,6 +55,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * \users\username\AppData\Local\Nuget\Cache if Nuget client is installed and caching files there
 * \Windows\Temp\chocolatey 
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools (NOT default)
+* orphaned shim files for programs that no longer exist
 
 **If you find Choco-Cleaner useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**</description>
     <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
@@ -74,6 +75,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 ### CHANGELOG:
+* 0.0.8 - Added checking and deleting of orphaned shim files thanks to TheCakeIsNaOH and Teknowledgist!
 * 0.0.7.2 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)
 * 0.0.7.1 - Added checking to make sure that $env:ChocolateyToolsLocation exists. If you receive a "$env:ChocolateyToolsLocation not defined error message," you might simply need to close your CLI and reopen it if $env:ChocolateyToolsLocation was created during choco-cleaner's install.
 * 0.0.7 - Added some info about what and what isn't being deleted, added #Requires -RunAsAdministrator statement to script (PS v4+)
