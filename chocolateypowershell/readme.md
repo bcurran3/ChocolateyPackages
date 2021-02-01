@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_icon.png" width="200" height="200">
 
 **BCURRAN3'S PACKAGE NOTES:**
 * A BCURRAN3 original! So of course I endorse and use it. :)
