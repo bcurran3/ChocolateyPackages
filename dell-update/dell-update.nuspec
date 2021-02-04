@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.0.0</version>
+    <version>4.1.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update Application for Windows 10 (Install)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=5P2R9</projectUrl>
-	<docsUrl>https://www.dell.com/support/home/en-us/product-support/product/command-update/docs</docsUrl>
+    <projectUrl>https://www.dell.com/support/home/en-aw/drivers/driversdetails?driverid=7ckk6</projectUrl>
+	<docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
     <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/legal_terms-conditions_dellgrmwebpage/art-software-license-agreements</licenseUrl>
@@ -23,9 +23,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-This package provides the Dell Command | Update Application and is supported on Inspiron, Vostro, XPS and Alienware Windows systems.
-
-This version of Dell Command Update (DCU) now includes a Command Line Interface. DCU 2.X is upgradable to this version.
+This package contains the Dell Update application for systems running the Windows 10 build 14393 (Redstone 1) or later. Dell Update application automatically updates critical fixes and important device drivers as they become available.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     
@@ -36,7 +34,6 @@ This version of Dell Command Update (DCU) now includes a Command Line Interface.
 
 ---
 </description>
-<releaseNotes>https://topics-cdn.dell.com/pdf/command-update_release-notes_en-us.pdf</releaseNotes>
     <dependencies>
       <dependency id="DotNet4.6.1" version="4.6.1" />
     </dependencies>
