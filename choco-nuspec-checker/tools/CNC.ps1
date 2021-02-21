@@ -1023,7 +1023,7 @@ if (!($NuspecCopyright)) {
 	$GLOBAL:FYIs++
 	} else {
 	  if ($NuspecCopyright.Length -lt 5) {
-	      Write-Host "WARNING:   ** <copyright> - is less than 4 characters. This will trigger a message from the verifier:" -Foreground Red
+	      Write-Host "WARNING:   ** <copyright> - is less than 5 characters. This will trigger a message from the verifier:" -Foreground Red
 		  Write-Host '           ** Requirements: If you are going to use copyright in the nuspec, please use more than 4 characters.' -Foreground Cyan
 		  $GLOBAL:Required++
 		  }
