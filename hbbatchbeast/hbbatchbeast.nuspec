@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>hbbatchbeast</id>
+    <title>HBBatchBeast (Portable)</title>
+    <version>2.1.5</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
+    <authors>HaveAGitGat</authors>
+    <projectUrl>https://github.com/HaveAGitGat/HBBatchBeast</projectUrl>
+    <projectSourceUrl>https://github.com/HaveAGitGat/HBBatchBeast</projectSourceUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hbbatchbeast/hbbatchbeast_icon.jpg</iconUrl>
+    <docsUrl>https://github.com/HaveAGitGat/HBBatchBeast/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/HaveAGitGat/HBBatchBeast/issues</bugTrackerUrl>
+    <copyright>none</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/HaveAGitGat/HBBatchBeast/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>hbbatchbeast handbrake transcode portable binary</tags>
+    <summary>HBBatchBeast for HandBrake and FFmpeg/FFprobe </summary>
+    <description>
+---
+
+### [choco://hbbatchbeast](choco://hbbatchbeast)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of HBBatchBeast](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hbbatchbeast/hbbatchbeast_screenshot.png)
+
+A free GUI application for HandBrake and FFmpeg/FFprobe on Windows, macOS and Linux (+ Linux Docker image) with an emphasis on multi HandBrake/FFmpeg instance batch conversion (including recursive folder scans and folder watching). The destination folder structure is kept the same as the source folder structure. Media in subfolders is also converted. Multiple folders can be monitored and different conversion presets can be specified for each folder. Also included:
+
+-Remote monitoring feature to monitor batch file conversions in any browser
+
+-Basic h265 benchmarking
+
+-Health check feature which can scan for corrupt video files using HandBrake (quick scan) or FFmpeg (thorough scan), although this is not always accurate. Attempt repair file feature included too.
+
+This is a standalone program on Windows but requires HandBrakeCLI to be installed on Linux and Mac. For a server application with similar functionality please see Tdarr.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/REPLACEME/readme.md)**
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+	
+</description>
+    <releaseNotes>https://github.com/HaveAGitGat/HBBatchBeast/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
