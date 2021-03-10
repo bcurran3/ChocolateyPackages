@@ -11,6 +11,7 @@ Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal a
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
 $DeleteNewDesktopIcons   = $ConfigFile.Settings.Preferences.DeleteNewDesktopIcons
 $DeleteNewStartMenuIcons = $ConfigFile.Settings.Preferences.DeleteNewStartMenuIcons
+#$KillCUPAfter            = $ConfigFile.Settings.Preferences.KillCUPAfter
 $PreProcessScript        = $ConfigFile.Settings.Preferences.PreProcessScript
 $PostProcessScript       = $ConfigFile.Settings.Preferences.PostProcessScript
 
@@ -18,31 +19,32 @@ $PostProcessScript       = $ConfigFile.Settings.Preferences.PostProcessScript
 if ($PreProcessScript){&$PreProcessScript}
 
 # get existing Desktop and Start Menu icons
-$UserDesktopIconsPre = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk" -Recurse
-$PublicDesktopIconsPre = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk" -Recurse
-$UserStartMenuIconsPre = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
+$UserDesktopIconsPre     = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"
+$PublicDesktopIconsPre   = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"
+$UserStartMenuIconsPre   = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
 $PublicStartMenuIconsPre = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse
 
 &choco upgrade all -y
 
 # get existing and new Desktop and Start Menu icons
-$UserDesktopIconsPost = Get-ChildItem -Path "$env:AppData\*.lnk" -Recurse
-$PublicDesktopIconsPost = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk" -Recurse
-$UserStartMenuIconsPost = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
+$UserDesktopIconsPost     = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"
+$PublicDesktopIconsPost   = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"
+$UserStartMenuIconsPost   = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
 $PublicStartMenuIconsPost = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse
 
-# Delete the new icons if configured to do so (opt in only)
+# Delete new Desktop icons if configured to do so
 if ($DeleteNewDesktopIcons -eq 'True'){
    $IconsNew = Compare-Object -ReferenceObject ($UserDesktopIconsPre) -DifferenceObject ($UserDesktopIconsPost) -PassThru
-   del $IconsNew.fullname # <--- This needs to be fixed
+   if ($IconsNew -ne $null) { del $IconsNew.fullname }
    $IconsNew = Compare-Object -ReferenceObject ($PublicDesktopIconsPre) -DifferenceObject ($PublicDesktopIconsPost) -PassThru
-   del $IconsNew.fullname # <--- This needs to be fixed
+   if ($IconsNew -ne $null) { del $IconsNew.fullname }
    }
+# Delete new Start Menu icons if configured to do so
 if ($DeleteNewStartMenuIcons -eq 'True'){
    $IconsNew = Compare-Object -ReferenceObject ($UserStartMenuIconsPre) -DifferenceObject ($UserStartMenuIconsPost) -PassThru
-   del $IconsNew.fullname # <--- This needs to be fixed
+   if ($IconsNew -ne $null) { del $IconsNew.fullname }
    $IconsNew = Compare-Object -ReferenceObject ($PublicStartMenuIconsPre) -DifferenceObject ($PublicStartMenuIconsPost) -PassThru
-   del $IconsNew.fullname # <--- This needs to be fixed
+   if ($IconsNew -ne $null) { del $IconsNew.fullname }
    }
 
 # Run post-processor if configured

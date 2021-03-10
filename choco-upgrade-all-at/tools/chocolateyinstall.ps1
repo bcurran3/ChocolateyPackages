@@ -36,43 +36,48 @@ if ($GotTask -ne $null){
 
 $GotTask = (&schtasks /QUERY /TN choco-upgrade-all) 2> $null
 if ($GotTask -ne $null){
-     Write-Host "  ** Existing choco-upgrade-all scheduled task found. Keeping existing scheduled task. If you want to change the task runtime or abort time, uninstall and reinstall the package." -Foreground Magenta 
+     Write-Host "  ** Existing choco-upgrade-all scheduled task found. Keeping existing scheduled task.`n     If you want to change the task runtime or abort time, uninstall and reinstall the package." -Foreground Magenta 
      exit
+   }
+
+if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
+       Write-Host "  ** NOTASK or NOSCHEDULE specified, not installing scheduled task." -Foreground Magenta
+	   exit
    }
    
 Write-Host "" 
-Write-Host "choco-upgrade-all-at Summary:" -Foreground Magenta
+Write-Host "CHOCO-UPGRADE-ALL-AT Summary:" -Foreground Magenta
 
 if ($pp["USER"] -eq $null -or $pp["USER"] -eq ''){
-       Write-Host " * USER NOT specified, defaulting to SYSTEM." -Foreground Magenta
+       Write-Host "  ** USER NOT specified, defaulting to SYSTEM." -Foreground Magenta
 	   $RunAsUser = 'SYSTEM'
      } else {
 	   if ($pp["USER"] -eq 'CURRENTUSER'){
 	       $RunAsUser = $env:USERNAME
 	       } else {
 	         $RunAsUser = $pp["USER"]
-	         Write-Host " * USER specified as $RunAsUser." -Foreground Magenta
+	         Write-Host " ** USER specified as $RunAsUser." -Foreground Magenta
             } 
 	}
 
 if ($pp["TIME"] -eq $null -or $pp["TIME"] -eq ''){
-       Write-Host " * TIME NOT specified, defaulting to 2 AM." -Foreground Magenta
+       Write-Host "  ** TIME NOT specified, defaulting to 2 AM." -Foreground Magenta
 	   $RunTime = "02:00"
      } else {
 	   $RunTime = $pp["TIME"]
-	   Write-Host " * TIME specified as $RunTime." -Foreground Magenta
+	   Write-Host "  ** TIME specified as $RunTime." -Foreground Magenta
       } 
 
 if ($pp["ABORTTIME"] -eq $null -or $pp["ABORTTIME"] -eq ''){
-      Write-Host " * ABORTTIME NOT specified, defaulting to 4 AM." -Foreground Magenta
+      Write-Host "  ** ABORTTIME NOT specified, defaulting to 4 AM." -Foreground Magenta
 	  $AbortTime = "04:00"
     } else {
 	  $AbortTime = $pp["ABORTTIME"]
-	  Write-Host " * ABORTTIME specified as $AbortTime." -Foreground Magenta
+	  Write-Host "  ** ABORTTIME specified as $AbortTime." -Foreground Magenta
     } 	  
 	  
 if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq '')){
-      Write-Host " * DAILY or WEEKLY NOT specified, defaulting to DAILY." -Foreground Magenta
+      Write-Host "  ** DAILY or WEEKLY NOT specified, defaulting to DAILY." -Foreground Magenta
       SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
 	  SchTasks /QUERY /TN "choco-upgrade-all"
 	  SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
@@ -82,9 +87,9 @@ if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $nu
     }
 		  
 if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
-       Write-Host " * DAILY NOT specified." -Foreground Magenta
+       Write-Host "  ** DAILY NOT specified." -Foreground Magenta
      } else {
-	   Write-Host " * DAILY specified." -Foreground Magenta
+	   Write-Host "  ** DAILY specified." -Foreground Magenta
 	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
 	   SchTasks /QUERY /TN "choco-upgrade-all"
 	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
@@ -94,9 +99,9 @@ if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
 	   }  
 		  
 if ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq ''){
-       Write-Host " * WEEKLY NOT specified." -Foreground Magenta
+       Write-Host "  ** WEEKLY NOT specified." -Foreground Magenta
      } else {
-	   Write-Host " * WEEKLY specified." -Foreground Magenta
+	   Write-Host "  ** WEEKLY specified." -Foreground Magenta
        if ($pp["DAY"] -eq $null -or $pp["DAY"] -eq ''){
             Write-Host " * DAY NOT specified, defaulting to SUNDAY." -Foreground Magenta
             SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
@@ -105,7 +110,7 @@ if ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq ''){
             SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
           } else {
 		    $RunDay = $pp["DAY"]
-            Write-Host " * DAY specified as $RunDay." -Foreground Magenta
+            Write-Host "  ** DAY specified as $RunDay." -Foreground Magenta
 		    SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
 		    SchTasks /QUERY /TN "choco-upgrade-all"
 			SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
