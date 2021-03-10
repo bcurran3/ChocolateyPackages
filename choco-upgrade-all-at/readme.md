@@ -14,9 +14,13 @@
 
 This package is a pseudo replacement for [choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup).
 
-### INSTRUCTIONS:
+### USAGE INSTRUCTIONS:
+* You can do nothing and it will run at the set it and forget it time :)
+* You can manually run **choco-upgrade-all** from Command Prompt or PowerShell
+* You can manually run **choco-install packagename** from Command Prompt or PowerShell to install packages with your **choco-upgrade-all-at** settings
+
+### INSTALL INSTRUCTIONS:
 You can install **choco-upgrade-all-at** with multiple parameters to make it run "choco upgrade all -y" daily or weekly (Monthly is just not often enough!) at your preferred time. If you enter no parameters at all, **choco-upgrade-all-at** will default to run "choco upgrade all -y" at 2 AM every day and abort the process at 4 AM. When entering the TIME and ABORTTIME parameters, use "[Military Time](http://militarytimechart.com/)." When entering the DAILY or WEEKLY parameter you can actually use anything, "yes" just makes sense though. When using the WEEKLY parameter, DAYS are entered as MON, TUE, WED, THU, FRI, SAT, or SUN. Not entering the correct format will fail the install. Please see the examples below.
-From Command Prompt or PowerShell: choco-upgrade-all
 
 ### INSTALL EXAMPLES:
 * **choco install choco-upgrade-all-at --params "'/TIME:23:00'"** - runs "choco upgrade all -y" daily (default) at 11 PM and aborts at 4 AM, technically 19 hours earlier but will also result in 5 hours later.
