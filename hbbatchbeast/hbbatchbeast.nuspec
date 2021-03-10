@@ -10,10 +10,10 @@
     <authors>HaveAGitGat</authors>
     <projectUrl>https://github.com/HaveAGitGat/HBBatchBeast</projectUrl>
     <projectSourceUrl>https://github.com/HaveAGitGat/HBBatchBeast</projectSourceUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hbbatchbeast/hbbatchbeast_icon.jpg</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/hbbatchbeast/hbbatchbeast_icon.png</iconUrl>
     <docsUrl>https://github.com/HaveAGitGat/HBBatchBeast/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/HaveAGitGat/HBBatchBeast/issues</bugTrackerUrl>
-    <copyright>none</copyright>
+    <copyright>HaveAGitGat</copyright>
     <licenseUrl>https://raw.githubusercontent.com/HaveAGitGat/HBBatchBeast/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>hbbatchbeast handbrake transcode portable binary</tags>
@@ -26,25 +26,25 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of HBBatchBeast](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hbbatchbeast/hbbatchbeast_screenshot.png)
+![Screenshot of HBBatchBeast](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/hbbatchbeast/hbbatchbeast_screenshot.png)
 
 A free GUI application for HandBrake and FFmpeg/FFprobe on Windows, macOS and Linux (+ Linux Docker image) with an emphasis on multi HandBrake/FFmpeg instance batch conversion (including recursive folder scans and folder watching). The destination folder structure is kept the same as the source folder structure. Media in subfolders is also converted. Multiple folders can be monitored and different conversion presets can be specified for each folder. Also included:
 
--Remote monitoring feature to monitor batch file conversions in any browser
+- Remote monitoring feature to monitor batch file conversions in any browser
 
--Basic h265 benchmarking
+- Basic h265 benchmarking
 
--Health check feature which can scan for corrupt video files using HandBrake (quick scan) or FFmpeg (thorough scan), although this is not always accurate. Attempt repair file feature included too.
+- Health check feature which can scan for corrupt video files using HandBrake (quick scan) or FFmpeg (thorough scan), although this is not always accurate. Attempt repair file feature included too.
 
 This is a standalone program on Windows but requires HandBrakeCLI to be installed on Linux and Mac. For a server application with similar functionality please see Tdarr.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/REPLACEME/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hbbatchbeast/readme.md)**
 
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
 	
-</description>
+    </description>
     <releaseNotes>https://github.com/HaveAGitGat/HBBatchBeast/releases</releaseNotes>
   </metadata>
   <files>
