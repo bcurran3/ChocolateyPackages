@@ -4,11 +4,12 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "choco-upgrade-all.ps1 v0.0.6-pre (03/10/2021) - Upgrade your Chocolatey packages with extras" -Foreground White
+Write-Host "choco-upgrade-all.ps1 v0.0.6-pre (03/11/2021) - Upgrade your Chocolatey packages with extras" -Foreground White
 Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Import preferences from choco-upgrade-all.config
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
+#$Arguments               = $ConfigFile.Settings.Preferences.Arguments
 $DeleteNewDesktopIcons   = $ConfigFile.Settings.Preferences.DeleteNewDesktopIcons
 $DeleteNewStartMenuIcons = $ConfigFile.Settings.Preferences.DeleteNewStartMenuIcons
 #$KillCUPAfter            = $ConfigFile.Settings.Preferences.KillCUPAfter
