@@ -36,7 +36,7 @@ $PublicDesktopIconsPre   = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"
 $UserStartMenuIconsPre   = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
 $PublicStartMenuIconsPre = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse
 
-&choco upgrade all -y
+&choco upgrade all -y $args
 
 # get existing and new Desktop and Start Menu icons
 $UserDesktopIconsPost     = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"
