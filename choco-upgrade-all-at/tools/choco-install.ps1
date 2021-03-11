@@ -14,6 +14,18 @@ $DeleteNewStartMenuIcons = $ConfigFile.Settings.Preferences.DeleteNewStartMenuIc
 $PreProcessScript        = $ConfigFile.Settings.Preferences.PreProcessScript
 $PostProcessScript       = $ConfigFile.Settings.Preferences.PostProcessScript
 
+if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
+     $Editor="notepad++.exe"
+    } else {
+      $Editor="notepad.exe"
+    }
+
+if ($args -eq "-EditConfig") {
+    Write-Host "  ** Editing contents of choco-upgrade-all.config." -Foreground Magenta
+	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
+	return
+}
+
 # Run pre-processor if configured
 if ($PreProcessScript){&$PreProcessScript}
 
