@@ -32,10 +32,16 @@ if ($args -eq "-EditConfig") {
 # Run pre-processor if configured
 if ($PreProcessScript){&$PreProcessScript}
 
+# When running as SYSTEM (task) use the $DefaultUserProfile as the default user profile if defined
+if ($DefaultUserProfile) {
+	$env:USERPROFILE="$env:SystemDrive\Users\$DefaultUserProfile"
+	$env:APPDATA="$env:SystemDrive\Users\$DefaultUserProfile\AppData\Roaming"
+	}
+
 # get existing Desktop and Start Menu icons
 if (Test-Path "$env:USERPROFILE\Desktop") {$UserDesktopIconsPre = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"}
 if (Test-Path "$env:PUBLIC\Desktop") {$PublicDesktopIconsPre = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"}
-if (Test-Path "$env:AppData\Microsoft\Windows\Start Menu\Programs") {$UserStartMenuIconsPre = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse}
+if (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs") {$UserStartMenuIconsPre = Get-ChildItem -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse}
 if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenuIconsPre = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse}
 
 &choco upgrade all -y $args
@@ -43,7 +49,7 @@ if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenu
 # get existing and new Desktop and Start Menu icons
 if (Test-Path "$env:USERPROFILE\Desktop") {$UserDesktopIconsPost = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"}
 if (Test-Path "$env:PUBLIC\Desktop")  {$PublicDesktopIconsPost = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"}
-if (Test-Path "$env:AppData\Microsoft\Windows\Start Menu\Programs") {$UserStartMenuIconsPost = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse}
+if (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs") {$UserStartMenuIconsPost = Get-ChildItem -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse}
 if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenuIconsPost = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse}
 
 # Delete new Desktop icons if configured to do so
