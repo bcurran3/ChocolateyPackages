@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "choco-install.ps1 v0.0.6-pre (03/11/2021) - Install Chocolatey packages with extras" -Foreground White
+Write-Host "choco-install.ps1 (03/11/2021) - Install Chocolatey packages with extras" -Foreground White
 Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Import preferences from choco-upgrade-all.config
