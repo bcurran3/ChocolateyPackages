@@ -81,7 +81,7 @@ if ($pp["ABORTTIME"] -eq $null -or $pp["ABORTTIME"] -eq ''){
 	  
 if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq '')){
       Write-Host "  ** DAILY or WEEKLY NOT specified, defaulting to DAILY." -Foreground Magenta
-      SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
+      SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
 	  SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
 	  SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
       SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
@@ -93,7 +93,7 @@ if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
        Write-Host "  ** DAILY NOT specified." -Foreground Magenta
      } else {
 	   Write-Host "  ** DAILY specified." -Foreground Magenta
-	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
+	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
 	   SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
 	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
        SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
@@ -107,14 +107,14 @@ if ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq ''){
 	   Write-Host "  ** WEEKLY specified." -Foreground Magenta
        if ($pp["DAY"] -eq $null -or $pp["DAY"] -eq ''){
             Write-Host " * DAY NOT specified, defaulting to SUNDAY." -Foreground Magenta
-            SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
+            SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
 		    SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
 			SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
             SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
           } else {
 		    $RunDay = $pp["DAY"]
             Write-Host "  ** DAY specified as $RunDay." -Foreground Magenta
-		    SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /ST $RunTime /F
+		    SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
 		    SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
             SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
             SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
