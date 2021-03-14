@@ -2,7 +2,7 @@
 $packageName = 'choco-upgrade-all-at'
 $scriptDir   = "$(Get-ToolsLocation)\BCURRAN3"
 
-SchTasks /Delete /TN choco-upgrade-all-at-rev3 /F
+SchTasks /Delete /TN choco-upgrade-all-at /F
 SchTasks /Delete /TN choco-upgrade-all-at-abort /F
 
 if (!(Test-Path "$ENV:ChocolateyInstall\lib\choco-upgrade-all-at-startup")) {

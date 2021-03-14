@@ -1,4 +1,4 @@
-﻿$ErrorActionPreference = 'Continue'
+﻿$ErrorActionPreference = 'Stop'
 $packageName  = 'choco-upgrade-all-at'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $pp           = Get-PackageParameters
@@ -23,19 +23,23 @@ Remove-Item "$toolsDir\choco-upgrade-all.*" -Force -ErrorAction SilentlyContinue
 if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
 # delete old task name < v0.0.4 if it exists
+$ErrorActionPreference = 'Continue'
 $GotTask = (&schtasks /QUERY /TN "choco upgrade all at") 2> $null
+$ErrorActionPreference = 'Stop'
 if ($GotTask -ne $null){
      &SchTasks /DELETE /TN "choco upgrade all at" /F 
    }
 
-# delete old task name < v0.0.6 if it exists
-$GotTask = (&schtasks /QUERY /TN "choco-upgrade-all-at") 2> $null
+$ErrorActionPreference = 'Continue'
+$GotTask      = (&schtasks /QUERY /TN "choco-upgrade-all-at") 2> $null
+$ErrorActionPreference = 'Stop'
+
+# Change task to run new batch file and keep other existing settings (v0.0.0.5 to v0.0.0.6 upgrade)
 if ($GotTask -ne $null){
-     &SchTasks /DELETE /TN "choco-upgrade-all-at" /F 
+     &SchTasks /CHANGE /TN "choco-upgrade-all-at" /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat"
    }
 
 # check if choco-ugrade-all-at task already exists and exit if so
-$GotTask = (&schtasks /QUERY /TN choco-upgrade-all-at-rev3) 2> $null
 if ($GotTask -ne $null){
      Write-Host "  ** Existing choco-upgrade-all-at scheduled task found. Keeping existing scheduled task.`n     If you want to change the task runtime or abort time, uninstall and reinstall the package." -Foreground Magenta 
      exit
@@ -81,8 +85,8 @@ if ($pp["ABORTTIME"] -eq $null -or $pp["ABORTTIME"] -eq ''){
 	  
 if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq '')){
       Write-Host "  ** DAILY or WEEKLY NOT specified, defaulting to DAILY." -Foreground Magenta
-      SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
-	  SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
+      SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
+	  SchTasks /QUERY /TN "choco-upgrade-all-at"
 	  SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
       SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
 	  Start-Sleep -s 10
@@ -93,8 +97,8 @@ if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
        Write-Host "  ** DAILY NOT specified." -Foreground Magenta
      } else {
 	   Write-Host "  ** DAILY specified." -Foreground Magenta
-	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
-	   SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
+	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
+	   SchTasks /QUERY /TN "choco-upgrade-all-at"
 	   SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
        SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
 	   Start-Sleep -s 10
@@ -107,15 +111,15 @@ if ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq ''){
 	   Write-Host "  ** WEEKLY specified." -Foreground Magenta
        if ($pp["DAY"] -eq $null -or $pp["DAY"] -eq ''){
             Write-Host " * DAY NOT specified, defaulting to SUNDAY." -Foreground Magenta
-            SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
-		    SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
+            SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
+		    SchTasks /QUERY /TN "choco-upgrade-all-at"
 			SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
             SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
           } else {
 		    $RunDay = $pp["DAY"]
             Write-Host "  ** DAY specified as $RunDay." -Foreground Magenta
-		    SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-rev3 /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
-		    SchTasks /QUERY /TN "choco-upgrade-all-at-rev3"
+		    SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
+		    SchTasks /QUERY /TN "choco-upgrade-all-at"
             SchTasks /CREATE /SC WEEKLY /D $pp["DAY"] /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at-abort /TR "taskkill /im choco.exe /f /t" /ST $AbortTime /F
             SchTasks /QUERY /TN "choco-upgrade-all-at-abort"
 	      }

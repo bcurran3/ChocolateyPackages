@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at</id>
-    <version>0.0.6-pre3</version>
+    <version>0.0.6-pre4</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</packageSourceUrl>
@@ -44,28 +44,30 @@ You can install **choco-upgrade-all-at** with multiple parameters to make it run
 * **choco install choco-upgrade-all-at --params "'/TIME:23:00'"** - runs "choco upgrade all -y" daily (default) at 11 PM and aborts at 1 AM, ABORTTIME defaults to +2 hours.
 * **choco install choco-upgrade-all-at --params "'/DAILY:yes /TIME:04:00 /ABORTTIME:08:00'"** - runs "choco upgrade all -y" daily at 4 AM and aborts it at 8 AM.
 * **choco install choco-upgrade-all-at --params "'/WEEKLY:yes /DAY:SUN /TIME:01:00'"** - runs "choco upgrade all -y" every Sunday at 1 AM and aborts at 4 AM.
-* **choco install choco-upgrade-all-at --params "'/NOTASK:TRUE'"** - installs **choco-upgrade-all-at** without the scheduled task.
+* **choco install choco-upgrade-all-at --params "'/NOTASK:TRUE'"** - installs **choco-upgrade-all.ps1/bat** without the scheduled task.
 
 #### A NOTE ON DEFAULTS:
 * If you don't specify any parameters, **choco-upgrade-all-at** defaults to running daily at 2AM and aborting at 4 AM. (My preference!) 
 * Not specifying a TIME will always default to 2 AM. Not specifying an ABORTTIME will always default to TIME +2 hours.
 * When WEEKLY is specified but a DAY isn't, default first run will be a week from installation date; i.e. next week on whatever day of the week you installed the package.
 
-#### IF UPGRADING FROM A VERSION EARLIER THAN 0.0.6:
-* Your old scheduled task will be deleted and replaced with default (mentioned above) parameters. To ensure **choco-upgrade-all-at** runs when you want it to, you should uninstall and reinstall with the settings you prefer.
-* I have not tested with useRememberedArgumentsForUpgrades, you might get daily still with your preferred time.
+#### IF UPGRADING FROM A VERSION EARLIER THAN 0.0.4:
+Your old scheduled task will be deleted and replaced with default (mentioned above) parameters. To ensure choco-upgrade-all-at runs when you want it to, you should uninstall and reinstall with the settings you prefer.
+I have not tested with useRememberedArgumentsForUpgrades, you might get daily still with your preferred time.
+
+#### IF UPGRADING FROM VERSION 0.0.4 or 0.0.4.1:
+You're old scheduled task will be kept. You will need to uninstall and re-install to take advantage of the new ABORTTIME feature.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at/readme.md)**
 	</description>
     <releaseNotes>
 ### CHANGELOG:
-* 0.0.6   - Added option to automatically delete newly created desktop and start menu icons. Added option to run pre and post processing scripts. Edit C:\tools\BCURRAN3\choco-upgrade-all.config to enable. You can new run choco-upgrade-all from the command line to take advantage of these new options. Added a choco-install script to work with the same options. Added -EditConfig option to edit the config file. Changed default ABORTTIME to be TIME +2 hours.
+* 0.0.6   - Added option to automatically delete newly created desktop and start menu icons. Added option to run pre and post processing scripts. Edit C:\tools\BCURRAN3\choco-upgrade-all.config to enable. You can now run choco-upgrade-all from the command line to take advantage of these new options. Added choco-install script to work with the same options. Added -EditConfig option to edit the config file. Changed default ABORTTIME to be TIME +2 hours. Added configurable arguments. Added ability to set default user profile.
 * 0.0.5   - Added abort stuck upgrades feature. "Um, why do I want this?" you're thinking. You want this because sometimes background package installations go wrong. "Go wrong?" you're thinking. Yes, there are a couple scenarios where a Chocolatey package installation/upgrade can hang: if a package needs input, if an AutoHotKey or AutoIt script fails, and all those times a program installer pops up a browser window to tell you "Thank you." These scenarios leave hung processes in the background with no way for you to easily interact with them (They're in the background!). This means they are taking up memory resources for no reason and might cause problems installing other packages or programs. **If** you knew there was a hung process, you could manually stop the task, but who wants to check every day? This will automate checking and stopping any Chocolatey package hung tasks at the time you specify. I recommend setting it to a time an hour or two after you run your updates. 
 * 0.0.4.1 - Fixed compatibility with Windows 7 and 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency. 
 * 0.0.4   - Added option to run weekly.
 
 ### ROADMAP
-* - Add configurable saved arguments to the config file; i.e. --except="'skype,conemu'"
 * - Move the ABORTTIME feature into the config file; i.e. Start-Job, Start-Sleep ABORTIME, Stop-Job
     </releaseNotes>
     <dependencies>

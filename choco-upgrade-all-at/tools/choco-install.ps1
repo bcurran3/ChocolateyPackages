@@ -4,12 +4,13 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "choco-install.ps1 (03/11/2021) - Install Chocolatey packages with extras" -Foreground White
+Write-Host "Choco-Install.ps1 (03/13/2021) - Install Chocolatey packages with enhanced options" -Foreground White
 Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Import preferences from choco-upgrade-all.config
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
 #$Arguments               = $ConfigFile.Settings.Preferences.Arguments
+$DebugLogging            = $ConfigFile.Settings.Preferences.DebugLogging
 $DeleteNewDesktopIcons   = $ConfigFile.Settings.Preferences.DeleteNewDesktopIcons
 $DeleteNewStartMenuIcons = $ConfigFile.Settings.Preferences.DeleteNewStartMenuIcons
 $PreProcessScript        = $ConfigFile.Settings.Preferences.PreProcessScript
@@ -36,7 +37,8 @@ $PublicDesktopIconsPre   = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"
 $UserStartMenuIconsPre   = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
 $PublicStartMenuIconsPre = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse
 
-&choco install -y $args
+# Do the Chocolatey Humpty Hump
+Start-Process -NoNewWindow -FilePath "$env:ChocolateyInstall\bin\choco.exe" -ArgumentList "install -y $ConfigArguments $args" -Wait
 
 # get existing and new Desktop and Start Menu icons
 $UserDesktopIconsPost     = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"
@@ -61,3 +63,8 @@ if ($DeleteNewStartMenuIcons -eq 'True'){
 
 # Run post-processor if configured
 if ($PostProcessScript){&$PostProcessScript}
+
+Write-Host "Found Choco-Install.ps1 useful?" -ForegroundColor White
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
+Write-Output "$(Get-Date) Choco-Upgrade-All FINISHED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
