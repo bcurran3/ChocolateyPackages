@@ -1,64 +1,74 @@
-﻿#
-# TDL modify to use Install-ChocolateyPowershellCommand.ps1 during install
-#
-#$ErrorActionPreference = 'Stop'
-# choco-package-list-backup.ps1 (to local and cloud) by Bill Curran
-# I couldn't have done this without the list parsing from Ammaar Limbada found at https://gist.github.com/alimbada/449ddf65b4ef9752eff3
+﻿$ErrorActionPreference = 'Stop'
+# Choco-Package-List-Backup.ps1 Copyleft 2017-2021 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
-# ROADMAP:
-# Add other cloud services support by request
-# Save --packageparameters
-# Open to suggestions - open a GitHub issue please if you have a suggestion/request.
+# Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "choco-package-list-backup.ps1 v2020.09.22 - backup Chocolatey packages list locally and to the cloud" -Foreground White
-Write-Host "Copyleft 2017-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "Choco-Package-List-Backup.ps1 v2021.03.14 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
-if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
+if (!($env:ChocolateyToolsLocation)) {$env:ChocolateyToolsLocation = "$env:SystemDrive\tools"}
+if (!(Test-Path "$env:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
 
-$Date          = Get-Date -UFormat %Y-%m-%d
-$ErrorArray    = @("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)
-$ICinstalled   = Test-Path "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe"
-$PinnedPackages=choco pin list -r
+$Date           = Get-Date -UFormat %Y-%m-%d
+$ErrorArray     = @("this is try","error converted","access to path") #errors caused by Chocolatey not being multi-instance aware (Hopefully in v1.0!)
+$ICinstalled    = Test-Path "$env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe"
+$PinnedPackages = choco pin list -r
 $PinnedPackagesFile = 'pins.bat'
-$PPCinstalled  = Test-Path "$ENV:ChocolateyInstall\config\persistentpackages.config"
-$scriptDir     = "$ENV:ChocolateyToolsLocation\BCURRAN3"
-$ScriptConfig  = 'choco-package-list-backup.config'
+$PPCinstalled   = Test-Path "$env:ChocolateyInstall\config\persistentpackages.config"
+$scriptDir      = "$env:ChocolateyToolsLocation\BCURRAN3"
+$ScriptConfig   = 'choco-package-list-backup.config'
+
+if (Test-Path $env:ChocolateyInstall\bin\notepad++.exe){
+     $Editor="notepad++.exe"
+    } else {
+      $Editor="notepad.exe"
+    }
 
 if ($args -eq "-EditConfig") {
-    Write-Host "  ** Editing contents of $scriptDir\$ScriptConfig." -Foreground Magenta
-    if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){$Editor="notepad++.exe"} else {$Editor="notepad.exe"}
-	&$Editor "$scriptDir\$ScriptConfig"
+    Write-Host "  ** Editing contents of choco-package-list-backup.config." -Foreground Magenta
+	&$Editor "$env:ChocolateyToolsLocation\BCURRAN3\$ScriptConfig"
 	return
 }
 
+# Minor logging
+if (Test-Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log"){
+   $LogSize=(Get-ChildItem -Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log").length
+   if ($LogSize -gt 51200) {
+	   Remove-Item "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log"
+	   Write-Output "$(Get-Date) Choco-Package-List-Backup Deleted log file" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log"
+	  }
+  }
+Write-Output "$(Get-Date) Choco-Package-List-Backup STARTED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log"
+
 # Import preferences - see comments in choco-package-list-backup.config for settings 
-[xml]$ConfigFile = Get-Content "$scriptDir\choco-package-list-backup.config"
-$PackagesListFile = $ConfigFile.Settings.Preferences.PackagesListFile
-$SaveFolderName = $ConfigFile.Settings.Preferences.SaveFolderName
-$SaveTitleSummary = $ConfigFile.Settings.Preferences.SaveTitleSummary
-$SaveVersions = $ConfigFile.Settings.Preferences.SaveVersions
-$AppendDate = $ConfigFile.Settings.Preferences.AppendDate
-$CustomPath = $ConfigFile.Settings.Preferences.CustomPath
+[xml]$ConfigFile     = Get-Content "$scriptDir\choco-package-list-backup.config"
+$PackagesListFile    = $ConfigFile.Settings.Preferences.PackagesListFile
+$SaveFolderName      = $ConfigFile.Settings.Preferences.SaveFolderName
+$SaveTitleSummary    = $ConfigFile.Settings.Preferences.SaveTitleSummary
+$SaveVersions        = $ConfigFile.Settings.Preferences.SaveVersions
+$AppendDate          = $ConfigFile.Settings.Preferences.AppendDate
+$CustomPath          = $ConfigFile.Settings.Preferences.CustomPath
 $SaveAllProgramsList = $ConfigFile.Settings.Preferences.SaveAllProgramsList
 $AllProgramsListFile = $ConfigFile.Settings.Preferences.AllProgramsListFile
+$DefaultUserProfile  = $ConfigFile.Settings.Preferences.DefaultUserProfile
 
-$UseCustomPath = $ConfigFile.Settings.Preferences.UseCustomPath 
-$UseDocuments = $ConfigFile.Settings.Preferences.UseDocuments
-$UseHomeShare = $ConfigFile.Settings.Preferences.UseHomeShare 
-$UseBox = $ConfigFile.Settings.Preferences.UseBox
-$UseDropbox = $ConfigFile.Settings.Preferences.UseDropbox
+$UseCustomPath  = $ConfigFile.Settings.Preferences.UseCustomPath 
+$UseDocuments   = $ConfigFile.Settings.Preferences.UseDocuments
+$UseHomeShare   = $ConfigFile.Settings.Preferences.UseHomeShare 
+$UseBox         = $ConfigFile.Settings.Preferences.UseBox
+$UseDropbox     = $ConfigFile.Settings.Preferences.UseDropbox
 $UseGoogleDrive = $ConfigFile.Settings.Preferences.UseGoogleDrive
 $UseiCloudDrive = $ConfigFile.Settings.Preferences.UseiCloudDrive
-$UseNextcloud = $ConfigFile.Settings.Preferences.UseNextcloud
-$UseOneDrive = $ConfigFile.Settings.Preferences.UseOneDrive
-$UseownCloud = $ConfigFile.Settings.Preferences.UseownCloud
-$UseReadyCLOUD = $ConfigFile.Settings.Preferences.UseReadyCLOUD
+$UseNextcloud   = $ConfigFile.Settings.Preferences.UseNextcloud
+$UseOneDrive    = $ConfigFile.Settings.Preferences.UseOneDrive
+$UseownCloud    = $ConfigFile.Settings.Preferences.UseownCloud
+$UseReadyCLOUD  = $ConfigFile.Settings.Preferences.UseReadyCLOUD
 $UseResilioSync = $ConfigFile.Settings.Preferences.UseResilioSync
-$UseSeafile = $ConfigFile.Settings.Preferences.UseSeafile
-$UseTonidoSync = $ConfigFile.Settings.Preferences.UseTonidoSync
+$UseSeafile     = $ConfigFile.Settings.Preferences.UseSeafile
+$UseTonidoSync  = $ConfigFile.Settings.Preferences.UseTonidoSync
+$UseDefaultUserProfile = $ConfigFile.Settings.Preferences.UseDefaultUserProfile
 
 if ($AppendDate -eq "True"){
     if ($PackagesListFile -eq "packages.config"){
@@ -67,13 +77,19 @@ if ($AppendDate -eq "True"){
 		  $PackagesListArchival = $PackagesListFile+"_$Date.config"
 		}
  }
+ 
+# When running as SYSTEM (scheduled task) use the $DefaultUserProfile as the default user profile if defined
+if (($DefaultUserProfile) -and ($UseDefaultUserProfile -eq "True")) {
+	$env:USERPROFILE = "$env:SystemDrive\Users\$DefaultUserProfile"
+	$env:APPDATA = "$env:SystemDrive\Users\$DefaultUserProfile\AppData\Roaming"
+	}
 
 # functions --------------------------------------------------------------------------------
 
 # Check the path to save packages.config and create if it doesn't exist
 Function Check-SaveLocation{
     $CheckPath = Test-Path $SavePath
-  If ($CheckPath -match "False")
+  If ($CheckPath -Match "False")
      {
       New-Item $SavePath -Type Directory -Force | Out-Null
      }   
@@ -87,15 +103,15 @@ Function Copy-Config{
 
 # Copy persistentpackages.config if it exists to the same location as packages.config
 Function Copy-PPConfig{
-   Copy-Item $ENV:ChocolateyInstall\config\persistentpackages.config $SavePath -Force | Out-Null
+   Copy-Item $env:ChocolateyInstall\config\persistentpackages.config $SavePath -Force | Out-Null
    Write-Host "  ** $SavePath\persistentpackages.config SAVED!" -Foreground Green 
   }
 	
 # Copy InstChoco.exe if it exists to the same location as packages.config for super duper easy re-installation
 Function Copy-InstChoco{
-    $InstChoco = "$ENV:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
+    $InstChoco = "$env:ChocolateyInstall\lib\instchoco\tools\InstChoco.exe" # location of InstChoco.exe if it exists
     $CheckICDest = Test-Path $SavePath\InstChoco.exe
-    If ($CheckICDest -match "False")
+    If ($CheckICDest -Match "False")
        {
         Copy-Item $InstChoco $SavePath -Force | Out-Null
         Write-Host "  ** $SavePath\InstChoco.exe SAVED!" -Foreground Green 
@@ -113,32 +129,32 @@ Function Copy-InstChoco{
 # ENHANCEMENT: Below for future release adding extra description info to packages.config
 # Import package.nuspec file to get extended package info
 function Get-NuspecInfo($PackageName,$NuspecTagRequest){
-   $nuspecXML = "$ENV:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
+   $nuspecXML = "$env:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
    [xml]$nuspecFile = Get-Content $nuspecXML
-#   $NuspecAuthors = $nuspecFile.package.metadata.authors
-#   $NuspecBugTrackerURL = $nuspecFile.package.metadata.bugtrackerurl
-#   $NuspecConflicts = $nuspecFile.package.metadata.conflicts # Built for the future
-#   $NuspecCopyright = $nuspecFile.package.metadata.copyright
-#   $NuspecDependencies = $nuspecFile.package.metadata.dependencies # Not fully implemented yet
-#   $NuspecDescription = $nuspecFile.package.metadata.description
-#   $NuspecDocsURL = $nuspecFile.package.metadata.docsurl
-#   $NuspecFiles = $nuspecFile.package.files.file # Not fully implemented yet
-#   $NuspecIconURL = $nuspecFile.package.metadata.iconurl
-#   $NuspecID = $nuspecFile.package.metadata.id
-#   $NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
-#   $NuspecMailingListURL = $nuspecFile.package.metadata.mailinglisturl
-#   $NuspecOwners = $nuspecFile.package.metadata.owners
+#   $NuspecAuthors          = $nuspecFile.package.metadata.authors
+#   $NuspecBugTrackerURL    = $nuspecFile.package.metadata.bugtrackerurl
+#   $NuspecConflicts        = $nuspecFile.package.metadata.conflicts # Built for the future
+#   $NuspecCopyright        = $nuspecFile.package.metadata.copyright
+#   $NuspecDependencies     = $nuspecFile.package.metadata.dependencies # Not fully implemented yet
+#   $NuspecDescription      = $nuspecFile.package.metadata.description
+#   $NuspecDocsURL          = $nuspecFile.package.metadata.docsurl
+#   $NuspecFiles            = $nuspecFile.package.files.file # Not fully implemented yet
+#   $NuspecIconURL          = $nuspecFile.package.metadata.iconurl
+#   $NuspecID               = $nuspecFile.package.metadata.id
+#   $NuspecLicenseURL       = $nuspecFile.package.metadata.licenseurl
+#   $NuspecMailingListURL   = $nuspecFile.package.metadata.mailinglisturl
+#   $NuspecOwners           = $nuspecFile.package.metadata.owners
 #   $NuspecPackageSourceURL = $nuspecFile.package.metadata.packagesourceurl
 #   $NuspecProjectSourceURL = $nuspecFile.package.metadata.projectsourceurl
-#   $NuspecProjectURL = $nuspecFile.package.metadata.projecturl
-#   $NuspecProvides = $nuspecFile.package.metadata.provides # Built for the future
-#   $NuspecReleaseNotes = $nuspecFile.package.metadata.releasenotes
-#   $NuspecReplaces = $nuspecFile.package.metadata.replaces # Built for the future
+#   $NuspecProjectURL       = $nuspecFile.package.metadata.projecturl
+#   $NuspecProvides         = $nuspecFile.package.metadata.provides # Built for the future
+#   $NuspecReleaseNotes     = $nuspecFile.package.metadata.releasenotes
+#   $NuspecReplaces         = $nuspecFile.package.metadata.replaces # Built for the future
 #   $NuspecRequireLicenseAcceptance = $nuspecFile.package.metadata.requirelicenseacceptance
-   $NuspecSummary = $nuspecFile.package.metadata.summary
-#   $NuspecTags = $nuspecFile.package.metadata.tags
-   $NuspecTitle = $nuspecFile.package.metadata.title
-#   $NuspecVersion = $nuspecFile.package.metadata.version
+   $NuspecSummary          = $nuspecFile.package.metadata.summary
+#   $NuspecTags             = $nuspecFile.package.metadata.tags
+   $NuspecTitle            = $nuspecFile.package.metadata.title
+#   $NuspecVersion          = $nuspecFile.package.metadata.version
 
 #   If ($NuspecTagRequest -eq "authors") {return $NuspecAuthors}
 #   If ($NuspecTagRequest -eq "bugtrackerurl") {return $NuspecBugTrackerURL}
@@ -183,12 +199,12 @@ Function Write-AllProgramsList{
 # Write out pins.bat to easily re-pin previously pinned packages
 Function Write-PinnedList{
 	$header="@echo off`nrem pinned packages found by choco-package-list-backup.ps1 on $Date :`necho   ** Re-pinning previously pinned Chocolatey packages."
-	if ($SaveVersions -match $True){
+	if ($SaveVersions -Match $True){
 	    $body=choco pin list -r | % {"choco pin add -n=$($_.SubString(0, $_.IndexOf("|"))) --version $($_.SubString($_.IndexOf("|") + 1))"}
 		} else {
 		  $body=choco pin list -r | % {"choco pin add -n=$($_.SubString(0, $_.IndexOf("|")))"}
 		}
-	if ($body -match $ErrorArray[0-3]) {
+	if ($body -Match $ErrorArray[0-3]) {
 	    Write-Warning "  ** Another instance of choco.exe was running and corrupted the output. Aborting..."
 		throw
 		}
@@ -219,7 +235,7 @@ Function Write-PackagesConfig{
 	    $body=choco list -lo -r -y | % { "   <package id=`"$($_.SubString(0, $_.IndexOf("|")))`"/>" }
 	   }
 	$footer="</packages>"
-	if ($body -match $ErrorArray[0-3]) {
+	if ($body -Match $ErrorArray[0-3]) {
 	    Write-Warning "  ** Another instance of choco.exe was running and corrupted the output. Aborting..."
 		throw
 		}
@@ -234,7 +250,7 @@ Function Write-PackagesConfig{
     Copy-Config
 	if ($PPCinstalled) {Copy-PPConfig}
 	if ($SaveAllProgramsList -eq "True"){Write-AllProgramsList}
-	if (!$PinnedPackages){Remove-Item "$SavePath\$PinnedPackagesFile" -ea SilentlyContinue | Out-Null }
+	if (!$PinnedPackages){Remove-Item "$SavePath\$PinnedPackagesFile" -EA SilentlyContinue | Out-Null }
 	if ($PinnedPackages){Write-PinnedList}
 	if ($ICinstalled) {Copy-InstChoco}
 	Write-Host
@@ -242,17 +258,18 @@ Function Write-PackagesConfig{
 
 # saves --------------------------------------------------------------------------------
 
-# Backup Chocolatey package names to packages.config file in custom defined path you set as CustomPath in XLM config file
-if ($UseCustomPath -match "True" -and (Test-Path $CustomPath))
+# Backup Chocolatey package names to packages.config file in custom defined path you set as CustomPath in the config file
+if ($UseCustomPath -Match "True" -and (Test-Path $CustomPath))
    {
     $SavePath   = "$CustomPath\$SaveFolderName"
     Write-PackagesConfig
    }
 	
 # Backup Chocolatey package names on local computer to packages.config file in the Documents folder
-$DocumentsFolder = [Environment]::GetFolderPath("MyDocuments")
+if ($env:COMPUTERNAME -eq $env:USERNAME.trim('$')) { $DocumentsFolder = "$env:PUBLIC\Documents" } else { $DocumentsFolder = [Environment]::GetFolderPath("MyDocuments") }
+if (($DefaultUserProfile) -and ($UseDefaultUserProfile -eq "True")) { $DocumentsFolder = "$env:USERPROFILE\Documents" }
 if ($DocumentsFolder -ne ""){
-   if ($UseDocuments -match "True" -and (Test-Path $DocumentsFolder))
+   if ($UseDocuments -Match "True" -and (Test-Path $DocumentsFolder))
        {
         $SavePath   = "$DocumentsFolder\$SaveFolderName"
         Write-PackagesConfig
@@ -260,42 +277,42 @@ if ($DocumentsFolder -ne ""){
    } 
    
 # Backup Chocolatey package names on local computer to packages.config file in Box (Sync) directory if it exists
-if ($UseBox -match "True" -and (Test-Path "$ENV:USERPROFILE\Box Sync"))
+if ($UseBox -Match "True" -and (Test-Path "$env:USERPROFILE\Box Sync"))
    {
-    $SavePath = "$ENV:USERPROFILE\Box Sync\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\Box Sync\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }    
    
 # Check for Dropbox personal and business paths (Thanks ebbek!)
-if (Test-Path $ENV:AppData\Dropbox\info.json)
+if (Test-Path $env:AppData\Dropbox\info.json)
 {
-    $DropboxPersonal = ((Get-Content $ENV:AppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).personal.path
-    $DropboxBusiness = ((Get-Content $ENV:AppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).business.path
+    $DropboxPersonal = ((Get-Content $env:AppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).personal.path
+    $DropboxBusiness = ((Get-Content $env:AppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).business.path
 }
-elseif (Test-Path $ENV:LocalAppData\Dropbox\info.json)
+elseif (Test-Path $env:LocalAppData\Dropbox\info.json)
 {
-    $DropboxPersonal = ((Get-Content $ENV:LocalAppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).personal.path
-    $DropboxBusiness = ((Get-Content $ENV:LocalAppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).business.path
+    $DropboxPersonal = ((Get-Content $env:LocalAppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).personal.path
+    $DropboxBusiness = ((Get-Content $env:LocalAppData\Dropbox\info.json) -join '`n' | ConvertFrom-json).business.path
 }
 
 # Backup Chocolatey package names on local computer to packages.config file in Personal Dropbox directory if it exists
-if ($UseDropbox -match "True" -and ($DropboxPersonal) -and (Test-Path $DropboxPersonal))
+if ($UseDropbox -Match "True" -and ($DropboxPersonal) -and (Test-Path $DropboxPersonal))
    {
-    $SavePath = "$DropboxPersonal\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$DropboxPersonal\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
 # Backup Chocolatey package names on local computer to packages.config file in Business Dropbox directory if it exists
-if ($UseDropbox -match "True" -and ($DropboxBusiness) -and (Test-Path $DropboxBusiness))
+if ($UseDropbox -Match "True" -and ($DropboxBusiness) -and (Test-Path $DropboxBusiness))
    {
-    $SavePath = "$DropboxBusiness\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$DropboxBusiness\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
 # Backup Chocolatey package names on local computer to packages.config file in Google Drive/Backup and Sync directory if it exists
-if ($UseGoogleDrive -match "True" -and (Test-Path "$ENV:USERPROFILE\Google Drive"))   
+if ($UseGoogleDrive -Match "True" -and (Test-Path "$env:USERPROFILE\Google Drive"))   
    {
-    $SavePath = "$ENV:USERPROFILE\Google Drive\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\Google Drive\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
@@ -304,97 +321,90 @@ $GFSInstalled=(Test-Path -path HKCU:Software\Google\DriveFS\Share)
 if ($GFSInstalled)
    {
     $GoogleFSmountpoint = (Get-ItemProperty -path Registry::HKEY_CURRENT_USER\Software\Google\DriveFS\Share).MountPoint
-    if ($UseGoogleDrive -match "True" -and ($GoogleFSmountpoint) -and (Test-Path "${GoogleFSmountpoint}:\My Drive"))
+    if ($UseGoogleDrive -Match "True" -and ($GoogleFSmountpoint) -and (Test-Path "${GoogleFSmountpoint}:\My Drive"))
        {
-        $SavePath = "${GoogleFSmountpoint}:\My Drive\$SaveFolderName\$ENV:ComputerName"
+        $SavePath = "${GoogleFSmountpoint}:\My Drive\$SaveFolderName\$env:COMPUTERNAME"
         Write-PackagesConfig
        }
 	}
    
 # Backup Chocolatey package names on local computer to packages.config file on your HOMESHARE directory if it exists
-if ($ENV:HOMESHARE) {$ExistHomeShare="True"} else {$ExistHomeShare="False"}
-if ($UseHomeShare -match "True" -and $ExistHomeShare -match "True")   
+# NOTE: Won't work when running as SYSTEM
+if ($env:HOMESHARE) {$ExistHomeShare="True"} else {$ExistHomeShare="False"}
+if ($UseHomeShare -Match "True" -and $ExistHomeShare -Match "True")   
    {
-    $SavePath = "$ENV:HOMESHARE\$SaveFolderName\$ENV:ComputerName"   
+    $SavePath = "$env:HOMESHARE\$SaveFolderName\$env:COMPUTERNAME"   
     Write-PackagesConfig
    }      
 
 # Backup Chocolatey package names on local computer to packages.config file in iCloudDrive directory if it exists
-if ($UseiCloudDrive -match "True" -and (Test-Path $ENV:USERPROFILE\iCloudDrive))
+if ($UseiCloudDrive -Match "True" -and (Test-Path $env:USERPROFILE\iCloudDrive))
    {
-    $SavePath = "$ENV:USERPROFILE\iCloudDrive\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\iCloudDrive\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }    
    
 # Backup Chocolatey package names on local computer to packages.config file in Nextcloud directory if it exists
-if ($UseNextcloud -match "True" -and (Test-Path $ENV:USERPROFILE\Nextcloud))
+if ($UseNextcloud -Match "True" -and (Test-Path $env:USERPROFILE\Nextcloud))
    {
-    $SavePath = "$ENV:USERPROFILE\Nextcloud\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\Nextcloud\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    } 
    
 # Backup Chocolatey package names on local computer to packages.config file in various OneDrive directories if they exists
-if ($ENV:OneDrive) {$OneDriveExists="True"} else {$OneDriveExists="False"}
-if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
+if ($env:OneDrive) {$OneDriveExists="True"} else {$OneDriveExists="False"}
+if ($UseOneDrive -Match "True" -and ($OneDriveExists -Match "True"))
    {
-    $SavePath = "$ENV:OneDrive\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:OneDrive\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
-if ($ENV:OneDriveConsumer) {$OneDriveExists="True"} else {$OneDriveExists="False"}
-if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
+if ($env:OneDriveConsumer) {$OneDriveExists="True"} else {$OneDriveExists="False"}
+if ($UseOneDrive -Match "True" -and ($OneDriveExists -Match "True"))
    {
-    $SavePath = "$ENV:OneDriveConsumer\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:OneDriveConsumer\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
-if ($ENV:OneDriveCommercial) {$OneDriveExists="True"} else {$OneDriveExists="False"}
-if ($UseOneDrive -match "True" -and ($OneDriveExists -match "True"))
+if ($env:OneDriveCommercial) {$OneDriveExists="True"} else {$OneDriveExists="False"}
+if ($UseOneDrive -Match "True" -and ($OneDriveExists -Match "True"))
    {
-    $SavePath = "$ENV:OneDriveCommercial\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:OneDriveCommercial\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
 
 # Backup Chocolatey package names on local computer to packages.config file in ownCloud directory if it exists
-if ($UseownCloud -match "True" -and (Test-Path "$ENV:USERPROFILE\ownCloud"))
+if ($UseownCloud -Match "True" -and (Test-Path "$env:USERPROFILE\ownCloud"))
    {
-    $SavePath = "$ENV:USERPROFILE\ownCloud\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\ownCloud\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
 # Backup Chocolatey package names on local computer to packages.config file in Netgear ReadyCLOUD directory if it exists
-if ($UseReadyCLOUD -match "True" -and (Test-Path $ENV:USERPROFILE\ReadyCLOUD))
+if ($UseReadyCLOUD -Match "True" -and (Test-Path $env:USERPROFILE\ReadyCLOUD))
    {
-    $SavePath = "$ENV:USERPROFILE\ReadyCLOUD\$SaveFolderName\$ENV:ComputerName"
-    Write-PackagesConfig
-   }
-
-# Backup Chocolatey package names on local computer to packages.config file in Public directory if running under system account (only place it will save running under system except $CustomPath
-#if ($ENV:computername -eq $ENV:username.trim('$'))
-if ($ENV:username -eq 'system')
-   {
-    $SavePath = "$ENV:PUBLIC\$SaveFolderName"
+    $SavePath = "$env:USERPROFILE\ReadyCLOUD\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
 
 # Backup Chocolatey package names on local computer to packages.config file in Resilio Sync directory if it exists
-if ($UseResilioSync -match "True" -and (Test-Path "$ENV:USERPROFILE\Resilio Sync"))
+if ($UseResilioSync -Match "True" -and (Test-Path "$env:USERPROFILE\Resilio Sync"))
    {
-    $SavePath = "$ENV:USERPROFILE\Resilio Sync\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\Resilio Sync\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }   
 
 # Backup Chocolatey package names on local computer to packages.config file in Seafile directory if it exists
-if ($UseSeafile -match "True" -and (Test-Path $ENV:USERPROFILE\Documents\Seafile))
+if ($UseSeafile -Match "True" -and (Test-Path $env:USERPROFILE\Documents\Seafile))
    {
-    $SavePath = "$ENV:USERPROFILE\Seafile\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\Seafile\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
 # Backup Chocolatey package names on local computer to packages.config file in TonidoSync directory if it exists
-if ($UseTonidoSync -match "True" -and (Test-Path $ENV:USERPROFILE\Documents\TonidoSync))
+if ($UseTonidoSync -Match "True" -and (Test-Path $env:USERPROFILE\Documents\TonidoSync))
    {
-    $SavePath = "$ENV:USERPROFILE\Documents\TonidoSync\$SaveFolderName\$ENV:ComputerName"
+    $SavePath = "$env:USERPROFILE\Documents\TonidoSync\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
    
@@ -406,7 +416,8 @@ If ($ICinstalled){
      Write-Host "  ** Consider getting InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!`n  ** https://chocolatey.org/packages/InstChoco`n" -Foreground Cyan
      Write-Host "To re-install your Chocolatey packages: run CHOCO INSTALL PACKAGES.CONFIG -Y`n" -Foreground Magenta
    }
-Write-Host "Found choco-package-list-backup.ps1 useful?" -Foreground White
+Write-Host "Found Choco-Package-List-Backup.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
+Write-Output "$(Get-Date) Choco-Package-List-Backup FINISHED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log"
 Start-Sleep -s 10 # Gives time to view before closing when run from Windows Start Menu shortcut

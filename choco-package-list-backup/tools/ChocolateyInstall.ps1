@@ -1,6 +1,7 @@
-﻿#$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName      = 'choco-package-list-backup'
 $toolsDir         = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$pp               = Get-PackageParameters
 $scriptDir        = "$(Get-ToolsLocation)\BCURRAN3"
 $script           = 'choco-package-list-backup.ps1'
 $ScriptConfig     = 'choco-package-list-backup.config'
@@ -8,29 +9,34 @@ $shortcutName     = 'Chocolatey Package List Backup.lnk'
 $oldshortcutName  = 'Choco Package List Backup.lnk'
 $altshortcutName  = 'Package List Backup.lnk'
 $Date             = Get-Date -UFormat %Y-%m-%d
-$GotTask          = (&schtasks /query /tn choco-package-list-backup) 2> $null
 
 # Setup
 # New storage location moving forward for all my Chocolatey scripts
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$ENV:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
+if (!(Test-Path "$env:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$env:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Migration
 # Move files before v2019.08.27 from old to new storage location
-if (Test-Path "$ENV:ChocolateyInstall\bin\$script") { Remove-Item "$ENV:ChocolateyInstall\bin\$script" -Force }
-if (Test-Path "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml") { Rename-Item "$ENV:ChocolateyInstall\bin\choco-package-list-backup.xml" $ScriptConfig -Force }
-if (Test-Path "$ENV:ChocolateyInstall\bin\$ScriptConfig") { Move-Item "$ENV:ChocolateyInstall\bin\$ScriptConfig" "$scriptDir" -Force ; $Migration=$True }
-if ($Migration) { SchTasks /Delete /TN choco-package-list-backup /F ; $GotTask=$null}
+if (Test-Path "$env:ChocolateyInstall\bin\$script") { Remove-Item "$env:ChocolateyInstall\bin\$script" -Force }
+if (Test-Path "$env:ChocolateyInstall\bin\choco-package-list-backup.xml") { Rename-Item "$env:ChocolateyInstall\bin\choco-package-list-backup.xml" $ScriptConfig -Force }
+if (Test-Path "$env:ChocolateyInstall\bin\$ScriptConfig") { Move-Item "$env:ChocolateyInstall\bin\$ScriptConfig" "$scriptDir" -Force ; $Migration=$True }
+if ($Migration) { &SchTasks /Delete /TN choco-package-list-backup /F }
+if (Test-Path "$scriptDir\choco-package-list-backup.cmd") { Remove-Item "$scriptDir\choco-package-list-backup.cmd" -Force }
+if (Test-Path "$scriptDir\choco-package-list-backup-manual.bat") { Remove-Item "$scriptDir\choco-package-list-backup-manual.bat" -Force }
+if (Test-Path "$scriptDir\CPLB.cmd") { Remove-Item "$scriptDir\CPLB.cmd" -Force }
 
 # Install Script
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force
-Move-Item "$toolsDir\choco-package-list-backup.cmd" "$scriptDir" -Force
-Move-Item "$toolsDir\CPLB.cmd" "$scriptDir" -Force
+Move-Item "$toolsDir\CPLB.bat" "$scriptDir" -Force
 if (!(Test-Path "$scriptDir\$ScriptConfig")) { Move-Item "$toolsDir\$ScriptConfig" "$scriptDir" -Force }
 
+# Create "shims"
+Install-ChocolateyPowershellCommand -PackageName 'choco-package-list-backup' -PSFileFullPath "$scriptDir\$script"
+Install-ChocolateyPowershellCommand -PackageName 'choco-package-list-backup' -PSFileFullPath "$scriptDir\$script"
+
 # Cleanup
-Remove-Item "$toolsDir\choco-package-list-backup*.*" -Force -ErrorAction SilentlyContinue | Out-Null
-if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
+Remove-Item "$toolsDir\choco-package-list-backup.*" -Force -ErrorAction SilentlyContinue | Out-Null
+if ($env:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
 Function Update-Config{
 [xml]$UpdatedConfig = Get-Content "$scriptDir\$ScriptConfig"
@@ -80,6 +86,24 @@ if ($SaveTitleSummary -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+$DefaultUserProfile = $UpdatedConfig.Settings.Preferences.DefaultUserProfile
+if ($DefaultUserProfile -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "DefaultUserProfile", $null)
+    if ($env:COMPUTERNAME -eq $env:USERNAME.trim('$')) { $NewStuff.InnerText=('Public') } else { $NewStuff.InnerText=("$env:USERNAME") }
+    Write-Host "  ** Adding DefaultUserProfile support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+$UseDefaultUserProfile = $UpdatedConfig.Settings.Preferences.UseDefaultUserProfile
+if ($UseDefaultUserProfile -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "UseDefaultUserProfile", $null)
+    $NewStuff.InnerText=("false") 
+    Write-Host "  ** Adding UseDefaultUserProfile support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
 if ($UpdatedFile)
    {   
     $UpdatedConfig.Save("$scriptDir\$ScriptConfig")
@@ -89,32 +113,47 @@ if ($UpdatedFile)
 
 Update-Config
 
+# exit if a scheduled task is not wanted
+if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
+       Write-Host "  ** NOTASK or NOSCHEDULE specified, not installing scheduled task." -Foreground Magenta
+	   exit
+   }
+
+$ErrorActionPreference = 'SilentlyContinue'
+$GotTask = (&schtasks /query /tn choco-package-list-backup) 2> $null
+$ErrorActionPreference = 'Stop'
+
+# Change task to run new batch file and keep other existing settings (2020.04.06 upgrade)
+if ($GotTask -ne $null){
+     &SchTasks /CHANGE /TN "choco-package-list-backup" /TR "%ChocolateyInstall%\bin\choco-package-list-backup.bat"
+   }
+
 if ($GotTask -ne $null){
      Write-Host
      Write-Host "  ** Existing choco-package-list-backup scheduled task found:" -Foreground Magenta 
      SchTasks /query /tn "choco-package-list-backup"
      Write-Host "`nKeeping existing scheduled task and upgrading script files." -Foreground Magenta
   } else {
-     SchTasks /Create /SC WEEKLY /D MON /RU SYSTEM /RL HIGHEST /TN "choco-package-list-backup" /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-package-list-backup.ps1" /ST 06:00 /F
+     SchTasks /Create /SC WEEKLY /D MON /RU SYSTEM /RL HIGHEST /TN "choco-package-list-backup" /TR "%ChocolateyInstall%\bin\choco-package-list-backup.bat" /ST 06:00 /F
      SchTasks /query /tn "choco-package-list-backup"
 	 Write-Host "  ** Now configured to run choco-package-list-backup at 6 AM every MONDAY." -Foreground Green
 	}
    
 
-If (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
-      Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$oldshortcutName" -Force -ErrorAction SilentlyContinue
-      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$altshortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $script" -IconLocation "$ENV:ChocolateyInstall\choco.exe" -WorkingDirectory "$ENV:ChocolateyInstall\bin\"
+If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
+      Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$oldshortcutName" -Force -ErrorAction SilentlyContinue
+      Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$altshortcutName" -targetPath "$env:ChocolateyInstall\bin\choco-package-list-backup.bat" -IconLocation "$env:ChocolateyInstall\choco.exe" -WorkingDirectory "$env:ChocolateyInstall\bin\"
     } else {
-      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $script" -IconLocation "$ENV:ChocolateyInstall\choco.exe" -WorkingDirectory "$ENV:ChocolateyInstall\bin\"
+      Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:ChocolateyInstall\bin\choco-package-list-backup.bat" -IconLocation "$env:ChocolateyInstall\choco.exe" -WorkingDirectory "$env:ChocolateyInstall\bin\"
 	}
 	
-Write-Host "Running choco-package-list-backup.ps1 to create backup(s)..." -Foreground Magenta
-&powershell -NoProfile -ExecutionPolicy Bypass -Command "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.ps1"
+Write-Host "Running Choco-Package-List-Backup.ps1 to create backup(s)..." -Foreground Magenta
+&$env:ChocolateyInstall\bin\choco-package-list-backup.bat
 Write-Host "ADDITIONAL INFORMATION:" -Foreground Magenta
-Write-Host "  ** Customize your backups by editing $ENV:ChocolateyToolsLocation\BCURRAN3\$ScriptConfig." -Foreground Magenta
-Write-Host "  ** Type CHOCO-PACKAGE-LIST-BACKUP in Command Prompt or PowerShell to run." -Foreground Magenta
-If (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
-     Write-Host "  ** Click Package List Backup in the Start menu under Chocolatey to run." -Foreground Magenta
+Write-Host "  ** Customize your backups: run CHOCO-PACKAGE-LIST-BACKUP -EDITCONFIG." -Foreground Magenta
+Write-Host "  ** Run from Command Prompt or PowerShell: CHOCO-PACKAGE-LIST-BACKUP or CPLB." -Foreground Magenta
+If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
+     Write-Host "  ** Run from Windows: Click Package List Backup in the Start Menu under Chocolatey to run." -Foreground Magenta
    } else {
-     Write-Host "  ** Click Chocolatey Package List Backup in the Start menu to run." -Foreground Magenta
+     Write-Host "  ** Run from Windows: Click Chocolatey Package List Backup in the Start Menu to run." -Foreground Magenta
    }
