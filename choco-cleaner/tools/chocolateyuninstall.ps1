@@ -1,10 +1,12 @@
-﻿#$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $packageName     = 'choco-cleaner'
 $scriptDir       = "$(Get-ToolsLocation)\BCURRAN3"
 $shortcutName    = 'Choco Cleaner.lnk'
 $altshortcutName = 'Chocolatey Cleaner.lnk'
-$GotTask         = (&schtasks /query /tn choco-cleaner) 2> $null
 
+$ErrorActionPreference = 'SilentlyContinue'
+$GotTask         = (&schtasks /query /tn choco-cleaner) 2> $null
+$ErrorActionPreference = 'Stop'
 if ($GotTask) {SchTasks /Delete /TN “choco-cleaner” /F}
 
 Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -Force -ErrorAction SilentlyContinue

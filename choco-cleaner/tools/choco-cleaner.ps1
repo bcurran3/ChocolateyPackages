@@ -4,12 +4,35 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Cleaner.ps1 v0.0.8 (01/31/2021) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v0.0.8.1 (03/13/2021) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
+
+# Easily edit the config file
+if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
+     $Editor="notepad++.exe"
+    } else {
+      $Editor="notepad.exe"
+    }
+
+if ($args -eq "-EditConfig") {
+    Write-Host "  ** Editing contents of choco-cleaner.config." -Foreground Magenta
+	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.config"
+	return
+}
+
+# Minor logging
+if (Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"){
+   $LogSize=(Get-ChildItem -Path "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log").length
+   if ($LogSize -gt 10240) {
+	   Remove-Item "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
+	   Write-Output "$(Get-Date) Choco-Cleaner Deleted log file" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
+	  }
+  }
+Write-Output "$(Get-Date) Choco-Cleaner STARTED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 
 # All 7Zip supported formats plus EXE, MSU, MSP, APPX, APPXBUNDLE, IMG - What else is needed?
 $BinaryExtensions=@("*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7z","*.xz","*.bzip2","*.gzip","*.tar","*.zip","*.wim","*.ar","*.arj","*.cab","*.chm","*.cpio","*.cramfs","*.dmg","*.ext","*.fat","*.gpt","*.hfs","*.ihex","*.iso","*.lzh","*.lzma","*.mbr","*.msi","*.nsis","*.ntfs","*.qcow2","*.rar","*.rpm","*.squashfs","*.udf","*.uefi","*.vdi","*.vhd","*.vmdk","*.xar","*.z","*.dll")
@@ -31,18 +54,6 @@ $DeleteCache = $ConfigFile.Settings.Preferences.DeleteCache
 $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 # new configuration items since implementation of XML config in v0.0.3
 $DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
-
-if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
-     $Editor="notepad++.exe"
-    } else {
-      $Editor="notepad.exe"
-    }
-
-if ($args -eq "-EditConfig") {
-    Write-Host "  ** Editing contents of choco-cleaner.config." -Foreground Magenta
-	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.config"
-	return
-}
 
 # run shim and report if the target program exists or not
 function Test-ShimTargetExists {
@@ -128,6 +139,7 @@ if ($DeleteCache -eq "True")
 	}
 	
 if ($DeleteNuGetCache -eq "True"){
+# TDL - discover each user profile and delete appropriately within
     if (Test-Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache){
 	   $GotNuGetCache=ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
 	   $NuGetCache=$GotNuGetCache.count
@@ -174,12 +186,20 @@ if ($DeleteLibBkp -eq "True"){
         Remove-Item -Path $ENV:ChocolateyInstall\lib-bkp -Recurse -Force
 	   }
 	}
-	
+
+# FUTURE (placeholder)
 #if ($DeleteLibSynced -eq "True")
 #    {	
 #     Write-Host "  **  Deleting unnecessary Chocolatey lib-synced package files..." -Foreground Green
 #     Remove-Item -Path $ENV:ChocolateyInstall\lib-synced -Recurse -ErrorAction SilentlyContinue
-#	}	
+#	}
+
+# FUTURE (placeholder)
+#if ($DeleteDotChocolatey -eq "True")
+#    {	
+#     Write-Host "  **  Deleting unnecessary Chocolatey .chocolatey files..." -Foreground Green
+#     Remove-Item -Path $ENV:ChocolateyInstall\.chocolatey -Recurse -ErrorAction SilentlyContinue
+#	}
 
 if ($DeleteFileLogs -eq "True")
     {
@@ -271,12 +291,15 @@ if ($BadShimCount) {
 
 if ($ENV:ChocolateyInstall -Match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:")
     {
-     $FreeAfter  = Get-PSDrive C | foreach-object {$_.Free}
+     $FreeAfter  = Get-PSDrive C | ForEach-Object {$_.Free}
 	 $FreedSpace = $FreeAfter - $FreeBefore
      $FreedSpace = $FreedSpace / 1024
-	 Write-Host Choco-Cleaner finished deleting unnecessary Chocolatey files and saved you $freedspace.ToString('N0') KB! -Foreground Magenta
+	 $FreedSpace = $FreedSpace.ToString('N0')
+	 Write-Host Choco-Cleaner finished deleting unnecessary Chocolatey files and reclaimed ~ $FreedSpace KB! -Foreground Magenta
+	 Write-Output "$(Get-Date) Choco-Cleaner FINISHED and reclaimed ~ $FreedSpace KB!" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
     } else {
-	  Write-Host choco-cleaner finished deleting unnecessary Chocolatey files! -Foreground Magenta
+	  Write-Host "Choco-Cleaner finished deleting unnecessary Chocolatey files!" -Foreground Magenta
+	  Write-Output "$(Get-Date) Choco-Cleaner FINISHED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 	 }
 Write-Host "Found Choco-Cleaner.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
@@ -285,6 +308,7 @@ Start-Sleep -s 10
 
 # TDL
 # Recursively delete Chocolatey and NuGet cache files from all user directories
+# Accurately track and report reclaimed space per bullet point and total
+# More detailed logging
 # Clean C:\ProgramData\chocolatey\lib-synced
 # Clean C:\ProgramData\chocolatey\.chocolatey
-# Possibly make self-elevating https://blogs.msdn.microsoft.com/virtual_pc_guy/2010/09/23/a-self-elevating-powershell-script/
