@@ -52,10 +52,11 @@ if ($UpdatedFile)
 
 Update-Config
 
+# Create Start Menu icon
 If (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
-      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $scriptDir\$script" -WorkingDirectory "$scriptDir" -IconLocation "$toolsDir\choco-cleaner.ico" -RunAsAdmin
+      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$env:ChocolateyInstall\bin\choco-cleaner.bat" -IconLocation "$toolsDir\choco-cleaner.ico" -RunAsAdmin
     } else {
-      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName" -targetPath "$ENV:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $scriptDir\$script" -WorkingDirectory "$scriptDir" -IconLocation "$toolsDir\choco-cleaner.ico" -RunAsAdmin
+      Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName" -targetPath "$env:ChocolateyInstall\bin\choco-cleaner.bat" -IconLocation "$toolsDir\choco-cleaner.ico" -RunAsAdmin
 	}
 
 # Remove previous scheduled task to fix v0.0.6 - v0.0.8 scheduled task execution bug
