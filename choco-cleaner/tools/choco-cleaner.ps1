@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Cleaner.ps1 v0.0.8.1 (03/13/2021) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v0.0.8.1 (03/14/2021) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -295,6 +295,7 @@ if ($ENV:ChocolateyInstall -Match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:
 	 $FreedSpace = $FreeAfter - $FreeBefore
      $FreedSpace = $FreedSpace / 1024
 	 $FreedSpace = $FreedSpace.ToString('N0')
+	 if ([int]$FreedSpace -lt 0) {$FreedSpace = "0"}
 	 Write-Host Choco-Cleaner finished deleting unnecessary Chocolatey files and reclaimed ~ $FreedSpace KB! -Foreground Magenta
 	 Write-Output "$(Get-Date) Choco-Cleaner FINISHED and reclaimed ~ $FreedSpace KB!" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
     } else {
