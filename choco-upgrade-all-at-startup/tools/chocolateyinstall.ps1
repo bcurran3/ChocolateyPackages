@@ -21,18 +21,23 @@ Install-ChocolateyPowershellCommand -PackageName 'choco-install' -PSFileFullPath
 Remove-Item "$toolsDir\choco-upgrade-all.*" -Force -ErrorAction SilentlyContinue | Out-Null
 if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
-# delete old task name if it exists from older versions
-$GotTask     = (get-scheduledtask -TaskName "Run a Choco Upgrade All at Startup" -ErrorAction SilentlyContinue)
+# delete old task if it exists from versions 2017.01.10 and earlier
+$ErrorActionPreference = 'SilentlyContinue'
+$GotTask = (&schtasks.exe /query /tn "Run a Choco Upgrade All at Startup") 2> $null
+$ErrorActionPreference = 'Stop'
 if ($GotTask -ne $null){
-    &SCHTASKS.exe /DELETE /TN "Run a Choco Upgrade All at Startup" /F
-   }
-   
-# always delete task to make sure it is current
-$GotTask     = (get-scheduledtask -TaskName "choco-upgrade-all-startup" -ErrorAction SilentlyContinue)
-if ($GotTask -ne $null){
-    &SCHTASKS.exe /DELETE /TN "Run a Choco Upgrade All at Startup" /F
+    &schtasks.exe /DELETE /TN "Run a Choco Upgrade All at Startup" /F
    }
 
+# Configure the scheduled task
+$ErrorActionPreference = 'SilentlyContinue'
+$GotTask = (&schtasks.exe /query /tn "choco-upgrade-all-startup") 2> $null
+$ErrorActionPreference = 'Stop'
+if ($GotTask -ne $null){
+# Change existing task to run new batch file 2021.03.13+
+     &SchTasks /CHANGE /TN "choco-upgrade-all-startup" /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat"
+   } else {
 # create new scheduled task to run at startup   
-SchTasks /Create /SC ONSTART /RU SYSTEM /RL HIGHEST /TN "choco-upgrade-all-startup" /TR "cmd /c powershell -NoProfile -ExecutionPolicy Bypass -Command %ChocolateyToolsLocation%\BCURRAN3\choco-upgrade-all.ps1" /F
-Write-Host "Now configured to run ""choco upgrade all -y"" at Windows startup." -Foreground Magenta 
+     SchTasks /Create /SC ONSTART /RU SYSTEM /RL HIGHEST /TN "choco-upgrade-all-startup" /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /F
+   }
+Write-Host "Now configured to run ""choco upgrade all -y"" with enhanced options at Windows startup." -Foreground Magenta 

@@ -7,22 +7,32 @@
 * I previously used this package but now use [choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at).
 * This is most likely the last release of choco-upgrade-all-at-startup.
 
-#DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY TIME YOUR COMPUTER BOOTS? 
+# DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY TIME YOUR COMPUTER BOOTS? 
 
-#YOU JUST FOUND THE EASY WAY!
+# YOU JUST FOUND THE EASY WAY!
 	
-###This package creates a Windows Scheduled Task to run "choco upgrade all -y" every time your computer boots.
+### This package creates a Windows Scheduled Task to run "choco upgrade all -y" with enhanced options every time your computer boots.
 
-###NOTE:
-Your computer boot time will increase! If you reboot daily, you'll never notice. If you reboot infrequently, you'll notice a slow down as packages are downloaded and updated/installed, especially if you have a slow Internet connection. Because of this **choco-upgrade-all-at-startup** is pseudo-deprecated and pseudo-superseded by **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** which allows you to set a time to run "choco upgrade all -y" every day in the wee hours of morning while you're happily dreaming about supercomputers and not waiting for your computer to boot up.
+Please understand your computer boot time will increase. If you reboot daily, you'll probably never notice. If you reboot infrequently, you'll notice a slow down as packages are downloaded and updated/installed, especially if you have a slow Internet connection. Because of this **choco-upgrade-all-at-startup** is pseudo-deprecated and pseudo-superseded by **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** which allows you to set a time to run "choco upgrade all -y" every day in the wee hours of morning while you're happily dreaming of owning a supercomputer instead of twiddling your thumbs waiting for your "slow" computer to boot up. Otherwise it works wonderfully at keeping your Chocolatey installed programs up to date.
 
-##CHANGELOG:
+### USAGE INSTRUCTIONS:
+* You can do nothing and it will run at startup when on A/C power.
+* You can manually run **choco-upgrade-all** from Command Prompt or PowerShell
+* You can manually run **choco-install packagename** from Command Prompt or PowerShell to install packages with your **choco-upgrade-all-at-startup** settings
+
+### POST INSTALL CONFIGURATION:
+* To enable enhanced options such as automatically deleting newly installed Desktop and Start Menu icons or use pre and/or post processing scripts, edit c:\tools\BCURRAN\choco-upgrade-all.config or run choco-upgrade-all -EditConfig
+
+SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/laptop users who tend to shut down their computers at night and thus miss scheduled updates/maintenance such as **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** (in the wee hours of the morning).
+
+## CHANGELOG:
+* 2021.03.13 - Added option to automatically delete newly created desktop and start menu icons. Added option to run pre and post processing scripts. Edit C:\tools\BCURRAN3\choco-upgrade-all.config to enable. You can new run choco-upgrade-all from the command line to take advantage of these new options. Added choco-install script to work with the same options. Added -EditConfig option to edit the config file. Added configurable arguments. Added ability to set default user profile.
 * 2018.08.22 - Fixed compatibility with Windows 7 &amp; 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency.
 * 2018.01.30 - simplified, standardized, description updated, uninstall added
 * 2017.01.10 - original release
 
-##ROADMAP:
-* Nothing planned
+## ROADMAP:
+* Possibly re-write task creation via PowerShell or XML import method for advanced options such as enabling run on battery and an abort time.
 
 ***
 

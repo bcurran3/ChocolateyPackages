@@ -4,12 +4,14 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "choco-upgrade-all.ps1 (03/11/2021) - Upgrade your Chocolatey packages with extras" -Foreground White
+Write-Host "Choco-Upgrade-All.ps1 (03/13/2021) - Upgrade your Chocolatey packages with enhanced options" -Foreground White
 Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Import preferences from choco-upgrade-all.config
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
-#$Arguments               = $ConfigFile.Settings.Preferences.Arguments
+$ConfigArguments         = $ConfigFile.Settings.Preferences.ConfigArguments
+$DebugLogging            = $ConfigFile.Settings.Preferences.DebugLogging
+$DefaultUserProfile      = $ConfigFile.Settings.Preferences.DefaultUserProfile
 $DeleteNewDesktopIcons   = $ConfigFile.Settings.Preferences.DeleteNewDesktopIcons
 $DeleteNewStartMenuIcons = $ConfigFile.Settings.Preferences.DeleteNewStartMenuIcons
 #$KillCUPAfter            = $ConfigFile.Settings.Preferences.KillCUPAfter
@@ -28,22 +30,43 @@ if ($args -eq "-EditConfig") {
 	return
 }
 
+# Minor logging
+if (Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"){
+   $LogSize=(Get-ChildItem -Path "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log").length
+   if ($LogSize -gt 51200) {
+	   Remove-Item "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
+	   Write-Output "$(Get-Date) Choco-Upgrade-All Deleted log file" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
+	  }
+  }
+if ($DebugLogging -eq 'True'){
+	Start-Transcript -Path $ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log -Append
+   } else {
+     Write-Output "$(Get-Date) Choco-Upgrade-All STARTED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
+   }
+
 # Run pre-processor if configured
 if ($PreProcessScript){&$PreProcessScript}
 
-# get existing Desktop and Start Menu icons
-$UserDesktopIconsPre     = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"
-$PublicDesktopIconsPre   = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"
-$UserStartMenuIconsPre   = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
-$PublicStartMenuIconsPre = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse
+# When running as SYSTEM (scheduled task) use the $DefaultUserProfile as the default user profile if defined
+if ($DefaultUserProfile) {
+	$env:USERPROFILE="$env:SystemDrive\Users\$DefaultUserProfile"
+	$env:APPDATA="$env:SystemDrive\Users\$DefaultUserProfile\AppData\Roaming"
+	}
 
-&choco upgrade all -y $args
+# get existing Desktop and Start Menu icons
+if (Test-Path "$env:USERPROFILE\Desktop") {$UserDesktopIconsPre = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"}
+if (Test-Path "$env:PUBLIC\Desktop") {$PublicDesktopIconsPre = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"}
+if (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs") {$UserStartMenuIconsPre = Get-ChildItem -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse}
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenuIconsPre = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse}
+
+# Do the Chocolatey Humpty Hump
+Start-Process -NoNewWindow -FilePath "$env:ChocolateyInstall\bin\choco.exe" -ArgumentList "upgrade all -y $ConfigArguments $args" -Wait
 
 # get existing and new Desktop and Start Menu icons
-$UserDesktopIconsPost     = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"
-$PublicDesktopIconsPost   = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"
-$UserStartMenuIconsPost   = Get-ChildItem -Path "$env:AppData\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse
-$PublicStartMenuIconsPost = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse
+if (Test-Path "$env:USERPROFILE\Desktop") {$UserDesktopIconsPost = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"}
+if (Test-Path "$env:PUBLIC\Desktop")  {$PublicDesktopIconsPost = Get-ChildItem -Path "$env:PUBLIC\Desktop\*.lnk"}
+if (Test-Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs") {$UserStartMenuIconsPost = Get-ChildItem -Path "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\*.lnk" -Recurse}
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenuIconsPost = Get-ChildItem -Path "$env:ProgramData\Microsoft\Windows\Start Menu\*.lnk" -Recurse}
 
 # Delete new Desktop icons if configured to do so
 if ($DeleteNewDesktopIcons -eq 'True'){
@@ -62,3 +85,12 @@ if ($DeleteNewStartMenuIcons -eq 'True'){
 
 # Run post-processor if configured
 if ($PostProcessScript){&$PostProcessScript}
+
+Write-Host "Found Choco-Upgrade-All.ps1 useful?" -ForegroundColor White
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
+if ($DebugLogging -eq 'True'){
+    Stop-Transcript
+   } else {
+	 Write-Output "$(Get-Date) Choco-Upgrade-All FINISHED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
+   }
