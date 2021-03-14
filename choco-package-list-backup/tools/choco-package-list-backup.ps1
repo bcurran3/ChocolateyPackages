@@ -130,6 +130,7 @@ Function Copy-InstChoco{
 # Import package.nuspec file to get extended package info
 function Get-NuspecInfo($PackageName,$NuspecTagRequest){
    $nuspecXML = "$env:ChocolateyInstall\lib\$PackageName\$PackageName.nuspec"
+   if (!(Test-Path $nuspecXML)) { return "Unknown" }
    [xml]$nuspecFile = Get-Content $nuspecXML
 #   $NuspecAuthors          = $nuspecFile.package.metadata.authors
 #   $NuspecBugTrackerURL    = $nuspecFile.package.metadata.bugtrackerurl
