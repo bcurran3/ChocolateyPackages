@@ -21,7 +21,7 @@ Please understand your computer boot time will increase. If you reboot daily, yo
 * You can manually run **choco-install packagename** from Command Prompt or PowerShell to install packages with your **choco-upgrade-all-at-startup** settings.
 
 ### POST INSTALL CONFIGURATION:
-* To enable enhanced options such as automatically deleting newly installed Desktop and Start Menu icons, running pre and/or post processing scripts, or setting a default user profile, edit c:\tools\BCURRAN\choco-upgrade-all.config or run **choco-upgrade-all -EditConfig**
+* To enable enhanced options such as automatically deleting newly installed Desktop and Start Menu icons, running pre and/or post processing scripts, or setting a default user profile, edit c:\tools\BCURRAN3\choco-upgrade-all.config or run **choco-upgrade-all -EditConfig**
 
 SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/laptop users who tend to shut down their computers at night and thus miss scheduled updates/maintenance such as **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** (in the wee hours of the morning).
 
