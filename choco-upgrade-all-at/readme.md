@@ -26,10 +26,10 @@ You can install **choco-upgrade-all-at** with multiple parameters to make it run
 * **choco install choco-upgrade-all-at --params "'/TIME:23:00'"** - runs "choco upgrade all -y" daily (default) at 11 PM and aborts at 1 AM, ABORTTIME defaults to +2 hours.
 * **choco install choco-upgrade-all-at --params "'/DAILY:yes /TIME:04:00 /ABORTTIME:08:00'"** - runs "choco upgrade all -y" daily at 4 AM and aborts it at 8 AM.
 * **choco install choco-upgrade-all-at --params "'/WEEKLY:yes /DAY:SUN /TIME:01:00'"** - runs "choco upgrade all -y" every Sunday at 1 AM and aborts at 3 AM.
-* **choco install choco-upgrade-all-at --params "'/NOTASK:true'"** - installs **choco-upgrade-all.ps1/bat** without the scheduled task.
+* **choco install choco-upgrade-all-at --params "'/NOTASK:true'"** - installs choco-upgrade-all.ps1/bat without the scheduled task.
 
 ### POST INSTALL CONFIGURATION:
-* To enable enhanced options such as automatically deleting newly installed Desktop and Start Menu icons, running pre and/or post processing scripts, or setting a default user profile, edit c:\tools\BCURRAN\choco-upgrade-all.config or run **choco-upgrade-all -EditConfig**
+* To enable enhanced options such as automatically deleting newly installed Desktop and Start Menu icons, running pre and/or post processing scripts, or setting a default user profile, edit c:\tools\BCURRAN3\choco-upgrade-all.config or run **choco-upgrade-all -EditConfig**
 
 #### A NOTE ON DEFAULTS:
 * If you don't specify any parameters, **choco-upgrade-all-at** defaults to running daily at 2AM and aborting at 4 AM. (My preference!) 
