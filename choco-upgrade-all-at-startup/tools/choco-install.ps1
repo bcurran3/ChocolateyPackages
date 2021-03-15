@@ -4,19 +4,23 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Install.ps1 (03/13/2021) - Install Chocolatey packages with enhanced options" -Foreground White
+Write-Host "Choco-Install.ps1 (03/15/2021) - Install Chocolatey packages with enhanced options" -Foreground White
 Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
+# Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
+if (!($env:ChocolateyToolsLocation)) {$env:ChocolateyToolsLocation = "$env:SystemDrive\tools"}
+if (!(Test-Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config")) {Write-Warning "Configuration not found. Please re-install.";throw}
+
 # Import preferences from choco-upgrade-all.config
-[xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
-#$Arguments               = $ConfigFile.Settings.Preferences.Arguments
+[xml]$ConfigFile = Get-Content "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
+$ConfigArguments         = $ConfigFile.Settings.Preferences.ConfigArguments
 $DebugLogging            = $ConfigFile.Settings.Preferences.DebugLogging
 $DeleteNewDesktopIcons   = $ConfigFile.Settings.Preferences.DeleteNewDesktopIcons
 $DeleteNewStartMenuIcons = $ConfigFile.Settings.Preferences.DeleteNewStartMenuIcons
 $PreProcessScript        = $ConfigFile.Settings.Preferences.PreProcessScript
 $PostProcessScript       = $ConfigFile.Settings.Preferences.PostProcessScript
 
-if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
+if (Test-Path $env:ChocolateyInstall\bin\notepad++.exe){
      $Editor="notepad++.exe"
     } else {
       $Editor="notepad.exe"
@@ -24,7 +28,7 @@ if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
 
 if ($args -eq "-EditConfig") {
     Write-Host "  ** Editing contents of choco-upgrade-all.config." -Foreground Magenta
-	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
+	&$Editor "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.config"
 	return
 }
 
@@ -67,4 +71,3 @@ if ($PostProcessScript){&$PostProcessScript}
 Write-Host "Found Choco-Install.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
-Write-Output "$(Get-Date) Choco-Upgrade-All FINISHED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
