@@ -25,6 +25,9 @@ Please understand your computer boot time will increase. If you reboot daily, yo
 
 SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/laptop users who tend to shut down their computers at night and thus miss scheduled updates/maintenance such as **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** (in the wee hours of the morning).
 
+#### IF UPGRADING FROM A VERSION EARLIER THAN 2021.03.15:
+It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-upgrade-all -EditConfig** to enable the new enhanced features.
+
 ## CHANGELOG:
 * 2021.03.13 - Added option to automatically delete newly created Desktop and Start Menu icons. Added option to run pre and post processing scripts. Added configurable arguments. Added ability to set default user profile. Edit C:\tools\BCURRAN3\choco-upgrade-all.config to enable the enhanced options. You can new run choco-upgrade-all from the command line to take advantage of the enhanced options. Added choco-install script to work with the same enhanced options. Added -EditConfig option to edit the config file.
 * 2018.08.22 - Fixed compatibility with Windows 7 &amp; 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency.

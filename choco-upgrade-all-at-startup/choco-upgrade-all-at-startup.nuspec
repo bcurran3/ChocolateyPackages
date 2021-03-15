@@ -37,6 +37,9 @@ Please understand your computer boot time will increase. If you reboot daily, yo
 
 SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/laptop users who tend to shut down their computers at night and thus miss scheduled updates/maintenance such as **[choco upgrade all at](https://chocolatey.org/packages/choco-upgrade-all-at)** (in the wee hours of the morning).
 
+#### IF UPGRADING FROM A VERSION EARLIER THAN 2021.03.15:
+It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-upgrade-all -EditConfig** to enable the new enhanced features.
+
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at-startup/readme.md)**
 
 ***
