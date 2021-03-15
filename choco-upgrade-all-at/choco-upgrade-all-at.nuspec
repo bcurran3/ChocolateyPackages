@@ -61,7 +61,7 @@ I have not tested with useRememberedArgumentsForUpgrades, you might get daily st
 #### IF UPGRADING FROM VERSION 0.0.4 or 0.0.4.1:
 You're old scheduled task will be kept. You will need to uninstall and re-install to take advantage of the new ABORTTIME feature.
 
-#### IF UPGRADING FROM A VERSION EARLIER THAN 0.0.5:
+#### IF UPGRADING FROM A VERSION EARLIER THAN 0.0.6:
 It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-upgrade-all -EditConfig** to enable the new enhanced features.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at/readme.md)**
