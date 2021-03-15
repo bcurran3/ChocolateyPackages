@@ -3,7 +3,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Package-List-Backup.ps1 v2021.03.14 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "Choco-Package-List-Backup.ps1 v2021.03.15 - backup Chocolatey packages list locally and to the cloud" -Foreground White
 Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 

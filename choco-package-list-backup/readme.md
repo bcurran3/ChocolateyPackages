@@ -52,13 +52,18 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 **If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
+### OPTIONAL INSTALLATION INSTRUCTIONS:
+* **choco install choco-package-list-backup --params "'/NOTASK:TRUE'"** - won't configure a scheduled task
+* **choco install choco-package-list-backup --params "'/NORUN:TRUE'"** - won't run the script upon install (let's you configure before first run)
+
 ### INSTRUCTIONS:
 * Edit C:\tools\BCURRAN3\choco-package-list-backup.config to customize your backup(s). It's easy, there are comments.
 * From PowerShell or the Command Prompt, type CHOCO-PACKAGE-LIST-BACKUP to backup your Chocolatey packages list. 
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 
 ### CHANGELOG:
-* 2021.03.14 - Fixed wrong command in scheduled task. Fixed saving to C:\Users\Public\Documents. Fixed problem when SaveTitleSummary is set to true and there is no chocolatey.nuspec file to get values from. Added ability to set default user profile. Added start/finished logging. Added NOTASK install option (choco install choco-package-list-backup --params "'/NOTASK:TRUE'".) Minor other changes.
+* 2021.03.15 - Added NORUN/DONTRUN install option (choco install choco-package-list-backup --params "'/NORUN:TRUE'".)
+* 2021.03.14 - Fixed wrong command in scheduled task. Fixed saving to C:\Users\Public\Documents. Fixed problem when SaveTitleSummary is set to true and there is no chocolatey.nuspec file to get values from. Added ability to set default user profile. Added start/finished logging. Added NOTASK/NOSCHEDULE install option (choco install choco-package-list-backup --params "'/NOTASK:TRUE'".) Minor other changes.
 * 2020.04.06 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)Acronymized CPLB.cmd added for command line running.
 * 2019.08.27 - can now put title and summary info into the packages.config file, new -EditConfig parameter to edit the config file, **Now works from Command Prompt as well as PowerShell**, script installation endpoint changed, config file renamed from .xml to .config
 * 2019.07.02 - now saves OneDrive backups to free, paid, and corporate folders

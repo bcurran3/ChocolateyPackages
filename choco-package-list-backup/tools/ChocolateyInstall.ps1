@@ -119,6 +119,13 @@ if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
 	   exit
    }
 
+# install option to not run the script after install
+$RunAfterInstall = $True
+if ($pp["NORUN"] -eq 'true' -or $pp["DONTRUN"] -eq 'true'){
+       Write-Host "  ** NORUN or DONTRUN specified, not running task." -Foreground Magenta
+	   $RunAfterInstall = $False
+   }
+
 $ErrorActionPreference = 'SilentlyContinue'
 $GotTask = (&schtasks /query /tn choco-package-list-backup) 2> $null
 $ErrorActionPreference = 'Stop'
@@ -146,9 +153,11 @@ If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey
     } else {
       Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:ChocolateyInstall\bin\choco-package-list-backup.bat" -IconLocation "$env:ChocolateyInstall\choco.exe" -WorkingDirectory "$env:ChocolateyInstall\bin\"
 	}
-	
-Write-Host "Running Choco-Package-List-Backup.ps1 to create backup(s)..." -Foreground Magenta
-&$env:ChocolateyInstall\bin\choco-package-list-backup.bat
+
+If ($RunAfterInstall){
+	Write-Host "Running Choco-Package-List-Backup.ps1 to create backup(s)..." -Foreground Magenta
+    &$env:ChocolateyInstall\bin\choco-package-list-backup.bat
+   }
 Write-Host "ADDITIONAL INFORMATION:" -Foreground Magenta
 Write-Host "  ** Customize your backups: run CHOCO-PACKAGE-LIST-BACKUP -EDITCONFIG." -Foreground Magenta
 Write-Host "  ** Run from Command Prompt or PowerShell: CHOCO-PACKAGE-LIST-BACKUP or CPLB." -Foreground Magenta
