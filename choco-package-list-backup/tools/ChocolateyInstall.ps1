@@ -104,6 +104,46 @@ if ($UseDefaultUserProfile -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+if ($CustomPath2 -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "CustomPath2", $null)
+    $NewStuff.InnerText=("false") 
+    Write-Host "  ** Adding CustomPath2 support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+if ($UseCustomPath2 -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "UseCustomPath2", $null)
+    $NewStuff.InnerText=("false") 
+    Write-Host "  ** Adding UseCustomPath2 support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+if ($SaveArguments -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "SaveArguments", $null)
+    $NewStuff.InnerText=("false") 
+    Write-Host "  ** Adding SaveArguments support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+if ($PreProcessScript -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "PreProcessScript", $null)
+    $NewStuff.InnerText=("false") 
+    Write-Host "  ** Adding PreProcessScript support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+if ($PostProcessScript -eq $null)
+   {
+	$NewStuff=$UpdatedConfig.CreateNode("element", "PostProcessScript", $null)
+    $NewStuff.InnerText=("false") 
+    Write-Host "  ** Adding PostProcessScript support to $ScriptConfig." -Foreground Magenta
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }   
 if ($UpdatedFile)
    {   
     $UpdatedConfig.Save("$scriptDir\$ScriptConfig")

@@ -46,15 +46,19 @@ Write-Output "$(Get-Date) Choco-Package-List-Backup STARTED" >> "$env:Chocolatey
 [xml]$ConfigFile     = Get-Content "$scriptDir\choco-package-list-backup.config"
 $PackagesListFile    = $ConfigFile.Settings.Preferences.PackagesListFile
 $SaveFolderName      = $ConfigFile.Settings.Preferences.SaveFolderName
+$SaveArguments       = $ConfigFile.Settings.Preferences.SaveArguments
 $SaveTitleSummary    = $ConfigFile.Settings.Preferences.SaveTitleSummary
 $SaveVersions        = $ConfigFile.Settings.Preferences.SaveVersions
 $AppendDate          = $ConfigFile.Settings.Preferences.AppendDate
 $CustomPath          = $ConfigFile.Settings.Preferences.CustomPath
+$CustomPath2         = $ConfigFile.Settings.Preferences.CustomPath2
 $SaveAllProgramsList = $ConfigFile.Settings.Preferences.SaveAllProgramsList
 $AllProgramsListFile = $ConfigFile.Settings.Preferences.AllProgramsListFile
 $DefaultUserProfile  = $ConfigFile.Settings.Preferences.DefaultUserProfile
+$PreProcessScript    = $ConfigFile.Settings.Preferences.PreProcessScript
+$PostProcessScript   = $ConfigFile.Settings.Preferences.PostProcessScript
 
-$UseCustomPath  = $ConfigFile.Settings.Preferences.UseCustomPath 
+$UseCustomPath  = $ConfigFile.Settings.Preferences.UseCustomPath
 $UseDocuments   = $ConfigFile.Settings.Preferences.UseDocuments
 $UseHomeShare   = $ConfigFile.Settings.Preferences.UseHomeShare 
 $UseBox         = $ConfigFile.Settings.Preferences.UseBox
@@ -69,6 +73,9 @@ $UseResilioSync = $ConfigFile.Settings.Preferences.UseResilioSync
 $UseSeafile     = $ConfigFile.Settings.Preferences.UseSeafile
 $UseTonidoSync  = $ConfigFile.Settings.Preferences.UseTonidoSync
 $UseDefaultUserProfile = $ConfigFile.Settings.Preferences.UseDefaultUserProfile
+
+# Run pre-processor if configured
+if ($PreProcessScript){&$PreProcessScript}
 
 if ($AppendDate -eq "True"){
     if ($PackagesListFile -eq "packages.config"){
@@ -265,7 +272,14 @@ if ($UseCustomPath -Match "True" -and (Test-Path $CustomPath))
     $SavePath   = "$CustomPath\$SaveFolderName"
     Write-PackagesConfig
    }
-	
+
+# Backup Chocolatey package names to packages.config file in custom defined path you set as CustomPath in the config file
+if ($UseCustomPath2 -Match "True" -and (Test-Path $CustomPath2))
+   {
+    $SavePath   = "$CustomPath2\$SaveFolderName"
+    Write-PackagesConfig
+   }
+
 # Backup Chocolatey package names on local computer to packages.config file in the Documents folder
 if ($env:COMPUTERNAME -eq $env:USERNAME.trim('$')) { $DocumentsFolder = "$env:PUBLIC\Documents" } else { $DocumentsFolder = [Environment]::GetFolderPath("MyDocuments") }
 if (($DefaultUserProfile) -and ($UseDefaultUserProfile -eq "True")) { $DocumentsFolder = "$env:USERPROFILE\Documents" }
@@ -408,7 +422,10 @@ if ($UseTonidoSync -Match "True" -and (Test-Path $env:USERPROFILE\Documents\Toni
     $SavePath = "$env:USERPROFILE\Documents\TonidoSync\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
    }
-   
+
+# Run post-processor if configured
+if ($PostProcessScript){&$PostProcessScript}
+
 # wrap up --------------------------------------------------------------------------------
 
 If ($ICinstalled){
