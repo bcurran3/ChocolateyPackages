@@ -15,12 +15,12 @@ if ($PSversion -lt "5") {
    }
 
 if (Get-Module -ListAvailable -Name $moduleName -ErrorAction SilentlyContinue){
-        Write-Host "  ** Removing installed version, please be patient..." -ForegroundColor Yellow
+        Write-Host "  ** Removing installed version, please be patient...`n" -ForegroundColor Yellow
         Get-InstalledModule -Name VMware.* | Uninstall-Module -AllVersions -Force -ErrorAction "SilentlyContinue" -Verbose
    }  
  
 # Will fail if package version is a revised version not matching the module version, i.e. x.x.x.0020180101
-Write-Host "`n  ** Installing $moduleName v$moduleVers..." -ForegroundColor Yellow
+Write-Host "`n  ** Installing $moduleName v$moduleVers...`n" -ForegroundColor Yellow
 Get-PackageProvider -Name NuGet -Force
 Install-Module -Name $moduleName -Scope AllUsers -RequiredVersion $moduleVers -AllowClobber -Force
 
