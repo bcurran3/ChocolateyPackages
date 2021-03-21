@@ -2,7 +2,7 @@
 $packageName    = 'intel-xtu'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $url64          = 'https://downloadmirror.intel.com/29183/eng/XTUSetup.exe'
-$checksum64     = '7CC2ED8102602FB357AEEF9E9FA7785B8F5F548244E4158C0306B559FD08859C'
+$checksum64     = '50991388D67C0089D6FE292107A80BFC7E45D31A501B56C526FEABF18E081A0F'
 
 if (Get-IsWinServer)
    {

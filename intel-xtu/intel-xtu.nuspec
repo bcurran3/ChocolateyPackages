@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-xtu</id>
-    <version>6.5.2.40</version>
+    <version>7.3.0.33</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
@@ -42,7 +42,7 @@ See the release notes for installation instructions, supported hardware, what is
 ---
 
 </description>
-    <releaseNotes>https://downloadcenter.intel.com/downloads/eula/29183/Intel-Extreme-Tuning-Utility-Intel-XTU-?httpDown=https%3A%2F%2Fdownloadmirror.intel.com%2F29183%2Feng%2FXTU-6.5.2.40-ReleaseNotes.docx</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29183/eng/XTU-7.3.0.33-ReleaseNotes.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
       <dependency id="dotnet3.5" version="3.5" />
