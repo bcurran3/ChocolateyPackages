@@ -4,7 +4,7 @@ $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ahkExe      = 'AutoHotKey'
 $ahkFile     = "$toolsDir\SUMo_Install.ahk"
 $url         = 'https://www.kcsoftwares.com/files/sumo_lite.exe'
-$checksum    = '3E5232DEA26A0E990AEA876ED0C1D554864C419E4EAA3F23E4BB2CEA2A71F305'
+$checksum    = 'DAAEFE2C00A9005C5C2659185E248F7D64CC5A7A383378DE11CAC65F89012033'
 
 $packageArgs = @{
     packageName    = $packageName
