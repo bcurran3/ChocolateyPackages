@@ -57,7 +57,7 @@ $AllProgramsListFile = $ConfigFile.Settings.Preferences.AllProgramsListFile
 $DefaultUserProfile  = $ConfigFile.Settings.Preferences.DefaultUserProfile
 $PreProcessScript    = $ConfigFile.Settings.Preferences.PreProcessScript
 $PostProcessScript   = $ConfigFile.Settings.Preferences.PostProcessScript
-$SaveArguments = $ConfigFile.Settings.Preferences.SaveArguments
+$SaveArguments       = $ConfigFile.Settings.Preferences.SaveArguments
 
 $UseCustomPath  = $ConfigFile.Settings.Preferences.UseCustomPath
 $UseDocuments   = $ConfigFile.Settings.Preferences.UseDocuments
@@ -156,8 +156,8 @@ function Read-Arguments {
     $argsFile = Join-Path $directory.fullname ".arguments"
     if (Test-Path $argsFile) {
         $argsData = Get-Content $argsFile
-        $args = Unprotect-Arguments -data $argsData
-        '<![CDATA[' + $args + ']]>'
+        #Implicitly return result from Unprotect-Arguments
+        Unprotect-Arguments -data $argsData
     }
 }
 
@@ -263,11 +263,11 @@ Function Write-PackagesConfig{
         $packageName = $($_.SubString(0, $_.IndexOf("|")))
         $line = '   <package id="' + $packageName + '" '
         if ($SaveTitleSummary -eq "True") {
-            $line = $line + 'title="' + $(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title") + '" '
-            $line = $line + 'summary="' + $(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary") + '" '
+            $line = $line + 'title="' + [System.Security.SecurityElement]::Escape($(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "title")) + '" '
+            $line = $line + 'summary="' + [System.Security.SecurityElement]::Escape($(get-nuspecinfo "$($_.SubString(0, $_.IndexOf("|")))" "summary")) + '" '
         }
         if ($SaveArguments -eq "True") {
-            $line = $line + 'arguments="' + $(Read-Arguments $packageName) + '" '
+            $line = $line + 'arguments="' + [System.Security.SecurityElement]::Escape($(Read-Arguments $packageName)) + '" '
         }
         $line = $line + '/>'
         $line
