@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2020.03.23</version>
+    <version>2021.03.23</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
