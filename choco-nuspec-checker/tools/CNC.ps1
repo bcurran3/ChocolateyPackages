@@ -221,6 +221,20 @@ if (!(Test-Path $path)){
 	return
    }
    
+## Import preferences - see comments in CNC.config for settings 
+#[xml]$ConfigFile = Get-Content "$scriptDir\CNC.config"
+#$UpdateAll       = $ConfigFile.Settings.Preferences.UpdateAll
+#$CDN             = $ConfigFile.Settings.Preferences.CDN
+#$MakeBackups     = $ConfigFile.Settings.Preferences.MakeBackups
+#$OptimizeImages  = $ConfigFile.Settings.Preferences.OptimizeImages
+#$Header          = $ConfigFile.Settings.Preferences.Header
+#$Footer          = $ConfigFile.Settings.Preferences.Footer
+#$PackageNotes    = $ConfigFile.Settings.Preferences.PackageNotes
+
+#$UseHeader       = $ConfigFile.Settings.Preferences.UseHeader
+#$UseFooter       = $ConfigFile.Settings.Preferences.UseFooter
+#$UsePackageNotes = $ConfigFile.Settings.Preferences.UsePackageNotes
+   
 # functions ------------------------------------------------------------------------------------------------
 
 # Borrowed and slightly modified from
