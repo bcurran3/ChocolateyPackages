@@ -104,14 +104,16 @@ if ($UseDefaultUserProfile -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+$CustomPath2 = $UpdatedConfig.Settings.Preferences.CustomPath2
 if ($CustomPath2 -eq $null)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "CustomPath2", $null)
-    $NewStuff.InnerText=("false") 
+    $NewStuff.InnerText=("c:\backup") 
     Write-Host "  ** Adding CustomPath2 support to $ScriptConfig." -Foreground Magenta
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+$UseCustomPath2 = $UpdatedConfig.Settings.Preferences.UseCustomPath2
 if ($UseCustomPath2 -eq $null)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "UseCustomPath2", $null)
@@ -120,6 +122,7 @@ if ($UseCustomPath2 -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+$SaveArguments = $UpdatedConfig.Settings.Preferences.SaveArguments
 if ($SaveArguments -eq $null)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "SaveArguments", $null)
@@ -128,6 +131,7 @@ if ($SaveArguments -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+$PreProcessScript = $UpdatedConfig.Settings.Preferences.PreProcessScript
 if ($PreProcessScript -eq $null)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "PreProcessScript", $null)
@@ -136,6 +140,7 @@ if ($PreProcessScript -eq $null)
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
+$PostProcessScript = $UpdatedConfig.Settings.Preferences.PostProcessScript
 if ($PostProcessScript -eq $null)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "PostProcessScript", $null)
