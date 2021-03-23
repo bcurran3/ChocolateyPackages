@@ -11,7 +11,7 @@ param (
 	[switch]$recurse
  )
 
-Write-Host "CNC.ps1 v2020.09.20 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2021.03.22 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -970,7 +970,7 @@ if (!$nuspecFile.'#comment'){
       Write-Warning "  ** The recommended XML comment to test UTF-8 encoding was not found."	
       Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLComment to add a UTF-8 encoding test XML comment." -Foreground Cyan
 	  $GLOBAL:Suggestions++
-	  if ($nuspecFile.'#comment' -match "Read this before creating packages"){
+	  if ($nuspecFile.'#comment' -match 'Read this before creating packages'){
           Write-Host "WARNING:   ** XML comment contains templated values. This will trigger a message from the verifier:" -Foreground Red
           Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
@@ -998,7 +998,7 @@ if (!($NuspecAuthors)) {
 	     Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
 		 $GLOBAL:Required++
 	    }
-	 if ($NuspecAuthors -cmatch "REPLACE"){
+	 if ($NuspecAuthors -cmatch '__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__'){
          Write-Host "WARNING:   ** <authors> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1032,7 +1032,7 @@ if (!($NuspecCopyright)) {
 	      Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
           $GLOBAL:Required++
 	 }
-	 if ($NuspecCopyright -eq "Year Software Vendor"){
+	 if ($NuspecCopyright -eq 'Year Software Vendor'){
          Write-Host "WARNING:   ** <copyright> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1130,7 +1130,7 @@ if (!$NuspecDescription){
 		   $GLOBAL:Suggestions++
 		 }
        }
-	  if ($NuspecDescription -cmatch "REPLACE"){
+	  if ($NuspecDescription -cmatch '__REPLACE__MarkDown_Okay'){
           Write-Host "WARNING:   ** <description> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
           Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
@@ -1162,7 +1162,7 @@ if (!($NuspecDocsURL)) {
 	Write-Host '           ** Suggestion: docsUrl - points to the location of the wiki or docs of the software' -Foreground Cyan
 	$GLOBAL:Suggestions++
    } else {
-     if ($NuspecDocsURL -match "docs located"){
+     if ($NuspecDocsURL -match 'At what url are the software docs located'){
 	     Write-Host "WARNING:   ** <docsUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1184,7 +1184,7 @@ if (!($NuspecIconURL)) {
 	Write-Host '           ** Guideline: The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -Foreground Cyan
 	$GLOBAL:Guidelines++
    } else {
-     if ($NuspecIconURL -cmatch "REPLACE"){
+     if ($NuspecIconURL -cmatch 'REPLACE_YOUR_REPO'){
 	     Write-Host "WARNING:   ** <iconUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1259,7 +1259,7 @@ if (!($NuspecLicenseURL)) {
 	     Write-Host "           ** Guideline: The licenseUrl should not usually be an exact match to softwareUrl. Please correct this in the`n              nuspec, if applicable. ." -Foreground Cyan
 	     $GLOBAL:Guidelines++
 		}
-     if ($NuspecLicenseURL -cmatch "REMOVE"){
+     if ($NuspecLicenseURL -cmatch 'REMOVE_OR_FILL_OUT'){
          Write-Host "WARNING:   ** <licenseUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1282,7 +1282,7 @@ if (!($NuspecOwners)) {
     Write-Host "WARNING:   ** <owners> element is empty, this element is a requirement." -Foreground Red
 	$GLOBAL:Required++
    } else {
-     if ($NuspecID -cmatch "REPLACE"){
+     if ($NuspecOwners -cmatch 'REPLACE_YOUR_NAME'){
          Write-Host "WARNING:   ** <owners> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1300,7 +1300,7 @@ if (!($NuspecPackageSourceURL)) {
 	Write-Host "           ** Guideline: The nuspec has been enhanced to allow packageSourceUrl, pointing to the url where the package`n              source resides. This is a strong guideline because it simplifies collaboration.`n              Please add it to the nuspec." -Foreground Cyan
 	$GLOBAL:Guidelines++
    } else {
-     if ($NuspecPackageSourceURL -cmatch "packageSourceUrl"){
+     if ($NuspecPackageSourceURL -cmatch 'Where is this Chocolatey package located'){
 	     Write-Host "WARNING:   ** <packageSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1315,7 +1315,7 @@ if (!$NuspecProjectSourceURL) {
 	Write-Host '           ** Suggestion: projectSourceUrl - points to the location of the underlying software source' -Foreground Cyan
 	$GLOBAL:Suggestions++
    } else {
-     if ($NuspecProjectSourceURL -match "Software Source Location"){
+     if ($NuspecProjectSourceURL -match 'Software Source Location'){
          Write-Host "WARNING:   ** <projectSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1335,7 +1335,7 @@ if (!($NuspecProjectURL)) {
     Write-Host "           ** Requirement: ProjectUrl (projectUrl) in the nuspec file is required. Please add it to the nuspec." -Foreground Cyan
 	$GLOBAL:Required++
    } else {
-     if ($NuspecProjectURL -cmatch "REMOVE"){
+     if ($NuspecProjectURL -cmatch 'REMOVE_OR_FILL_OUT'){
          Write-Host "WARNING:   ** <projectUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1354,7 +1354,7 @@ if (!($NuspecReleaseNotes)) {
 	$GLOBAL:Guidelines++
    } else {
      Check-Markdown "<releaseNotes>" $NuspecReleaseNotes
-     if ($NuspecReleaseNotes -cmatch "REPLACE"){
+     if ($NuspecReleaseNotes -cmatch 'REPLACE_OR_REMOVE'){
          Write-Host "WARNING:   ** <releaseNotes> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
          $GLOBAL:Required++
@@ -1381,7 +1381,7 @@ if (!($NuspecSummary)) {
     Write-Host '           ** Guideline: Summary (summary) is a short explanation of the software. Please include summary in the nuspec.' -Foreground Cyan
 	$GLOBAL:Guidelines++
 	} else {
-	  if ($NuspecSummary -cmatch "REPLACE"){
+	  if ($NuspecSummary -cmatch '__REPLACE__'){
           Write-Host "WARNING:   ** <summary> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
           Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
@@ -1412,7 +1412,7 @@ if (!($NuspecTags)) {
          Write-Host '           ** Note: notSilent tag is being used. The reviewer will ensure this is being used appropriately. ' -Foreground Cyan
 		 $GLOBAL:Notes++
 		}
-	  if ($NuspecTags -cmatch "SEPARATED"){
+	  if ($NuspecTags -cmatch 'SPACE_SEPARATED'){
           Write-Host "WARNING:   ** <tags> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
           Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
           $GLOBAL:Required++
