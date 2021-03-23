@@ -1,5 +1,5 @@
 ﻿# $ErrorActionPreference = 'Stop'
-# CNC.ps1 Copyleft 2018-2020 by Bill Curran AKA BCURRAN3
+# CNC.ps1 Copyleft 2018-2021 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -11,8 +11,8 @@ param (
 	[switch]$recurse
  )
 
-Write-Host "CNC.ps1 v2021.03.22 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
-Write-Host "Copyleft 2018-2020 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "CNC.ps1 v2021.03.23 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "Copyleft 2018-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
@@ -1191,7 +1191,7 @@ if (!($NuspecDocsURL)) {
 
 # <files> checks
 if (!($NuspecFiles)) {
-    Write-Host "FYI:       ** <files> - element is empty. All of the following files will be packaged:" -Foreground Yellow
+    Write-Host "FYI:       ** <files> - element is empty or missing. If missing, all of the following files will be packaged:" -Foreground Yellow
     Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
 	$GLOBAL:FYIs++
 }

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2020.09.21</version>
+    <version>2020.03.23</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -52,7 +52,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <releaseNotes>
 ### CHANGELOG:
-* 2021.03.22 - display # of characters when description is >4000, more specific template value checking
+* 2021.03.23 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file
 * 2020.09.21 - recurse switch has been added, thanks TheCakeIsNaOH!
 * 2020.09.20 - An AddPackageNotes feature has been added, works the same as the AddHeader and AddFooter options. Updated nuspec URL errors as requirements to be fixed. Updated online package status messages. Added "PackageInternalFilesIncluded" checking. Minor cosmetic updates.
 * 2020.09.15 - CNC will now ignore update.ps1 files.

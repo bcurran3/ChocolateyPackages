@@ -48,7 +48,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
 	
 ### CHANGELOG:
-* 2021.03.22 - display # of characters when description is >4000, more specific template value checking
+* 2021.03.23 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file
 * 2020.09.20 - An AddPackageNotes feature has been added, works the same as the AddHeader and AddFooter options. Updated nuspec URL errors as requirements to be fixed. Added "PackageInternalFilesIncluded" checking. Minor cosmetic updates.
 * 2020.09.15 - CNC will now ignore update.ps1 files.
 * 2020.04.06.0001 - Updated CNC.cmd for ChocolateyToolsLocation handling. Fixed markdown heading error in CNCHeader.txt.
