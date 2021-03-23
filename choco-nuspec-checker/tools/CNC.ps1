@@ -1101,7 +1101,8 @@ if (!$NuspecDescription){
 		 $GLOBAL:Guidelines++
 		 }
      if ($NuspecDescription.Length -gt 4000) {
-	     Write-Host "WARNING:   ** <description> - is greater than 4,000 characters. Pushing the package will generate the error:" -Foreground Red
+		 $TotalChars=$NuspecDescription.Length
+	     Write-Host "WARNING:   ** <description> - is $TotalChars characters. Pushing the package will generate the error:" -Foreground Red
 		 Write-Host "           ** Failed to process request. 'This package had an issue pushing: A nuget package's Description property may`n              not be more than 4000 characters long.'. The remote server returned an error: (409) Conflict.." -Foreground Cyan
 		 $GLOBAL:Required++
 		 }
