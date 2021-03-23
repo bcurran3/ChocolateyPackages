@@ -266,6 +266,10 @@ function Get-FileEncoding
 # Will error on URLs such as
 # https://lh3.googleusercontent.com/n6kpA-xZE_0iEy9A8WkJpGT45XB6MEq09t9UdBoIrCfwIoBm3CA9gqI13AqbBN6yx7GwVDjx=s26-h26-e365-rw
 function Get-ImageDimensions{
+if ($NuspecIconURL -Match '.SVG') {
+	Write-Host "           ** <iconUrl> - SVG image found. It's a vector Victor, there are no dimensions! Roger, over!" -Foreground Green
+	return
+	}
 Write-Host "(Downloading icon)" -NoNewLine -Foreground Magenta
 (New-Object System.Net.WebClient).DownloadFile($NuspecIconURL, "$pwd\iconURL.image")
 Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                  `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
