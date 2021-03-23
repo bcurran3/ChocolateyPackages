@@ -1191,8 +1191,12 @@ if (!($NuspecDocsURL)) {
 
 # <files> checks
 if (!($NuspecFiles)) {
-    Write-Host "FYI:       ** <files> - element is empty or missing. If missing, all of the following files will be packaged:" -Foreground Yellow
+    Write-Host 'FYI:       ** <files> - element is empty or missing. If missing, all of the following files will be packaged:' -Foreground Yellow
     Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
+    Write-Host '           ** <files> - It is best practice to add:' -Foreground Yellow
+    Write-Host '                        <files>' -Foreground Yellow
+    Write-Host '                          <file src="tools\**" target="tools" />' -Foreground Yellow
+    Write-Host '                        <files>' -Foreground Yellow
 	$GLOBAL:FYIs++
 }
 
