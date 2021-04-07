@@ -32,7 +32,7 @@ if (!(Test-Path "$scriptDir\$ScriptConfig")) { Move-Item "$toolsDir\$ScriptConfi
 
 # Create "shims"
 Install-ChocolateyPowershellCommand -PackageName 'choco-package-list-backup' -PSFileFullPath "$scriptDir\$script"
-Install-ChocolateyPowershellCommand -PackageName 'choco-package-list-backup' -PSFileFullPath "$scriptDir\$script"
+Install-ChocolateyPowershellCommand -PackageName 'CPLB' -PSFileFullPath "$scriptDir\$script"
 
 # Cleanup
 Remove-Item "$toolsDir\choco-package-list-backup.*" -Force -ErrorAction SilentlyContinue | Out-Null
