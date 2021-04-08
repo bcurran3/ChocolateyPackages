@@ -56,7 +56,7 @@ MAME is mostly programmed in C with some core components in C++. MAME can curren
 ---
 
 </description>
-    <releaseNotes>https://www.mamedev.org/releases/whatsnew_0222.txt</releaseNotes>
+    <releaseNotes>https://www.mamedev.org/releases/whatsnew_0229.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
