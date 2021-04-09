@@ -30,9 +30,8 @@ Move-Item "$toolsDir\$script" "$scriptDir" -Force
 Move-Item "$toolsDir\CPLB.bat" "$scriptDir" -Force
 if (!(Test-Path "$scriptDir\$ScriptConfig")) { Move-Item "$toolsDir\$ScriptConfig" "$scriptDir" -Force }
 
-# Create "shims"
+# Create "shim"
 Install-ChocolateyPowershellCommand -PackageName 'choco-package-list-backup' -PSFileFullPath "$scriptDir\$script"
-Install-ChocolateyPowershellCommand -PackageName 'CPLB' -PSFileFullPath "$scriptDir\$script"
 
 # Cleanup
 Remove-Item "$toolsDir\choco-package-list-backup.*" -Force -ErrorAction SilentlyContinue | Out-Null
