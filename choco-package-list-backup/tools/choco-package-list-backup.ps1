@@ -60,6 +60,7 @@ $PostProcessScript   = $ConfigFile.Settings.Preferences.PostProcessScript
 $SaveArguments       = $ConfigFile.Settings.Preferences.SaveArguments
 
 $UseCustomPath  = $ConfigFile.Settings.Preferences.UseCustomPath
+$UseCustomPath2 = $ConfigFile.Settings.Preferences.UseCustomPath2
 $UseDocuments   = $ConfigFile.Settings.Preferences.UseDocuments
 $UseHomeShare   = $ConfigFile.Settings.Preferences.UseHomeShare 
 $UseBox         = $ConfigFile.Settings.Preferences.UseBox
