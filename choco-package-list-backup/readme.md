@@ -62,6 +62,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 
 ### CHANGELOG:
+* 2021.04.08 - Fixed missing UseCustomPath2 variable import. Thanks matteotrubini!
 * 2021.03.22 - Added 2nd custom path option, added saved arguments option thanks to TheCakeIsNaOH, added pre and post processing option
 * 2021.03.15 - Added NORUN/DONTRUN install option (choco install choco-package-list-backup --params "'/NORUN:TRUE'".)
 * 2021.03.14 - Fixed wrong command in scheduled task. Fixed saving to C:\Users\Public\Documents. Fixed problem when SaveTitleSummary is set to true and there is no chocolatey.nuspec file to get values from. Added ability to set default user profile. Added start/finished logging. Added NOTASK/NOSCHEDULE install option (choco install choco-package-list-backup --params "'/NOTASK:TRUE'".) Minor other changes.
