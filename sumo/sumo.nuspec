@@ -53,7 +53,7 @@ SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the 
     </description>
     <releaseNotes>https://www.kcsoftwares.com/sumo/bugs.php</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey" version="1.1.27.07" />
+      <dependency id="autohotkey.portable" version="1.1.27.07" />
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
