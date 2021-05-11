@@ -2,7 +2,7 @@
 $packageName = 'drivermax' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://www.drivermax.com/soft/dmx/drivermax.exe'
-$checksum    = '983F85849877BCA42F3F374F5618E71B2BBE973FBB600885045BC4F3B9106004'
+$checksum    = 'B005B40B1FE3E36C330A940BECA0460FB7D47139B1A80EF9125214D12E4D6C9A'
 
 $packageArgs = @{
   packageName    = $packageName
