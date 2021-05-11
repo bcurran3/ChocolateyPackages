@@ -62,6 +62,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 
 ### CHANGELOG:
+* 2021.05.10 - Speed optimations by TheCakeIsNaOH - Thanks!
 * 2021.04.08 - Fixed missing UseCustomPath2 variable import. Thanks matteotrubini! Removed duplication of "shim" creation.
 * 2021.03.22 - Added 2nd custom path option, added saved arguments option thanks to TheCakeIsNaOH, added pre and post processing option
 * 2021.03.15 - Added NORUN/DONTRUN install option (choco install choco-package-list-backup --params "'/NORUN:TRUE'".)
