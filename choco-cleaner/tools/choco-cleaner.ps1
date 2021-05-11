@@ -105,6 +105,17 @@ if ($DeleteOldChoco -eq "True"){
 
 if ($DeleteCache -eq "True")
     {
+# TDL - discover each user profile and delete appropriately within
+#$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
+#
+#for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++)
+#{
+# $dir = $userdirs.fullname[$Count]
+# $dir = "$dir" + "\appdata\temp\chocolatey"
+# Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
+#}
+
+
 	 $GotCacheFiles=ChildItem -Path $ENV:tmp\chocolatey -Recurse
 	 $CacheFiles=$GotCacheFiles.count
 	 if ($CacheFiles -ge 1){
@@ -140,6 +151,17 @@ if ($DeleteCache -eq "True")
 	
 if ($DeleteNuGetCache -eq "True"){
 # TDL - discover each user profile and delete appropriately within
+#$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
+#
+#for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++)
+#{
+# $dir = $userdirs.fullname[$Count]
+# $dir = "$dir" + "\appdata\Local\Nuget\Cache"
+# Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
+#}
+
+
+
     if (Test-Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache){
 	   $GotNuGetCache=ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
 	   $NuGetCache=$GotNuGetCache.count
