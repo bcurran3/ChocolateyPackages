@@ -315,15 +315,9 @@ if ($ENV:ChocolateyInstall -Match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:
     {
      $FreeAfter  = Get-PSDrive C | ForEach-Object {$_.Free}
 	 $FreedSpace = $FreeAfter - $FreeBefore
-<<<<<<< HEAD
-     $FreedSpace = $FreedSpace / 1024
-     if ([double]$FreedSpace -lt 0) {$FreedSpace = "0"}
-     $FreedSpace = $FreedSpace.ToString('N0')
-=======
      $FreedSpace = $FreedSpace / 1KB
 	 if ([int]$FreedSpace -lt 0) {$FreedSpace = "0"}
 	 $FreedSpace = $FreedSpace.ToString('N0')
->>>>>>> 48c491377dd5711776c49f2056a9a882d5daca18
 	 Write-Host Choco-Cleaner finished deleting unnecessary Chocolatey files and reclaimed ~ $FreedSpace KB! -Foreground Magenta
 	 Write-Output "$(Get-Date) Choco-Cleaner FINISHED and reclaimed ~ $FreedSpace KB!" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
     } else {
