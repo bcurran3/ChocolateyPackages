@@ -1,9 +1,9 @@
 ﻿$packageName  = 'previousfilesrecovery' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.nirsoft.net/utils/previousfilesrecovery.zip'
-$checksum     = 'C528FF1295D9A4E8F309B659F1BF7165AB1D89B1394B789E680D5646C2A3AC24'
+$checksum     = '62992BADA592BBD7E3B5152B28D6F63D4CB0290EFCC7F324143DB4356747429B'
 $url64        = 'http://www.nirsoft.net/utils/previousfilesrecovery-x64.zip'
-$checksum64   = '8C18F60FA2A4C5D3A60B94CC998EB7152C3358CF14B04A2D4B5795BFDAF552B2'
+$checksum64   = '5EAFF225D06ABAFC8528BDE9ED6B6576B9BCD4229471DF9BCC2DAF986CAA276F'
 $shortcutName = 'PreviousFilesRecovery.lnk'
 $exe          = 'PreviousFilesRecovery.exe'
 

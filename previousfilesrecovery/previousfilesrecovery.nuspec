@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>previousfilesrecovery</id>
-    <version>1.00</version>
+    <version>1.10</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/previousfilesrecovery</packageSourceUrl>
     <title>PreviousFilesRecovery (Portable)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>http://www.nirsoft.net/utils/previous_files_recovery.html</projectUrl>
     <iconUrl>http://www.nirsoft.net/utils/previousfilesrecovery_icon.png</iconUrl>
-    <copyright>Copyright (c) 2016 Nir Sofer</copyright>
+    <copyright>Copyright Nir Sofer</copyright>
     <licenseUrl>http://www.nirsoft.net/utils/previous_files_recovery.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.nirsoft.net/utils/previous_files_recovery.html</docsUrl>
