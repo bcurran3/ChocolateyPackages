@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-chipset-device-software</id>
-    <version>10.1.18383.8213</version>
+    <version>10.1.18716.8265</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-chipset-device-software</packageSourceUrl>
     <title>Intel Chipset Device Software (Install)</title>
@@ -58,7 +58,7 @@ See [list of manufacturers’ Support websites](http://www.intel.com/content/www
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29634/eng/readme.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/30334/eng/Readme.txt</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" version="4.5.20120822"/>
     </dependencies>
