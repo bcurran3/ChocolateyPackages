@@ -1,22 +1,19 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'ultimate-settings-panel'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = "$toolsDir\Ultimate-Settings-Panel.zip"
-$UnzippedEXE    = 'Ultimate Settings Panel.msi'
 
 $packageArgs = @{
-  packageName    = $packageName
-  unzipLocation  = "$toolsDir\extracted"
-  fileType       = 'ZIP' 
-  url            = $url
+  packageName  = $packageName
+  Destination  = "$toolsDir\extracted"
+  FileFullPath = "$toolsDir\Ultimate-Settings-Panel.zip"
 }
 
-Install-ChocolateyZipPackage @packageArgs
+Get-ChocolateyUnzip @packageArgs
 
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'MSI'
-  file           = "$toolsDir\extracted\Installer\$UnzippedEXE"
+  file           = "$toolsDir\extracted\Ultimate-Settings-Panel\Installer\Ultimate Settings Panel.msi"
   silentArgs     = '/quiet /qn /norestart'
   validExitCodes = @(0)
   softwareName   = 'Ultimate Settings Panel*'   
@@ -25,4 +22,4 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs	
 
 Remove-Item "$toolsDir\extracted" -Recurse -Force -EA SilentlyContinue | Out-Null
-Remove-Item $url -Force -EA SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\Ultimate-Settings-Panel.zip" -Force -EA SilentlyContinue | Out-Null

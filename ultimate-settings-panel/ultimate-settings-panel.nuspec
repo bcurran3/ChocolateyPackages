@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ultimate-settings-panel</id>
-    <version>6.5</version>
+    <version>6.6</version>
     <title>Ultimate Settings Panel (Install)</title>
     <authors>A.J. Armstrong</authors>
     <owners>bcurran3</owners>
