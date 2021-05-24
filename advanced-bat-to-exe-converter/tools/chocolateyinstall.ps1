@@ -10,7 +10,7 @@ $packageArgs = @{
   softwareName   = 'Advanced BAT to EXE Converter*'
   fileType       = 'EXE'
   silentArgs     = ''
-  file           = "$toolsDir\advancedbattoexeconverter.exe"
+  file           = "$toolsDir\advbattoexeconverter.exe"
   validExitCodes = @(0)
   }
   
