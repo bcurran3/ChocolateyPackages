@@ -1,4 +1,5 @@
-﻿$packageName  = 'previousfilesrecovery' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'previousfilesrecovery' 
 $shortcutName = 'PreviousFilesRecovery.lnk'
 
 remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'

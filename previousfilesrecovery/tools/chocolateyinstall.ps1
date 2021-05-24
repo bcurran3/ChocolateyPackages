@@ -1,4 +1,5 @@
-﻿$packageName  = 'previousfilesrecovery' 
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'previousfilesrecovery' 
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://www.nirsoft.net/utils/previousfilesrecovery.zip'
 $checksum     = '62992BADA592BBD7E3B5152B28D6F63D4CB0290EFCC7F324143DB4356747429B'
