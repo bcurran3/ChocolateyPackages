@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ad-acl-scanner</id>
-    <version>5.9</version>
+    <version>6.4</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ad-acl-scanner</packageSourceUrl>
     <title>AD ACL Scanner (Script)</title>
@@ -20,7 +20,7 @@
     <description>
 ---
 
-###[choco://ad-acl-scanner](choco://ad-acl-scanner)
+### [choco://ad-acl-scanner](choco://ad-acl-scanner)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
@@ -28,7 +28,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ![Screenshot of AD ACL Scanner](https://cdn.staticaly.com/gh/canix1/ADACLScanner/master/src/ADACLScan5.0.jpg)	
 
 
-####Features
+#### Features
 
 It has the following features:
 
@@ -66,7 +66,7 @@ It has the following features:
 * Display group members in groups in the HTLM report.
 * Present the value of the true SDDL in NTsecurityDescriptor, bypassing Object-Specific ACE merge done when a new instance of the ObjectSecurity class is initialized.
 
-###System requirements
+### System requirements
 
 * Powershell 2.0 or above
 * PowerShell using a single-threaded apartment
