@@ -2,7 +2,7 @@
 $packageName  = 'video-repair-software'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url          = 'http://grauonline.de/download/videorepair.zip'
-$checksum     = '07C2FCFF53524A38E038E24B72E22B0287AE18FDAB4F5F81B05E7AD227425A00'
+$checksum     = '2E4B9146FB4FF64A84B8E70925C7F6B542C84E68590FE62AFB2840152CD5F817'
 $shortcutName = 'Video Repair Software.lnk'
 $exe          = 'videorepair\gs.exe'
 

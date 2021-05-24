@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>video-repair-software</id>
-    <version>4.0.0.0</version>
+    <version>4.0.0.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/video-repair-software</packageSourceUrl>
     <title>Video Repair Tool (Portable)(Trial)</title>
@@ -23,6 +23,8 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
+
+NOTE: really version 4.0.0.0 (movdump.exe support program was updated 2/1/21)
 
 ![screenshot of Video Repair Tool](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/video-repair-software/video-repair-software_screenshot.png)
 
