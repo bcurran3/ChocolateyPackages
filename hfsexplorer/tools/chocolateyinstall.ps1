@@ -5,9 +5,9 @@ $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
-  file          = "$toolsDir\hfsexplorer-0.23.1-setup.exe"
+  file          = "$toolsDir\hfsexplorer-"+$env:ChocolateyPackageVersion+"-setup.exe"
   silentArgs    = '/S'
-  softwareName  = 'HFSExplorer 0.23.1'
+  softwareName  = 'HFSExplorer*'
   }
   
 Install-ChocolateyInstallPackage @packageArgs

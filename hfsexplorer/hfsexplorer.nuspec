@@ -4,7 +4,7 @@
   <metadata>
     <id>hfsexplorer</id>
     <title>HFSExplorer (Install)</title>
-    <version>0.23.1.20200909</version>
+    <version>2021.2.22</version>
     <authors>Erik Larsson, catacombae</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hfsexplorer</packageSourceUrl>
