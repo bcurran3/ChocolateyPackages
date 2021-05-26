@@ -60,7 +60,7 @@ ___
 </description>
     <summary>Fast and compact image viewer and converter</summary>
     <copyright>© Irfan Skiljan</copyright>
-    <tags>irfan irfanview image viewer editor converter thumbnail</tags>
+    <tags>irfan irfanview image viewer editor converter thumbnail binary embedded</tags>
     <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes>http://www.irfanview.com/main_history.htm</releaseNotes>
