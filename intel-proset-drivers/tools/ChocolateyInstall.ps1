@@ -3,9 +3,11 @@ $packageName    = 'intel-proset-drivers'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
 $bits           = Get-ProcessorBits
-$url            = "https://downloadmirror.intel.com/29903/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver32_Win10.zip"
+#$url            = "https://downloadmirror.intel.com/30280/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver32_Win10.zip"
+$url            = "https://downloadmirror.intel.com/30280/a08/WiFi_22.40.0_Driver32_Win10.zip"
 $checksum       = '5860F9D15D7D6648047834039A7E3086EE123650C437485D9EB11ED3433D5723'
-$url64          = "https://downloadmirror.intel.com/29903/eng/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver64_Win10.zip"
+#$url64          = "https://downloadmirror.intel.com/30280/eng/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver64_Win10.zip"
+$url64          = "https://downloadmirror.intel.com/30280/a08/WiFi_22.40.0_Driver64_Win10.zip"
 $checksum64     = '6741C919997CC335AE8437E5A48B748728EA8289698D227B3044E5791B8B1ED9'
 
 # Last Windows 7+8 version was 21.40.5

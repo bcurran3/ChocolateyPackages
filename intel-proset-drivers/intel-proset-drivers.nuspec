@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-proset-drivers</id>
-    <version>22.40.0</version>
+    <version>22.40.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
     <title>Intel PROSet/Wireless Software and Drivers for IT Admins (Install)</title>
@@ -21,6 +21,8 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
+
+NOTE: Really 22.40.0, Intel's link changed.
 
 Intel® PROSet/Wireless WiFi Software (includes drivers): Drivers only: This is a compressed package that includes all files required to install the wireless adapter drivers only. The zip package allows you to extract the drivers for installation on multiple systems.
 
