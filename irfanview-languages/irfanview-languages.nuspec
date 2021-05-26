@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>irfanview-languages</id>
+    <version>4.56</version>
+    <title>IrfanView All Languages (Install)</title>
+    <authors>Irfan Skiljan</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanview-languages</packageSourceUrl>
+    <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
+    <projectUrl>https://www.irfanview.com/languages.htm</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/irfanview/irfanview_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+---
+
+### [choco://irfanview-languages](choco://irfanview-languages)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+### Available Available languages for version 4.58, 4.57 and 4.56:
+
+* English (always included)
+* Deutsch/German (schon integriert, hier die deutsche Hilfe-Datei)
+* French 
+* Chinese 
+* Russian (help file included) (also contains translated PlugIns)
+* Japanese (help file included) 
+* Spanish 
+* Portugues-Brasil (help file included) 
+* Nederlands 
+* Polski (help file included) 
+* Ukrainian 
+* Portuguese 
+* Italian 
+* Czech/Cesky
+* Slovak 
+* Hungarian (help file included) 
+* Slovenscina 
+* Estonian 
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview-languages/readme.md)**
+
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <summary>Additional languages for IrFanView</summary>
+    <copyright>© Irfan Skiljan</copyright>
+    <tags>irfanview image photo viewer languages binary embedded</tags>
+    <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
+    <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="irfanview" version="4.56" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

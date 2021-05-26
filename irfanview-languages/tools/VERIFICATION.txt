@@ -1,0 +1,6 @@
+﻿==================== irfanView Additional Languages ====================
+
+Binaries included in this package were downloaded by the packager, bcurran3,
+from https://www.irfanview.com/languages.htm
+
+==================== irfanView Additional Languages ====================
