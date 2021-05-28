@@ -66,6 +66,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
+* 0.0.8.4 - Fix exception when $FreedSpace is less than zero thanks to kborowinski - Thanks!
 * 0.0.8.3 - Fixed the reclaimed space calculation display thanks to salsifis - Thanks!
 * 0.0.8.2 - "Psycological Phix" - I hate seeing a negative number "reclaimed" after running Choco-Cleaner due to other programs writing to disk while CC is running; e.g. downloads. So until such time as I accurately track the space of deleted files... if the result is negative, it'll now display zero. Like I said, only a psychological fix.
 * 0.0.8.1 - Fixed v0.0.6 - v0.0.8 bug using unavailable environmental variable for scheduled task execution. Added small amount of logging.
