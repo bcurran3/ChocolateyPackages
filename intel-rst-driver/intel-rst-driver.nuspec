@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>18.0.1.1138</version>
+    <version>18.1.6.1039</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>hhttps://downloadcenter.intel.com/download/29978/Intel-Rapid-Storage-Technology-Driver-Installation-Software-with-Intel-Optane-Memory</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/30314/Intel-Rapid-Storage-Technology-Driver-Installation-Software-with-Intel-Optane-Memory-10th-and-11th-Gen-Platforms</projectUrl>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
@@ -30,7 +30,7 @@ Note: Intel recommends that end users utilize driver updates provided by their s
 
 ### Purpose
 	
-The Intel® Rapid Storage Technology (Intel® RST) Driver 18.0.1.1138 supports the configuration and enabling of multiple features including:
+The Intel® Rapid Storage Technology (Intel® RST) Driver 18.1.6.1039 supports the configuration and enabling of multiple features including:
 
 * System acceleration with Intel® Optane™ memory
 * Configuration and maintenance of RAID 0/1/5/10
@@ -38,11 +38,8 @@ The Intel® Rapid Storage Technology (Intel® RST) Driver 18.0.1.1138 supports t
 
 To manage these capabilities, download the Intel® Optane™ Memory and Storage Management application found on the Microsoft Store.
 
-**This version for Windows 10 and Server 2016 only.**
-
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-rst-driver/readme.md)**
-
-    
+   
 
 ---
 
@@ -51,7 +48,7 @@ To manage these capabilities, download the Intel® Optane™ Memory and Storage 
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29978/eng/Readme_enduser_18.0.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/30314/eng/Readme_enduser_18.1.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
     </dependencies>
