@@ -1,4 +1,5 @@
-﻿$packageName= 'prime95.portable'
+﻿$ErrorActionPreference = 'Stop'
+$packageName= 'prime95.portable'
 $ShortcutName = 'Prime95'
 
 if((get-process "prime95" -ea SilentlyContinue) -eq $Null){ 
