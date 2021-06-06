@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.1.0</version>
+    <version>4.2.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update Application for Windows 10 (Install)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-aw/drivers/driversdetails?driverid=7ckk6</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=0672w</projectUrl>
 	<docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
@@ -36,6 +36,7 @@ This package contains the Dell Update application for systems running the Window
 </description>
     <dependencies>
       <dependency id="DotNet4.6.1" version="4.6.1" />
+      <dependency id="dependency-windows10" version="10.1607" />
     </dependencies>
   </metadata>
   <files>
