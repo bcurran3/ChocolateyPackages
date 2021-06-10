@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'dell-update' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://dl.dell.com/FOLDER07337369M/1/Dell-Update-Application-for-Windows10_0672W_WIN_4.2.0_A00.EXE'
-$checksum    = '06D930E205190E17ED879EE14A73E86223157C10F72CBCF09E79CEF8E9229919'
+$url         = 'https://dl.dell.com/FOLDER07414870M/1/Dell-Update-Alienware-Update-Application-for-Windows_GRJVD_WIN_4.2.1_A00.EXE'
+$checksum    = '0050DFAD0869CD7A4C52F68282B28507F7AD175B18A8CE9E68BF63621B3978D9'
 
 $packageArgs = @{
   packageName   = $packageName
