@@ -7,8 +7,34 @@
 # REF: https://github.com/chocolatey/package-validator/wiki
 
 param (
-    [string]$path=(Get-Location).path,
-	[switch]$recurse
+    [string]$Path=(Get-Location).path,
+    [Alias("OptimizePNGs")][switch]$OptimizeImages,
+    [Alias("?")][switch]$Help,
+    [switch]$AddFooter,
+    [switch]$AddHeader,
+    [switch]$AddPackageNotes,
+    [switch]$Debug,
+    [switch]$EditFooter,
+    [switch]$EditHeader,
+    [switch]$EditPackageNotes,
+    [switch]$MakeBackups,
+    [switch]$OpenURLs,
+    [switch]$OpenValidatorInfo,
+    [switch]$Recurse,
+    [switch]$ShowFooter,
+    [switch]$ShowHeader,
+    [switch]$ShowPackageNotes,
+    [switch]$Update,
+    [switch]$UpdateAll,
+    [switch]$UpdateImageURLs,
+    [switch]$UpdateScripts,
+    [switch]$UpdateXMLComment,
+    [switch]$UpdateXMLDeclaration,
+    [switch]$UpdateXMLNamespace,
+    [switch]$UseGitHack,
+    [switch]$UsegitCDN,
+    [switch]$UsejsDelivr,
+    [switch]$WhatIf
  )
 
 Write-Host "CNC.ps1 v2021.03.23 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
@@ -36,9 +62,9 @@ $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appea
 $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 
-if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
-    Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
-	Write-Host "-help, -?, or /?"
+if ($help) {
+<#     Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
+	Write-Host "-help, -?"
 	Write-Host "   Displays this information."
 	Write-Host "-AddFooter"
     Write-Host "   Adds and saves a footer from $CNCFooter to your <description>."	
@@ -88,7 +114,8 @@ if (($args -eq '-help') -or ($args -eq '-?') -or ($args -eq '/?')) {
     Write-Host "   Use jsDeliver for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
 	Write-Host "-WhatIf"
     Write-Host "   Test run, don't save changes."
-	Write-Host "From your packages' root directory, run CNC -Recurse to check all your packages." -Foreground Magenta
+	Write-Host "From your packages' root directory, run CNC -Recurse to check all your packages." -Foreground Magenta #>
+    Get-Help $MyInvocation.MyCommand.Definition -Detailed
 	return
 }
 
@@ -98,81 +125,55 @@ if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
       $Editor="notepad.exe"
     }
 
-if ($args -eq "-EditFooter") {
+if ($EditFooter) {
     Write-Host "  ** Editing contents of $CNCFooter." -Foreground Magenta
 	&$Editor $CNCFooter
 	return
 }
 
-if ($args -eq "-EditHeader") {
+if ($EditHeader) {
     Write-Host "  ** Editing contents of $CNCHeader." -Foreground Magenta
 	&$Editor $CNCHeader
 	return
 }
 
-if ($args -eq "-EditPackageNotes") {
+if ($EditPackageNotes) {
     Write-Host "  ** Editing contents of $CNCPackageNotes." -Foreground Magenta
 	&$Editor $CNCPackageNotes
 	return
 }
 
-if ($args -eq "-ShowFooter") {
+if ($ShowFooter) {
 	Write-Host "  ** Displaying contents of $CNCFooter." -Foreground Magenta
     Write-Host	
     Get-Content $CNCFooter
 	return
 }
 
-if ($args -eq "-ShowHeader") {
+if ($ShowHeader) {
     Write-Host "  ** Displaying contents of $CNCHeader." -Foreground Magenta
     Write-Host	
     Get-Content $CNCHeader
 	return
 }
 
-if ($args -eq "-ShowPackageNotes") {
+if ($ShowPackageNotes) {
     Write-Host "  ** Displaying contents of $CNCPackageNotes." -Foreground Magenta
     Write-Host	
     Get-Content $CNCPackageNotes
 	return
 }
 
-if ($args -eq "-OpenValidatorInfo") {
+if ($OpenValidatorInfo) {
     Write-Host "  ** Opening https://github.com/chocolatey/package-validator/wiki." -Foreground Magenta
     Write-Host	
     &start https://github.com/chocolatey/package-validator/wiki
 	return
 }
 
-if ($args -eq "-AddHeader") {$AddHeader=$True} else {$AddHeader=$False}
+if ($Update) {$GLOBAL:UpdateNuspec=$True}
 
-if ($args -eq "-AddFooter") {$AddFooter=$True} else {$AddFooter=$False}
-
-if ($args -eq "-AddPackageNotes") {$AddPackageNotes=$True} else {$AddPackageNotes=$False}
-
-if ($args -eq "-MakeBackups") {$MakeBackups=$True} else {$MakeBackups=$False}
-
-if ($args -eq "-Debug") {$Debug=$True} else {$Debug=$False}
-
-if ($args -eq "-OpenURLs") {$OpenURLs=$True} else {$OpenURLs=$False}
-
-if ($args -eq "-OptimizeImages") {$OptimizeImages=$True}
-
-if ($args -eq "-OptimizePNGs") {$OptimizeImages=$True}
-
-if ($args -eq "-UpdateImageURLs") {$UpdateImageURLs=$True} else {$UpdateImageURLs=$False}
-
-if ($args -eq "-UpdateScripts") {$UpdateScripts=$True} else {$UpdateScripts=$False}
-
-if ($args -eq "-UpdateXMLComment") {$UpdateXMLComment=$True} else {$UpdateXMLComment=$False}
-
-if ($args -eq "-UpdateXMLDeclaration") {$UpdateXMLDeclaration=$True} else {$UpdateXMLDeclaration=$False}
-
-if ($args -eq "-UpdateXMLNamespace") {$UpdateXMLns=$True} else {$UpdateXMLns=$False}
-
-if ($args -eq "-Update") {$GLOBAL:UpdateNuspec=$True}
-
-if ($args -eq "-UpdateAll") {
+if ($UpdateAll) {
      $UpdateAll=$True
 	 $UpdateImageURLs=$True
 	 $OptimizeImages=$True
@@ -186,7 +187,7 @@ if ($args -eq "-UpdateAll") {
      $UpdateAll=$False
 }
 
-if ($args -eq "-UseGitHack") {
+if ($UseGitHack) {
      $GitHackCDN=$True
 	 $StaticlyCDN=$False
 	 $NewCDN="GitHack"
@@ -194,7 +195,7 @@ if ($args -eq "-UseGitHack") {
      $GitHackCDN=$False
 }
 
-if ($args -eq "-UsegitCDN") {
+if ($UsegitCDN) {
      $GitCDN=$True
 	 $StaticlyCDN=$False
 	 $NewCDN="GitCDN"
@@ -202,15 +203,13 @@ if ($args -eq "-UsegitCDN") {
      $GitCDN=$False
 }
 
-if ($args -eq "-UsejsDelivr") {
+if ($UsejsDelivr) {
      $jsDelivrCDN=$True
 	 $StaticlyCDN=$False
 	 $NewCDN="jsDelivr"
    } else {
      $jsDelivrCDN=$False
 }
-
-if ($args -eq "-WhatIf") {$WhatIf=$True} else {$WhatIf=$False}
 
 if ($path -eq "\"){
     $path=(Get-Location).Drive.Name + ":" + "\"
