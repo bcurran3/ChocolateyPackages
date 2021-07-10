@@ -4,7 +4,7 @@
   <metadata>
     <id>drivermax</id>
     <title>DriverMax (Install)</title>
-    <version>12.14.0.13</version>
+    <version>12.15.0.15</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/drivermax</packageSourceUrl>
     <authors>Innovative Solutions</authors>
     <owners>bcurran3</owners>
