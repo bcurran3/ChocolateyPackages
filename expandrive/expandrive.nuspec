@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>expandrive</id>
-    <version>2021.6.4</version>
+    <version>2021.7.1</version>
     <title>ExpanDrive (Trial) (Install)</title>
     <authors>ExpanDrive, Inc.</authors>
     <owners>bcurran3</owners>
