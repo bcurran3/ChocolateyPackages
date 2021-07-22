@@ -2,13 +2,10 @@
 $packageName    = 'intel-proset-drivers' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
-$bits           = Get-ProcessorBits
-#$url            = "https://downloadmirror.intel.com/30280/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver32_Win10.zip"
-$url            = "https://downloadmirror.intel.com/30280/a08/WiFi_22.40.0_Driver32_Win10.zip"
-$checksum       = '5860F9D15D7D6648047834039A7E3086EE123650C437485D9EB11ED3433D5723'
-#$url64          = "https://downloadmirror.intel.com/30280/eng/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver64_Win10.zip"
-$url64          = "https://downloadmirror.intel.com/30280/a08/WiFi_22.40.0_Driver64_Win10.zip"
-$checksum64     = '6741C919997CC335AE8437E5A48B748728EA8289698D227B3044E5791B8B1ED9'
+$url            = "https://downloadmirror.intel.com/30567/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver32_Win10.zip"
+$checksum       = '63A0C3E7BEB6150EB41CC3FA2BEEC6453D83DB26526ADE255CB5EB21C7A5AEB7'
+$url64          = "https://downloadmirror.intel.com/30567/a08/WiFi_"+$ENV:ChocolateyPackageVersion+"_Driver64_Win10.zip"
+$checksum64     = 'EF938F6356582380877A15BC41859BDDC2F5A78B845CB3FDF91B2814D39CA6D5'
 
 # Last Windows 7+8 version was 21.40.5
 # No need to check for hardware, drivers install even if an Intel PROSet/Wireless card is not found
@@ -31,4 +28,4 @@ Install-ChocolateyZipPackage @packageArgs
 
 pnputil /add-driver $unzipLocation\*.inf /install
 
-Remove-Item $unzipLocation -Recurse | Out-Null
+Remove-Item $unzipLocation -Recurse -Force | Out-Null
