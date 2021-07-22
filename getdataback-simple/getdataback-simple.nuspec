@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>getdataback-simple</id>
-    <version>5.50</version>
+    <version>5.55</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/getdataback-simple</packageSourceUrl>
     <title>GetDataBack Pro (Trial)(Install)</title>
@@ -17,17 +17,17 @@
     <summary>GetDataBack Simple - The simplest Data Recovery Software ever.</summary>
     <description>
 ___
-###[choco://getdataback-simple](choco://getdataback-simple)
+### [choco://getdataback-simple](choco://getdataback-simple)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
 ![Screenshot of GetDataBack Simple](http://www.runtime.org/images/gdbsim1.gif) ![Screenshot of GetDataBack Simple 2](http://www.runtime.org/images/gdbsim2.gif)	
 
-###GetDataBack Pro Data Recovery
+### GetDataBack Pro Data Recovery
 
 Our flagship product GetDataBack Pro is the most powerful Data Recovery software. Lightning fast, for NTFS, FAT, exFAT, EXT, HFS+, and APFS. Recover your lost data now!
 
-###GetDataBack Pro Highlights
+### GetDataBack Pro Highlights
 * Recover ALL your drive's data
 * Restore file names and directory structure
 * Safe, read-only design
