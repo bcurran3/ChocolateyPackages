@@ -3,9 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>27.20.100.9466</version>
+    <version>30.0.100.9684</version>
     <owners>bcurran3</owners>
-    <projectUrl>https://downloadcenter.intel.com/download/30079/Intel-Graphics-Windows-10-DCH-Drivers</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/30579/Intel-Graphics-Windows-DCH-Drivers</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
     <title>Intel® Graphics - Windows® 10 DCH Drivers</title>
     <authors>Intel Corporation</authors>
@@ -35,13 +35,13 @@ This is a DCH driver. [Click for more information about DCH drivers](https://www
 
 ## Supported OS versions
 
-* Microsoft Windows 10-64 - Fall Creators Update (1709)(RS3)
-* Microsoft Windows 10-64 - April 2018 Update (1803)(RS4)
 * Microsoft Windows 10-64 - October 2018 Update (1809)(RS5)
 * Microsoft Windows 10-64 - May 2019 Update (1903)(19H1)
 * Microsoft Windows 10-64 - November 2019 Update (1909)(19H2)
 * Microsoft Windows 10-64 - May 2020 Update (2004)(20H1)
 * Microsoft Windows 10-64 - October 2020 Update (20H2)
+* Microsoft Windows 10-64 - May 2021 Update 
+* Microsoft Windows 11 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
 
@@ -52,7 +52,7 @@ This is a DCH driver. [Click for more information about DCH drivers](https://www
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/30079/eng/ReadMe.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/30579/eng/readme.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="dependency-windows10" version="10.1709" />
