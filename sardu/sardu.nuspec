@@ -4,7 +4,7 @@
   <metadata>
     <id>sardu</id>
     <title>SARDU (Portable)</title>
-    <version>3.4.2</version>
+    <version>3.4.3</version>
     <authors>Davide Costa</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sardu</packageSourceUrl>
