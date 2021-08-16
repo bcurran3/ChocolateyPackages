@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>30.0.100.9684</version>
+    <version>30.0.100.9805</version>
     <owners>bcurran3</owners>
     <projectUrl>https://downloadcenter.intel.com/download/30579/Intel-Graphics-Windows-DCH-Drivers</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
