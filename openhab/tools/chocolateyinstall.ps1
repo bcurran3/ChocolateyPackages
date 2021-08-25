@@ -1,8 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'openhab' 
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = "$toolsDir\openhab-$env:ChocolateyPackageVersion.zip"
-$checksum      = 'ABAA07133C4CBD1C2971CB75B64B7EEE930ABF270E997041B4DCCF9366BD89C2'
 $ExeFile       = 'start.bat'
 $ShortcutName  = 'openHAB.lnk'
 $ShortcutName2 = 'openHAB Dashboard.lnk'
@@ -21,15 +19,12 @@ if (!($env:JAVA_HOME)) {
 	}
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'ZIP' 
-  url           = $url
-  checksum      = $checksum
-  checksumType  = 'sha256' 
+  packageName    = $packageName
+  Destination    = $toolsDir
+  FileFullPath   = "$toolsDir\openhab-$env:ChocolateyPackageVersion.zip"
 }
 
-Install-ChocolateyZipPackage @packageArgs
+Get-ChocolateyUnzip @packageArgs
 
 New-Item "$toolsDir\openHAB" -type directory -force -ErrorAction SilentlyContinue
 Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\openHAB" -WorkingDirectory "$toolsDir\openHAB" -IconLocation "$toolsDir\openHAB.ico"

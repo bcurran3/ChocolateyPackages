@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openhab</id>
-    <version>2.5.3</version>
+    <version>3.1.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/openhab</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>openHAB</title>
