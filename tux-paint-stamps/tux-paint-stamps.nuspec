@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tux-paint-stamps</id>
-    <version>2020.05.29</version>
+    <version>2021.06.28</version>
     <title>Tux Paint Stamps (Install)</title>
     <authors>wkendrick</authors>
     <owners>bcurran3</owners>
@@ -41,7 +41,7 @@ This is a collection of 'rubber stamp' images for Tux Paint.
     <releaseNotes>https://sourceforge.net/projects/tuxpaint/files/tuxpaint-stamps/2018-09-01/</releaseNotes>
     <tags>tux4kids tux paint stamps drawing kids educational game foss cross-platform binary</tags>
     <dependencies>
-      <dependency id="tux-paint" version="0.9.24" />
+      <dependency id="tux-paint" version="0.9.26" />
     </dependencies>
   </metadata>
   <files>
