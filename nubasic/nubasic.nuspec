@@ -3,16 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nubasic</id>
-    <version>1.51</version>
+    <version>1.51.0.20210904</version>
     <title>nuBASIC (Install)</title>
     <authors>Antonino Calderone</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://github.com/eantcal/nubasic/blob/master/COPYING</licenseUrl>
-    <projectUrl>http://www.nubasic.eu/</projectUrl>
+    <projectUrl>https://sites.google.com/view/nubasic</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/nubasic/nubasic_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>___
-###[choco://nubasic](choco://nubasic)
+    <description>
+___
+### [choco://nubasic](choco://nubasic)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ___
 
@@ -48,11 +49,11 @@ Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package mainta
 ___</description>
     <summary>BASIC language interpreter for Linux and Windows</summary>
     <releaseNotes>https://github.com/eantcal/nubasic/releases/</releaseNotes>
-    <copyright>(c) Antonino Calderone 2014 - 2017</copyright>
+    <copyright>(c) Antonino Calderone</copyright>
     <tags>acalderone nubasic basic interpreter programming language ide notsilent</tags>
     <projectSourceUrl>https://github.com/eantcal/nubasic</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nubasic</packageSourceUrl>
-    <docsUrl>http://www.nubasic.eu/user-guide</docsUrl>
+    <docsUrl>https://sourceforge.net/projects/nubasic/files/documentation/nuBasic%20Guide.pdf</docsUrl>
     <mailingListUrl>https://sourceforge.net/projects/nubasic/support</mailingListUrl>
     <bugTrackerUrl>https://github.com/eantcal/nubasic/issues</bugTrackerUrl>
     <dependencies>
