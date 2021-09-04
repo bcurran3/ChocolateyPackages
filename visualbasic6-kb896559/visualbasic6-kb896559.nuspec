@@ -4,15 +4,18 @@
   <metadata>
     <id>visualbasic6-kb896559</id>
     <title>Microsoft Visual Basic 6.0 Common Controls (Install)</title>
-    <version>6.0.2800.1106</version>
+    <version>6.0.2800.1107</version>
     <authors>Microsoft</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/visualbasic6-kb896559</packageSourceUrl>
     <summary>Update for the Microsoft Visual Basic 6.0 Common Controls: mscomctl.ocx and comctl32.ocx.</summary>
-    <description>***
+    <description>
+***
 [choco://visualbasic6-kb896559](choco://visualbasic6-kb896559)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 ***
+
+NOTE: Actual program version is 6.00.2800.1106. The checksum changed on the version indicating Microsoft probably updated the installer.
 
 This package updates two Microsoft Visual Basic 6.0 Common Controls: mscomctl.ocx and comctl32.ocx to address the issues described in the KB articles noted in the Related Resources section on this page. 
 This package will not install these Common Controls if they do not already exist on the target system. This package cannot be uninstalled.
