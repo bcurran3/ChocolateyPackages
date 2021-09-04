@@ -4,7 +4,7 @@
   <metadata>
     <id>utorrent</id>
     <title>uTorrent Classic (Install)</title>
-    <version>3.5.5.45852</version>
+    <version>3.5.5.46074</version>
     <authors>BitTorrent, Inc.</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/utorrent</packageSourceUrl>
