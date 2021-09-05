@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * As of v3.4.1 binaries are included in the package. No more URL downloads. This version will always be available to install.
+* As of v4.1.3 the binaries are unfortunately too big to be included due to the Chocolatey Community Repository's ~200MB package limit.
 
 ***
 
