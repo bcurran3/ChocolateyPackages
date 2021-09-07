@@ -1,17 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'hp-universal-print-driver-ps' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99375-22/upd-ps-x32-6.8.0.24296.exe'
-$checksum       = '7F224595CF4EFBFE6C50B7541FCFB8841A62B304151219433E735897DB3B63D7'
-$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99376-22/upd-ps-x64-6.8.0.24296.exe'
-$checksum64     = '151FD3746DDD47A1B4DB9C98032F84AAB71AB2D2A957147D32C829421A22E9F6'
+$packageName    = 'hp-universal-print-driver-ps' 
+$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99375-23/upd-ps-x32-7.0.0.24832.exe'
+$checksum       = '6FE7E92692BC66AAA3039CD933910F04D717DFCC65A77B125A0400C2B8F62175'
+$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99376-23/upd-ps-x64-7.0.0.24832.exe'
+$checksum64     = 'D291D00D9162A76101D307FF531D1CB0FB675A37A97FEF9E695A6400871DC2EE'
+$softwareName   = ''
 $fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 
 # Make sure Print Spooler service is up and running stolen from cutepdf package.
 try {
   $serviceName = 'Spooler'
   $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode,State -Filter "Name='$serviceName'"
-  if ($spoolerService -eq $null) { throw "Service $serviceName was not found" }
+  if ($null -eq $spoolerService) { throw "Service $serviceName was not found" }
   Write-Host "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
   if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.State -ne 'Running') {
     Set-Service $serviceName -StartupType Automatic -Status Running
@@ -43,7 +44,7 @@ $packageArgs = @{
   file           = $fileLocation
   silentArgs     = '/dm /nd /npf /q /h'
   validExitCodes = @(0, 3010, 1641)
-  softwareName   = ''
+  softwareName   = $softwareName
 }
  
 Install-ChocolateyInstallPackage @packageArgs
