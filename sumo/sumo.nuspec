@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.13.2.500</version>
+    <version>5.14.0.505</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
