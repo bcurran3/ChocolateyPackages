@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hp-universal-print-driver-ps</id>
-    <version>6.8.0.24296</version>
+    <version>7.0.0.24832</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hp-universal-print-driver-ps</packageSourceUrl>
     <title>HP Universal Print Driver for Windows PS (Install)</title>
@@ -49,14 +49,10 @@ Users are more self-sufficient when the HP UPD is deployed, reducing the need fo
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hp-universal-print-driver-ps/readme.md)**
 
-	
-
----
-
+***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-
----
-
+***
+	
 </description>
     <releaseNotes>http://h10032.www1.hp.com/ctg/Manual/c03635717</releaseNotes>
   </metadata>
