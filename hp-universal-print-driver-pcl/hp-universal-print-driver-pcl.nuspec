@@ -20,7 +20,7 @@
     <description>
 ---
 
-###[choco://hp-universal-print-driver-pcl](choco://hp-universal-print-driver-pcl)
+### [choco://hp-universal-print-driver-pcl](choco://hp-universal-print-driver-pcl)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
