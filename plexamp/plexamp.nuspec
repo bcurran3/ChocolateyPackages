@@ -4,7 +4,7 @@
   <metadata>
     <id>plexamp</id>
     <title>Plexamp (Install)</title>
-    <version>3.7.0</version>
+    <version>3.7.1</version>
     <authors>Plex</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexamp</packageSourceUrl>
@@ -58,8 +58,8 @@ Explore your library in new ways with Library Radio, Time Travel Radio, and Arti
     <projectUrl>http://plexamp.com/</projectUrl>
     <docsUrl>http://plexamp.com/#help</docsUrl>
     <mailingListUrl>https://forums.plex.tv/c/testing/plex-labs</mailingListUrl>
-    <tags>plex plexamp multimedia mp3 audio player free</tags>
-    <copyright>Copyright © Plex</copyright>
+    <tags>plex plexamp multimedia mp3 audio player free binary</tags>
+    <copyright>Copyright Daniel Stenberg and many contributors</copyright>
     <licenseUrl>https://www.plex.tv/about/privacy-legal/plex-terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/plexamp/plexamp_icon.jpg</iconUrl>

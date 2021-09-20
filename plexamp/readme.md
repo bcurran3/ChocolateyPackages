@@ -1,6 +1,6 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* Binary is included in the package as of v3.7.1.
 * This program only installs for the current user.
 
 ***
