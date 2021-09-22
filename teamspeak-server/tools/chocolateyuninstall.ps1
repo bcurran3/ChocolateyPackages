@@ -1,4 +1,5 @@
-﻿$packageName  = 'teamspeak-server'
+﻿$ErrorActionPreference = 'Stop'
+$packageName  = 'teamspeak-server'
 $shortcutName = 'TeamSpeak Server.lnk'
 
 remove-item "$env:Public\Desktop\$shortcutName" -Force -ErrorAction 'SilentlyContinue'
