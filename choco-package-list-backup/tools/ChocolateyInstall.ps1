@@ -162,7 +162,7 @@ if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
        Write-Host "  ** NOTASK or NOSCHEDULE specified, not installing scheduled task." -Foreground Magenta
 	   exit
    }
-
+   
 # install option to not run the script after install
 $RunAfterInstall = $True
 if ($pp["NORUN"] -eq 'true' -or $pp["DONTRUN"] -eq 'true'){
@@ -185,11 +185,17 @@ if ($GotTask -ne $null){
      SchTasks /query /tn "choco-package-list-backup"
      Write-Host "`nKeeping existing scheduled task and upgrading script files." -Foreground Magenta
   } else {
-     SchTasks /Create /SC WEEKLY /D MON /RU SYSTEM /RL HIGHEST /TN "choco-package-list-backup" /TR "%ChocolateyInstall%\bin\choco-package-list-backup.bat" /ST 06:00 /F
-     SchTasks /query /tn "choco-package-list-backup"
-	 Write-Host "  ** Now configured to run choco-package-list-backup at 6 AM every MONDAY." -Foreground Green
-	}
-   
+    # install option to run at boot
+    if ($pp["ONSTART"] -eq 'true' -or $pp["ATSTARTUP"] -eq 'true'){
+	      SchTasks /Create /SC ONSTART /DELAY 0002:00 /RU SYSTEM /RL HIGHEST /TN "choco-package-list-backup" /TR "%ChocolateyInstall%\bin\choco-package-list-backup.bat" /F
+          Write-Host "  ** ONSTART or ATSTARTUP specified, task will run on boot." -Foreground Magenta		  
+       } else {
+		 # Default install scheduled task 
+	     SchTasks /Create /SC WEEKLY /D MON /RU SYSTEM /RL HIGHEST /TN "choco-package-list-backup" /TR "%ChocolateyInstall%\bin\choco-package-list-backup.bat" /ST 06:00 /F
+         SchTasks /query /tn "choco-package-list-backup"
+	     Write-Host "  ** Now configured to run choco-package-list-backup at 6 AM every MONDAY." -Foreground Green
+	    }
+    }
 
 If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
       Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$oldshortcutName" -Force -ErrorAction SilentlyContinue

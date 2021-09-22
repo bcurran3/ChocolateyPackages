@@ -53,15 +53,17 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 **If you find choco-package-list-backup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
 ### OPTIONAL INSTALLATION INSTRUCTIONS:
+* **choco install choco-package-list-backup --params "'/ONSTART:TRUE'"** - scheduled task to run at boot instead of at a scheduled time
 * **choco install choco-package-list-backup --params "'/NOTASK:TRUE'"** - won't configure a scheduled task
 * **choco install choco-package-list-backup --params "'/NORUN:TRUE'"** - won't run the script upon install (let's you configure before first run)
 
 ### INSTRUCTIONS:
-* Edit C:\tools\BCURRAN3\choco-package-list-backup.config to customize your backup(s). It's easy, there are comments.
-* From PowerShell or the Command Prompt, type CHOCO-PACKAGE-LIST-BACKUP to backup your Chocolatey packages list. 
+* Edit C:\tools\BCURRAN3\choco-package-list-backup.config to customize your backup(s). It's easy, there are comments. Run CPLB or CHOCO-PACKAGE-LIST-BACKUP -EditConfig
+* From PowerShell or the Command Prompt, type CPLB or CHOCO-PACKAGE-LIST-BACKUP to backup your Chocolatey packages list.
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 
 ### CHANGELOG:
+* 2021.09.22 - Add Box Drive support. Add defaults incase of corrupt or missing choco-package-list-backup.config. Add new ONSTART and ATSTARTUP paremeters to run at boot instead of a scheduled time.
 * 2021.05.10 - Speed optimations by TheCakeIsNaOH - Thanks!
 * 2021.04.08 - Fixed missing UseCustomPath2 variable import. Thanks matteotrubini! Removed duplication of "shim" creation.
 * 2021.03.22 - Added 2nd custom path option, added saved arguments option thanks to TheCakeIsNaOH, added pre and post processing option

@@ -3,7 +3,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Package-List-Backup.ps1 v2021.05.10 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "Choco-Package-List-Backup.ps1 v2021.09.22 - backup Chocolatey packages list locally and to the cloud" -Foreground White
 Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
@@ -42,6 +42,39 @@ if (Test-Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.l
 	  }
   }
 Write-Output "$(Get-Date) Choco-Package-List-Backup STARTED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-package-list-backup.log"
+
+# Set default preferences incase of corrupt or missing choco-package-list-backup.config
+$PackagesListFile    = 'packages.config'
+$SaveFolderName      = 'ChocolateyPackageListBackup'
+$SaveArguments       = 'false'
+$SaveTitleSummary    = 'false'
+$SaveVersions        = 'false'
+$AppendDate          = 'false'
+$CustomPath          = 'c:\install'
+$CustomPath2         = 'c:\backup'
+$SaveAllProgramsList = 'true'
+$AllProgramsListFile = 'AllProgramsList.txt'
+$DefaultUserProfile  = ''
+$PreProcessScript    = ''
+$PostProcessScript   = ''
+$SaveArguments       = 'false'
+
+$UseCustomPath  = 'false'
+$UseCustomPath2 = 'false'
+$UseDocuments   = 'true'
+$UseHomeShare   = 'true'
+$UseBox         = 'true'
+$UseDropbox     = 'true'
+$UseGoogleDrive = 'true'
+$UseiCloudDrive = 'true'
+$UseNextcloud   = 'true'
+$UseOneDrive    = 'true'
+$UseownCloud    = 'true'
+$UseReadyCLOUD  = 'true'
+$UseResilioSync = 'true'
+$UseSeafile     = 'true'
+$UseTonidoSync  = 'true'
+$UseDefaultUserProfile = 'false'
 
 # Import preferences - see comments in choco-package-list-backup.config for settings 
 [xml]$ConfigFile     = Get-Content "$scriptDir\choco-package-list-backup.config"
@@ -333,8 +366,15 @@ if ($UseBox -Match "True" -and (Test-Path "$env:USERPROFILE\Box Sync"))
    {
     $SavePath = "$env:USERPROFILE\Box Sync\$SaveFolderName\$env:COMPUTERNAME"
     Write-PackagesConfig
-   }    
-   
+   }
+
+# Backup Chocolatey package names on local computer to packages.config file in Box (Drive) directory if it exists
+if ($UseBox -Match "True" -and (Test-Path "$env:USERPROFILE\Box"))
+   {
+    $SavePath = "$env:USERPROFILE\Box\$SaveFolderName\$env:COMPUTERNAME"
+    Write-PackagesConfig
+   }
+
 # Check for Dropbox personal and business paths (Thanks ebbek!)
 if (Test-Path $env:AppData\Dropbox\info.json)
 {
