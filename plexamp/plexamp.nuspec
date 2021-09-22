@@ -62,7 +62,7 @@ Explore your library in new ways with Library Radio, Time Travel Radio, and Arti
     <copyright>Copyright Daniel Stenberg and many contributors</copyright>
     <licenseUrl>https://www.plex.tv/about/privacy-legal/plex-terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/plexamp/plexamp_icon.jpg</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/plexamp/plexamp_icon.png</iconUrl>
     <releaseNotes>https://forums.plex.tv/t/plexamp-release-notes/221280</releaseNotes>
   </metadata>
   <files>
