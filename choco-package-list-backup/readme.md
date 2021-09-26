@@ -63,6 +63,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 
 ### CHANGELOG:
+* 2021.09.25 - Improved OneDrive support while running under SYSTEM and handling of a missing config file.
 * 2021.09.22 - Add Box Drive support. Add defaults incase of corrupt or missing choco-package-list-backup.config. Add new ONSTART and ATSTARTUP paremeters to run at boot instead of a scheduled time.
 * 2021.05.10 - Speed optimations by TheCakeIsNaOH - Thanks!
 * 2021.04.08 - Fixed missing UseCustomPath2 variable import. Thanks matteotrubini! Removed duplication of "shim" creation.
