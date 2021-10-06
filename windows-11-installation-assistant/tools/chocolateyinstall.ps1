@@ -17,4 +17,4 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 Start-Sleep -Seconds 5
-Start-CheckandStop " Windows10UpgraderApp"
+Start-CheckandStop "Windows10UpgraderApp"
