@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>windows-11-installation-assistant</id>
+    <version>1.4.19041.1285</version>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-11-installation-assistant</packageSourceUrl>
+    <title>Windows 11 Installation Assistant (Portable)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/en-us/software-download/windows11</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/windows-11-installation-assistant/windows-11-installation-assistant_icon.png</iconUrl>
+    <copyright>© Microsoft</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/windows/whats-new/windows-11-whats-new</docsUrl>
+    <tags>microsoft windows 11 win11 installation assistant</tags>
+    <summary>Windows 11 Installation Assistant downloads and starts the setup for Windows 11</summary>
+    <description>
+---
+
+### [choco://windows-11-installation-assistant](choco://windows-11-installation-assistant)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Get Windows 11 now 
+
+This assistant is for those who wish to Upgrade a Windows 10 PC to Windows 11.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/windows-11-installation-assistant/readme.md)**
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://www.microsoft.com/en-us/windows/windows-11-specifications</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
