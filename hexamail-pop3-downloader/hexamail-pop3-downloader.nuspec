@@ -66,7 +66,7 @@ Download your POP/IMAP Connector today!
 </description>
     <summary>POP3 Downloader is a high performance, scalable, real-time POP/IMAP Connector for your mailserver.</summary>
     <copyright>Hexamail Ltd.</copyright>
-    <tags>hexamail smtp imap pop3 connector email server</tags>
+    <tags>hexamail smtp imap pop3 connector email server trial</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hexamail-pop3-downloader</packageSourceUrl>
     <docsUrl>https://www.hexamail.com/guides/windowsinstallation.htm?puid=hexamailpop3downloader</docsUrl>
   </metadata>
