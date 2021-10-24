@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nubasic</id>
-    <version>1.51.0.20210904</version>
+    <version>1.51.0.20211023</version>
     <title>nuBASIC (Install)</title>
     <authors>Antonino Calderone</authors>
     <owners>bcurran3</owners>
