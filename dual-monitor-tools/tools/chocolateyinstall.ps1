@@ -1,8 +1,8 @@
 ﻿$packageName    = 'dual-monitor-tools'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://sourceforge.net/projects/dualmonitortool/files/dualmonitortool/2.6/DualMonitorTools-2.6.msi' 
-$checksum       = '69DBF3959ADD36AFF442C96836690A943721F92CD1A262D6A97F2901BE212000'
+$url            = 'https://downloads.sourceforge.net/project/dualmonitortool/dualmonitortool/2.8/DualMonitorTools-2.8.msi' 
+$checksum       = '20AD9B4A8AEAC6474638A83F17EEC6483BCCFAD0CC0552FB3B695081C2AC658F'
 $silentArgs     = '/quiet /qn /norestart'
 $validExitCodes = @(0, 3010, 1641)
 
