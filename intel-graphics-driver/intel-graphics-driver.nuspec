@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>30.0.100.9864</version>
+    <version>30.0.100.9955</version>
     <owners>bcurran3</owners>
     <projectUrl>https://downloadcenter.intel.com/download/30579/Intel-Graphics-Windows-DCH-Drivers</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
@@ -40,7 +40,7 @@ This is a DCH driver. [Click for more information about DCH drivers](https://www
 * Microsoft Windows 10-64 - November 2019 Update (1909)(19H2)
 * Microsoft Windows 10-64 - May 2020 Update (2004)(20H1)
 * Microsoft Windows 10-64 - October 2020 Update (20H2)
-* Microsoft Windows 10-64 - May 2021 Update 
+* Microsoft Windows 10-64 - May 2021 Update (21H1)
 * Microsoft Windows 11 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
