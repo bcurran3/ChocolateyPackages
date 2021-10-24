@@ -1,53 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>8x8virtualoffice</id>
-    <version>7.0.5.3</version>
+    <version>99.99.99.99</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/8x8virtualoffice</packageSourceUrl>
-    <title>8x8 Work for Desktop (Install)</title>
+    <title>[DEPRECATED] 8x8 Virtual Office (Install)</title>
     <authors>8x8 Inc.</authors>
     <projectUrl>https://support.8x8.com/us/download/virtual-office-desktop-pc-windows</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_icon.png</iconUrl>
-    <copyright>Copyright 8x8 Inc.</copyright>
-    <licenseUrl>https://www.8x8.com/terms-and-conditions/business-terms</licenseUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png</iconUrl>
+    <copyright></copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://www.get8x8.com/8x8WebHelp/VirtualOfficeDesktop5_0/Default.htm</docsUrl>
-    <tags>8x8 voip phone phones virtual office</tags>
-    <summary>8x8 Virtual Office Desktop for PC (Windows)</summary>
-    <description>
----
-
-### [choco://8x8virtualoffice](choco://8x8virtualoffice)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-
----
-
-# Note: As of 8/11/20 and app version 7.0, Virtual Office Desktop is now 888x8 Work for Desktop88.
-
-![8x8 Virtual Office screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8x8virtualoffice/8x8virtualoffice_screenshot.png)
-
-Virtual Office Desktop is a comprehensive Unified Communications client application integrating a business softphone with visual voicemail, corporate directory, IM &amp; presence, video calling, fax, call recording, web conferencing, and social media. Virtual Office Desktop offers all the functionality of Virtual Office Online and Virtual Office Pro in a standalone Windows application.
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/8x8virtualoffice/readme.md)**
-
-
-
----
-
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-
----
-
-</description>
-    <releaseNotes>https://support.8x8.com/cloud-phone-service/voice/work-desktop/download-8x8-work-for-desktop#What's_new_in_this_release.3F</releaseNotes>
+    <tags>deprecated</tags>
+    <summary></summary>
+    <description>## This package has been deprecated. It has been replaced by the dependency shown below.</description>
+    <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="8x8work" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
