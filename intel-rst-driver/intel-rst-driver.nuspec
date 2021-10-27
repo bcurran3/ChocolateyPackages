@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-rst-driver</id>
-    <version>18.1.6.1039</version>
+    <version>18.6.1.1016</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-rst-driver</packageSourceUrl>
     <title>Intel® Rapid Storage Technology (Intel® RST) User Interface and Driver (Install)</title>
@@ -30,7 +30,7 @@ Note: Intel recommends that end users utilize driver updates provided by their s
 
 ### Purpose
 	
-The Intel® Rapid Storage Technology (Intel® RST) Driver 18.1.6.1039 supports the configuration and enabling of multiple features including:
+The Intel® Rapid Storage Technology (Intel® RST) Driver 18.6.1.1016 supports the configuration and enabling of multiple features including:
 
 * System acceleration with Intel® Optane™ memory
 * Configuration and maintenance of RAID 0/1/5/10
