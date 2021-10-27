@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.2.1</version>
+    <version>4.3.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update Application for Windows 10 (Install)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=GRJVD</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=KW3CF</projectUrl>
 	<docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
