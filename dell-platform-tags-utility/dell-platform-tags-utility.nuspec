@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-platform-tags-utility</id>
-    <version>4.0.27.0</version>
+    <version>4.0.30.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-platform-tags-utility</packageSourceUrl>
     <title>Dell Platform Tags Utility (Portable)</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/us/en/04/drivers/driversdetails?driverId=1R4WP</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=jh25y</projectUrl>
     <iconUrl>https://si.cdn.dell.com/images/global/brand/ui/logo-wt-bl.png</iconUrl>
     <copyright>(C) Copyright Dell Inc.</copyright>
     <licenseUrl>https://www.dell.com/learn/us/en/solutions/software-license-agreements?s=corp</licenseUrl>
@@ -25,12 +25,13 @@ This package provides Dell Platform Tags Utility and is supported on OptiPlex, X
 ***
 	</description>
     <releaseNotes>
-Enhancements:
-Added Asset Tag Extension support 
-Added WSMT Support	
+Fixes and Enhancements
+Fixes:
+Fixed CPU exception issue when SMM Security Mitigation is enabled	
 	</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
+
