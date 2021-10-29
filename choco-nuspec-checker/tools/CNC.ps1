@@ -4,7 +4,82 @@
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
 # REF: https://docs.microsoft.com/en-us/nuget/reference/nuspec
-# REF: https://github.com/chocolatey/package-validator/wiki
+# REF: https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
+
+<#
+.SYNOPSIS
+   Script to check your Chocolatey .nuspec files for common errors and ommisions.
+.DESCRIPTION
+   TODO
+.EXAMPLE
+    cnc
+    To check the package in your current directory
+.EXAMPLE
+    cnc -UpdateAll
+    Fix the package in your current directory
+.EXAMPLE
+    cnc -Recurse -Path C:\Path\To\Packages\Repo
+    To check all the packages in a package sources repository
+
+.PARAMETER help
+   Displays this information.
+.PARAMETER ?
+   Displays this information.
+.PARAMETER AddFooter
+   Adds and saves a footer from $CNCFooter to your <description>.
+.PARAMETER AddHeader
+   Adds and saves a header from $CNCHeader to your <description>.
+.PARAMETER AddPackageNotes
+   Adds and saves a package notes link from $CNCPackageNotes to your <description>.
+.PARAMETER EditFooter
+   Edit $CNCFooter with Notepad++ or Notepad.
+.PARAMETER EditHeader
+   Edit $CNCHeader with Notepad++ or Notepad.
+.PARAMETER EditPackageNotes
+   Edit $CNCPackageNotes with Notepad++ or Notepad.
+.PARAMETER MakeBackups
+   Make filename.ext.CNC.BAK of all modified files.
+.PARAMETER OpenURLs
+   Opens all URLs in your browser for inspection when finished.
+.PARAMETER OpenValidatorInfo
+   Opens the Chocolatey package-validator info page on GitHub in your default browser.
+.PARAMETER ShowFooter
+   Displays $CNCFooter.
+.PARAMETER ShowHeader
+   Displays $CNCHeader.
+.PARAMETER OptimizeImages, -OptimizePNGs
+   Runs PNGOptimizerCL on supported image files.
+.PARAMETER Recurse
+   Runs CNC recursively.
+.PARAMETER Update
+   Will re-write out your nuspec file; e.g. change to UTF-8 w/o BOM.
+.PARAMETER UpdateAll
+   Rights all wrongs.
+.PARAMETER UpdateImageURLs
+   Updates image URLs with Staticaly CDN URLs (default).
+.PARAMETER UpdateScripts
+   Will re-write out your PowerShell scripts, e.g. change to UTF-8 w/BOM, and add ErrorActionPreference=Stop.
+.PARAMETER UpdateXMLComment
+   Updates the XML comment for UTF-8 checking.
+.PARAMETER UpdateXMLDeclaration
+   Updates the XML declaration.
+.PARAMETER UpdateXMLNamespace
+   Updates the XML Namespace
+.PARAMETER UseGitHack
+   Use GitHack for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll.
+.PARAMETER UseGitCDN
+   Use GitCDN for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll.
+.PARAMETER UsejsDelivr
+   Use jsDeliver for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll.
+.PARAMETER WhatIf
+   Test run, don't save changes.
+
+.LINK
+   https://github.com/chocolatey/package-validator/wiki
+.LINK
+   https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
+
+#>
 
 param (
     [string]$Path=(Get-Location).path,
@@ -63,58 +138,6 @@ $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 
 if ($help) {
-<#     Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
-	Write-Host "-help, -?"
-	Write-Host "   Displays this information."
-	Write-Host "-AddFooter"
-    Write-Host "   Adds and saves a footer from $CNCFooter to your <description>."	
-	Write-Host "-AddHeader"
-    Write-Host "   Adds and saves a header from $CNCHeader to your <description>."
-	Write-Host "-AddPackageNotes"
-    Write-Host "   Adds and saves a package notes link from $CNCPackageNotes to your <description>."
-	Write-Host "-EditFooter"
-    Write-Host "   Edit $CNCFooter with Notepad++ or Notepad."
-	Write-Host "-EditHeader"
-    Write-Host "   Edit $CNCHeader with Notepad++ or Notepad."
-	Write-Host "-EditPackageNotes"
-    Write-Host "   Edit $CNCPackageNotes with Notepad++ or Notepad."
-	Write-Host "-MakeBackups"
-    Write-Host "   Make filename.ext.CNC.BAK of all modified files."
-	Write-Host "-OpenURLs"
-    Write-Host "   Opens all URLs in your browser for inspection when finished."
-	Write-Host "-OpenValidatorInfo"
-    Write-Host "   Opens the Chocolatey package-validator info page on GitHub in your default browser."	
-	Write-Host "-ShowFooter"
-    Write-Host "   Displays $CNCFooter."	
-	Write-Host "-ShowHeader"
-    Write-Host "   Displays $CNCHeader."
-	Write-Host "-OptimizeImages, -OptimizePNGs"
-    Write-Host "   Runs PNGOptimizerCL on supported image files."
-	Write-Host "-Recurse"
-    Write-Host "   Runs CNC recursively."
-	Write-Host "-Update"
-    Write-Host "   Will re-write out your nuspec file; e.g. change to UTF-8 w/o BOM."
-	Write-Host "-UpdateAll"
-    Write-Host "   Rights all wrongs."
-	Write-Host "-UpdateImageURLs"
-    Write-Host "   Updates image URLs with Staticaly CDN URLs (default)."
-	Write-Host "-UpdateScripts"
-    Write-Host "   Will re-write out your PowerShell scripts, e.g. change to UTF-8 w/BOM, and add ErrorActionPreference=Stop."
-	Write-Host "-UpdateXMLComment"
-    Write-Host "   Updates the XML comment for UTF-8 checking."
-	Write-Host "-UpdateXMLDeclaration"
-    Write-Host "   Updates the XML declaration."
-	Write-Host "-UpdateXMLNamespace"
-	Write-Host "   Updates the XML Namespace"
-	Write-Host "-UseGitHack"
-    Write-Host "   Use GitHack for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
-	Write-Host "-UseGitCDN"
-    Write-Host "   Use GitCDN for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
-    Write-Host "-UsejsDelivr"
-    Write-Host "   Use jsDeliver for image URLs replacement, for use with -UpdateImageURLs or -UpdateAll."
-	Write-Host "-WhatIf"
-    Write-Host "   Test run, don't save changes."
-	Write-Host "From your packages' root directory, run CNC -Recurse to check all your packages." -Foreground Magenta #>
     Get-Help $MyInvocation.MyCommand.Definition -Detailed
 	return
 }
