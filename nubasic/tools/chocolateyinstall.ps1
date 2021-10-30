@@ -2,7 +2,7 @@
 $packageName = 'nubasic'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #$ZipFile     = "$toolsDir\nubasic-ide-"+"$ENV:ChocolateyPackageVersion"+"-setup_x64.zip"
-$ZipFile     = "$toolsDir\nubasic-ide-nubasic-ide-1.51-setup_x64.zip"
+$ZipFile     = "$toolsDir\nubasic-ide-1.51-setup_x64.zip"
  
 Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $toolsDir
  
