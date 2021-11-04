@@ -6,7 +6,7 @@ $packageArgs = @{
   softwareName   = 'Plexamp*'
   fileType       = 'EXE'
   silentArgs     = '/S'
-  file           = "$toolsDir\Plexamp Setup $env:ChocolateyPackageVersion.exe"
+  file64         = "$toolsDir\Plexamp Setup $env:ChocolateyPackageVersion.exe"
   validExitCodes = @(0,1)
   }
   
