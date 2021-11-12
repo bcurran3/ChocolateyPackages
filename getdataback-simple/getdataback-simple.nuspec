@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>getdataback-simple</id>
-    <version>5.55</version>
+    <version>5.56</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/getdataback-simple</packageSourceUrl>
     <title>GetDataBack Pro (Trial)(Install)</title>
     <authors>Runtime Software</authors>
     <projectUrl>https://www.runtime.org/data-recovery-software.htm</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/getdataback-simple/GetDataBackSimple_icon.png</iconUrl>
-    <copyright>(c) 2001-2017 by Runtime Software</copyright>
+    <copyright>(c) Runtime Software</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.runtime.org/data-recovery-documentation.htm</docsUrl>
     <tags>runtime getdataback simple data recovery utility ntfs fat12 fat16 fat32 exfat ext ext2 ext3 ext4 trial</tags>
