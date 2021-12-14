@@ -5,10 +5,12 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 #TDL - add package parameter to select individual language
 
 if (Test-Path $env:ProgramFiles\IrfanView\Languages) {
+	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_arabic.zip" -Destination $env:ProgramFiles\IrfanView\Languages
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_chinese.zip" -Destination $env:ProgramFiles\IrfanView\Languages
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_czech.zip" -Destination $env:ProgramFiles\IrfanView\Languages
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_deutsch.zip" -Destination $env:ProgramFiles\IrfanView
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_estonian.zip" -Destination $env:ProgramFiles\IrfanView\Languages
+	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_finnish.zip" -Destination $env:ProgramFiles\IrfanView\Languages
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_french.zip" -Destination $env:ProgramFiles\IrfanView\Languages
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_hungarian.zip" -Destination $env:ProgramFiles\IrfanView
 	Get-ChocolateyUnzip -FileFullPath "$toolsDir\irfanview_lang_italian.zip" -Destination $env:ProgramFiles\IrfanView\Languages
