@@ -4,8 +4,8 @@ $packageName    = 'vnc-viewer'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $extractDir     = "$toolsDir\extracted"
-$url            = "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-$ENV:ChocolateyPackageVersion-Windows-msi.zip"
-$checksum       = 'D59EAD83002444EE96AA33DDAA76E7284C52EFC8175DA128096ECB02A0D68F3A'
+$url            = "https://www.realvnc.com/download/file/viewer.files/VNC-Viewer-6.21.1109-Windows-msi.zip"
+$checksum       = 'a54f16a927521a73952d5ed399302da1c55883ccf7723fce9da037d9f0a76e86'
 
 $packageArgs = @{
   packageName   = $packageName
