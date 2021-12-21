@@ -96,6 +96,7 @@ param (
     [switch]$OpenURLs,
     [switch]$OpenValidatorInfo,
     [switch]$Recurse,
+    [switch]$ReduceOutput,
     [switch]$ShowFooter,
     [switch]$ShowHeader,
     [switch]$ShowPackageNotes,
@@ -112,8 +113,10 @@ param (
     [switch]$WhatIf
  )
 
-Write-Host "CNC.ps1 v2021.10.28 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
-Write-Host "Copyleft 2018-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+if (!$ReduceOutput) {
+    Write-Host "CNC.ps1 v2021.10.28 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+    Write-Host "Copyleft 2018-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+}
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
@@ -188,9 +191,9 @@ if ($ShowPackageNotes) {
 }
 
 if ($OpenValidatorInfo) {
-    Write-Host "  ** Opening https://github.com/chocolatey/package-validator/wiki." -Foreground Magenta
+    Write-Host "  ** Opening https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/." -Foreground Magenta
     Write-Host	
-    &start https://github.com/chocolatey/package-validator/wiki
+    &start https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
 	return
 }
 
@@ -305,8 +308,10 @@ if (Test-Path "$pwd\iconURL.image"){
 	if (!$height){$height="?"}
 	if (!$width){$width="?"}
         Write-Warning "  ** <iconUrl> - icon dimensions are h$height x w$width."
-	    Write-Host "           ** Suggestion: Use package icons with at least 128 pixels in width or height if available." -Foreground Cyan
-		$GLOBAL:Suggestions++
+        if (!$ReduceOutput) {
+	      Write-Host "           ** Suggestion: Use package icons with at least 128 pixels in width or height if available." -Foreground Cyan
+		}
+        $GLOBAL:Suggestions++
        }
     Remove-Item "$pwd\iconURL.image" -Force
    }
@@ -391,7 +396,9 @@ if (($url -match "http://") -or ($url -match "https://")){
 function Check-LicenseFile{
   $LicenseFile=(Get-ChildItem -Path $path -Include *LICENSE* -Recurse)
   if ($LicenseFile){
-	  Write-Host 'FYI:       ** Binary files - '$LicenseFile.Name'file(s) found.' -Foreground Green
+      if (!$ReduceOutput) {
+	    Write-Host 'FYI:       ** Binary files - '$LicenseFile.Name'file(s) found.' -Foreground Green          
+      }
 	  $GLOBAL:FYIs++
 	 } else {
 	   Write-Host "WARNING:   ** Binary files - LICENSE.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
@@ -404,8 +411,10 @@ function Check-LicenseFile{
 function Check-VerificationFile{
   $VerificationFile=(Get-ChildItem -Path $path -Include *VERIFICATION* -Recurse)
   if ($VerificationFile){
-      Write-Host 'FYI:       ** Binary files - '$VerificationFile.Name'file(s) found.' -Foreground Green
-	  $GLOBAL:FYIs++
+      if (!$ReduceOutput) {
+        Write-Host 'FYI:       ** Binary files - '$VerificationFile.Name'file(s) found.' -Foreground Green
+	  }
+      $GLOBAL:FYIs++
 	} else {
 	  Write-Host "WARNING:   ** Binary files - VERIFICATION.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
 	  Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip) have been included without including a VERIFICATION.txt`n              file. This file is required when including binaries" -Foreground Cyan
@@ -418,8 +427,10 @@ function Check-Binaries{
   $IncludedBinaries=(Get-ChildItem -Path $path -Include $BinaryExtensions -Recurse)
   if ($IncludedBinaries){
       Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
-      Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -Foreground Cyan
-	  $GLOBAL:Notes++
+      if (!$ReduceOutput) {
+        Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -Foreground Cyan
+	  }
+      $GLOBAL:Notes++
 	  Check-LicenseFile
 	  Check-VerificationFile
      }
@@ -483,7 +494,7 @@ function Check-Header{
      } else {
        $GLOBAL:FoundHeader=$False
        $GLOBAL:Suggestions++
-       if (!($AddPackageNotes)) {	 
+       if (!($AddPackageNotes) -and !($ReduceOutput)) {	 
 	       Write-Host '           ** Suggestion: Consider adding a header and help propagate (unofficial) choco:// Protocol support' -Foreground Cyan
 	      }
 	   }
@@ -562,7 +573,7 @@ function Check-PackageNotes{
      } else {
        $GLOBAL:FoundPackageNotes=$False
        $GLOBAL:Suggestions++
-       if (!($AddPackageNotes)) {
+       if (!($AddPackageNotes) -and (!$ReduceOutput) ) {
 	       Write-Host '           ** Suggestion: Consider adding PACKAGE NOTES to inform users of any special information about the package.' -Foreground Cyan
 	      }
 	  }
@@ -617,11 +628,15 @@ $PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packag
 	 } 
    $PackagePageInfo = (Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID")
    if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
-	   Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
-	   $GLOBAL:FYIs++
+	   if (!$ReduceOutput) {
+         Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
+	   }
+       $GLOBAL:FYIs++
 	  }
    if ($PackagePageInfo -match 'All Checks are Passing'){
-	   Write-Host "FYI:       ** $NuspecID current status: All Checks are Passing" -Foreground Green
+	   if (!$ReduceOutput) {
+         Write-Host "FYI:       ** $NuspecID current status: All Checks are Passing" -Foreground Green
+       }
 	   $GLOBAL:FYIs++
 	  }
    if (($NuspecID -ne 'choco-nuspec-checker') -and ($PackagePageInfo -match '
@@ -806,13 +821,17 @@ if (Test-Path $path\tools\chocolateyInstall.ps1){
    $test=Get-Content $path\tools\chocolateyInstall.ps1
     if ($test -match "sourceforge"){
         Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses SourceForge as download source. This will trigger a message from the verifier:"
-	    Write-Host "           ** Guideline: Using SourceForge as the download source of installers is not recommended. Please consider an`n              alternative, official distribution location if one is available." -Foreground Cyan
-	    $GLOBAL:Guidelines++
+	    if (!$ReduceOutput) {
+          Write-Host "           ** Guideline: Using SourceForge as the download source of installers is not recommended. Please consider an`n              alternative, official distribution location if one is available." -Foreground Cyan
+	    }
+        $GLOBAL:Guidelines++
        }
     if ($test -match "fosshub"){
         Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses FossHub as download source."
-	    Write-Host "           ** Guideline: In Dec. 2016 FossHub requested ""Please help us keep our costs down by not using scripts`n              to download software from our site.""" -Foreground Cyan
-	    $GLOBAL:Guidelines++
+	    if (!$ReduceOutput) {
+          Write-Host "           ** Guideline: In Dec. 2016 FossHub requested ""Please help us keep our costs down by not using scripts`n              to download software from our site.""" -Foreground Cyan
+	    }
+        $GLOBAL:Guidelines++
        }
   }
 }
@@ -1048,8 +1067,10 @@ if (!($NuspecAuthors)) {
 # <bugTrackerUrl> checks
 if (!($NuspecBugTrackerURL)) {
      Write-Warning "  ** <bugTrackerUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: bugTrackerUrl - points to the location where issues and tickets can be accessed' -Foreground Cyan
-	$GLOBAL:Suggestions++
+	if (!$ReduceOutput) {
+      Write-Host '           ** Suggestion: bugTrackerUrl - points to the location where issues and tickets can be accessed' -Foreground Cyan
+	}
+    $GLOBAL:Suggestions++
    } else {
      Validate-URL "<bugTrackerUrl>" $NuspecBugTrackerURL
 	}
@@ -1081,8 +1102,10 @@ if (!($NuspecCopyright)) {
 
 # <dependencies> checks
 if (!($NuspecDependencies)) {
-    Write-Host "FYI:       ** <dependencies> - element is empty." -Foreground Yellow
-	$GLOBAL:FYIs++
+    if (!$ReduceOutput) {
+      Write-Host "FYI:       ** <dependencies> - element is empty." -Foreground Yellow
+	}
+    $GLOBAL:FYIs++
    } else {
      if ((!$NuspecDependencies) -and ($NuspecTitle -match "deprecated")){
 	      Write-Host "WARNING:   ** <dependencies> - Deprecated packages must have a dependency." -Foreground Red
@@ -1097,8 +1120,10 @@ if (!($NuspecDependencies)) {
 	 if ($NuspecDependencies.dependency.id.count -eq 1){
     	 if ($NuspecDependencies.dependency.version -eq $null){
 	          Write-Warning "  ** <dependencies> - $DependencyName has no version. This will trigger a message from the verifier:"
-      	      Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
-			  $GLOBAL:Guidelines++
+      	      if (!$ReduceOutput) {
+                Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
+			  }
+              $GLOBAL:Guidelines++
 	         }
 	 } else {
 	   $DependencyNumber=0
@@ -1106,8 +1131,10 @@ if (!($NuspecDependencies)) {
 	    $DependencyName=$NuspecDependencies.dependency.id[$DependencyNumber]
  	    if ($NuspecDependencies.dependency[$DependencyNumber].version -eq $null){
 				Write-Warning "  ** <dependencies> - ""$DependencyName"" has no version. This will trigger a message from the verifier:"
-			    Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
-				$GLOBAL:Guidelines++
+			    if (!$ReduceOutput) {
+                  Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
+				}
+                $GLOBAL:Guidelines++
 			}
 	   $DependencyNumber++
        } while ($DependencyNumber -lt $NuspecDependencies.dependency.id.count)
@@ -1137,8 +1164,10 @@ if (!$NuspecDescription){
      Check-Markdown "<description>" $NuspecDescription
      if ($NuspecDescription.Length -lt 30) {
 	     Write-Warning "  ** <description> - is less than 30 characters." 
-		 Write-Host "           ** Guideline: Description should be sufficient to explain the software. Please fill in the description`n              with more information about the software. Feel free to use use markdown." -Foreground Cyan
-		 $GLOBAL:Guidelines++
+		 if (!$ReduceOutput) {
+           Write-Host "           ** Guideline: Description should be sufficient to explain the software. Please fill in the description`n              with more information about the software. Feel free to use use markdown." -Foreground Cyan
+		 }
+         $GLOBAL:Guidelines++
 		 }
      if ($NuspecDescription.Length -gt 4000) {
 		 $TotalChars=$NuspecDescription.Length
@@ -1199,8 +1228,10 @@ if (!$NuspecDescription){
 # <docsUrl> checks
 if (!($NuspecDocsURL)) {
     Write-Warning "  ** <docsUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: docsUrl - points to the location of the wiki or docs of the software' -Foreground Cyan
-	$GLOBAL:Suggestions++
+	if (!$ReduceOutput) {
+      Write-Host '           ** Suggestion: docsUrl - points to the location of the wiki or docs of the software' -Foreground Cyan
+	}
+    $GLOBAL:Suggestions++
    } else {
      if ($NuspecDocsURL -match 'At what url are the software docs located'){
 	     Write-Host "WARNING:   ** <docsUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
@@ -1225,7 +1256,9 @@ if (!($NuspecFiles)) {
 # <iconUrl> checks
 if (!($NuspecIconURL)) {
     Write-Warning "  ** <iconUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Guideline: The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -Foreground Cyan
+	if (!$ReduceOutput) {
+      Write-Host '           ** Guideline: The iconUrl should be added if there is one. Please correct this in the nuspec, if applicable.' -Foreground Cyan
+    }
 	$GLOBAL:Guidelines++
    } else {
      if ($NuspecIconURL -cmatch 'REPLACE_YOUR_REPO'){
@@ -1240,8 +1273,10 @@ if (!($NuspecIconURL)) {
 	 $IconExt=($NuspecIconURL | Select-String -Pattern $AcceptableIconExts)
      if (!($IconExt)){
 	     Write-Warning "  ** <iconUrl> - Your package icon is NOT a .PNG or .SVG. This will trigger a message from the verifier:"
-	     Write-Host '           ** Suggestion: As per the packaging guidelines icons should be either a png or svg file.' -Foreground Cyan
-	     $GLOBAL:Suggestions++
+	     if (!$ReduceOutput) {
+           Write-Host '           ** Suggestion: As per the packaging guidelines icons should be either a png or svg file.' -Foreground Cyan
+	     }
+         $GLOBAL:Suggestions++
        }
 	 if ($NuspecIconURL -match "raw.githubusercontent"){
          if ($UpdateImageURLs) {
@@ -1295,13 +1330,17 @@ if (!($NuspecID)) {
 # <licenseUrl> checks
 if (!($NuspecLicenseURL)) {
     Write-Warning "  ** <licenseUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host "           ** Guideline: The licenseUrl should be added if there is one. Please correct this in the nuspec,`n              if applicable." -Foreground Cyan
-	$GLOBAL:Guidelines++
+	if (!$ReduceOutput) {
+      Write-Host "           ** Guideline: The licenseUrl should be added if there is one. Please correct this in the nuspec,`n              if applicable." -Foreground Cyan
+	}
+    $GLOBAL:Guidelines++
    } else {
      if ($NuspecLicenseURL -eq $NuspecprojectUrl) {
          Write-Warning "  ** <licenseUrl> - is the same as <projectUrl>. This will trigger a message from the verifier:"
-	     Write-Host "           ** Guideline: The licenseUrl should not usually be an exact match to softwareUrl. Please correct this in the`n              nuspec, if applicable. ." -Foreground Cyan
-	     $GLOBAL:Guidelines++
+	     if (!$ReduceOutput) {
+           Write-Host "           ** Guideline: The licenseUrl should not usually be an exact match to softwareUrl. Please correct this in the`n              nuspec, if applicable. ." -Foreground Cyan
+	     }
+         $GLOBAL:Guidelines++
 		}
      if ($NuspecLicenseURL -cmatch 'REMOVE_OR_FILL_OUT'){
          Write-Host "WARNING:   ** <licenseUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
@@ -1315,8 +1354,10 @@ if (!($NuspecLicenseURL)) {
 # <mailingListUrl> checks
 if (!($NuspecMailingListURL)) {
     Write-Warning "  ** <mailingListUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: mailingListUrl - points to the forum or email list group for the software' -Foreground Cyan
-	$GLOBAL:Suggestions++
+	if (!$ReduceOutput) {
+      Write-Host '           ** Suggestion: mailingListUrl - points to the forum or email list group for the software' -Foreground Cyan
+	}
+    $GLOBAL:Suggestions++
    } else {
      Validate-URL "<mailingListUrl>" $NuspecMailingListURL
 	}
@@ -1341,8 +1382,10 @@ if (!($NuspecOwners)) {
 # <packageSourceUrl> checks
 if (!($NuspecPackageSourceURL)) {
     Write-Warning "  ** <packageSourceUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host "           ** Guideline: The nuspec has been enhanced to allow packageSourceUrl, pointing to the url where the package`n              source resides. This is a strong guideline because it simplifies collaboration.`n              Please add it to the nuspec." -Foreground Cyan
-	$GLOBAL:Guidelines++
+	if (!$ReduceOutput) {
+      Write-Host "           ** Guideline: The nuspec has been enhanced to allow packageSourceUrl, pointing to the url where the package`n              source resides. This is a strong guideline because it simplifies collaboration.`n              Please add it to the nuspec." -Foreground Cyan
+	}
+    $GLOBAL:Guidelines++
    } else {
      if ($NuspecPackageSourceURL -cmatch 'Where is this Chocolatey package located'){
 	     Write-Host "WARNING:   ** <packageSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
@@ -1356,8 +1399,10 @@ if (!($NuspecPackageSourceURL)) {
 # <projectSourceUrl> checks
 if (!$NuspecProjectSourceURL) {
     Write-Warning "  ** <projectSourceUrl> - element is empty. This will trigger a message from the verifier:"
-	Write-Host '           ** Suggestion: projectSourceUrl - points to the location of the underlying software source' -Foreground Cyan
-	$GLOBAL:Suggestions++
+	if (!$ReduceOutput) {
+      Write-Host '           ** Suggestion: projectSourceUrl - points to the location of the underlying software source' -Foreground Cyan
+	}
+    $GLOBAL:Suggestions++
    } else {
      if ($NuspecProjectSourceURL -match 'Software Source Location'){
          Write-Host "WARNING:   ** <projectSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
@@ -1368,8 +1413,10 @@ if (!$NuspecProjectSourceURL) {
 		 }
 	 if ($NuspecProjectURL -eq $NuspecProjectSourceURL){
          Write-Warning "  ** <projectUrl> and <projectSourceUrl> elements are the same. This will trigger a message from the verifier:"
-         Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -Foreground Cyan
-		 $GLOBAL:Guidelines++
+         if (!$ReduceOutput) {
+           Write-Host "           ** Guideline: ProjectUrl and ProjectSourceUrl are typically different, but not always. Please ensure`n              that projectSourceUrl is pointing to software source code or remove the field from the nuspec." -Foreground Cyan
+		 }
+         $GLOBAL:Guidelines++
        }
 	}
 	
@@ -1394,8 +1441,10 @@ if (!($NuspecProjectURL)) {
 # <releaseNotes> checks
 if (!($NuspecReleaseNotes)) {
     Write-Warning "  ** <releaseNotes> - element is empty. This will trigger a message from the verifier:"
-	Write-Host "           ** Guideline: Release Notes (releaseNotes) are a short description of changes in each version of a package.`n              Please include releasenotes in the nuspec. NOTE: To prevent the need to continually update this field,`n              providing a URL to an external list of Release Notes is perfectly acceptable." -Foreground Cyan
-	$GLOBAL:Guidelines++
+	if (!$ReduceOutput) {
+      Write-Host "           ** Guideline: Release Notes (releaseNotes) are a short description of changes in each version of a package.`n              Please include releasenotes in the nuspec. NOTE: To prevent the need to continually update this field,`n              providing a URL to an external list of Release Notes is perfectly acceptable." -Foreground Cyan
+	}
+    $GLOBAL:Guidelines++
    } else {
      Check-Markdown "<releaseNotes>" $NuspecReleaseNotes
      if ($NuspecReleaseNotes -cmatch 'REPLACE_OR_REMOVE'){
@@ -1422,8 +1471,10 @@ if (!($NuspecRequireLicenseAcceptance)) {
 # <summary> checks
 if (!($NuspecSummary)) {
     Write-Warning "  ** <summary> - element is empty. This will trigger a message from the verifier:"
-    Write-Host '           ** Guideline: Summary (summary) is a short explanation of the software. Please include summary in the nuspec.' -Foreground Cyan
-	$GLOBAL:Guidelines++
+    if (!$ReduceOutput) {
+      Write-Host '           ** Guideline: Summary (summary) is a short explanation of the software. Please include summary in the nuspec.' -Foreground Cyan
+	}
+    $GLOBAL:Guidelines++
 	} else {
 	  if ($NuspecSummary -cmatch '__REPLACE__'){
           Write-Host "WARNING:   ** <summary> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
@@ -1448,8 +1499,10 @@ if (!($NuspecTags)) {
 		}	
 	  if ($NuspecTags -match "chocolatey"){
          Write-Warning "  ** <tags> - there is a tag named ""chocolatey"" which will trigger a message from the verifier:"
-         Write-Host '           ** Guideline: Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -Foreground Cyan
-		 $GLOBAL:Guidelines++
+         if (!$ReduceOutput) {
+           Write-Host '           ** Guideline: Tags (tags) should not contain 'chocolatey' as a tag. Please remove that in the nuspec.' -Foreground Cyan
+		 }
+         $GLOBAL:Guidelines++
 		}
 	  if ($NuspecTags -match "notsilent"){
          Write-Warning "  ** <tags> - there is a tag named ""notsilent"" which will trigger a message from the verifier:"
@@ -1470,8 +1523,10 @@ if (!($NuspecTitle)) {
    } else {
      if ($NuspecTitle -eq $NuspecID){
 	     Write-Warning "  ** <title> and <id> are the same which will trigger a message from the verifier:"
-		 Write-Host "           ** Guideline: Title (title) matches id exactly. Please consider using something slightly more descriptive`n              for the title in the nuspec." -Foreground Cyan
-		 $GLOBAL:Guidelines++
+		 if (!$ReduceOutput) {
+           Write-Host "           ** Guideline: Title (title) matches id exactly. Please consider using something slightly more descriptive`n              for the title in the nuspec." -Foreground Cyan
+		 }
+         $GLOBAL:Guidelines++
 	   }
    }
 
@@ -1574,13 +1629,15 @@ Check-PackageInternalFilesIncluded
 # Optimize any images files supported by PngOptimizerCL.exe
 Run-PNGOptimizer
 
-Write-Host "CNC found " -NoNewLine -Foreground Magenta
-Write-Host "$GLOBAL:Required REQUIRED changes, " -NoNewLine -Foreground Red
-Write-Host "$GLOBAL:Guidelines GUIDELINE changes, " -NoNewLine -Foreground Yellow
-Write-Host "$GLOBAL:Suggestions SUGGESTED changes, " -NoNewLine -Foreground Yellow
-Write-Host "$GLOBAL:Notes NOTES, " -NoNewLine -Foreground Yellow
-Write-Host "$GLOBAL:FYIs FYIs, " -NoNewLine -Foreground Yellow
-Write-Host "and made $GLOBAL:Fixes changes." -ForeGround Green
+if (!$ReduceOutput) {
+    Write-Host "CNC found " -NoNewLine -Foreground Magenta
+    Write-Host "$GLOBAL:Required REQUIRED changes, " -NoNewLine -Foreground Red
+    Write-Host "$GLOBAL:Guidelines GUIDELINE changes, " -NoNewLine -Foreground Yellow
+    Write-Host "$GLOBAL:Suggestions SUGGESTED changes, " -NoNewLine -Foreground Yellow
+    Write-Host "$GLOBAL:Notes NOTES, " -NoNewLine -Foreground Yellow
+    Write-Host "$GLOBAL:FYIs FYIs, " -NoNewLine -Foreground Yellow
+    Write-Host "and made $GLOBAL:Fixes changes." -ForeGround Green
+}
 
 if ($GLOBAL:UpdateNuspec) {
    if ($WhatIf){
@@ -1606,9 +1663,11 @@ if ($recurse) {
 # main recurse foreach loop ends here
 }
 
-Write-Host "`nFound CNC.ps1 useful?" -Foreground White
-Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
-Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
+if (!$ReduceOutput) {
+    Write-Host "`nFound CNC.ps1 useful?" -Foreground White
+    Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
+    Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
+}
 return
 
 # TDL
