@@ -114,7 +114,7 @@ param (
  )
 
 if (!$ReduceOutput) {
-    Write-Host "CNC.ps1 v2021.10.28 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+    Write-Host "CNC.ps1 v2021.12.20 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
     Write-Host "Copyleft 2018-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 }
 
