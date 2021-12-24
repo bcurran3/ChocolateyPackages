@@ -1,4 +1,4 @@
-﻿#https://www.danhinsley.com/downloads/MetaXSetup.msi
+﻿# https://www.danhinsley.com/downloads/MetaXSetup.msi
 $ErrorActionPreference = 'Stop'
 $packageName = 'metax'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
