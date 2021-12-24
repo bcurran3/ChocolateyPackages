@@ -2,7 +2,7 @@
 $packageName    = 'getdataback-simple'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.runtime.org/gdbprosetup.exe'
-$checksum       = '4B894A3905EAAADD46BB9B5E7668AFAAC21F4B8573FEBB6225F52EE3E1B40D0A'
+$checksum       = 'B6C6E382210D3485015ED05C5534F7C094DBBBA535566CA1C497106B37B869BE'
 
 $packageArgs = @{
   packageName    = $packageName
