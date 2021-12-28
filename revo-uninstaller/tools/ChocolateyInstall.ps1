@@ -1,4 +1,5 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿# https://download.revouninstaller.com/download/revosetup.exe
+$ErrorActionPreference = 'Stop';
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
