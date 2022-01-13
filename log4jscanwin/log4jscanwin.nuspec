@@ -4,7 +4,7 @@
   <metadata>
     <id>log4jscanwin</id>
     <title>Qualys Log4j Vulnerability Scanner (Portable)</title>
-    <version>1.2.18</version>
+    <version>2.1.2.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/log4jscanwin</packageSourceUrl>
     <authors>Qualys, Inc.</authors>
