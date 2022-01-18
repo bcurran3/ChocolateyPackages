@@ -3,16 +3,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-take-control-viewer</id>
-    <title>SolarWinds Take Control Viewer (Install)</title>
-    <version>7.00.20</version>
+    <title>N-able Take Control Viewer (Install)</title>
+    <version>7.00.26</version>
     <authors>SolarWinds MSP</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-take-control-viewer</packageSourceUrl>
-    <projectUrl>https://www.solarwindsmsp.com/products/rmm/remote-access</projectUrl>
-    <docsUrl>http://help.logicnow.com/remote-management/helpcontents/index.html?take_control.htm</docsUrl>
-    <tags>solarwinds solarwindsmsp remote take control support tool</tags>
-    <copyright>© SolarWinds MSP</copyright>
-    <licenseUrl>http://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <projectUrl>https://www.n-able.com/features/remote-access</projectUrl>
+    <docsUrl>https://documentation.n-able.com/remote-management/userguide/Content/take_control.htm</docsUrl>
+    <tags>solarwinds solarwindsmsp nable remote take control support tool</tags>
+    <copyright>© N-able</copyright>
+    <licenseUrl>https://www.n-able.com/legal/software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-viewer/solarwinds-take-control-viewer_icon.png</iconUrl>
     <summary>Take Control is a remote management tool.</summary>
@@ -50,7 +50,7 @@ When users have technical issues that require your expert attention, your remote
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-take-control-viewer/readme.md)**
 
-
+**NOTE: This package will be deprecated and replaced with nable-take-control-viewer**
 
 ---
 
@@ -62,7 +62,7 @@ When users have technical issues that require your expert attention, your remote
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
-    <releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
+    <releaseNotes>https://status.n-able.com/release-notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

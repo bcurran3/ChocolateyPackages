@@ -2,7 +2,7 @@
 $packageName    = 'solarwinds-take-control-viewer'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://dashboard.systemmonitor.us/rap.php?Action=downloadtcviewermspanywherewin'
-$checksum       = '5F72A350F929D499F75DF9B1D2C852F6019A59A74C9651B17F84993BCC2F9285'
+$checksum       = 'A7F30675AA0011F7D80DE1DCD01185BB96003D0FAE4C54C9447FD0EBCE5620B9'
 
 $packageArgs = @{
   packageName    = $packageName
