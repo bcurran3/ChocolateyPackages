@@ -5,7 +5,7 @@
     <id>solarwinds-recovery-console</id>
     <title>N-able Recovery Console (Install)</title>
     <version>21.10.0.21332</version>
-    <authors>SolarWinds MSP</authors>
+    <authors>N-able</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-recovery-console</packageSourceUrl>
     <projectUrl>https://www.n-able.com/products/backup</projectUrl>
