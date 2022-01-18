@@ -5,7 +5,7 @@
     <id>solarwinds-take-control-viewer</id>
     <title>N-able Take Control Viewer (Install)</title>
     <version>7.00.26</version>
-    <authors>SolarWinds MSP</authors>
+    <authors>N-able</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-take-control-viewer</packageSourceUrl>
     <projectUrl>https://www.n-able.com/features/remote-access</projectUrl>
