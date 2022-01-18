@@ -4,18 +4,18 @@
   <metadata>
     <id>solarwinds-automation-manager</id>
     <title>SolarWinds Automation Manager (Install)</title>
-    <version>2.15.1.1</version>
-    <authors>SolarWinds MSP</authors>
+    <version>2.20.0.17</version>
+    <authors>N-able</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-automation-manager</packageSourceUrl>
-    <projectUrl>https://solarwindsmsp.com/products/n-central/automation</projectUrl>
-    <docsUrl>http://help.logicnow.com/remote-management/helpcontents/index.html?script_builder.htm</docsUrl>
-    <tags>solarwinds solarwindsmsp msp automation manager</tags>
-    <copyright>© SolarWinds MSP</copyright>
-    <licenseUrl>https://solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <projectUrl>https://www.n-able.com/features/automation</projectUrl>
+    <docsUrl>https://documentation.n-able.com/remote-management/userguide/Content/script_builder.htm</docsUrl>
+    <tags>solarwinds solarwindsmsp nable msp automation manager</tags>
+    <copyright>© N-able</copyright>
+    <licenseUrl>https://www.n-able.com/legal/software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-automation-manager/solarwinds-automation-manager_icon.png</iconUrl>
-    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <mailingListUrl>https://success.n-able.com/#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
     <summary>Get More Done with Automation without Learning a New Scripting Language</summary>
     <description>
 ***
@@ -63,11 +63,13 @@ And this is just a short sample.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-automation-manager/readme.md)**
 
+NOTE: This will be deprecated and replaced with nable-automation-manager
+
 ***
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 ***
     </description>
-    <releaseNotes>https://status.solarwindsmsp.com/release-notes/</releaseNotes>
+    <releaseNotes>https://status.n-able.com/release-notes/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

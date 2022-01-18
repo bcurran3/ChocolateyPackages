@@ -2,7 +2,7 @@
 $packageName    = 'solarwinds-automation-manager'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = "https://rm-downloads-us.logicnow.com/automation-manager/AutomationManager-$env:ChocolateyPackageVersion.exe"
-$checksum       = '7756B2836C1AAC85B1EF012BC95FAEAA92AA9429671C4DC2B31B33D46DF552BE'
+$checksum       = 'A08C8A29EF6ECCDED7C7FF8C263FEFA0216F0FFA0D14DDC20179AB081F596AE9'
 
 $packageArgs = @{
   packageName   = $packageName
