@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>30.0.101.1069</version>
+    <version>30.0.101.1191</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
@@ -52,7 +52,7 @@ This is a DCH driver. [Click for more information about DCH drivers](https://www
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/648245/readme.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/691496/readme.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="dependency-windows10" version="10.1709" />
