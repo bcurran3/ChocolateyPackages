@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * Binary is included in the package. No URL downloads required. This version will always be available to install.
+* v0.97.3 release - 32-bit version is still v0.9.27-1
 
 ***
 
