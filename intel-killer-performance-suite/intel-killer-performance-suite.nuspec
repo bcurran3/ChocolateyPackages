@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-killer-performance-suite</id>
-    <version>3.1121.1165</version>
+    <version>3.1122.183</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
     <title>Intel® Killer Performance Suite (Install)</title>
@@ -48,7 +48,7 @@ Notes:
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/710064/KillerPerformanceSuite_3.1121.1159.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/715527/KillerPerformanceSuite_3.1122.183.pdf</releaseNotes>
     <dependencies>
       <dependency id="dependency-windows10" version="10.0"/>
     </dependencies>
