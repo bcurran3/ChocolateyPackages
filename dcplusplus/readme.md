@@ -1,6 +1,8 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* This package downloads the installer via a version specific URL. It should never fail unless the version is completely removed from the vendor website.
+* As of v0.870 binaries are included in the package. No more URL downloads. This version will always be available to install.
+* This program does not support silent uninstall. Use the Control Panel to uninstall.
+* If/When you find a newer version of the program available open a GitHub Issue requesting the package to be updated.
 
 ***
 
