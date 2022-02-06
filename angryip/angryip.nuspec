@@ -3,22 +3,27 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>angryip</id>
-    <version>3.7.6</version>
+    <version>3.8.2</version>
     <title>Angry IP Scanner (Installer)</title>
-    <authors>angryziber</authors>
+    <authors>Anton Keks</authors>
+    <copyright>Anton Keks</copyright>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/angryip</packageSourceUrl>
     <licenseUrl>https://raw.githubusercontent.com/angryip/ipscan/master/LICENSE</licenseUrl>
     <projectUrl>http://angryip.org/</projectUrl>
-    <projectSourceUrl>https://github.com/angryziber/ipscan</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/angryziber/ipscan/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/angryip/ipscan</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/angryip/ipscan/issues</bugTrackerUrl>
     <docsUrl>http://angryip.org/faq/</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/angryip/angryip_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>---
+    <description>
+---
+
 ### [choco://angryip](choco://angryip)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
 ---
+
 	
 ![Screenshot of AngryIP](https://angryip.org/screenshots/ipscan-win10.png)
 
@@ -35,22 +40,25 @@ It runs on Linux, Windows, and Mac OS X, possibly supporting other platforms as 
 * Extensible with many data fetchers
 * Provides command-line interface
 
-* Over [23 million](https://angryip.org/2015/03/downloads.html) downloads
+* Over [29 million](https://angryip.org/2015/03/downloads.html) downloads
 * Free and open-source
 * Works on Windows, Mac and Linux
 * Installation not required
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/angryip/readme.md)**
 
+    
+
 ---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
----</description>
+
+---
+
+</description>
     <summary>Angry IP Scanner - fast and friendly network scanner</summary>
-    <releaseNotes>https://raw.githubusercontent.com/angryip/ipscan/master/RELEASE-NOTES</releaseNotes>
+    <releaseNotes>https://github.com/angryip/ipscan/releases</releaseNotes>
     <tags>angryziber angryip ipscan angry scanner network ip foss cross-platform</tags>
-    <dependencies>
-      <dependency id="javaruntime" version="8.0.40" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
