@@ -1,13 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'screenlogic-connect'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://www.pentair.com/content/dam/extranet/pentair-pool/residential/software-firmware/screenlogic/setup.exe'
+$url            = 'https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/software-firmware/screenlogic/setup.exe'
 $checksum       = '6DEABE14ACD64F1ECEEA6677AB0E8AABFE99C80B2A1717B3F3A2E9BE583A70DA'
 
 $packageArgs = @{
   packageName  = $packageName
   FileFullPath = "$toolsDir\pentairupdate.exe"
-  url          = 'https://www.pentair.com/content/dam/extranet/pentair-pool/residential/software-firmware/screenlogic/pentairupdate.exe'
+  url          = 'https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/software-firmware/screenlogic/pentairupdate.exe'
   checksum     = 'BC3A19B1B01A0D0AEEDFDC85584EF77B6A8ED783E0D0BEFEB4F3291761AFA3BA'
   checksumType = 'sha256'
 }

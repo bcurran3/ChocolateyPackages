@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>screenlogic-connect</id>
-    <version>5.2.738.0020210130</version>
+    <version>5.2.738.0020220206</version>
     <title>Pentair ScreenLogic Connect (Install)</title>
     <authors>Pentair</authors>
     <owners>bcurran3</owners>
@@ -48,7 +48,7 @@ integrated home automation solution including audio, security, climate, irrigati
     <copyright>(C) Pentair</copyright>
     <tags>pentair screenlogic screenlogic2 pool home automation</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/screenlogic-connect</packageSourceUrl>
-    <docsUrl>https://www.pentair.com/content/dam/extranet/pentair-pool/residential/manuals/automation/screenlogic2/screenlogic2-interface-installation-users-guide-english.pdf</docsUrl>
+    <docsUrl>https://www.pentair.com/content/dam/extranet/nam/pentair-pool/residential/manuals/automation/screenlogic2/screenlogic2-interface-installation-users-guide-english.pdf</docsUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
