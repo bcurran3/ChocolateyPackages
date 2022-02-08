@@ -1,9 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'solarwinds-advanced-monitoring-agent'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-#$CurrentVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','_')
-#$url            = "https://rm-downloads-us.logicnow.com/AGENT_$CurrentVersion.ZIP"
-$url            = "https://dashboard.systemmonitor.us/data_processor.php?function=agent_download&os=windows"
+$CurrentVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','_')
+$url            = "https://rm-downloads-us.logicnow.com/AGENT_$CurrentVersion.ZIP"
 $checksum       = '779C9637CE9C2E4B7A2B5489B28569C015FB2B74B705E3F777F8ED3203B65F2F'
 
 $packageArgs = @{
