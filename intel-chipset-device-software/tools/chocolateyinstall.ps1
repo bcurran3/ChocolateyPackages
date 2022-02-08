@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-chipset-device-software'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://downloadmirror.intel.com/30334/eng/SetupChipset.exe'
-$checksum       = 'D4A1891CD83E19FBB3D908F6DB3BFD516F65E06108FBE0C45FB7FC52F132D3B4'
+$url            = 'https://downloadmirror.intel.com/30553/eng/setupchipset.exe'
+#                                                   ^^^^^ changes 
+$checksum       = 'DEAB9FC03112350552E8CB2C15713670220764035BE8BEAC4789FBE73594EA32'
 
 $packageArgs = @{
   packageName    = $packageName
