@@ -4,7 +4,7 @@
   <metadata>
     <id>dependency-windows11</id>
     <title>Package Dependency on Windows 11</title>
-    <version>11.0</version>
+    <version>11.2110</version>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-windows11</packageSourceUrl>
