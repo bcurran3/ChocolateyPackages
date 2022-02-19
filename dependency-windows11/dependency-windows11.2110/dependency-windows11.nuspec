@@ -28,7 +28,7 @@ Other OS specific dependencies can be found [here](https://chocolatey.org/packag
 
 ### EXAMPLE USE FOR MAINTAINERS/PACKAGERS:
 
-![Examples](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dependency-windows11/dependency-windows11/dependency-windows11_examples.png)
+![Examples](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dependency-windows11/dependency-windows11_examples.png)
 
 Look at [Version History](https://chocolatey.org/packages/dependency-windows11#versionhistory) for the builds you can specify as a minimum requirement for your package.
 
