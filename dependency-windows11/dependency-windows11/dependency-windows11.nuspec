@@ -7,7 +7,7 @@
     <version>11.2110</version>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-windows10</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-windows11</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <projectUrl>https://docs.chocolatey.org/en-us/create/create-packages</projectUrl>
     <docsUrl>https://docs.microsoft.com/en-us/nuget/reference/nuspec#dependencies-element</docsUrl>
@@ -28,7 +28,7 @@ Other OS specific dependencies can be found [here](https://chocolatey.org/packag
 
 ### EXAMPLE USE FOR MAINTAINERS/PACKAGERS:
 
-![Examples](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dependency-windows10/dependency-windows10/dependency-windows10_examples.png)
+![Examples](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dependency-windows11/dependency-windows11/dependency-windows11_examples.png)
 
 Look at [Version History](https://chocolatey.org/packages/dependency-windows11#versionhistory) for the builds you can specify as a minimum requirement for your package.
 
