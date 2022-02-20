@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <projectUrl>https://downloadcenter.intel.com/download/19792/Intel-Processor-Diagnostic-Tool</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-dsa/intel-ipdt_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-ipdt/intel-ipdt_icon.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
