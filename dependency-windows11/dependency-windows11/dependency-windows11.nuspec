@@ -16,7 +16,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
     <tags>bcurran3 dependency osdependency win11</tags>
-    <summary></summary>
+    <summary>Windows 11 dependency package for use by package maintainers/creators.</summary>
     <description>
 	
 # NOTE TO MODERATORS: This package should be ready in theory but is untested. PLEASE DO NOT PASS this package until such time as I've tested it and repushed a version without this message.	
