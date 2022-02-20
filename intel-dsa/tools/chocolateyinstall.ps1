@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-dsa'
-$url         = 'https://downloadmirror.intel.com/28425/a08/Intel-Driver-and-Support-Assistant-Installer.exe'
-$checksum    = 'B86B177015444922022D8FB0C7FA03CF6C56D01D727EE18FF45AF0589504FBB7'
+$url         = 'https://downloadmirror.intel.com/28425/Intel-Driver-and-Support-Assistant-Installer.exe'
+$checksum    = '8865688227405F232E721869CDA22B064AEFD6B7DC1A8A2FF74F33D1552F45E8'
 
 $packageArgs = @{
   packageName    = $packageName
