@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>9.50.269</version>
+    <version>9.60.87</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
@@ -11,7 +11,7 @@
     <projectUrl>http://support.logitech.com/en_us/software/options</projectUrl>
     <iconUrl>https://secure.logitech.com/assets/64869/options-icon.png</iconUrl>
     <copyright>© Logitech. All rights reserved</copyright>
-    <licenseUrl>https://secure.logitech.com/en-us/footer/terms-of-use</licenseUrl>
+    <licenseUrl>https://www.logitech.com/tos/terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>logitech options keyboard mouse utility notsilent</tags>
     <summary>Logitech Options software lets you customize your device settings.</summary>
