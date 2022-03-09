@@ -18,9 +18,6 @@
     <tags>bcurran3 dependency osdependency win11</tags>
     <summary>Windows 11 dependency package for use by package maintainers/creators.</summary>
     <description>
-	
-# NOTE TO MODERATORS: This package should be ready in theory but is untested. PLEASE DO NOT PASS this package until such time as I've tested it and repushed a version without this message.	
-	
 **Package Dependency on Windows 11** is a Chocolatey package for use as a dependency by package maintainers/creators. It is similar in concept to **[Chocolatey Fast Answers Extension](https://chocolatey.org/packages/chocolatey-fastanswers.extension)** to provide a (proposed) standard way for dealing with packages/programs that are OS version specific. This package will purposely fail (throw) when Windows 11 is not found or an equal to or greater than version you specify. You can use **[Test-Dependency](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/extensions/Test-Dependency.ps1)** from **[Chocolatey Misc Helpers Extension](https://community.chocolatey.org/packages/chocolatey-misc-helpers.extension)** to abort install of your package if the dependency is not installed.
 
 
