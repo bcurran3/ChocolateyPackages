@@ -38,7 +38,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>(unofficial) Chocolatey Package Deprecater/Retirer rewrites a .nuspec file modifying it for deprecation or retirement.</summary>
     <releaseNotes>
 ### CHANGELOG:
-* 2022.03.15 - Updated messages with markdown that are incompatible with the Sept. 2019 changes to chocolatey.org, set requireLicenseAcceptance to false to avoid schema error (new behavior?), -addicon will now work if iconurl wass originally blank; changed iconUrl to use CDN URLs, now won't add [DEPRECATED] or [RETIRED] if you run cdeprecate a 2nd time, implemented a config file, now removes "shim" when uninstalled, updated Chocolatey's DEPRECATE A PACKAGE URL
+* 2022.03.15 - Updated messages with markdown that are incompatible with the Sept. 2019 changes to chocolatey.org, set requireLicenseAcceptance to false to avoid schema error (new behavior?), -addicon will now work if iconUrl was originally blank; changed iconUrl to use CDN URLs, now won't add [DEPRECATED] or [RETIRED] if you run cdeprecate a 2nd time, implemented a config file and defaults, now removes "shim" when uninstalled, updated Chocolatey's DEPRECATE A PACKAGE URL
 * 2019.09.03 - initial release. Does most of what's needed. Finishing touches and improvements to come. MIWMIP - "Make it work. Make it pretty."</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 cdeprecate choco unofficial package deprecate retire script chocolateasy</tags>
