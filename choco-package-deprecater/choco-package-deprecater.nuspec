@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of (unofficial) Chocolatey Package Deprecater/Retirer (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-deprecater/choco-package-deprecater_screenshot.png)
 
-## **choco-package-deprecater** (**CDEPRECATE**) is a PowerShell script I designed for Chocolatey package maintainers/creators to easily deprecate or retire a package. Probably not something you have to do often but **CDEPRECATE** will save you the time of having to look up what you need to do to your .nuspec file.
+## **choco-package-deprecater** (**CDEPRECATE**) is a PowerShell script I designed for Chocolatey package maintainers/creators to easily deprecate or retire a package. Probably not something you have to do often but **CDEPRECATE** will save you the time of finding and re-reading the [Chocolatey docs](https://docs.chocolatey.org/en-us/community-repository/maintainers/deprecate-a-chocolatey-package).
 
 ### FEATURES:
 * **CDEPRECATE** rewrites a .nuspec file modifying it ready for deprecation or retirement.
