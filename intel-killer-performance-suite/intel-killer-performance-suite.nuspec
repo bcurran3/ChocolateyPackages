@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-killer-performance-suite</id>
-    <version>3.1122.183</version>
+    <version>3.1122.1105</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
     <title>Intel® Killer Performance Suite (Install)</title>
@@ -23,17 +23,17 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-The 3.1121.1159 version of Intel® Killer™ Performance Suite package installs the Windows® 10 and Windows 11* Wi-Fi, Ethernet drivers and Killer Networking Software for the following Intel® Killer products:
+The 3.1122.1105 version of Intel® Killer™ Performance Suite package installs the Windows® 10 and Windows 11* Wi-Fi, Ethernet drivers and Killer Networking Software for the following Intel® Killer products:
 
-* 22.100.0.3 for Intel® Killer™ 1550, AX1650, AX1675
+* 22.120.0.3 for Intel® Killer™ 1550, AX1650, AX1675
 * 1.0.2.14 (Windows 10), 2.0.1.3 (Windows 11) for Intel® Killer™ E3100 
-* 10.053.1001.2021 (Windows 10), 1125.002.0909.2021 (Windows 11) for Intel® Killer™ E3000, E3100G
-* 10.053.1001.2021 (Windows 10), 1168.002.0909.2021 (Windows 11) for Intel® Killer™ E2500v2, E2600
-* 3.1121.1109.2 for Killer Networking Software
+* 10.053.1001.2021 (Windows 10), 1125.003.1022.2021 (Windows 11) for Intel® Killer™ E3000, E3100G
+* 10.053.1001.2021 (Windows 10), 1168.003.1022.2021 (Windows 11) for Intel® Killer™ E2500v2, E2600
+* 3.1122.104.2 for Killer Networking Software
 
 Note: This Software Release version does not include new drivers for the Killer E2200, Killer E2400, Killer, E2500, Killer 1525 Wireless, Killer 1535 Wireless, Killer 1435 Wireless, or the Killer AX500 Wireless adapters, but the Killer Networking Software can be installed on the systems with the above adapters. 
 
-Notes:
+### Notes:
 
 * Some drivers from this package may not have been updated and are the same as the previous package. You need to install this package in order to update any version of the drive mentioned above.
 * Only Windows 10 and Windows 11 64-bit Operating systems are supported. Check if your Windows 10 is 32-bit or 64-bit.
