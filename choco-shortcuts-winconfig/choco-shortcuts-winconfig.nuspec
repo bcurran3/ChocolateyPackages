@@ -40,15 +40,15 @@ If you're a power user or use the Command Prompt and/or PowerShell all the time,
 ### FEATURES:
 * Search for, install, and uninstall a package from the Windows Start Menu.
 * List installed and outdated packages from the Windows Start Menu.
-* Upgrade all installed packages from the Windows Start Menu
+* Upgrade all installed packages from the Windows Start Menu (will use [choco-upgrade-all.ps1](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-upgrade-all-at/tools/choco-upgrade-all.ps1) if **[Choco Upgrade All at](https://community.chocolatey.org/packages/choco-upgrade-all-at)** or **[Choco Upgrade All at Startup](https://community.chocolatey.org/packages/choco-upgrade-all-at-startup)** are installed)
 * Optimize your packages from the Windows Start Menu. ([Chocolatey licensed](https://chocolatey.org/pricing) users)
-* Moves **[Choco Cleaner](https://community.chocolatey.org/packages/choco-cleaner)**, **[ChocolateyGUI](https://community.chocolatey.org/packages/chocolateygui), **[Choco Package List Backup](https://community.chocolatey.org/packages/choco-package-list-backup)**, and **[Chocolatey  PowerShell](https://community.chocolatey.org/packages/chocolateypowershell)** icons to the new Chocolatey Start Menu folder if they are installed.
+* Moves **[Choco Cleaner](https://community.chocolatey.org/packages/choco-cleaner)**, **[ChocolateyGUI](https://community.chocolatey.org/packages/chocolateygui)**, **[Choco Package List Backup](https://community.chocolatey.org/packages/choco-package-list-backup)**, and **[Chocolatey  PowerShell](https://community.chocolatey.org/packages/chocolateypowershell)** icons to the new Chocolatey Start Menu folder if they are installed.
 * View chocolatey.log from the Windows Start Menu.
 * Website links to prominent Chocolatey information.
 
-For a different take on Chocolatey Shortcuts for the desktop, checkout [mica](https://chocolatey.org/profiles/mica)'s [Chocolatey Shortcuts (unofficial)](https://chocolatey.org/packages/ChocoShortcuts).
+For a different take on Chocolatey Shortcuts for the desktop, checkout [mica](https://community.chocolatey.org/profiles/mica)'s [Chocolatey Shortcuts (unofficial)](https://community.chocolatey.org/packages/ChocoShortcuts).
 
-Also check out [(unofficial) Install Chocolatey Packages from your Web Browser](https://chocolatey.org/packages/choco-install-packages-from-web-winconfig) which is another package I made that makes Chocolatey easy (Chocolateasy!) for new users to digest.
+Also check out **[(unofficial) Install Chocolatey Packages from your Web Browser](https://community.chocolatey.org/packages/choco-install-packages-from-web-winconfig)** which is another package I made that makes Chocolatey easy (Chocolateasy!) for new users to digest.
 
 **If you find Chocolatey Shortcuts useful, please consider donating: 
 https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
@@ -58,7 +58,7 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 </description>
     <releaseNotes>
 ### CHANGELOG:
-* 0.0.3   - updated website links to current URLs (Many have changed but still do redirects.), use the new icons created by Teknowledgist for Choco-Cleaner and Chocolatey PowerShell, minor logic changes on creating icons for my scripts as well as run them via their "shims", move ChocolateyGUI icon to Chocolatey icons folder if it exists
+* 0.0.3   - updated website links to current URLs, use new icons created by Teknowledgist for Choco-Cleaner and Chocolatey PowerShell, minor logic changes on creating icons for my scripts as well as run them via their "shims", move ChocolateyGUI icon to Chocolatey icons folder if it's installed, uses choco-upgrade-all.ps1 if choco-upgrade-all-at or choco-upgrade-all-at-startup are installed
 * 0.0.2.2 - added FeedBurner RSS link
 * 0.0.2.1 - bug fix, the "egg on face release"
 * 0.0.2   - added link to Chocolatey status website, added support for moving my newer utils icons to the Chocolatey folder, minor organizational and optimization
