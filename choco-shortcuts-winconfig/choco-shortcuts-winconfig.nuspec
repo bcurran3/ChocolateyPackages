@@ -42,7 +42,7 @@ If you're a power user or use the Command Prompt and/or PowerShell all the time,
 * List installed and outdated packages from the Windows Start Menu.
 * Upgrade all installed packages from the Windows Start Menu
 * Optimize your packages from the Windows Start Menu. ([Chocolatey licensed](https://chocolatey.org/pricing) users)
-* Moves **[Choco Cleaner](https://chocolatey.org/packages/choco-cleaner)**, **[Choco Package List Backup](https://chocolatey.org/packages/choco-package-list-backup)**, and **[Chocolatey  PowerShell](https://chocolatey.org/packages/chocolateypowershell)** icons to the new Chocolatey Start Menu folder if they are installed.
+* Moves **[Choco Cleaner](https://community.chocolatey.org/packages/choco-cleaner)**, **[ChocolateyGUI](https://community.chocolatey.org/packages/chocolateygui), **[Choco Package List Backup](https://community.chocolatey.org/packages/choco-package-list-backup)**, and **[Chocolatey  PowerShell](https://community.chocolatey.org/packages/chocolateypowershell)** icons to the new Chocolatey Start Menu folder if they are installed.
 * View chocolatey.log from the Windows Start Menu.
 * Website links to prominent Chocolatey information.
 
