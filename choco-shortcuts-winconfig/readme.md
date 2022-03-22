@@ -7,15 +7,15 @@
 
 ![Screenshot of Choco Shortcuts](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-shortcuts-winconfig/choco-shortcuts-winconfig_screenshot.png)	
 
-#This package creates Windows Start Menu shortcuts to run common Chocolatey functions.
+# This package creates Windows Start Menu shortcuts to run common Chocolatey functions.
 
-###WHO IS THIS FOR?
+### WHO IS THIS FOR?
  **Chocolatey Shortcuts** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **Chocolatey Shortcuts** allows you to perform the most common Chocolatey functions right from the Windows Start Menu. The shortcuts still shell out to the Command Prompt to run, but **Chocolatey Shortcuts** is designed to be incredibly simple to use with minimal typing; install or remove a program in a few clicks and type in the package name. **Chocolatey Shortcuts** is also useful to support professionals who know the difficulty of getting end users to type in commands correctly, now you can just point them to the Windows Start Menu!
 
-###WHY DO I NEED THIS?
+### WHY DO I NEED THIS?
 If you're a power user or use the Command Line and/or PowerShell all the time, you probably don't; though the website links might be useful for remembering where to find various Chocolatey resources.
 
-###FEATURES:
+### FEATURES:
 * Search for, install, and uninstall a package from the Windows Start Menu.
 * List installed and outdated packages from the Windows Start Menu.
 * Upgrade all installed packages from the Windows Start Menu
@@ -26,12 +26,14 @@ If you're a power user or use the Command Line and/or PowerShell all the time, y
 
 For a different take on Chocolatey Shortcuts for the desktop, checkout [mica](https://chocolatey.org/profiles/mica)'s [Chocolatey Shortcuts (unofficial)](https://chocolatey.org/packages/ChocoShortcuts).
 
-###CHANGELOG:
-* 0.0.2.1 bug fix, the "egg on face release"
-* 0.0.2 added link to Chocolatey status website, added support for moving my newer utils icons to the Chocolatey folder, minor organizational and optimization
-* 0.0.1 initial release
+### CHANGELOG:
+* 0.0.3   - updated website links to current URLs (Many have changed but still do redirects.), use the new icons created by Teknowledgist for Choco-Cleaner and Chocolatey PowerShell, minor logic changes on creating icons for my scripts as well as run them via their "shims", move ChocolateyGUI icon to Chocolatey icons folder if it exists
+* 0.0.2.2 - added FeedBurner RSS link
+* 0.0.2.1 - bug fix, the "egg on face release"
+* 0.0.2   - added link to Chocolatey status website, added support for moving my newer utils icons to the Chocolatey folder, minor organizational and optimization
+* 0.0.1   - initial release
 
-###ROADMAP:
+### ROADMAP:
 * possibly add package builder if found
 * I'm open to suggestions - open a GitHub issue please.
 
