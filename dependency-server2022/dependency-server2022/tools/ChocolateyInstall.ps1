@@ -1,4 +1,5 @@
-﻿packageName    = 'dependency-server2022'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'dependency-server2022'
 
 $IsWinServer=((Get-CimInstance Win32_OperatingSystem | Select-Object Caption) -match "Server")
 if ($IsWinServer) {

@@ -9,25 +9,23 @@
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-server2022</packageSourceUrl>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-server2022</projectSourceUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
-    <projectUrl>https://github.com/chocolatey/choco/wiki/CreatePackages</projectUrl>	
-    <docsUrl>https://docs.microsoft.com/en-us/nuget/reference/nuspec#dependencies-element</docsUrl>		
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <projectUrl>https://github.com/chocolatey/choco/wiki/CreatePackages</projectUrl>
+    <docsUrl>https://docs.microsoft.com/en-us/nuget/reference/nuspec#dependencies-element</docsUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
-    <tags>bcurran3 dependency osdependency server2022</tags>	
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <tags>bcurran3 dependency osdependency server2022</tags>
     <summary>Package Dependency on Windows Server 2022 creates a way for package maintainers to build in OS version as a dependency.</summary>
     <description>
-# NOTE TO MODERATORS: This package should be ready in theory but is untested. PLEASE DO NOT PASS this package until such time as I've tested it and repushed a version without this message.	
-
-**Package Dependency on Windows Server 2022** is a Chocolatey package for use as a dependency by package maintainers/creators. It is similar in concept to **[Chocolatey Fast Answers Extension](https://chocolatey.org/packages/chocolatey-fastanswers.extension)** to provide a (proposed) standard way for dealing with packages/programs that are OS version specific. This package will purposely fail (throw) when Windows Server 2022 is not found or an equal to or greater than version you specify. You can use **[Test-Dependency](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/extensions/Test-Dependency.ps1)** from **[Chocolatey Misc Helpers Extension](https://community.chocolatey.org/packages/chocolatey-misc-helpers.extension)** to abort install of your package if the dependency is not installed.
+**Package Dependency on Windows Server 2022** is a Chocolatey package for use as a dependency by package maintainers/creators. It is similar in concept to **[Chocolatey Fast Answers Extension](https://chocolatey.org/packages/chocolatey-fastanswers.extension)** to provide a (proposed) standard way for dealing with packages/programs that are OS version specific. This package will purposely fail (throw) when Windows Server 2022 is not found or an equal to or greater than version you specify. You can use **[Test-Dependency](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension/extensions/Test-Dependency.ps1)** from **[Chocolatey Misc Helpers Extension](https://community.chocolatey.org/packages/chocolatey-misc-helpers.extension)** to abort install of your package if the dependency is not installed.
 
 Other OS specific dependencies can be found [here](https://chocolatey.org/packages?q=tag%3Aosdependency).
 
 ### EXAMPLE USE FOR MAINTAINERS/PACKAGERS:
 
-![Examples](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/dependency-server2022/dependency-server2022_examples.png)
+![Examples](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dependency-server2022/dependency-server2022_examples.png)
 
 Look at [Version History](https://chocolatey.org/packages/dependency-server2022#versionhistory) for the builds you can specify as a minimum requirement for your package.
 
@@ -42,7 +40,7 @@ Seeing **dependency-server2022** listed as dependency on any package indicates t
 ***
     </description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows-server/get-started/windows-server-release-info</releaseNotes>
-      </metadata>
+  </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
