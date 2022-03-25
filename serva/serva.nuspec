@@ -4,7 +4,7 @@
   <metadata>
     <id>serva</id>
     <title>Serva Community Build (Portable)</title>
-    <version>4.0.0</version>
+    <version>4.6.0</version>
     <authors>Patrick Masotta </authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/serva</packageSourceUrl>
