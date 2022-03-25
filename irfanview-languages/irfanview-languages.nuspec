@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanview-languages</id>
-    <version>4.59</version>
+    <version>4.60</version>
     <title>IrfanView All Languages (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -20,7 +20,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-### Available Available languages for version 4.59 (and 4.58, 4.57 and 4.56):
+### Available languages for version 4.60::
 
 * English (always included)
 * Deutsch/German (schon integriert, hier die deutsche Hilfe-Datei)
@@ -41,7 +41,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * Hungarian (help file included) 
 * Slovenscina 
 * Arabic
-* Estonian 
+* Estonian
+* Bulgarian 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview-languages/readme.md)**
 
@@ -60,7 +61,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.56" />
+      <dependency id="irfanview" version="4.60" />
     </dependencies>
   </metadata>
   <files>
