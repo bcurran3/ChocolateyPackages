@@ -5,14 +5,14 @@
     <id>choco-protocol-support</id>
     <version>0.0.1.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectSourceUrl>	
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</packageSourceUrl>
     <title>(unofficial) choco:// Protocol support</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
-	<mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>	
-	<bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>Public Domain 2018 Bill Curran</copyright>
     <licenseUrl>https://en.wikipedia.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -51,10 +51,16 @@ Browser examples: [Chrome](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPacka
 
 #### WARNING: Only install one package at a time until such time as Chocolatey is multi-instance aware or it will corrupt itself. [(REFERENCE)](https://github.com/chocolatey/choco/issues/1579)
 
-**If you find choco-protocol-support useful, please consider donating: 
-https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
-	</description>
-	<releaseNotes>
+	
+---
+
+If you find **choco-protocol-support** useful, please consider donating: 
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3
+
+---
+
+</description>
+    <releaseNotes>
 ### CHANGELOG:
 * 0.0.1.1 Removed Chocolatey dependency as Chocolatey v1.0 has been released and missed the [1.x milestone](https://github.com/chocolatey/choco/milestone/12) of becoming multi-instance aware and no new known goal.
 * 0.0.1   Initial release.
@@ -62,10 +68,9 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 	</releaseNotes>
     <dependencies>
       <dependency id="sudo" version="1.0" />
-    </dependencies>	
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
