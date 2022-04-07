@@ -39,9 +39,8 @@ Browser examples: [Chrome](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPacka
 
 ### INTRODUCING THE FIRST choco:// URLS ON THE INTERNET:
 (AKA Other fine 3rd party Chocolatey utilities by BCURRAN3)
-[choco://instchoco](choco://instchoco) - (unofficial) InstChoco
+[choco://instchoco](choco://instchoco) - (unofficial) InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!
 [choco://choco-package-list-backup](choco://choco-package-list-backup) - (unofficial) Choco Package List Backup to Local and Cloud
-[choco://choco-upgrade-all-at-startup](choco://choco-upgrade-all-at-startup) - (unofficial) Choco Upgrade All at Startup
 [choco://choco-upgrade-all-at](choco://choco-upgrade-all-at) - (unofficial) Choco Upgrade All at
 [choco://choco-cleaner](choco://choco-cleaner) - (unofficial) Choco Cleaner
 [choco://choco-shortcuts-winconfig](choco://choco-shortcuts-winconfig) - (unofficial) Chocolatey Shortcuts 
