@@ -9,6 +9,11 @@
 * WARNING: Only install one package at a time until such time as Chocolatey v1.x is released. [(REFERENCE)](https://github.com/chocolatey/choco/issues/1579)
 * DISCLAIMER: This has NOT been tested with non-Chocolatey .nupkg files.
 
+### CHANGELOG:
+* 0.0.1.1 Removed Chocolatey dependency as Chocoaltey v1.0 has been released and missed the [1.x milestone](https://github.com/chocolatey/choco/milestone/12) of becoming multi-instance aware and no new known goal.
+* 0.0.1   Initial release.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support/readme.md)**
+
 ROADMAP:
 * Possibly configure each popular browser to automatically run .nupkg files.
 
