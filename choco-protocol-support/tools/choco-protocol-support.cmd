@@ -11,5 +11,9 @@ set chocoprotocolURL=%chocoprotocolURL:choco://=%
 set chocoprotocolURL=%chocoprotocolURL:/=%
 set chocoprotocolURL=%chocoprotocolURL:  =%
 echo   ** Installing %chocoprotocolURL% via %1
-sudo %ChocolateyInstall%\bin\cinst.exe %chocoprotocolURL% -y
+if exist %ChocolateyInstall%\lib\gsudo\bin\gsudo.exe (
+   gsudo %ChocolateyInstall%\bin\cinst.exe %chocoprotocolURL% -y
+   ) else (
+   sudo %ChocolateyInstall%\bin\cinst.exe %chocoprotocolURL% -y
+   )
 timeout 10
