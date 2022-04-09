@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>screenlogic-connect</id>
-    <version>5.2.738.0020220206</version>
+    <version>5.2.738.0020220409</version>
     <title>Pentair ScreenLogic Connect (Install)</title>
     <authors>Pentair</authors>
     <owners>bcurran3</owners>
