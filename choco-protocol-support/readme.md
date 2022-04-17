@@ -9,12 +9,17 @@
 * WARNING: Only install one package at a time until such time as Chocolatey v1.x is released. [(REFERENCE)](https://github.com/chocolatey/choco/issues/1579)
 * DISCLAIMER: This has NOT been tested with non-Chocolatey .nupkg files.
 
+### CHANGELOG:
+* 0.0.1.1 Removed Chocolatey dependency as Chocolatey v1.0 has been released and missed the [1.x milestone](https://github.com/chocolatey/choco/milestone/12) of becoming multi-instance aware and no new known goal. Added [gsudo](https://community.chocolatey.org/packages/gsudo) support.
+* 0.0.1   Initial release.
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support/readme.md)**
+
 ROADMAP:
 * Possibly configure each popular browser to automatically run .nupkg files.
 
 ***
 
-Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
+Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
 <h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>

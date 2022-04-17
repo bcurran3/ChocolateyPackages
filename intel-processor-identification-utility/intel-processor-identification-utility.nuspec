@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-processor-identification-utility</id>
-    <version>6.6.15.0316</version>
+    <version>6.7.21.1028</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-processor-identification-utility</packageSourceUrl>
     <title>Intel Processor Identification Utility (Install)</title>

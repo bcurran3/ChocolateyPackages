@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>solarwinds-advanced-monitoring-agent</id>
-    <title>Solarwinds MSP Advanced Monitoring Agent (Install)</title>
-    <version>10.9.12</version>
-    <authors>SolarWinds MSP</authors>
+    <title>N-able MSP Advanced Monitoring Agent (Install)</title>
+    <version>10.11.10</version>
+    <authors>N-able Technologies Ltd</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-advanced-monitoring-agent</packageSourceUrl>
-    <projectUrl>https://www.solarwindsmsp.com/content/advanced-monitoring-agent</projectUrl>
-    <tags>solarwinds solarwindsmsp msp rmm agent</tags>
-    <copyright>© SolarWinds MSP</copyright>
-    <licenseUrl>https://www.solarwindsmsp.com/legal/solarwinds-msp-software-services-agreement</licenseUrl>
+    <projectUrl>https://www.n-able.com/features/advanced-monitoring-agent</projectUrl>
+    <tags>solarwinds solarwindsmsp nable msp rmm agent</tags>
+    <copyright>© N-able Technologies Ltd</copyright>
+    <licenseUrl>https://www.n-able.com/legal/software-services-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-advanced-monitoring-agent/solarwinds-advanced-monitoring-agent_icon.png</iconUrl>
-    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
-    <summary>Advanced Monitoring Agent Software for SolarWinds MSP</summary>
+    <mailingListUrl>https://success.n-able.com/#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <summary>Advanced Monitoring Agent Software for N-able RMM/MSP</summary>
     <description>
 ---
 
@@ -45,7 +45,7 @@ Check out our advanced monitoring agent software for yourself by signing up for 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/solarwinds-advanced-monitoring-agent/readme.md)**
 
-    
+**NOTE: This will be deprecated and replaced with nable-advanced-monitoring-agent**
 
 ---
 

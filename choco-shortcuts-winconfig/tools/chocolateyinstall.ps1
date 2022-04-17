@@ -1,39 +1,46 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName  = 'choco-shortcuts-winconfig'
+$packageName  = 'choco-shortcuts-winconfig' # v0.0.3
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-# v0.0.2.1
 
-New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey" -type directory -ea SilentlyContinue| out-null
-New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support" -type directory -ea silentlycontinue| out-null
+New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey" -type directory -ea SilentlyContinue| Out-Null
+New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support" -type directory -ea silentlycontinue| Out-Null
 
-# move icon for Choco Cleaner if installed
-# https://chocolatey.org/packages/choco-cleaner
+# "move" icon for Choco Cleaner if installed
+# https://community.chocolatey.org/packages/choco-cleaner
 $shortcutName     = 'Choco Cleaner.lnk'
 $altshortcutName  = 'Chocolatey Cleaner.lnk'
-$CheckCC          = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName"
-if (Test-Path $CheckCC){
-    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $env:ChocolateyInstall\bin\choco-cleaner.ps1" -WorkingDirectory $env:ChocolateyInstall\bin\ -RunAsAdmin
-	Remove-Item $CheckCC
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"){Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"}
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName"){Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName"}
+if (Test-Path $env:ChocolateyInstall\bin\choco-cleaner.bat){
+	$ChocoCommand = "/c %ChocolateyInstall%\bin\choco-cleaner.bat && pause"
+    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath $env:ComSpec -Arguments $ChocoCommand -IconLocation $env:ChocolateyInstall\lib\choco-cleaner\tools\choco-cleaner.ico -RunAsAdmin
    }
    
-# move icon for Chocolatey Package List Backup if installed
-# https://chocolatey.org/packages/choco-package-list-backup
+# "move" icon for Chocolatey Package List Backup
+# https://community.chocolatey.org/packages/choco-package-list-backup
 $shortcutName    = 'Package List Backup.lnk'
 $altshortcutName = 'Chocolatey Package List Backup.lnk'
-$CheckCPLB       = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName"
-if (Test-Path $CheckCPLB){
-	Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-NoProfile -InputFormat None -ExecutionPolicy Bypass -Command $env:ChocolateyInstall\bin\choco-package-list-backup.ps1" -WorkingDirectory $env:ChocolateyInstall\bin\ -RunAsAdmin
-	Remove-Item $CheckCPLB
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"){Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"}
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName"){Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcutName"}
+if (Test-Path "$env:ChocolateyInstall\bin\choco-package-list-backup.bat"){
+	$ChocoCommand = "/c %ChocolateyInstall%\bin\choco-package-list-backup.bat && pause"
+	Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath $env:ComSpec -Arguments $ChocoCommand -IconLocation $env:ChocolateyInstall\choco.exe -RunAsAdmin
    }	
 
-# move icon for ChocolateyPowerShell if installed
-# https://chocolatey.org/packages/chocolateypowershell
+# "move" icon for ChocolateyPowerShell
+# https://community.chocolatey.org/packages/chocolateypowershell
 $shortcutName = 'ChocolateyPowerShell.lnk'
-$CheckCPS     = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"
-if (Test-Path $CheckCPS){
-    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-noexit -c $env:ChocolateyInstall\lib\chocolateypowershell\tools\ChocolateyEnvironment.ps1" -WorkingDirectory "$env:SystemDrive\" -RunAsAdmin
-	Remove-Item $CheckCPS
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"){Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"}
+if (Test-Path "$env:ChocolateyInstall\lib\chocolateypowershell"){
+    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -targetPath "$env:SystemRoot\system32\WindowsPowerShell\v1.0\powershell.exe" -Arguments "-noexit -c $env:ChocolateyInstall\lib\chocolateypowershell\tools\ChocolateyEnvironment.ps1" -WorkingDirectory "$env:SystemDrive\" -IconLocation "$env:ChocolateyInstall\lib\chocolateypowershell\tools\chocolateypowershell.ico" -RunAsAdmin
    }
+   
+# move icon for ChocolateyGUI
+# https://community.chocolatey.org/packages/chocolateygui
+$shortcutName = 'Chocolatey GUI.lnk'
+if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"){
+	Move-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"
+	}
 
 $shortcutName = 'Install a Package.lnk'
 $ChocoCommand = "/v /c color 0f && set /p package=PACKAGENAME: && choco install !package! && pause"
@@ -64,8 +71,11 @@ $shortcutName = 'Uninstall a Package.lnk'
 $ChocoCommand = "/v /c color 0f && set /p package=PACKAGENAME: && choco uninstall !package! && pause"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath $env:ComSpec -Arguments $ChocoCommand -IconLocation $env:ChocolateyInstall\choco.exe -RunAsAdmin
 
+# use choco-upgrade-all.bat if installed
+# https://community.chocolatey.org/packages/choco-upgrade-all-at
+# https://community.chocolatey.org/packages/choco-upgrade-all-at-startup
 $shortcutName = 'Upgrade All Packages.lnk'
-$ChocoCommand = "/c choco upgrade all && pause"
+if (Test-Path $ENV:ChocolateyInstall\bin\choco-upgrade-all.bat){$ChocoCommand = "/c choco-upgrade-all && pause"} else {$ChocoCommand = "/c choco upgrade all && pause"}
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath $env:ComSpec -Arguments $ChocoCommand -IconLocation $env:ChocolateyInstall\choco.exe -RunAsAdmin
 
 $shortcutName = 'View chocolatey.log.lnk'
@@ -87,36 +97,36 @@ Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows
 # I wonder if anyone reads these comments?
 
 $shortcutName = 'WEBSITE - Chocolatey.org.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath https://chocolatey.org/ -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath "https://chocolatey.org/" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Announcemnents.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://groups.google.com/forum/#!forum/chocolatey-announce" -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://groups.google.com/g/chocolatey-announce" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Bug Tracker.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://github.com/chocolatey/choco/issues -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://github.com/chocolatey/choco/issues" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Docs.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath https://chocolatey.org/docs -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath "https://docs.chocolatey.org" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey FeedBurner.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://feeds.feedburner.com/chocolatey -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://feeds.feedburner.com/chocolatey" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Google Groups.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://groups.google.com/forum/#!forum/chocolatey" -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://groups.google.com/g/chocolatey" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Gitter.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://gitter.im/chocolatey/choco -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://gitter.im/chocolatey/choco" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Package Requests.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://github.com/chocolatey/chocolatey-package-requests -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://github.com/chocolatey-community/chocolatey-package-requests" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - Chocolatey Support.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://chocolatey.org/support -IconLocation $env:ChocolateyInstall\choco.exe
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://chocolatey.org/support" -IconLocation $env:ChocolateyInstall\choco.exe
 
 $shortcutName = 'WEBSITE - Chocolatey Sites Status.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath https://status.chocolatey.org -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support\$shortcutName"  -targetPath "https://status.chocolatey.org" -IconLocation $env:ChocolateyInstall\choco.exe 
 
 $shortcutName = 'WEBSITE - BCURRAN3''s Chocolatey Add-ons.lnk'
-Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath https://chocolatey.org/packages?q=tag%3Abcurran3 -IconLocation $env:ChocolateyInstall\choco.exe 
+Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath "https://community.chocolatey.org/packages?q=tag%3Abcurran3" -IconLocation $env:ChocolateyInstall\choco.exe 
 
-Write-Host "  ** You now have a Chocolatey folder full of shortcuts in your Windows Start Menu!" -foreground magenta
+Write-Host "  ** You now have a Chocolatey folder full of shortcuts in your Windows Start Menu!" -Foreground Magenta

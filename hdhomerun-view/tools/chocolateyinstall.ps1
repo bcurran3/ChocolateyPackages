@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'hdhomerun-view'
-$url            = 'http://download.silicondust.com/hdhomerun/hdhomerun_windows_20210301.exe' 
-$checksum       = '9AE106C78E48AC2DBEBAA9374C03307BBA8620FFDB5ED060623F1402031F5C55'
+$url            = 'https://download.silicondust.com/hdhomerun/hdhomerun_windows.exe' 
+$checksum       = '019899BE6765C4B0E668D2C8CAE59827152E7999864EB12E8394E62535C5C14F'
 
 $packageArgs = @{
   packageName   = $packageName

@@ -1,0 +1,8 @@
+﻿==================== DC++ ====================
+
+bcurran3 downloads and packages the included .EXE for DC++ from the developer's website. 
+
+The direct download link can be found at:
+https://sourceforge.net/projects/dcplusplus/files/
+
+==================== DC++ ====================

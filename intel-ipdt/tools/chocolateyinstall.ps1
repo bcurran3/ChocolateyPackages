@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-ipdt'
-$url            = 'https://downloadmirror.intel.com/19792/eng/ipdt_installer_4.1.2.34_32bit.exe'
-$checksum       = 'C5ACEE3B50C106B484A413D37D72D061779B20A17CA270C46CFCD95EC9324F56'
-$url64          = 'https://downloadmirror.intel.com/19792/eng/ipdt_installer_4.1.2.34_64bit.exe'
-$checksum64     = 'CED922C161DC430BE68FEA819C7E2446A8E916DA4EE9F69294BCC8E7C13EE18B'
+$url            = 'https://downloadmirror.intel.com/19792/eng/ipdt_installer_4.1.5.37_32bit.msi'
+$checksum       = '05168596E7B5F7F5778125858454C0E4BB7A04997F67274831C7F5F24D058C6C'
+$url64          = 'https://downloadmirror.intel.com/19792/eng/ipdt_installer_4.1.5.37_64bit.msi'
+$checksum64     = 'FAFE723C3FF07086183693BEE910F8240AED9B1B6698008C0410DBC2F95CCAE4'
 
 $packageArgs = @{
   packageName    = $packageName
-  fileType       = 'EXE'
+  fileType       = 'MSI'
   url            = $url
   url64          = $url64   
-  silentArgs     = '/install /quiet /norestart'
+  silentArgs     = '/quiet /qn /norestart'
   validExitCodes = @(0, 3010, 1641)
   softwareName   = 'Intel Processor Diagnostic Tool*'
   checksum       = $checksum

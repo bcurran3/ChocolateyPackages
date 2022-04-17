@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-xtu</id>
-    <version>7.5.3.3</version>
+    <version>7.6.0.37</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
@@ -15,7 +15,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.intel.com/content/www/us/en/support/articles/000006022/processors/processor-utilities-and-programs.html</docsUrl>
     <tags>xtu intel tuning utility</tags>
-    <summary>Intel XTU is a simple Windows*-based performance-tuning software for novice and experienced enthusiasts to overclock, monitor, and stress a system</summary>
+    <summary>The Intel® Extreme Tuning Utility (Intel® XTU) is used to overclock, monitor, and stress a system.</summary>
     <description>
 ---
 
@@ -42,7 +42,7 @@ See the release notes for installation instructions, supported hardware, what is
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29183/XTU-7.5.3.3-ReleaseNotes.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29183/XTU-7.6.0.37-ReleaseNotes.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
       <dependency id="dotnet3.5" version="3.5" />

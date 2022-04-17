@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>6.8.0</version>
+    <version>6.9.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
@@ -13,9 +13,9 @@
     <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.realvnc.com/docs/</docsUrl>
+    <docsUrl>https://help.realvnc.com/</docsUrl>
     <mailingListUrl>https://www.realvnc.com/en/news/</mailingListUrl>
-    <bugTrackerUrl>https://support.realvnc.com/index.php?/Knowledgebase/List</bugTrackerUrl>
+    <bugTrackerUrl>https://help.realvnc.com/hc/en-us/community/topics</bugTrackerUrl>
     <tags>realvnc vnc connect remote control</tags>
     <summary>VNC Connect is the latest version of RealVNC remote control software.</summary>
     <description>

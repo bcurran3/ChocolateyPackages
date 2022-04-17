@@ -3,29 +3,31 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-ipdt</id>
-    <version>4.1.2.34</version>
+    <version>4.1.5.37</version>
     <title>Intel® Processor Diagnostic Tool (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <projectUrl>https://downloadcenter.intel.com/download/19792/Intel-Processor-Diagnostic-Tool</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-dsa/intel-ipdt_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-ipdt/intel-ipdt_icon.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
 
-###[choco://intel-dsa](choco://intel-dsa)
+### [choco://intel-dsa](choco://intel-dsa)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 ![Screenshot of IPDT](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-ipdt/intel-ipdt_screenshot.png)
 
-###Purpose
+### Purpose
 
 The purpose of the Intel® Processor Diagnostic Tool is to verify the functionality of an Intel® microprocessor. The diagnostic tool checks for brand identification, verifies the processor operating frequency, tests specific processor features, and performs a stress test on the processor.
 
-The Intel® Processor Diagnostic Tool release 4.1.2.34 is compatible with multiprocessor systems.
+The Intel® Processor Diagnostic Tool release 4.1.5.37 is compatible with multiprocessor systems.
+
+**12th Gen Processors are not yet supported by 4.1.5.37 version of IPDT**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
 
@@ -38,7 +40,7 @@ The Intel® Processor Diagnostic Tool release 4.1.2.34 is compatible with multip
 
 </description>
     <summary>IPDT performs diagnostics on Intel CPUs.</summary>
-    <releaseNotes>https://downloadmirror.intel.com/19792/eng/Read%20Me%20First-Win64bit.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/19792/eng/the%20intel%20processor%20diagnostic%204.1.5.37.w.mp%20for%20windows%2064%20bit%20os%20release%20notes.pdf</releaseNotes>
     <copyright>Intel Corporation</copyright>
     <tags>intel ipdt diagnostics cup</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-ipdt</packageSourceUrl>

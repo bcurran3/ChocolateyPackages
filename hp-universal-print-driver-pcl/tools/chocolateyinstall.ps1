@@ -1,10 +1,10 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'hp-universal-print-driver-pcl' 
-$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-23/upd-pcl6-x32-7.0.0.24832.exe'
-$checksum       = '746D1EACADD2C4502E5C403724F43DA9FE06B0CB20FD172F9AD90EC3618A6D7F'
-$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99374-23/upd-pcl6-x64-7.0.0.24832.exe'
-$checksum64     = 'B6AA40D5A55946EE974E00E197F6AE00C0A397000E08D43851241E37D899E670'
+$url            = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99353-24/upd-pcl6-x32-7.0.1.24923.exe'
+$checksum       = '163EEF18E4A69C70EFD669295420E57D57961BB73A58EF0BE1ECA34DB156954F'
+$url64          = 'https://ftp.hp.com/pub/softlib/software13/COL40842/ds-99374-24/upd-pcl6-x64-7.0.1.24923.exe'
+$checksum64     = '0EFB778E9082EC34C02770AD17A94B501987A1E17DB3AD2E90B839E27A25E810'
 $softwareName   = ''
 $fileLocation   = "$toolsDir\unzippedfiles\install.exe"
 

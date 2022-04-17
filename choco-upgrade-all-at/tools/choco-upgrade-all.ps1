@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 #Requires -RunAsAdministrator
-# choco-upgrade-all.ps1 Copyleft 2021 by Bill Curran AKA BCURRAN3
+# choco-upgrade-all.ps1 Copyleft 2022 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Upgrade-All.ps1 (03/15/2021) - Upgrade your Chocolatey packages with enhanced options" -Foreground White
-Write-Host "Copyleft 2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "Choco-Upgrade-All.ps1 (02/11/2022) - Upgrade your Chocolatey packages with enhanced options" -Foreground White
+Write-Host "Copyleft 2022 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($env:ChocolateyToolsLocation)) {$env:ChocolateyToolsLocation = "$env:SystemDrive\tools"}
@@ -74,18 +74,26 @@ if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenu
 
 # Delete new Desktop icons if configured to do so
 if ($DeleteNewDesktopIcons -eq 'True'){
-   $IconsNew = Compare-Object -ReferenceObject ($UserDesktopIconsPre) -DifferenceObject ($UserDesktopIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
-   $IconsNew = Compare-Object -ReferenceObject ($PublicDesktopIconsPre) -DifferenceObject ($PublicDesktopIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
-   }
+	if ($UserDesktopIconsPre.count -ne '0' -and $UserDesktopIconsPost.count -ne '0'){
+       $IconsNew = Compare-Object -ReferenceObject ($UserDesktopIconsPre) -DifferenceObject ($UserDesktopIconsPost) -PassThru
+       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+	   }
+	if ($PublicDesktopIconsPre.count -ne '0' -and $PublicDesktopIconsPost.count -ne '0'){
+       $IconsNew = Compare-Object -ReferenceObject ($PublicDesktopIconsPre) -DifferenceObject ($PublicDesktopIconsPost) -PassThru
+       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+       }
+  }
 # Delete new Start Menu icons if configured to do so
 if ($DeleteNewStartMenuIcons -eq 'True'){
-   $IconsNew = Compare-Object -ReferenceObject ($UserStartMenuIconsPre) -DifferenceObject ($UserStartMenuIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
-   $IconsNew = Compare-Object -ReferenceObject ($PublicStartMenuIconsPre) -DifferenceObject ($PublicStartMenuIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
-   }
+	if ($UserStartMenuIconsPre.count -ne '0' -and $UserStartMenuIconsPost.count -ne '0'){
+       $IconsNew = Compare-Object -ReferenceObject ($UserStartMenuIconsPre) -DifferenceObject ($UserStartMenuIconsPost) -PassThru
+       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+	   }
+	if ($PublicStartMenuIconsPre.count -ne '0' -and $PublicStartMenuIconsPost.count -ne '0'){
+       $IconsNew = Compare-Object -ReferenceObject ($PublicStartMenuIconsPre) -DifferenceObject ($PublicStartMenuIconsPost) -PassThru
+       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+       }
+  }
 
 # Run post-processor if configured
 if ($PostProcessScript){&$PostProcessScript}

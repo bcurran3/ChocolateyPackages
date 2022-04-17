@@ -2,7 +2,8 @@
 $packageName    = 'intel-xtu'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $url64          = 'https://downloadmirror.intel.com/29183/XTUSetup.exe'
-$checksum64     = '762005E092AF832C54D6CA9876939D6969B24CAF2691B6C4A9CB733B3ACB0F9A'
+#                  ^^^^ consistent link
+$checksum64     = 'D74BA4F28B7E4BACE8539C9753E2B2F58547BB2FA06F0ED54CD9FCDED147522D'
 
 if (Get-IsAMDCPU)
    {

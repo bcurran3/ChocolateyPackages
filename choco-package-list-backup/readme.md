@@ -63,6 +63,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 
 ### CHANGELOG:
+* 2022.02.06 - All existing files now renamed with .bak before creating new versions. This backup is useful during migrations where the files could get overwritten during install of CPLB on a new computer. (https://github.com/bcurran3/ChocolateyPackages/issues/285)
 * 2021.09.25 - Improved OneDrive support while running under SYSTEM and handling of a missing config file.
 * 2021.09.22 - Add Box Drive support. Add defaults incase of corrupt or missing choco-package-list-backup.config. Add new ONSTART and ATSTARTUP paremeters to run at boot instead of a scheduled time.
 * 2021.05.10 - Speed optimations by TheCakeIsNaOH - Thanks!
@@ -104,7 +105,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ***
 
-Like my [original Chocolatey add-ons and packages](https://chocolatey.org/search?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
+Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
 <h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
