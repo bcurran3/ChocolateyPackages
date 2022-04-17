@@ -2,7 +2,7 @@
 $packageName = 'arq'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url = 'https://www.arqbackup.com/download/arqbackup/Arq7.msi'
-$checksum = '2eaba8af024a3c238946a268504dc55ca5986b6021461fbc58be70c4cde2ba23'
+$checksum = 'b02785d09daef0f3783cda7a070113397baf586b9a246567120c29d4365a1b9a'
 
 $packageArgs = @{
     packageName    = $packageName
