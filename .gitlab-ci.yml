@@ -1,0 +1,46 @@
+---
+include:
+  - template: Security/Secret-Detection.gitlab-ci.yml
+
+variables:
+  CHOCO_PACKAGE_NAME: arq
+  CHOCO_COMMUNITY_PUSH_URL: https://push.chocolatey.org/
+  CHOCO_COMMUNITY_FEED: https://community.chocolatey.org/api/v2/
+  CHOCO_PRIVATE_PUSH_URL: http://chocolatey.int.celadonsystems.com/upload/
+  CHOCO_PRIVATE_FEED: http://chocolatey.int.celadonsystems.com/api/v2/
+
+default:
+  image: chocolatey/choco:latest-linux
+  tags:
+    - windows
+
+stages:
+  - build
+  - test
+  - push
+
+build:
+  stage: build
+  script:
+    - choco pack
+  artifacts:
+    paths:
+      - /builds
+
+test:
+  stage: test
+  script:
+    - choco install -dv -s "'.;$CHOCO_COMMUNITY_FEED'" "$CHOCO_PACKAGE_NAME"
+    - choco uninstall "$CHOCO_PACKAGE_NAME"
+  artifacts:
+    paths:
+      - /builds
+
+push:
+  stage: push
+  script:
+    - choco apikey --force --key $CHOCO_PRIVATE_API_KEY --source $CHOCO_PRIVATE_PUSH_URL
+    - choco push --force --api-key $CHOCO_PRIVATE_API_KEY --source $CHOCO_PRIVATE_PUSH_URL
+  artifacts:
+    paths:
+      - /builds
