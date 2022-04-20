@@ -1,15 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName= 'unifying' 
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url        = 'http://www.logitech.com/pub/controldevices/unifying/unifying250.exe'
-$silentArgs = '/S' 
+$packageName = 'unifying' 
+$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$url         = 'https://download01.logi.com/web/ftp/pub/techsupport/unifying/unifying252.exe'
+$checksum    = 'BEA2CA4C9D9ABD1FF214166D638792BE974FFAD7907A8A8ED0370ACBA800E815'
+$silentArgs  = '/S' 
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
   fileType      = 'exe' 
   url           = $url
-  checksum      = 'ACE27F43E1CE4925E72C49A33FCC2AA3B3DB557ED808F29E75DACEDFEBF7AB90'
+  checksum      = $checksum
   checksumType  = 'sha256'    
   silentArgs    = $silentArgs
   softwareName  = 'Logitech Unifying Software*' 
