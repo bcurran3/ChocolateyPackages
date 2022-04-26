@@ -16,7 +16,7 @@
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-os-dependency.extension</projectSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
-    <tags>bcurran3 choco win10 win11 extension extensions</tags>
+    <tags>bcurran3 choco win10 win11 extension extensions maintainers</tags>
     <summary>Chocolatey OS Dependency Extension is a Chocolatey extension for use as a dependency by package maintainers to easily validate OS compatibility.</summary>
     <description>
 ![Screenshot of chocolatey-os-dependency.extension example](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-os-dependency.extension_extras/chocolatey-os-dependency.extension_screenshot.png)
