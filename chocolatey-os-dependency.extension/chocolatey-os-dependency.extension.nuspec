@@ -33,7 +33,7 @@
 * **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not. Default build 7601.
 
 ### USAGE:
-If you package a program that has a minimum requirement of Windows 10, add **Confirm-Win10** after your EAP statement in your chocolateyInstall.ps1 script. If the Windows version is not 10 or 11, the package installation will abort. If your package requires Windows 10 build 19041 (version 2004) then add **Confirm-Win10 19041** after the EAP statement in your chocolateyInstall.ps1 script and the package will only install if Windows 10 version 2004 (Vibranium) or newer is present. Consult this [List of Microsoft Windows versions](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions) for build number help.
+Add **Confirm-Win10** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort the install if Windows 10 (or 11) is not present. Use **Confirm-Win10 19041** to abort the install if Windows 10 (or 11) build 19041 (version 2004/Vibranium) or higher is not present. Consult this [List of Microsoft Windows versions](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions) for build number help.
 
     </description>
     <releaseNotes>
