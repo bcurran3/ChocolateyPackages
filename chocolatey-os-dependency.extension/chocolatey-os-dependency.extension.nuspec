@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>chocolatey-os-dependency.extension</id>
+    <version>0.0.1</version>
+    <title>Chocolatey OS Dependency Extension</title>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-os-dependency.extension</packageSourceUrl>
+    <authors>Bill Curran</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-os-dependency.extension</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-os-dependency.extension</projectSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <tags>bcurran3 choco win10 win11 extension extensions</tags>
+    <summary>Chocolatey OS Dependency Extension is a Chocolatey extension for use as a dependency by package maintainers to validate OS compatibility.</summary>
+    <description>
+## **Chocolatey OS Dependency Extension is a Chocolatey extension for use as a dependency by package maintainers to validate OS compatibility.**
+
+[Screenshot of chocolatey-os-dependency.extension example](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-os-dependency.extension_extras/chocolatey-os-dependency.extension_screenshot.png)
+
+### PURPOSE:
+To provide a Chocolatey extention with easy to remember functions for package creators/maintainers to verify an OS version requirement during package installation. The OS version is checked and if found not compatible, the package installation is aborted. The functions are named Confirm-WinX; where X can be 11, 10, 81, 8, or 7.
+
+### USAGE:
+If you package a program that has a minimum requirement of Windows 10, add Confirm-Win10 after your EAP statement in your chocolateyInstall.ps1 script. If the the Windows version is not 10 or 11, the package installation with abort.
+
+### HELPERS:
+* **Confirm-Win11** - Checks for Windows 11 and aborts package install if not.
+* **Confirm-Win10** - Checks for Windows 10 (or 11) and aborts package install if not.
+* **Confirm-Win81** - Checks for Windows 8.1 and aborts package install if not.
+* **Confirm-Win80** - Checks for Windows 8.0 and aborts package install if not.
+* **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not.
+* **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not.
+
+* NOTE: You can also specify a build number as a minimum requirement. EXAMPLE: Confirm-Win10 2004
+
+    </description>
+    <releaseNotes>
+### CHANGE LOG:
+* 0.0.1 - initial release
+
+### ROADMAP:
+* Add Windows Server OS Checking
+* I am open to any useful suggestions/additions! Please open a GitHub issue if so.
+    </releaseNotes>
+  </metadata>
+</package>
