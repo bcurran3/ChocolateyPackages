@@ -26,9 +26,6 @@
 ### PURPOSE:
 To provide a Chocolatey extention with easy to remember functions for package creators/maintainers to verify an OS version requirement during package installation. The OS version is checked and if found not compatible, the package installation is aborted. The functions are named Confirm-WinX; where X can be 11, 10, 81, 80, 8, or 7. Additionally the Confirm-WinX function can be used with a minimum build number requirement.
 
-### USAGE:
-If you package a program that has a minimum requirement of Windows 10, add Confirm-Win10 after your EAP statement in your chocolateyInstall.ps1 script. If the Windows version is not 10 or 11, the package installation will abort.
-
 ### HELPERS:
 * **Confirm-Win11** - Checks for Windows 11 and aborts package install if not.
 * **Confirm-Win10** - Checks for Windows 10 (or 11) and aborts package install if not.
@@ -36,8 +33,10 @@ If you package a program that has a minimum requirement of Windows 10, add Confi
 * **Confirm-Win80** - Checks for Windows 8.0 and aborts package install if not.
 * **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not.
 * **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not.
-
 * **NOTE:** You can also specify a build number as a minimum requirement. **EXAMPLE:** Confirm-Win10 2004
+
+### USAGE:
+If you package a program that has a minimum requirement of Windows 10, add Confirm-Win10 after your EAP statement in your chocolateyInstall.ps1 script. If the Windows version is not 10 or 11, the package installation will abort.
 
     </description>
     <releaseNotes>
