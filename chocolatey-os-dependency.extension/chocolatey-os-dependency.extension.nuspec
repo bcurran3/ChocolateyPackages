@@ -33,10 +33,10 @@ To provide a Chocolatey extention with easy to remember functions for package cr
 * **Confirm-Win80** - Checks for Windows 8.0 and aborts package install if not.
 * **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not.
 * **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not.
-* **NOTE:** You can also specify a build number as a minimum requirement. **EXAMPLE:** Confirm-Win10 2004
+* **NOTE:** You can also specify a build number as a minimum requirement.
 
 ### USAGE:
-If you package a program that has a minimum requirement of Windows 10, add Confirm-Win10 after your EAP statement in your chocolateyInstall.ps1 script. If the Windows version is not 10 or 11, the package installation will abort.
+If you package a program that has a minimum requirement of Windows 10, add **Confirm-Win10** after your EAP statement in your chocolateyInstall.ps1 script. If the Windows version is not 10 or 11, the package installation will abort. If your package requires Windows 10 build 2004 then add **Confirm-Win10 19041" after the EAP statement in your chocolateyInstall.ps1 script and the package will only install if Windows 10 version 2004 (Vibranium) or newer is present. Consult this [List of Microsoft Windows versions](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions) for build number help.
 
     </description>
     <releaseNotes>
