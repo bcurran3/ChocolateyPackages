@@ -19,14 +19,12 @@
     <tags>bcurran3 choco win10 win11 extension extensions</tags>
     <summary>Chocolatey OS Dependency Extension is a Chocolatey extension for use as a dependency by package maintainers to easily validate OS compatibility.</summary>
     <description>
-## **Chocolatey OS Dependency Extension is a Chocolatey extension for use as a dependency by package maintainers to validate OS compatibility.**
-
 ![Screenshot of chocolatey-os-dependency.extension example](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-os-dependency.extension_extras/chocolatey-os-dependency.extension_screenshot.png)
 
 ### PURPOSE:
 To provide a Chocolatey extention with easy to remember functions for package creators/maintainers to verify an OS version requirement during package installation. The OS version is checked and if found not compatible, the package installation is aborted. The functions are named Confirm-WinX; where X can be 11, 10, 81, 80, 8, or 7. Additionally the Confirm-WinX function can be used with a minimum build number requirement.
 
-### HELPERS:
+### FUNCTIONS:
 * **Confirm-Win11** - Checks for Windows 11 and aborts package install if not.
 * **Confirm-Win10** - Checks for Windows 10 (or 11) and aborts package install if not.
 * **Confirm-Win81** - Checks for Windows 8.1 and aborts package install if not.
