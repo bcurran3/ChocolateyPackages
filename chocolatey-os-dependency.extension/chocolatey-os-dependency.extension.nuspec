@@ -37,7 +37,7 @@ If you package a program that has a minimum requirement of Windows 10, add Confi
 * **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not.
 * **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not.
 
-* NOTE: You can also specify a build number as a minimum requirement. EXAMPLE: Confirm-Win10 2004
+* **NOTE:** You can also specify a build number as a minimum requirement. **EXAMPLE:** Confirm-Win10 2004
 
     </description>
     <releaseNotes>
