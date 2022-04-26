@@ -22,16 +22,15 @@
 ![Screenshot of chocolatey-os-dependency.extension example](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-os-dependency.extension_extras/chocolatey-os-dependency.extension_screenshot.png)
 
 ### PURPOSE:
-To provide a Chocolatey extention with easy to remember functions for package creators/maintainers to verify an OS version requirement during package installation. The OS version is checked and if found not compatible, the package installation is aborted. The functions are named Confirm-WinX; where X can be 11, 10, 81, 80, 8, or 7. Additionally the Confirm-WinX function can be used with a minimum build number requirement.
+**chocolatey-os-dependency.extension** provides easy to remember functions for package creators/maintainers to verify an OS version requirement during package installation. The OS and build versions are checked and if found not compatible, the package installation is aborted. The functions are named Confirm-WinX; where X can be 11, 10, 81, 80, 8, or 7. Additionally the Confirm-WinX function can be used with a minimum build number requirement.
 
 ### FUNCTIONS:
-* **Confirm-Win11** - Checks for Windows 11 and aborts package install if not.
-* **Confirm-Win10** - Checks for Windows 10 (or 11) and aborts package install if not.
-* **Confirm-Win81** - Checks for Windows 8.1 and aborts package install if not.
-* **Confirm-Win80** - Checks for Windows 8.0 and aborts package install if not.
-* **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not.
-* **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not.
-* **NOTE:** You can also specify a build number as a minimum requirement.
+* **Confirm-Win11** - Checks for Windows 11 and aborts package install if not. Default build 22000.
+* **Confirm-Win10** - Checks for Windows 10 (or 11) and aborts package install if not. Default build 10240.
+* **Confirm-Win81** - Checks for Windows 8.1 and aborts package install if not. Default build 9600.
+* **Confirm-Win80** - Checks for Windows 8.0 and aborts package install if not. Default build 9200.
+* **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not. Default build 9200.
+* **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not. Default build 7601.
 
 ### USAGE:
 If you package a program that has a minimum requirement of Windows 10, add **Confirm-Win10** after your EAP statement in your chocolateyInstall.ps1 script. If the Windows version is not 10 or 11, the package installation will abort. If your package requires Windows 10 build 19041 (version 2004) then add **Confirm-Win10 19041** after the EAP statement in your chocolateyInstall.ps1 script and the package will only install if Windows 10 version 2004 (Vibranium) or newer is present. Consult this [List of Microsoft Windows versions](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions) for build number help.
