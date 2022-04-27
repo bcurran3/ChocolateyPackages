@@ -1,4 +1,4 @@
-# chocolatey-os-dependency.extension v0.0.1 (04-26-2022) by Bill Curran AKA BCURRAN3 - public domain
+﻿# chocolatey-os-dependency.extension v0.0.1 (04-26-2022) by Bill Curran AKA BCURRAN3 - public domain
 
 # Confirms OS is Windows 11 and aborts if not. If no build number is specified, it defaults to the initial release build.
 # Can be sent a particular build # to check as minimum.
