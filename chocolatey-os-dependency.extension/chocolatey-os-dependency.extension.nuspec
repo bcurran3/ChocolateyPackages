@@ -37,7 +37,7 @@
 ### USAGE:
 * Add **Confirm-Win10** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort the install if Windows 10 (or 11) is not present.
 * Add **Confirm-Win10 19041** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort the install if Windows 10 build 19041 (version 2004/Vibranium) or higher is not present.
-* Add **Confirm-Win11** or **Confirm-Win11 2200** or **Confirm-WinMinimumBuild 22000** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort the install if Windows 11 is not present.
+* Add **Confirm-Win11** or **Confirm-Win11 22000** or **Confirm-WinMinimumBuild 22000** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort the install if Windows 11 is not present.
 * Add **Confirm-WinRequiredBuild 20348** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort install if Windows Server 2022 is not present.
 * Consult this [List of Microsoft Windows versions](https://en.wikipedia.org/wiki/List_of_Microsoft_Windows_versions) to reference build numbers.
 
