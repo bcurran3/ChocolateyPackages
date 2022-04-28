@@ -31,8 +31,8 @@
 * **Confirm-Win80** - Checks for Windows 8.0 and aborts package install if not. Default build 9200.
 * **Confirm-Win8**  - Checks for Windows 8.0 or 8.1 and aborts package install if not. Default build 9200.
 * **Confirm-Win7**  - Checks for Windows 7 and aborts package install if not. Default build 7601.
-* **Confirm-WinMinimumBuild**  - Checks for a Windows minimum build and aborts package install if not. (Build for the future!)
-* **Confirm-WinRequiredBuild** - Checks for a Windows specific build and aborts package install if not. (Build for the future!)
+* **Confirm-WinMinimumBuild**  - Checks for a Windows minimum build and aborts package install if not. (Built for the future!)
+* **Confirm-WinRequiredBuild** - Checks for a Windows specific build and aborts package install if not. (Built for the future!)
 
 ### USAGE:
 * Add **Confirm-Win10** to your chocolateyInstall.ps1 script before Install-ChocolateyPackage to abort the install if Windows 10 (or 11) is not present.

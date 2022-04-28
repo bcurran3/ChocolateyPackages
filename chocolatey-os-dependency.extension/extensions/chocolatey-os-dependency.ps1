@@ -133,6 +133,7 @@ if ($OSMajor -eq 6 -and $minor -lt 1 -and $OSBuild -ge 7601 -and $OSBuild -ge $R
 		 }
 }
 
+# Confirms Windows has a minimum build number and aborts if not. Not major version specific.
 function Confirm-WinMinimumBuild{
   Param(
     [Parameter(Mandatory=$true,
@@ -152,6 +153,7 @@ if ($OSBuild -ge $ReqBuild) {
 		 }
 }
 
+# Confirms Windows is build x and aborts if not. Not major version specific.
 function Confirm-WinRequiredBuild{
   Param(
     [Parameter(Mandatory=$true,
