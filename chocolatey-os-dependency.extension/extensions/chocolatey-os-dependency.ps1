@@ -1,4 +1,4 @@
-﻿# chocolatey-os-dependency.extension v0.0.1 (04-26-2022) by Bill Curran AKA BCURRAN3 - public domain
+﻿# chocolatey-os-dependency.extension v0.0.1 (04-28-2022) by Bill Curran AKA BCURRAN3 - public domain
 
 # Confirms OS is Windows 11 and aborts if not. If no build number is specified, it defaults to the initial release build.
 # Can be sent a particular build # to check as minimum.
@@ -18,7 +18,7 @@ Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Re
 if ($OSMajor -eq 10 -and $OSBuild -ge 22000 -and $OSBuild -ge $ReqBuild) {
 	return
 	 } else {
-		 Write-Host "WARNING:   ** <Windows 11 Build $ReqBuild or higher required." -Foreground Red
+		 Write-Host "WARNING:   ** Windows 11 Build $ReqBuild or higher required." -Foreground Red
 		 throw
 		 }
 }
@@ -41,7 +41,7 @@ Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Re
 if ($OSMajor -eq 10 -and $OSBuild -ge 10240 -and $OSBuild -ge $ReqBuild) {
 	return
 	 } else {
-		 Write-Host "WARNING:   ** <Windows 10 Build $ReqBuild or higher required." -Foreground Red
+		 Write-Host "WARNING:   ** Windows 10 Build $ReqBuild or higher required." -Foreground Red
 		 throw
 		 }
 }
@@ -63,7 +63,7 @@ Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Re
 if ($OSMajor -eq 6 -and $minor -eq 3 -and $OSBuild -ge 9600 -and $OSBuild -ge $ReqBuild) {
 	return
 	 } else {
-		 Write-Host "WARNING:   ** <Windows 8.1 Build $ReqBuild or higher required." -Foreground Red 
+		 Write-Host "WARNING:   ** Windows 8.1 Build $ReqBuild or higher required." -Foreground Red 
 		 throw
 		 }
 }
@@ -85,7 +85,7 @@ Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Re
 if ($OSMajor -eq 6 -and $minor -eq 2 -and $OSBuild -ge 9200 -and $OSBuild -ge $ReqBuild) {
 	return
 	 } else {
-		 Write-Host "WARNING:   ** <Windows 8.0 Build $ReqBuild or higher required." -Foreground Red 
+		 Write-Host "WARNING:   ** Windows 8.0 Build $ReqBuild or higher required." -Foreground Red 
 		 throw
 		 }
 }
@@ -106,7 +106,7 @@ Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Re
 if ($OSMajor -eq 6 -and $OSBuild -ge 9200 -and $OSBuild -ge $ReqBuild) {
 	return
 	 } else {
-		 Write-Host "WARNING:   ** <Windows 8 Build $ReqBuild or higher required." -Foreground Red 
+		 Write-Host "WARNING:   ** Windows 8 Build $ReqBuild or higher required." -Foreground Red 
 		 throw
 		 }
 }
@@ -128,7 +128,45 @@ Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Re
 if ($OSMajor -eq 6 -and $minor -lt 1 -and $OSBuild -ge 7601 -and $OSBuild -ge $ReqBuild) {
 	return
 	 } else {
-		 Write-Host "WARNING:   ** <Windows 7 Build $ReqBuild or higher required." -Foreground Red 
+		 Write-Host "WARNING:   ** Windows 7 Build $ReqBuild or higher required." -Foreground Red 
+		 throw
+		 }
+}
+
+function Confirm-WinMinimumBuild{
+  Param(
+    [Parameter(Mandatory=$true,
+    ValueFromPipeline=$true)]
+    [int]
+    $ReqBuild
+  )
+  
+$OSMajor=[Environment]::OSVersion.Version.Major
+$OSBuild=[Environment]::OSVersion.Version.Build
+Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild Minimum Required Build = $ReqBuild -Foreground Magenta
+if ($OSBuild -ge $ReqBuild) {
+	return
+	 } else {
+		 Write-Host "WARNING:   ** Windows Build $ReqBuild or higher required." -Foreground Red
+		 throw
+		 }
+}
+
+function Confirm-WinRequiredBuild{
+  Param(
+    [Parameter(Mandatory=$true,
+    ValueFromPipeline=$true)]
+    [int]
+    $ReqBuild
+  )
+  
+$OSMajor=[Environment]::OSVersion.Version.Major
+$OSBuild=[Environment]::OSVersion.Version.Build
+Write-Host OS Dependency Check: OSMajor = $OSMajor OSBuild = $OSBuild MRequired Build = $ReqBuild -Foreground Magenta
+if ($OSBuild -eq $ReqBuild) {
+	return
+	 } else {
+		 Write-Host "WARNING:   ** Windows Build $ReqBuild required." -Foreground Red
 		 throw
 		 }
 }
