@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>30.0.101.1660</version>
+    <version>30.0.101.1960</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
@@ -31,17 +31,35 @@ Any graphics issues found using Intel generic graphics drivers should be [report
 
 Install the [Intel® Driver &amp; Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html), which automatically checks for drivers on a regular basis and can provide notifications when new drivers are available.
 
-This is a DCH driver. [Click for more information about DCH drivers](https://www.intel.com/content/www/us/en/support/articles/000031275/graphics-drivers.html).
+## Highlights:
 
-## Supported OS versions
+* Launch driver for 12th Generation Intel® Core™ Processors with Intel® UHD Graphics (Codename Alder Lake-HX). 
+* Intel® Game On Driver support for Evil Dead: The Game* and Dolmen* on Intel® 11th Generation with Xe Graphics and newer. 
 
-* Microsoft Windows 10-64 - October 2018 Update (1809)(RS5)
-* Microsoft Windows 10-64 - May 2019 Update (1903)(19H1)
-* Microsoft Windows 10-64 - November 2019 Update (1909)(19H2)
-* Microsoft Windows 10-64 - May 2020 Update (2004)(20H1)
+##OS Reference:
+
+* Microsoft Windows® 10-64 - October 2018 Update (1809)
+* Microsoft Windows 10-64 - May 2019 Update (1903)
+* Microsoft Windows 10-64 - November 2019 Update (1909)
+* Microsoft Windows 10-64 - May 2020 Update (2004)
 * Microsoft Windows 10-64 - October 2020 Update (20H2)
 * Microsoft Windows 10-64 - May 2021 Update (21H1)
+* Microsoft Windows 10-64 - November 2021 Update (21H2) 
 * Microsoft Windows 11*-64 - October 2021 Update (21H2) 
+
+## Platform (OS Support)
+
+* 6th Gen Intel® Core™ processor family (Codename Skylake) (1903-21H1)
+* 7th Gen Intel® Core™ processor family (Codename Kaby Lake) (1903-21H1)
+* 8th Gen Intel® Core™ processor family (Codename Kaby Lake-R, Coffee Lake, Whiskey Lake (1903+)
+* 9th Gen Intel® Core™ processor family (Codename Coffee Lake-R) (1903+)
+* 10th Gen Intel® Core™ processor family (Codename Comet Lake, Amber Lake, Ice Lake) (1903+)
+* 11th Gen Intel® Core™ processor family (Codename Tiger Lake, Rocket Lake, Tiger Lake-H) (1909+)
+* 12th Gen Intel® Core™ processor family (Codename Alder Lake-S, Alder Lake-H, Alder Lake-P, Alder Lake-U, Alder Lake-HX) (20H2+) 
+* Intel® Core™ Processor with Intel® Hybrid Technology (Codename Lakefield) (1909+)
+* Intel® Atom®, Pentium® and Celeron® processor family (Codename Apollo Lake, Elkhart Lake) (1809+)
+* Intel® Pentium® and Celeron® processor family (Codename Gemini Lake, Jasper Lake) (1903-21H1, 1909+)
+* Intel® Iris® Xe Dedicated Graphics family (Codename DG1) (2004+)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
 
