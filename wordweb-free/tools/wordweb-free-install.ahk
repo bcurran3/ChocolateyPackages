@@ -4,12 +4,8 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 SetTitleMatchMode, 2 ; A window's title can contain WinTitle anywhere inside it to be a match. 
 
 WinWaitActive, WordWeb Dictionary/Thesaurus Setup , , 90
-Send {TAB}
-Send {TAB}
-Send {SPACE}
-Send !n
 Send {ENTER}
 Send {ENTER}
 Sleep 5000
-Send !n
+Send {ENTER}
 Send {ENTER}
