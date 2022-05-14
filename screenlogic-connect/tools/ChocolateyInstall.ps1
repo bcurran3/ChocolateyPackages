@@ -44,3 +44,8 @@ Get-ChocolateyWebFile @packageArgs
 
 Write-Host "  ** Protocol Adapter f/w and Compatibility Update can be found in C:\ProgramData\chocolatey\lib\screenlogic-connect\tools\" -Foreground Magenta
 
+Get-ChildItem -Path $toolsDir -Recurse | Where {
+ $_.Extension -eq '.exe'} | % {
+ New-Item $($_.FullName + '.ignore') -Force -ItemType file
+} | Out-Null
+
