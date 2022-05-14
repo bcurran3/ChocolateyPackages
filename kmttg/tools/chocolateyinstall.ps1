@@ -8,6 +8,10 @@ Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\kmttg.lnk" -ta
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\kmttg.lnk" -targetPath "$toolsDir\kmttg.jar" -WorkingDirectory "$toolsDir" -IconLocation "$toolsDir\kmttg.ico"
 
 Remove-Item "$toolsDir\*.zip" -EA SilentlyContinue | Out-Null
-
 $WhoAmI=whoami
 icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | Out-Null
+Get-ChildItem -Path $toolsDir -Recurse | Where {
+ $_.Extension -eq '.exe'} | % {
+ New-Item $($_.FullName + '.ignore') -Force -ItemType file
+} | Out-Null
+
