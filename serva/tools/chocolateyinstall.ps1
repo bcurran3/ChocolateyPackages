@@ -24,3 +24,8 @@ if (Get-ProcessorBits 64) {
   
 $WhoAmI=whoami
 icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | Out-Null
+Get-ChildItem -Path $toolsDir -Recurse | Where {
+ $_.Extension -eq '.exe'} | % {
+ New-Item $($_.FullName + '.ignore') -Force -ItemType file
+} | Out-Null
+
