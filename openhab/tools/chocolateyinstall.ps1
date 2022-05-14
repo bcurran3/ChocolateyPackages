@@ -39,5 +39,9 @@ New-Item "$toolsDir\userdata\logs" -ItemType Directory -EA SilentlyContinue
 Install-ChocolateyShortcut -shortcutFilePath "$toolsDir\openHAB\$ShortcutName7" -targetPath "$toolsDir\userdata\logs" -IconLocation "$toolsDir\openHAB.ico" 
 
 $WhoAmI=whoami
-icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | out-null
+icacls.exe $toolsDir /grant $WhoAmI":"'(OI)(CI)'F /T | Out-Null
 Remove-Item $toolsDir\openhab-*.zip -Force | Out-Null
+Get-ChildItem -Path $toolsDir -Recurse | Where {
+ $_.Extension -eq '.exe'} | % {
+ New-Item $($_.FullName + '.ignore') -Force -ItemType file
+} | Out-Null
