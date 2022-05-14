@@ -20,3 +20,8 @@ Get-ChocolateyWebFile @packageArgs
 
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$ShortcutName" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir\$packageName"
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName" -targetPath "$toolsDir\$ExeFile" -WorkingDirectory "$toolsDir\$packageName"
+Get-ChildItem -Path $toolsDir -Recurse | Where {
+ $_.Extension -eq '.exe'} | % {
+ New-Item $($_.FullName + '.ignore') -Force -ItemType file
+} | Out-Null
+
