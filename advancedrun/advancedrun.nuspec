@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>advancedrun</id>
-    <version>1.10</version>
+    <version>1.51</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advancedrun</packageSourceUrl>
     <title>AdvancedRun (Portable)</title>
@@ -29,13 +29,18 @@ AdvancedRun is a simple tool for Windows that allows you to run a program with d
 
 ### Examples of what you can do with AdvancedRun
 
-* Run the RegEdit of Windows as normal user on Windows 10/8/7/Vista, without elevation. In this mode, you'll not be able to access or modify Registry keys that require admin rights.
-* Run the RegEdit of Windows as SYSTEM user on Windows 10/8/7/Vista. In this mode, you'll be able to access the HKEY_LOCAL_MACHINE\SECURITY key.
+* Run the RegEdit of Windows as normal user on Windows 11/10/8/7/Vista, without elevation. In this mode, you'll not be able to access or modify Registry keys that require admin rights.
+* Run the RegEdit of Windows as SYSTEM user on Windows 11/10/8/7/Vista. In this mode, you'll be able to access the HKEY_LOCAL_MACHINE\SECURITY key.
+* Run RegEdit as TrustedInstaller on Windows 11/10/8/7/Vista.
+* Run a program as 'NT AUTHORITY\Network Service' account
+* Run a program as 'NT AUTHORITY\Local Service' account
 * Run a program with a user of another running process.
+* Run a program with another logged-in user, without typing the password of the user.
 * Run a program in high priority.
 * Run a specific instance of program in Windows XP compatibility mode, without making global changes in the Registry.
 * Run a specific instance of program with different PATH environment string, but without modifying the PATH string of the entire system and without using batch files or command prompt window.
 * Run a program with a full set of environment variables you choose, ignoring the system environment variables completely.
+* Run a program on remote computer by using a temporary service (Requires full admin access on the remote machine)* Run the RegEdit of Windows as normal user on Windows 10/8/7/Vista, without elevation. In this mode, you'll not be able to access or modify Registry keys that require admin rights.
 
 ### System Requirements
 
