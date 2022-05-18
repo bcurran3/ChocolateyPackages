@@ -44,7 +44,7 @@ AdvancedRun is a simple tool for Windows that allows you to run a program with d
 
 ### System Requirements
 
-This utility works on any version of Windows, starting from Windows XP and up to Windows 10. Both 32-bit and 64-bit systems are supported. Some of the features, like 'Run As SYSTEM User' and 'Run As user of selected process' are not supported on Windows XP.
+This utility works on any version of Windows, starting from Windows XP and up to Windows 11. Both 32-bit and 64-bit systems are supported. Some of the features, like 'Run As SYSTEM User' and 'Run As user of selected process' are not supported on Windows XP.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advancedrun/readme.md)**
 	
