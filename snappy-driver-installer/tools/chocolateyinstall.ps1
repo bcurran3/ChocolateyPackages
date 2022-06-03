@@ -20,7 +20,7 @@ $packageArgs = @{
 
 Install-ChocolateyZipPackage @packageArgs
 
-if (Get-OSArchitectureWidth -eq 64)
+if (Get-OSArchitectureWidth -Compare 64)
     {
    Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\$shortcutName.lnk" -targetPath $FileFullpath64 -WorkingDirectory "$toolsDir"
    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName.lnk" -targetPath $FileFullpath64

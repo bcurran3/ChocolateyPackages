@@ -7,7 +7,7 @@ $checksum64   = '6ffe2fad26cd68cbd8c23f7361469f7eaba9b267f320daf9cce90ed28e4b3bc
 $shortcutName = 'TeamSpeak Server.lnk'
 $exe          = 'ts3server.exe'
 
-if ((Get-OSArchitectureWidth -eq 64) -and ($env:chocolateyForceX86 -ne $true))
+if ((Get-OSArchitectureWidth -Compare 64) -and ($env:chocolateyForceX86 -ne $true))
     {
      $workingDir = 'teamspeak3-server_win64'
     } else {
