@@ -11,7 +11,7 @@ $packageArgs = @{
     checkum        = $checksum
     checksumType   = 'sha256'
     fileType       = 'EXE'
-    silentArgs     = '/S'
+    silentArgs     = '/quiet /norestart'
     validExitCodes = @(0)   
 }
 
