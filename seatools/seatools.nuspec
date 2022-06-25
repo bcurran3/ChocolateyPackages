@@ -4,21 +4,24 @@
   <metadata>
     <id>seatools</id>
     <title>SeaTools for Windows (Install)</title>
-    <version>1.4.0.7</version>
+    <version>5.0.140</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/seatools</packageSourceUrl>
     <authors>Seagate Technology</authors>
     <owners>bcurran3</owners>
     <summary>SeaTools for Windows does diagnostics on your Seagate brand hard drives (and others!).</summary>
     <description>
-___
-[choco://seatools](choco://seatools)
+---
+
+### [choco://seatools](choco://seatools)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 
 ![Screenshot of SeaTools for Windows](http://www.seagate.com/files/www-content/services-software/_shared/images/seatools-947x556.JPG)
 
 
-###SeaTools for Windows
+### SeaTools for Windows
 
 
 SeaTools for Windows is completely data safe. It installs on your system. If the drive passes SeaTools for Windows, your troubleshooting can move to other areas.
@@ -33,13 +36,16 @@ SeaTools for Windows is a comprehensive, easy-to-use diagnostic tool that helps 
 [Facebook](https://www.facebook.com/seagate) | [LinkedIn](https://www.linkedin.com/company/2868/) | [YouTube](https://www.youtube.com/user/SeagateTechnology) | [Twitter](https://twitter.com/SEAGATE) | [Blog](http://blog.seagate.com/)
     
 
-___
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-___
+
+---
 
 </description>
     <projectUrl>https://www.seagate.com/support/downloads/seatools/</projectUrl>
-    <docsUrl>https://www.seagate.com/files/www-content/support-content/downloads/seatools/_shared/downloads/pdf/SeaTools-for-windows-en-us.pdf</docsUrl>
+    <docsUrl>https://www.seagate.com/files/www-content/support-content/downloads/seatools/_shared/downloads/100869623_B.pdf</docsUrl>
     <tags>seagate seatools hdd hard disk diag diagnostics utility</tags>
     <copyright>Seagate Technology</copyright>
     <licenseUrl>https://www.seagate.com/legal-privacy/terms-and-conditions/</licenseUrl>
