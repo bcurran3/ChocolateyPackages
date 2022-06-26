@@ -1,4 +1,4 @@
-# chocolatey-fastanswers.extension v0.0.2 by Bill Curran AKA BCURRAN3 - public domain
+# chocolatey-fastanswers.extension v0.0.2.1 by Bill Curran AKA BCURRAN3 - public domain
 
 $scriptRoot = Split-Path -Path $MyInvocation.MyCommand.Definition
  
@@ -23,7 +23,8 @@ $publicFunctions = @(
     'Get-IsWin8',
     'Get-IsWin80',
     'Get-IsWin81',
-    'Get-IsWin10',	
+    'Get-IsWin10',
+    'Get-IsWin11',
     'Get-IsWinEdu',
     'Get-IsWinEnt',
     'Get-IsWinHome',
@@ -34,7 +35,8 @@ $publicFunctions = @(
 	'Get-IsWinServer2012',
 	'Get-IsWinServer2012R2',
 	'Get-IsWinServer2016',
-	'Get-IsWinServer2019',	
+	'Get-IsWinServer2019',
+	'Get-IsWinServer2022',
 	'Get-IsWinServerDatacenter',
 	'Get-IsWinServerEssentials',
 	'Get-IsWinServerFoundation',
