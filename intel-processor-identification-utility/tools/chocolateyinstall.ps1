@@ -2,7 +2,7 @@
 $packageName    = 'intel-processor-identification-utility'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://downloadmirror.intel.com/28539/Intel%20Processor%20Identification%20Utility.exe'
-$checksum       = '408EFF0AB0742230AE2A934B35F6E296A72D9E4225E40246426839220015882D'
+$checksum       = 'ACF990CDB2C394610581D5E731FE546DA2451A0FBC0A482C566372BBDCE97A13'
 
 $packageArgs = @{
   packageName    = $packageName
