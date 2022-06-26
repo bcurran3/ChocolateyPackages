@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wsl-debiangnulinux</id>
-    <version>9.0.0.020180923</version>
+    <version>11.0.0.20220625-pre</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-debiangnulinux</packageSourceUrl>
 	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>	
