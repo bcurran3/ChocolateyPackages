@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -6,7 +6,8 @@
     <version>11.0.0.20220625-pre</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wsl-debiangnulinux</packageSourceUrl>
-	<projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>	
+    <projectUrl>https://www.microsoft.com/en-us/windows/features</projectUrl>
+    <projectSourceUrl>https://github.com/Debian</projectSourceUrl>
     <title>Debian GNU/Linux 11 (bullseye) for Windows Subsystem for Linux (Install)</title>
     <authors>Software in the Public Interest, Inc. and others</authors>
     <iconUrl>https://www.debian.org/logos/openlogo-100.png</iconUrl>
@@ -14,22 +15,34 @@
     <licenseUrl>https://www.debian.org/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://docs.microsoft.com/en-us/windows/wsl/about</docsUrl>
-	<bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://github.com/Microsoft/WSL/issues</bugTrackerUrl>
     <tags>wsl debian gnu stretch linux</tags>
-    <summary>This packages installs Debian GNU/Linux 9 (stretch) for Windows Subsystem for Linux.</summary>
+    <summary>This packages installs Debian GNU/Linux 11 (bullseye) for Windows Subsystem for Linux.</summary>
     <description>
-###This packages installs Debian GNU/Linux 9 (stretch) for Windows Subsystem for Linux.
+---
+
+### [choco://wsl-debiangnulinux](choco://wsl-debiangnulinux)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+### This packages installs Debian GNU/Linux 11 (bullseye) for Windows Subsystem for Linux.
 	
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/wsl-debiangnulinux/readme.md)**
 
-***
+	
+
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://docs.microsoft.com/en-us/windows/wsl/release-notes</releaseNotes>
     <dependencies>
       <dependency id="wsl" version="1.0.1" />
-    </dependencies>		
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
