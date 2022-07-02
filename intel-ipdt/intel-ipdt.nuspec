@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-ipdt</id>
-    <version>4.1.5.37</version>
+    <version>4.1.7.39</version>
     <title>Intel® Processor Diagnostic Tool (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
@@ -24,10 +24,6 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ### Purpose
 
 The purpose of the Intel® Processor Diagnostic Tool is to verify the functionality of an Intel® microprocessor. The diagnostic tool checks for brand identification, verifies the processor operating frequency, tests specific processor features, and performs a stress test on the processor.
-
-The Intel® Processor Diagnostic Tool release 4.1.5.37 is compatible with multiprocessor systems.
-
-**12th Gen Processors are not yet supported by 4.1.5.37 version of IPDT**
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
 

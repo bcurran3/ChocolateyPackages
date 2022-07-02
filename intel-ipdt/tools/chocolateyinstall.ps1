@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-ipdt'
-$url            = 'https://downloadmirror.intel.com/19792/eng/ipdt_installer_4.1.5.37_32bit.msi'
-$checksum       = '05168596E7B5F7F5778125858454C0E4BB7A04997F67274831C7F5F24D058C6C'
-$url64          = 'https://downloadmirror.intel.com/19792/eng/ipdt_installer_4.1.5.37_64bit.msi'
-$checksum64     = 'FAFE723C3FF07086183693BEE910F8240AED9B1B6698008C0410DBC2F95CCAE4'
+$url            = "https://downloadmirror.intel.com/19792/IPDT_Installer_"+$env:ChocolateyPackageVersion+"_32bit.msi"
+$checksum       = 'E4FE1FC9E9E9ED747A0B5E7932F7842B39F37260F8569B328C28FB1D66F4F8CF'
+$url64          = "https://downloadmirror.intel.com/19792/IPDT_Installer_"+$env:ChocolateyPackageVersion+"_64bit.msi"
+$checksum64     = 'F8C6A8D61F1F355CFB53A32817F94950A0AD2422A124D3F05F7ED2B6D2296F48'
 
 $packageArgs = @{
   packageName    = $packageName
