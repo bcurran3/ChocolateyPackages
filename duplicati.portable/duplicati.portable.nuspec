@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>duplicati.portable</id>
-    <version>2.0.3.3</version>
+    <version>2.0.6.3</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/duplicati.portable</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Duplicati (Portable)</title>
@@ -36,7 +36,7 @@ Duplicati is a free, open source, backup client that securely stores encrypted, 
 * FTP
 * and more
 
-Duplicati is licensed under LGPL and available for Windows, OSX and Linux (.NET 4.5+ or Mono required).
+Duplicati is licensed under LGPL and available for Windows, OSX and Linux (.NET 4.7.1+ or Mono required).
 
 ###Features
 
@@ -59,7 +59,7 @@ Backup files and folders with strong AES-256 encryption. Save space with increme
 
 
 ###Free software
-Duplicati is free software and open source. You can use Duplicati for free even for commercial purposes. Source code is licensed under LGPL. Duplicati runs under Windows, Linux, MacOS. It requires .NET 4.5 or Mono.
+Duplicati is free software and open source. You can use Duplicati for free even for commercial purposes. Source code is licensed under LGPL. Duplicati runs under Windows, Linux, MacOS. It requires .NET 4.7.1 or Mono.
 
 
 ###Strong encryption
@@ -77,7 +77,7 @@ Duplicati is configured by a web interface that runs in any browser (even mobile
 	</description>
     <releaseNotes>https://github.com/duplicati/duplicati/blob/master/changelog.txt</releaseNotes>
     <dependencies>
-      <dependency id="dotnet4.5" />
+      <dependency id="dotnetfx" />
     </dependencies>
     </metadata>
   <files>
