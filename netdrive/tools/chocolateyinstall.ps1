@@ -1,35 +1,18 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'netdrive'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'http://files.bdrive.com/netdrive/builds/e52f058a8a124f19812c7ff6ccef62e9/NetDrive3_Setup-3.8.987.exe'
-$checksum       = '7CF964FE98957F7805E8D37F2D0A96F659C8401EC7D33E909BB54A4895BFC88E'
-$extractDir     = "$toolsDir\extracted"
-$fileLocation   = "$extractDir\NetDrive3.msi"
-
-# switch to MSI dl -- msiexec /i NetDrive3-version.msi REINSTALL=ALL REINSTALLMODE=vamus
-
-New-Item $extractDir -type directory
-
-$packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $extractDir
-  fileType      = 'ZIP' 
-  url           = $url
-  checksum      = $checksum
-  checksumType  = 'sha256'
-}
-
-Install-ChocolateyZipPackage @packageArgs 
+$url            = 'https://files.bdrive.com/netdrive/builds/93a0373f1b1e4dd1afbd93bd5eb202a3/NetDrive3-3.16.589.msi'
+$checksum       = 'A3C8248205966EE9B09858D350A7696270D5BF3C9A716F3928050665C3E80FE2'
 
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'MSI'
-  file           = $fileLocation
-  silentArgs     = '/quiet /qn /norestart'
-  validExitCodes = @(0,1223)
-  softwareName   = 'NetDrive*'
+  url            = $url
+  validExitCodes = @(0, 3010, 1641)
+  silentArgs     = '/quiet /qn /norestart REINSTALL=ALL REINSTALLMODE=vamus'
+  softwareName   = ''
+  checksum       = $checksum
+  checksumType   = 'sha256' 
 }
- 
-Install-ChocolateyInstallPackage @packageArgs
 
-Remove-Item $extractDir -Recurse | Out-Null
+Install-ChocolateyPackage @packageArgs  
