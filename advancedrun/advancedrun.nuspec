@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>advancedrun</id>
-    <version>1.10</version>
+    <version>1.51</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advancedrun</packageSourceUrl>
     <title>AdvancedRun (Portable)</title>
@@ -18,10 +18,12 @@
     <summary>AdvancedRun - configure and save settings for how programs run.</summary>
     <description>
 ---
+
 ### [choco://advancedrun](choco://advancedrun)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
+
 
 ![Screenshot of AdvancedRun](http://www.nirsoft.net/utils/advancedrun.png)
 
@@ -49,6 +51,7 @@ This utility works on any version of Windows, starting from Windows XP and up to
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 
 ---
+
 
 
 </description>
