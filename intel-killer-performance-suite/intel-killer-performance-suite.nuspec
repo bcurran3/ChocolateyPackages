@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-killer-performance-suite</id>
-    <version>3.1122.3166</version>
+    <version>3.1222.614</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
     <title>Intel® Killer Performance Suite (Install)</title>
