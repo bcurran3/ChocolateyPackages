@@ -4,7 +4,7 @@
   <metadata>
     <id>simple-sticky-notes</id>
     <title>Simple Sticky Notes (Install)</title>
-    <version>5.5</version>
+    <version>5.6</version>
     <authors>Simnet Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>
@@ -21,7 +21,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 What is Simple Sticky Notes? It's a simple, easy-to-use, absolutely free, fast and efficient note taking software.
 
-Minimum Requirements: Windows® 10 / 8.1 / 8 / 7 / Vista / XP PC with a 1 GHz Intel or AMD processor and 512 MB of RAM
+Minimum Requirements: Windows® 11 / 10 / 8.1 / 8 / 7 / Vista / XP PC with a 1 GHz Intel or AMD processor and 512 MB of RAM
 
 **SOCIAL MEDIA:**
 [Facebook](https://www.facebook.com/SimpleStickyNotes) | [Google+](https://plus.google.com/+SimpleStickyNotes) | [Twitter](https://twitter.com/SimpleSticky)
