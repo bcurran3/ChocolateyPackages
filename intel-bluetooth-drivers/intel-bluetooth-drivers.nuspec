@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-bluetooth-drivers</id>
+    <version>22.150.0</version>
+    <owners>bcurran3</owners>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/18649/737033/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
+    <title>Intel® Wireless Bluetooth® Drivers</title>
+    <authors>Intel Corporation</authors>
+    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>intel bluetooth drivers</tags>
+    <summary>Intel® Wireless Bluetooth® Drivers for Windows® 10 and 11</summary>
+    <description>
+---
+
+### [choco://intel-bluetooth-drivers](choco://intel-bluetooth-drivers)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Purpose
+
+Intel® Wireless Bluetooth® is recommended for end-users, including home users and business customers with Intel Wireless Bluetooth® technology.
+
+Driver version 22.150.0.6: For Windows® 10 64-bit or Windows 11* using AX411, AX211, AX210, AX201, AX200, 9560, 9462, 9461, 9260, 8265, 18265, 8260, 18260
+Driver version 20.100.10.9: For Windows® 10 64-bit or Windows 11* using 7265, 17265, 3168, 3165
+Driver version 20.100.9.7: For Windows® 10 32-bit using 7265, 17265, 3168, 3165
+Intel® Wireless Bluetooth® 22.150.0 driver has been updated to include functional and security updates. Users should update to the latest version.
+
+### Supported Adapters
+* Intel® Wi-Fi 6E AX4111
+* Intel® Wi-Fi 6E AX2111
+* Intel® Wi-Fi 6E AX2101
+* Intel® Intel® Wi-Fi 6 (Gig+) Desktop Kit1
+* Intel® Wi-Fi 6 AX2011
+* Intel® Wi-Fi 6 AX2001
+* Intel® Wireless-AC 95601
+* Intel® Wireless-AC 94621
+* Intel® Wireless-AC 94611
+* Intel® Wireless-AC 92601
+* Intel® Dual Band Wireless-AC 82651
+* Intel® Dual Band Wireless-AC 82601
+* Intel® Dual Band Wireless-AC 3168
+* Intel® Wireless 7265 Family
+* Intel® Dual Band Wireless-AC 3165
+
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/737033/ReleaseNotes_BT_22.150.0.pdf</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
