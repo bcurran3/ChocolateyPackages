@@ -1,9 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkExe   = 'AutoHotKey'
-$ahkFile  = "$toolsDir\logitech-options_install.ahk"
 $url      = 'https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.exe'
-$checksum = 'AFA718BDA69463124E69A3A650F52768E6DFB043164D7DCE3092EB2D13515C3F'
+$checksum = '59C16CFFE04EA4BBFF1B1A38E49AE99135591F72D87153FAC463927586F96E71'
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
@@ -11,11 +9,8 @@ $packageArgs = @{
     checkum        = $checksum
     checksumType   = 'sha256'
     fileType       = 'EXE'
-    silentArgs     = '/S'
+    silentArgs     = '/quiet /norestart'
     validExitCodes = @(0)   
 }
 
-Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
-Start-WaitandStop "LogiOptionsUI"
-Start-CheckandStop "AutoHotkey"
