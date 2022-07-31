@@ -3,16 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>snappy-driver-installer</id>
-    <version>1.0.539.20220602</version>
+    <version>1.22.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snappy-driver-installer</packageSourceUrl>
     <title>Snappy Driver Installer (Portable)</title>
     <authors>Sam Bounce</authors>
     <projectUrl>http://www.sdi-tool.org/</projectUrl>
     <iconUrl>https://sourceforge.net/p/snappy-driver-installer/icon?1426233068</iconUrl>
-    <licenseUrl>https://sourceforge.net/p/snappy-driver-installer/code/HEAD/tree/branches/stable/resources/gpl-3.0.txt</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/snappy-driver-installer/code/</projectSourceUrl>
     <docsUrl>http://www.sdi-tool.org/settings/</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/snappy-driver-installer/discussion/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/snappy-driver-installer/tickets/</bugTrackerUrl>
