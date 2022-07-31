@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>teamspeak-server</id>
-    <version>3.13.6.20220602</version>
+    <version>3.13.7</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/teamspeak-server</packageSourceUrl>
     <title>TeamSpeak Server</title>
@@ -14,8 +14,8 @@
     <licenseUrl>https://www.teamspeak.com/en/features/licensing/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://teamspeak.com/en/support/get-started/</docsUrl>
-    <mailingListUrl>https://forum.teamspeak.com/</mailingListUrl>
-    <bugTrackerUrl>https://forum.teamspeak.com/forums/120-Bug-Reports-EN-DE</bugTrackerUrl>
+    <mailingListUrl>https://community.teamspeak.com/</mailingListUrl>
+    <bugTrackerUrl>https://community.teamspeak.com/c/teamspeak-server/server-feedback/18</bugTrackerUrl>
     <tags>teamspeak server team speak ts3 ts voip discord mumble ventrilo portable</tags>
     <summary>TeamSpeak is VoIP software designed with security in mind, featuring crystal clear voice quality, scalabilty up to thousands of simultaneous users and endless customization options. Packed with powerful features and incredible performance, TeamSpeak is your Swiss Army Knife of voice communication.</summary>
     <description>

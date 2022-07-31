@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'https://files.teamspeak-services.com/releases/server/3.13.6/teamspeak3-server_win32-3.13.6.zip'
-$checksum     = 'f52cddfd2f1297756afa12d758718b3ee34b88c0e7962fb75985877f480e0d71'
-$url64        = 'https://files.teamspeak-services.com/releases/server/3.13.6/teamspeak3-server_win64-3.13.6.zip'
-$checksum64   = '6ffe2fad26cd68cbd8c23f7361469f7eaba9b267f320daf9cce90ed28e4b3bca'
+$url          = 'https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server_win32-3.13.7.zip'
+$checksum     = '03ec18e7700d0884d09e6cbb9419cc8ea80736bf5ac82582941bbe8dc81f3d52'
+$url64        = 'https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server_win64-3.13.7.zip'
+$checksum64   = '489f6f02b336f80812ad0307897e072c37042d1c39341e4efbe7c09d1e100f59'
 $shortcutName = 'TeamSpeak Server.lnk'
 $exe          = 'ts3server.exe'
 
