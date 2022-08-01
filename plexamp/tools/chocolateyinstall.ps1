@@ -11,5 +11,4 @@ $packageArgs = @{
   }
   
 Install-ChocolateyInstallPackage @packageArgs
-Start-CheckandStop "PlexAmp" # test
 Remove-Item $toolsDir\*.exe -Force -EA SilentlyContinue | Out-Null

@@ -4,7 +4,7 @@
   <metadata>
     <id>plexamp</id>
     <title>Plexamp (Install)</title>
-    <version>4.2.2</version>
+    <version>4.3.0</version>
     <authors>Plex</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/plexamp</packageSourceUrl>
@@ -66,7 +66,6 @@ Explore your library in new ways with Library Radio, Time Travel Radio, and Arti
     <releaseNotes>https://forums.plex.tv/t/plexamp-release-notes/221280</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" version="4.5.20120822" />
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
   <files>
