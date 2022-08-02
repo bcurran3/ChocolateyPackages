@@ -44,6 +44,26 @@ $BinaryExtensions=@(
     "*.xar","*.z","*.dll"
 )
 
+# All log file types
+$file_log_types = @(
+	"*.zip.txt","*.exe.txt","*.rar.txt","*.7z.txt","*.gz.txt","*.tar.txt",
+	"*.sfx.txt","*.iso.txt"
+)
+
+# All temporary archive types
+$archive_types = @(
+	"*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.appx",
+	"*.appxbundle","*.bzip2","*.gzip","*.tar","*.lzh","*.z"
+)
+# All license text types
+$license_types = @( "license.txt","*.license.txt","verification.txt" )
+
+# All embedded installer types
+$embed_types = @( "*.msi","*.msu","*.msp" )
+
+# All readme types
+$readme_types = @( "credits.txt","readme.txt","*.md" )
+
 # Import preferences from choco-cleaner.config
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.config"
 $DeleteLogs = $ConfigFile.Settings.Preferences.DeleteLogs
@@ -232,10 +252,6 @@ if ($DeleteLibBkp -eq "True"){
 
 if ($DeleteFileLogs -eq "True")
     {
-	 $file_log_types = @(
-		"*.zip.txt","*.exe.txt","*.rar.txt","*.7z.txt","*.gz.txt","*.tar.txt",
-		"*.sfx.txt","*.iso.txt"
-	 )
 	 $GotFileLogs=Get-ChildItem -Path $ENV:ChocolateyInstall -Recurse -Include $file_log_types
 	 $FileLogs=$GotFileLogs.count
 	 if ($FileLogs -ge 1){
@@ -258,10 +274,6 @@ if ($DeleteLogs -eq "True"){
     }
 
 if ($DeleteArchives -eq "True"){
-	 $archive_types = @(
-		"*.zip","*.rar","*.7z","*.gz","*.tar","*.sfx","*.iso","*.img","*.appx",
-		"*.appxbundle","*.bzip2","*.gzip","*.tar","*.lzh","*.z"
-	 )
 	 $GotArchvieFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib -Recurse -Include $archive_types
 	 $ArchiveFiles=$GotArchvieFiles.count
 	 if ($ArchiveFiles -ge 1){
@@ -278,7 +290,6 @@ if ($Optimizenupkg -eq "True"){
 	}
 
 if ($DeleteLicenseFiles -eq "True"){
-	 $license_types = @( "license.txt","*.license.txt","verification.txt" )
 	 $GotLicenseFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\* -Recurse -Include $license_types -Exclude shimgen.license.txt
 	 $LicenseFiles=$GotLicenseFiles.count
 	 if ($LicenseFiles -ge 1){
@@ -290,7 +301,6 @@ if ($DeleteLicenseFiles -eq "True"){
 	}
 
 if ($DeleteMSInstallers -eq "True"){
-	 $embed_types = @( "*.msi","*.msu","*.msp" )
 	 $GotMSInstallers=Get-ChildItem -Path $ENV:ChocolateyInstall\lib -Recurse -Include $embed_types
 	 $MSInstallers=$GotMSInstallers.count
 	 if ($MSInstallers -ge 1){
@@ -302,7 +312,6 @@ if ($DeleteMSInstallers -eq "True"){
 	}
 
 if ($DeleteReadmes -eq "True"){
-	 $readme_types = @( "credits.txt","readme.txt","*.md" )
 	 $GotReadmes=Get-ChildItem -Path $ENV:ChocolateyInstall\* -Recurse -Include $readme_types
 	 $Readmes=$GotReadmes.count
 	 if ($Readmes -ge 1){
