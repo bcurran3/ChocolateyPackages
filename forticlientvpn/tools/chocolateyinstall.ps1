@@ -1,22 +1,25 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName   = 'forticlientvpn'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url           = 'https://d3gpjj9d20n0p3.cloudfront.net/forticlient/downloads/FortiClientVPNSetup_6.2.6.0951.exe'
-$checksum      = 'B85F5E9AECC86FF4FBBA25EA064604B48D3CA723FC4AFA7F5CEF3D289E21D84E'
-$url64         = 'https://d3gpjj9d20n0p3.cloudfront.net/forticlient/downloads/FortiClientVPNSetup_6.2.6.0951_x64.exe'
-$checksum64    = '4A0E4D3BB2F969FBBD61D67180604E035D89A44FC1D664B5CBA14368BB3FA671'
+$url           = 'https://filestore.fortinet.com/forticlient/downloads/FortiClientVPNSetup_7.0.1.0083.zip'
+checksum       = 'd0d31562aca5e3b652dfef86085d9c72ff6ed0f960f51e44a506fc4aef7f91b9'
+$url64         = 'https://filestore.fortinet.com/forticlient/downloads/FortiClientVPNSetup_7.0.1.0083_x64.zip.zip'
+$checksum64    = '1f218f32abd41c678cc7dbc50a4da70fbe7c7647518555268a2a55068fc56b96'
+$fileLocation  = Join-Path $toolsDir 'FortiClientVPN.msi'
 
 $packageArgs = @{
   packageName   = $packageName
   unzipLocation = $toolsDir
-  fileType      = 'EXE'
+  fileType      = 'MSI'
   url           = $url
   url64         = $url64
-  silentArgs    = '/QUIET /NORESTART'
+  file          = $fileLocation
+  silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
   softwareName  = 'FortiClient VPN' 
   checksum      = $checksum
   checksum64    = $checksum64
   checksumType  = 'sha256'
   }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyZipPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs

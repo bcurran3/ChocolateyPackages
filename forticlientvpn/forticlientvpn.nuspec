@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>forticlientvpn</id>
-    <version>6.2.6.0951</version>
+    <version>7.0.1.0083</version>
     <title>FortiClient VPN (Install)</title>
     <authors>Fortinet Inc</authors>
     <owners>bcurran3</owners>
@@ -13,7 +13,7 @@
     <copyright>Copyright © Fortinet Inc</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://www.fortinet.com/content/dam/fortinet/assets/legal/EULA.pdf</licenseUrl>
-    <docsUrl>https://docs.fortinet.com/product/forticlient/6.2</docsUrl>
+    <docsUrl>https://docs.fortinet.com/product/forticlient/7.0</docsUrl>
     <mailingListUrl>https://forum.fortinet.com/</mailingListUrl>
     <tags>fortinet fortigate forticlient vpn</tags>
     <summary>SSL and IPSec VPN client for Fortinet firewalls.</summary>
@@ -37,7 +37,7 @@ Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package mainta
 ___
 
 </description>
-    <releaseNotes>https://docs.fortinet.com/document/forticlient/6.2.6/windows-release-notes/371487/introduction</releaseNotes>
+    <releaseNotes>https://docs.fortinet.com/document/forticlient/7.0.1/windows-release-notes/371487/introduction</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
