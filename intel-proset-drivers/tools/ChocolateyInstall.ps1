@@ -2,12 +2,12 @@
 $packageName    = 'intel-proset-drivers' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
-$url            = "https://downloadmirror.intel.com/732829/WiFi-"+$ENV:ChocolateyPackageVersion+"-Driver32_Win10.zip"
+$url            = "https://downloadmirror.intel.com/736240/WiFi-"+$ENV:ChocolateyPackageVersion+"-Driver32_Win10.zip"
 #                                                   ^^^^^^ changes
-$checksum       = 'D1B5FEDD0D43B394F01F934717524003548BD7E958E255AC08852A8808A9F57C'
-$url64          = "https://downloadmirror.intel.com/732829/WiFi-"+$ENV:ChocolateyPackageVersion+"-Driver64-Win10-Win11.zip"
+$checksum       = 'EC9C10FBB0C9978AFC4210BCE4A87F71E5645DD1F6822EA41FABBA5CB0A9D74F'
+$url64          = "https://downloadmirror.intel.com/736240/WiFi-"+$ENV:ChocolateyPackageVersion+"-Driver64-Win10-Win11.zip"
 #                                                   ^^^^^^ changes
-$checksum64     = 'AEDE34D8E047D92059FEA4F405ECB26F45FBDC50608BC1C0410402970C52E7AC'
+$checksum64     = '3E8B762BD324355906EA8D9841789DBFFEE6491DEB1FF1591E565EE56CA51C56'
 
 # Last Windows 7+8 version was 21.40.5
 # No need to check for hardware, drivers install even if an Intel PROSet/Wireless card is not found
