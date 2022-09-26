@@ -2,8 +2,8 @@
 $ErrorActionPreference = 'Stop'
 $packageName = 'plexmediaplayer'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64       = 'https://downloads.plex.tv/plexmediaplayer/2.36.0.988-0150ae52/PlexMediaPlayer-2.36.0.988-0150ae52-windows-x64.exe'
-$checksum64  = '56541BE706CCC8365D4DED0AF651D3C89D7727624522D45909E47DCA505651E6'
+$url64       = 'https://downloads.plex.tv/plexmediaplayer/2.58.0.1076-38e019da/PlexMediaPlayer-2.58.0.1076-38e019da-windows-x64.exe'
+$checksum64  = '208FD446410174AAE17ACB12C89940C92589EA75ED18DB967E027AB2B3E4648B'
 
 $packageArgs = @{
   packageName    = $packageName
