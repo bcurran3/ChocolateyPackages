@@ -3,9 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-bluetooth-drivers</id>
-    <version>22.150.0</version>
+    <version>22.170.0</version>
     <owners>bcurran3</owners>
-    <projectUrl>https://www.intel.com/content/www/us/en/download/18649/737033/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
     <title>Intel® Wireless Bluetooth® Drivers</title>
     <authors>Intel Corporation</authors>
@@ -60,7 +60,7 @@ Intel® Wireless Bluetooth® 22.150.0 driver has been updated to include functio
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/737033/ReleaseNotes_BT_22.150.0.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/742233/ReleaseNotes_BT_22.170.0.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
