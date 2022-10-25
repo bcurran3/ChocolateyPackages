@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.5.0</version>
+    <version>4.6.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
-    <title>Dell Update Application for Windows 10 (Install)</title>
+    <title>Dell Update</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-vc/drivers/driversdetails?driverid=ddyxg</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=3T5JX</projectUrl>
 	<docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
@@ -23,7 +23,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-This package contains the Dell Update application for systems running the Windows 10 build 14393 (Redstone 1) or later. Dell Update application automatically updates critical fixes and important device drivers as they become available.
+This package contains the Dell Update and Alienware Update application. Dell Update and Alienware Update application automatically updates critical fixes and important device drivers as they become available. This update addresses Common Vulnerabilities and Exposures (CVE). Common Vulnerabilities and Exposures (CVE) is a list of security vulnerabilities and exposures that are publicly disclosed.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     
@@ -35,8 +35,8 @@ This package contains the Dell Update application for systems running the Window
 ---
 </description>
     <dependencies>
-      <dependency id="DotNet4.6.1" version="4.6.1" />
-      <dependency id="dependency-windows10" version="10.1607" />
+      <dependency id="netfx-4.8" version="4.8.0.0" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
     </dependencies>
   </metadata>
   <files>
