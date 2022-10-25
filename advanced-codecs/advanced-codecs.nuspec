@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's Advanced Codecs (Install)</title>
-    <version>16.4.6</version>
+    <version>16.5.0</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
@@ -20,41 +20,43 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 	
 ![Screen shot of Settings Application](http://shark007.net/images/32bit7.jpg)
 
-## ADVANCED Codecs for Windows 10/8.1/7
+## ADVANCED Codecs for Windows 11 and 10
 
-Current releases introduce 3D decoding of files, ISO's and disks.
+**Anything that the 'Movies &amp; TV app' fails to play, will be able to play in WMP using my codecs.
+All you need to do is check the box... [x] WMP suggested settings**
 
-**3D decoding is reported by LAV Video as, Active Decoder: msdk mvc**
+**Recently,** there has been a major re-write of the GUI itself and the filters they control. Support for MKV on the xbox360 was dropped along with the removal of several deprecated codecs and the SetACL dependency.
+I hope you enjoy these new releases and can find the time to send a small donation in support of continued maintenance into the future.
 
-If you have renamed system files or used a utility such as MCDU, this may not work for you. Please attempt to return all system files back to original filenames before using this product. If you decide to installed registry hacks; you machine may already be broken beyond repair.
+**ABOUT VIRUS DETECTION:** Use Windows Update to update defender's definitions before installation.
+I submit the file to Microsoft for testing before I publish them but you need to update your PC also.
 
-HDR / UHD / H265 / HEVC / MVC, H264 codecs are activated by default.
+**The Save and Restore settings feature** is automated and also controlled by the commandline.
+To have your settings restored automatically during an upgrade, all you need to do is [Save ALL Settings]
+The checkboxes involved are correctly set by default to allow automatic upgrade settings restoration.
 
-The following filetypes are enabled and SUPPORTED by the installation of the Windows 7 Codecs.
-**amr** | mpc | ofr | **divx** | mka | ape | **flac** | evo | **flv** | m4b | **mkv** | ogg | ogm | **rmvb** | xvid | **y4m**
+The ADVANCED release contains a full suite of decoders with a GUI controller for the installed codecs.
 
+The following are a few filetypes enabled and supported by the installation of Shark007 Codecs.
+**amr |** mpc **| divx |** mka **|** ape **| flac |** evo **| flv |** m4b **| mkv |** ogg **|** ogm **| rmvb |** xvid **| y4m**
 All of the above filetypes can be queued to the Windows Media Player Playlist using a right-click.
 
-[SETUP AND USAGE](http://shark007.net/forum/Thread-Setup-and-usage)
-^^ 17.4 million readers ^^
-and over 16,700 registered forum members
+**Top 10 things the Shark pack does better than other packs . . .**
 
-
-Things the Shark pack does that other packs cannot do . . .
-
-1. Full color thumbnails including FLV's and 10bit MKV's.
+1. Full color thumbnails including FLV's and 10bit MKV's provided by Icaros.
 (also allows users to select at what point by percentage to grab the thumbnail)
 2. Enable the Preview Pane for ALL newly enabled filetypes such as MKV and FLV.
 3. Explorer properties are displayed for non native filetypes such as MKV and FLV
-4. Updated often - and has update notification builtin
-5. Allow use of the PowerDVD decoders for 32bit LiveTV in Media Center.
-6. Support playback of MKV files on Extenders and on the Xbox One.
-7. Support use of the LAV filters with the Play To function for MKV files.
-8. Support playback of MOD audio files and M4A files containing ALAC
-9. Supports playlist creation for use in Media Center
-10. Allow users to Enable/Disable codecs installed on their system
-11. Functionality such as Win7DSFilterTweaker builtin.
-12. Support 'Add to Windows Media Player List' using rightclick on all files such as MKV.
+4. Simple commandline features and a builtin, intelligent, Auto Update feature.
+5. Simple commandline features and a builtin, intelligent, Auto Update feature.
+6. Support playback of M4A audio files containing ALAC
+7. Support all system users without them being logged into Windows
+8. Allow users to Enable/Disable codecs installed on their system
+9. Functionality such as Win7DSFilterTweaker and Codec Tweak Tool built in.
+10. Support 'Add to Windows Media Player List' using rightclick on all files such as FLV.
+
+[SETUP AND USAGE](http://shark007.net/forum/Thread-Setup-and-usage)
+
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advanced-codecs/readme.md)**
 
