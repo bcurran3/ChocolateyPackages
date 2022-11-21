@@ -4,7 +4,7 @@
   <metadata>
     <id>seatools</id>
     <title>SeaTools for Windows (Install)</title>
-    <version>5.0.140</version>
+    <version>5.0.171</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/seatools</packageSourceUrl>
     <authors>Seagate Technology</authors>
     <owners>bcurran3</owners>
