@@ -7,10 +7,10 @@ $bits           = Get-ProcessorBits
 Confirm-Win10
 
 # Wired Drivers
-$url            = "https://downloadmirror.intel.com/735339/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_32.zip"
-$checksum       = '0073F808DB8D47D937EF9265CDFD6F40151F24295D1C8E0B90C4A5FA3903444E'
-$url64          = "https://downloadmirror.intel.com/735339/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
-$checksum64     = 'B1D945C00FCB851B52B6DEE3A188B8F914212A3F9B0D070050A9D348CDA990CA'
+$url            = "https://downloadmirror.intel.com/739880/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_32.zip"
+$checksum       = '556198EA2C61D192799D6FED1001FF76B3A8B8CE72ECB97DE7CF32AD429C1492'
+$url64          = "https://downloadmirror.intel.com/739880/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
+$checksum64     = '7229D7B96675F177F7442D62A0C3C5D079639A38FBC84FA1DDD6EF60220E29C2'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -39,10 +39,10 @@ Get-ChocolateyUnzip @packageArgs
 pnputil /add-driver $unzipLocation\*.inf /install /subdirs
 
 # Wired PROSet drivers
-$url            = "https://downloadmirror.intel.com/735339/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_32.zip"
-$checksum       = '8E676AFCFD8509AEC0EADD183078EB9CCADA6AE550BCC0A493957E731DF96445'
-$url64          = "https://downloadmirror.intel.com/735339/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
-$checksum64     = 'EBEF61433978AC18646267CACF1B419B15FA97D301BB237ED70845B3BBAD35D5'
+$url            = "https://downloadmirror.intel.com/739880/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_32.zip"
+$checksum       = '89285694ACE5804ABC3CDC17C01195DE286E886D8B787DA21924F925DDF4DD8B'
+$url64          = "https://downloadmirror.intel.com/739880/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
+$checksum64     = '870769D66A6BC64AC46033B6BC22DD2033B2FD00F30D136C506AE54CF06822E2'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -67,7 +67,6 @@ $packageArgs = @{
 
 Get-ChocolateyUnzip @packageArgs
 
-# replace this with Get-IsWin10 from chocolatey-fastanswers.extension.0.0.3
 $OSBuild=[Environment]::OSVersion.Version.Build
 if ($OSBuild -lt 22000)
 {
