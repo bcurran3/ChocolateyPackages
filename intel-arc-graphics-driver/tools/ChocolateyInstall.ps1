@@ -18,7 +18,7 @@ $packageArgs = @{
   url64bit       = $url64
   checksum64     = $checksum64
   checksumType64 = 'sha256'
-  silentArgs     = "--overwrite --silent --norestart --report $toolsDir\install.log"
+  silentArgs     = "--overwrite --silent --report $toolsDir\install.log"
   softwareName   = ''
   validExitCodes = @(0, 3010, 1641, 14)
    }
