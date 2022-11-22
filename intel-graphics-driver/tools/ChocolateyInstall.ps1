@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-graphics-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64       = 'https://downloadmirror.intel.com/746999/gfx_win_101.3430_101.2111.exe'
+#$url64       = "https://downloadmirror.intel.com/751359/gfx_win_"+$env:ChocolateyPackageVersion+".exe"
+$url64       = "https://downloadmirror.intel.com/751359/gfx_win_101.3790_101.2114.exe"
 #                                                ^^^^^^ changes  ^^^^^^^^
-$checksum64  = '5A4D32FBDF073808489BFC0EC6FA362713CEC13F6C07FEDA4AC567507739A318'
+$checksum64  = 'C5A85A81DDC49DE07090C4DB044F07328AC6CC62FEBD56F205871331C147E27D'
 
 Confirm-Win10
 if (!(Get-IsIntelVideo)){
