@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-arc-graphics-driver</id>
+    <version>31.0.101.3802</version>
+    <owners>bcurran3</owners>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/726609/intel-arc-graphics-windows-dch-driver.html</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
+    <title>Intel Arc Graphics Windows DCH Driver</title>
+    <authors>Intel Corporation</authors>
+    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>intel arcgraphics video driver</tags>
+    <summary>Intel Arc Graphics Driver for Windows 10/11</summary>
+    <description>
+---
+
+### [choco://intel-arc-graphics-driver](choco://intel-arc-graphics-driver)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Detailed Description
+**Note:** Installing this Intel generic graphics driver will overwrite your computer manufacturer (OEM) customized driver. OEM drivers are handpicked and include customized features and solutions to platform-specific issues. The generic Intel driver provides users the latest and greatest feature enhancements and bug fixes that OEMs may not have customized yet to address platform-specific needs. Users can check for matching OEM versions at OEM websites.
+
+Are you still experiencing an error preventing the driver update? Look here for [why and a solution](https://www.intel.com/content/www/us/en/support/articles/000056629/graphics-drivers.html).
+
+Any graphics issues found using Intel generic graphics drivers should be [reported directly to Intel](https://www.intel.com/content/www/us/en/support/contact-support.html). Corporate customers should always use OEM drivers and report all issues through the vendor they purchased the platforms and support through.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-arc-graphics-driver/readme.md)**
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/758772/readme.txt</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
