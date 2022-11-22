@@ -3,11 +3,13 @@ $packageName    = 'intel-xtu'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $url64          = 'https://downloadmirror.intel.com/29183/XTUSetup.exe'
 #                  ^^^^ consistent link
-$checksum64     = 'D74BA4F28B7E4BACE8539C9753E2B2F58547BB2FA06F0ED54CD9FCDED147522D'
+$checksum64     = '93EDE2B6CED2A028DD1F1F03E757A69D416ECBF0C58974C8882A9ACDCE2555A7'
+
+Confirm-WinMinimumBuild 18362
 
 if (Get-IsAMDCPU)
    {
-    Write-Warning "Sorry, Intel® Extreme Tuning Utility is NOT AMD processors." 
+    Write-Warning "Sorry, Intel® Extreme Tuning Utility is NOT for AMD processors." 
     throw
    } 
    
@@ -29,3 +31,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+# if error 1
+# Having Core Isolation Memory Integrity (HVCI), Hyper-V, or Virtual Machine System features enabled - are incompatible.
