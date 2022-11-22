@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-bluetooth-drivers</id>
-    <version>22.170.0</version>
+    <version>22.180.0</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
@@ -28,29 +28,6 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 Intel® Wireless Bluetooth® is recommended for end-users, including home users and business customers with Intel Wireless Bluetooth® technology.
 
-Driver version 22.150.0.6: For Windows® 10 64-bit or Windows 11* using AX411, AX211, AX210, AX201, AX200, 9560, 9462, 9461, 9260, 8265, 18265, 8260, 18260
-Driver version 20.100.10.9: For Windows® 10 64-bit or Windows 11* using 7265, 17265, 3168, 3165
-Driver version 20.100.9.7: For Windows® 10 32-bit using 7265, 17265, 3168, 3165
-Intel® Wireless Bluetooth® 22.150.0 driver has been updated to include functional and security updates. Users should update to the latest version.
-
-### Supported Adapters
-* Intel® Wi-Fi 6E AX4111
-* Intel® Wi-Fi 6E AX2111
-* Intel® Wi-Fi 6E AX2101
-* Intel® Intel® Wi-Fi 6 (Gig+) Desktop Kit1
-* Intel® Wi-Fi 6 AX2011
-* Intel® Wi-Fi 6 AX2001
-* Intel® Wireless-AC 95601
-* Intel® Wireless-AC 94621
-* Intel® Wireless-AC 94611
-* Intel® Wireless-AC 92601
-* Intel® Dual Band Wireless-AC 82651
-* Intel® Dual Band Wireless-AC 82601
-* Intel® Dual Band Wireless-AC 3168
-* Intel® Wireless 7265 Family
-* Intel® Dual Band Wireless-AC 3165
-
-
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-bluetooth-drivers/readme.md)**
 
 ---
@@ -60,7 +37,7 @@ Intel® Wireless Bluetooth® 22.150.0 driver has been updated to include functio
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/742233/ReleaseNotes_BT_22.170.0.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/757403/ReleaseNotes_BT_22.180.0.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
