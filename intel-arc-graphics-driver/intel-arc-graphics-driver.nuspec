@@ -6,7 +6,7 @@
     <version>31.0.101.3802</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/726609/intel-arc-graphics-windows-dch-driver.html</projectUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
+<!--    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl> -->
     <title>Intel Arc Graphics Windows DCH Driver</title>
     <authors>Intel Corporation</authors>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
