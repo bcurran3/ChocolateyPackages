@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>nfopad</id>
-    <version>1.80</version>
+    <version>1.81</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/nfopad</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>NFOPad (Install)</title>
     <authors>Anders Nivfors</authors>
-    <iconUrl>http://abload.de/img/new1bu8u.png</iconUrl>
+    <iconUrl>https://abload.de/img/new1bu8u.png</iconUrl>
     <projectUrl>http://truehumandesign.se/s_nfopad.php</projectUrl>
     <copyright>True Human Design</copyright>
     <licenseUrl>http://truehumandesign.se/s_nfopad.php</licenseUrl>
