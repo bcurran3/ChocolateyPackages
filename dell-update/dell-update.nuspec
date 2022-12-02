@@ -3,19 +3,19 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.6.0</version>
+    <version>4.7.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
-    <title>Dell Update</title>
+    <title>Dell Update Windows Universal Application</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=3T5JX</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=0991N</projectUrl>
 	<docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
-    <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/legal_terms-conditions_dellgrmwebpage/art-software-license-agreements</licenseUrl>
+    <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/terms-of-sale-consumer-license-agreements</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>dell update dup</tags>
-    <summary>Dell Update supports Inspiron, Vostro, XPS and Alienware systems running Windows 10.</summary>
+    <tags>dell update dup wua</tags>
+    <summary>Dell Update application automatically updates critical fixes and important device drivers as they become available.</summary>
     <description>
 ---
 ### [choco://dell-update](choco://dell-update)
@@ -23,7 +23,13 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-This package contains the Dell Update and Alienware Update application. Dell Update and Alienware Update application automatically updates critical fixes and important device drivers as they become available. This update addresses Common Vulnerabilities and Exposures (CVE). Common Vulnerabilities and Exposures (CVE) is a list of security vulnerabilities and exposures that are publicly disclosed.
+This package contains the Dell Update Windows Universal application. Dell Update application automatically updates critical fixes and important device drivers as they become available.
+
+### Importance RECOMMENDED
+Dell Technologies recommends applying this update during your next scheduled update cycle. The update contains changes to maintain overall system health. It ensures that the system software remains current and compatible with other system modules (firmware, BIOS, drivers, and software) and may include other new features.
+
+### Important Information
+Dell Update Classic interface is not supported from version 4.7 and later. If you have Dell Update Classic, Dell Update version 4.7 UWP is installed.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     
@@ -35,7 +41,7 @@ This package contains the Dell Update and Alienware Update application. Dell Upd
 ---
 </description>
     <dependencies>
-      <dependency id="netfx-4.8" version="4.8.0.0" />
+      <dependency id="netfx-4.8" version="4.8.0.0" />     <!-- still necessary after switching to WUA (4.7.1)? -->
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
     </dependencies>
   </metadata>
