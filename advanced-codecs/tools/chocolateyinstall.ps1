@@ -1,25 +1,23 @@
-﻿# https://www.majorgeeks.com/files/details/win7codecs.html
+﻿# https://shark007.net/files/ADVANCED_64bitCodecs.7z
 $ErrorActionPreference = 'Stop';
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkExe         = 'AutoHotKey'
-$ahkFile        = "$toolsDir\advanced-codecs_install.ahk"
-$culture        = Get-Culture
-$LCID           = $culture.LCID
-$TodaysVersion  = $env:ChocolateyPackageVersion -replace '[.]',''
+$packageName  = 'advanced-codecs'
+$toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$shortcutName = 'Shark007''s 64bit ADVANCED Codecs.lnk'
+
+if (Test-Path "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\AutoUpdate.exe"){
+	Write-Host "  ** Running AutoUpdate." -Foreground Magenta
+	Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\AutoUpdate.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools"
+	return
+}
 
 $packageArgs = @{
-  packageName    = 'advanced-codecs'
-  softwareName   = 'Shark007 ADVANCED*'
-  fileType       = 'EXE'
-  silentArgs     = "/S /v/qn /l$LCID"
-  file           = "$toolsDir\ADVANCED_Codecs_v"+$TodaysVersion+".exe"
-  validExitCodes = @(0, 3010, 1641)
-  }
-  
-Start-Process $ahkExe $ahkFile  
-Install-ChocolateyInstallPackage @packageArgs
-Start-Sleep -s 20
-Start-CheckandStop "Settings32"
-Start-CheckandStop "Settings64"
-Start-CheckandStop "AutoHotkey"
-Remove-Item $toolsDir\*.exe -Force -EA SilentlyContinue | Out-Null
+  packageName    = $packageName
+  Destination    = "$env:ProgramFiles\Shark007"
+  FileFullPath64 = "$toolsDir\ADVANCED_64bitCodecs.7z"
+}
+Get-ChocolateyUnzip @packageArgs
+
+Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Launcher64.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs"
+Start-ChocolateyProcessAsAdmin -Statements "users" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\Settings64_portable.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Launcher64.exe" -RunAsAdmin
+Remove-Item "$toolsDir\ADVANCED_64bitCodecs.7z" | Out-Null
