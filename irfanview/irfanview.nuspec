@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanview</id>
-    <version>4.60</version>
+    <version>4.62</version>
     <title>IrfanView (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -13,10 +13,13 @@
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/irfanview/irfanview_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
-___
+---
+
 ### [choco://irfanview](choco://irfanview)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
+
 
 ![Screenshot of IrfanView](http://www.irfanview.com/images/startbild_engl-small.gif)
 
@@ -55,10 +58,13 @@ If no parameters are passed, the following is assumed: `--params '/assoc=1 /grou
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview/readme.md)**
 
-___
 
-Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
-___
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
 
 </description>
     <summary>Fast and compact image viewer and converter</summary>
