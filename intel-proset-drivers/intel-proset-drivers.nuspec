@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-proset-drivers</id>
-    <version>22.150.0</version>
+    <version>22.190.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
-    <title>Intel PROSet/Wireless Software and Drivers for IT Admins (Install)</title>
+    <title>Windows 10 and Windows 11 Wi-Fi Drivers for Intel Wireless Adapters (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/30567</projectUrl>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/19351</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-proset-drivers/intel-proset-drivers_icon.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
@@ -35,7 +35,7 @@ Intel® PROSet/Wireless WiFi Software (includes drivers): Drivers only: This is 
 
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/736240/ReleaseNotes_WiFi_22.150.0_IT.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/763754/ReleaseNotes_WiFi_22.190.0.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
 	</dependencies>
