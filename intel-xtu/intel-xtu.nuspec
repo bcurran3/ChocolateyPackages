@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-xtu</id>
-    <version>7.9.1.3</version>
+    <version>7.10.0.65</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
