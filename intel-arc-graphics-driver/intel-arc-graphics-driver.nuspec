@@ -3,11 +3,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-arc-graphics-driver</id>
-    <version>31.0.101.3959</version>
+    <version>31.0.101.4032</version>
     <owners>bcurran3</owners>
-    <projectUrl>https://www.intel.com/content/www/us/en/download/726609/intel-arc-graphics-windows-dch-driver.html</projectUrl>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/726609/intel-arc-iris-xe-graphics-whql-windows.html</projectUrl>
 <!--    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl> -->
-    <title>Intel Arc Graphics Windows DCH Driver</title>
+    <title>Intel Arc &amp; Iris Xe Graphics - WHQL - Windows</title>
     <authors>Intel Corporation</authors>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
