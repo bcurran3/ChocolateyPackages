@@ -7,10 +7,12 @@ $bits           = Get-ProcessorBits
 Confirm-Win10
 
 # Wired Drivers
-$url            = "https://downloadmirror.intel.com/739880/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_32.zip"
-$checksum       = '556198EA2C61D192799D6FED1001FF76B3A8B8CE72ECB97DE7CF32AD429C1492'
-$url64          = "https://downloadmirror.intel.com/739880/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
-$checksum64     = '7229D7B96675F177F7442D62A0C3C5D079639A38FBC84FA1DDD6EF60220E29C2'
+$url            = "https://downloadmirror.intel.com/764809/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_32.zip"
+#                                                   ^^^^^^ changes
+$checksum       = 'F04B6789CE569B86597DB8F2EC8505252A096E51D599324D86C0549FB5DD6EE1'
+$url64          = "https://downloadmirror.intel.com/764809/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
+#                                                   ^^^^^^ changes
+$checksum64     = 'A0F75BCCDC84DE454C515D9B8FA1DD84E49CE3273F9EB5E7201B1AD6F7AD139F'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -39,10 +41,12 @@ Get-ChocolateyUnzip @packageArgs
 pnputil /add-driver $unzipLocation\*.inf /install /subdirs
 
 # Wired PROSet drivers
-$url            = "https://downloadmirror.intel.com/739880/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_32.zip"
-$checksum       = '89285694ACE5804ABC3CDC17C01195DE286E886D8B787DA21924F925DDF4DD8B'
-$url64          = "https://downloadmirror.intel.com/739880/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
-$checksum64     = '870769D66A6BC64AC46033B6BC22DD2033B2FD00F30D136C506AE54CF06822E2'
+$url            = "https://downloadmirror.intel.com/764809/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_32.zip"
+#                                                   ^^^^^^ changes
+$checksum       = 'C2DBA17F635B2D09CA297A06AAE0399BDBDE877B78DEA01E630351629609DA1C'
+$url64          = "https://downloadmirror.intel.com/764809/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
+#                                                   ^^^^^^ changes
+$checksum64     = '3E27D2E61B73C0DD9C6D1363134BE63CC61C44FF8CAD8C8DDC4F78CCE5104E4A'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -70,7 +74,7 @@ Get-ChocolateyUnzip @packageArgs
 $OSBuild=[Environment]::OSVersion.Version.Build
 if ($OSBuild -lt 22000)
 {
-# Win10 only
+# Win10 only - no Win11 support
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
