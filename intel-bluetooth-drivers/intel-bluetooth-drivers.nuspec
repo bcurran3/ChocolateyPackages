@@ -5,9 +5,9 @@
     <id>intel-bluetooth-drivers</id>
     <version>22.190.0</version>
     <owners>bcurran3</owners>
-    <projectUrl>https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/18649</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
-    <title>Intel® Wireless Bluetooth® Drivers</title>
+    <title>Intel Wireless Bluetooth for Windows 10 and Windows 11</title>
     <authors>Intel Corporation</authors>
     <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
