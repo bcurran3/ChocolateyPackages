@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>logitech-options-plus</id>
+    <version>1.32.366807</version>
+    <owners>bcurran3</owners>
+<!--    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options-plus</packageSourceUrl> -->
+    <title>Logitech Options (Install)</title>
+    <authors>Logitech</authors>
+    <projectUrl>https://support.logi.com/hc/en-us/articles/4418699283607</projectUrl>
+    <iconUrl>https://www.logitech.com/assets/66208/optionsplusicon.png</iconUrl>
+    <copyright>© Logitech. All rights reserved</copyright>
+    <licenseUrl>https://www.logitech.com/tos/terms.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>logitech options keyboard mouse utility notsilent</tags>
+    <summary>Logitech Options software lets you customize your device settings.</summary>
+    <description>
+---
+
+### [choco://logitech-options-plus](choco://logitech-options-plus)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+Logi Options+ is a next-gen app that lets you manage and customize your supported mice and keyboards —so they all seamlessly work towards your goals. Combining the best features of Options with a brand new easy-to-use interface, Options+ is designed to transform your daily tasks
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/logitech-options-plus/readme.md)**
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
