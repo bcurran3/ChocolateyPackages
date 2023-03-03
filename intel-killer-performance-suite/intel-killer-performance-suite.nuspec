@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-killer-performance-suite</id>
-    <version>3.1422.1129.1</version>
+    <version>34.22.1163</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
     <title>Intel® Killer Performance Suite (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://www.intel.com/content/www/us/en/download/19779/intel-killer-performance-suite.html</projectUrl>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/19779</projectUrl>
     <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
@@ -48,7 +48,7 @@ Note: This Software Release version does not include new drivers for the Killer 
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/758526/KillerPerformanceSuite_3.1322.1101.2.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/772429/KillerPerformanceSuite_34.22.1163.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
     </dependencies>
