@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-arc-graphics-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64       = "https://downloadmirror.intel.com/767293/gfx_win_101.4091.exe"
+$url64       = "https://downloadmirror.intel.com/772016/gfx_win_101.4146.exe"
 #                                                ^^^^^^ changes  ^^^^^^^^
-$checksum64  = 'C2FA9E056C67C0353B32A8D64E0A9CC5C5E1358ED00AA066496CCAA6D4B1DF3A'
+$checksum64  = 'A736E2285D3979FD8AC74549CDBE4655A7726595EC9B56025E156BDB277C85A0'
 
 Confirm-WinMinimumBuild 19042
 if (!(Get-IsIntelVideo)){
