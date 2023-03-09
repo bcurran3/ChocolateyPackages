@@ -132,17 +132,29 @@ if ($DeleteOldChoco -eq "True"){
 }
 
 if ($DeleteCache -eq "True"){
-#	TDL - discover each user profile and delete appropriately within
-#	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-#
-#	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
-#		$dir = $userdirs.fullname[$Count]
-#		$dir = "$dir" + "\appdata\temp\chocolatey"
-#		Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
-#	}
-
-
-	$GotCacheFiles=ChildItem -Path $ENV:tmp\chocolatey -Recurse
+	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force  | Select-Object FullName
+# This assumes the default temp\chocolatey location, but won't catch customized locations yet.
+# Still working out how to check environment variables for other users
+	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++)
+	{
+	$dir = $userdirs.fullname[$Count]
+	$dir = "$dir" + "\appdata\local\temp\chocolatey"
+	if (Test-Path $dir){
+	    $GotCacheFiles=Get-ChildItem -Path $dir -Recurse
+	    $CacheFiles=$GotCacheFiles.count
+	    if ($CacheFiles -ge 1){
+		    Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($dir)..." -Foreground Green
+		    Remove-Item $dir -Recurse -Force
+		    } else {
+			continue
+			}
+		} else {
+		Write-Host "  **  NO unnecessary Chocolatey cache files ($dir) to delete." -Foreground Green
+		}
+	}
+}
+<#
+	$GotCacheFiles=Get-ChildItem -Path $ENV:tmp\chocolatey -Recurse
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
 		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:tmp\chocolatey)..." -Foreground Green
@@ -150,8 +162,8 @@ if ($DeleteCache -eq "True"){
 	} else {
 		Write-Host "  **  NO unnecessary Chocolatey cache files ($ENV:tmp\chocolatey) to delete." -Foreground Green
 	}
-
-	$GotCacheFiles=ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse
+#>
+	$GotCacheFiles=Get-ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
 		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey)..." -Foreground Green
@@ -163,7 +175,7 @@ if ($DeleteCache -eq "True"){
 
 	if ($cacheLocation){
 		if (Test-Path $cacheLocation) {
-			$GotCacheFiles=ChildItem -Path $cacheLocation -Recurse
+			$GotCacheFiles=Get-ChildItem -Path $cacheLocation -Recurse
 			$CacheFiles=$GotCacheFiles.count
 			if ($CacheFiles -ge 1){
 				Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($cacheLocation)..." -Foreground Green
@@ -173,22 +185,31 @@ if ($DeleteCache -eq "True"){
 			}
 		}
 	}
-}
 
 if ($DeleteNuGetCache -eq "True"){
-#	TDL - discover each user profile and delete appropriately within
-#	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-#
-#	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
-#		$dir = $userdirs.fullname[$Count]
-#		$dir = "$dir" + "\appdata\Local\Nuget\Cache"
-#		Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
-#	}
+	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
 
-
-
+	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++)
+	{
+	$dir = $userdirs.fullname[$Count]
+	$dir = "$dir" + "\appdata\Local\Nuget\Cache"
+	if (Test-Path $dir){
+	   $GotNuGetCache=Get-ChildItem -Path $dir -Recurse
+	   $NuGetCache=$GotNuGetCache.count
+	   if ($NuGetCache -ge 1){
+		   Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files ($dir)..." -Foreground Green
+		   Remove-Item $dir -Recurse -Force
+		   } else {
+			continue
+			}
+		} else {
+			Write-Host "  **  NO unnecessary Nuget cache files to delete ($dir)." -Foreground Green
+		}
+	}
+}
+<#
 	if (Test-Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache){
-		$GotNuGetCache=ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
+		$GotNuGetCache=Get-ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
 		$NuGetCache=$GotNuGetCache.count
 		if ($NuGetCache -ge 1){
 			Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files..." -Foreground Green
@@ -198,6 +219,7 @@ if ($DeleteNuGetCache -eq "True"){
 		Remove-Item -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse -Force
 	}
 }
+#>
 
 if ($DeleteConfigBackupFile -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\config\chocolatey.config.backup){
