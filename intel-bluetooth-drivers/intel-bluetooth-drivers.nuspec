@@ -3,9 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-bluetooth-drivers</id>
-    <version>22.150.0</version>
+    <version>22.210.0</version>
     <owners>bcurran3</owners>
-    <projectUrl>https://www.intel.com/content/www/us/en/download/18649/737033/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/18649/intel-wireless-bluetooth-for-windows-10-and-windows-11.html</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
     <title>Intel® Wireless Bluetooth® Drivers</title>
     <authors>Intel Corporation</authors>
@@ -17,38 +17,51 @@
     <tags>intel bluetooth drivers</tags>
     <summary>Intel® Wireless Bluetooth® Drivers for Windows® 10 and 11</summary>
     <description>
----
+----
 
 ### [choco://intel-bluetooth-drivers](choco://intel-bluetooth-drivers)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
----
+----
 
-## Purpose
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support](https://chocolatey.org/packages/choco-protocol-support)
+
+## Introduction
+
+Installs Intel® Wireless Bluetooth® version 22.210.0. Driver version varies depending on the wireless adapter installed.
+
+## Detailed Description
+
+### Important Notice
+
+- Driver package 22.210.0 has been validated to support Microsoft Windows 11*.
+- From the Bluetooth* release 22.210.X package onwards, the Windows 10 32-bit driver for products 7265(Rev. D),3165 and 3168 will only receive updates to address potential security vulnerabilities. Last available Windows 10 32-bit driver version is **20.100.9.8** from package **22.200.0** 
+ 
+
+### Purpose
 
 Intel® Wireless Bluetooth® is recommended for end-users, including home users and business customers with Intel Wireless Bluetooth® technology.
 
-Driver version 22.150.0.6: For Windows® 10 64-bit or Windows 11* using AX411, AX211, AX210, AX201, AX200, 9560, 9462, 9461, 9260, 8265, 18265, 8260, 18260
-Driver version 20.100.10.9: For Windows® 10 64-bit or Windows 11* using 7265, 17265, 3168, 3165
-Driver version 20.100.9.7: For Windows® 10 32-bit using 7265, 17265, 3168, 3165
-Intel® Wireless Bluetooth® 22.150.0 driver has been updated to include functional and security updates. Users should update to the latest version.
+Intel® Wireless Bluetooth® Package version 22.210.0
 
-### Supported Adapters
-* Intel® Wi-Fi 6E AX4111
-* Intel® Wi-Fi 6E AX2111
-* Intel® Wi-Fi 6E AX2101
-* Intel® Intel® Wi-Fi 6 (Gig+) Desktop Kit1
-* Intel® Wi-Fi 6 AX2011
-* Intel® Wi-Fi 6 AX2001
-* Intel® Wireless-AC 95601
-* Intel® Wireless-AC 94621
-* Intel® Wireless-AC 94611
-* Intel® Wireless-AC 92601
-* Intel® Dual Band Wireless-AC 82651
-* Intel® Dual Band Wireless-AC 82601
-* Intel® Dual Band Wireless-AC 3168
-* Intel® Wireless 7265 Family
-* Intel® Dual Band Wireless-AC 3165
+Windows® 10 64-bit and Windows 11*
+
+- Driver version **22.210.0.3** : For AX411, AX211, AX210, AX203, AX201, AX200, AX101, 9560, 9462, 9461, 9260
+- The drivers also work on Intel® Killer™ AX1690, AX1675, AX1650, 1550
+- Driver version **20.100.10.10** : For 7265(Rev. D), 3168, 3165
+
+Intel® Wireless Bluetooth® Package version 22.200.0
+
+Windows® 10 32-bit
+
+- Driver version **20.100.9.8** : For 7265(Rev. D), 3168, 3165
+
+Intel® Wireless Bluetooth® 22.210.0 driver has been updated to include functional and security updates. Users should update to the latest version.
+
+## Notes
+#
+- When you update the wireless adapter software package, it might not update the wireless adapter driver if it includes the same driver as the previous release. For instructions, see [Intel® PROSet/Wireless Software Version and the Driver Version](https://www.intel.com/content/www/us/en/support/articles/000026008/network-and-i-o/wireless-networking.html).
+- This software release version does not include drivers for Discontinued wireless products Intel® Dual Band Wireless-AC 8260 and Intel® Dual Band Wireless-AC 8265. For 8260 and 8265 Bluetooth® drivers, see [Intel® Wireless Bluetooth® Drivers for Intel® Dual Band Wireless-AC 8260 and Intel® Dual Band Wireless-AC 8265](https://www.intel.com/content/www/us/en/download/774186/774201/intel-wireless-bluetooth-drivers-for-intel-dual-band-wireless-ac-8260-and-intel-dual-band-wireless-ac-8265.html).
+- Wireless products Intel® Wireless 7265 Family (Rev.C), Intel® Dual Band Wireless-AC 3160 and Intel® Wireless 7260 Family adapters have been End-of-Life (EOL) and drivers are no longer available.
 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-bluetooth-drivers/readme.md)**
@@ -60,7 +73,7 @@ Intel® Wireless Bluetooth® 22.150.0 driver has been updated to include functio
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/737033/ReleaseNotes_BT_22.150.0.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/774106/ReleaseNotes_BT_22.210.0.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
