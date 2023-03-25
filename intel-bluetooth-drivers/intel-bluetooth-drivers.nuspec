@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-bluetooth-drivers</id>
-    <version>22.200.0</version>
+    <version>22.210.0</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/18649</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
@@ -37,7 +37,7 @@ Intel® Wireless Bluetooth® is recommended for end-users, including home users 
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/768309/ReleaseNotes_BT_22.200.0.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/774106/ReleaseNotes_BT_22.210.0.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
