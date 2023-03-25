@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.7.1</version>
+    <version>4.8.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update Windows Universal Application</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-us/drivers/DriversDetails?driverId=0991N</projectUrl>
+    <projectUrl>https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=0rcg0</projectUrl>
 	<docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
@@ -29,7 +29,7 @@ This package contains the Dell Update Windows Universal application. Dell Update
 Dell Technologies recommends applying this update during your next scheduled update cycle. The update contains changes to maintain overall system health. It ensures that the system software remains current and compatible with other system modules (firmware, BIOS, drivers, and software) and may include other new features.
 
 ### Important Information
-Dell Update Classic interface is not supported from version 4.7 and later. If you have Dell Update Classic, Dell Update version 4.7 UWP is installed.
+Dell Update Classic interface is not supported from version 4.7 and later. If you have Dell Update Classic, Dell Update version 4.7+ UWP is installed.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dell-update/readme.md)**
     
