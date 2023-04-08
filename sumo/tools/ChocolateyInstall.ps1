@@ -13,10 +13,11 @@ $packageArgs = @{
     checksumType   = 'sha256'
     fileType       = 'EXE'
     silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-    validExitCodes = @(0)   
+    validExitCodes = @(0)
 }
 
+Start-CheckandStop "SUMo"
 Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
 Start-Sleep -s 10
-Start-CheckandStop "SUMo"  
+Start-CheckandStop "SUMo"
