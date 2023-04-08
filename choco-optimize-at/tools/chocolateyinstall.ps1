@@ -12,7 +12,7 @@ if (Test-Path $CheckLicense){
   
 Write-Host "choco-optimize-at Summary:" -foreground magenta
 
-if ($pp["TIME"] -eq $null -or $pp["TIME"] -eq ''){
+if ($null -eq $pp["TIME"] -or $pp["TIME"] -eq ''){
       Write-Host " * TIME NOT specified, defaulting to 5 AM." -foreground magenta
 	  $RunTime = "05:00"
     } else {
@@ -20,7 +20,7 @@ if ($pp["TIME"] -eq $null -or $pp["TIME"] -eq ''){
 	  Write-Host " * TIME specified as $TIME." -foreground magenta
     } 
 	
-if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq '')){
+if (($null -eq $pp["DAILY"] -or $pp["DAILY"] -eq '') -and ($null -eq $pp["WEEKLY"] -or $pp["WEEKLY"] -eq '')){
       Write-Host " * DAILY NOT specified." -foreground magenta
       Write-Host " * WEEKLY NOT specified." -foreground magenta	  
       Write-Host " * Defaulting to WEEKLY running of ""choco-optimize-at"" at $RunTime on Sundays." -foreground magenta -background blue
@@ -29,7 +29,7 @@ if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $nu
  	  exit
     }
 		  
-if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
+if ($null -eq $pp["DAILY"] -or $pp["DAILY"] -eq ''){
        Write-Host " * DAILY NOT specified." -foreground magenta
     } else {
 	   Write-Host " * DAILY specified." -foreground magenta
@@ -38,11 +38,11 @@ if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
 	   exit
 	   }
 		  
-if ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq ''){
+if ($null -eq $pp["WEEKLY"] -or $pp["WEEKLY"] -eq ''){
        Write-Host " * WEEKLY NOT specified." -foreground magenta
      } else {
 	   Write-Host " * WEEKLY specified." -foreground magenta
-       if ($pp["DAY"] -eq $null -or $pp["DAY"] -eq ''){
+       if ($null -eq $pp["DAY"] -or $pp["DAY"] -eq ''){
             Write-Host " * DAY NOT specified, defaulting to SUNDAY." -foreground magenta
             SchTasks /CREATE /SC WEEKLY /D SUN /RU SYSTEM /RL HIGHEST /TN choco-optimize-at /TR "choco optimize" /ST $RunTime /F
         } else {

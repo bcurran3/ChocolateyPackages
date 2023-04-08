@@ -9,7 +9,7 @@ if (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manag
  try { 
    $util = [wmiclass]"\\.\root\ccm\clientsdk:CCM_ClientUtilities"
    $status = $util.DetermineIfRebootPending()
-   if(($status -ne $null) -and $status.RebootPending){
+   if(($null -ne $status) -and $status.RebootPending){
      return $true
    }
  }catch{}

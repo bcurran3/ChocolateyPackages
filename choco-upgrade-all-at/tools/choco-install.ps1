@@ -53,16 +53,16 @@ $PublicStartMenuIconsPost = Get-ChildItem -Path "$env:ProgramData\Microsoft\Wind
 # Delete new Desktop icons if configured to do so
 if ($DeleteNewDesktopIcons -eq 'True'){
    $IconsNew = Compare-Object -ReferenceObject ($UserDesktopIconsPre) -DifferenceObject ($UserDesktopIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
+   if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
    $IconsNew = Compare-Object -ReferenceObject ($PublicDesktopIconsPre) -DifferenceObject ($PublicDesktopIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
+   if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
    }
 # Delete new Start Menu icons if configured to do so
 if ($DeleteNewStartMenuIcons -eq 'True'){
    $IconsNew = Compare-Object -ReferenceObject ($UserStartMenuIconsPre) -DifferenceObject ($UserStartMenuIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
+   if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
    $IconsNew = Compare-Object -ReferenceObject ($PublicStartMenuIconsPre) -DifferenceObject ($PublicStartMenuIconsPost) -PassThru
-   if ($IconsNew -ne $null) { del $IconsNew.fullname }
+   if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
    }
 
 # Run post-processor if configured

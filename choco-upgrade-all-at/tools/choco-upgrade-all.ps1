@@ -76,22 +76,22 @@ if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu") {$PublicStartMenu
 if ($DeleteNewDesktopIcons -eq 'True'){
 	if ($UserDesktopIconsPre.count -ne '0' -and $UserDesktopIconsPost.count -ne '0'){
        $IconsNew = Compare-Object -ReferenceObject ($UserDesktopIconsPre) -DifferenceObject ($UserDesktopIconsPost) -PassThru
-       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+       if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
 	   }
 	if ($PublicDesktopIconsPre.count -ne '0' -and $PublicDesktopIconsPost.count -ne '0'){
        $IconsNew = Compare-Object -ReferenceObject ($PublicDesktopIconsPre) -DifferenceObject ($PublicDesktopIconsPost) -PassThru
-       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+       if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
        }
   }
 # Delete new Start Menu icons if configured to do so
 if ($DeleteNewStartMenuIcons -eq 'True'){
 	if ($UserStartMenuIconsPre.count -ne '0' -and $UserStartMenuIconsPost.count -ne '0'){
        $IconsNew = Compare-Object -ReferenceObject ($UserStartMenuIconsPre) -DifferenceObject ($UserStartMenuIconsPost) -PassThru
-       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+       if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
 	   }
 	if ($PublicStartMenuIconsPre.count -ne '0' -and $PublicStartMenuIconsPost.count -ne '0'){
        $IconsNew = Compare-Object -ReferenceObject ($PublicStartMenuIconsPre) -DifferenceObject ($PublicStartMenuIconsPost) -PassThru
-       if ($IconsNew -ne $null) { del $IconsNew.fullname }
+       if ($null -ne $IconsNew) { Remove-Item $IconsNew.fullname }
        }
   }
 

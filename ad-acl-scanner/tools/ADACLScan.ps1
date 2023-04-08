@@ -1003,7 +1003,7 @@ $xamlBase = $xamlBase.Replace("x:Name","Name")
 [XML] $XAML = $xamlBase
 
 #Search the XML data for object and create variables
-$XAML.SelectNodes("//*[@Name]")| %{set-variable -Name ($_.Name) -Value $Window.FindName($_.Name)}
+$XAML.SelectNodes("//*[@Name]")| ForEach-Object{set-variable -Name ($_.Name) -Value $Window.FindName($_.Name)}
 
 $Icon = @"
 iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4056,7 +4056,7 @@ Do
     $Count = 0
 
     $Members = $adoRecordset.Fields.Item("$Attributes").Value
-    If ($Members -eq $Null)
+    If ($Null -eq $Members)
     {
         $Last = $True
     }
@@ -4176,7 +4176,7 @@ $strDNSServer = ""
     }
     if($global:bolDNSSuccess)
     {
-        if(($global:DNSrslt)[0].IPAddress -ne $null)
+        if($null -ne ($global:DNSrslt)[0].IPAddress)
         {
             $bolResolved = $true
         }
@@ -4387,7 +4387,7 @@ $xamlLegend = $xamlLegend.Replace("x:Name","Name")
 [XML] $XAML = $xamlLegend
 
 #Search the XML data for object and create variables
-$XAML.SelectNodes("//*[@Name]")| %{set-variable -Name ($_.Name) -Value $WindowLegend.FindName($_.Name)}
+$XAML.SelectNodes("//*[@Name]")| ForEach-Object{set-variable -Name ($_.Name) -Value $WindowLegend.FindName($_.Name)}
 
 $Icon = @"
 iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAMAAABHPGVmAAAABGdBTUEAALGPC/xhBQAAAwBQTFRFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -4611,7 +4611,7 @@ $TemplateDownloaderSchemaDefSDGui.ShowDialog()
 Function DownloadFile
 {
 param([string]$URL)
-(65..90) + (97..122) | Get-Random -Count 8 | % {$TempFileName+=[char]$_}
+(65..90) + (97..122) | Get-Random -Count 8 | ForEach-Object {$TempFileName+=[char]$_}
 $TemporaryDestination = $(join-path -Path $CurrentFSPath -ChildPath $TempFileName) 
 try
 {
@@ -6911,7 +6911,7 @@ if(-not($GPO))
     if($nodelist.count -gt 0)
     {
         $nodelist = ReverseDNList $nodelist
-        $nodelist = $nodelist | sort
+        $nodelist = $nodelist | Sort-Object
         $nodelist = ReverseDNList $nodelist
     }
 }
@@ -7260,7 +7260,7 @@ function WritePermCSV
     Param($sd,[string]$object,[string]$canonical,[string]$objType,[string] $fileout, [bool] $ACLMeta,[string]  $strACLDate,[string] $strInvocationID,[string] $strOrgUSN,[bool] $GetOUProtected,[bool] $OUProtected,[bool] $compare,[bool]$Outfile,[bool]$GPO,[string]$GPOdisplayname,[bool]$TranslateGUID)
 
 
-$sd  | foreach {
+$sd  | ForEach-Object {
         #Convert SID to Names for lookups
         $strPrincipalName = $_.IdentityReference.toString()
 	    If ($strPrincipalName -match "S-1-")
@@ -7393,7 +7393,7 @@ function WriteDefSDPermCSV
 {
     Param($sd,[string]$object,[string]$objType,[string] $fileout, [bool] $ACLMeta,[string] $strVersion,[string]  $strACLDate,[bool]$Outfile,[bool]$bolShowCriticalityColor,[bool]$TranslateGUID)
 
-$sd  | foreach {
+$sd  | ForEach-Object {
         #Convert SID to Names for lookups
         $strPrincipalName = $_.IdentityReference.toString()
 	    If ($strPrincipalName -match "S-1-")
@@ -8591,7 +8591,7 @@ Switch ($strColorTemp)
 }#End if HTM
 if ($bolACLExist) 
 {
-	$sd  | foreach{
+	$sd  | ForEach-Object{
 
 
     if($null  -ne  $_.AccessControlType)
@@ -9418,7 +9418,7 @@ Switch ($strColorTemp)
 }#End if HTM
 if ($bolACLExist) 
 {
-	$sd  | foreach{
+	$sd  | ForEach-Object{
 
 
     if($null  -ne  $_.AccessControlType)
@@ -10516,7 +10516,7 @@ $strHTMLText
 "@
 
 
-$tokens  | foreach{
+$tokens  | ForEach-Object{
 If ($_.contains("S-1-"))
 {
 	$strNTAccount = ConvertSidToName -server $global:strDomainLongName -Sid $_
@@ -11071,7 +11071,7 @@ if ($rdbDACL.IsChecked)
             {
                 if($intI -gt 0)
                 {
-                    if($sec.Owner -eq $null)
+                    if($null -eq $sec.Owner)
                     {
                         $sec.SetSecurityDescriptorSDDLForm("$($arrSplitedSDDL[0])($strSDDLPart")
                     }
@@ -12050,7 +12050,7 @@ while($count -le $ALOUdn.count -1)
                 {
                     if($intI -gt 0)
                     {
-                        if($sec.Owner -eq $null)
+                        if($null -eq $sec.Owner)
                         {
                             $sec.SetSecurityDescriptorSDDLForm("$($arrSplitedSDDL[0])($strSDDLPart")
                         }

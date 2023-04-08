@@ -488,7 +488,7 @@ function Remove-SingleFont($file)
                 Remove-ItemProperty -path $fontRegistryPath -name $fontRegistryvaluename
             }
             Remove-Item $fontFinalPath
-            if ($error[0] -ne $null)
+            if ($null -ne $error[0])
             {
                 Write-Host "An error occured removing $`'$($file)`'"
                 Write-Host ""

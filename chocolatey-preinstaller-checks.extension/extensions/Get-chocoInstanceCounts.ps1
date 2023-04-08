@@ -20,7 +20,7 @@ function Get-chocoInstanceCounts{
   
     Write-verbose "Searching for choco.exe process"
     $counts=0
-    Get-Process -ea silentlycontinue -Name choco| % {
+    Get-Process -ea silentlycontinue -Name choco| ForEach-Object {
       $_Cim=Get-CimInstance -Class Win32_Process -Verbose:$false -Filter "ProcessID=$($_.Id)"
       $_Parent=Get-Process -Id $_Cim.ParentProcessId
       $_ParentCim=Get-CimInstance -Class Win32_Process -Verbose:$false -Filter "ProcessID=$($_Parent.Id)"

@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Continue'
+﻿$ErrorActionPreference = 'Continue'
 #Requires -RunAsAdministrator
 # Choco-Cleaner.ps1 Copyleft 2017-2021 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
@@ -97,7 +97,7 @@ function Test-ShimTargetExists {
 
 # Import chocolatey.config and get cacheLocation if set
 [xml]$ChocoConfigFile = Get-Content "$ENV:ChocolateyInstall\config\chocolatey.config"
-$cacheLocation = $ChocoConfigFile.chocolatey.config | % { $_.add } | ? { $_.key -eq 'cacheLocation' } | Select -Expand value
+$cacheLocation = $ChocoConfigFile.chocolatey.config | ForEach-Object { $_.add } | Where-Object { $_.key -eq 'cacheLocation' } | Select-Object -Expand value
 
 if ($ENV:ChocolateyInstall -match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:"){
 	$FreeBefore = Get-PSDrive C | foreach-object {$_.Free}
@@ -142,7 +142,7 @@ if ($DeleteCache -eq "True"){
 #	}
 
 
-	$GotCacheFiles=ChildItem -Path $ENV:tmp\chocolatey -Recurse
+	$GotCacheFiles=Get-ChildItem -Path $ENV:tmp\chocolatey -Recurse
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
 		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:tmp\chocolatey)..." -Foreground Green
@@ -151,7 +151,7 @@ if ($DeleteCache -eq "True"){
 		Write-Host "  **  NO unnecessary Chocolatey cache files ($ENV:tmp\chocolatey) to delete." -Foreground Green
 	}
 
-	$GotCacheFiles=ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse
+	$GotCacheFiles=Get-ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
 		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey)..." -Foreground Green
@@ -163,7 +163,7 @@ if ($DeleteCache -eq "True"){
 
 	if ($cacheLocation){
 		if (Test-Path $cacheLocation) {
-			$GotCacheFiles=ChildItem -Path $cacheLocation -Recurse
+			$GotCacheFiles=Get-ChildItem -Path $cacheLocation -Recurse
 			$CacheFiles=$GotCacheFiles.count
 			if ($CacheFiles -ge 1){
 				Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($cacheLocation)..." -Foreground Green
@@ -188,7 +188,7 @@ if ($DeleteNuGetCache -eq "True"){
 
 
 	if (Test-Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache){
-		$GotNuGetCache=ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
+		$GotNuGetCache=Get-ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
 		$NuGetCache=$GotNuGetCache.count
 		if ($NuGetCache -ge 1){
 			Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files..." -Foreground Green
@@ -210,7 +210,7 @@ if ($DeleteConfigBackupFile -eq "True"){
 
 if ($DeleteLibBad -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\lib-bad){
-		$GotLibBadFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bad | ?{ $_.PSIsContainer }
+		$GotLibBadFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bad | Where-Object{ $_.PSIsContainer }
 		$LibBadFiles=$GotLibBadFiles.count
 		if ($LibBadFiles -ge 1){
 			Write-Host "  **  Deleting $LibBadFiles unnecessary Chocolatey lib-bad package files..." -Foreground Green
@@ -223,7 +223,7 @@ if ($DeleteLibBad -eq "True"){
 
 if ($DeleteLibBkp -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\lib-bkp){
-		$GotLibBkpFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bkp | ?{ $_.PSIsContainer }
+		$GotLibBkpFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bkp | Where-Object{ $_.PSIsContainer }
 		$LibBkpFiles=$GotLibBkpFiles.count
 		if ($LibBkpFiles -ge 1){
 			Write-Host "  **  Deleting $LibBkpFiles unnecessary Chocolatey lib-bkp package files..." -Foreground Green
@@ -319,7 +319,7 @@ if ($DeleteReadmes -eq "True"){
 
 $BadShimCount=0
 Write-Host "  **  Checking shim files..." -NoNewline -Foreground Green
-Get-ChildItem $ENV:ChocolateyInstall\bin\*.exe | % {
+Get-ChildItem $ENV:ChocolateyInstall\bin\*.exe | ForEach-Object {
 	if (-not (Test-ShimTargetExists $PSItem) ){
 		$BadShimCount = $BadShimCount +1
 		Remove-Item "$PSItem" | Out-Null

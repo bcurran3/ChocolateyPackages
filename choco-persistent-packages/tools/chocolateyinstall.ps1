@@ -6,7 +6,7 @@ $TaskCommand = 'cinst $env:ChocolateyInstall\config\persistentpackages.config -y
 $CheckConfig = "$env:ChocolateyInstall\config\persistentpackages.config"
 
 $GotTask = (&schtasks /query /tn choco-persistent-packages) 2> $null
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
    Write-Host Existing choco-persistent-packages scheduled task found. Keeping existing scheduled task and persistentpackages.config file. If you want to change the task runtime or abort time, uninstall and reinstall the package. Uninstalling the package will not delete your persistentpackages.config file. -foreground magenta -background blue
    exit
   }
@@ -25,7 +25,7 @@ if (Test-Path $CheckConfig){
 Write-Host "" 
 Write-Host "choco-persistent-packages Summary:" -foreground magenta	
 
-if ($pp["Time"] -eq $null -or $pp["Time"] -eq ''){
+if ($null -eq $pp["Time"] -or $pp["Time"] -eq ''){
      $RunTime = "00:00"
      Write-Host " * TIME NOT specified, defaulting to MIDNIGHT." -foreground magenta
     } else {
@@ -33,7 +33,7 @@ if ($pp["Time"] -eq $null -or $pp["Time"] -eq ''){
 	  Write-Host " * TIME specified as $RunTime." -foreground magenta
 	 }
 
-if ($pp["ABORTTIME"] -eq $null -or $pp["ABORTTIME"] -eq ''){
+if ($null -eq $pp["ABORTTIME"] -or $pp["ABORTTIME"] -eq ''){
       Write-Host " * ABORTTIME NOT specified, defaulting to 1 AM." -foreground magenta
 	  $AbortTime = "01:00"
     } else {

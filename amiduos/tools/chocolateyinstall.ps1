@@ -28,14 +28,14 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 Start-Sleep -s 20
-if((get-process "DuOSInstaller" -ea SilentlyContinue) -eq $Null){ 
+if($Null -eq (get-process "DuOSInstaller" -ea SilentlyContinue)){ 
     Write-Host "DuOSInstaller NOT running." 
   }else{ 
     Write-Host "Stopping DuOSInstaller process..."
     Stop-Process -processname "DuOSInstaller"
   }
 
-if((get-process "AndServMgr" -ea SilentlyContinue) -eq $Null){ 
+if($Null -eq (get-process "AndServMgr" -ea SilentlyContinue)){ 
     Write-Host "AndServMgr currently NOT running." 
   }else{ 
     Write-Host "Stopping AndServMgr process..."

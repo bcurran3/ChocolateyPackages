@@ -52,7 +52,7 @@ If ($args -eq "-EditConfig") {
 	&$Editor "$scriptDir\$ScriptConfig"
 	return
 }
-if ($args -eq "-OpenDeprecateDocs") {&start https://docs.chocolatey.org/en-us/community-repository/maintainers/deprecate-a-chocolatey-package ; return }
+if ($args -eq "-OpenDeprecateDocs") {&Start-Process https://docs.chocolatey.org/en-us/community-repository/maintainers/deprecate-a-chocolatey-package ; return }
 
 
 # Set default preferences incase of corrupt or missing cdeprecate.config

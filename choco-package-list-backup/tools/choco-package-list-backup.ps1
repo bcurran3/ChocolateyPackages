@@ -284,9 +284,9 @@ Function Write-AllProgramsList{
 Function Write-PinnedList{
 	$header="@echo off`nrem pinned packages found by choco-package-list-backup.ps1 on $Date :`necho   ** Re-pinning previously pinned Chocolatey packages."
 	If ($SaveVersions -Match $True){
-	    $body=$PinnedPackages | % {"choco pin add -n=$($_.SubString(0, $_.IndexOf("|"))) --version $($_.SubString($_.IndexOf("|") + 1))"}
+	    $body=$PinnedPackages | ForEach-Object {"choco pin add -n=$($_.SubString(0, $_.IndexOf("|"))) --version $($_.SubString($_.IndexOf("|") + 1))"}
 		} else {
-		  $body=$PinnedPackages | % {"choco pin add -n=$($_.SubString(0, $_.IndexOf("|")))"}
+		  $body=$PinnedPackages | ForEach-Object {"choco pin add -n=$($_.SubString(0, $_.IndexOf("|")))"}
 		}
 	If ($body -Match $ErrorArray[0-3]) {
 	    Write-Warning "  ** Another instance of choco.exe was running and corrupted the output. Aborting..."
@@ -333,7 +333,7 @@ Function Write-PackagesConfig{
 }
 
 #Get package.config information.
-$PackagesConfigBody = $localPackageInfo | % {
+$PackagesConfigBody = $localPackageInfo | ForEach-Object {
     $packageName = $($_.SubString(0, $_.IndexOf("|")))
     $line = '   <package id="' + $packageName + '" '
     If ($SaveTitleSummary -eq "True") {

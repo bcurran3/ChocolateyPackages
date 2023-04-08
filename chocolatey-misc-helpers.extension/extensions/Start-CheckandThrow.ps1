@@ -5,7 +5,7 @@
 
 function Start-CheckandThrow($ProcessName){
 
-if ((Get-Process "$ProcessName" -ea SilentlyContinue) -eq $Null){
+if ($Null -eq (Get-Process "$ProcessName" -ea SilentlyContinue)){
     return
   } else { 
     Write-Warning "  ** Aborting install as $ProcessName is already running..."

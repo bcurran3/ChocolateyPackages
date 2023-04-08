@@ -193,7 +193,7 @@ if ($ShowPackageNotes) {
 if ($OpenValidatorInfo) {
     Write-Host "  ** Opening https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/." -Foreground Magenta
     Write-Host	
-    &start https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
+    &Start-Process https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
 	return
 }
 
@@ -657,14 +657,14 @@ Some Checks Have Failed or Are Not Yet Complete" -Foreground Red
 
 # Open all .nuspec URLs for viewing
 function Open-URLs{
-  if ($NuspecBugTrackerURL){&start $NuspecBugTrackerURL}
-  if ($NuspecDocsURL){&start $NuspecDocsURL}
-  if ($NuspecIconURL){&start $NuspecIconURL}
-  if ($NuspecLicenseURL){&start $NuspecLicenseURL}
-  if ($NuspecMailingListURL){&start $NuspecMailingListURL}
-  if ($NuspecPackageSourceURL){&start $NuspecPackageSourceURL}
-  if ($NuspecProjectSourceURL){&start $NuspecProjectSourceURL}
-  if ($NuspecProjectURL){&start $NuspecProjectURL}
+  if ($NuspecBugTrackerURL){&Start-Process $NuspecBugTrackerURL}
+  if ($NuspecDocsURL){&Start-Process $NuspecDocsURL}
+  if ($NuspecIconURL){&Start-Process $NuspecIconURL}
+  if ($NuspecLicenseURL){&Start-Process $NuspecLicenseURL}
+  if ($NuspecMailingListURL){&Start-Process $NuspecMailingListURL}
+  if ($NuspecPackageSourceURL){&Start-Process $NuspecPackageSourceURL}
+  if ($NuspecProjectSourceURL){&Start-Process $NuspecProjectSourceURL}
+  if ($NuspecProjectURL){&Start-Process $NuspecProjectURL}
 }
 
 # Run PNGOptimizerCL on supported image files
@@ -1118,7 +1118,7 @@ if (!($NuspecDependencies)) {
 		 }
 	 $DependencyName=$NuspecDependencies.dependency.id
 	 if ($NuspecDependencies.dependency.id.count -eq 1){
-    	 if ($NuspecDependencies.dependency.version -eq $null){
+    	 if ($null -eq $NuspecDependencies.dependency.version){
 	          Write-Warning "  ** <dependencies> - $DependencyName has no version. This will trigger a message from the verifier:"
       	      if (!$ReduceOutput) {
                 Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
@@ -1129,7 +1129,7 @@ if (!($NuspecDependencies)) {
 	   $DependencyNumber=0
 	 do{
 	    $DependencyName=$NuspecDependencies.dependency.id[$DependencyNumber]
- 	    if ($NuspecDependencies.dependency[$DependencyNumber].version -eq $null){
+ 	    if ($null -eq $NuspecDependencies.dependency[$DependencyNumber].version){
 				Write-Warning "  ** <dependencies> - ""$DependencyName"" has no version. This will trigger a message from the verifier:"
 			    if (!$ReduceOutput) {
                   Write-Host "           ** Guideline: Package contains dependencies with no specified version. You should at least specify`n              a minimum version of a dependency." -Foreground Cyan
@@ -1245,7 +1245,7 @@ if (!($NuspecDocsURL)) {
 # <files> checks
 if (!($NuspecFiles)) {
     Write-Host 'FYI:       ** <files> - element is empty or missing. If missing, all of the following files will be packaged:' -Foreground Yellow
-    Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
+    Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |ForEach-Object $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
     Write-Host '           ** <files> - It is best practice to add:' -Foreground Yellow
     Write-Host '                        <files>' -Foreground Yellow
     Write-Host '                          <file src="tools\**" target="tools" />' -Foreground Yellow
@@ -1552,7 +1552,7 @@ if (!($NuspecVersion)) {
 
 # check PowerShell script files, out of scope, but nice to have
 # This should probably be broken down into small functions
-Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
+Get-ChildItem "$path\*.ps1" -Recurse | ForEach-Object $_ {
 if ($debug){
 write-host "PATH = $path" -foreground red -background white
 write-host "FOREACH = $_" -foreground red -background white

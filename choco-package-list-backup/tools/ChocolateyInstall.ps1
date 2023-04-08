@@ -41,7 +41,7 @@ Function Update-Config{
 [xml]$UpdatedConfig = Get-Content "$scriptDir\$ScriptConfig"
 
 $UseiCloudDrive = $UpdatedConfig.Settings.Preferences.UseiCloudDrive
-if ($UseiCloudDrive -eq $null)
+if ($null -eq $UseiCloudDrive)
    {
     Write-Host "  ** Adding iCloudDrive support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "UseiCloudDrive", $null)
@@ -50,7 +50,7 @@ if ($UseiCloudDrive -eq $null)
 	$UpdatedFile = $True
    }
 $UseownCloud = $UpdatedConfig.Settings.Preferences.UseownCloud
-if ($UseownCloud -eq $null)
+if ($null -eq $UseownCloud)
    {
     Write-Host "  ** Adding ownCloud support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "UseownCloud", $null)
@@ -59,7 +59,7 @@ if ($UseownCloud -eq $null)
 	$UpdatedFile = $True
    }
 $SaveAllProgramsList = $UpdatedConfig.Settings.Preferences.SaveAllProgramsList
-if ($SaveAllProgramsList -eq $null)
+if ($null -eq $SaveAllProgramsList)
    {
     Write-Host "  ** Adding SaveAllProgramsList support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "SaveAllProgramsList", $null)
@@ -68,7 +68,7 @@ if ($SaveAllProgramsList -eq $null)
 	$UpdatedFile = $True
    }
 $AllProgramsListFile = $UpdatedConfig.Settings.Preferences.AllProgramsListFile
-if ($AllProgramsListFile -eq $null)
+if ($null -eq $AllProgramsListFile)
    {
     Write-Host " ** Adding AllProgramsListFile support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "AllProgramsListFile", $null)
@@ -77,7 +77,7 @@ if ($AllProgramsListFile -eq $null)
 	$UpdatedFile = $True
    }   
 $SaveTitleSummary = $UpdatedConfig.Settings.Preferences.SaveTitleSummary
-if ($SaveTitleSummary -eq $null)
+if ($null -eq $SaveTitleSummary)
    {
     Write-Host "  ** Adding SaveTitleSummary support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "SaveTitleSummary", $null)
@@ -86,7 +86,7 @@ if ($SaveTitleSummary -eq $null)
 	$UpdatedFile = $True
    }
 $DefaultUserProfile = $UpdatedConfig.Settings.Preferences.DefaultUserProfile
-if ($DefaultUserProfile -eq $null)
+if ($null -eq $DefaultUserProfile)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "DefaultUserProfile", $null)
     if ($env:COMPUTERNAME -eq $env:USERNAME.trim('$')) { $NewStuff.InnerText=('Public') } else { $NewStuff.InnerText=("$env:USERNAME") }
@@ -95,7 +95,7 @@ if ($DefaultUserProfile -eq $null)
 	$UpdatedFile = $True
    }
 $UseDefaultUserProfile = $UpdatedConfig.Settings.Preferences.UseDefaultUserProfile
-if ($UseDefaultUserProfile -eq $null)
+if ($null -eq $UseDefaultUserProfile)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "UseDefaultUserProfile", $null)
     $NewStuff.InnerText=("false") 
@@ -104,7 +104,7 @@ if ($UseDefaultUserProfile -eq $null)
 	$UpdatedFile = $True
    }
 $CustomPath2 = $UpdatedConfig.Settings.Preferences.CustomPath2
-if ($CustomPath2 -eq $null)
+if ($null -eq $CustomPath2)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "CustomPath2", $null)
     $NewStuff.InnerText=("c:\backup") 
@@ -113,7 +113,7 @@ if ($CustomPath2 -eq $null)
 	$UpdatedFile = $True
    }
 $UseCustomPath2 = $UpdatedConfig.Settings.Preferences.UseCustomPath2
-if ($UseCustomPath2 -eq $null)
+if ($null -eq $UseCustomPath2)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "UseCustomPath2", $null)
     $NewStuff.InnerText=("false") 
@@ -122,7 +122,7 @@ if ($UseCustomPath2 -eq $null)
 	$UpdatedFile = $True
    }
 $SaveArguments = $UpdatedConfig.Settings.Preferences.SaveArguments
-if ($SaveArguments -eq $null)
+if ($null -eq $SaveArguments)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "SaveArguments", $null)
     $NewStuff.InnerText=("false") 
@@ -131,7 +131,7 @@ if ($SaveArguments -eq $null)
 	$UpdatedFile = $True
    }
 $PreProcessScript = $UpdatedConfig.Settings.Preferences.PreProcessScript
-if ($PreProcessScript -eq $null)
+if ($null -eq $PreProcessScript)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "PreProcessScript", $null)
     $NewStuff.InnerText=("false") 
@@ -140,7 +140,7 @@ if ($PreProcessScript -eq $null)
 	$UpdatedFile = $True
    }
 $PostProcessScript = $UpdatedConfig.Settings.Preferences.PostProcessScript
-if ($PostProcessScript -eq $null)
+if ($null -eq $PostProcessScript)
    {
 	$NewStuff=$UpdatedConfig.CreateNode("element", "PostProcessScript", $null)
     $NewStuff.InnerText=("false") 
@@ -175,11 +175,11 @@ $GotTask = (&schtasks /query /tn choco-package-list-backup) 2> $null
 $ErrorActionPreference = 'Stop'
 
 # Change task to run new batch file and keep other existing settings (2020.04.06 upgrade)
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
      &SchTasks /CHANGE /TN "choco-package-list-backup" /TR "%ChocolateyInstall%\bin\choco-package-list-backup.bat"
    }
 
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
      Write-Host
      Write-Host "  ** Existing choco-package-list-backup scheduled task found:" -Foreground Magenta 
      SchTasks /query /tn "choco-package-list-backup"

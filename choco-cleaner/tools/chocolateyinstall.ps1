@@ -34,7 +34,7 @@ Function Update-Config{
 [xml]$UpdatedConfig = Get-Content "$scriptDir\$ScriptConfig"
 
 $DeleteNuGetCache = $UpdatedConfig.Settings.Preferences.DeleteNuGetCache
-if ($DeleteNuGetCache -eq $null)
+if ($null -eq $DeleteNuGetCache)
    {
     Write-Host Adding DeleteNuGetCache support to $ScriptConfig. -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteNuGetCache", $null)
@@ -63,7 +63,7 @@ If (Test-Path "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey
 $ErrorActionPreference = 'SilentlyContinue'
 $GotTask = (&schtasks /query /tn choco-cleaner) 2> $null
 $ErrorActionPreference = 'Stop'
-if ($GotTask -ne $null){&SchTasks /DELETE /TN "choco-cleaner" /F}
+if ($null -ne $GotTask){&SchTasks /DELETE /TN "choco-cleaner" /F}
 
 if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
        Write-Host "  ** NOTASK or NOSCHEDULE specified, not installing scheduled task." -Foreground Magenta

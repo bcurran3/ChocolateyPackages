@@ -9,7 +9,7 @@ $ProcessName = $ENV:ProcessName
 $LoopMePlease=1
 Do {
     Start-Sleep 5
-    if((Get-Process "$ProcessName" -ea SilentlyContinue) -eq $Null){ 
+    if($Null -eq (Get-Process "$ProcessName" -ea SilentlyContinue)){ 
       } else { 
         Write-Verbose "  ** Stopping $ProcessName process..."	  
         Stop-Process -ProcessName "$ProcessName" -Force

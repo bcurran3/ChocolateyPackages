@@ -26,7 +26,7 @@ if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machin
 $ErrorActionPreference = 'Continue'
 $GotTask = (&schtasks /QUERY /TN "choco upgrade all at") 2> $null
 $ErrorActionPreference = 'Stop'
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
      &SchTasks /DELETE /TN "choco upgrade all at" /F 
    }
 
@@ -35,12 +35,12 @@ $GotTask      = (&schtasks /QUERY /TN "choco-upgrade-all-at") 2> $null
 $ErrorActionPreference = 'Stop'
 
 # Change task to run new batch file and keep other existing settings (v0.0.0.5 to v0.0.0.6 upgrade)
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
      &SchTasks /CHANGE /TN "choco-upgrade-all-at" /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat"
    }
 
 # check if choco-ugrade-all-at task already exists and exit if so
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
      Write-Host "  ** Existing choco-upgrade-all-at scheduled task found. Keeping existing scheduled task.`n     If you want to change the task runtime or abort time, uninstall and reinstall the package." -Foreground Magenta 
      exit
    }
@@ -55,7 +55,7 @@ if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
 Write-Host "" 
 Write-Host "CHOCO-UPGRADE-ALL-AT Summary:" -Foreground Magenta
 
-if ($pp["USER"] -eq $null -or $pp["USER"] -eq ''){
+if ($null -eq $pp["USER"] -or $pp["USER"] -eq ''){
        Write-Host "  ** USER NOT specified, defaulting to SYSTEM." -Foreground Magenta
 	   $RunAsUser = 'SYSTEM'
      } else {
@@ -67,7 +67,7 @@ if ($pp["USER"] -eq $null -or $pp["USER"] -eq ''){
             } 
 	}
 
-if ($pp["TIME"] -eq $null -or $pp["TIME"] -eq ''){
+if ($null -eq $pp["TIME"] -or $pp["TIME"] -eq ''){
 	   $RunTime = "02:00"
        Write-Host "  ** TIME NOT specified, defaulting to $RunTime." -Foreground Magenta
      } else {
@@ -75,7 +75,7 @@ if ($pp["TIME"] -eq $null -or $pp["TIME"] -eq ''){
 	   Write-Host "  ** TIME specified as $RunTime." -Foreground Magenta
       } 
 
-if ($pp["ABORTTIME"] -eq $null -or $pp["ABORTTIME"] -eq ''){
+if ($null -eq $pp["ABORTTIME"] -or $pp["ABORTTIME"] -eq ''){
       $AbortTime = (Get-Date $RunTime).AddHours(2).ToString("HH:mm")
       Write-Host "  ** ABORTTIME NOT specified, defaulting to $AbortTime." -Foreground Magenta
     } else {
@@ -83,7 +83,7 @@ if ($pp["ABORTTIME"] -eq $null -or $pp["ABORTTIME"] -eq ''){
 	  Write-Host "  ** ABORTTIME specified as $AbortTime." -Foreground Magenta
     }
 	  
-if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq '')){
+if (($null -eq $pp["DAILY"] -or $pp["DAILY"] -eq '') -and ($null -eq $pp["WEEKLY"] -or $pp["WEEKLY"] -eq '')){
       Write-Host "  ** DAILY or WEEKLY NOT specified, defaulting to DAILY." -Foreground Magenta
       SchTasks /CREATE /SC DAILY /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
 	  SchTasks /QUERY /TN "choco-upgrade-all-at"
@@ -93,7 +93,7 @@ if (($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq '') -and ($pp["WEEKLY"] -eq $nu
  	  exit
     }
 		  
-if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
+if ($null -eq $pp["DAILY"] -or $pp["DAILY"] -eq ''){
        Write-Host "  ** DAILY NOT specified." -Foreground Magenta
      } else {
 	   Write-Host "  ** DAILY specified." -Foreground Magenta
@@ -105,11 +105,11 @@ if ($pp["DAILY"] -eq $null -or $pp["DAILY"] -eq ''){
 	   exit
 	   }  
 		  
-if ($pp["WEEKLY"] -eq $null -or $pp["WEEKLY"] -eq ''){
+if ($null -eq $pp["WEEKLY"] -or $pp["WEEKLY"] -eq ''){
        Write-Host "  ** WEEKLY NOT specified." -Foreground Magenta
      } else {
 	   Write-Host "  ** WEEKLY specified." -Foreground Magenta
-       if ($pp["DAY"] -eq $null -or $pp["DAY"] -eq ''){
+       if ($null -eq $pp["DAY"] -or $pp["DAY"] -eq ''){
             Write-Host " * DAY NOT specified, defaulting to SUNDAY." -Foreground Magenta
             SchTasks /CREATE /SC WEEKLY /D SUN /RU $RunAsUser /RL HIGHEST /TN choco-upgrade-all-at /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /ST $RunTime /F
 		    SchTasks /QUERY /TN "choco-upgrade-all-at"

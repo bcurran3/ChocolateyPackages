@@ -25,7 +25,7 @@ if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machin
 $ErrorActionPreference = 'SilentlyContinue'
 $GotTask = (&schtasks.exe /query /tn "Run a Choco Upgrade All at Startup") 2> $null
 $ErrorActionPreference = 'Stop'
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
     &schtasks.exe /DELETE /TN "Run a Choco Upgrade All at Startup" /F
    }
 
@@ -33,7 +33,7 @@ if ($GotTask -ne $null){
 $ErrorActionPreference = 'SilentlyContinue'
 $GotTask = (&schtasks.exe /query /tn "choco-upgrade-all-startup") 2> $null
 $ErrorActionPreference = 'Stop'
-if ($GotTask -ne $null){
+if ($null -ne $GotTask){
 # Change existing task to run new batch file 2021.03.13+
      &SchTasks /CHANGE /TN "choco-upgrade-all-startup" /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat"
    } else {
