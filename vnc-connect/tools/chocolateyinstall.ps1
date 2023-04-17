@@ -5,7 +5,7 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $extractDir     = "$toolsDir\extracted"
 $url            = "https://www.realvnc.com/download/file/vnc.files/VNC-Server-$env:ChocolateyPackageVersion-Windows-msi.zip"
-$checksum       = '2D9188853243518166B475208F2580A858CBBDD20BBE7FB08C91949ACDAD1DE4'
+$checksum       = '5AF1784863D4E90FD10696BBF3945455CFBA706C591EDC03AF9C1B6CB3E590FD'
 
 
 $packageArgs = @{
@@ -38,3 +38,6 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 Remove-Item $extractDir -Recurse -Force | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# Update the checksum variable
