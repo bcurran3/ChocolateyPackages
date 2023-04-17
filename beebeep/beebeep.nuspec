@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>beebeep</id>
-    <version>5.8.4</version>
+    <version>5.8.6</version>
     <owners>bcurran3</owners>
     <title>beeBEEP (Portable)</title>
     <authors>Marco Mastroddi</authors>
@@ -19,10 +19,12 @@
     <tags>beebeep IM chat messenger portable</tags>
     <summary>BeeBEEP is an open source, peer to peer, secure LAN messenger.</summary>
     <description>
-___
+---
+
 ### [choco://beebeep](choco://beebeep)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-___
+
+---
 
 ![Screenshot of beeBEEP](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/beebeep/beebeep_screenshot.jpg)
 
@@ -43,12 +45,12 @@ BeeBEEP is an open source, peer to peer, lan messenger developed by Marco Mastro
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/beebeep/readme.md)**
 
-	
 
-___
+---
 
-Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
-___
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
 
 </description>
     <releaseNotes>https://sourceforge.net/p/beebeep/code/HEAD/tree/CHANGELOG.txt</releaseNotes>
