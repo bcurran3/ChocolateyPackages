@@ -5,7 +5,7 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $extractDir     = "$toolsDir\extracted"
 $url            = "https://downloads.realvnc.com/download/file/viewer.files/VNC-Viewer-$env:ChocolateyPackageVersion-Windows-msi.zip"
-$checksum       = 'DAAF020DAB60239C251AAC09F201A91510185C2F339E7F04249F921E3774A8B4'
+$checksum       = '569CA0A965F99915AA5BFD6FD29B5429C7928E39638CD01C05966C7F9483FAA6'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -41,3 +41,6 @@ Remove-Item $extractDir -Recurse -Force | Out-Null
 Remove-Item "$toolsDir\VNC-Viewer.exe" -Force -ErrorAction SilentlyContinue | Out-Null
 Remove-Item "$ENV:PUBLIC\Desktop\VNC Viewer.lnk" -Force -ErrorAction SilentlyContinue | Out-Null
 Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\VNC Viewer" -Force -ErrorAction SilentlyContinue | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# Update checksum
