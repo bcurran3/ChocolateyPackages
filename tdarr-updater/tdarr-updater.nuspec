@@ -26,7 +26,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of tdarr-updater](https://tdarr.io/static/media/Nodes.ed7f6bc0.png)
+![Screenshot of tdarr-updater](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/tdarr-updater/tdarr-updater_screenshot.png)
 
 
 **Tdarr Updater** will automatically download and extract the latest version of Tdarr V2: Distributed Transcoding System; server and node.
