@@ -1,25 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dual-monitor-tools</id>
-    <version>2.8.0.0</version>
+    <version>2.9.0.0</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dual-monitor-tools</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dual-monitor-tools</packageSourceUrl>
     <title>Dual Monitor Tools (Install)</title>
     <authors>Gerald Evans</authors>
     <projectUrl>https://sourceforge.net/projects/dualmonitortool/</projectUrl>
-	<iconUrl>https://fsdn.com/allura/p/dualmonitortool/icon?1513717495</iconUrl>
+    <iconUrl>https://a.fsdn.com/allura/p/dualmonitortool/icon?1513717495</iconUrl>
     <copyright>Copyright Gerald Evans</copyright>
-	<licenseUrl>https://sourceforge.net/directory/os:windows/license:gplv3/</licenseUrl>
-	<requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<projectSourceUrl>https://sourceforge.net/p/dualmonitortool/code/</projectSourceUrl>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/dualmonitortool/code/</projectSourceUrl>
     <docsUrl>https://sourceforge.net/p/dualmonitortool/wiki/Home/</docsUrl>
-	<mailingListUrl>https://sourceforge.net/p/dualmonitortool/mailman/</mailingListUrl>
+    <mailingListUrl>https://sourceforge.net/p/dualmonitortool/mailman/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/dualmonitortool/bugs/</bugTrackerUrl>
     <tags>dual monitor tools Desktop Environment System</tags>
     <summary>Dual Monitor Tools - Tools for Windows users with dual or multiple monitors.</summary>
     <description>
+---
+
+### [choco://dual-monitor-tools](choco://dual-monitor-tools)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of Dual Monitor Tools](https://fsdn.com/con/app/proj/dualmonitortool/screenshots/dmt_cursor_general.png)
 
 Tools for Windows users with dual or multiple monitors. Has hotkeys for moving windows around, restrict mouse/cursor movement between screens, application launcher, wallpaper creator and changer and a screen capture tool.
@@ -35,7 +42,15 @@ Tools for Windows users with dual or multiple monitors. Has hotkeys for moving w
 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/dual-monitor-tools/readme.md)**
-	</description>
+	
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <releaseNotes>https://sourceforge.net/p/dualmonitortool/news/</releaseNotes>
   </metadata>
   <files>
