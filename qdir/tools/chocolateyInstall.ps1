@@ -64,3 +64,6 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Install-BinFile -Name qdir -Path $env:ProgramFiles\Q-Dir\Q-Dir.exe
 Remove-Item "$toolsDir\q*.zip" | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# Replace ZIPS with new versions
