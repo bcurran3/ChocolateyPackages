@@ -11,7 +11,7 @@
     <copyright>HaveAGitGat</copyright>
     <licenseUrl>https://home.tdarr.io/eula</licenseUrl>
     <projectUrl>https://tdarr.io/</projectUrl>
-	<projectSourceUrl>https://github.com/HaveAGitGat/Tdarr</projectSourceUrl>
+    <projectSourceUrl>https://github.com/HaveAGitGat/Tdarr</projectSourceUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/tdarr-updater/tdarr-updater_icon.png</iconUrl>
     <docsUrl>https://docs.tdarr.io/docs/installation/windows-linux-macos</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
