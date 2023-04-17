@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'intel-chipset-device-software'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://downloadmirror.intel.com/30553/eng/setupchipset.exe'
-#                                                   ^^^^^ changes 
-$checksum       = 'DEAB9FC03112350552E8CB2C15713670220764035BE8BEAC4789FBE73594EA32'
+$packageName        = 'intel-chipset-device-software'
+$toolsDir           = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$IntelPackageNumber = "774764"
+$url                = "https://downloadmirror.intel.com/$IntelPackageNumber/SetupChipset.exe"
+$checksum           = '3BA66C0A2D2DBA5905FEF3EF8FC5CE82B9D5B781A9F693333C5B7476428CA0FD'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -17,3 +17,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
+
+# UPDATE INSTRUCTIONS:
+# Update IntelPackageNumber and checksum variables
