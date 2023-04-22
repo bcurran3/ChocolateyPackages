@@ -21,9 +21,9 @@ Install-ChocolateyZipPackage @packageArgs
 
 if ($bits -eq 64)
    {
-    $Installer = "$extractDir\VNC-Server-$env:packageVersion-Windows-en-64bit.msi"
+    $Installer = "$extractDir\VNC-Server-6.11.0-Windows-en-64bit.msi"
    } else {
-    $Installer = "$extractDir\VNC-Server-$env:packageVersion-Windows-en-32bit.msi"
+    $Installer = "$extractDir\VNC-Server-6.11.0-Windows-en-32bit.msi"
    }
 
 $packageArgs = @{
