@@ -32,7 +32,7 @@ $packageArgs = @{
   file           = $Installer
   silentArgs     = '/quiet /qn /norestart'
   validExitCodes = @(0, 3010, 1641)
-  softwareName   = 'VNC *'
+  softwareName   = 'VNC Server*'
 }
  
 Install-ChocolateyInstallPackage @packageArgs
