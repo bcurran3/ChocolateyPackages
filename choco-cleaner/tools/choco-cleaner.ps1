@@ -177,11 +177,11 @@ if ($DeleteNuGetCache -eq "True"){
 	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
 		$dir = $userdirs.fullname[$Count]
 		$dir = "$dir" + "\appdata\Local\Nuget\Cache"
-		$GotNuGetCache=ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
+		$GotNuGetCache=ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
 		$NuGetCache=$GotNuGetCache.count
 		if ($NuGetCache -ge 1){
 			Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files ($dir)..." -Foreground Green
-		    Remove-Item $dir -Recurse -Force -WhatIf
+		    Remove-Item $dir -Recurse -Force
 		} else {
 			Write-Host "  **  NO unnecessary Nuget cache files ($dir) to delete." -Foreground Green
 		}
