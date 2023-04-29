@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-processor-identification-utility'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://downloadmirror.intel.com/28539/Intel%20Processor%20Identification%20Utility.exe'
-$checksum       = 'ACF990CDB2C394610581D5E731FE546DA2451A0FBC0A482C566372BBDCE97A13'
+$url            = 'https://downloadmirror.intel.com/28539/Intel%20Processor%20Identification%20Utility.exe' # url does not change
+$checksum       = 'F46830E9F41421CE2AE531F2FCC710E297691761C4BC4CC41ACD0A24CB10F8F5'
 
 $packageArgs = @{
   packageName    = $packageName

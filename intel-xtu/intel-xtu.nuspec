@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-xtu</id>
-    <version>7.6.0.37</version>
+    <version>7.11.0.42</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-xtu</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
     <authors>Intel Corporation</authors>
-    <projectUrl>https://downloadcenter.intel.com/download/29183/Intel-Extreme-Tuning-Utility-Intel-XTU</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/29183</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_icon.png</iconUrl>
     <copyright>Intel Corporation</copyright>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
@@ -27,6 +27,10 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of Intel XTU](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_screenshot.png)	
 
+### Introduction
+
+The Intel® Extreme Tuning Utility (Intel® XTU) is used to overclock, monitor, and stress a system. Note: Please make sure your processor is supported before downloading the latest version of Intel® Extreme Tuning Utility (Intel® XTU). Older versions of Intel® XTU are no longer available for download. This application is supported with unlocked processors (K- and X-series) only. Refer to “This download is valid for the product(s) listed below” section for supported processors list.
+
 ### Purpose
 
 Intel XTU is a Windows*-based performance-tuning software that enables novice and experienced enthusiasts to overclock, monitor, and stress a system. The software interface exposes a set of robust capabilities common in most enthusiast platforms along with new features available on new Intel® application processors and Intel® motherboards.
@@ -42,9 +46,10 @@ See the release notes for installation instructions, supported hardware, what is
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/29183/XTU-7.6.0.37-ReleaseNotes.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/29183/XTU-7.11.0.42-ReleaseNotes.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.1" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
       <dependency id="dotnet3.5" version="3.5" />
     </dependencies>
   </metadata>

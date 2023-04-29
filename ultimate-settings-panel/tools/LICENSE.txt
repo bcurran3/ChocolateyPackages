@@ -1,11 +1,12 @@
 ==================== Ultimate Settings Panel ====================
 
-From https://blog.techygeekshome.info/ultimate-settings-panel-homepage/ 
+From https://blog.techygeekshome.info/wpdm-package/ultimate-settings-panel-pro/
 in the Download section it states:
 
-Download
-The completely free download includes both 32-bit and 64-bit MSI installers and you are free to distribute to as many devices as you like including for both personal and corporate use.
+License
+This utility is free to use for both personal and commercial use.
 
-This great utility is completely free to download, simply visit our Downloads page to get it now!
+Distribution
+You are free to distribute this utility in its original form. No amendments or installation wrapping with PuP is permitted.
 
 ==================== Ultimate Settings Panel ====================

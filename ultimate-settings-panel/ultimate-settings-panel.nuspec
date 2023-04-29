@@ -3,13 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ultimate-settings-panel</id>
-    <version>6.6</version>
+    <version>6.7</version>
     <title>Ultimate Settings Panel (Install)</title>
     <authors>A.J. Armstrong</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/ultimate-settings-panel/ultimate-settings-panel_icon.png</iconUrl>
+    <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>
+    <copyright>A.J. Armstrong / techygeekshome.info</copyright>
+    <projectSourceUrl>https://github.com/techygeekshome/Ultimate-Settings-Panel</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>
+    <docsUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/ultimate-settings-panel-instructions/</docsUrl>
+    <bugTrackerUrl>https://blog.techygeekshome.info/contact/</bugTrackerUrl>
+    <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>techygeekshome ultimate settings panel system utility configuration control binary</tags>
     <description>
 ---
 
@@ -22,27 +30,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ### Windows based all in one settings and configuration solution
 
-An all in one settings solution for a multitude of configuration options in Windows, Office and internet browsers. We have covered the following systems; Windows XP, Vista, 7, 8 &amp; 10 &amp; Outlook 2010 &amp; 2013.
+An all-in-one settings and configuration solution for a multitude of configuration options in Windows, Office, Powershell, and popular internet browsers. The latest release now has 15 different configuration tabs including Windows 10 and a total of 295 configuration items spanning across all versions of Windows, Powershell, Outlook, Server Administration, Google Chrome, Firefox, Internet Explorer and even some telnet tricks!
 
-Ultimate Settings Panel is a tab based utility giving you the option of selecting from a wide range of different configuration options. So all you have to do is select a tab and click the button for the configuration item that you wish to use. This program also includes Windows God Mode built into it for extra configuration items.
-
-### Features
-* Windows Admin Tab
-* General Admin Tab
-* Windows 10 Admin Tab
-* Outlook Admin Tab
-* Server Admin Tab
-* Windows 8 Tab
-* Google Chrome Tab
-* Internet Explorer Tab
-* Firefox Tab
-* Advanced Tab
-* Windows 7, 8.1 and 10 Compatibility
-* Windows 7 Tab
-* Theme and Colour Scheme Changer
-* CPU Information
-* RAM Information
-* Battery Information
+One of the great features of Ultimate Settings Panel is the ability to have a massive range of computing options all in one easy-to-use utility.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/ultimate-settings-panel/readme.md)**
     
@@ -54,14 +44,6 @@ Ultimate Settings Panel is a tab based utility giving you the option of selectin
 ---
 
 </description>
-    <summary>Ultimate Settings Panel is an all in one settings solution for a multitude of configuration options in Windows 7, 8.1 and 10, Microsoft Office, Windows Server and System Center Configuration Manager.</summary>
-    <copyright>A.J. Armstrong / techygeekshome.info</copyright>
-    <tags>ultimate settings panel system utility configuration control binary</tags>
-    <projectSourceUrl>https://github.com/techygeekshome/Ultimate-Settings-Panel</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/ultimate-settings-panel</packageSourceUrl>
-    <docsUrl>https://blog.techygeekshome.info/ultimate-settings-panel-homepage/ultimate-settings-panel-instructions/</docsUrl>
-    <bugTrackerUrl>https://blog.techygeekshome.info/contact/</bugTrackerUrl>
-    <mailingListUrl>http://blog.techygeekshome.info/forums/forum/ultimate-settings-panel-support/</mailingListUrl>
     <dependencies>
       <dependency id="dotnet4.5.2" version="4.5.2.20140902" />
     </dependencies>

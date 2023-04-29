@@ -5,7 +5,7 @@ $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $PortableEXE = "$toolsDir\GPU-Z."+$ENV:ChocolateyPackageVersion+".exe"
 
 Remove-Item $ENV:ChocolateyInstall\bin\gpu-z*.exe # delete old shims
-Remove-Item $toolsDir\*.exe -Exclude "GPU-Z.$ENV:ChocolateyPackageVersion.exe" # deleted old versions kept by upgrade
+Remove-Item $toolsDir\*.exe -Exclude "GPU-Z.$ENV:ChocolateyPackageVersion.exe" # delete old versions kept by upgrade
 Remove-Item $toolsDir\*.ignore  # delete old .ignore files (2.18.0+)
 Write-Host "" | Out-File "$toolsDir\GPU-Z.$ENV:ChocolateyPackageVersion.ignore" # create .ignore file so shim isn't created
 

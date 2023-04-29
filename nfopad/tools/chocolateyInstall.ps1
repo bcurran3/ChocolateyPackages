@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $packageName    = 'nfopad'
-$url            = 'https://truehumandesign.se/download/nfopad18.exe'
-$checksum       = '175A27CC49185683CB15967C44E791E8CD4E7BA9E0BEB2DEA512B45C24364E37'
+$url            = 'https://truehumandesign.se/download/nfopad181.exe'
+$checksum       = '9139ED7F97278EDF90EE8DC179E30A00D475A6CD34670B6E122E4D603C19DD6A'
 
 $packageArgs = @{
   packageName    = $packageName

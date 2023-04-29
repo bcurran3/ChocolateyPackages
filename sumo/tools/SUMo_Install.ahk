@@ -1,5 +1,4 @@
-﻿#NoEnv
-SetTitleMatchMode, 1  ;begins
+﻿SetTitleMatchMode, 1  ;begins
 DetectHiddenText, off
 DetectHiddenWindows, off
 

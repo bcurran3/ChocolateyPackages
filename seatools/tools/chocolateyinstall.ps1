@@ -1,6 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $url           = 'https://www.seagate.com/files/www-content/support-content/downloads/seatools/_shared/downloads/SeaToolsWindowsInstaller.exe'
-$checksum      = '2D98BAD583599491E782CF60319DDBB6C437874F5E03E07A7ECBE3022CF5D105'
+               # ^ persistent
+$checksum      = '92194258048C2C033245931D5E8388083E48301498CD774C1CD2EEA3F278A0A5'
 
 $packageArgs = @{
   packageName   = 'seatools'

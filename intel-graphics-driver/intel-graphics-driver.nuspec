@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-graphics-driver</id>
-    <version>31.0.101.3222</version>
+    <version>31.0.101.3790</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19344/intel-graphics-windows-dch-drivers.html</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
@@ -70,9 +70,10 @@ Install the [Intel® Driver &amp; Support Assistant](https://www.intel.com/conte
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/738230/readme_1013222.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/751359/readme_1013790.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
     </dependencies>
   </metadata>
   <files>

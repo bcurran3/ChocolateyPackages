@@ -1,27 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'advanced-codecs'
-$softwareName   = 'Shark007 ADVANCED Codecs*'
+$packageName  = 'advanced-codecs'
+$shortcutName = 'Shark007''s 64bit ADVANCED Codecs.lnk'
 
-Start-Process -FilePath "msiexec.exe" -ArgumentList "/x {8C0CAA7A-3272-4991-A808-2C7559DE3409} /qn"
-Start-Process -FilePath "$env:ProgramFiles\Shark007\unins000.exe" -ArgumentList "/SILENT"
-return
-
-#below for future use
-
-$packageArgs = @{
-  packageName    = $packageName
-  FileType       = 'MSI' 
-  SilentArgs     = '/x {8C0CAA7A-3272-4991-A808-2C7559DE3409} /qn'
-  ValidExitCodes = @(0)
-  File           = 'msiexec.exe'
+if (Test-Path "$Env:ProgramFiles\Shark007"){
+    Start-ChocolateyProcessAsAdmin -Statements "uninstall" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\Settings64_portable.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\"
+    Remove-Item -Recurse -Force "$Env:ProgramFiles\Shark007" -ErrorAction SilentlyContinue | Out-Null
 }
-Uninstall-ChocolateyPackage @packageArgs
 
-$packageArgs = @{
-  packageName    = $packageName
-  FileType       = 'EXE' 
-  SilentArgs     = '/SILENT'
-  ValidExitCodes = @(0)
-  File           = "$env:ProgramFiles\Shark007\unins000.exe"
+if (Test-Path "$Env:ProgramFiles\Shark007"){
+	Write-Host "  ** $Env:ProgramFiles\Shark007 could not be deleted. Manually remove after a reboot." -Foreground Magenta
 }
-Uninstall-ChocolateyPackage @packageArgs
+
+Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -Force -ErrorAction SilentlyContinue

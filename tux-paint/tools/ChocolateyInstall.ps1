@@ -13,3 +13,7 @@ $packageArgs = @{
  
 Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*.exe -EA SilentlyContinue | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# https://tuxpaint.org/download/windows/
+# Replace EXE installer files with new ones

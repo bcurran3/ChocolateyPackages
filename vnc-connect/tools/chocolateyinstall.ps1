@@ -4,8 +4,8 @@ $packageName    = 'vnc-connect'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $bits           = Get-ProcessorBits
 $extractDir     = "$toolsDir\extracted"
-$url            = "https://www.realvnc.com/download/file/vnc.files/VNC-Server-$env:ChocolateyPackageVersion-Windows-msi.zip"
-$checksum       = '7495E409E35B00BF1041FCDDDDA15812656F1A4EE36F26FB127995BA772D20CF'
+$url            = "https://downloads.realvnc.com/download/file/vnc.files/VNC-Server-"+"$env:ChocolateyPackageVersion"+"-Windows-msi.zip"
+$checksum       = '5AF1784863D4E90FD10696BBF3945455CFBA706C591EDC03AF9C1B6CB3E590FD'
 
 
 $packageArgs = @{
@@ -29,10 +29,10 @@ if ($bits -eq 64)
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'MSI'
-  file           = $Installer
+  file           = "$Installer"
   silentArgs     = '/quiet /qn /norestart'
   validExitCodes = @(0, 3010, 1641)
-  softwareName   = 'VNC *'
+  softwareName   = 'VNC Server*'
 }
  
 Install-ChocolateyInstallPackage @packageArgs

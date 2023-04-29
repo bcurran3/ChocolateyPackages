@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Continue'
 #Requires -RunAsAdministrator
-# Choco-Cleaner.ps1 Copyleft 2017-2021 by Bill Curran AKA BCURRAN3
+# Choco-Cleaner.ps1 Copyleft 2017-2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Cleaner.ps1 v0.0.8.4 (05/28/2021) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
-Write-Host "Copyleft 2017-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v0.0.9.0-pre (04/28/2023) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
@@ -132,26 +132,22 @@ if ($DeleteOldChoco -eq "True"){
 }
 
 if ($DeleteCache -eq "True"){
-#	TDL - discover each user profile and delete appropriately within
-#	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-#
-#	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
-#		$dir = $userdirs.fullname[$Count]
-#		$dir = "$dir" + "\appdata\temp\chocolatey"
-#		Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
-#	}
+#	Discover each user profile and delete appropriately within
+	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
+	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
+		$dir = $userdirs.fullname[$Count]
+		$dir = "$dir" + "\appdata\local\temp\chocolatey"
+    	$GotCacheFiles=ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
+	    $CacheFiles=$GotCacheFiles.count
+	    if ($CacheFiles -ge 1){
+		    Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($dir)..." -Foreground Green
+		    Remove-Item $dir -Recurse -Force
+	    } else {
+		  Write-Host "  **  NO unnecessary Chocolatey cache files ($dir) to delete." -Foreground Green
+	    }
+    }
 
-
-	$GotCacheFiles=Get-ChildItem -Path $ENV:tmp\chocolatey -Recurse
-	$CacheFiles=$GotCacheFiles.count
-	if ($CacheFiles -ge 1){
-		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:tmp\chocolatey)..." -Foreground Green
-		Remove-Item -Path $ENV:tmp\chocolatey -Recurse -Force
-	} else {
-		Write-Host "  **  NO unnecessary Chocolatey cache files ($ENV:tmp\chocolatey) to delete." -Foreground Green
-	}
-
-	$GotCacheFiles=Get-ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse
+	$GotCacheFiles=ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
 		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey)..." -Foreground Green
@@ -163,7 +159,7 @@ if ($DeleteCache -eq "True"){
 
 	if ($cacheLocation){
 		if (Test-Path $cacheLocation) {
-			$GotCacheFiles=Get-ChildItem -Path $cacheLocation -Recurse
+			$GotCacheFiles=ChildItem -Path $cacheLocation -Recurse
 			$CacheFiles=$GotCacheFiles.count
 			if ($CacheFiles -ge 1){
 				Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($cacheLocation)..." -Foreground Green
@@ -176,26 +172,19 @@ if ($DeleteCache -eq "True"){
 }
 
 if ($DeleteNuGetCache -eq "True"){
-#	TDL - discover each user profile and delete appropriately within
-#	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
-#
-#	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
-#		$dir = $userdirs.fullname[$Count]
-#		$dir = "$dir" + "\appdata\Local\Nuget\Cache"
-#		Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
-#	}
-
-
-
-	if (Test-Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache){
-		$GotNuGetCache=Get-ChildItem -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse
+#	Discover each user profile and delete appropriately within
+	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
+	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
+		$dir = $userdirs.fullname[$Count]
+		$dir = "$dir" + "\appdata\Local\Nuget\Cache"
+		$GotNuGetCache=ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
 		$NuGetCache=$GotNuGetCache.count
 		if ($NuGetCache -ge 1){
-			Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files..." -Foreground Green
+			Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files ($dir)..." -Foreground Green
+		    Remove-Item $dir -Recurse -Force
 		} else {
-			Write-Host "  **  NO unnecessary Nuget cache files to delete." -Foreground Green
+			Write-Host "  **  NO unnecessary Nuget cache files ($dir) to delete." -Foreground Green
 		}
-		Remove-Item -Path $ENV:USERPROFILE\AppData\Local\NuGet\Cache -Recurse -Force
 	}
 }
 
@@ -351,7 +340,6 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColo
 Start-Sleep -s 10
 
 # TDL
-# Recursively delete Chocolatey and NuGet cache files from all user directories
 # Accurately track and report reclaimed space per bullet point and total
 # More detailed logging
 # Clean C:\ProgramData\chocolatey\lib-synced

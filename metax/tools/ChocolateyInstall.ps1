@@ -14,5 +14,5 @@ $packageArgs = @{
   
 Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*.msi -Force | Out-Null
-if (Test-path "$env:ProgramFiles\MetaX\MetaX.exe") {Install-ChocolateyPowershellCommand -PackageName 'metx' -PSFileFullPath "$env:ProgramFiles\MetaX\MetaX.exe"}
-if (Test-path ${env:ProgramFiles(x86)}\MetaX\MetaX.exe) {Install-ChocolateyPowershellCommand -PackageName 'metx' -PSFileFullPath ${env:ProgramFiles(x86)}\MetaX\MetaX.exe}
+if (Test-path "$env:ProgramFiles\MetaX\MetaX.exe") {Install-ChocolateyPowershellCommand -PackageName 'metax' -PSFileFullPath "$env:ProgramFiles\MetaX\MetaX.exe"}
+if (Test-path ${env:ProgramFiles(x86)}\MetaX\MetaX.exe) {Install-ChocolateyPowershellCommand -PackageName 'metax' -PSFileFullPath ${env:ProgramFiles(x86)}\MetaX\MetaX.exe}

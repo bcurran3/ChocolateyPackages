@@ -3,12 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tux-paint</id>
-    <version>0.9.28</version>
+    <version>0.9.29</version>
     <title>Tux Paint (Install)</title>
     <authors>wkendrick</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tux-paint</packageSourceUrl>
     <projectUrl>http://www.tuxpaint.org/</projectUrl>
+	<docsUrl>https://tuxpaint.org/docs/</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tuxpaint/bugs/</bugTrackerUrl>
     <mailingListUrl>https://sourceforge.net/p/tuxpaint/mailman/</mailingListUrl>
     <copyright>Copyright New Breed Software/Various contributors</copyright>

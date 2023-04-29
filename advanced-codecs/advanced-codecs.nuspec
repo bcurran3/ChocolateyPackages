@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>advanced-codecs</id>
-    <title>Shark007's Advanced Codecs (Install)</title>
-    <version>16.2.8</version>
+    <title>Shark007's 64bit ADVANCED Codecs (Portable)</title>
+    <version>17.2.4</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
-    <summary>ADVANCED Codecs for Windows 10/8.1/7 is an audio and video codec package which contains a full suite of all the best codecs available.</summary>
+    <summary>64bit ADVANCED Codecs for Windows is an audio and video codec package which contains a full suite of all the best codecs available.</summary>
     <description>
 ---
 
@@ -17,44 +17,55 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
+## 64bit ADVANCED Codecs for Windows
 	
 ![Screen shot of Settings Application](http://shark007.net/images/32bit7.jpg)
 
-## ADVANCED Codecs for Windows 10/8.1/7
+## Portable, self updating, codec solutions.
 
-Current releases introduce 3D decoding of files, ISO's and disks.
 
-**3D decoding is reported by LAV Video as, Active Decoder: msdk mvc**
+**Installer releases have been discontinued.**
 
-If you have renamed system files or used a utility such as MCDU, this may not work for you. Please attempt to return all system files back to original filenames before using this product. If you decide to installed registry hacks; you machine may already be broken beyond repair.
+Installers are well known for putting things onto your system that you didnt want.
+To illiminate the installer, I have created a 100%, portable, self updating, codec package.
 
-HDR / UHD / H265 / HEVC / MVC, H264 codecs are activated by default.
+**32bit releases have been discontinued.**
 
-The following filetypes are enabled and SUPPORTED by the installation of the Windows 7 Codecs.
-**amr** | mpc | ofr | **divx** | mka | ape | **flac** | evo | **flv** | m4b | **mkv** | ogg | ogm | **rmvb** | xvid | **y4m**
+64bit codecs are best used for video playback when using a 64bit player.
+32bit codecs for use with video editing software are available from here.
+If you want to take control of playback on your system, you've come to the right place.
 
-All of the above filetypes can be queued to the Windows Media Player Playlist using a right-click.
+**Anything that the 'Movies &amp; TV app' fails to play, will be able to play in WMP using my codecs.
+All you need to do is check the box, [x] WMP suggested settings. See image below for more info.**
+
+**I have implemented an Auto-Update feature** that will allow users to update the included Settings Application and the distributed codecs directly from within the GUI without the need to download full codec releases. This new feature will be controlled by the existing checkbox on the Help tab and run solely off of my own servers.
+Donations to assist with hosting fees are appreciated, Thank you.
+
+**The Save and Restore settings feature** is automated and also controlled by the commandline.
+To have your settings restored automatically during an upgrade, all you need to do is [Save ALL Settings]
+The checkboxes involved are correctly set by default to allow automatic upgrade settings restoration.
+
+**Recently,** there has been a major re-write of the GUI itself and the filters they control. Support for MKV on the xbox360 was dropped along with the removal of several deprecated codecs and the SetACL dependency.
+I hope you enjoy these new releases and can find the time to send a small donation in support of continued maintenance into the future.
+
+**Top 10 features of the recent Settings Application rewrite:**
+
+1. Remove all unnecessary code associated with the deprecated codec removal
+2. Re-organize the entire layout to be more intuitive, user friendly and visually appealing
+3. Allow the user to click anywhere on the App to relocate the Settings Application on the screen
+4. Add an Always On Top feature to keep the Settings Application in view
+5. Activate the previous instance ot the Settings Application when trying to open a new instance
+6. Require Administrative privileges upon startup eliminating the need to rightclick
+7. Current codec setup can be propagated to All user accounts with the click of a button.
+8. Colorize and capitalize important functions to promote their significance
+9. Automatically resize the App relative to the display resolution and use high quality text
+10. Add a Save | Restore settings feature to seamlessly return to a previous setup
+All functions are performed instantaneously. The moment you select something, the action is performed.
+If you ever find yourself broken, simply press the [RESET ALL] button to return to a just installed state.
+**BONUS** Simple commandline features and a builtin, intelligent, Auto Update feature.
 
 [SETUP AND USAGE](http://shark007.net/forum/Thread-Setup-and-usage)
-^^ 17.4 million readers ^^
-and over 16,700 registered forum members
 
-
-Things the Shark pack does that other packs cannot do . . .
-
-1. Full color thumbnails including FLV's and 10bit MKV's.
-(also allows users to select at what point by percentage to grab the thumbnail)
-2. Enable the Preview Pane for ALL newly enabled filetypes such as MKV and FLV.
-3. Explorer properties are displayed for non native filetypes such as MKV and FLV
-4. Updated often - and has update notification builtin
-5. Allow use of the PowerDVD decoders for 32bit LiveTV in Media Center.
-6. Support playback of MKV files on Extenders and on the Xbox One.
-7. Support use of the LAV filters with the Play To function for MKV files.
-8. Support playback of MOD audio files and M4A files containing ALAC
-9. Supports playlist creation for use in Media Center
-10. Allow users to Enable/Disable codecs installed on their system
-11. Functionality such as Win7DSFilterTweaker builtin.
-12. Support 'Add to Windows Media Player List' using rightclick on all files such as MKV.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advanced-codecs/readme.md)**
 
@@ -65,16 +76,15 @@ Things the Shark pack does that other packs cannot do . . .
 ---
 
 </description>
-    <projectUrl>http://shark007.net/advanced.html</projectUrl>
+    <projectUrl>https://shark007.net/x64components1.html</projectUrl>
     <docsUrl>http://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
 	<releaseNotes>(unofficial) https://www.videohelp.com/software/Win7codecs/version-history</releaseNotes>
     <mailingListUrl>http://shark007.net/forum/</mailingListUrl>
-    <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m binary embedded notsilent</tags>
+    <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m binary embedded</tags>
     <licenseUrl>http://shark007.net/disclaimer.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl>
     <dependencies>
-      <dependency id="autohotkey" version="1.1.27"/>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>

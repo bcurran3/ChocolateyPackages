@@ -28,7 +28,6 @@ Install-ChocolateyPowershellCommand -PackageName 'choco-cleaner' -PSFileFullPath
 
 # Cleanup
 Remove-Item "$toolsDir\choco-cleaner.*" -Exclude choco-cleaner.ico -Force -ErrorAction SilentlyContinue | Out-Null
-if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
 Function Update-Config{
 [xml]$UpdatedConfig = Get-Content "$scriptDir\$ScriptConfig"
