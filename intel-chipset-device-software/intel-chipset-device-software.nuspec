@@ -3,10 +3,10 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-chipset-device-software</id>
-    <version>10.1.18793.8276</version>
+    <version>10.1.19444.8378</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-chipset-device-software</packageSourceUrl>
-    <title>Intel® Chipset Device Software (Install)</title>
+    <title>Intel® Chipset INF Utility (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://downloadcenter.intel.com/download/29634</projectUrl>
     <iconUrl>http://www.intel.com/pressroom/images/logos/intel_rgb_180w_72ppi.jpg</iconUrl>

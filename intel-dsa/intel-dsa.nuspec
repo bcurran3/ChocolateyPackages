@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>22.4.26.8</version>
+    <version>23.1.9.7</version>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
-    <projectUrl>https://downloadcenter.intel.com/download/24345/Intel-Driver-Support-Assistant</projectUrl>
+    <projectUrl>https://downloadcenter.intel.com/download/24345</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-dsa/intel-dsa_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>

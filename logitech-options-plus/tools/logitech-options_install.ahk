@@ -1,22 +1,15 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+#Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
- 
-sleep 15000
-Loop, 150
-; check for new version message for 5 minutes (2*150=300s)
-{
- If WinExist("Advanced")
+SetTitleMatchMode, 2
+SetTitleMatchMode, fast
+
+WinWait, LogiOptions Installer,, 300
+while WinExist("LogiOptions Installer")
    {
     WinActivate
-    Send !n
+    Send {Enter}
+	Sleep 2000
    }
- If WinExist("x64Components")
-   {
-    WinActivate
-    Send !n
-	ExitApp
-   }
-  Sleep 2000
-}
- 
+exit

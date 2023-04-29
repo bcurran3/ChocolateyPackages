@@ -17,3 +17,6 @@ Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$ShortcutName.
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$ShortcutName.lnk" -targetPath "$toolsDir\$unzipDir\$exe" -WorkingDirectory "$toolsDir\$unzipDir"
  
 Remove-Item $toolsDir\*.zip -Force -EA SilentlyContinue | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# Replace ZIP with current version

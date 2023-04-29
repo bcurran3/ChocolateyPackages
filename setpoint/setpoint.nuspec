@@ -4,7 +4,7 @@
   <metadata>
     <id>setpoint</id>
     <title>Logitech SetPoint (Install)</title>
-    <version>6.70.55</version>
+    <version>6.90.66</version>
     <authors>Logitech</authors>
     <owners>bcurran3</owners>
     <summary>SetPoint lets you customize your mouse, keyboard, touchpad and number pad settings in Windows.</summary>
@@ -38,7 +38,7 @@ SetPoint lets you customize your mouse buttons, keyboard F-keys and hot-keys, co
     <mailingListUrl>http://support.logitech.com/en_us/software/setpoint#</mailingListUrl>
     <tags>logitech setpoint mouse utility util</tags>
     <copyright>© Logitech. All rights reserved.</copyright>
-    <licenseUrl>http://www.logitech.com/en-us/footer/terms-of-use</licenseUrl>
+    <licenseUrl>https://www.logitech.com/en-us/tos.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/setpoint/setpoint_icon.png</iconUrl>
   </metadata>

@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>0.0.8.4</version>
+    <version>0.0.9.0-pre</version>
     <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -11,10 +11,14 @@
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>***	
+    <description>
+---
+
 ### [choco://choco-cleaner](choco://choco-cleaner)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***	
+
+---
+
 
 ![Screenshot of Choco-Cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/bd713cc4/choco-cleaner/choco-cleaner_screenshot.png)	
 
@@ -38,7 +42,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 **Choco-Cleaner deletes:**
 
 * .log files that are not the most current one (NOT default)
-* .zip, .rar, .iso, and various archive files left over from packages that forgot to delete them post install
+* .zip and various archive files left over from packages that forgot to delete them post install
 * .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation
 * .msi, .msu, and .msp are Microsoft intall packages left over from packages that forgot to delete them post install
 * .ignore files that are created to not shim executables during package install but not needed after shim operations are finished (This may change in a future version of Chocolatey.)
@@ -57,7 +61,8 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools (NOT default)
 * orphaned shim files for programs that no longer exist
 
-**If you find Choco-Cleaner useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**</description>
+**If you find Choco-Cleaner useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+</description>
     <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
     <releaseNotes>**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**
 
@@ -79,6 +84,8 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 ### CHANGELOG:
+* 0.0.9.0 - now recursively deletes chocolatey and Nuget cache files from all user profiles
+* 0.0.8.5 - variable, spacing, and syntax cleanup by slycordinator, variables moved to top by Linux User
 * 0.0.8.4 - Fix exception when $FreedSpace is less than zero thanks to kborowinski - Thanks!
 * 0.0.8.3 - Fixed the reclaimed space calculation display thanks to salsifis - Thanks!
 * 0.0.8.2 - "Psycological Phix" - I hate seeing a negative number "reclaimed" after running Choco-Cleaner due to other programs writing to disk while CC is running; e.g. downloads. So until such time as I accurately track the space of deleted files... if the result is negative, it'll now display zero. Like I said, only a psychological fix.

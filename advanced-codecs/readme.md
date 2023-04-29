@@ -1,9 +1,9 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
-* DISCLAIMER: This package uses an AutoHotKey script to attempt automatic installation of the program. I have done my best to make this work for the majority, there are always a number of x-factors that can cause a 'hiccup.' Some events are timed and may timeout and thus fail on slower than expected systems. It is HIGHLY RECOMMENDED that you monitor the installation of this package to make sure it worked/installed correctly in your environment. There are situations such as upgrades and forced reinstalls that may not work and you will have to manually enter input to get the desired result. If you report an issue in GitHub and the program is in active development, I will try to enhance the AHK script and this package in the future.
-* Binary is included in the package. 
-* Shark007's Advanced Codecs is updated by the author on average of twice a week. I tend to update this package 2-4 times a month. If a newer version of Shark007's Advanced Codecs has been released, you might be prompted to download the newer version during installation, this is now watched for and handled by the AHK script.
+* Binary is included in the package. This is a forever package.
+* Shark007's 64bit ADVANCED Codecs is updated by the author on average of twice a week. I tend to update this package 2-4 times a month. 
 * I personally use and endorse this program.
+* As of package v17.0.0 this package installs the portable version of 64bit ADVANCED Codecs as installer releases have been discontinued. Files are installed to C:\Program Files\Shark007.
 
 ***
 

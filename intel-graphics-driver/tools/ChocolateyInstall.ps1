@@ -1,15 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-graphics-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64       = 'https://downloadmirror.intel.com/738230/gfx_win_101.3222_101.2111.exe'
+#$url64       = "https://downloadmirror.intel.com/751359/gfx_win_"+$env:ChocolateyPackageVersion+".exe"
+$url64       = "https://downloadmirror.intel.com/751359/gfx_win_101.3790_101.2114.exe"
 #                                                ^^^^^^ changes  ^^^^^^^^
-$checksum64  = '575D3C957BA0FD3847A73C77A63031448283272185AAA7AD5F73DF21D709ABA1'
+$checksum64  = 'C5A85A81DDC49DE07090C4DB044F07328AC6CC62FEBD56F205871331C147E27D'
 
-if (!(Get-IsWin10)){
-    Write-Warning "  ** This version is only for Windows 10 & 11."
-    throw
-   }
-
+Confirm-Win10
 if (!(Get-IsIntelVideo)){
     Write-Warning "  ** No Intel display adapter found."
     throw

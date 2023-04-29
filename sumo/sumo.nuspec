@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.15.2.524</version>
+    <version>5.17.4.536</version>
     <title>SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sumo</packageSourceUrl>
     <copyright>© KC Softwares - All rights reserved</copyright>
     <projectUrl>http://www.kcsoftwares.com/?sumo</projectUrl>
-    <bugTrackerUrl>http://www.kcsoftwares.com/bugs/view_all_bug_page.php</bugTrackerUrl>
+    <bugTrackerUrl>https://www.kcsoftwares.com/sumo/bugs.php</bugTrackerUrl>
     <mailingListUrl>https://www.kcsoftwares.com/forum/viewforum.php?f=11&amp;sid=840f0d6aa87b7e4459b8f88097a8cbdb</mailingListUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/sumo/sumo_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -51,9 +51,9 @@ SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the 
 ---
 
     </description>
-    <releaseNotes>https://www.kcsoftwares.com/sumo/bugs.php</releaseNotes>
+    <releaseNotes>https://www.kcsoftwares.com/bugs/changelog_page.php?project_id=11</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey" version="1.1.27.07" />
+      <dependency id="autohotkey" version="(1.1.27.07,2.0)" />
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
