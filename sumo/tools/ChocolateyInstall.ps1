@@ -1,10 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $packageName = 'sumo'
-$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ahkExe      = 'AutoHotKey'
-$ahkFile     = "$toolsDir\SUMo_Install.ahk"
 $url         = 'https://kcsoftwares.com/files/sumo_lite.exe'
-$checksum    = 'F1805EC769607B9C8F565614B92025930E87024ED048EA799275243A48267F1E'
+$checksum    = '45D7A9A605239532D77A9BBB37268AA2279653B97B53360C335B7EFCBBBA4E7F'
 
 $packageArgs = @{
     packageName    = $packageName
@@ -17,7 +14,6 @@ $packageArgs = @{
 }
 
 Start-CheckandStop "SUMo"
-#Start-Process $ahkExe $ahkFile
 Install-ChocolateyPackage @packageArgs
 Start-Sleep -s 10
 Start-CheckandStop "SUMo"
