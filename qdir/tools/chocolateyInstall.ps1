@@ -39,7 +39,7 @@ $langid=(Get-Culture).LCID
 # UKRAINIAN = 26
 
 $packageArgs = @{
-  packageName   = $packageName
+  packageName   = $env:ChocolateyPackageName 
   fileType      = 'EXE'
   file          = "$toolsDir\Q-Dir_Installer_UC.exe"
   file64        = "$toolsDir\Q-Dir_Installer_x64.exe"
