@@ -1,26 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'qdir'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$bits           = Get-ProcessorBits
-$url            = "$toolsDir\Q-Dir_Installer.zip"
-$url64          = "$toolsDir\Q-Dir_Installer_x64.zip"
 
 $packageArgs = @{
-  packageName    = $packageName
-  unzipLocation  = $toolsDir
-  fileType       = 'ZIP' 
-  url            = $url
-  url64          = $url64
+  packageName    = $env:ChocolateyPackageName 
+  Destination    = $toolsDir
+  FileFullPath   = "$toolsDir\Q-Dir_Installer.zip"
+  FileFullPath64 = "$toolsDir\Q-Dir_Installer_x64.zip"
 }
-
-Install-ChocolateyZipPackage @packageArgs
-
-if ($bits -eq 64)
-   {
-    $fileLocation = "$toolsDir\Q-Dir_Installer_x64.exe"
-   } else {
-    $fileLocation = "$toolsDir\Q-Dir_Installer_UC.exe"
-   }
+Get-ChocolateyUnzip @packageArgs
    
 $langid=(Get-Culture).LCID
 # Probably best to match .EnglishName to cover various countries with same language but different layout instead of culture ID
@@ -54,7 +41,8 @@ $langid=(Get-Culture).LCID
 $packageArgs = @{
   packageName   = $packageName
   fileType      = 'EXE'
-  file          = $fileLocation
+  file          = "$toolsDir\Q-Dir_Installer_UC.exe"
+  file64        = "$toolsDir\Q-Dir_Installer_x64.exe"
   silentArgs    = '/S langid=1'
   validExitCodes= @(0,1)
   softwareName  = 'Q-Dir'
@@ -64,6 +52,7 @@ Install-ChocolateyInstallPackage @packageArgs
 
 Install-BinFile -Name qdir -Path $env:ProgramFiles\Q-Dir\Q-Dir.exe
 Remove-Item "$toolsDir\q*.zip" | Out-Null
+Remove-Item "$toolsDir\q*.exe" | Out-Null
 
 # UPDATE INSTRUCTIONS:
 # Replace ZIPS with new versions
