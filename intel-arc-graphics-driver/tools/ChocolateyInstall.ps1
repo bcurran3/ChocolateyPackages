@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName = 'intel-arc-graphics-driver' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$IntelPackageNumber ="774229"
-$url64       = "https://downloadmirror.intel.com/$IntelPackageNumber/gfx_win_101.4255.exe"
-#                                                                            ^^^^^^^^ changes
-$checksum64  = 'A7E58100E583DC58A4EAF13C28A0221E3D80915BF90AEB3CB846386CD688C8F5'
+$IntelPackageNumber = "777403"
+$TodaysArray   = ($env:ChocolateyPackageVersion.split('.'))
+$TodaysVersion = $TodaysArray[2] + "." + $TodaysArray[3]
+$url64       = "https://downloadmirror.intel.com/$IntelPackageNumber/gfx_win_"+"$TodaysVersion"+".exe"
+$checksum64  = '6DD2026DB396393126FB352018442A7728D8D5A4DAF7DA29DB2B9F14D7A55D9E'
 
 Confirm-WinMinimumBuild 19042
 if (!(Get-IsIntelVideo)){
@@ -13,7 +13,7 @@ if (!(Get-IsIntelVideo)){
    }
 
 $packageArgs = @{
-  packageName    = $packageName
+  packageName    = $env:ChocolateyPackageName
   unzipLocation  = $toolsDir
   fileType       = 'EXE' 
   url64bit       = $url64
@@ -27,4 +27,4 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 # UPDATE INSTRUCTIONS:
-# To updtae this package update the IntelPackageNumber, program version, and checksum variables
+# To updtae this package update the IntelPackageNumber, and checksum variables
