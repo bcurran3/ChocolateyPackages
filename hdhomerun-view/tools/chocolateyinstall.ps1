@@ -1,10 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName    = 'hdhomerun-view'
 $url            = 'https://download.silicondust.com/hdhomerun/hdhomerun_windows.exe' 
-$checksum       = '7E035682B87218957238B68F3D80FE8E83B5730CCF90AF07921F5BACD3BA1FB3'
+$checksum       = '0F19D183921CFF3D7F7DCDF74D658EC6971D11C78DA08D40180CA2F83156D9DA'
 
 $packageArgs = @{
-  packageName   = $packageName
+  packageName   = $env:chocolateyPackageName
   fileType      = 'EXE'
   url           = $url
   validExitCodes= @(0, 3010, 1641)
@@ -15,3 +14,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs  
+
+# UPDATE INSTRUCTIONS:
+# Update checksum
