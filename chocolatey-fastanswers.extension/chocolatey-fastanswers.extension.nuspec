@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>chocolatey-fastanswers.extension</id>
-    <version>0.0.2.1</version>
+    <version>0.0.2.2</version>
     <title>Chocolatey Fast Answers Extension</title>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-fastanswers.extension</packageSourceUrl>
@@ -39,6 +39,7 @@ Screenshot testing all functions with simple test-package install script that do
     </description>
     <releaseNotes>
 ### CHANGE LOG:
+* 0.0.2.2 - Fixed Get-IsInDomain - thanks Victor Dark (V1CTOR)!
 * 0.0.2.1 - Added Get-IsWin11 and Get-IsWinServer2022
 * 0.0.2   - Added Get-IsAMDCPU, Get-IsARMCPU, Get-IsHyperV, Get-IsIntelCPU, Get-IsKVM, Get-IsMobile, Get-NuspecInfo, Get-IsWinServer2019, and Get-IsXen. Improved Get-IsVM, Get-IsWin7/8/80/81/10, Get-IsWinServer2016, and Get-IsVMware. Bug fixed in Get-IsWin8 and Get-IsWin81.
 * 0.0.1   - initial release
