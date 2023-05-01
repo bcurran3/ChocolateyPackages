@@ -1,6 +1,5 @@
 ﻿# https://shark007.net/files/ADVANCED_64bitCodecs.7z
 $ErrorActionPreference = 'Stop';
-$packageName  = 'advanced-codecs'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortcutName = 'Shark007''s 64bit ADVANCED Codecs.lnk'
 
@@ -11,7 +10,7 @@ if (Test-Path "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\AutoUpdate.
 }
 
 $packageArgs = @{
-  packageName    = $packageName
+  packageName    = $env:chocolateyPackageName
   Destination    = "$env:ProgramFiles\Shark007"
   FileFullPath64 = "$toolsDir\ADVANCED_64bitCodecs.7z"
 }
@@ -21,3 +20,6 @@ Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles
 Start-ChocolateyProcessAsAdmin -Statements "users" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\Settings64_portable.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\"
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Launcher64.exe" -RunAsAdmin
 Remove-Item "$toolsDir\ADVANCED_64bitCodecs.7z" | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# replace the .7z file
