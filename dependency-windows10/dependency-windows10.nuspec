@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>dependency-windows10</id>
+    <title>[RETIRED] Package Dependency on Windows 10</title>
+    <version>99.99.99.99</version>
+    <authors>Bill Curran</authors>
+    <owners>bcurran3</owners>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dependency-windows10</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <projectUrl>https://github.com/chocolatey/choco/wiki/CreatePackages</projectUrl>
+    <docsUrl>https://learn.microsoft.com/en-us/nuget/reference/nuspec#dependencies-element</docsUrl>
+    <copyright></copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/retired.png</iconUrl>
+    <tags>retired</tags>
+    <summary></summary>
+    <description>
+## This package has been retired.
+## It has been superceded by [chocolatey-os-dependency.extension](https://community.chocolatey.org/packages/chocolatey-os-dependency.extension)
+	</description>
+    <releaseNotes></releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
