@@ -1,6 +1,7 @@
 **BCURRAN3'S PACKAGE NOTES:**
 
 * I personally use and endorse this program.
+* During instalation of the drivers, you will temporarily loose connectivity.
 
 ***
 

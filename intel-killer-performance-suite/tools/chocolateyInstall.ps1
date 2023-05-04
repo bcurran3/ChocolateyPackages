@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-killer-performance-suite' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url64          = "https://downloadmirror.intel.com/772429/KillerPerformanceSuite_"+$env:ChocolateyPackageVersion+"_Win10-11x64.exe"
-#                                                   ^^^^^^ changes
-$checksum64     = 'AB26D282A770D469AA4E0FFEDE182861313597F85F0D0C6ED6C34EFA2CB851BE'
+$IntelPackageNumber = '778012'
+$url64          = "https://downloadmirror.intel.com/$IntelPackageNumber/KillerPerformanceSuite_"+$env:ChocolateyPackageVersion+"_Win10-11x64.exe"
+$checksum64     = '1A186F8B75389C35D09BC2431891BB7D67F97FBCAC82F82161B2E8237E9C33C2'
 
 Confirm-Win10
 
@@ -18,4 +18,8 @@ $packageArgs = @{
   checksumType64 = 'sha256'
 }
 
+Write-Warning "During instalation of the drivers, you will temporarily loose connectivity."
 Install-ChocolateyPackage @packageArgs
+
+# UPDATE INSTRUCTIONS:
+# Update the IntelPackageNumber and checksum64 variables
