@@ -14,7 +14,8 @@ Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$altshortcut
 Remove-Item "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -Force -ErrorAction SilentlyContinue
 Remove-Item "$ENV:ChocolateyInstall\bin\choco-cleaner.bat" -Force -ErrorAction SilentlyContinue
 Remove-Item "$scriptDir\choco-cleaner.*" -Force -ErrorAction SilentlyContinue | Out-Null
-if (!(Get-ChildItem -Path "$ENV:ChocolateyToolsLocation\BCURRAN3" | Measure-Object | %{$_.Count})) {
-    $ENV:Path.Replace("$ChocolateyToolsLocation\BCURRAN3","") | Out-Null
-    Remove-Item "$ENV:ChocolateyToolsLocation\BCURRAN3" | Out-Null
+$CTL=Get-ToolsLocation
+if (!(Get-ChildItem -Path "$CTL\BCURRAN3" | Measure-Object | %{$_.Count})) {
+    $ENV:Path.Replace("$CTL\BCURRAN3","") | Out-Null
+    Remove-Item "$CTL\BCURRAN3" | Out-Null
    }
