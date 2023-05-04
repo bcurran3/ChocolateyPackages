@@ -10,7 +10,8 @@ $altshortcutName = 'Chocolatey Cleaner.lnk'
 
 # Setup
 # New storage location moving forward for all my Chocolatey scripts
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$ENV:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
+$CTL=Get-ToolsLocation
+if (!(Test-Path "$CTL\BCURRAN3")) { New-Item -Path "$CTL" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Migration
 # Move files before v0.0.6 from old to new storage location
