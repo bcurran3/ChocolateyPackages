@@ -23,12 +23,12 @@
 
 Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation every Sunday at 11 PM in the background so you don't have to be bothered with it.
 
-**Choco-Cleaner** is completely configurable, just edit `C:\tools\BCURRAN3\choco-cleaner.config` and set true/false for any grouping of file types you want to delete or not. License and log files default to false. This has been mandated to me for passing moderation. Everything else listed below is deleted by default.
+**Choco-Cleaner** is completely configurable, just run **Choco-Cleaner -EditConfig** and read the comments. Most options are enabled by default.
 	
 **Choco-Cleaner deletes:**
 
 * .log files that are not the most current one (NOT default)
-* .zip, .rar, .iso, and various archive files left over from packages that forgot to delete them post install
+* .zip and various archive files left over from packages that forgot to delete them post install
 * .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation
 * .msi, .msu, and .msp are Microsoft intall packages left over from packages that forgot to delete them post install
 * .ignore files that are created to not shim executables during package install but not needed after shim operations are finished (This may change in a future version of Chocolatey.)
@@ -38,14 +38,16 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * .old files are Chocolatey files that have been replaced by newer versions (exe's and dll's mostly)
 * chocolatey.config.backup is a backup of your chocolatey.config file
 * _processed.txt - I have no idea what made this file or why it exists
-* lib-bad holds packages that failed to install and lib-bkp contains aborted packages (during updates?) 
-* archives and executables out of .nuspkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
+* lib-bad holds packages that failed to install and lib-bkp contains previous package versions during upgrades
+* lib-synced holds packages installed by the (licensed versions) choco cync feature (NOT default)
+* archives and executables out of .nupkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
 * \users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config)
 * files in cacheLocation if set in chocolatey.config
 * \users\username\AppData\Local\Nuget\Cache if Nuget client is installed and caching files there
 * \Windows\Temp\chocolatey 
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools (NOT default)
 * orphaned shim files for programs that no longer exist
+* orphaned package install snapshot files found in the .chocolatey folder
 
 ### INSTALL EXAMPLES:
 * **choco install choco-cleaner** - (default) installs **Choco-Cleaner** to run every Sunday at 11:00 PM
@@ -66,6 +68,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
+* 1.0 - now deletes unecessary files in the .chocolaty dir (default) and lib-synced (opt-in) v1.0 release, all goals achieved! (The crowd cheers... or is that the sound of crickets?)
 * 0.0.9.0 - now recursively deletes chocolatey and Nuget cache files from all user profiles, added more error reporting, changed log size from 1K to 4K, added -ViewLog option
 * 0.0.8.5 - variable, spacing, and syntax cleanup by slycordinator, variables moved to top by Linux User
 * 0.0.8.4 - Fix exception when $FreedSpace is less than zero thanks to kborowinski - Thanks!

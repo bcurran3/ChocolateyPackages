@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>0.0.9.0</version>
+    <version>1.0-pre</version>
     <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -37,7 +37,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation every Sunday at 11 PM in the background so you don't have to be bothered with it.
 
-**Choco-Cleaner** is completely configurable, just edit \ProgramData\chocolatey\bin\Choco-Cleaner.xml and set true/false for any grouping of file types you want to delete or not. License and log files default to false. This has been mandated to me by Chocolatey for passing moderation. Everything else listed below is deleted by default.
+**Choco-Cleaner** is completely configurable, just run **Choco-Cleaner -EditConfig** and read the comments. Most options are enabled by default.
 	
 **Choco-Cleaner deletes:**
 
@@ -52,7 +52,8 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * .old files are Chocolatey files that have been replaced by newer versions (exe's and dll's mostly)
 * chocolatey.config.backup is a backup of your chocolatey.config file
 * _processed.txt - I have no idea what made this file or why it exists
-* lib-bad holds packages that failed to install and lib-bkp contains aborted packages (during updates?) 
+* lib-bad holds packages that failed to install and lib-bkp contains previous package versions during upgrades
+* lib-synced holds packages installed by the (licensed versions) choco cync feature (NOT default)
 * archives and executables out of .nupkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
 * \users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config)
 * files in cacheLocation if set in chocolatey.config
@@ -60,6 +61,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * \Windows\Temp\chocolatey 
 * license.txt and verification.txt files are included when packages include binaries, you can read them on the package web page, programname.license.txt files are license files for Chocolatey default tools (NOT default)
 * orphaned shim files for programs that no longer exist
+* orphaned package install snapshot files found in the .chocolatey folder
 
 **If you find Choco-Cleaner useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
     </description>
@@ -88,6 +90,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 If you are using [choco-upgrade-all-at](https://community.chocolatey.org/packages/choco-upgrade-all-at) or [choco-upgrade-all-at-startup](https://community.chocolatey.org/packages/choco-upgrade-all-at-startup), run choco-upgrade-all -EditConfig and set **choco-cleaner** as your PostProcessScript.
 
 ### CHANGELOG:
+* 1.0 - now deletes unecessary files in the .chocolaty dir (default) and lib-synced (opt-in) v1.0 release, all goals achieved! (The crowd cheers... or is that the sound of crickets?)
 * 0.0.9.0 - now recursively deletes chocolatey and Nuget cache files from all user profiles, added more error reporting, changed log size from 1K to 4K, added -ViewLog option
 * 0.0.8.5 - variable, spacing, and syntax cleanup by slycordinator, variables moved to top by Linux User
 * 0.0.8.4 - Fix exception when $FreedSpace is less than zero thanks to kborowinski - Thanks!
@@ -109,8 +112,8 @@ If you are using [choco-upgrade-all-at](https://community.chocolatey.org/package
 * 0.0.1 - Initial release. Did not pass Chocolatey moderation due to mandated changes of default parameters. Only "secretly" available.
 
 ### ROADMAP:
-* Clean up C:\ProgramData\chocolatey\.chocolatey
-* Clean up C:\ProgramData\chocolatey\lib-synced (licensed versions)</releaseNotes>
+* Nothing planned. If you have a suggestion, click https://github.com/bcurran3/ChocolateyPackages/issues
+    </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>

@@ -36,9 +36,27 @@ Function Update-Config{
 $DeleteNuGetCache = $UpdatedConfig.Settings.Preferences.DeleteNuGetCache
 if ($DeleteNuGetCache -eq $null)
    {
-    Write-Host Adding DeleteNuGetCache support to $ScriptConfig. -Foreground Magenta
+    Write-Host "  ** Adding DeleteNuGetCache support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteNuGetCache", $null)
     $NewStuff.InnerText=("true") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+$DeleteDotChocolatey = $UpdatedConfig.Settings.Preferences.DeleteDotChocolatey
+if ($DeleteDotChocolatey -eq $null)
+   {
+    Write-Host "  ** Adding DeleteDotChocolatey support to $ScriptConfig." -Foreground Magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteDotChocolatey", $null)
+    $NewStuff.InnerText=("true") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
+$DeleteLibSynced = $UpdatedConfig.Settings.Preferences.DeleteLibSynced
+if ($DeleteLibSynced -eq $null)
+   {
+    Write-Host "  ** Adding DeleteLibSynced support to $ScriptConfig." -Foreground Magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteLibSynced", $null)
+    $NewStuff.InnerText=("false") 
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }

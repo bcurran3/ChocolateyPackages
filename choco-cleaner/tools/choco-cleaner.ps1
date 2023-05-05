@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Cleaner.ps1 v0.0.9.0 (05/03/2023) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v1.0-pre (05/04/2023) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -89,6 +89,9 @@ $DeleteCache = $ConfigFile.Settings.Preferences.DeleteCache
 $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 # new configuration items since implementation of XML config in v0.0.3
 $DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
+# new configuration items implemented in v1.0
+$DeleteDotChocolatey = $ConfigFile.Settings.Preferences.DeleteDotChocolatey
+$DeleteLibSynced = $ConfigFile.Settings.Preferences.DeleteLibSynced
 
 $PermissionErrors=$False
 
@@ -275,14 +278,14 @@ if ($DeleteLibBad -eq "True"){
 		$LibBadFiles=$GotLibBadFiles.count
 		if ($LibBadFiles -ge 1){
 			Write-Host "  **  Deleting $LibBadFiles unnecessary Chocolatey lib-bad package files..." -Foreground Green
+		    Remove-Item -Path $ENV:ChocolateyInstall\lib-bad -Recurse -Force -ErrorAction SilentlyContinue
+	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
+    	       $PermissionErrors=$True
+	           add2log "PROBLEM deleting unnecessary Chocolatey lib-bad files due to permissions."
+		    }
 		} else {
 			Write-Host "  **  NO unnecessary Chocolatey lib-bad package files to delete." -Foreground Green
 		}
-		Remove-Item -Path $ENV:ChocolateyInstall\lib-bad -Recurse -Force -ErrorAction SilentlyContinue
-	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
-    	   $PermissionErrors=$True
-	       add2log "PROBLEM deleting unnecessary Chocolatey lib-bad files due to permissions."
-		   }
 	}
 }
 
@@ -297,36 +300,57 @@ if ($DeleteLibBkp -eq "True"){
 		$LibBkpFiles=$GotLibBkpFiles.count
 		if ($LibBkpFiles -ge 1){
 			Write-Host "  **  Deleting $LibBkpFiles unnecessary Chocolatey lib-bkp package files..." -Foreground Green
+		    Remove-Item -Path $ENV:ChocolateyInstall\lib-bkp -Recurse -Force -ErrorAction SilentlyContinue
+	       if ($error[0].categoryinfo.category -match "PermissionDenied") {
+    	      $PermissionErrors=$True
+	          add2log "PROBLEM deleting unnecessary Chocolatey lib-bkp files due to permissions."
+		    }
 		} else {
 			Write-Host "  **  NO unnecessary Chocolatey lib-bkp package files to delete." -Foreground Green
 		}
-		Remove-Item -Path $ENV:ChocolateyInstall\lib-bkp -Recurse -Force -ErrorAction SilentlyContinue
-	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
-    	   $PermissionErrors=$True
-	       add2log "PROBLEM deleting unnecessary Chocolatey lib-bkp files due to permissions."
-		   }
 	}
 }
 
-# FUTURE (placeholder)
-#if ($DeleteLibSynced -eq "True"){
-#	Write-Host "  **  Deleting unnecessary Chocolatey lib-synced package files..." -Foreground Green
-#	Remove-Item -Path $ENV:ChocolateyInstall\lib-synced -Recurse -ErrorAction SilentlyContinue
-#   if ($error[0].categoryinfo.category -match "PermissionDenied") {
-#      $PermissionErrors=$True
-#	   add2log "PROBLEM deleting LibSynced files due to permissions."
-#	  }
-#}
+if ($DeleteLibSynced -eq "True"){
+	if (Test-Path $ENV:ChocolateyInstall\lib-synced){
+		$GotLibSyncedFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-synced | ?{ $_.PSIsContainer }
+        if ($error[0].categoryinfo.category -match "PermissionDenied") {
+            $PermissionErrors=$True
+            $ErrorPath=$error[0].categoryinfo.targetname
+	        add2log "PROBLEM reading $ErrorPath due to permissions."
+	    }
+		$LibSyncedFiles=$GotLibSyncedFiles.count
+		if ($LibSyncedFiles -ge 1){
+			Write-Host "  **  Deleting $LibSyncedFiles unnecessary Chocolatey lib-synced package files..." -Foreground Green
+		    Remove-Item -Path $ENV:ChocolateyInstall\lib-synced -Recurse -Force -ErrorAction SilentlyContinue
+	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
+    	       $PermissionErrors=$True
+	           add2log "PROBLEM deleting unnecessary Chocolatey lib-synced files due to permissions."
+		    }
+		} else {
+			Write-Host "  **  NO unnecessary Chocolatey lib-synced package files to delete." -Foreground Green
+		}
+	}
+}
 
-# FUTURE (placeholder)
-#if ($DeleteDotChocolatey -eq "True"){
-#	Write-Host "  **  Deleting unnecessary Chocolatey .chocolatey files..." -Foreground Green
-#	Remove-Item -Path $ENV:ChocolateyInstall\.chocolatey -Recurse -ErrorAction SilentlyContinue
-#   if ($error[0].categoryinfo.category -match "PermissionDenied") {
-# 		$PermissionErrors=$True
-#   	add2log "PROBLEM deleting .chocolatey files due to permissions."
-#      }
-#}
+if ($DeleteDotChocolatey -eq "True"){
+    $InstalledPackages = & choco list -lo -r -y
+    $InstalledPackages=$InstalledPackages.replace("|",".")
+    $DotChocolateyDirs =  Get-ChildItem -Path $env:ChocolateyInstall\.chocolatey\* -Directory -Name
+    $delta = $DotChocolateyDirs | Where {$InstalledPackages -NotContains $_}
+    $DeltaCount=$delta.count
+    if ($delta.count -ge 1){
+	   Write-Host "  **  Deleting $DeltaCount unnecessary Chocolatey .chocolatey install snapshot files..." -Foreground Green
+       Set-Location -Path "$env:ChocolateyInstall\.chocolatey"
+       Remove-Item $delta -Recurse -Force
+       if ($error[0].categoryinfo.category -match "PermissionDenied") {
+ 	      $PermissionErrors=$True
+   	      add2log "PROBLEM deleting .chocolatey install snapshot files due to permissions."
+        }
+	} else {
+	   Write-Host "  **  NO unnecessary Chocolatey .chocolatey install snapshot files to delete." -Foreground Green
+	}
+}
 
 if ($DeleteFileLogs -eq "True"){
 	$GotFileLogs=Get-ChildItem -Path $ENV:ChocolateyInstall -Recurse -Include $file_log_types -ErrorAction SilentlyContinue
@@ -472,7 +496,7 @@ if ($BadShimCount){
 	Write-Host "  **  NO unnecessary Chocolatey orphaned shim files to delete." -Foreground Green
 }
 
-if ($PermissionErrors) {Write-Host "  **  Some files not deleted due to permission problems.`n" -Foreground Yellow}
+if ($PermissionErrors) {Write-Host "  **  Some files not deleted due to permission problems." -Foreground Yellow}
 
 if ($ENV:ChocolateyInstall -Match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:"){
 	$FreeAfter = Get-PSDrive C | ForEach-Object {$_.Free}
@@ -492,7 +516,4 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColo
 Start-Sleep -s 10
 
 # TDL
-# Accurately track and report reclaimed space per bullet point and total
-# More detailed logging
-# Clean C:\ProgramData\chocolatey\lib-synced
-# Clean C:\ProgramData\chocolatey\.chocolatey
+# Maybe get size of and track all files before deleting for more accurate reporting - priority = below low
