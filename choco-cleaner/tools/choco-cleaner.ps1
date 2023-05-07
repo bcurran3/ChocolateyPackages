@@ -654,11 +654,11 @@ if ($PermissionErrors) {Write-Host "  ** Some files not deleted due to permissio
 $Reclaimed=$Reclaimed/1KB
 $Reclaimed = $Reclaimed.ToString('N0')
 Write-Host "Choco-Cleaner finished deleting $DeletedFiles unnecessary Chocolatey files and reclaimed $Reclaimed KB!`n" -Foreground Magenta
-add2log "$ENV:SystemDrive free space BEFORE: $TotalFreeSpaceBefore"
+add2log "DEBUG: $ENV:SystemDrive free space BEFORE: $TotalFreeSpaceBefore"
 $TotalFreeSpaceAfter=(Get-PSDrive ($ENV:SystemDrive).replace(":","")).free
-add2log "$ENV:SystemDrive free space AFTER: $TotalFreeSpaceAfter"
+add2log "DEBUG: $ENV:SystemDrive free space AFTER: $TotalFreeSpaceAfter"
 $TotalFreeSpaceDiff=$TotalFreeSpaceBefore - $TotalFreeSpaceAfter
-add2log "$ENV:SystemDrive free space DIFF: $TotalFreeSpaceDiff"
+add2log "DEBUG: $ENV:SystemDrive free space DIFF: $TotalFreeSpaceDiff"
 Write-Output "$(Get-Date) Choco-Cleaner FINISHED and reclaimed $Reclaimed KB!" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 Write-Host "Found Choco-Cleaner.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
