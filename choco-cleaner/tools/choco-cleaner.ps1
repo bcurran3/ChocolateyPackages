@@ -419,7 +419,7 @@ if ($DeleteDotChocolatey -eq "True"){
     $delta = $DotChocolateyDirs | Where-Object {$InstalledPackages -NotContains $_}
 	$DotChocolateyFiles2Delete=$delta | foreach-object $_ {Get-ChildItem -Path $env:ChocolateyInstall\.chocolatey\$_}
     $DeltaCount=$DotChocolateyFiles2Delete.count
-    if ($delta.count -ge 1){
+    if ($DeltaCount -ge 1){
 	   Write-Host "  ** Deleting $DeltaCount unnecessary Chocolatey .chocolatey install snapshot files..." -Foreground Green
 	   $DotChocolateyFiles2Delete | ForEach-Object {$deltaSize=$deltaSize + $_.length}
        Remove-Item $DotChocolateyFiles2Delete.fullname -Recurse -Force
