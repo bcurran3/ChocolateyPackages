@@ -68,7 +68,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
-* 1.0 - now deletes unecessary files in the .chocolaty dir (default) and lib-synced (opt-in) v1.0 release, all goals achieved! (The crowd cheers... or is that the sound of crickets?)
+* 1.0 - v1.0 full feature release, all goals achieved! (The crowd cheers... or is that just the sound of loud crickets?), now deletes unecessary files in the .chocolaty dir (default) and lib-synced (opt-in), legend in config file got a much needed re-write (You won't see it/get it on upgrades.)
 * 0.0.9.0 - now recursively deletes chocolatey and Nuget cache files from all user profiles, added more error reporting, changed log size from 1K to 4K, added -ViewLog option
 * 0.0.8.5 - variable, spacing, and syntax cleanup by slycordinator, variables moved to top by Linux User
 * 0.0.8.4 - Fix exception when $FreedSpace is less than zero thanks to kborowinski - Thanks!

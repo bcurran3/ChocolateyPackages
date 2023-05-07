@@ -4,12 +4,12 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Cleaner.ps1 v1.0-pre (05/04/2023) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v1.0-pre2 (05/06/2023) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
+if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install."; throw}
 
 # Easily edit the config file
 if(Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
@@ -30,18 +30,19 @@ if ($args -eq "-ViewLog"){
 	return
 }
 
-# Minor logging
+# Start logging
 if (Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"){
 	$LogSize=(Get-ChildItem -Path "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log").length
-	if ($LogSize -gt 4096){
+	if ($LogSize -gt 51200){
 		Remove-Item "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"  -ErrorAction SilentlyContinue
 		if ($error[0].categoryinfo.category -match "PermissionDenied") {$PermissionErrors=$True}
 		Write-Output "$(Get-Date) Choco-Cleaner Deleted log file" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 	}
 }
+Write-Output "----------------------------------------------------------------------" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 Write-Output "$(Get-Date) Choco-Cleaner STARTED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 
-# All 7Zip supported formats plus EXE, MSU, MSP, APPX, APPXBUNDLE, IMG - What else is needed?
+# All 7Zip supported formats plus EXE, MSU, MSP, APPX, APPXBUNDLE, IMG - Is anything else needed?
 $BinaryExtensions=@(
 	"*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7z","*.xz",
 	"*.bzip2","*.gzip","*.tar","*.zip","*.wim","*.ar","*.arj","*.cab","*.chm",
@@ -90,17 +91,29 @@ $DeleteLicenseFiles = $ConfigFile.Settings.Preferences.DeleteLicenseFiles
 # new configuration items since implementation of XML config in v0.0.3
 $DeleteNuGetCache = $ConfigFile.Settings.Preferences.DeleteNuGetCache
 # new configuration items implemented in v1.0
+$DeleteBadShims = $ConfigFile.Settings.Preferences.DeleteBadShims
 $DeleteDotChocolatey = $ConfigFile.Settings.Preferences.DeleteDotChocolatey
 $DeleteLibSynced = $ConfigFile.Settings.Preferences.DeleteLibSynced
 
+$global:CCExitCode=0
+$DeletedFiles=0
 $PermissionErrors=$False
+$Reclaimed=0
 
 # add to log file
-function add2log {
+function Add2Log {
     Param ( [string]$comment )
-	
-    Write-Host "  **  $comment" -Foreground Red
-    Write-Output "$(Get-Date) Choco-Cleaner $comment" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
+
+    Write-Output "$(Get-Date) [INFO ] $comment" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
+}
+
+# add to log file and display error
+function Add2LogError {
+    Param ( [string]$comment )
+
+    Write-Host "  ** [ERROR] $comment" -Foreground Red
+    Write-Output "$(Get-Date) [ERROR] $comment" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
+	$global:CCExitCode=1
 }
 
 # run shim and report if the target program exists or not
@@ -118,402 +131,537 @@ function Test-ShimTargetExists {
 
 # Import chocolatey.config and get cacheLocation if set
 [xml]$ChocoConfigFile = Get-Content "$ENV:ChocolateyInstall\config\chocolatey.config"
-$cacheLocation = $ChocoConfigFile.chocolatey.config | % { $_.add } | ? { $_.key -eq 'cacheLocation' } | Select -Expand value
+$cacheLocation = $ChocoConfigFile.chocolatey.config | ForEach-Object { $_.add } | Where-Object { $_.key -eq 'cacheLocation' } | Select-Object -Expand value
 
-if ($ENV:ChocolateyInstall -match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:"){
-	$FreeBefore = Get-PSDrive C | foreach-object {$_.Free}
-}
 Write-Host "Choco-Cleaner Summary:" -Foreground Magenta
+$TotalFreeSpaceBefore=(Get-PSDrive ($ENV:SystemDrive).replace(":","")).free
 
 if (Test-Path $ENV:ChocolateyInstall\bin\_processed.txt){
-	Write-Host "  **  Deleting unnecessary Chocolatey _processed.txt (WTF?) file..." -Foreground Green
+	Write-Host "  ** Deleting unnecessary Chocolatey _processed.txt (WTF?) file..." -Foreground Green
 	Remove-Item -Path $ENV:ChocolateyInstall\bin\_processed.txt -ErrorAction SilentlyContinue
 	if ($error[0].categoryinfo.category -match "PermissionDenied") {
 		$PermissionErrors=$True
-		add2log "_processed.txt problems deleting due to permissions."
-		}
+		Add2LogError "deleting unnecessary Chocolatey _processed.txt file due to permissions."
+	} else {
+	    $DeletedFiles=$DeletedFiles + 1
+	}
 }
 
+add2log "CONFIG: DeleteIgnoreFiles is set to $DeleteIgnoreFiles"
 if ($DeleteIgnoreFiles -eq "True"){
 	$GotIgnoreFiles=Get-ChildItem -Path $ENV:ChocolateyInstall -Recurse -Include *.ignore -ErrorAction SilentlyContinue
 	if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
 		$ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
-		}
+	    Add2LogError "reading $ErrorPath due to permissions."
+	}
 	$IgnoreFiles=$GotIgnoreFiles.count
 	if ($IgnoreFiles -ge 1){
-		Write-Host "  **  Deleting $IgnoreFiles unnecessary Chocolatey .ignore files..." -Foreground Green
+		Write-Host "  ** Deleting $IgnoreFiles unnecessary Chocolatey .ignore files..." -Foreground Green
+		$GotIgnoreFiles.fullname | ForEach-Object {$IgnoreFilesSize=$IgnoreFilesSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall -Recurse -Include *.ignore -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey .ignore files due to permissions."
-	    }
+	    	Add2LogError "deleting unnecessary Chocolatey .ignore files due to permissions."
+	    } else {
+			$GotIgnoreFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $IgnoreFilesSize bytes"
+			$DeletedFiles=$DeletedFiles + $IgnoreFiles
+			$Reclaimed=$Reclaimed + $IgnoreFilesSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey .ignore files to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey .ignore files to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteOldChoco is set to $DeleteOldChoco"
 if ($DeleteOldChoco -eq "True"){
 	$GotOldChoco=Get-ChildItem -Path $ENV:ChocolateyInstall -Recurse -Include *.old -ErrorAction SilentlyContinue
 	if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
 		$ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 		}
 	$OldChoco=$GotOldChoco.count
 	if ($OldChoco -ge 1){
-		Write-Host "  **  Deleting $OldChoco unnecessary Chocolatey .old files..." -Foreground Green
+		Write-Host "  ** Deleting $OldChoco unnecessary Chocolatey .old files..." -Foreground Green
+		$GotOldChoco.fullname | ForEach-Object {$GotOldChocoFilesSize=$GotOldChocoSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall -Recurse -Include *.old -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting Chocolatey .old files due to permissions."
-        }
+	    	Add2LogError "deleting Chocolatey .old files due to permissions."
+	    } else {
+			$GotOldChoco.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $GotOldChocoSize bytes"
+			$DeletedFiles=$DeletedFiles + $OldChoco
+			$Reclaimed=$Reclaimed + $GotOldChocoSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey .old files to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey .old files to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteCache is set to $DeleteCache"
 if ($DeleteCache -eq "True"){
 	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
 	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
 		$dir = $userdirs.fullname[$Count]
 		$dir = "$dir" + "\appdata\local\temp\chocolatey"
-    	$GotCacheFiles=ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
+    	$GotCacheFiles=Get-ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
 	    $CacheFiles=$GotCacheFiles.count
 	    if ($CacheFiles -ge 1){
-		    Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($dir)..." -Foreground Green
+		    Write-Host "  ** Deleting $CacheFiles unnecessary Chocolatey cache files ($dir)..." -Foreground Green
+		    $GotCacheFiles.fullname | ForEach-Object {$GotCacheFilesSize=$GotCacheFilesSize + $_.length}
 		    Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
 	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		    $PermissionErrors=$True
-	    	    add2log "PROBLEM deleting unnecessary Chocolatey cache files ($dir) due to permissions."
-		    }
+	    	    Add2LogError "deleting unnecessary Chocolatey cache files ($dir) due to permissions."
 	    } else {
-		  Write-Host "  **  NO unnecessary Chocolatey cache files ($dir) to delete." -Foreground Green
+			$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $GotCacheFilesSize bytes"
+			$DeletedFiles=$DeletedFiles + $CacheFiles
+			$Reclaimed=$Reclaimed + $GotCacheFilesSize
+		}
+	    } else {
+		  Write-Host "  ** NO unnecessary Chocolatey cache files ($dir) to delete." -Foreground Green
 	    }
     }
 
-	$GotCacheFiles=ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse -ErrorAction SilentlyContinue
+	$GotCacheFiles=Get-ChildItem -Path $ENV:SystemRoot\temp\chocolatey -Recurse -ErrorAction SilentlyContinue
 	if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
 		$ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 		}
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
-		Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey)..." -Foreground Green
+		Write-Host "  ** Deleting $CacheFiles unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey)..." -Foreground Green
+	    $GotCacheFiles.fullname | ForEach-Object {$GotCacheFilesSize=$GotCacheFilesSize + $_.length}
 		Remove-Item -Path $ENV:SystemRoot\temp\chocolatey -Recurse -Force -ErrorAction SilentlyContinue
         if ($error[0].categoryinfo.category -match "PermissionDenied") {
    		    $PermissionErrors=$True
-    	    add2log "PROBLEM deleting unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey) due to permissions."
-	    }
+    	    Add2LogError "deleting unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey) due to permissions."
+	    } else {
+			$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $GotCacheFilesSize bytes"
+			$DeletedFiles=$DeletedFiles + $CacheFiles
+			$Reclaimed=$Reclaimed + $GotCacheFilesSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey) to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey cache files ($ENV:SystemRoot\temp\chocolatey) to delete." -Foreground Green
 	}
 
 	if ($cacheLocation){
 		if (Test-Path $cacheLocation) {
-			$GotCacheFiles=ChildItem -Path $cacheLocation -Recurse -ErrorAction SilentlyContinue
+			$GotCacheFiles=Get-ChildItem -Path $cacheLocation -Recurse -ErrorAction SilentlyContinue
 	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
                 $PermissionErrors=$True
 		        $ErrorPath=$error[0].categoryinfo.targetname
-	            add2log "PROBLEM reading $ErrorPath due to permissions."
+	            Add2LogError "reading $ErrorPath due to permissions."
 		    }
 			$CacheFiles=$GotCacheFiles.count
 			if ($CacheFiles -ge 1){
-				Write-Host "  **  Deleting $CacheFiles unnecessary Chocolatey cache files ($cacheLocation)..." -Foreground Green
+				Write-Host "  ** Deleting $CacheFiles unnecessary Chocolatey cache files ($cacheLocation)..." -Foreground Green
+	            $GotCacheFiles.fullname | ForEach-Object {$GotCacheFilesSize=$GotCacheFilesSize + $_.length}
 				Remove-Item -Path $cacheLocation -Recurse -Force -ErrorAction SilentlyContinue
 	            if ($error[0].categoryinfo.category -match "PermissionDenied") {
       		        $PermissionErrors=$True
-	    	        add2log "PROBLEM deleting unnecessary Chocolatey cache files ($cacheLocation) due to permissions."
-		            }
+	    	        Add2LogError "deleting unnecessary Chocolatey cache files ($cacheLocation) due to permissions."
+	            } else {
+			       $GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			       add2log "FREED: $GotCacheFilesSize bytes"
+			       $DeletedFiles=$DeletedFiles + $CacheFiles
+			       $Reclaimed=$Reclaimed + $GotCacheFilesSize
+		        }
 			} else {
-				Write-Host "  **  NO unnecessary Chocolatey cache files ($cacheLocation) to delete." -Foreground Green
+				Write-Host "  ** NO unnecessary Chocolatey cache files ($cacheLocation) to delete." -Foreground Green
 			}
 		}
 	}
 }
 
+add2log "CONFIG: DeleteNuGetCache is set to $DeleteNuGetCache"
 if ($DeleteNuGetCache -eq "True"){
 	$UserDirs=Get-ChildItem -Path C:\Users -Directory -Force -ErrorAction SilentlyContinue | Select-Object FullName
 	for ($Count = 0; $Count -lt $UserDirs.FullName.Count; $Count++){
 		$dir = $userdirs.fullname[$Count]
 		$dir = "$dir" + "\appdata\Local\Nuget\Cache"
-		$GotNuGetCache=ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
+		$GotNuGetCache=Get-ChildItem -Path $dir -Recurse -ErrorAction SilentlyContinue
 		$NuGetCache=$GotNuGetCache.count
 		if ($NuGetCache -ge 1){
-			Write-Host "  **  Deleting $NuGetCache unnecessary Nuget cache files ($dir)..." -Foreground Green
+			Write-Host "  ** Deleting $NuGetCache unnecessary Nuget cache files ($dir)..." -Foreground Green
+	        $GotNuGetCache.fullname | ForEach-Object {$GotNuGetCacheSize=$GotNuGetCacheSize + $_.length}
 		    Remove-Item $dir -Recurse -Force -ErrorAction SilentlyContinue
 	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		    $PermissionErrors=$True
-	    	    add2log "PROBLEM deleting unnecessary Nuget cache files ($dir) due to permissions."
-		        }
+	    	    Add2LogError "deleting unnecessary Nuget cache files ($dir) due to permissions."
+	        } else {
+			    $GotNuGetCache.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			    add2log "FREED: $GotNuGetCacheSize bytes"
+			    $DeletedFiles=$DeletedFiles + $NuGetCache
+			    $Reclaimed=$Reclaimed + $GotNuGetCacheSize
+		    }
 		} else {
-			Write-Host "  **  NO unnecessary Nuget cache files ($dir) to delete." -Foreground Green
+			Write-Host "  ** NO unnecessary Nuget cache files ($dir) to delete." -Foreground Green
 		}
 	}
 }
 
+add2log "CONFIG: DeleteConfigBackupFile is set to $DeleteConfigBackupFile"
 if ($DeleteConfigBackupFile -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\config\chocolatey.config.backup){
-		Write-Host "  **  Deleting unnecessary Chocolatey config backup file..." -Foreground Green
+		Write-Host "  ** Deleting unnecessary Chocolatey config backup file..." -Foreground Green
 		Remove-Item -Path $ENV:ChocolateyInstall\config\chocolatey.config.backup -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     	   $PermissionErrors=$True
-	       add2log "PROBLEM deleting unnecessary Chocolatey config backup file due to permissions."
-		   }
+	       Add2LogError "deleting unnecessary Chocolatey config backup file due to permissions."
+	    } else {
+		    Add2Log "DELETED $ENV:ChocolateyInstall\config\chocolatey.config.backup"
+			$DeletedFiles=$DeletedFiles + 1
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey config backup file to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey config backup file to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteLibBad is set to $DeleteLibBad"
 if ($DeleteLibBad -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\lib-bad){
-		$GotLibBadFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bad | ?{ $_.PSIsContainer }
+		$GotLibBadFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bad -Recurse
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
             $PermissionErrors=$True
 		    $ErrorPath=$error[0].categoryinfo.targetname
-	        add2log "PROBLEM reading $ErrorPath due to permissions."
+	        Add2LogError "reading $ErrorPath due to permissions."
 		}
 		$LibBadFiles=$GotLibBadFiles.count
 		if ($LibBadFiles -ge 1){
-			Write-Host "  **  Deleting $LibBadFiles unnecessary Chocolatey lib-bad package files..." -Foreground Green
-		    Remove-Item -Path $ENV:ChocolateyInstall\lib-bad -Recurse -Force -ErrorAction SilentlyContinue
+			Write-Host "  ** Deleting $LibBadFiles unnecessary Chocolatey lib-bad package files..." -Foreground Green
+	        $GotLibBadFiles | ForEach-Object {$GotLibBadFilesSize=$GotLibBadFilesSize + $_.length}
+		    Remove-Item -Path $GotLibBadFiles.fullname -Recurse -Force -ErrorAction SilentlyContinue
 	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
     	       $PermissionErrors=$True
-	           add2log "PROBLEM deleting unnecessary Chocolatey lib-bad files due to permissions."
+	           Add2LogError "deleting unnecessary Chocolatey lib-bad files due to permissions."
+	        } else {
+			    $GotLibBadFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			    add2log "FREED: $GotLibBadFilesSize bytes"
+			    $DeletedFiles=$DeletedFiles + $LibBadFiles
+			    $Reclaimed=$Reclaimed + $GotLibBadFilesSize
 		    }
 		} else {
-			Write-Host "  **  NO unnecessary Chocolatey lib-bad package files to delete." -Foreground Green
+			Write-Host "  ** NO unnecessary Chocolatey lib-bad package files to delete." -Foreground Green
 		}
 	}
 }
 
+add2log "CONFIG: DeleteLibBkp is set to $DeleteLibBkp"
 if ($DeleteLibBkp -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\lib-bkp){
-		$GotLibBkpFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bkp | ?{ $_.PSIsContainer }
+		$GotLibBkpFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-bkp -Recurse
         if ($error[0].categoryinfo.category -match "PermissionDenied") {
             $PermissionErrors=$True
             $ErrorPath=$error[0].categoryinfo.targetname
-	        add2log "PROBLEM reading $ErrorPath due to permissions."
+	        Add2LogError "reading $ErrorPath due to permissions."
 	    }
 		$LibBkpFiles=$GotLibBkpFiles.count
 		if ($LibBkpFiles -ge 1){
-			Write-Host "  **  Deleting $LibBkpFiles unnecessary Chocolatey lib-bkp package files..." -Foreground Green
-		    Remove-Item -Path $ENV:ChocolateyInstall\lib-bkp -Recurse -Force -ErrorAction SilentlyContinue
-	       if ($error[0].categoryinfo.category -match "PermissionDenied") {
-    	      $PermissionErrors=$True
-	          add2log "PROBLEM deleting unnecessary Chocolatey lib-bkp files due to permissions."
+			Write-Host "  ** Deleting $LibBkpFiles unnecessary Chocolatey lib-bkp package files..." -Foreground Green
+	        $GotLibBkpFiles | ForEach-Object {$GotLibBkpFilesSize=$GotLibBkpFilesSize + $_.length}
+		    Remove-Item -Path $GotLibBkpFiles.fullname -Recurse -Force -ErrorAction SilentlyContinue
+	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
+    	       $PermissionErrors=$True
+	           Add2LogError "deleting unnecessary Chocolatey lib-bkp files due to permissions."
+	        } else {
+			    $GotLibBkpFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			    add2log "FREED: $GotLibBkpFilesSize bytes"
+			    $DeletedFiles=$DeletedFiles + $LibBkpFiles
+			    $Reclaimed=$Reclaimed + $GotLibBkpFilesSize
 		    }
 		} else {
-			Write-Host "  **  NO unnecessary Chocolatey lib-bkp package files to delete." -Foreground Green
+			Write-Host "  ** NO unnecessary Chocolatey lib-bkp package files to delete." -Foreground Green
 		}
 	}
 }
 
+add2log "CONFIG: DeleteLibSynced is set to $DeleteLibSynced"
 if ($DeleteLibSynced -eq "True"){
 	if (Test-Path $ENV:ChocolateyInstall\lib-synced){
-		$GotLibSyncedFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-synced | ?{ $_.PSIsContainer }
+		$GotLibSyncedFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib-synced -Recurse
         if ($error[0].categoryinfo.category -match "PermissionDenied") {
             $PermissionErrors=$True
             $ErrorPath=$error[0].categoryinfo.targetname
-	        add2log "PROBLEM reading $ErrorPath due to permissions."
+	        Add2LogError "reading $ErrorPath due to permissions."
 	    }
 		$LibSyncedFiles=$GotLibSyncedFiles.count
 		if ($LibSyncedFiles -ge 1){
-			Write-Host "  **  Deleting $LibSyncedFiles unnecessary Chocolatey lib-synced package files..." -Foreground Green
-		    Remove-Item -Path $ENV:ChocolateyInstall\lib-synced -Recurse -Force -ErrorAction SilentlyContinue
+			Write-Host "  ** Deleting $LibSyncedFiles unnecessary Chocolatey lib-synced package files..." -Foreground Green
+	        $GotLibSyncedFiles | ForEach-Object {$GotLibSyncedFilesSize=$GotLibSyncedFilesSize + $_.length}
+		    Remove-Item -Path $GotLibSyncedFiles.fullname -Recurse -Force -ErrorAction SilentlyContinue
 	        if ($error[0].categoryinfo.category -match "PermissionDenied") {
     	       $PermissionErrors=$True
-	           add2log "PROBLEM deleting unnecessary Chocolatey lib-synced files due to permissions."
+	           Add2LogError "deleting unnecessary Chocolatey lib-synced files due to permissions."
+	        } else {
+			    $GotLibSyncedFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			    add2log "FREED: $GotLibSyncedFilesSize bytes"
+			    $DeletedFiles=$DeletedFiles + $LibSyncedFiles
+			    $Reclaimed=$Reclaimed + $GotLibSyncedFilesSize
 		    }
 		} else {
-			Write-Host "  **  NO unnecessary Chocolatey lib-synced package files to delete." -Foreground Green
+			Write-Host "  ** NO unnecessary Chocolatey lib-synced package files to delete." -Foreground Green
 		}
 	}
 }
 
+add2log "CONFIG: DeleteDotChocolatey is set to $DeleteDotChocolatey"
 if ($DeleteDotChocolatey -eq "True"){
     $InstalledPackages = & choco list -lo -r -y
     $InstalledPackages=$InstalledPackages.replace("|",".")
     $DotChocolateyDirs =  Get-ChildItem -Path $env:ChocolateyInstall\.chocolatey\* -Directory -Name
-    $delta = $DotChocolateyDirs | Where {$InstalledPackages -NotContains $_}
-    $DeltaCount=$delta.count
+    $delta = $DotChocolateyDirs | Where-Object {$InstalledPackages -NotContains $_}
+	$DotChocolateyFiles2Delete=$delta | foreach-object $_ {Get-ChildItem -Path $env:ChocolateyInstall\.chocolatey\$_}
+    $DeltaCount=$DotChocolateyFiles2Delete.count
     if ($delta.count -ge 1){
-	   Write-Host "  **  Deleting $DeltaCount unnecessary Chocolatey .chocolatey install snapshot files..." -Foreground Green
-       Set-Location -Path "$env:ChocolateyInstall\.chocolatey"
-       Remove-Item $delta -Recurse -Force
+	   Write-Host "  ** Deleting $DeltaCount unnecessary Chocolatey .chocolatey install snapshot files..." -Foreground Green
+	   $DotChocolateyFiles2Delete | ForEach-Object {$deltaSize=$deltaSize + $_.length}
+       Remove-Item $DotChocolateyFiles2Delete.fullname -Recurse -Force
        if ($error[0].categoryinfo.category -match "PermissionDenied") {
  	      $PermissionErrors=$True
-   	      add2log "PROBLEM deleting .chocolatey install snapshot files due to permissions."
-        }
+   	      Add2LogError "deleting .chocolatey install snapshot files due to permissions."
+	    } else {
+		    $DotChocolateyFiles2Delete.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $deltaSize bytes"
+			$DeletedFiles=$DeletedFiles + $DeltaCount
+			$Reclaimed=$Reclaimed + $deltaSize
+		}
 	} else {
-	   Write-Host "  **  NO unnecessary Chocolatey .chocolatey install snapshot files to delete." -Foreground Green
+	   Write-Host "  ** NO unnecessary Chocolatey .chocolatey install snapshot files to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteFileLogs is set to $DeleteFileLogs"
 if ($DeleteFileLogs -eq "True"){
 	$GotFileLogs=Get-ChildItem -Path $ENV:ChocolateyInstall -Recurse -Include $file_log_types -ErrorAction SilentlyContinue
     if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
         $ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 	}
 	$FileLogs=$GotFileLogs.count
 	if ($FileLogs -ge 1){
-		Write-Host "  **  Deleting $FileLogs unnecessary Chocolatey extracted file logs..." -Foreground Green
+		Write-Host "  ** Deleting $FileLogs unnecessary Chocolatey extracted file logs..." -Foreground Green
+	    $GotFileLogs.fullname | ForEach-Object {$GotFileLogsSize=$GotFileLogsSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall -Recurse -Include $file_log_types -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey extracted file logs due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey extracted file logs due to permissions."
+	    } else {
+		    $GotFileLogs.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $GotFileLogsSize bytes"
+			$DeletedFiles=$DeletedFiles + $FileLogs
+			$Reclaimed=$Reclaimed + $GotFileLogsSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey extracted file logs to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey extracted file logs to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteLogs is set to $DeleteLogs"
 if ($DeleteLogs -eq "True"){
 	$GotOldLogs=Get-ChildItem -Path $ENV:ChocolateyInstall\logs\*.log -Recurse -Exclude chocolatey.log,choco.summary.log -ErrorAction SilentlyContinue
     if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
         $ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 	}
 	$FileLogs=$GotOldLogs.count
 	if ($FileLogs -ge 1){
-		Write-Host "  **  Deleting $FileLogs unnecessary Chocolatey log files..." -Foreground Green
+		Write-Host "  ** Deleting $FileLogs unnecessary Chocolatey log files..." -Foreground Green
+	    $GotOldLogs.fullname | ForEach-Object {$GotOldLogsSize=$GotOldLogsSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall\logs\*.log  -Exclude chocolatey.log,choco.summary.log -Recurse -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey log files due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey log files due to permissions."
+	    } else {
+		    $GotOldLogs.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $GotOldLogsSize bytes"
+			$DeletedFiles=$DeletedFiles + $FileLogs
+			$Reclaimed=$Reclaimed + $GotOldLogsSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey log files to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey log files to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteArchives is set to $DeleteArchives"
 if ($DeleteArchives -eq "True"){
 	$GotArchvieFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\lib -Recurse -Include $archive_types -ErrorAction SilentlyContinue
     if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
         $ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 	}
 	$ArchiveFiles=$GotArchvieFiles.count
 	if ($ArchiveFiles -ge 1){
-		Write-Host "  **  Deleting $ArchiveFiles unnecessary Chocolatey package embedded archive files in toolsDir..." -Foreground Green
+		Write-Host "  ** Deleting $ArchiveFiles unnecessary Chocolatey package embedded archive files in toolsDir..." -Foreground Green
+	    $GotArchvieFiles.fullname | ForEach-Object {$GotArchvieFilesSize=$GotArchvieFilesSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall\lib -Recurse -Include $archive_types -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey package embedded archive files due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey package embedded archive files due to permissions."
+	    } else {
+		    $GotArchvieFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+			add2log "FREED: $GotArchvieFilesSize bytes"
+			$DeletedFiles=$DeletedFiles + $ArchiveFiles
+			$Reclaimed=$Reclaimed + $GotArchvieFilesSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey package embedded archive files in toolsDir to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey package embedded archive files in toolsDir to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: Optimizenupkg is set to $Optimizenupkg"
 if ($Optimizenupkg -eq "True"){
-	Write-Host "  **  Deleting unnecessary Chocolatey package embedded archives and executables in .nupkg files..." -Foreground Green
-	Get-Childitem $ENV:ChocolateyInstall\lib -Recurse -Include *.nupkg | ForEach-Object {& $ENV:ChocolateyInstall\tools\7z.exe d -r -tZIP $_.FullName $BinaryExtensions} | Out-Null
+    $nupkgsSizeBefore=0
+    $nupkgsSizeAfter=0
+	$Gotnupkgs=(Get-Childitem $ENV:ChocolateyInstall\lib -Recurse -Include *.nupkg -ErrorAction SilentlyContinue)
+	$Gotnupkgs | ForEach-Object {$nupkgsSizeBefore=$nupkgsSizeBefore + $_.length}
+	Write-Host "  ** Deleting unnecessary Chocolatey package embedded archives and executables in .nupkg files..." -Foreground Green
+	$Gotnupkgs | ForEach-Object {
+		& $ENV:ChocolateyInstall\tools\7z.exe d -r -tZIP $_ $BinaryExtensions | Out-Null
+		if ($LASTEXITCODE) {Add2LogError "optimizing $_"}
+	}
+	$Gotnupkgs | ForEach-Object {$nupkgsSizeAfter=$nupkgsSizeAfter + $_.length}
+    $nupkgsSpaceFreed=($nupkgsSizeBefore - $nupkgsSizeAfter)
+    if ($nupkgsSpaceFreed -gt 0) {add2log "FREED: $nupkgsSpaceFreed bytes"}
+	$Reclaimed=$Reclaimed + ($nupkgsSizeBefore - $nupkgsSizeAfter)
 }
 
+add2log "CONFIG: DeleteLicenseFiles is set to $DeleteLicenseFiles"
 if ($DeleteLicenseFiles -eq "True"){
 	$GotLicenseFiles=Get-ChildItem -Path $ENV:ChocolateyInstall\* -Recurse -Include $license_types -Exclude shimgen.license.txt -ErrorAction SilentlyContinue
     if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
         $ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 	}
 	$LicenseFiles=$GotLicenseFiles.count
 	if ($LicenseFiles -ge 1){
-		Write-Host "  **  Deleting $LicenseFiles unnecessary Chocolatey package embedded license files..." -Foreground Green
+		Write-Host "  ** Deleting $LicenseFiles unnecessary Chocolatey package embedded license files..." -Foreground Green
+	    $GotLicenseFiles.fullname | ForEach-Object {$GotLicenseFilesSize=$GotLicenseFilesSize + $_.length}
 		Remove-Item	-Path $ENV:ChocolateyInstall -Recurse -Include $license_types -Exclude shimgen.license.txt -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey package embedded license files due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey package embedded license files due to permissions."
+	    } else {
+		    $GotLicenseFiles.fullname | ForEach-Object {Add2Log "DELETED $_"}
+            add2log "FREED: $GotLicenseFilesSize bytes"
+			$DeletedFiles=$DeletedFiles + $LicenseFiles
+			$Reclaimed=$Reclaimed + $GotLicenseFilesSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey package embedded license files to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey package embedded license files to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteMSInstallers is set to $DeleteMSInstallers"
 if ($DeleteMSInstallers -eq "True"){
 	$GotMSInstallers=Get-ChildItem -Path $ENV:ChocolateyInstall\lib -Recurse -Include $embed_types -ErrorAction SilentlyContinue
     if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
         $ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 	}
 	$MSInstallers=$GotMSInstallers.count
 	if ($MSInstallers -ge 1){
-		Write-Host "  **  Deleting $MSInstallers unnecessary Chocolatey package embedded Microsoft installers..." -Foreground Green
+		Write-Host "  ** Deleting $MSInstallers unnecessary Chocolatey package embedded Microsoft installers..." -Foreground Green
+	    $GotMSInstallers.fullname | ForEach-Object {$GotMSInstallersSize=$GotMSInstallersSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall\lib -Recurse -Include $embed_types -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey package embedded Microsoft installer files due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey package embedded Microsoft installer files due to permissions."
+	    } else {
+		    $GotMSInstallers.fullname | ForEach-Object {Add2Log "DELETED $_"}
+            add2log "FREED: $GotMSInstallersSize bytes"
+			$DeletedFiles=$DeletedFiles + $MSInstallers
+			$Reclaimed=$Reclaimed + $GotMSInstallersSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey package embedded Microsoft installers to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey package embedded Microsoft installers to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteReadmes is set to $DeleteReadmes"
 if ($DeleteReadmes -eq "True"){
 	$GotReadmes=Get-ChildItem -Path $ENV:ChocolateyInstall\* -Recurse -Include $readme_types -ErrorAction SilentlyContinue
 	if ($error[0].categoryinfo.category -match "PermissionDenied") {
         $PermissionErrors=$True
 		$ErrorPath=$error[0].categoryinfo.targetname
-	    add2log "PROBLEM reading $ErrorPath due to permissions."
+	    Add2LogError "reading $ErrorPath due to permissions."
 	    }
 	$Readmes=$GotReadmes.count
 	if ($Readmes -ge 1){
-		Write-Host "  **  Deleting $Readmes unnecessary Chocolatey package embedded various read me files..." -Foreground Green
+		Write-Host "  ** Deleting $Readmes unnecessary Chocolatey package embedded various read me files..." -Foreground Green
+	    $GotReadmes.fullname | ForEach-Object {$GotReadmesSize=$GotReadmesSize + $_.length}
 		Remove-Item -Path $ENV:ChocolateyInstall\* -Recurse -Include $readme_types -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey package embedded various read me files due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey package embedded various read me files due to permissions."
+	    } else {
+		    $GotReadmes.fullname | ForEach-Object {Add2Log "DELETED $_"}
+            add2log "FREED: $GotReadmesSize bytes"
+			$DeletedFiles=$DeletedFiles + $Readmes
+			$Reclaimed=$Reclaimed + $GotReadmesSize
+		}
 	} else {
-		Write-Host "  **  NO unnecessary Chocolatey package embedded various read me files to delete." -Foreground Green
+		Write-Host "  ** NO unnecessary Chocolatey package embedded various read me files to delete." -Foreground Green
 	}
 }
 
+add2log "CONFIG: DeleteBadShims is set to $DeleteBadShims"
+if ($DeleteBadShims -eq "True"){
 $BadShimCount=0
-Write-Host "  **  Checking shim files..." -NoNewline -Foreground Green
-Get-ChildItem $ENV:ChocolateyInstall\bin\*.exe -ErrorAction SilentlyContinue | % {
+$ShimsSizeBefore=0
+$ShimsSizeAfter=0
+Write-Host "  ** Checking shim files..." -NoNewline -Foreground Green
+$GotShims=(Get-ChildItem $ENV:ChocolateyInstall\bin\*.exe -ErrorAction SilentlyContinue)
+$GotShims | ForEach-Object {$ShimsSizeBefore=$ShimsSizeBefore + $_.length}
+$GotShims | ForEach-Object {
 	if (-not (Test-ShimTargetExists $PSItem) ){
 		$BadShimCount = $BadShimCount +1
 		Remove-Item "$PSItem" | Out-Null -ErrorAction SilentlyContinue
 	    if ($error[0].categoryinfo.category -match "PermissionDenied") {
     		$PermissionErrors=$True
-	    	add2log "PROBLEM deleting unnecessary Chocolatey orphaned shim files due to permissions."
-		    }
+	    	Add2LogError "deleting unnecessary Chocolatey orphaned shim files due to permissions."
+	    } else {
+		    Add2Log "DELETED $PSItem"
+		}
 	}
 }
 Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                            `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
 if ($BadShimCount){
-	Write-Host "  **  Deleted $BadShimCount unnecessary Chocolatey orphaned shim files." -Foreground Green
+	Write-Host "  ** Deleted $BadShimCount unnecessary Chocolatey orphaned shim files..." -Foreground Green
+	$GotShims=(Get-ChildItem $ENV:ChocolateyInstall\bin\*.exe -ErrorAction SilentlyContinue)
+    $GotShims | ForEach-Object {$ShimsSizeAfter=$ShimsSizeAfter + $_.length}
+	$ShimSizeDeleted=($ShimsSizeBefore - $ShimsSizeAfter)
+    add2log "FREED: $ShimSizeDeleted bytes"
+	$DeletedFiles=$DeletedFiles + $BadShimCount
+    $Reclaimed=$Reclaimed + ($ShimsSizeBefore - $ShimsSizeAfter)
 } else {
-	Write-Host "  **  NO unnecessary Chocolatey orphaned shim files to delete." -Foreground Green
+	Write-Host "  ** NO unnecessary Chocolatey orphaned shim files to delete." -Foreground Green
+}
 }
 
-if ($PermissionErrors) {Write-Host "  **  Some files not deleted due to permission problems." -Foreground Yellow}
-
-if ($ENV:ChocolateyInstall -Match $ENV:SystemDrive -and $ENV:SystemDrive -eq "C:"){
-	$FreeAfter = Get-PSDrive C | ForEach-Object {$_.Free}
-	$FreedSpace = $FreeAfter - $FreeBefore
-	$FreedSpace = $FreedSpace / 1KB
-	if ([int]$FreedSpace -lt 0) {$FreedSpace = 0}
-	$FreedSpace = $FreedSpace.ToString('N0')
-	Write-Host Choco-Cleaner finished deleting unnecessary Chocolatey files and reclaimed ~ $FreedSpace KB! -Foreground Magenta
-	Write-Output "$(Get-Date) Choco-Cleaner FINISHED and reclaimed ~ $FreedSpace KB!" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
-} else {
-	Write-Host "Choco-Cleaner finished deleting unnecessary Chocolatey files!" -Foreground Magenta
-	Write-Output "$(Get-Date) Choco-Cleaner FINISHED" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
-}
+if ($PermissionErrors) {Write-Host "  ** Some files not deleted due to permission problems." -Foreground Yellow}
+$Reclaimed=$Reclaimed/1KB
+$Reclaimed = $Reclaimed.ToString('N0')
+Write-Host "Choco-Cleaner finished deleting $DeletedFiles unnecessary Chocolatey files and reclaimed $Reclaimed KB!`n" -Foreground Magenta
+add2log "$ENV:SystemDrive free space BEFORE: $TotalFreeSpaceBefore"
+$TotalFreeSpaceAfter=(Get-PSDrive ($ENV:SystemDrive).replace(":","")).free
+add2log "$ENV:SystemDrive free space AFTER: $TotalFreeSpaceAfter"
+$TotalFreeSpaceDiff=$TotalFreeSpaceBefore - $TotalFreeSpaceAfter
+add2log "$ENV:SystemDrive free space DIFF: $TotalFreeSpaceDiff"
+Write-Output "$(Get-Date) Choco-Cleaner FINISHED and reclaimed $Reclaimed KB!" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
 Write-Host "Found Choco-Cleaner.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
 Start-Sleep -s 10
-
-# TDL
-# Maybe get size of and track all files before deleting for more accurate reporting - priority = below low
+exit $global:CCExitCode

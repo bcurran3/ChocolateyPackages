@@ -30,15 +30,15 @@ Install-ChocolateyPowershellCommand -PackageName 'choco-cleaner' -PSFileFullPath
 # Cleanup
 Remove-Item "$toolsDir\choco-cleaner.*" -Exclude choco-cleaner.ico -Force -ErrorAction SilentlyContinue | Out-Null
 
+# Update choco-cleaner.config with options added after v0.0.3
 Function Update-Config{
 [xml]$UpdatedConfig = Get-Content "$scriptDir\$ScriptConfig"
-
-$DeleteNuGetCache = $UpdatedConfig.Settings.Preferences.DeleteNuGetCache
-if ($DeleteNuGetCache -eq $null)
+$DeleteBadShims = $UpdatedConfig.Settings.Preferences.DeleteBadShims
+if ($DeleteBadShims -eq $null)
    {
-    Write-Host "  ** Adding DeleteNuGetCache support to $ScriptConfig." -Foreground Magenta
-	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteNuGetCache", $null)
-    $NewStuff.InnerText=("true") 
+    Write-Host "  ** Adding DeleteBadShims support to $ScriptConfig." -Foreground Magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteBadShims", $null)
+    $NewStuff.InnerText=("TRUE") 
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
@@ -47,7 +47,7 @@ if ($DeleteDotChocolatey -eq $null)
    {
     Write-Host "  ** Adding DeleteDotChocolatey support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteDotChocolatey", $null)
-    $NewStuff.InnerText=("true") 
+    $NewStuff.InnerText=("TRUE") 
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
@@ -56,11 +56,19 @@ if ($DeleteLibSynced -eq $null)
    {
     Write-Host "  ** Adding DeleteLibSynced support to $ScriptConfig." -Foreground Magenta
 	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteLibSynced", $null)
-    $NewStuff.InnerText=("false") 
+    $NewStuff.InnerText=("FALSE") 
 	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
 	$UpdatedFile = $True
    }
-   
+$DeleteNuGetCache = $UpdatedConfig.Settings.Preferences.DeleteNuGetCache
+if ($DeleteNuGetCache -eq $null)
+   {
+    Write-Host "  ** Adding DeleteNuGetCache support to $ScriptConfig." -Foreground Magenta
+	$NewStuff=$UpdatedConfig.CreateNode("element", "DeleteNuGetCache", $null)
+    $NewStuff.InnerText=("TRUE") 
+	$UpdatedConfig.Settings.Preferences.AppendChild($NewStuff) | Out-Null
+	$UpdatedFile = $True
+   }
 if ($UpdatedFile)
    {   
     $UpdatedConfig.Save("$scriptDir\$ScriptConfig")
