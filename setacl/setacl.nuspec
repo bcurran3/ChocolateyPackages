@@ -5,17 +5,25 @@
     <id>setacl</id>
     <version>3.1.2.86</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/setacl</packageSourceUrl>	
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/setacl</packageSourceUrl>
     <title>SetACL (Portable)</title>
     <authors>Helge Klein</authors>
     <projectUrl>http://helgeklein.com/setacl/</projectUrl>
     <iconUrl>http://anthonymastrean.github.io/chocolateypackages/icons/setacl.png</iconUrl>
-    <copyright>Helge Klein</copyright>	
+    <copyright>Helge Klein</copyright>
     <licenseUrl>https://helgeklein.com/terms-conditions</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://helgeklein.com/setacl/documentation/</docsUrl>
-    <summary>SetACL – Automate Permissions and Manage ACLs</summary>	
+    <bugTrackerUrl>https://helgeklein.com/setacl/faq/</bugTrackerUrl>
+    <summary>SetACL – Automate Permissions and Manage ACLs</summary>
     <description>
+---
+
+### [choco://setacl](choco://setacl)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ## SetACL – Automate Permissions and Manage ACLs
 	
 Are you looking for a way to automate the management of Windows permissions? Do you need features like domain migration? Or support for paths longer than 260 character other tools cannot handle any more? In either case you have come to the right place.
@@ -39,11 +47,22 @@ If you have questions: consult the [documentation](https://helgeklein.com/setacl
 You still have unanswered questions? Check out the list of [frequently asked questions](https://helgeklein.com/setacl/faq/). The chances are good that someone already asked your question.
 
 If you need [support](https://helgeklein.com/support/), a question in the forums might be a good idea.
-    </description>
+    
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/setacl/readme.md)**
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
     <tags>acl setacl</tags>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>https://helgeklein.com/setacl/changelog/</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
