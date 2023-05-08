@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>setacl</id>
-    <version>3.0.6.0</version>
+    <version>3.1.2.86</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/setacl</packageSourceUrl>	
     <title>SetACL (Portable)</title>
@@ -16,13 +16,13 @@
     <docsUrl>https://helgeklein.com/setacl/documentation/</docsUrl>
     <summary>SetACL – Automate Permissions and Manage ACLs</summary>	
     <description>
-##SetACL – Automate Permissions and Manage ACLs
+## SetACL – Automate Permissions and Manage ACLs
 	
 Are you looking for a way to automate the management of Windows permissions? Do you need features like domain migration? Or support for paths longer than 260 character other tools cannot handle any more? In either case you have come to the right place.
 
 SetACL comes in two variants: one, a command-line tool, ideal for use in scripts and batch files. Two, a COM DLL that is perfect for basically any programming language. Both are free.
 
-###What does SetACL do?
+### What does SetACL do?
 
 SetACL manages permissions, auditing and ownership information. It does everything the tools built into Windows do, and much more. It is inherently automatable and scriptable. The COM version provides the full functionality to any COM-enabled programming language (C#, Visual Basic, C++, Delphi, PowerShell, VBScript, …).
 
@@ -41,6 +41,9 @@ You still have unanswered questions? Check out the list of [frequently asked que
 If you need [support](https://helgeklein.com/support/), a question in the forums might be a good idea.
     </description>
     <tags>acl setacl</tags>
-    <releaseNotes></releaseNotes>	
+    <releaseNotes></releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+    </dependencies>
   </metadata>
 </package>
