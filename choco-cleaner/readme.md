@@ -29,7 +29,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 
 * .log files that are not the most current one (NOT default)
 * .zip and various archive files left over from packages that forgot to delete them post install
-* .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation
+* .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation (NOT default)
 * .msi, .msu, and .msp are Microsoft intall packages left over from packages that forgot to delete them post install
 * .ignore files that are created to not shim executables during package install but not needed after shim operations are finished (This may change in a future version of Chocolatey.)
 * credits.txt are program credits (of contributors) files you can read on the web
@@ -39,7 +39,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * chocolatey.config.backup is a backup of your chocolatey.config file
 * _processed.txt - I have no idea what made this file or why it exists
 * lib-bad holds packages that failed to install and lib-bkp contains previous package versions during upgrades
-* lib-synced holds packages installed by the (licensed versions) choco cync feature (NOT default)
+* lib-synced holds packages installed by the (licensed versions) choco sync feature (NOT default)
 * archives and executables out of .nupkg files which are ZIP archives with NuGet package information - this is similar to what [Package Reducer](https://chocolatey.org/docs/features-package-reducer) does
 * \users\username\AppData\Local\Temp\chocolatey is where new package files are downloaded to during pre-installation (if you haven't changed your cacheLocation in chocolatey.config)
 * files in cacheLocation if set in chocolatey.config
@@ -53,22 +53,21 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 * **choco install choco-cleaner** - (default) installs **Choco-Cleaner** to run every Sunday at 11:00 PM
 * **choco install choco-cleaner --params "'/NOTASK:TRUE'"** - installs **Choco-Cleaner** without the scheduled task.
 
-## INSTRUCTIONS:
+### INSTRUCTIONS:
 
 To manually run **Choco-Cleaner**:
 
-* Command Prompt: \ProgramData\chocolatey\lib\choco-cleaner\tools\Choco-Cleaner-manual.bat
-* PowerShell: \ProgramData\chocolatey\bin\Choco-Cleaner.ps1
-* Windows Start Menu: click the icon. If you have **[choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)** installed you'll find it with the rest of the Chocolatey Shortcuts.
+* Command Prompt or PowerShell: choco-cleaner
+* Windows Start Menu: click the icon. If you have **[choco-shortcuts-winconfig](https://community.chocolatey.org/packages/choco-shortcuts-winconfig)** installed you'll find it with the rest of the Chocolatey Shortcuts.
 
-If you have a previous release of **Choco-Cleaner** installed, upgrading to a new version will NOT modify your current scheduled task or preferences.
+If you have a previous release of **Choco-Cleaner** installed, upgrading to a new version will NOT modify your current preferences.
 
 11:00 PM was chosen as not to conflict with default installs of **[choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at)**,  **[choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages)**, and **[choco-optimize-at](https://chocolatey.org/packages/choco-optimize-at)**.
 
 **Organizations with software license compliance auditing should probably NOT delete the license and verification files for legal protection. The supplied configuration file defaults to false for these types of files. As ferventcoder/Rob has said many times, corporations are not advised to use the community repository and should be using [Chocolatey for Business](https://chocolatey.org/pricing) with their own internalized local packages.**
 
 CHANGELOG:
-* 1.0 - v1.0 full feature release, all goals achieved! (The crowd cheers... or is that just the sound of loud crickets?), now deletes unecessary files in the .chocolaty dir (default) and lib-synced (opt-in), legend in config file got a much needed re-write (You won't see it/get it on upgrades.)
+* 1.0.0 - v1.0 full feature release, all goals achieved! (The crowd roars... or is that just the sound of loud crickets?) You wanted **Choco-Cleaner** to delete the unnecessary files in the .chocolatey dir - you got it! now can delete files in lib-synced (opt-in), legend in config file got a much needed re-write (You won't see it/get it on upgrades.), no longer deletes .ignore files in Chocolatey program dirs as choco.exe regenerates 11 .ignore files EVERY time it runs in the current version. 
 * 0.0.9.0 - now recursively deletes chocolatey and Nuget cache files from all user profiles, added more error reporting, changed log size from 1K to 4K, added -ViewLog option
 * 0.0.8.5 - variable, spacing, and syntax cleanup by slycordinator, variables moved to top by Linux User
 * 0.0.8.4 - Fix exception when $FreedSpace is less than zero thanks to kborowinski - Thanks!
