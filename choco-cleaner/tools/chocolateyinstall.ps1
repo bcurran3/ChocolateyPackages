@@ -93,12 +93,15 @@ if ($GotTask -ne $null){&SchTasks /DELETE /TN "choco-cleaner" /F}
 
 if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
        Write-Host "  ** NOTASK or NOSCHEDULE specified, not installing scheduled task." -Foreground Magenta
-	   Write-Host "You can manually run Choco-Cleaner from the Command Prompt, Powershell, or the Windows Start Menu icon." -Foreground Magenta
+	   if ((test-path $env:ChocolateyInstall\lib\choco-upgrade-all-at) -or (test-path $env:ChocolateyInstall\lib\choco-upgrade-all-at-startup)) {
+		   Write-Host "  ** RECOMMENDATION: run Choco-Upgrade-All -EditConfig and set choco-cleaner as your PostProcessScript" -Foreground Magenta
+        }
+	   Write-Host "  ** You can manually run Choco-Cleaner from the Command Prompt, Powershell, or the Windows Start Menu icon." -Foreground Magenta
 	   exit
    }
 
 # Create scheduled task
 SchTasks /Create /SC WEEKLY /D SUN /RU SYSTEM /RL HIGHEST /TN "choco-cleaner" /TR "%ChocolateyInstall%\bin\choco-cleaner.bat" /ST 23:00 /F
 SchTasks /query /tn "choco-cleaner"
-Write-Host "Now configured to run Choco-Cleaner at 11:00 PM every SUNDAY." -Foreground Green
-Write-Host "You can manually run Choco-Cleaner from the Command Prompt, Powershell, or the Windows Start Menu icon." -Foreground Magenta
+Write-Host "  ** Now configured to run Choco-Cleaner at 11:00 PM every SUNDAY." -Foreground Magenta
+Write-Host "  ** You can manually run Choco-Cleaner from the Command Prompt, Powershell, or the Windows Start Menu icon." -Foreground Magenta

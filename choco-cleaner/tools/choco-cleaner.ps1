@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 
-Write-Host "Choco-Cleaner.ps1 v1.0-pre4 (05/07/2023) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v1.0.0 (2023-05-10) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
