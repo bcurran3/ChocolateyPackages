@@ -87,7 +87,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 
 ### SUGGESTION/RECOMMENDATION:
 
-If you are using [choco-upgrade-all-at](https://community.chocolatey.org/packages/choco-upgrade-all-at) or [choco-upgrade-all-at-startup](https://community.chocolatey.org/packages/choco-upgrade-all-at-startup), run choco-upgrade-all -EditConfig and set **choco-cleaner** as your PostProcessScript and delete the scheduled task.
+If you are using [choco-upgrade-all-at](https://community.chocolatey.org/packages/choco-upgrade-all-at) or [choco-upgrade-all-at-startup](https://community.chocolatey.org/packages/choco-upgrade-all-at-startup), run Choco-Upgrade-All -EditConfig and set **choco-cleaner** as your PostProcessScript and delete the scheduled task.
 
 ### CHANGELOG:
 * 1.0.0 - v1.0 full feature release, all goals achieved! (The crowd roars... or is that just the sound of loud crickets?) You wanted **Choco-Cleaner** to delete the unnecessary files in the .chocolatey dir - you got it! now can delete files in lib-synced (opt-in), legend in config file got a much needed re-write (You won't see it/get it on upgrades.), no longer deletes .ignore files in Chocolatey program dirs as choco.exe regenerates 11 .ignore files EVERYTIME it runs in the current version. 
