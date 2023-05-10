@@ -2,7 +2,7 @@
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $packageArgs = @{
-  packageName    = 'plexamp'
+  packageName    = "$env:ChocolateyPackageName"
   softwareName   = 'Plexamp*'
   fileType       = 'EXE'
   silentArgs     = '/S'
@@ -12,3 +12,6 @@ $packageArgs = @{
   
 Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*.exe -Force -EA SilentlyContinue | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# Replace .EXE file
