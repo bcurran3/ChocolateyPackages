@@ -43,7 +43,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 
 * .log files that are not the most current one (NOT default)
 * .zip and various archive files left over from packages that forgot to delete them post install
-* .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation
+* .zip.txt and other archive-extensions.txt are lists of files that were extracted from an archive file for installation (NOT default)
 * .msi, .msu, and .msp are Microsoft intall packages left over from packages that forgot to delete them post install
 * .ignore files that are created to not shim executables during package install but not needed after shim operations are finished (This may change in a future version of Chocolatey.)
 * credits.txt are program credits (of contributors) files you can read on the web
