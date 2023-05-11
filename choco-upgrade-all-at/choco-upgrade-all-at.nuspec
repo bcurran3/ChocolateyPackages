@@ -37,8 +37,8 @@ This package is a pseudo replacement for [choco-upgrade-all-at-startup](https://
 ### USAGE INSTRUCTIONS:
 * You can do nothing and it will run at the set it and forget it time. :)
 * You can manually run **choco-upgrade-all** from Command Prompt or PowerShell.
+* You can manually click the Upgrade All Packages icon in the Chocolatey Start Menu group if you have [choco-shortcuts-winconfig](https://community.chocolatey.org/packages/choco-shortcuts-winconfig) installed.
 * You can manually run **choco-install packagename** from Command Prompt or PowerShell to install packages with your **choco-upgrade-all-at** settings.
-* You can click the Upgrade All Packages icon in the Chocolatey Start Menu groun if you have [choco-shortcuts-winconfig](https://community.chocolatey.org/packages/choco-shortcuts-winconfig) installed.
 
 ### INSTALL INSTRUCTIONS:
 You can install **choco-upgrade-all-at** with multiple parameters to make it run "choco upgrade all -y" daily or weekly (Monthly is just not often enough!) at your preferred time. If you enter no parameters at all, **choco-upgrade-all-at** will default to run "choco upgrade all -y" at 2 AM every day and abort the process at 4 AM. When entering the TIME and ABORTTIME parameters, use "[Military Time](http://militarytimechart.com/)." When entering the DAILY or WEEKLY parameter you can actually use anything, "yes" just makes sense though. When using the WEEKLY parameter, DAYS are entered as MON, TUE, WED, THU, FRI, SAT, or SUN. Not entering the correct format will fail the install. Please see the examples below.
