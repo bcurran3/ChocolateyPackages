@@ -49,7 +49,10 @@ You can install **choco-upgrade-all-at** with multiple parameters to make it run
 * **choco install choco-upgrade-all-at --params "'/NOTASK:true'"** - installs choco-upgrade-all.ps1/bat without the scheduled task.
 
 ### CONFIGURATION INSTRUCTIONS:
-* To enable enhanced options such as automatically deleting newly installed Desktop and Start Menu icons, running pre and/or post processing scripts, or setting a default user profile, run **choco-upgrade-all -EditConfig**
+Run **choco-upgrade-all -EditConfig** to enable enhanced options such as 
+* automatically delete newly installed Desktop and Start Menu icons
+* run pre and/or post processing scripts
+* setting a default user profile
 
 ### SEE THE RELEASE NOTES FOR MORE INFORMATION
 
