@@ -1,9 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at-startup</id>
-    <version>2021.03.15</version>
+    <version>2023.05.10</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <owners>bcurran3</owners>
@@ -19,6 +19,13 @@
     <tags>bcurran3 unofficial choco upgrade startup config schtasks scheduled task</tags>
     <summary>choco-upgrade-all-at-startup - Configures a scheduled task to run "choco upgrade all -y" at Windows startup.</summary>
     <description>
+---
+
+### [choco://choco-upgrade-all-at-startup](choco://choco-upgrade-all-at-startup)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 # DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES EVERY TIME YOUR COMPUTER BOOTS? 
 
 # YOU JUST FOUND THE EASY WAY!
@@ -42,12 +49,12 @@ It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-up
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at-startup/readme.md)**
 
-***
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***	
-	</description>
+**If you find choco-upgrade-all-at-startup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+	
+</description>
     <releaseNotes>
 ## CHANGELOG:
+* 2023.05.10 - Fixed bug causing an error when there was no pre-existing icons when using the delete new icons feature, added detailed logging, added -ViewLog option, added report
 * 2021.03.13 - Added option to automatically delete newly created Desktop and Start Menu icons. Added option to run pre and post processing scripts. Added configurable arguments. Added ability to set default user profile. Edit C:\tools\BCURRAN3\choco-upgrade-all.config to enable the enhanced options. You can new run choco-upgrade-all from the command line to take advantage of the enhanced options. Added choco-install script to work with the same enhanced options. Added -EditConfig option to edit the config file.
 * 2018.08.22 - Fixed compatibility with Windows 7 and 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency.
 * 2018.01.30 - simplified, standardized, description updated, uninstall added
