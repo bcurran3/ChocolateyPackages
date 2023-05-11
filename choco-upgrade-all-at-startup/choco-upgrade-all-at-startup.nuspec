@@ -40,7 +40,7 @@ Please understand your computer boot time will increase. If you reboot daily, yo
 * You can manually run **choco-install packagename** from Command Prompt or PowerShell to install packages with your **choco-upgrade-all-at-startup** settings.
 
 ### CONFIGURATION INSTRUCTIONS:
-Run **choco-upgrade-all -EditConfig** to enable enhanced options such as 
+Run **choco-upgrade-all -EditConfig** to enable enhanced options such as:
 * automatically delete newly installed Desktop and Start Menu icons
 * run pre and/or post processing scripts
 * setting a default user profile
