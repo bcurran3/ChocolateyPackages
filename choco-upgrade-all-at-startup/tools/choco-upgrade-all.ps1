@@ -154,7 +154,7 @@ if ($PostProcessScript){
 	Add2Log "EXECUTED: $PostProcessScript"
 	}
 
-if ($DeleteNewDesktopIcons -eq 'True') -or ($DeleteNewStartMenuIcons -eq 'True'){
+if (($DeleteNewDesktopIcons -eq 'True') -or ($DeleteNewStartMenuIcons -eq 'True')){
     Add2Log "DELETED $IconsDeleted unwanted shortcut(s)."
     Write-Host "`n  ** Choco-Upgrade-All DELETED $IconsDeleted unwanted shortcut(s).`n" -ForegroundColor Magenta
 }
