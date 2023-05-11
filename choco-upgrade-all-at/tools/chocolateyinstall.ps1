@@ -7,7 +7,8 @@ $script       = 'choco-upgrade-all.ps1'
 $ScriptConfig = 'choco-upgrade-all.config'
 
 # New storage location moving forward for all my Chocolatey scripts
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$ENV:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
+$CTL=Get-ToolsLocation
+if (!(Test-Path "$CTL\BCURRAN3")) { New-Item -Path "$CTL" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force -ErrorAction SilentlyContinue
