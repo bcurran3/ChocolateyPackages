@@ -20,7 +20,6 @@ Install-ChocolateyPowershellCommand -PackageName 'choco-install' -PSFileFullPath
 
 # Cleanup
 Remove-Item "$toolsDir\choco-upgrade-all.*" -Force -ErrorAction SilentlyContinue | Out-Null
-if ($ENV:Path -NotMatch "BCURRAN3"){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
 
 # delete old task name < v0.0.4 if it exists
 $ErrorActionPreference = 'Continue'
