@@ -154,8 +154,11 @@ if ($PostProcessScript){
 	Add2Log "EXECUTED: $PostProcessScript"
 	}
 
-Add2Log "DELETED $IconsDeleted unwanted icon(s)."
-Write-Host "`n  ** Choco-Upgrade-All DELETED $IconsDeleted unwanted icon(s).`n" -ForegroundColor Magenta
+if ($DeleteNewDesktopIcons -eq 'True') -or ($DeleteNewStartMenuIcons -eq 'True'){
+    Add2Log "DELETED $IconsDeleted unwanted shortcut(s)."
+    Write-Host "`n  ** Choco-Upgrade-All DELETED $IconsDeleted unwanted shortcut(s).`n" -ForegroundColor Magenta
+}
+
 Write-Host "Found Choco-Upgrade-All.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
