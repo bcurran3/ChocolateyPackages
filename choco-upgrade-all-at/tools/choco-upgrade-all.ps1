@@ -104,6 +104,7 @@ if ($PublicStartMenuIconsPost -eq $null) {$PublicStartMenuIconsPost=0}
 
 # Delete new Desktop icons if configured to do so
 if ($DeleteNewDesktopIcons -eq 'True'){
+	Add2Log "CONFIG: DeleteNewDesktopIcons is set to TRUE"
 	if ($UserDesktopIconsPre.count -ne '0' -and $UserDesktopIconsPost.count -ne '0'){
        $IconsNew = Compare-Object -ReferenceObject ($UserDesktopIconsPre) -DifferenceObject ($UserDesktopIconsPost) -PassThru
        if ($IconsNew -ne $null) {
@@ -120,10 +121,13 @@ if ($DeleteNewDesktopIcons -eq 'True'){
 	       $IconsNew | % {Add2Log "DELETED: $_"}
 	    }
     }
+} else {
+	Add2Log "CONFIG: DeleteNewDesktopIcons is set to FALSE"
 }
 
 # Delete new Start Menu icons if configured to do so
 if ($DeleteNewStartMenuIcons -eq 'True'){
+	Add2Log "CONFIG: DeleteNewStartMenuIcons is set to TRUE"
 	if ($UserStartMenuIconsPre.count -ne '0' -and $UserStartMenuIconsPost.count -ne '0'){
        $IconsNew = Compare-Object -ReferenceObject ($UserStartMenuIconsPre) -DifferenceObject ($UserStartMenuIconsPost) -PassThru
        if ($IconsNew -ne $null) {
@@ -140,6 +144,8 @@ if ($DeleteNewStartMenuIcons -eq 'True'){
 	       $IconsNew | % {Add2Log "DELETED: $_"}
 	    }
     }
+} else {
+	Add2Log "CONFIG: DeleteNewStartMenuIcons is set to FALSE"
 }
 
 # Run post-processor if configured
@@ -148,6 +154,7 @@ if ($PostProcessScript){
 	Add2Log "EXECUTED: $PostProcessScript"
 	}
 
+Add2Log "DELETED $IconsDeleted unwanted icon(s)."
 Write-Host "`n  ** Choco-Upgrade-All DELETED $IconsDeleted unwanted icon(s).`n" -ForegroundColor Magenta
 Write-Host "Found Choco-Upgrade-All.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
