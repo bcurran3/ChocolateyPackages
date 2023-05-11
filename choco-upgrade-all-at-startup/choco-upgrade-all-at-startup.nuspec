@@ -37,6 +37,7 @@ Please understand your computer boot time will increase. If you reboot daily, yo
 ### USAGE INSTRUCTIONS:
 * You can do nothing and it will run at startup when on AC power.
 * You can manually run **choco-upgrade-all** from Command Prompt or PowerShell.
+* You can click the Upgrade All Packages icon in the Chocolatey Start Menu groun if you have [choco-shortcuts-winconfig](https://community.chocolatey.org/packages/choco-shortcuts-winconfig) installed.
 * You can manually run **choco-install packagename** from Command Prompt or PowerShell to install packages with your **choco-upgrade-all-at-startup** settings.
 
 ### CONFIGURATION INSTRUCTIONS:
