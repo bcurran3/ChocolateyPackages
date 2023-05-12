@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-protocol-support</id>
-    <version>0.0.1.1</version>
+    <version>0.0.2.0-pre</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</packageSourceUrl>
@@ -19,6 +19,9 @@
     <tags>bcurran3 choco protocol cinst chocolateasy winconfig</tags>
     <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol and choco-protocol-support.cmd (with sudo)</summary>
     <description>
+	
+CHOCO PROTOCOL SUPPORT v.0.0.2.0-preX TEST: choco://choco-cleaner --version=1.0
+	
 ![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_screenshot.png)	
 	
 # Implements installing of Chocolatey packages from the web using choco:// Protocol with choco-protocol-support.cmd (and Sudo).
@@ -61,8 +64,9 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 </description>
     <releaseNotes>
 ### CHANGELOG:
-* 0.0.1.1 Removed Chocolatey dependency as Chocolatey v1.0 has been released and missed the [1.x milestone](https://github.com/chocolatey/choco/milestone/12) of becoming multi-instance aware and no new known goal. Added [gsudo](https://community.chocolatey.org/packages/gsudo) support.
-* 0.0.1   Initial release.
+* 0.0.2.0 - Rewritten in PowerShell, changed use of cinst.exe to choco.exe (instlal) for Chocolatey v2 compatibility, added --version support
+* 0.0.1.1 - Removed Chocolatey dependency as Chocolatey v1.0 has been released and missed the [1.x milestone](https://github.com/chocolatey/choco/milestone/12) of becoming multi-instance aware and no new known goal. Added [gsudo](https://community.chocolatey.org/packages/gsudo) support.
+* 0.0.1   - Initial release.
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support/readme.md)**
 	</releaseNotes>
     <dependencies>
