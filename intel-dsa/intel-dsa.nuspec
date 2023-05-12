@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>23.1.9.7</version>
+    <version>23.2.17.8</version>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
@@ -46,7 +46,7 @@ This application does not support older versions of Internet Explorer. We recomm
 ---
 
 </description>
-    <summary>Launch the Intel® Driver Update Utility to find the latest drivers.</summary>
+    <summary> Intel® Driver &amp; Support Assistant enables you to scan computing devices for the latest drivers available from Intel.</summary>
     <releaseNotes>https://downloadcenter.intel.com/download/28425/Intel-Driver-Support-Assistant?v=t</releaseNotes>
     <copyright>Intel Corporation</copyright>
     <tags>dsa intel driver support assistant update utility</tags>

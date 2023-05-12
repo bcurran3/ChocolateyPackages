@@ -1,8 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-dsa'
 $url         = 'https://downloadmirror.intel.com/28425/Intel-Driver-and-Support-Assistant-Installer.exe'
-#               ^^^^^^^^^ consistent dl link (only checksum of file changes)
-$checksum    = 'EB5E791918B64C9C63AC862621AA0DD51152D904D1288310F696290E059C5C35'
+$checksum    = '414A8DF8BE2B65DE3A505FDC4349F1DB0A63A02DA7BD143B150315D28E57547E'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -17,3 +16,6 @@ $packageArgs = @{
 
 Start-WaitandStop "SurConsent"
 Install-ChocolateyPackage @packageArgs
+
+# UPDATE INSTRUCTIONS:
+# Update checksum as the dl link is constant
