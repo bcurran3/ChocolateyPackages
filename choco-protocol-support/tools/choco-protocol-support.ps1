@@ -13,7 +13,7 @@ $parameters=$null
 $arguments=$null
 
 $ErrorActionPreference = 'Stop'
-Write-Host "choco-protocol-support.ps1 v0.0.2.0 (2023-05-11) - install Chocolatey packages from URLs" -Foreground White
+Write-Host "choco-protocol-support.ps1 v0.0.2.0 (2023-05-12) - install Chocolatey packages from URLs" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 if (!($chocoprotocolURL)){Write-Warning "choco URL not provided, nothing to do!"; return}
