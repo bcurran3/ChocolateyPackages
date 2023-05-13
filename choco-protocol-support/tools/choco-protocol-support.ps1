@@ -1,5 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'
-# Requires -RunAsAdministrator
+﻿# Requires -RunAsAdministrator
 # choco-protocol-support.ps1 Copyleft 2017-2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
@@ -12,9 +11,6 @@ param(
 $version=$null
 $parameters=$null
 $arguments=$null
-
-$Host.UI.RawUI.BackgroundColor = 'DarkGreen'
-Clear-Host
 
 $ErrorActionPreference = 'Stop'
 Write-Host "choco-protocol-support.ps1 v0.0.2.0 (2023-05-11) - install Chocolatey packages from URLs" -Foreground White
@@ -55,7 +51,7 @@ Start-Process -Filepath "$env:ChocolateyInstall\choco.exe" -ArgumentList "instal
 Write-Host "`n`nFound choco-protocol-support.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
-#Start-Sleep -s 10
+Start-Sleep -s 5
 
 # TDL 
 # error checking for malformed URLs
