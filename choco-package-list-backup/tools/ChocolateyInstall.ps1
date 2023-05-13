@@ -12,7 +12,7 @@ $Date             = Get-Date -UFormat %Y-%m-%d
 
 # Setup
 # New storage location moving forward for all my Chocolatey scripts
-if (!(Test-Path "$env:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$env:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
+if (!(Test-Path "$(Get-ToolsLocation)\BCURRAN3")) { New-Item -Path "$(Get-ToolsLocation)" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Migration
 # Move files before v2019.08.27 from old to new storage location
@@ -196,7 +196,13 @@ if ($GotTask -ne $null){
 	     Write-Host "  ** Now configured to run choco-package-list-backup at 6 AM every MONDAY." -Foreground Green
 	    }
     }
-
+	
+# Additional defaults for Windows 10+ computers
+if (Get-IsWin10){
+    $TaskSettings=New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable
+    Set-ScheduledTask -TaskName choco-package-list-backup -Settings $TaskSettings | Out-Null
+}
+	
 If (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey"){
       Remove-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$oldshortcutName" -Force -ErrorAction SilentlyContinue
       Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$altshortcutName" -targetPath "$env:ChocolateyInstall\bin\choco-package-list-backup.bat" -IconLocation "$env:ChocolateyInstall\choco.exe" -WorkingDirectory "$env:ChocolateyInstall\bin\"
