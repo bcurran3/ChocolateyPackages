@@ -6,8 +6,7 @@ $script       = 'choco-upgrade-all.ps1'
 $ScriptConfig = 'choco-upgrade-all.config'
 
 # New storage location moving forward for all my Chocolatey scripts
-$CTL=Get-ToolsLocation
-if (!(Test-Path "$CTL\BCURRAN3")) { New-Item -Path "$CTL" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
+if (!(Test-Path "$(Get-ToolsLocation)\BCURRAN3")) { New-Item -Path "$(Get-ToolsLocation)" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force -ErrorAction SilentlyContinue
@@ -40,4 +39,8 @@ if ($GotTask -ne $null){
 # create new scheduled task to run at startup   
      SchTasks /Create /SC ONSTART /RU SYSTEM /RL HIGHEST /TN "choco-upgrade-all-startup" /TR "%ChocolateyInstall%\bin\choco-upgrade-all.bat" /F
    }
+if (Get-IsWin10){
+	$TaskSettings=New-ScheduledTaskSettingsSet -DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 2) -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 5) -StartWhenAvailable
+	Set-ScheduledTask -TaskName choco-upgrade-all-startup -Settings $TaskSettings
+}
 Write-Host "Now configured to run ""choco upgrade all -y"" with enhanced options at Windows startup." -Foreground Magenta 
