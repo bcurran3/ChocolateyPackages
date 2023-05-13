@@ -21,7 +21,7 @@
     <description>
 # SEE RELEASE NOTES FOR TEST/POC URLS
 	
-![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_screenshot.png)	
+![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_screenshot.png)	
 	
 # Implements installing of Chocolatey packages from the web using choco:// Protocol.
 

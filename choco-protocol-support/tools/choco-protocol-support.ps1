@@ -1,3 +1,4 @@
+﻿$ErrorActionPreference = 'Stop'
 # Requires -RunAsAdministrator
 # choco-protocol-support.ps1 Copyleft 2017-2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
