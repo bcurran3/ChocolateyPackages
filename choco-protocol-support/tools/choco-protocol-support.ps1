@@ -11,6 +11,7 @@ param(
 $version=$null
 $params=$null
 $installarguments=$null
+$chocopackageoptions=$null
 
 $ErrorActionPreference = 'Stop'
 Write-Host "choco-protocol-support.ps1 v0.0.2.0 (2023-05-12) - install Chocolatey packages from URLs" -Foreground White
@@ -32,8 +33,6 @@ for($num=0; $num -lt $chocoprotocolURL.count; $num++) {
     if ($chocoprotocolURL[$num] -match 'source=') {($source=$chocoprotocolURL[$num]); $source=$source.replace('source=','')}	
 	}
 	
-$params.replace()
-
 Write-Host "  ** Installing Chocolatey PACKAGE NAME: $packagename" -NoNewline -ForegroundColor Magenta
 if ($version){Write-Host " VERSION: $version" -NoNewline -Foreground Magenta}
 if ($params){Write-Host " PARAMS: $params" -NoNewline -Foreground Magenta}
@@ -46,9 +45,9 @@ if ($source){Write-Host " SOURCE: $source" -NoNewline -Foreground Magenta}
 #	start-process sudo $env:ChocolateyInstall\choco.exe install -y  $packagename $version
 #}
 
-$command=$packagename
-if ($version) {$command=$command + " --version=$version"}
-Start-Process -Filepath "$env:ChocolateyInstall\choco.exe" -ArgumentList "install -y $command" -Wait -Verb RunAs
+$chocopackageoptions=$packagename
+if ($version) {$chocopackageoptions=$chocopackageoptions + " --version=$version"}
+Start-Process -Filepath "$env:ChocolateyInstall\choco.exe" -ArgumentList "install -y $chocopackageoptions" -Wait -Verb RunAs
 
 Write-Host "`n`nFound choco-protocol-support.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
