@@ -13,8 +13,8 @@ $version=$null
 $parameters=$null
 $arguments=$null
 
-#$Host.UI.RawUI.BackgroundColor = 'DarkGreen'
-#Clear-Host
+$Host.UI.RawUI.BackgroundColor = 'DarkGreen'
+Clear-Host
 
 $ErrorActionPreference = 'Stop'
 Write-Host "choco-protocol-support.ps1 v0.0.2.0 (2023-05-11) - install Chocolatey packages from URLs" -Foreground White
@@ -55,7 +55,7 @@ Start-Process -Filepath "$env:ChocolateyInstall\choco.exe" -ArgumentList "instal
 Write-Host "`n`nFound choco-protocol-support.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
-Start-Sleep -s 10
+#Start-Sleep -s 10
 
 # TDL 
 # error checking for malformed URLs
