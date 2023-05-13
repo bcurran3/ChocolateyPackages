@@ -9,8 +9,8 @@ param(
  )
  
 $version=$null
-$parameters=$null
-$arguments=$null
+$params=$null
+$installarguments=$null
 
 $ErrorActionPreference = 'Stop'
 Write-Host "choco-protocol-support.ps1 v0.0.2.0 (2023-05-12) - install Chocolatey packages from URLs" -Foreground White
@@ -27,15 +27,17 @@ $packagename=($chocoprotocolURL[0])
 
 for($num=0; $num -lt $chocoprotocolURL.count; $num++) {
 	if ($chocoprotocolURL[$num] -match 'version=') {$version=($chocoprotocolURL[$num]); $version=$version.replace('version=','')}
-	if ($chocoprotocolURL[$num] -match 'parameters=') {($parameters=$chocoprotocolURL[$num]); $parameters=$parameters.replace('parameters=','')}
-	if ($chocoprotocolURL[$num] -match 'arguments=') {($arguments=$chocoprotocolURL[$num]); $arguments=$arguments.replace('arguments=','')}
+	if ($chocoprotocolURL[$num] -match 'params=') {($params=$chocoprotocolURL[$num]); $params=$params.replace('params=','')}
+	if ($chocoprotocolURL[$num] -match 'installarguments=') {($installarguments=$chocoprotocolURL[$num]); $installarguments=$installarguments.replace('arguments=','')}
     if ($chocoprotocolURL[$num] -match 'source=') {($source=$chocoprotocolURL[$num]); $source=$source.replace('source=','')}	
 	}
+	
+$params.replace()
 
 Write-Host "  ** Installing Chocolatey PACKAGE NAME: $packagename" -NoNewline -ForegroundColor Magenta
 if ($version){Write-Host " VERSION: $version" -NoNewline -Foreground Magenta}
-if ($parameters){Write-Host " PARAMETERS: $parameters" -NoNewline -Foreground Magenta}
-if ($arguments){Write-Host " ARGUMENTS: $arguments" -NoNewline -Foreground Magenta}
+if ($params){Write-Host " PARAMS: $params" -NoNewline -Foreground Magenta}
+if ($installarguments){Write-Host " INSTALL ARGUMENTS: $installarguments" -NoNewline -Foreground Magenta}
 if ($source){Write-Host " SOURCE: $source" -NoNewline -Foreground Magenta}
 
 #if (Test-Path $env:ChocolateyInstall\lib\gsudo\bin\gsudo.exe) {
@@ -55,5 +57,7 @@ Start-Sleep -s 5
 
 # TDL 
 # error checking for malformed URLs
-# add parameters, arguments, and source support
-# MAYBE a config file that allows toggling of parameters, arguments, source, etc.
+# add parameters, install arguments, and source support (Going to need a LOT of parsing!)
+# MAYBE a config file that allows toggling of parameters, install arguments, source, etc. 
+# Theoretically possible to add all choco install options and switches, but why?
+
