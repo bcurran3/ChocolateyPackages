@@ -26,4 +26,4 @@ Set-ItemProperty -Path "HKCR:\choco" -Name "URL Protocol" -Value '""' | Out-Null
 New-Item -Path "HKCR:\choco" -Name "shell" –Force | Out-Null
 New-Item -Path "HKCR:\choco\shell" -Name "open" –Force | Out-Null
 New-Item -Path "HKCR:\choco\shell\open" -Name "command" –Force | Out-Null
-Set-ItemProperty -Path "HKCR:\choco\shell\open\command" -Name "(Default)" -Value  """$env:ChocolateyInstall\bin\choco-protocol-support.bat"" ""%1"" ""%2"" ""%3"" ""%4"" ""%5""" | Out-Null
+Set-ItemProperty -Path "HKCR:\choco\shell\open\command" -Name "(Default)" -Value  """$env:ChocolateyInstall\bin\choco-protocol-support.bat"" ""%1""" | Out-Null

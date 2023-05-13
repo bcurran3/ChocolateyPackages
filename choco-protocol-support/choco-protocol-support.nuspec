@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-protocol-support</id>
-    <version>0.0.2.0-pre</version>
+    <version>0.0.2.0-pre1</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</packageSourceUrl>
@@ -17,14 +17,13 @@
     <licenseUrl>https://en.wikipedia.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 choco protocol cinst chocolateasy winconfig</tags>
-    <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol and choco-protocol-support.cmd (with sudo)</summary>
+    <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol</summary>
     <description>
-	
-CHOCO PROTOCOL SUPPORT v.0.0.2.0-preX TEST: choco://choco-cleaner --version=1.0
+# SEE RELEASE NOTES FOR TEST/POC URLS
 	
 ![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_screenshot.png)	
 	
-# Implements installing of Chocolatey packages from the web using choco:// Protocol with choco-protocol-support.cmd (and Sudo).
+# Implements installing of Chocolatey packages from the web using choco:// Protocol.
 
 ### WHO IS THIS FOR?
 **choco-protocol-support** is designed for those who aren't comfortable with the Command Prompt or just don't like to type much. **choco-protocol-support** allows you to install Chocolatey packages by simply clicking choco:// URLs in your web browser. **choco-protocol-support** is also useful for support professionals who know the difficulty of getting end users to type in commands correctly. Now you can give end users a URL via e-mail or corporate software web page to click and have a Chocolatey package installed!
@@ -52,7 +51,6 @@ Browser examples: [Chrome](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPacka
 [choco://choco-install-packages-from-web-winconfig](choco://choco-install-packages-from-web-winconfig) - (unofficial) Install Chocolatey Packages from your Web Browser 
 
 #### WARNING: Only install one package at a time until such time as Chocolatey is multi-instance aware or it will corrupt itself. [(REFERENCE)](https://github.com/chocolatey/choco/issues/1579)
-
 	
 ---
 
@@ -63,8 +61,16 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 
 </description>
     <releaseNotes>
+# ---------- TESTING 1,2,3... ----------
+CHOCO PROTOCOL SUPPORT v.0.0.2.0-preX POC tests:
+
+* [vlc default install](choco://vlc)
+* [vlc version 3.0.17.4](choco://vlc/version=3.0.17.4/)
+* [vlc version 3.0.18](choco://vlc/version=3.0.18/)
+# ---------- TESTING 1,2,3... ----------
+
 ### CHANGELOG:
-* 0.0.2.0 - Rewritten in PowerShell, changed use of cinst.exe to choco.exe (instlal) for Chocolatey v2 compatibility, added --version support
+* 0.0.2.0 - Rewritten in PowerShell, changed use of cinst.exe to choco.exe (install) for Chocolatey v2 compatibility, added version support
 * 0.0.1.1 - Removed Chocolatey dependency as Chocolatey v1.0 has been released and missed the [1.x milestone](https://github.com/chocolatey/choco/milestone/12) of becoming multi-instance aware and no new known goal. Added [gsudo](https://community.chocolatey.org/packages/gsudo) support.
 * 0.0.1   - Initial release.
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-protocol-support/readme.md)**
