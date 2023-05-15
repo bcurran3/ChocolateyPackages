@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-nuspec-checker</id>
-    <version>2021.12.20</version>
+    <version>2023.05.14</version>
     <title>(unofficial) Chocolatey .nuspec Checker (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
@@ -35,6 +35,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** can re-write your nuspec in UTF-8 w/o BOM format
 * **CNC** can re-write your PowerShell scripts in UTF-8 w/ BOM format
 * **CNC** checks all your PowerShell scripts for syntax errors
+* **CNC** checks chocolateyInstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included
 * **CNC** checks for and can add $ErrorActionPreference = 'Stop' to your PowerShell scripts
 * **CNC** can optimize PNG files in your nuspec directory if PNGOptimizer.commandline is installed
 * **CNC** can be run from the Command Prompt AND PowerShell
@@ -52,8 +53,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>(unofficial) Chocolatey .nuspec Checker checks your Chocolatey .nuspec files for common errors and ommisions.</summary>
     <releaseNotes>
 ### CHANGELOG:
-* 2021.10.28 - TheCakeIsNaOH's move args to params and add help comments merge
-* 2021.03.23 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file
+* 2023.05.14 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file, added TheCakeIsNaOH's (Thanks!) move args to params and add help comments merge, minor updates to package URL checking and noficiations, no longer checks URLs with variables baked in, don't display PS error when non-image icon files are downloaded, less false positives checking for sourceforge and fosshub links in chocolateyinstall.ps1, updated markdown checking to display error line, checks chocolateyinstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included, new -ReduceOutput option to only show problems/errors (no blue or green informational messages), checks chocolateyinstall.ps1 for use of checksums, added checking for private enviroment variables, reports when http instead of https links are used for downloads
 * 2020.09.21 - recurse switch has been added, thanks TheCakeIsNaOH!
 * 2020.09.20 - An AddPackageNotes feature has been added, works the same as the AddHeader and AddFooter options. Updated nuspec URL errors as requirements to be fixed. Updated online package status messages. Added "PackageInternalFilesIncluded" checking. Minor cosmetic updates.
 * 2020.09.15 - CNC will now ignore update.ps1 files.
@@ -85,16 +85,13 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * 2018.12.22-2018-12.28 - initial release
 
 ### ROADMAP:
+* better URL parsing (still needed?)
 * Update CDN checking for "main" as well as "master" post 10/2020
 * Check validity of URLs in description, checked by the package verifier as of 01/11/2020
-* Reformat invalid Markdown headings automagically
-* Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
+* Reformat invalid Markdown headings automagically (Possibly dangerous if URLs have # in them)
 * option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
-* MAYBE do full params statement and get rid of args checking - low priority
-* MAYBE check http links to see if https links are available and report if so - low priority
 * MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
-* https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
-* add packaging tips/tweaks/etc
+* Address new Validator changes: https://blog.chocolatey.org/2022/08/upcoming-changes-validator/
 * What else? (PRs accepted)
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>

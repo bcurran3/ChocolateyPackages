@@ -1,5 +1,5 @@
 ﻿# $ErrorActionPreference = 'Stop'
-# CNC.ps1 Copyleft 2018-2021 by Bill Curran AKA BCURRAN3
+# CNC.ps1 Copyleft 2018-2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -10,16 +10,31 @@
 .SYNOPSIS
    Script to check your Chocolatey .nuspec files for common errors and ommisions.
 .DESCRIPTION
-   TODO
+    CNC checks all .nuspec elements and reports any missing or template default values, now recursively too!
+    CNC checks for all verifier messages (guidelines, suggestions, and notes) and reports them if applicable
+    CNC checks for dead URLs and reports them
+    CNC checks for GitHub direct links, reports them, and can convert them to various CDN URLs (default=Staticaly)
+    CNC checks for RawGit CDN links, reports them, and can convert them to various CDN URLs (default=Staticaly)
+    CNC can open all your .nuspec element URLs in your default browser for quick viewing
+    CNC checks and reports current status of your package on chocolatey.org
+    CNC can add a standard template header, footer, and/or package notes to your .nuspec description with variables
+    CNC checks nuspec and PowerShell scripts for correct UTF-8 encoding and reports if the encoding is incorrect
+    CNC can re-write your nuspec in UTF-8 w/o BOM format
+    CNC can re-write your PowerShell scripts in UTF-8 w/ BOM format
+    CNC checks all your PowerShell scripts for syntax errors
+    CNC checks chocolateyInstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included
+    CNC checks for and can add $ErrorActionPreference = 'Stop' to your PowerShell scripts
+    CNC can optimize PNG files in your nuspec directory if PNGOptimizer.commandline is installed
+    CNC can be run from the Command Prompt AND PowerShell
 .EXAMPLE
     cnc
-    To check the package in your current directory
+    To check the .nuspec file in your current directory
 .EXAMPLE
     cnc -UpdateAll
-    Fix the package in your current directory
+    Fix the .nuspec file in your current directory
 .EXAMPLE
     cnc -Recurse -Path C:\Path\To\Packages\Repo
-    To check all the packages in a package sources repository
+    To check all the .nuspec files in a package sources repository
 
 .PARAMETER help
    Displays this information.
@@ -47,18 +62,24 @@
    Displays $CNCFooter.
 .PARAMETER ShowHeader
    Displays $CNCHeader.
-.PARAMETER OptimizeImages, -OptimizePNGs
+.PARAMETER ShowPackageNotes
+   Displays $PackageNotes.
+.PARAMETER OptimizeImages
    Runs PNGOptimizerCL on supported image files.
 .PARAMETER Recurse
    Runs CNC recursively.
+.PARAMETER ReduceOutput
+   Reduces output to just problems that will trigger the validator.
+.PARAMETER ReducedOutput
+   Reduces output to just problems that will trigger the validator.
 .PARAMETER Update
-   Will re-write out your nuspec file; e.g. change to UTF-8 w/o BOM.
+   Re-writes your nuspec file; e.g. change to UTF-8 w/o BOM.
 .PARAMETER UpdateAll
-   Rights all wrongs.
+   Rights all wrongs!
 .PARAMETER UpdateImageURLs
    Updates image URLs with Staticaly CDN URLs (default).
 .PARAMETER UpdateScripts
-   Will re-write out your PowerShell scripts, e.g. change to UTF-8 w/BOM, and add ErrorActionPreference=Stop.
+   Re-writes your PowerShell scripts with fixes, e.g. change to UTF-8 w/BOM, and add ErrorActionPreference=Stop.
 .PARAMETER UpdateXMLComment
    Updates the XML comment for UTF-8 checking.
 .PARAMETER UpdateXMLDeclaration
@@ -97,6 +118,7 @@ param (
     [switch]$OpenValidatorInfo,
     [switch]$Recurse,
     [switch]$ReduceOutput,
+    [switch]$ReducedOutput,
     [switch]$ShowFooter,
     [switch]$ShowHeader,
     [switch]$ShowPackageNotes,
@@ -113,10 +135,8 @@ param (
     [switch]$WhatIf
  )
 
-if (!$ReduceOutput) {
-    Write-Host "CNC.ps1 v2021.12.20 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
-    Write-Host "Copyleft 2018-2021 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
-}
+Write-Host "CNC.ps1 v2023.05.14 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "Copyleft 2018-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
@@ -139,6 +159,20 @@ $StaticlyCDN  = $True
 $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one."
 $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+
+## Import preferences - see comments in CNC.config for settings 
+#[xml]$ConfigFile = Get-Content "$scriptDir\CNC.config"
+#$UpdateAll       = $ConfigFile.Settings.Preferences.UpdateAll
+#$CDN             = $ConfigFile.Settings.Preferences.CDN
+#$MakeBackups     = $ConfigFile.Settings.Preferences.MakeBackups
+#$OptimizeImages  = $ConfigFile.Settings.Preferences.OptimizeImages
+#$Header          = $ConfigFile.Settings.Preferences.Header
+#$Footer          = $ConfigFile.Settings.Preferences.Footer
+#$PackageNotes    = $ConfigFile.Settings.Preferences.PackageNotes
+
+#$UseHeader       = $ConfigFile.Settings.Preferences.UseHeader
+#$UseFooter       = $ConfigFile.Settings.Preferences.UseFooter
+#$UsePackageNotes = $ConfigFile.Settings.Preferences.UsePackageNotes
 
 if ($help) {
     Get-Help $MyInvocation.MyCommand.Definition -Detailed
@@ -197,6 +231,8 @@ if ($OpenValidatorInfo) {
 	return
 }
 
+if ($ReducedOutput) {$ReduceOutput=$True}
+
 if ($Update) {$GLOBAL:UpdateNuspec=$True}
 
 if ($UpdateAll) {
@@ -246,20 +282,6 @@ if (!(Test-Path $path)){
 	return
    }
    
-## Import preferences - see comments in CNC.config for settings 
-#[xml]$ConfigFile = Get-Content "$scriptDir\CNC.config"
-#$UpdateAll       = $ConfigFile.Settings.Preferences.UpdateAll
-#$CDN             = $ConfigFile.Settings.Preferences.CDN
-#$MakeBackups     = $ConfigFile.Settings.Preferences.MakeBackups
-#$OptimizeImages  = $ConfigFile.Settings.Preferences.OptimizeImages
-#$Header          = $ConfigFile.Settings.Preferences.Header
-#$Footer          = $ConfigFile.Settings.Preferences.Footer
-#$PackageNotes    = $ConfigFile.Settings.Preferences.PackageNotes
-
-#$UseHeader       = $ConfigFile.Settings.Preferences.UseHeader
-#$UseFooter       = $ConfigFile.Settings.Preferences.UseFooter
-#$UsePackageNotes = $ConfigFile.Settings.Preferences.UsePackageNotes
-   
 # functions ------------------------------------------------------------------------------------------------
 
 # Borrowed and slightly modified from
@@ -296,14 +318,19 @@ if ($NuspecIconURL -Match '.SVG') {
 	return
 	}
 Write-Host "(Downloading icon)" -NoNewLine -Foreground Magenta
+# TDL - fix display error here
+Validate-URL "<iconUrl>" $NuspecIconURL
 (New-Object System.Net.WebClient).DownloadFile($NuspecIconURL, "$pwd\iconURL.image")
 Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                  `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
 if (Test-Path "$pwd\iconURL.image"){
+	$ErrorAction = 'SilentlyContinue'
     add-type -AssemblyName System.Drawing
+	$ErrorActionPreference = 'SilentlyContinue'
     $image = New-Object System.Drawing.Bitmap "$pwd\iconURL.image"
     $height=$image.height
     $width=$image.width
     $image.dispose()
+	$ErrorActionPreference = 'Continue'
     if (($height -lt 128) -and ($width -lt 128)){
 	if (!$height){$height="?"}
 	if (!$width){$width="?"}
@@ -352,8 +379,8 @@ function Test-PowerShellSyntax
 # Validate that URL elements are actually URLs and verify the URLs are good
 # Thanks https://stackoverflow.com/questions/23760070/the-remote-server-returned-an-error-401-unauthorized
 function Validate-URL([string]$element,[string]$url){
-if (($url -match "http://") -or ($url -match "https://")){
-     Write-Host "(Validating URL)" -NoNewLine -Foreground Magenta
+if (($url -match 'http://') -or ($url -match 'https://')){
+	 Write-Host "(Validating URL)" -NoNewLine -Foreground Magenta
      $HTTP_Response = $null
      $HTTP_Request = [System.Net.WebRequest]::Create($url)
      try{
@@ -366,9 +393,13 @@ if (($url -match "http://") -or ($url -match "https://")){
 		   Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
            Write-Warning ("  ** $element - the URL:`n              $url`n site might be OK, status code:" + $HTTP_Status)
 		   if ($element -notmatch ".PS1"){
-		        Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+			   if (!$ReduceOutput) {
+		           Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+			   }
 		      } else {
-		        Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+				  if (!$ReduceOutput) {
+					  Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+				  }
 			   }
 		   $GLOBAL:Suggestions++
 		   $GLOBAL:ValidURL=$False
@@ -379,16 +410,34 @@ if (($url -match "http://") -or ($url -match "https://")){
 		  Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
 		  if ($element -notmatch ".PS1"){  	      
 		      Write-Host "WARNING:   ** $element - the URL:`n              $url`n              is probably bad, status code: $HTTP_Status. This will trigger a message from the verifier:" -Foreground Red
-	          Write-Host "           ** Requirement: The $element element in the nuspec file should be a valid Url. Please correct this" -Foreground Cyan
-		      Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+			  if (!$ReduceOutput) {
+				  Write-Host "           ** Requirement: The $element element in the nuspec file should be a valid Url. Please correct this" -Foreground Cyan
+		          Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
+			  }
 	          $GLOBAL:Required++
 		  } else {
+			if ($url -match '$') {
+				if (!$ReduceOutput) {
+				    Write-Host "FYI:       ** $element URL appears to have a script specfic variable in it, skipping URL validation..." -Foreground Green
+				}
+				$GLOBAL:FYIs++
+				return
+				}
 		    Write-Warning ("  ** $element - the URL:`n              $url`n              site might be OK, status code: $HTTP_Status.")
 		    Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
 		    $GLOBAL:Suggestions++
 		    }
 		  $GLOBAL:ValidURL=$False
         }
+	if ($url -match 'http://'){
+		 Write-Host "FYI:       ** $element - URL is using HTTP instead of HTTPS which is more secure." -Foreground Yellow
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** $element - Suggestion: Consider checking if:" -Foreground Cyan
+			 Write-Host "              $url"  -Foreground Cyan
+			 Write-Host "              is available using https:// instead." -Foreground Cyan
+		 }
+		 $GLOBAL:FYIs++
+	 }
    }
 }
 
@@ -426,13 +475,14 @@ function Check-VerificationFile{
 function Check-Binaries{
   $IncludedBinaries=(Get-ChildItem -Path $path -Include $BinaryExtensions -Recurse)
   if ($IncludedBinaries){
-      Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
-      if (!$ReduceOutput) {
-        Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -Foreground Cyan
+	  if (!$ReduceOutput) {
+          Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
+          Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -Foreground Cyan
 	  }
       $GLOBAL:Notes++
 	  Check-LicenseFile
 	  Check-VerificationFile
+	  Check-ChocolateyInstall
      }
 }
 
@@ -441,7 +491,9 @@ function Check-OSIndexFiles{
   $NotWanted=(Get-ChildItem -Path $path -Include "*.ds_store","thumbs.db" -Recurse)
   if ($NotWanted){
       Write-Host "WARNING:   ** Operating System index files found in directory. If found in the package, this will trigger a message`n              from the verifier:" -Foreground Red
-      Write-Host "           ** Required: The package contains Operating System index files, .ds_store or thumbs.db. Please remove all`n              index files from the package. " -Foreground Cyan
+	  if (!$ReduceOutput) {
+          Write-Host "           ** Required: The package contains Operating System index files, .ds_store or thumbs.db. Please remove all`n              index files from the package. " -Foreground Cyan
+	  }
 	   $GLOBAL:Required++
      }
 }
@@ -451,10 +503,14 @@ function Check-OSIndexFiles{
 function Check-PNGs{
   $ImageFiles=(Get-ChildItem -Path $path -Include *.PNG,*.BMP,*.GIF,*.TGA -Recurse)
   if ($ImageFiles){
-      Write-Host 'FYI:       ** Binary files - PNG, BMP, GIF, or TGA image file(s) found.' -Foreground Yellow
+	  if (!$ReduceOutput) {
+          Write-Host 'FYI:       ** Binary files - PNG, BMP, GIF, or TGA image file(s) found.' -Foreground Yellow
+	  }
 	  $GLOBAL:FYIs++
 	  if (!$OptimizeImages){
-	  Write-Host '           ** Suggestion: Consider running CNC -OptimizeImages to optimize your image file(s).' -Foreground Cyan
+		  if (!$ReduceOutput) {
+	          Write-Host '           ** Suggestion: Consider running CNC -OptimizeImages to optimize your image file(s).' -Foreground Cyan
+		  }
 	  $GLOBAL:Suggestions++
 	 }
     }
@@ -487,15 +543,19 @@ function Check-PackageInternalFilesIncluded{
 # check if header template is in the description
 function Check-Header{
   $NuspecDescription=$NuspecDescription.Trim()
-  if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){ 
-      Write-Host "FYI:       ** <description> - header template found." -Foreground Green
+  if ($NuspecDescription.StartsWith("***") -or $NuspecDescription.StartsWith("---") -or $NuspecDescription.StartsWith("___")){
+	  if (!$ReduceOutput) {
+          Write-Host "FYI:       ** <description> - header template found." -Foreground Green
+	  }
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundHeader=$True
      } else {
        $GLOBAL:FoundHeader=$False
        $GLOBAL:Suggestions++
-       if (!($AddPackageNotes) -and !($ReduceOutput)) {	 
-	       Write-Host '           ** Suggestion: Consider adding a header and help propagate (unofficial) choco:// Protocol support' -Foreground Cyan
+       if (!($AddPackageNotes) -and !($ReduceOutput)) {
+		   if (!$ReduceOutput) {
+	           Write-Host '           ** Suggestion: Consider adding a header and help propagate (unofficial) choco:// Protocol support' -Foreground Cyan
+		   }
 	      }
 	   }
 }
@@ -503,7 +563,9 @@ function Check-Header{
 # add header template to <description>
 function Add-Header{
   if ($GLOBAL:FoundHeader){
-      Write-Host "FYI:       ** <description> - header template previously added." -Foreground Cyan
+	  if (!$ReduceOutput) {
+          Write-Host "FYI:       ** <description> - header template previously added." -Foreground Cyan
+	  }
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	  }	
@@ -529,7 +591,9 @@ function Add-Header{
 function Check-Footer{
   $NuspecDescription=$NuspecDescription.Trim()
   if ($NuspecDescription.EndsWith("***") -or $NuspecDescription.EndsWith("---") -or $NuspecDescription.EndsWith("___")){
-      Write-Host "FYI:       ** <description> - footer template found." -Foreground Green
+	  if (!$ReduceOutput) {
+           Write-Host "FYI:       ** <description> - footer template found." -Foreground Green
+	    }
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundFooter=$True
      } else {
@@ -540,7 +604,9 @@ function Check-Footer{
 # add footer template to <description>
 function Add-Footer{
   if ($GLOBAL:FoundFooter){
-      Write-Host "FYI:       ** <description> - footer template previously added." -Foreground Cyan
+	  if (!$ReduceOutput) {
+          Write-Host "FYI:       ** <description> - footer template previously added." -Foreground Cyan
+	  }
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	 }	
@@ -567,7 +633,9 @@ function Add-Footer{
 function Check-PackageNotes{
   $NuspecDescription=$NuspecDescription.Trim()
   if (($NuspecDescription -match 'PACKAGE NOTES') -or ($NuspecDescription -match 'PACKAGE RELEASE NOTES')){
-      Write-Host "FYI:       ** <description> - package release notes found." -Foreground Green
+	  if (!$ReduceOutput) {
+          Write-Host "FYI:       ** <description> - package release notes found." -Foreground Green
+	  }
 	  $GLOBAL:FYIs++
 	  $GLOBAL:FoundPackageNotes=$True
      } else {
@@ -582,7 +650,9 @@ function Check-PackageNotes{
 # add package notes template to <description>
 function Add-PackageNotes{
   if ($GLOBAL:FoundPackageNotes){
-      Write-Host "FYI:       ** <description> - package notes template previously added." -Foreground Cyan
+	  if (!$ReduceOutput) {
+          Write-Host "FYI:       ** <description> - package notes template previously added." -Foreground Cyan
+	  }
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	 }	
@@ -608,9 +678,13 @@ function Add-PackageNotes{
 function Check-Markdown([string]$element,[string]$text){
   if ($NuspecDescription -match "#\w") { # alphanumeric whitespace only (no /, [, etc)
       Write-Host "WARNING:   ** $element - invalid Markdown heading syntax found. This will trigger a message from the verifier:" -Foreground Red
-	  Write-Host "           ** Required: Package Description should not contain invalid Markdown Headings."  -Foreground Cyan
-      $GLOBAL:Required++
+	  if (!$ReduceOutput) {
+   	      Write-Host "           ** Required: Package Description should not contain invalid Markdown Headings."  -Foreground Cyan
 	  }
+	  $lines=$NuspecDescription.Split([Environment]::NewLine)
+      $lines | % {if ($_ -match '#\w') {Write-Host "           ** $element - $_" -Foreground Red}}
+      $GLOBAL:Required++
+	}
 }
 
 # TDL
@@ -627,11 +701,17 @@ $PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packag
 	  return
 	 } 
    $PackagePageInfo = (Invoke-WebRequest -DisableKeepAlive -Uri "https://chocolatey.org/packages/$NuspecID")
-   if ($PackagePageInfo -match "This package was approved as <a href=""https://chocolatey.org/faq#what-is-a-trusted-package"">a trusted package"){
+   if ($PackagePageInfo -match 'a trusted package'){
 	   if (!$ReduceOutput) {
          Write-Host "FYI:       ** $NuspecID is a trusted package. (Congrats!)" -Foreground Green
 	   }
        $GLOBAL:FYIs++
+	  }
+   if ($PackagePageInfo -match 'Verification Testing Exemption'){
+	   if (!$ReduceOutput) {
+         Write-Host "FYI:       ** $NuspecID is exempted from verification testing." -Foreground Green
+       }
+	   $GLOBAL:FYIs++
 	  }
    if ($PackagePageInfo -match 'All Checks are Passing'){
 	   if (!$ReduceOutput) {
@@ -641,16 +721,22 @@ $PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packag
 	  }
    if (($NuspecID -ne 'choco-nuspec-checker') -and ($PackagePageInfo -match '
 Some Checks Have Failed or Are Not Yet Complete')){
-	   Write-Host "FYI:       ** $NuspecID current status: 
+	   if (!$ReduceOutput) {
+	        Write-Host "FYI:       ** $NuspecID current status: 
 Some Checks Have Failed or Are Not Yet Complete" -Foreground Red
+	   }
 	   $GLOBAL:FYIs++
 	  }
    if ($PackagePageInfo -match 'There are versions of this package awaiting moderation'){
-	   Write-Host "FYI:       ** $NuspecID may have submitted/unapproved versions pending moderation." -Foreground Yellow
+	   if (!$ReduceOutput) {
+	       Write-Host "FYI:       ** $NuspecID has submitted versions pending moderation." -Foreground Yellow
+	   }
 	   $GLOBAL:FYIs++
 	  }
    if ($PackagePageInfo -match 'Waiting for Maintainer'){
-	   Write-Host "FYI:       ** $NuspecID may have a version waiting for corrective action." -Foreground Yellow
+	   if (!$ReduceOutput) {
+	       Write-Host "FYI:       ** $NuspecID may have a version waiting for corrective action." -Foreground Yellow
+	   }
 	   $GLOBAL:FYIs++
 	  }
 }
@@ -782,11 +868,38 @@ function Check-PS1EAP($ScriptFile){
 	   if ($UpdateScripts){
 	       Write-Host "           ** $ScriptFile - recommended ErrorActionPreference statement has been added." -Foreground Green
 	   } else {
-         Write-Warning "  ** $ScriptFile - is missing the recommended ErrorActionPreference statement."	   
-         Write-Host "           ** Suggestion: Consider running CNC -UpdateScripts to add it." -Foreground Cyan
+         Write-Warning "  ** $ScriptFile - is missing the recommended ErrorActionPreference statement."
+		 if (!$ReduceOutput){
+             Write-Host "           ** Suggestion: Consider running CNC -UpdateScripts to add it." -Foreground Cyan
+		 }
          $GLOBAL:Suggestions++
 	     return $False
 	   }
+    }
+}
+
+# checks chocolateyinstall for problems
+function Check-ChocolateyInstall{
+  $checks=Get-Content tools\chocolateyInstall.ps1
+  if (($checks -match 'url') -and ($checks -match 'Install-ChocolateyPackage')) {
+	  Write-Host "FYI:       ** CHOCOLATEYINSTALL.PS1 uses Install-ChocolateyPackage (for downloading files to install) instead of`n              Install-ChocolateyInstallPackage (for installing embedded files)." -Foreground Yellow
+	  $GLOBAL:Suggestions++
+    }
+  if (($checks -match 'url') -and ($checks -match 'Install-ChocolateyZipPackage')) {
+	  Write-Host "FYI:       ** CHOCOLATEYINSTALL.PS1 uses Install-ChocolateyZipPackage (for downloading files to unzip) instead of`n              Get-ChocolateyUnzip (for unzipping embedded files)."  -Foreground Yellow
+	  $GLOBAL:Suggestions++
+    }
+  if (($checks -match 'url') -and ($checks -notmatch 'checksum')) {
+	  Write-Host "WARNING:   ** CHOCOLATEYINSTALL.PS1 downloads files but doesn't include checksums." -Foreground Red 
+# TDL: Most likely causes a validator error but I need to find and quote it.
+	  $GLOBAL:Suggestions++
+    }
+  if ($checks -match 'chocolateyToolsLocation' -or $checks -match 'chocolateyBinRoot' -or $checks -match 'chocolatey_bin_root' -or $checks -match 'chocolateyPackageFolder' -or $checks -match 'packageFolder' -or $checks -match 'chocolateyChecksum32' -or $checks -match 'chocolateyChecksum64' -or $checks -match 'chocolateyChecksumType32' -or $checks -match 'chocolateyChecksumType64' -or $checks -match 'downloadCacheAvailable'){
+	  Write-Host "WARNING:   ** CHOCOLATEYINSTALL.PS1 uses private enviroment varialbes. This will trigger a message from the verifier:" -Foreground Red
+	  if (!$ReduceOutput) {
+		  Write-Host "           ** Required: Private environment variables are used in automation scripts. Please correct this..." -Foreground Cyan
+	  }
+	  $GLOBAL:Required++
     }
 }
 
@@ -795,12 +908,16 @@ function Add-PS1EAP($ScriptFile){
   if ($scriptFile -match "UPDATE.PS1") {return}
   if ($UpdateScripts -and !$WhatIf){
       if ($MakeBackups){Copy-Item "$ScriptFile" "$ScriptFile.CNC.bak" -Force}
-      $header = "`$ErrorActionPreference = 'Stop'"
-      $Body=Get-Content $ScriptFile
-      $NewContent=$header+$Body
-      Write-Output $header $body | Out-File $ScriptFile
-	  $GLOBAL:Fixes++
-	  }
+          $header = "`$ErrorActionPreference = 'Stop'"
+          $Body=Get-Content $ScriptFile
+          $NewContent=$header+$Body
+          Write-Output $header $body | Out-File $ScriptFile
+	      $GLOBAL:Fixes++
+	    } else {
+          if ($WhatIf -and !$ReduceOutput){
+              Write-Host "CNC did not add ErrorActionPreference statement, -WhatIf parameter was used." -Foreground Magenta
+	        }
+	    }
 }
 
 # Re-write PS script as UTF-8 w/BOM
@@ -808,25 +925,28 @@ function Update-PS1($ScriptFile){
   if ($scriptFile -match "UPDATE.PS1") {return}
   if ($UpdateScripts -and !$WhatIf){
       if ($MakeBackups){Copy-Item "$ScriptFile" "$ScriptFile.CNC.bak" -Force}
-#	  Write-Host "           ** $ScriptFile - will be converted to UTF-8 w/ BOM and saved." -Foreground Green
-      $Body=Get-Content $ScriptFile
-      Write-Output $Body | Out-File $ScriptFile
-	  $GLOBAL:Fixes++
-	  }
+          $Body=Get-Content $ScriptFile
+          Write-Output $Body | Out-File $ScriptFile
+	      $GLOBAL:Fixes++
+	    } else {
+          if ($WhatIf -and !$ReduceOutput){
+              Write-Host "CNC did not update your scripts, -WhatIf parameter was used." -Foreground Magenta
+	        }
+	    }
 }
 
 # Check chocolateyInstall.ps1 for SourceForge download links
 function Check-DiscouragedDownloadLinks{
 if (Test-Path $path\tools\chocolateyInstall.ps1){
    $test=Get-Content $path\tools\chocolateyInstall.ps1
-    if ($test -match "sourceforge"){
+    if (($test -match 'sourceforge') -and ($test -match 'url')){
         Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses SourceForge as download source. This will trigger a message from the verifier:"
 	    if (!$ReduceOutput) {
           Write-Host "           ** Guideline: Using SourceForge as the download source of installers is not recommended. Please consider an`n              alternative, official distribution location if one is available." -Foreground Cyan
 	    }
         $GLOBAL:Guidelines++
        }
-    if ($test -match "fosshub"){
+    if (($test -match 'fosshub') -and ($test -match 'url')){
         Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses FossHub as download source."
 	    if (!$ReduceOutput) {
           Write-Host "           ** Guideline: In Dec. 2016 FossHub requested ""Please help us keep our costs down by not using scripts`n              to download software from our site.""" -Foreground Cyan
@@ -887,6 +1007,7 @@ function Update-XMLnsDeclaration{
 #Start running the actual script --------------------------------------------------------------------------------------------
 
 if ($recurse) {
+	$ErrorActionPreference='SilentlyContinue'
 	$folderlist = Split-Path (Get-ChildItem -Path $path -Recurse -Filter "*.nuspec").fullname
     } else {
 	  $folderlist = $path
@@ -898,25 +1019,27 @@ ForEach ($path in $folderlist) {
 #if (!$path) {$LocalnuspecFile = Get-Item -Path $path\*.nuspec}
 if ($path) {$LocalnuspecFile = Get-Item $path\*.nuspec}
 if (!($LocalnuspecFile)) {
-    Write-Host "           ** No .nuspec file found in $path" -Foreground Red
-	return
+    Write-Host "ERROR:   ** No .nuspec file found in $path" -Foreground Red
+	if (!$recurse) {return}
    }
 if ($LocalnuspecFile.count -gt 1){
-    Write-Host "           ** Multiple .nuspec files found in $path. Please remove or rename the extras." -Foreground Red
-	return
+    Write-Host "ERROR:   ** Multiple .nuspec files found in $path. Please remove the old ones." -Foreground Red
+	if (!$recurse) {return}
    }
 if ($LocalnuspecFile.length -lt 168){ # approximate value of a minimal blank nuspec template
-    Write-Host "           ** $LocalnuspecFile file appears to be blank or corrupt." -Foreground Red
-	return
+    Write-Host "ERROR:   ** $LocalnuspecFile file appears to be blank or corrupt." -Foreground Red
+	if (!$recurse) {return}
    }
 
 if (!(Test-XMLFile $LocalnuspecFile)){
-    Write-Warning "  ** $LocalnuspecFile is not a valid XML file."
-    Write-Host "FYI:     ** Common problems:" -Foreground Cyan
-    Write-Host "            choco pack will report: ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s." -Foreground Cyan
-    Write-Host "            choco pack will report: ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
-    Write-Host "            choco pack will report: ""The <tag> start tag on line x position x does not match the end tag of <tag>`n.                                    Line x, position x."" for elements with mismatched case.`n" -Foreground Cyan
-    break
+    Write-Host "ERROR:   ** $LocalnuspecFile is not a valid XML file." -Foreground Red
+	if (!$ReduceOutput) {
+        Write-Host "FYI:     ** Common problems:" -Foreground Cyan
+        Write-Host "            choco pack will report: ""An error occurred while parsing EntityName."" for unexpected/malformed ""&""'s." -Foreground Cyan
+        Write-Host "            choco pack will report: ""'<' is an unexpected token. The expected token is '>'."" for bad/unclosed elements." -Foreground Cyan
+        Write-Host "            choco pack will report: ""The <tag> start tag on line x position x does not match the end tag of <tag>`n.                                    Line x, position x."" for elements with mismatched case.`n" -Foreground Cyan
+	    if (!$recurse) {break}
+	}
 }
 
 if ($UpdateXMLns){
@@ -988,7 +1111,9 @@ if ($OpenURLs) {
 Check-OnlineStatus
 
 if (Test-Path 'update.ps1') {
-    Write-Host "FYI:       ** UPDATE.PS1 found. You must be smarter than the average bear..." -Foreground Green
+	if (!$ReduceOutput) {
+        Write-Host "FYI:       ** UPDATE.PS1 found. You must be smarter than the average bear..." -Foreground Green
+	}
 	$GLOBAL:FYIs++
 	}
 
@@ -1001,9 +1126,13 @@ if ($NuspecEncoding -ne 'ASCII or UTF-8 w/o BOM'){
 	     Write-Host "           ** $NuspecDisplayName will be converted to UTF-8 w/o BOM and saved." -Foreground Green
 		 $GLOBAL:Fixes++
 		 } else {
-		   Write-Host "           ** Guideline: You must save your files with UTF–8 character encoding without BOM." -Foreground Cyan
+			 if (!$ReduceOutput) {
+				 Write-Host "           ** Guideline: You must save your files with UTF–8 character encoding without BOM." -Foreground Cyan
+			 }
 		   $GLOBAL:Guidelines++
-		   Write-Host "           ** Suggestion: Consider running CNC -Update to re-write`n              $NuspecDisplayName to UTF-8 w/o BOM." -Foreground Cyan
+		   if (!$ReduceOutput) {
+			   Write-Host "           ** Suggestion: Consider running CNC -Update to re-write`n              $NuspecDisplayName to UTF-8 w/o BOM." -Foreground Cyan
+		   }
 		   $GLOBAL:Suggestions++
 	}
 }
@@ -1026,12 +1155,16 @@ if (!$nuspecFile.'#comment'){
 	    $GLOBAL:Fixes++
 	    $GLOBAL:UpdateNuspec=$True
 	} else {
-      Write-Warning "  ** The recommended XML comment to test UTF-8 encoding was not found."	
-      Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLComment to add a UTF-8 encoding test XML comment." -Foreground Cyan
+      Write-Warning "  ** The recommended XML comment to test UTF-8 encoding was not found."
+	  if (!$ReduceOutput) {
+		  Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLComment to add a UTF-8 encoding test XML comment." -Foreground Cyan
+	  }
 	  $GLOBAL:Suggestions++
 	  if ($nuspecFile.'#comment' -match 'Read this before creating packages'){
           Write-Host "WARNING:   ** XML comment contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  }
           $GLOBAL:Required++
 	  }
 	 }
@@ -1040,12 +1173,20 @@ if (!$nuspecFile.'#comment'){
 # check XML Namespace
 if ($NuspecXMLNamespace -ne "$XMLNamespace"){
     Write-Warning "  ** XML namespace declaration is $NuspecXMLNamespace"
-    Write-Host "           ** The current schema is $XMLNamespace" -Foreground Cyan
-    Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLNamespace to update the XML namespace declaration." -Foreground Cyan
+	if (!$ReduceOutput) {
+        Write-Host "           ** The current schema is $XMLNamespace" -Foreground Cyan
+        Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLNamespace to update the XML namespace declaration." -Foreground Cyan
+	}
 	$GLOBAL:Suggestions++
 }
 
-if ($GLOBAL:DelayedUpdateXMLnsDeclarationMessage) {Write-Host "           ** XML namespace declaration changed to http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Green}
+if ($GLOBAL:DelayedUpdateXMLnsDeclarationMessage -and !$WhatIf) {
+	Write-Host "           ** XML namespace declaration changed to http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd" -Foreground Green
+	} else {
+		if ($WhatIf -and !$ReduceOutput){
+			Write-Host "           ** XML namespace declaration NOT changed, due to -WhatIf" -Foreground Magenta
+		}
+	}
 
 # <authors> checks
 if (!($NuspecAuthors)) {
@@ -1054,12 +1195,16 @@ if (!($NuspecAuthors)) {
    } else {
      if ($NuspecAuthors -match "@"){
 	     Write-Host "WARNING:   ** <authors> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
-	     Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+		 if (!$ReduceOutput) {
+    	     Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+		 }
 		 $GLOBAL:Required++
 	    }
 	 if ($NuspecAuthors -cmatch '__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__'){
          Write-Host "WARNING:   ** <authors> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 		}
    }
@@ -1085,17 +1230,23 @@ if (!($NuspecCopyright)) {
 	} else {
 	  if ($NuspecCopyright.Length -lt 5) {
 	      Write-Host "WARNING:   ** <copyright> - is less than 5 characters. This will trigger a message from the verifier:" -Foreground Red
-		  Write-Host '           ** Requirements: If you are going to use copyright in the nuspec, please use more than 4 characters.' -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host '           ** Requirements: If you are going to use copyright in the nuspec, please use more than 4 characters.' -Foreground Cyan
+		  }
 		  $GLOBAL:Required++
 		  }
 	  if ($NuspecAuthors -match "@"){
 	      Write-Host "WARNING:   ** <copyright> - contains an e-mail address. This will trigger a message from the verifier:" -Foreground Red
-	      Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host '           ** Requirements: Email address should not be used in the Author and Copyright fields of the nuspec file. ' -Foreground Cyan
+		  }
           $GLOBAL:Required++
 	 }
 	 if ($NuspecCopyright -eq 'Year Software Vendor'){
          Write-Host "WARNING:   ** <copyright> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 	    }
 	}
@@ -1113,7 +1264,9 @@ if (!($NuspecDependencies)) {
 		  }
 	 if ($NuspecDependencies.dependency.id -eq 'chocolatey'){
 	     Write-Warning "  ** <dependencies> - ""chocolatey"" is a dependency. This will trigger a message from the verifier:"
-	     Write-Host "           ** Note: The package takes a dependency on Chocolatey. The reviewer will ensure the package uses a specific`n              Chocolatey feature that requires a minimum version." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Note: The package takes a dependency on Chocolatey. The reviewer will ensure the package uses a specific`n              Chocolatey feature that requires a minimum version." -Foreground Cyan
+		 }
 		 $GLOBAL:Notes++
 		 }
 	 $DependencyName=$NuspecDependencies.dependency.id
@@ -1172,36 +1325,42 @@ if (!$NuspecDescription){
      if ($NuspecDescription.Length -gt 4000) {
 		 $TotalChars=$NuspecDescription.Length
 	     Write-Host "WARNING:   ** <description> - is $TotalChars characters. Pushing the package will generate the error:" -Foreground Red
-		 Write-Host "           ** Failed to process request. 'This package had an issue pushing: A nuget package's Description property may`n              not be more than 4000 characters long.'. The remote server returned an error: (409) Conflict.." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Failed to process request. 'This package had an issue pushing: A nuget package's Description property may`n              not be more than 4000 characters long.'. The remote server returned an error: (409) Conflict.." -Foreground Cyan
+		 }
 		 $GLOBAL:Required++
 		 }
 	 if ($NuspecDescription -match "raw.githubusercontent"){
 		 if ($UpdateImageURLs){
-#             Write-Warning "  ** <description> - includes a GitHub raw link."
 			 Write-Host "           ** <description> - URL(s) updated to use $NewCDN." -Foreground Green
              $NuspecDescription=(Update-CDNURL "$NuspecDescription")
 		 } else {
 		   Write-Warning "  ** <description> - includes a GitHub raw link. Please change to a CDN such as:"
-           Write-Host "           ** $CDNlist" -Foreground Cyan
-		   Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+		   if (!$ReduceOutput) {
+			   Write-Host "           ** $CDNlist" -Foreground Cyan
+			   Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+		   }
 		   $GLOBAL:Suggestions++
           }
 	   }
      if ($NuspecDescription -match "cdn.rawgit.com"){
 		 if ($UpdateImageURLs){
-#             Write-Warning "  ** <description> - includes a link to RawGit which will be going offline October 2019."
 			 Write-Host "           ** <description> - URL(s) updated to use $NewCDN." -Foreground Green
              $NuspecDescription=(Update-CDNURL "$NuspecDescription")
 		 } else {
 		   Write-Warning "  ** <description> - includes a link to RawGit which will be going offline October 2019. Please change to a`n              CDN such as:"
-           Write-Host "           ** $CDNlist" -Foreground Cyan
-		   Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+		   if (!$ReduceOutput) {
+			   Write-Host "           ** $CDNlist" -Foreground Cyan
+			   Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+		   }
 		   $GLOBAL:Suggestions++
 		 }
        }
 	  if ($NuspecDescription -cmatch '__REPLACE__MarkDown_Okay'){
           Write-Host "WARNING:   ** <description> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  }
           $GLOBAL:Required++
 	     }
 # below checking doesn't work as PowerShell will already give an error reading the nuspec
@@ -1221,7 +1380,9 @@ if (!$NuspecDescription){
 			 }
        }
      if (($nuspecFile.package.metadata.description.'#cdata-section') -and ($GLOBAL:UpdateNuspec)){
-        Write-Host "           ** <description> - CDATA found, not saving description changes." -Foreground Magenta
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** <description> - CDATA found, not saving description changes." -Foreground Magenta
+		 }
        } 
 }
 
@@ -1235,7 +1396,9 @@ if (!($NuspecDocsURL)) {
    } else {
      if ($NuspecDocsURL -match 'At what url are the software docs located'){
 	     Write-Host "WARNING:   ** <docsUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 		} else {
 		  Validate-URL "<docsUrl>" $NuspecDocsURL
@@ -1244,13 +1407,15 @@ if (!($NuspecDocsURL)) {
 
 # <files> checks
 if (!($NuspecFiles)) {
-    Write-Host 'FYI:       ** <files> - element is empty or missing. If missing, all of the following files will be packaged:' -Foreground Yellow
-    Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
-    Write-Host '           ** <files> - It is best practice to add:' -Foreground Yellow
-    Write-Host '                        <files>' -Foreground Yellow
-    Write-Host '                          <file src="tools\**" target="tools" />' -Foreground Yellow
-    Write-Host '                        <files>' -Foreground Yellow
-	$GLOBAL:FYIs++
+      Write-Host 'FYI:       ** <files> - element is empty or missing. If missing, all of the following files will be packaged:' -Foreground Yellow
+	  if (!$ReduceOutput) {
+          Get-ChildItem -Path $path -Recurse -Exclude *.nupkg,tools |% $_.file {Write-Host "           ** $_" -Foreground Cyan -ea SilentlyContinue}
+		  Write-Host '           ** <files> - It is best practice to add:' -Foreground Yellow
+          Write-Host '                        <files>' -Foreground Yellow
+          Write-Host '                          <file src="tools\**" target="tools" />' -Foreground Yellow
+          Write-Host '                        <files>' -Foreground Yellow
+		}
+	  $GLOBAL:FYIs++
 }
 
 # <iconUrl> checks
@@ -1263,7 +1428,9 @@ if (!($NuspecIconURL)) {
    } else {
      if ($NuspecIconURL -cmatch 'REPLACE_YOUR_REPO'){
 	     Write-Host "WARNING:   ** <iconUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 		}
      Validate-URL "<iconUrl>" $NuspecIconURL
@@ -1284,8 +1451,10 @@ if (!($NuspecIconURL)) {
 			Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
 		     Write-Warning "  ** <iconUrl> - uses a GitHub raw link. Please use a CDN such as:"
-             Write-Host "           ** $CDNlist" -Foreground Cyan		   
-		     Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+			 if (!$ReduceOutput) {
+				 Write-Host "           ** $CDNlist" -Foreground Cyan		   
+		         Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+			 }
 			 $GLOBAL:Suggestions++
 		   }
 		}
@@ -1295,8 +1464,10 @@ if (!($NuspecIconURL)) {
 			 Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
 		     Write-Warning "  ** <iconUrl> - uses RawGit which will be going offline October 2019. Please change to a CDN such as:"
-             Write-Host "           ** $CDNlist" -Foreground Cyan
-		     Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+			 if (!$ReduceOutput) {
+				 Write-Host "           ** $CDNlist" -Foreground Cyan
+		         Write-Host "           ** Suggestion: Consider running CNC -UpdateImageURLs to update it." -Foreground Cyan
+			 }
 			 $GLOBAL:Suggestions++
 		   }
        }
@@ -1309,7 +1480,9 @@ if (!($NuspecID)) {
 	} else {
      if (($NuspecID.Length -gt 20) -and (!$NuspecID.Contains("-")) -and (!$NuspecID.Contains("."))) {
 	     Write-Warning "  ** <id> - is greater than 20 characters. This will trigger a message from the verifier:"
-	     Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the`n              package for one that will be pushed with a new id that meets the package naming guidelines." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Note: If this is a new package that has never been approved, moderators will review and reject the`n              package for one that will be pushed with a new id that meets the package naming guidelines." -Foreground Cyan
+		 }
 		 $GLOBAL:Notes++
 	    }
 	 if ($NuspecID -cmatch "[A-Z]") {
@@ -1318,7 +1491,9 @@ if (!($NuspecID)) {
 		}
 	 if (($NuspecID.Contains(".")) -and (!$NuspecID.Contains(".install")) -and (!$NuspecID.Contains(".portable")) -and (!$NuspecID.Contains(".extension"))) {
 	      Write-Warning "  ** <id> - includes a '.'. This will trigger a message from the verifier:"
-		  Write-Host "           ** Note: The package id includes dots (.). Usually the package id is separated by '-' instead of dots`n              (except in the case of *.install and *.portable). The reviewer will ensure this is not a new package."  -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host "           ** Note: The package id includes dots (.). Usually the package id is separated by '-' instead of dots`n              (except in the case of *.install and *.portable). The reviewer will ensure this is not a new package."  -Foreground Cyan
+		  }
 		  $GLOBAL:Notes++
 		 }
 	 if ($NuspecID.Contains(".config")){
@@ -1344,7 +1519,9 @@ if (!($NuspecLicenseURL)) {
 		}
      if ($NuspecLicenseURL -cmatch 'REMOVE_OR_FILL_OUT'){
          Write-Host "WARNING:   ** <licenseUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 		} else {
           Validate-URL "<licenseUrl>" $NuspecLicenseURL
@@ -1369,12 +1546,16 @@ if (!($NuspecOwners)) {
    } else {
      if ($NuspecOwners -cmatch 'REPLACE_YOUR_NAME'){
          Write-Host "WARNING:   ** <owners> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 	    }
      if ($NuspecAuthors -eq $NuspecOwners){
         Write-Warning "  ** <owners> and <authors> elements are the same. This will trigger a message from the verifier:"
-        Write-Host "           ** Note: The package maintainer field (owners) matches the software author field (authors) in the nuspec.`n              The reviewer will ensure that the package maintainer is also the software author." -Foreground Cyan
+		if (!$ReduceOutput) {
+			Write-Host "           ** Note: The package maintainer field (owners) matches the software author field (authors) in the nuspec.`n              The reviewer will ensure that the package maintainer is also the software author." -Foreground Cyan
+		}
 		$GLOBAL:Notes++
 		}
    }
@@ -1389,7 +1570,9 @@ if (!($NuspecPackageSourceURL)) {
    } else {
      if ($NuspecPackageSourceURL -cmatch 'Where is this Chocolatey package located'){
 	     Write-Host "WARNING:   ** <packageSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 		} else {
           Validate-URL "<packageSourceUrl>" $NuspecPackageSourceURL
@@ -1406,7 +1589,9 @@ if (!$NuspecProjectSourceURL) {
    } else {
      if ($NuspecProjectSourceURL -match 'Software Source Location'){
          Write-Host "WARNING:   ** <projectSourceUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 		} else {
           Validate-URL "<projectSourceUrl>" $NuspecProjectSourceURL
@@ -1423,12 +1608,16 @@ if (!$NuspecProjectSourceURL) {
 # <projectUrl> checks
 if (!($NuspecProjectURL)) {
     Write-Host "WARNING:   ** <projectUrl> - element is empty. This will trigger a message from the verifier:" -Foreground Red
-    Write-Host "           ** Requirement: ProjectUrl (projectUrl) in the nuspec file is required. Please add it to the nuspec." -Foreground Cyan
+	if (!$ReduceOutput) {
+		Write-Host "           ** Requirement: ProjectUrl (projectUrl) in the nuspec file is required. Please add it to the nuspec." -Foreground Cyan
+	}
 	$GLOBAL:Required++
    } else {
      if ($NuspecProjectURL -cmatch 'REMOVE_OR_FILL_OUT'){
          Write-Host "WARNING:   ** <projectUrl> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 	   } else {
          Validate-URL "<projectUrl>" $NuspecProjectURL
@@ -1449,7 +1638,9 @@ if (!($NuspecReleaseNotes)) {
      Check-Markdown "<releaseNotes>" $NuspecReleaseNotes
      if ($NuspecReleaseNotes -cmatch 'REPLACE_OR_REMOVE'){
          Write-Host "WARNING:   ** <releaseNotes> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-         Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		 }
          $GLOBAL:Required++
 	    }
 	 }
@@ -1478,7 +1669,9 @@ if (!($NuspecSummary)) {
 	} else {
 	  if ($NuspecSummary -cmatch '__REPLACE__'){
           Write-Host "WARNING:   ** <summary> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  if (!$ReduceOutput) {
+			   Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  }
           $GLOBAL:Required++
 		 }
      }
@@ -1494,7 +1687,9 @@ if (!($NuspecTags)) {
 		}
 	  if ($NuspecTags -match "admin"){
          Write-Host "FYI:       ** <tags> - there is a tag named ""admin"" which is now deemed unnecessary." -Foreground Yellow
-         Write-Host '           ** The majority of Chocolatey packages require admin rights to install, this is considered default behavior.' -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host '           ** The majority of Chocolatey packages require admin rights to install, this is considered default behavior.' -Foreground Cyan
+		 }
 		 $GLOBAL:FYIs++
 		}	
 	  if ($NuspecTags -match "chocolatey"){
@@ -1506,12 +1701,16 @@ if (!($NuspecTags)) {
 		}
 	  if ($NuspecTags -match "notsilent"){
          Write-Warning "  ** <tags> - there is a tag named ""notsilent"" which will trigger a message from the verifier:"
-         Write-Host '           ** Note: notSilent tag is being used. The reviewer will ensure this is being used appropriately. ' -Foreground Cyan
+		 if (!$ReduceOutput) {
+			 Write-Host '           ** Note: notSilent tag is being used. The reviewer will ensure this is being used appropriately. ' -Foreground Cyan
+		 }
 		 $GLOBAL:Notes++
 		}
 	  if ($NuspecTags -cmatch 'SPACE_SEPARATED'){
           Write-Host "WARNING:   ** <tags> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  }
           $GLOBAL:Required++
 		 }
     }
@@ -1537,21 +1736,13 @@ if (!($NuspecVersion)) {
 	} else {
 	  if ($NuspecVersion -match "REPLACE"){
           Write-Host "WARNING:   ** <version> - contains templated values. This will trigger a message from the verifier:" -Foreground Red
-          Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  if (!$ReduceOutput) {
+			  Write-Host "           ** Requirement: Nuspec file contains templated values which should be removed." -Foreground Cyan
+		  }
           $GLOBAL:Required++
-		 }
-	  }
+		}
+	}
 
-#### BUG: error when run via Get-ChildItem | ?{if ($_.PSIsContainer){cls;cd $_.Name;cnc;cd ..;pause}} ###
-#% : Input name "(dir name or package name)" cannot be resolved to a method.
-#At C:\ProgramData\chocolatey\bin\CNC.ps1:1198 char:40
-#+ Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
-#+                                        ~~~~~~
-#    + CategoryInfo          : InvalidArgument: (S:\dev\GitHub\C...ateyinstall.ps1:PSObject) [ForEach-Object],PSArgumentException
-#    + FullyQualifiedErrorId : MethodNotFound,Microsoft.PowerShell.Commands.ForEachObjectCommand
-
-# check PowerShell script files, out of scope, but nice to have
-# This should probably be broken down into small functions
 Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
 if ($debug){
 write-host "PATH = $path" -foreground red -background white
@@ -1567,15 +1758,25 @@ write-host "FOREACH = $_" -foreground red -background white
 		  if ($PS1Encoding -ne 'UTF-8 w/ BOM'){
 		      if (!$UpdateScripts){
 			  if ($scriptFile -match "UPDATE.PS1") {return}
-		          Write-Warning "  ** $ScriptFile - is encoded using $PS1Encoding."
-			      Write-Host "           ** PowerShell scripts need to be saved in UTF–8 with BOM." -Foreground Cyan
-		          Write-Host "           ** Suggestion: Consider running CNC -UpdateScripts to re-write $ScriptFile to UTF-8 w/ BOM." -Foreground Cyan
-			      $GLOBAL:Suggestions++
+		        Write-Warning "  ** $ScriptFile - is encoded using $PS1Encoding."
+				if (!$ReduceOutput) {
+					Write-Host "           ** PowerShell scripts need to be saved in UTF–8 with BOM." -Foreground Cyan
+		            Write-Host "           ** Suggestion: Consider running CNC -UpdateScripts to re-write $ScriptFile to UTF-8 w/ BOM." -Foreground Cyan
+				}
+			    $GLOBAL:Suggestions++
 			  } else {
-			    Write-Host "           ** $ScriptFile - will be converted to UTF-8 w/ BOM and saved." -Foreground Green
-			    Update-PS1 $_
+				if (!$WhatIf){
+					 if (!$ReduceOutput){
+			             Write-Host "           ** $ScriptFile - will be converted to UTF-8 w/ BOM and saved." -Foreground Green
+			             Update-PS1 $_
+					 }
+				} else {
+					if (!$ReduceOutput){
+   					    Write-Host "           ** $ScriptFile - will NOT be converted to UTF-8 w/ BOM and saved, -WhatIf option used." -Foreground Green
+					}
+				}
 			  }
-	         }
+	        }
 		  $ScriptError=Test-PowerShellSyntax ($_)
 		  if ($ScriptError.SyntaxErrorsFound){
 		      Write-Host "WARNING:   ** $ScriptFile - has PowerShell syntax errors." -Foreground Red
@@ -1585,22 +1786,26 @@ write-host "FOREACH = $_" -foreground red -background white
               $count=0
               $InstallScript=Get-Content $_
               $urlsfound = @()
-              $InstallScript | foreach-object {
+              $InstallScript | ForEach-Object {
                  if ($_ -match "\b(?:(?:https?|ftp|file)://|www\.|ftp\.)(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[A-Z0-9+&@#/%=~_|$])"){
                    $urlsfound += $matches[0]
 	               $validateurl=$urlsfound[$count]
                    Validate-URL "$ScriptFile" "$validateurl"
 	               $count++
-                  }
+                 }
               }
 			  if ($InstallScript -match "msiexec"){
 			      Write-Warning "  ** $ScriptFile calls msiexec - This will trigger a message from the verifier:"
-				  Write-Host "           ** Note: Package automation scripts make use of msiexec. The reviewer will ensure there is a valid reason`n              the package has not used the built-in helpers." -Foreground Cyan
+				  if (!$ReduceOutput) {
+					  Write-Host "           ** Note: Package automation scripts make use of msiexec. The reviewer will ensure there is a valid reason`n              the package has not used the built-in helpers." -Foreground Cyan
+				  }
 				  $GLOBAL:Notes++
 				  }
 		      if (($InstallScript -match 'cinst ') -or ($InstallScript -match 'choco install') -or ($InstallScript -match 'choco upgrade') -or ($InstallScript -match ' cup ')){
 		          Write-Host "WARNING:   ** $ScriptFile - uses a cinst, choco install, cup, or choco upgrade command." -Foreground Red
-			      Write-Host "           ** In automation scripts (.ps1/.psm1), the package has used a chocolatey command that should not be used.`n              Rather a dependency should be taken on a package. Please add dependencies to the nuspec." -Foreground Cyan
+				  if (!$ReduceOutput) {
+					  Write-Host "           ** In automation scripts (.ps1/.psm1), the package has used a chocolatey command that should not be used.`n              Rather a dependency should be taken on a package. Please add dependencies to the nuspec." -Foreground Cyan
+				  }
 			      $GLOBAL:Required++
                  }
           }
@@ -1641,7 +1846,7 @@ if (!$ReduceOutput) {
 
 if ($GLOBAL:UpdateNuspec) {
    if ($WhatIf){
-        Write-Host "CNC did NOT update $LocalnuspecFile, -WhatIf parameter was used." -Foreground Magenta
+        Write-Host "FYI:       ** CNC did NOT update $LocalnuspecFile, -WhatIf parameter was used." -Foreground Magenta
    } else {
 	Update-nuspec
 	}
@@ -1649,7 +1854,7 @@ if ($GLOBAL:UpdateNuspec) {
 
 if ($UpdateScripts) {
    if ($WhatIf){
-        Write-Host "CNC did NOT update your scripts, -WhatIf parameter was used." -Foreground Magenta
+        Write-Host "FYI:       ** CNC did NOT update your scripts, -WhatIf parameter was used." -Foreground Magenta
    }
 }
 
@@ -1663,24 +1868,20 @@ if ($recurse) {
 # main recurse foreach loop ends here
 }
 
-if (!$ReduceOutput) {
-    Write-Host "`nFound CNC.ps1 useful?" -Foreground White
-    Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
-    Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
-}
+Write-Host "`nFound CNC.ps1 useful?" -Foreground White
+Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
+Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
 return
 
 # TDL
 # Update CDN checking for "main" as well as "master" post 10/2020
 # Check validity of URLs in description, checked by the package verifier as of 01/11/2020
-# Reformat invalid Markdown headings automagically
+# ^ ALMOST: $NuspecDescription | Select-String -Pattern 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)' -AllMatches   | % { $_.Matches } `  | % { $_.Value } `  | Sort-Object ` | Get-Unique
+# ^ doesn't strip ) end of markdown [](), strips * in urls
+# Reformat invalid Markdown headings automagically (Possibly dangerous if URLs have # in them)
 # Move header, footer, and package notes into one XML config file
-# Could use a CNC...not updated...-WhatIf message when -UpdateXMLNamespace and -WhatIf are used
 # option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # Add option to save to an error log when recursivly checking files
-# MAYBE do full params statement and get rid of args checking - low priority
-# MAYBE check http links to see if https links are available and report if so - low priority
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
-# https://github.com/chocolatey/package-validator/wiki/ChecksumShouldBeUsed
-# There may be more new validator checking that can be addressed
+# Address new Validator changes: https://blog.chocolatey.org/2022/08/upcoming-changes-validator/
 # What else?

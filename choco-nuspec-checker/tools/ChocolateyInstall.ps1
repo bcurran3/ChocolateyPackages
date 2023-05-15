@@ -6,7 +6,7 @@ $script      = 'CNC.ps1'
 
 # Setup
 # New storage location moving forward for all my Chocolatey scripts
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) { New-Item -Path "$ENV:ChocolateyToolsLocation" -Name "BCURRAN3" -ItemType "directory" | Out-Null }
+if (!(Test-Path "$(Get-ToolsLocation)\BCURRAN3")) { New-Item -Path "$(Get-ToolsLocation)" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Migration
 # Move files before v2019.08.26 from old to new storage location
