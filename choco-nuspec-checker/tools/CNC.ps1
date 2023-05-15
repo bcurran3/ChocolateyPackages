@@ -135,7 +135,7 @@ param (
     [switch]$WhatIf
  )
 
-Write-Host "CNC.ps1 v2023.05.14 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2023.05.15 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -282,7 +282,7 @@ if (!(Test-Path $path)){
 	return
    }
    
-# functions ------------------------------------------------------------------------------------------------
+# BEGIN FUNCTIONS ------------------------------------------------------------------------------------------------
 
 # Borrowed and slightly modified from
 # https://blogs.technet.microsoft.com/samdrey/2014/03/26/determine-the-file-encoding-of-a-file-csv-file-with-french-accents-or-other-exotic-characters-that-youre-trying-to-import-in-powershell/
@@ -314,12 +314,10 @@ function Get-FileEncoding
 # https://lh3.googleusercontent.com/n6kpA-xZE_0iEy9A8WkJpGT45XB6MEq09t9UdBoIrCfwIoBm3CA9gqI13AqbBN6yx7GwVDjx=s26-h26-e365-rw
 function Get-ImageDimensions{
 if ($NuspecIconURL -Match '.SVG') {
-	Write-Host "           ** <iconUrl> - SVG image found. It's a vector Victor, there are no dimensions! Roger, over!" -Foreground Green
+	Write-Host "           ** <iconUrl> - SVG image found. It's a vector Victor - no dimensions. We have clearance, Clarence." -Foreground Green
 	return
 	}
 Write-Host "(Downloading icon)" -NoNewLine -Foreground Magenta
-# TDL - fix display error here
-Validate-URL "<iconUrl>" $NuspecIconURL
 (New-Object System.Net.WebClient).DownloadFile($NuspecIconURL, "$pwd\iconURL.image")
 Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                  `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
 if (Test-Path "$pwd\iconURL.image"){
@@ -409,7 +407,7 @@ if (($url -match 'http://') -or ($url -match 'https://')){
           $HTTP_Status = [regex]::matches($_.exception.message, "(?<=\()[\d]{3}").Value
 		  Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
 		  if ($element -notmatch ".PS1"){  	      
-		      Write-Host "WARNING:   ** $element - the URL:`n              $url`n              is probably bad, status code: $HTTP_Status. This will trigger a message from the verifier:" -Foreground Red
+		      Write-Host "WARNING:   ** $element - the URL:`n              $url`n              is possibly bad, status code: $HTTP_Status. This will trigger a message from the verifier:" -Foreground Red
 			  if (!$ReduceOutput) {
 				  Write-Host "           ** Requirement: The $element element in the nuspec file should be a valid Url. Please correct this" -Foreground Cyan
 		          Write-Host "           ** Suggestion: Consider using CNC's -OpenURLs option to open and view all URLs in the .nuspec." -Foreground Cyan
@@ -424,7 +422,9 @@ if (($url -match 'http://') -or ($url -match 'https://')){
 				return
 				}
 		    Write-Warning ("  ** $element - the URL:`n              $url`n              site might be OK, status code: $HTTP_Status.")
-		    Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+			if ($IncludedBinaries){
+				Write-Host "           ** Suggestion: Check your download link, it appears to be bad." -Foreground Cyan
+			}
 		    $GLOBAL:Suggestions++
 		    }
 		  $GLOBAL:ValidURL=$False
@@ -451,7 +451,9 @@ function Check-LicenseFile{
 	  $GLOBAL:FYIs++
 	 } else {
 	   Write-Host "WARNING:   ** Binary files - LICENSE.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
-	   Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip, etc) have been included without including a LICENSE.txt`n              file. This file is required when including binaries " -Foreground Cyan
+	   if ($IncludedBinaries){
+		   Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip, etc) have been included without including a LICENSE.txt`n              file. This file is required when including binaries " -Foreground Cyan
+	   }
 	   $GLOBAL:Required++
       }
 }
@@ -466,7 +468,9 @@ function Check-VerificationFile{
       $GLOBAL:FYIs++
 	} else {
 	  Write-Host "WARNING:   ** Binary files - VERIFICATION.txt file NOT found. This will trigger a message from the verifier:" -Foreground Red
-	  Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip) have been included without including a VERIFICATION.txt`n              file. This file is required when including binaries" -Foreground Cyan
+	  if ($IncludedBinaries){
+		  Write-Host "           ** Requirements: Binary files (.exe, .msi, .zip) have been included without including a VERIFICATION.txt`n              file. This file is required when including binaries" -Foreground Cyan
+	  }
 	  $GLOBAL:Required++
     }
 }
@@ -475,14 +479,13 @@ function Check-VerificationFile{
 function Check-Binaries{
   $IncludedBinaries=(Get-ChildItem -Path $path -Include $BinaryExtensions -Recurse)
   if ($IncludedBinaries){
+      Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
 	  if (!$ReduceOutput) {
-          Write-Warning "  ** Binary files found in package. This will trigger a message from the verifier:"
           Write-Host "           ** Note: Binary files (.exe, .msi, .zip) have been included. The reviewer will ensure the maintainers have`n              distribution rights." -Foreground Cyan
 	  }
       $GLOBAL:Notes++
 	  Check-LicenseFile
 	  Check-VerificationFile
-	  Check-ChocolateyInstall
      }
 }
 
@@ -520,22 +523,30 @@ function Check-PNGs{
 function Check-PackageInternalFilesIncluded{
   if (Test-Path '`[Content_Types`].xml') {
       Write-Host "WARNING:   ** [Content_Types].xml file found. This will trigger a message from the verifier:" -Foreground Red
-	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  if (!$ReduceOutput) {
+		  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  }
 	   $GLOBAL:Required++
      }
   if (Test-Path *.psmd) {
       Write-Host "WARNING:   ** PSMD file(s) found. This will trigger a message from the verifier:" -Foreground Red
-	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  if (!$ReduceOutput) {
+		  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  }
 	   $GLOBAL:Required++
      }
   if (Test-Path *.rels) {
       Write-Host "WARNING:   ** RELS file(s) found. This will trigger a message from the verifier:" -Foreground Red
-	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  if (!$ReduceOutput) {
+		  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  }
 	   $GLOBAL:Required++
      }
   if (Test-Path _rels) {
       Write-Host "WARNING:   ** _RELS directory found. This will trigger a message from the verifier:" -Foreground Red
-	  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  if (!$ReduceOutput) {
+		  Write-Host "           ** Required: You have repackaged an existing package that you unpacked without removing some of the `n              packaging files from the original."  -Foreground Cyan
+	  }
 	   $GLOBAL:Required++
      }
 }
@@ -628,7 +639,6 @@ function Add-Footer{
     }
 }
 
-# TDL - check only head and tail of the description; maybe 5 lines
 # check if package release notes are in the description
 function Check-PackageNotes{
   $NuspecDescription=$NuspecDescription.Trim()
@@ -676,19 +686,19 @@ function Add-PackageNotes{
 
 # check Markdown header problems after chocolatey.org Sept. 2019 updates
 function Check-Markdown([string]$element,[string]$text){
-  if ($NuspecDescription -match "#\w") { # alphanumeric whitespace only (no /, [, etc)
+  if ($text -match "#\w") { # alphanumeric whitespace only (no /, [, etc)
       Write-Host "WARNING:   ** $element - invalid Markdown heading syntax found. This will trigger a message from the verifier:" -Foreground Red
 	  if (!$ReduceOutput) {
-   	      Write-Host "           ** Required: Package Description should not contain invalid Markdown Headings."  -Foreground Cyan
+   	      Write-Host "           ** Required: nuspec should not contain invalid Markdown Headings."  -Foreground Cyan
 	  }
-	  $lines=$NuspecDescription.Split([Environment]::NewLine)
+	  $lines=$text.Split([Environment]::NewLine)
       $lines | % {if ($_ -match '#\w') {Write-Host "           ** $element - $_" -Foreground Red}}
       $GLOBAL:Required++
 	}
 }
 
 # TDL
-# Add whitespace after #, ##, and ### when found followed by characters
+# Add whitespace after #, ##, and ### when found followed by characters, need to verify # is not part of a URL first
 function Fix-Markdown{
 }
 
@@ -878,31 +888,6 @@ function Check-PS1EAP($ScriptFile){
     }
 }
 
-# checks chocolateyinstall for problems
-function Check-ChocolateyInstall{
-  $checks=Get-Content tools\chocolateyInstall.ps1
-  if (($checks -match 'url') -and ($checks -match 'Install-ChocolateyPackage')) {
-	  Write-Host "FYI:       ** CHOCOLATEYINSTALL.PS1 uses Install-ChocolateyPackage (for downloading files to install) instead of`n              Install-ChocolateyInstallPackage (for installing embedded files)." -Foreground Yellow
-	  $GLOBAL:Suggestions++
-    }
-  if (($checks -match 'url') -and ($checks -match 'Install-ChocolateyZipPackage')) {
-	  Write-Host "FYI:       ** CHOCOLATEYINSTALL.PS1 uses Install-ChocolateyZipPackage (for downloading files to unzip) instead of`n              Get-ChocolateyUnzip (for unzipping embedded files)."  -Foreground Yellow
-	  $GLOBAL:Suggestions++
-    }
-  if (($checks -match 'url') -and ($checks -notmatch 'checksum')) {
-	  Write-Host "WARNING:   ** CHOCOLATEYINSTALL.PS1 downloads files but doesn't include checksums." -Foreground Red 
-# TDL: Most likely causes a validator error but I need to find and quote it.
-	  $GLOBAL:Suggestions++
-    }
-  if ($checks -match 'chocolateyToolsLocation' -or $checks -match 'chocolateyBinRoot' -or $checks -match 'chocolatey_bin_root' -or $checks -match 'chocolateyPackageFolder' -or $checks -match 'packageFolder' -or $checks -match 'chocolateyChecksum32' -or $checks -match 'chocolateyChecksum64' -or $checks -match 'chocolateyChecksumType32' -or $checks -match 'chocolateyChecksumType64' -or $checks -match 'downloadCacheAvailable'){
-	  Write-Host "WARNING:   ** CHOCOLATEYINSTALL.PS1 uses private enviroment varialbes. This will trigger a message from the verifier:" -Foreground Red
-	  if (!$ReduceOutput) {
-		  Write-Host "           ** Required: Private environment variables are used in automation scripts. Please correct this..." -Foreground Cyan
-	  }
-	  $GLOBAL:Required++
-    }
-}
-
 # Add EAP statement to top of PowerShell script
 function Add-PS1EAP($ScriptFile){
   if ($scriptFile -match "UPDATE.PS1") {return}
@@ -938,7 +923,7 @@ function Update-PS1($ScriptFile){
 # Check chocolateyInstall.ps1 for SourceForge download links
 function Check-DiscouragedDownloadLinks{
 if (Test-Path $path\tools\chocolateyInstall.ps1){
-   $test=Get-Content $path\tools\chocolateyInstall.ps1
+    [string]$test=Get-Content $path\tools\chocolateyInstall.ps1
     if (($test -match 'sourceforge') -and ($test -match 'url')){
         Write-Warning "  ** CHOCOLATEYINSTALL.PS1 uses SourceForge as download source. This will trigger a message from the verifier:"
 	    if (!$ReduceOutput) {
@@ -961,7 +946,9 @@ $ChocoInstallScript=Get-ChildItem "$path\chocolateyinstall.ps1" -Recurse
 $NugetInstallScript=Get-ChildItem "$path\install.ps1" -Recurse
 if (!$ChocoInstallScript -and $NugetInstallScript){
      Write-Host "WARNING:   ** Install Script Named Incorrectly." -Foreground Red
-	 Write-Host "           ** Your script is named incorrectly and will need to be renamed. A script named chocolateyInstall.ps1 was`n              not found in your package, but another script ending in install.ps1 was found. The install script should`n              be named chocolateyInstall.ps1 and be found in the tools folder." -Foreground Cyan
+	 if (!$ReduceOutput) {
+		 Write-Host "           ** Your script is named incorrectly and will need to be renamed. A script named chocolateyInstall.ps1 was`n              not found in your package, but another script ending in install.ps1 was found. The install script should`n              be named chocolateyInstall.ps1 and be found in the tools folder." -Foreground Cyan
+	 }
 	 $GLOBAL:Required++
    }
 
@@ -995,16 +982,18 @@ function Test-XMLFile {
 }
 
 # Update the nuspec XML namespace declaration
-# Only checks for the common 2011/08/nuspec.xsd namespace, could be much better using regex.
+# Only checks for the common 2010/07 and 2011/08 namespaces, could be much better using regex.
 # Messages related to this happening or not (-WhatIf) are difficult to implement because this change happens independly of other changes to the .nuspec, notifications need to be implemented in most cases.
 function Update-XMLnsDeclaration{
   if ($MakeBackups){Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.CNC.XMLnamespace.bak" -Force}
+  ((Get-Content -Path $LocalnuspecFile -Raw) -Replace 'http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd','http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd') | Set-Content -Path $LocalnuspecFile
   ((Get-Content -Path $LocalnuspecFile -Raw) -Replace 'http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd','http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd') | Set-Content -Path $LocalnuspecFile
   $GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$True
   $GLOBAL:Fixes++
 }
 
-#Start running the actual script --------------------------------------------------------------------------------------------
+# END FUNCTIONS ------------------------------------------------------------------------------------------------
+# BEGIN PROCESSING ---------------------------------------------------------------------------------------------
 
 if ($recurse) {
 	$ErrorActionPreference='SilentlyContinue'
@@ -1016,7 +1005,6 @@ if ($recurse) {
 ForEach ($path in $folderlist) {
 # Finds nuspec file for processing. Defaults to current working directory.
 # You can specify a directory path, but do NOT specify the file itself, just the directory.
-#if (!$path) {$LocalnuspecFile = Get-Item -Path $path\*.nuspec}
 if ($path) {$LocalnuspecFile = Get-Item $path\*.nuspec}
 if (!($LocalnuspecFile)) {
     Write-Host "ERROR:   ** No .nuspec file found in $path" -Foreground Red
@@ -1050,7 +1038,7 @@ if ($UpdateXMLns){
         }
 }
 
-# variables for end results
+# variables for findings report
 $GLOBAL:Required=0
 $GLOBAL:Guidelines=0
 $GLOBAL:Suggestions=0
@@ -1105,7 +1093,7 @@ if ($OpenURLs) {
 	Open-URLs
 	}
 	
-# checks ------------------------------------------------------------------------------------------------
+# CHECKS ------------------------------------------------------------------------------------------------
 
 # Trusted package check
 Check-OnlineStatus
@@ -1143,7 +1131,9 @@ if ($nuspecFile.xml -eq "version=""1.0"""){
 	if ($UpdateXMLDeclaration){
 	    Update-XMLDeclaration
 	} else {
-      Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLDeclaration to add a UTF-8 encoding statement." -Foreground Cyan
+		if (!$ReduceOutput) {
+			Write-Host "           ** Suggestion: Consider running CNC -UpdateXMLDeclaration to add a UTF-8 encoding statement." -Foreground Cyan
+		}
 	  $GLOBAL:Suggestions++
 	}
 }
@@ -1366,6 +1356,7 @@ if (!$NuspecDescription){
 # below checking doesn't work as PowerShell will already give an error reading the nuspec
 # Cannot convert value "System.Object[]" to type "System.Xml.XmlDocument". Error: "An error occurred while parsing
 # EntityName.
+# TDL: this can be accomplished by reading in the file ina function and parsing it line by line for & with &amp;
 	 if ($NuspecDescription -match ' `& '){
 	     Write-Warning "  ** <description> - `& found and needs to be replaced with `&amp;"
 		 Write-Host "           ** Packing will error: ""An error occurred while parsing EntityName.""" -Foreground Red
@@ -1743,6 +1734,7 @@ if (!($NuspecVersion)) {
 		}
 	}
 
+# *.ps1 file checks
 Get-ChildItem "$path\*.ps1" -Recurse | % $_ {
 if ($debug){
 write-host "PATH = $path" -foreground red -background white
@@ -1783,17 +1775,18 @@ write-host "FOREACH = $_" -foreground red -background white
 			  $GLOBAL:Required++
 			 }
           if ($_ -match "install"){
-              $count=0
+              $urlcount=0
               $InstallScript=Get-Content $_
               $urlsfound = @()
               $InstallScript | ForEach-Object {
                  if ($_ -match "\b(?:(?:https?|ftp|file)://|www\.|ftp\.)(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[-A-Z0-9+&@#/%=~_|$?!:,.])*(?:\([-A-Z0-9+&@#/%=~_|$?!:,.]*\)|[A-Z0-9+&@#/%=~_|$])"){
                    $urlsfound += $matches[0]
-	               $validateurl=$urlsfound[$count]
+	               $validateurl=$urlsfound[$urlcount]
                    Validate-URL "$ScriptFile" "$validateurl"
-	               $count++
+	               $urlcount++
                  }
               }
+			  $InstallScript=[string]$InstallScript
 			  if ($InstallScript -match "msiexec"){
 			      Write-Warning "  ** $ScriptFile calls msiexec - This will trigger a message from the verifier:"
 				  if (!$ReduceOutput) {
@@ -1808,6 +1801,29 @@ write-host "FOREACH = $_" -foreground red -background white
 				  }
 			      $GLOBAL:Required++
                  }
+				 if (($InstallScript -match '-url' -or $InstallScript -match '$url') -and ($InstallScript -notmatch 'checksum')) {
+	                 Write-Host "WARNING:   ** $ScriptFile downloads files but doesn't include checksums." -Foreground Red 
+# TDL: Most likely causes a validator error but I need to find and quote it.
+                     $GLOBAL:Suggestions++
+				 }
+				 if ($InstallScript -match 'chocolateyToolsLocation' -or $InstallScript -match 'chocolateyBinRoot' -or $InstallScript -match 'chocolatey_bin_root' -or $InstallScript -match 'chocolateyPackageFolder' -or $InstallScript -match 'packageFolder' -or $InstallScript -match 'chocolateyChecksum32' -or $InstallScript -match 'chocolateyChecksum64' -or $InstallScript -match 'chocolateyChecksumType32' -or $InstallScript -match 'chocolateyChecksumType64' -or $InstallScript -match 'downloadCacheAvailable'){
+					 Write-Host "WARNING:   ** $ScriptFile uses private enviroment variables. This will trigger a message from the verifier:" -Foreground Red
+					 if (!$ReduceOutput) {
+						 Write-Host "           ** Required: Private environment variables are used in automation scripts. Please correct this..." -Foreground Cyan
+					 }
+					 $GLOBAL:Required++
+				 }
+                 $IncludedBinaries=(Get-ChildItem -Path $path -Include $BinaryExtensions -Recurse)
+                 if ($IncludedBinaries){
+					 if (($urlcount) -and ($InstallScript -match 'Install-ChocolateyPackage')) {
+					     Write-Host "FYI:       ** $ScriptFile uses Install-ChocolateyPackage (for downloading files to install) instead of`n              Install-ChocolateyInstallPackage (for installing embedded files)." -Foreground Yellow
+	                     $GLOBAL:Suggestions++
+					 }
+                     if (($urlcount) -and ($InstallScript -match 'Install-ChocolateyZipPackage')) {
+   	                     Write-Host "FYI:       ** $ScriptFile uses Install-ChocolateyZipPackage (for downloading files to unzip) instead of`n              Get-ChocolateyUnzip (for unzipping embedded files)."  -Foreground Yellow
+	                     $GLOBAL:Suggestions++
+                    }
+                }
           }
 }
 
@@ -1823,10 +1839,10 @@ Check-Binaries
 # OS index files check
 Check-OSIndexFiles
 
-#PNG checks
+# check for PNG files
 Check-PNGs
 
-# Check for Internal Packaging Files
+# Check for internal packaging Files
 Check-PackageInternalFilesIncluded
 
 # Git 'er done ------------------------------------------------------------------------------------------------
@@ -1834,15 +1850,14 @@ Check-PackageInternalFilesIncluded
 # Optimize any images files supported by PngOptimizerCL.exe
 Run-PNGOptimizer
 
-if (!$ReduceOutput) {
-    Write-Host "CNC found " -NoNewLine -Foreground Magenta
-    Write-Host "$GLOBAL:Required REQUIRED changes, " -NoNewLine -Foreground Red
-    Write-Host "$GLOBAL:Guidelines GUIDELINE changes, " -NoNewLine -Foreground Yellow
-    Write-Host "$GLOBAL:Suggestions SUGGESTED changes, " -NoNewLine -Foreground Yellow
-    Write-Host "$GLOBAL:Notes NOTES, " -NoNewLine -Foreground Yellow
-    Write-Host "$GLOBAL:FYIs FYIs, " -NoNewLine -Foreground Yellow
-    Write-Host "and made $GLOBAL:Fixes changes." -ForeGround Green
-}
+# End outputting check results
+Write-Host "CNC found " -NoNewLine -Foreground Magenta
+Write-Host "$GLOBAL:Required REQUIRED changes, " -NoNewLine -Foreground Red
+Write-Host "$GLOBAL:Guidelines GUIDELINE changes, " -NoNewLine -Foreground Yellow
+Write-Host "$GLOBAL:Suggestions SUGGESTED changes, " -NoNewLine -Foreground Yellow
+Write-Host "$GLOBAL:Notes NOTES, " -NoNewLine -Foreground Yellow
+Write-Host "$GLOBAL:FYIs FYIs, " -NoNewLine -Foreground Yellow
+Write-Host "and made $GLOBAL:Fixes changes." -ForeGround Green
 
 if ($GLOBAL:UpdateNuspec) {
    if ($WhatIf){
@@ -1860,8 +1875,8 @@ if ($UpdateScripts) {
 
 $ENV:ChocolateyPackageVersion=''
 
+# leave space between output when recursing
 if ($recurse) {
-    #leave space between output if recursing
     Write-Host "`n" 
 }
 
@@ -1874,14 +1889,15 @@ Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground Whi
 return
 
 # TDL
-# Update CDN checking for "main" as well as "master" post 10/2020
+# Update CDN checking for "main" as well as "master" post 10/2020 (did this happen?)
 # Check validity of URLs in description, checked by the package verifier as of 01/11/2020
 # ^ ALMOST: $NuspecDescription | Select-String -Pattern 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)' -AllMatches   | % { $_.Matches } `  | % { $_.Value } `  | Sort-Object ` | Get-Unique
 # ^ doesn't strip ) end of markdown [](), strips * in urls
-# Reformat invalid Markdown headings automagically (Possibly dangerous if URLs have # in them)
+# Reformat invalid Markdown headings automagically (Need to parse out and skip URLs.)
 # Move header, footer, and package notes into one XML config file
-# option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
-# Add option to save to an error log when recursivly checking files
+# Add option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
+# Add logging option when recursivly checking files
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
-# Address new Validator changes: https://blog.chocolatey.org/2022/08/upcoming-changes-validator/
+# Address new Validator changes: https://blog.chocolatey.org/2022/08/upcoming-changes-validator/ - HIGH PRIORITY
+# Possibly add option to run scripts through PSScriptAnalyzer
 # What else?

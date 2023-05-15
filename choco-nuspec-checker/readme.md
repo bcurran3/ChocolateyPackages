@@ -6,17 +6,19 @@
 * I personally use and endorse this script. What started off as a script to automate changing image URLs in my packages to use CDN links has become a monster!
 * In your header and footer files, if you want to add lines above and below your header and/or footer text like I do, I recommend using "___" for a line in markdown as apposed to "***" or "---". Chocolatey.org's package pages are fickle with "***" and "---" where sometimes the lines will be different shades of gray. "___" seems to consistently get displayed as a dark gray line. I've played with white space before and after "***" and "---" and I can't find any rhyme or reason to why I'll get a light gray line in one place and a dark gray line in another. I give up. "___" works.
 
-***
-[choco://choco-nuspec-checker](choco://choco-nuspec-checker)
+---
+
+### [choco://choco-nuspec-checker](choco://choco-nuspec-checker)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-***
+
+---
 	
 ![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
 ## **choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix most of them! Find out AND FIX what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** also goes beyond it's original scope and checks for common Chocolatey install/uninstall script errors and omissions as well.
 
 ### FEATURES:
-* **CNC** checks all .nuspec elements and reports any missing or template default values
+* **CNC** checks all .nuspec elements and reports any missing or template default values, now recursively too!
 * **CNC** checks for all verifier messages (guidelines, suggestions, and notes) and reports them if applicable
 * **CNC** checks for dead URLs and reports them
 * **CNC** checks for GitHub direct links, reports them, and can convert them to various CDN URLs (default=Staticaly)
@@ -28,27 +30,24 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC** can re-write your nuspec in UTF-8 w/o BOM format
 * **CNC** can re-write your PowerShell scripts in UTF-8 w/ BOM format
 * **CNC** checks all your PowerShell scripts for syntax errors
+* **CNC** checks chocolateyInstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included
 * **CNC** checks for and can add $ErrorActionPreference = 'Stop' to your PowerShell scripts
 * **CNC** can optimize PNG files in your nuspec directory if PNGOptimizer.commandline is installed
 * **CNC** can be run from the Command Prompt AND PowerShell
+* **CNC** and more...
 
 ### Helps make packaging Chocolateasy!
 
 ### INSTRUCTIONS:
 * **CNC -help** for help with options and switches
-* Run **CNC** to check the .nuspec in your current directory, run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
-* To check all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cls;cd $__.Name;cnc;cd ..;pause}}**
-* To update all your packages' .nuspec files, change to the root directory of your packages, and via PowerShell run **Get-ChildItem | ?{if ($__.PSIsContainer){cd $__.Name;cnc -UpdateAll;cd ..}}** (no clear screen or pausing)
+* Run **CNC** to check the .nuspec in your current directory or run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
-
-### KNOWN BUG:	
-* CNC doesn't yet know how to handle multiple .nuspec files found in the same directory.
 	
 ### CHANGELOG:
-* 2021.03.23 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file
+* 2023.05.14 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file, added TheCakeIsNaOH's (Thanks!) move args to params and add help comments merge, minor updates to package URL checking and noficiations, no longer checks URLs with variables baked in, don't display PS error when non-image icon files are downloaded, less false positives checking for sourceforge and fosshub links in chocolateyinstall.ps1, updated markdown checking to display error line(s), checks chocolateyinstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included, new -ReduceOutput option to only show problems/errors (no blue or green informational messages), checks chocolateyinstall.ps1 for use of checksums, added checking for private enviroment variables, reports when http instead of https links are used, fixed bug where releaseNotes wasn't being checked for invalid Markdown
 * 2020.09.20 - An AddPackageNotes feature has been added, works the same as the AddHeader and AddFooter options. Updated nuspec URL errors as requirements to be fixed. Added "PackageInternalFilesIncluded" checking. Minor cosmetic updates.
 * 2020.09.15 - CNC will now ignore update.ps1 files.
 * 2020.04.06.0001 - Updated CNC.cmd for ChocolateyToolsLocation handling. Fixed markdown heading error in CNCHeader.txt.
