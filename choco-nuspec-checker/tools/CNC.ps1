@@ -416,7 +416,7 @@ if (($url -match 'http://') -or ($url -match 'https://')){
 		  } else {
 			if ($url -match '\$') {
 				if (!$ReduceOutput) {
-				    Write-Host "FYI:       ** $element URL appears to have a script specfic variable in it, skipping URL validation..." -Foreground Green
+				    Write-Host "FYI:       ** $element - URL appears to have a script specfic variable in it, skipping URL validation..." -Foreground Yellow
 					Write-Host "           ** $element - $url"  -Foreground Cyan
 				}
 				$GLOBAL:FYIs++
