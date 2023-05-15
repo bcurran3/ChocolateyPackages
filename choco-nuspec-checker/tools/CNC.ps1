@@ -406,7 +406,7 @@ if (($url -match 'http://') -or ($url -match 'https://')){
         } catch {
           $HTTP_Status = [regex]::matches($_.exception.message, "(?<=\()[\d]{3}").Value
 		  Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
-		  if ($element -notmatch ".PS1"){  	      
+		  if ($element -notmatch ".PS1"){	      
 		      Write-Host "WARNING:   ** $element - the URL:`n              $url`n              is possibly bad, status code: $HTTP_Status. This will trigger a message from the verifier:" -Foreground Red
 			  if (!$ReduceOutput) {
 				  Write-Host "           ** Requirement: The $element element in the nuspec file should be a valid Url. Please correct this" -Foreground Cyan
@@ -414,9 +414,10 @@ if (($url -match 'http://') -or ($url -match 'https://')){
 			  }
 	          $GLOBAL:Required++
 		  } else {
-			if ($url -match '$') {
+			if ($url -match '\$') {
 				if (!$ReduceOutput) {
 				    Write-Host "FYI:       ** $element URL appears to have a script specfic variable in it, skipping URL validation..." -Foreground Green
+					Write-Host "           ** $element - $url"  -Foreground Cyan
 				}
 				$GLOBAL:FYIs++
 				return
