@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-Write-Host "Choco-Upgrade-All.ps1 v0.0.7 (2023/05/10) - Upgrade your Chocolatey packages with enhanced options" -Foreground White
+Write-Host "Choco-Upgrade-All.ps1 v0.0.7 (2023/05/15) - Upgrade your Chocolatey packages with enhanced options" -Foreground White
 Write-Host "Copyleft 2021-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -45,7 +45,7 @@ if ($args -eq "-ViewLog") {
 	return
 }
 
-# Logging
+# Logging - always logging
 if (Test-Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"){
    $LogSize=(Get-ChildItem -Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log").length
    if ($LogSize -gt 40960) {
@@ -53,12 +53,9 @@ if (Test-Path "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"){
 	   Write-Output "$(Get-Date) Choco-Upgrade-All Deleted log file" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
 	  }
   }
-if ($DebugLogging -eq 'True'){
-	Start-Transcript -Path $env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log -Append
-   } else {
-     Write-Output "----------------------------------------------------------------------" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
-     Write-Output "$(Get-Date) Choco-Upgrade-All STARTED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
-   }
+Write-Output "----------------------------------------------------------------------" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
+Write-Output "$(Get-Date) Choco-Upgrade-All STARTED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
+
 
 # add to log file
 function Add2Log {
@@ -162,8 +159,4 @@ if (($DeleteNewDesktopIcons -eq 'True') -or ($DeleteNewStartMenuIcons -eq 'True'
 Write-Host "Found Choco-Upgrade-All.ps1 useful?" -ForegroundColor White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
-if ($DebugLogging -eq 'True'){
-    Stop-Transcript
-   } else {
-	 Write-Output "$(Get-Date) Choco-Upgrade-All FINISHED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
-   }
+Write-Output "$(Get-Date) Choco-Upgrade-All FINISHED" >> "$env:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
