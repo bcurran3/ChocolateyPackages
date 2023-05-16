@@ -64,6 +64,12 @@ function Add2Log {
     Write-Output "$(Get-Date) [INFO ] $comment" >> "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-upgrade-all.log"
 }
 
+if ($DebugLogging){
+	Add2Log "CONFIG: DebugLogging is set to $DebugLogging. (ignored)"
+} else {
+		Add2Log "CONFIG: DebugLogging is not set. (ignored)"
+}
+
 # Run pre-processor if configured
 if ($PreProcessScript){
 	&$PreProcessScript
@@ -74,7 +80,17 @@ if ($PreProcessScript){
 if ($DefaultUserProfile) {
 	$env:USERPROFILE="$env:SystemDrive\Users\$DefaultUserProfile"
 	$env:APPDATA="$env:SystemDrive\Users\$DefaultUserProfile\AppData\Roaming"
-	}
+	Add2Log "CONFIG: DefaultUserProfile is set to $DefaultUserProfile"
+} else {
+		Add2Log "CONFIG: DefaultUserProfile is not set."
+}
+
+
+if ($ConfigArguments) {
+    Add2Log "CONFIG: ConfigArguments are set to $ConfigArguments"
+} else {
+	Add2Log "CONFIG: ConfigArguments are not set."
+}
 
 # get existing Desktop and Start Menu icons
 if (Test-Path "$env:USERPROFILE\Desktop") {$UserDesktopIconsPre = Get-ChildItem -Path "$env:USERPROFILE\Desktop\*.lnk"}
