@@ -19,7 +19,7 @@
     <tags>bcurran3 choco protocol cinst chocolateasy winconfig</tags>
     <summary>Implements installing of Chocolatey packages from the web using choco:// Protocol</summary>
     <description>
-![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_screenshot.png)	
+![screenshot of choco-protocol-support](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_screenshot.png)
 	
 # Implements installing of Chocolatey packages from the web using choco:// Protocol.
 
