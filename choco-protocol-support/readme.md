@@ -1,6 +1,6 @@
 <img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
-![screenshot of choco-protocol-support](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_screenshot.png)	
+![screenshot of choco-protocol-support](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_screenshot.png)	
 	
 # Implements installing of Chocolatey packages from the web using choco:// Protocol.
 
@@ -14,7 +14,7 @@ If you like the convienance of this package, you should also check out [Install 
 
 ### USAGE INSTRUCTIONS:
 Just click a choco://packagename URL on a web page and the package will install after one or two approval clicks. 
-Browser examples: [Chrome](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_chrome_example.png) | [Firefox](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_firefox_example.png) | [Opera](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-protocol-support\choco-protocol-support_opera_example.png)
+Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_opera_example.png)
 
 ### **Easy peasy, Chocolateasy!**
 
