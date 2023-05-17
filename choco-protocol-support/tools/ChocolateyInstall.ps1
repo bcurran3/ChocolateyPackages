@@ -6,7 +6,7 @@ $script      = 'choco-protocol-support.ps1'
 
 # Setup
 # New storage location moving forward for all my Chocolatey scripts
-if (!(Test-Path "$scriptDir")) { New-Item -Path "$(Get-ToolsLocation)" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
+if (!(Test-Path "$(Get-ToolsLocation)\BCURRAN3")) { New-Item -Path "$(Get-ToolsLocation)" -Name "BCURRAN3" -ItemType "Directory" | Out-Null }
 
 # Install Script
 # Move new files and support files (if applicable)
