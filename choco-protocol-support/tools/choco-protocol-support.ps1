@@ -13,7 +13,7 @@ $params=$null
 $upgrade=$false
 $version=$null
 
-$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Continue'
 Write-Host "Choco-Protocol-Support.ps1 v0.2 (2023-05-17) - install Chocolatey packages from URLs" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
@@ -34,7 +34,7 @@ for($num=0; $num -lt $chocoprotocolURL.count; $num++) {
     if ($chocoprotocolURL[$num] -match 'source=') {($source=$chocoprotocolURL[$num]); $source=$source.replace('source=','')}
 	}
 	
-if (Test-Path $env:ChocolateyInstall\lib\$packagename) {
+if (Test-Path $env:ChocolateyInstall\lib\$packagename\$packagename.nuspec) {
 	[xml]$nuspecFile = Get-Content "$env:ChocolateyInstall\lib\$packagename\$packagename.nuspec"
 	$OldVersion = $nuspecFile.package.metadata.version
 	$upgrade=$true
