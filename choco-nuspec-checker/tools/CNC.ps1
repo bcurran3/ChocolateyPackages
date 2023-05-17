@@ -135,7 +135,7 @@ param (
     [switch]$WhatIf
  )
 
-Write-Host "CNC.ps1 v2023.05.15 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2023.05.17 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -1787,6 +1787,7 @@ write-host "FOREACH = $_" -foreground red -background white
 	               $urlcount++
                  }
               }
+# This could be changed to a loop instead so the line can be displayed
 			  $InstallScript=[string]$InstallScript
 			  if ($InstallScript -match "msiexec"){
 			      Write-Warning "  ** $ScriptFile calls msiexec - This will trigger a message from the verifier:"
@@ -1882,12 +1883,18 @@ if ($recurse) {
 }
 
 # main recurse foreach loop ends here
+$exitcode=$exitcode+$GLOBAL:Required
+}
+
+if ($recurse) {
+    Write-Host "CNC -Recurse found " -NoNewLine -Foreground Magenta
+    Write-Host "$exitcode TOTAL REQUIRED changes." -Foreground Red
 }
 
 Write-Host "`nFound CNC.ps1 useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
 Write-Host "Become a patron at https://www.patreon.com/bcurran3" -Foreground White
-return
+exit $exitcode
 
 # TDL
 # Update CDN checking for "main" as well as "master" post 10/2020 (did this happen?)
