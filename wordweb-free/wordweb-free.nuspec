@@ -26,7 +26,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of WordWeb](https://uk.wordwebsoftware.com/wordweb/main16_pleasant@1x.png)
+![Screenshot of WordWeb](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wordweb-free/wordweb-free_screenshot.png)
 
 ### WordWeb Free version
 
@@ -51,7 +51,7 @@ WordWeb free version is fully functional, and free if you satisfy the licensing 
 ---
 
 </description>
-<releaseNotes>https://wordweb.info/users.html</releaseNotes>
+    <releaseNotes>https://wordweb.info/users.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
