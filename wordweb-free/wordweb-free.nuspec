@@ -3,20 +3,20 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>wordweb-free</id>
-    <version>10.1</version>
+    <version>10.33</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/wordweb-free</packageSourceUrl>
     <title>WordWeb Free (Install)</title>
     <authors>WordWeb Software</authors>
-    <projectUrl>http://wordweb.info/free/</projectUrl>
+    <projectUrl>https://wordweb.info/free/</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/wordweb-free/wordweb-free_icon.png</iconUrl>
     <copyright>Copyright © WordWeb Software</copyright>
-    <licenseUrl>http://wordweb.info/free/licence5.html</licenseUrl>
+    <licenseUrl>https://wordweb.info/free/licence5.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://wordweb.info/more.html</docsUrl>
-    <mailingListUrl>http://wordweb.info/newsletter.html</mailingListUrl>
-    <bugTrackerUrl>http://wordweb.info/users.html</bugTrackerUrl>
-    <tags>wordweb dictionary thesaurus notsilent binary</tags>
+    <docsUrl>https://wordweb.info/more.html</docsUrl>
+    <mailingListUrl>https://wordweb.info/newsletter.html</mailingListUrl>
+    <bugTrackerUrl>https://wordweb.info/users.html</bugTrackerUrl>
+    <tags>wordweb dictionary thesaurus binary</tags>
     <summary>Windows dictionary and thesaurus</summary>
     <description>
 ---
@@ -26,7 +26,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of WordWeb](http://uk.wordwebsoftware.com/wordweb/main16_pleasant@1x.png)
+![Screenshot of WordWeb](https://uk.wordwebsoftware.com/wordweb/main16_pleasant@1x.png)
 
 ### WordWeb Free version
 
@@ -51,9 +51,7 @@ WordWeb free version is fully functional, and free if you satisfy the licensing 
 ---
 
 </description>
-    <dependencies>
-      <dependency id="autohotkey" version="1.1.28" />
-    </dependencies>
+<releaseNotes>https://wordweb.info/users.html</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
