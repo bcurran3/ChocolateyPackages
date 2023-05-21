@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's 64bit ADVANCED Codecs (Portable)</title>
-    <version>17.2.8</version>
+    <version>17.2.9</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
@@ -64,7 +64,7 @@ All functions are performed instantaneously. The moment you select something, th
 If you ever find yourself broken, simply press the [RESET ALL] button to return to a just installed state.
 **BONUS** Simple commandline features and a builtin, intelligent, Auto Update feature.
 
-[SETUP AND USAGE](http://shark007.net/forum/Thread-Setup-and-usage)
+[SETUP AND USAGE](https://shark007.net/forum/Thread-Setup-and-usage)
 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advanced-codecs/readme.md)**
@@ -77,11 +77,11 @@ If you ever find yourself broken, simply press the [RESET ALL] button to return 
 
 </description>
     <projectUrl>https://shark007.net/x64components1.html</projectUrl>
-    <docsUrl>http://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
+    <docsUrl>https://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
 	<releaseNotes>(unofficial) https://www.videohelp.com/software/Win7codecs/version-history</releaseNotes>
-    <mailingListUrl>http://shark007.net/forum/</mailingListUrl>
+    <mailingListUrl>https://shark007.net/forum/</mailingListUrl>
     <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m binary embedded</tags>
-    <licenseUrl>http://shark007.net/disclaimer.html</licenseUrl>
+    <licenseUrl>https://shark007.net/disclaimer.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl>
     <dependencies>
