@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
-$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$IntelPackageNumber = "777403"
+$toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $TodaysArray   = ($env:ChocolateyPackageVersion.split('.'))
 $TodaysVersion = $TodaysArray[2] + "." + $TodaysArray[3]
+$IntelPackageNumber = '779145'
 $url64       = "https://downloadmirror.intel.com/$IntelPackageNumber/gfx_win_"+"$TodaysVersion"+".exe"
-$checksum64  = '6DD2026DB396393126FB352018442A7728D8D5A4DAF7DA29DB2B9F14D7A55D9E'
+$checksum64  = 'BBC58908BF3B890763EE15A694F35C6DAE028B932019DD9D20AB7EFA54221997'
 
 Confirm-WinMinimumBuild 19042
 if (!(Get-IsIntelVideo)){
@@ -27,4 +27,4 @@ $packageArgs = @{
 Install-ChocolateyPackage @packageArgs
 
 # UPDATE INSTRUCTIONS:
-# To updtae this package update the IntelPackageNumber, and checksum variables
+# To updtae this package update the IntelPackageNumber and checksum64 variables
