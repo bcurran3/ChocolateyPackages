@@ -3,67 +3,45 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>gsuite-sync-outlook</id>
-    <version>4.1.25.0</version>
+    <version>4.3.53.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gsuite-sync-outlook</packageSourceUrl>
     <owners>bcurran3</owners>
-    <title>G Suite Sync for Microsoft Outlook® (GSSMO) (Install)</title>
+    <title>Google Workspace Sync for Microsoft Outlook (GWSMO / GSSMO) (Install)</title>
     <authors>Google</authors>
-    <projectUrl>https://tools.google.com/dlpage/gappssync</projectUrl>
+    <projectUrl>https://tools.google.com/dlpage/gssmo</projectUrl>
     <iconUrl>https://4.bp.blogspot.com/-Pp8TROoyTwc/VeXXFhKQwWI/AAAAAAAACPo/b2g71CJ_Hj8/s1600/inline-googles-new-logo.png</iconUrl>
     <copyright>Google</copyright>
-    <licenseUrl>https://gsuite.google.com/terms/standard_terms.html</licenseUrl>
+    <licenseUrl>https://workspace.google.com/terms/standard_terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://support.google.com/a/answer/150403</docsUrl>
-    <!--<docsUrl2>https://support.google.com/a/users/answer/153872</docsUrl2> -->
-    <mailingListUrl>https://productforums.google.com/forum/#!forum/apps</mailingListUrl>
+    <mailingListUrl>https://support.google.com/a/community/</mailingListUrl>
     <bugTrackerUrl>https://support.google.com/a/answer/153463</bugTrackerUrl>
-    <tags>google gssmo gsuite gapps migration sync outlook</tags>
-    <summary>GSSMO - a tool to migrate your Outlook data to G Suite.</summary>
+    <tags>google workspace gwsmo gssmo gsuite gapps migration sync outlook</tags>
+    <summary>GWSMO - synchronize your Google Account with Outlook</summary>
     <description>
 ---
 
-###[choco://gsuite-sync-outlook](choco://gsuite-sync-outlook)
+### [choco://gsuite-sync-outlook](choco://gsuite-sync-outlook)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
 
-##What is GSSMO?
+You can set up Google Workspace Sync for Microsoft Outlook (GWSMO) for users in your organization so they can synchronize their email, calendar, and contact data between Google Workspace and Microsoft Outlook. Before you begin, make sure you meet the system requirements.
 
-G Suite Sync for Microsoft Outlook is a Microsoft Outlook plug-in that lets you use Microsoft Outlook as a client for G Suite email, calendar, and contacts. Email, calendar events (including recurring meetings), and contacts are all synchronized between G Suite and Microsoft Outlook. Outlook Notes are synced with Google Docs. Outlook Tasks are synced with your Gmail task gadget. And your organization's global address list is automatically synchronized, as well. This includes your G Suite users, groups, shared contacts, and conference rooms, and provides contact look-up as well as free/busy information for users and conference rooms.
+#### System requirements: 
+For Microsoft Windows:
 
-Beta feature: Synchronizing Outlook Notes and Tasks with G Suite are currently Beta release features.
+* Windows 8 and 10 (32 and 64-bit), and Windows 11 (64-bit).
+* Windows 7 and Vista (32 and 64-bit)—Microsoft no longer supports these versions. We recommend upgrading to a supported version of Windows.
+We recommend that you update to the latest patches for your Windows version. 
 
-Data synchronization occurs on the following schedule (and also each time you start Outlook):
+For Outlook:
 
-* Email: Every minute
-* Calendar: Immediately after you create or receive a meeting invitation, or every 10 minutes
-* Contacts: Every 20 minutes
-* Global address list: Every 24 hours
-* Notes:  Immediately after creating or changing a note, or every 60 minutes 
-* Tasks: Every 2 hours
-
-####Importing: 
-GSSMO also lets users import data from Outlook to G Suite—either when initially setting up their user profile in Outlook, or any time afterwards. When importing, people have the option to import directly from an Exchange account or from a PST file. Keep in mind that executables and attachments over 25 MB are not imported to Gmail, as per G Suite restrictions. See below for details.
-
-For information about which Microsoft Outlook features are supported and how using this service differs from using Microsoft Outlook with other mail systems such as Microsoft Exchange, see the GSSMO user help.
-
-####System requirements: 
-* Requires G Suite, G Suite for Education, or G Suite for Government
-* Windows XP (32 bit) SP3 
-* Windows Vista (32 bit) SP1 
-* Windows Vista (64 bit) SP1 
-* Windows 7 (32 and 64 bit) 
-* Windows 8 (32 and 64 bit) 
-* Windows 10 (32 and 64 bit)
-* Microsoft Outlook 2003® SP3 
-* Microsoft Outlook 2007® SP2 (or SP1 with hotfix) 
-* Microsoft Outlook 2010® (32 and 64 bit) 
-* Microsoft Outlook 2013® (32 and 64 bit) 
-* Microsoft Outlook 2016® (32 and 64 bit)
+* Outlook 2003 SP or 2007 SP2 (or SP1 with hotfix)—Microsoft no longer supports Outlook 2003 and 2007. We recommend upgrading to a supported version of Outlook.
+* Outlook 2010, 2013, 2016, 2019, and 2021 (32 and 64-bit).
+* Outlook from Microsoft 365 desktop app (not web version)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/gsuite-sync-outlook/readme.md)**
-
-	
 
 ---
 
