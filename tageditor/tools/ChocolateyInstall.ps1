@@ -22,3 +22,7 @@ Install-ChocolateyShortcut -shortcutFilePath "$ENV:Public\Desktop\$shortcutName"
 Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$toolsDir\$exeTarget" -WorkingDirectory "$toolsDir\"
 
 Remove-Item "$toolsDir\*.zip" -Force -ErrorAction SilentlyContinue
+
+# UPDATE INSTRUCTIONS:
+# https://github.com/Martchus/tageditor/releases
+# Replace ZIPs with current versions
