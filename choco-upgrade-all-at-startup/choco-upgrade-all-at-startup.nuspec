@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-upgrade-all-at-startup</id>
-    <version>2023.05.15-pre</version>
+    <version>2023.05.26-pre</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <owners>bcurran3</owners>
@@ -69,7 +69,7 @@ It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-up
 * Re-write task creation using PowerShell cmdlets (instead of using schtasks) for advanced options such as enabling run on battery, limited execution time, only when a network is available, etc..
 	</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
     </dependencies>
   </metadata>
   <files>
