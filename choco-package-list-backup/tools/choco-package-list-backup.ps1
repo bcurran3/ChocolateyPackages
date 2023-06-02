@@ -3,8 +3,8 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues If you have suggestions for improvement.
 
-Write-Host "Choco-Package-List-Backup.ps1 v2022.02.06 - backup Chocolatey packages list locally and to the cloud" -Foreground White
-Write-Host "Copyleft 2017-2022 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+Write-Host "Choco-Package-List-Backup.ps1 v2023.06.02 - backup Chocolatey packages list locally and to the cloud" -Foreground White
+Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 Write-Host "Choco Package List Backup Summary:" -Foreground Magenta
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -19,7 +19,11 @@ $PinnedPackagesFile = 'pins.bat'
 $PPCinstalled   = Test-Path "$env:ChocolateyInstall\config\persistentpackages.config"
 $scriptDir      = "$env:ChocolateyToolsLocation\BCURRAN3"
 $ScriptConfig   = 'choco-package-list-backup.config'
-$localPackageInfo = & choco list -lo -r -y
+if (([System.Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall\choco.exe").ProductVersion)).major -gt 1) {
+	$localPackageInfo = & choco list -r -y
+	} else {
+		$localPackageInfo = & choco list -lo -r -y
+		}
 
 If (Test-Path $env:ChocolateyInstall\bin\notepad++.exe){
      $Editor="notepad++.exe"

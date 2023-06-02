@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2023.05.13-pre</version>
+    <version>2023.06.02-pre</version>
     <owners>bcurran3</owners>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
@@ -85,7 +85,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 	
 ### CHANGELOG:
-* 2023.05.13 - added new defaults for Win10+ computers to AllowStartIfOnBatteries, DontStopIfGoingOnBatteries, StartWhenAvailable
+* 2023.06.02 - Added Chocolatey 2.0 compatibility, added new defaults for Win10+ computers to AllowStartIfOnBatteries, DontStopIfGoingOnBatteries, StartWhenAvailable
 * 2022.02.06 - All existing files now renamed with .bak before creating new versions. This backup is useful during migrations where the files could get overwritten during install of CPLB on a new computer. (https://github.com/bcurran3/ChocolateyPackages/issues/285)
 * 2021.09.25 - Improved OneDrive support while running under SYSTEM and handling of a missing config file.
 * 2021.09.22 - Add Box Drive support. Add defaults incase of corrupt or missing choco-package-list-backup.config. Add new ONSTART and ATSTARTUP paremeters to run at boot instead of a scheduled time.
@@ -95,31 +95,31 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * 2021.03.15 - Added NORUN/DONTRUN install option (choco install choco-package-list-backup --params "'/NORUN:TRUE'".)
 * 2021.03.14 - Fixed wrong command in scheduled task. Fixed saving to C:\Users\Public\Documents. Fixed problem when SaveTitleSummary is set to true and there is no chocolatey.nuspec file to get values from. Added ability to set default user profile. Added start/finished logging. Added NOTASK/NOSCHEDULE install option (choco install choco-package-list-backup --params "'/NOTASK:TRUE'".) Minor other changes.
 * 2020.04.06 - Better error handling when $env:ChocolateyToolsLocation is not defined. (Usually due to running under a different account than installed from.)Acronymized CPLB.cmd added for command line running.
-* 2019.08.27 - can now put title and summary info into the packages.config file, new -EditConfig parameter to edit the config file, **Now works from Command Prompt as well as PowerShell**, script installation endpoint changed, config file renamed from .xml to .config
-* 2019.07.02 - now saves OneDrive backups to free, paid, and corporate folders
-* 2019.06.27 - now backups the config file, can now also make archival versions of pins.bat, edited config comments to not add quotes to custom path.
-* 2019.01.31 - file saving functions re-written and optimized, check for errors caused by other Chocolatey instances
-* 2019.01.29 - fixed bug where iCloudDrive preference wasn't checked correctly, thanks sandscap-sc!
-* 2019.01.24 - now saves your pinned package information to pins.bat, added saving to c:\Users\Public when run from system account (e.g. scheduled task), fixed error attempting to create files under system account Documents folder which doesn't exist, packages.config now properly UTF-8 encoded, speed optimizations, minor cosmetic changes
+* 2019.08.27 - Can now put title and summary info into the packages.config file, new -EditConfig parameter to edit the config file, **Now works from Command Prompt as well as PowerShell**, script installation endpoint changed, config file renamed from .xml to .config
+* 2019.07.02 - Now saves OneDrive backups to free, paid, and corporate folders
+* 2019.06.27 - Now backups the config file, can now also make archival versions of pins.bat, edited config comments to not add quotes to custom path.
+* 2019.01.31 - File saving functions re-written and optimized, check for errors caused by other Chocolatey instances
+* 2019.01.29 - Fixed bug where iCloudDrive preference wasn't checked correctly, thanks sandscap-sc!
+* 2019.01.24 - Now saves your pinned package information to pins.bat, added saving to c:\Users\Public when run from system account (e.g. scheduled task), fixed error attempting to create files under system account Documents folder which doesn't exist, packages.config now properly UTF-8 encoded, speed optimizations, minor cosmetic changes
 * 2019.01.04 - 2019.01.02 didn't get packaged with the install and uninstall scripts! - fixed (GitHub bit me)
 * 2019.01.02 - Will now write to Documents/MyDocuments if the folder has been moved, thanks Aaron Throckmorton for the enhancement!
 * 2018.08.23 - Added ownCloud support and save all programs list feature
 * 2018.06.21 - Added scheduled task to run every Monday at 6 AM. AppendDate option now saves packages.config AND a packages_date.config. This makes the AppendDate option more useful for a nearline packages.config and archival snapshots as well as fixing compatibility with InstChoco.
 * 2018.05.19 - OneDrive and shortcut creation bugs fixed, minor cosmetic changes
-* 2018.05.17 - added iCloudDrive support
-* 2018.05.09 - added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades! Backups not created any more.
-* 2018.05.06 - added Dropbox Business and Google Drive File Stream support (Thanks ebbek!)
-* 2018.04.25 - removed run as admin requirement
-* 2018.04.25 - now makes a backup of previous choco-packages-list-backup.ps1 (Since removed.)
-* 2018.04.25 - fixed minor text output error
-* 2018.04.25 - added compatibility with [choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)
-* 2018.04.24.01 - added ability to append the date to PACKAGES.CONFIG
-* 2018.04.24 - added [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages) support.
-* 2018.04.23 - now backups up packages automatically on install
-* 2018.02.24 - added Box and Seafile support as well as an icon to run from the Windows Start menu
-* 2018.02.12 - added Nextcloud support (thanks thomasaiman) and fixed TonidoSync (Thanks thomasaiman!)
-* 2018.01.29 - edited re-installation message, updated donation info :)
-* 2017.12.17 - added editable custom save location (requested)
+* 2018.05.17 - Added iCloudDrive support
+* 2018.05.09 - Added reading preferences from choco-package-list-backup.xml - no more editing the script after upgrades! Backups not created any more.
+* 2018.05.06 - Added Dropbox Business and Google Drive File Stream support (Thanks ebbek!)
+* 2018.04.25 - Removed run as admin requirement
+* 2018.04.25 - Now makes a backup of previous choco-packages-list-backup.ps1 (Since removed.)
+* 2018.04.25 - Fixed minor text output error
+* 2018.04.25 - Added compatibility with [choco-shortcuts-winconfig](https://chocolatey.org/packages/choco-shortcuts-winconfig)
+* 2018.04.24.01 - Added ability to append the date to PACKAGES.CONFIG
+* 2018.04.24 - Added [choco-persistent-packages](https://chocolatey.org/packages/choco-persistent-packages) support.
+* 2018.04.23 - Now backups up packages automatically on install
+* 2018.02.24 - Added Box and Seafile support as well as an icon to run from the Windows Start menu
+* 2018.02.12 - Added Nextcloud support (thanks thomasaiman) and fixed TonidoSync (Thanks thomasaiman!)
+* 2018.01.29 - Edited re-installation message, updated donation info :)
+* 2017.12.17 - Added editable custom save location (requested)
 
 ### ROADMAP:
 * Possibly convert to use regkey install path for each supported program
