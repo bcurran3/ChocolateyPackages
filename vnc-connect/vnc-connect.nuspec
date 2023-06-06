@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>vnc-connect</id>
-    <version>7.1.0</version>
+    <version>7.5.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/vnc-connect</packageSourceUrl>
     <title>VNC Connect (Install)</title>
@@ -13,7 +13,7 @@
     <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://help.realvnc.com/</docsUrl>
+    <docsUrl>https://help.realvnc.com</docsUrl>
     <mailingListUrl>https://www.realvnc.com/en/news/</mailingListUrl>
     <bugTrackerUrl>https://help.realvnc.com/hc/en-us/community/topics</bugTrackerUrl>
     <tags>realvnc vnc connect remote control</tags>
