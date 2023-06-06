@@ -15,3 +15,6 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 Remove-Item $toolsDir\*.exe -Force | Out-Null
 Remove-Item $toolsDir\*.ignore -Force | Out-Null
+
+# UPDATE INSTRUCTIONS:
+# Replace .EXE file
