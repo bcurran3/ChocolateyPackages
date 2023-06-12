@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName  = 'choco-shortcuts-winconfig' # v0.0.3
+$packageName  = 'choco-shortcuts-winconfig' # v0.0.4
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey" -type directory -ea SilentlyContinue| Out-Null
-New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support" -type directory -ea silentlycontinue| Out-Null
+New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey" -type directory -EA SilentlyContinue| Out-Null
+New-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\Support" -type directory -EA SilentlyContinue| Out-Null
 
 # "move" icon for Choco Cleaner if installed
 # https://community.chocolatey.org/packages/choco-cleaner
@@ -39,7 +39,7 @@ if (Test-Path "$env:ChocolateyInstall\lib\chocolateypowershell"){
 # https://community.chocolatey.org/packages/chocolateygui
 $shortcutName = 'Chocolatey GUI.lnk'
 if (Test-Path "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName"){
-	Move-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"
+	Move-Item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName" -Force
 	}
 
 $shortcutName = 'Install a Package.lnk'
@@ -47,7 +47,7 @@ $ChocoCommand = "/v /c color 0f && set /p package=PACKAGENAME: && choco install 
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath $env:ComSpec -Arguments $ChocoCommand -IconLocation $env:ChocolateyInstall\choco.exe -RunAsAdmin
 
 $shortcutName = 'List Installed Packages.lnk'
-$ChocoCommand = "/c choco list -l | more && pause"
+$ChocoCommand = "/c choco list | more && pause"
 Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\Chocolatey\$shortcutName"  -targetPath $env:ComSpec -Arguments $ChocoCommand -IconLocation $env:ChocolateyInstall\choco.exe
 
 $shortcutName = 'List Outdated Packages.lnk'

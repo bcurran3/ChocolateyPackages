@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-shortcuts-winconfig</id>
-    <version>0.0.3</version>
+    <version>0.0.4</version>
     <title>(unofficial) Chocolatey Shortcuts (Config)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -58,6 +58,7 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 </description>
     <releaseNotes>
 ### CHANGELOG:
+* 0.0.4   - Chocolatey v2 compatible - updated due to breaking change for the choco list command. Added dependency for Chocolatey v2.
 * 0.0.3   - updated website links to current URLs, use new icons created by Teknowledgist for Choco-Cleaner and Chocolatey PowerShell, minor logic changes on creating icons for my scripts as well as run them via their "shims", move ChocolateyGUI icon to Chocolatey icons folder if it's installed, uses choco-upgrade-all.ps1 if choco-upgrade-all-at or choco-upgrade-all-at-startup are installed
 * 0.0.2.2 - added FeedBurner RSS link
 * 0.0.2.1 - bug fix, the "egg on face release"
@@ -67,6 +68,9 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 ### ROADMAP:
 * I'm open to suggestions - open a GitHub issue please.
     </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey" version="2.0.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
