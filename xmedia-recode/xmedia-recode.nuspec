@@ -68,7 +68,7 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
 
 </description>
     <summary>XMedia Recode is a free All-In-One video converter and audio converter tool</summary>
-    <releaseNotes>https://www.xmedia-recode.de/en/version.html</releaseNotes>
+    <releaseNotes>https://www.xmedia-recode.de/en/version.php</releaseNotes>
     <tags>sdorfler dvd-ripper video-converter audio-converter binary embedded</tags>
     <dependencies>
       <dependency id="vcredist2017" version="14.16.27033" />
