@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>11.26</version>
+    <version>11.29</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg (SOFTWAREOK.COM)</authors>
     <owners>bcurran3</owners>
-    <licenseUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
-    <projectUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
+    <licenseUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
+    <projectUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
     <iconUrl>https://rawgit.com/zersh01/chocolatey-q-dir/master/Icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -50,12 +50,12 @@ Warning! ► [Once Q-Dir, always Q-Dir !!!](http://www.softwareok.com/?seite=faq
 
 </description>
     <summary>Q-Dir - Really good quad explorer 4 files and folder</summary>
-    <releaseNotes>http://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
+    <releaseNotes>https://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
     <copyright>Nenad Hrg (SOFTWAREOK.COM)</copyright>
     <tags>nhrg qdir q-dir file manager management explorer utility binary</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/qdir</packageSourceUrl>
-    <docsUrl>http://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
-    <bugTrackerUrl>http://www.softwareok.com/?seite=Freeware/Q-Dir</bugTrackerUrl>
+    <docsUrl>https://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
+    <bugTrackerUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir</bugTrackerUrl>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
