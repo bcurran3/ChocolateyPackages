@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'solarwinds-take-control-viewer'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://dashboard.systemmonitor.us/rap.php?Action=downloadtcviewermspanywherewin'
-$checksum       = 'A7F30675AA0011F7D80DE1DCD01185BB96003D0FAE4C54C9447FD0EBCE5620B9'
+$url            = 'https://swi-rc.cdn-sw.net/logicnow/Updates/7.00.47/TakeControlViewerInstall-7.00.47-20230601.exe'
+$checksum       = '623ED40C2670B017B3C508900A5A008D254BD9C353AC067CF2FFC530A5F4997E'
 
 $packageArgs = @{
   packageName    = $packageName

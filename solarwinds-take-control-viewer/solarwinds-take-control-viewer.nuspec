@@ -4,7 +4,7 @@
   <metadata>
     <id>solarwinds-take-control-viewer</id>
     <title>N-able Take Control Viewer (Install)</title>
-    <version>7.00.26</version>
+    <version>7.00.47.20230601</version>
     <authors>N-able</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/solarwinds-take-control-viewer</packageSourceUrl>
@@ -16,7 +16,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/solarwinds-take-control-viewer/solarwinds-take-control-viewer_icon.png</iconUrl>
     <summary>Take Control is a remote management tool.</summary>
-    <mailingListUrl>https://support.solarwindsmsp.com/portal/answers#!/feedtype=RECENT_REPLY&amp;dc=RemoteManagement&amp;criteria=ALLQUESTIONS</mailingListUrl>
+    <mailingListUrl>https://success.n-able.com/</mailingListUrl>
     <description>
 ---
 
