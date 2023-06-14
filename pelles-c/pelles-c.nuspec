@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of Pelles-C](http://www.smorgasbordet.com/pellesc/images/screen1.png)
+![Screenshot of Pelles-C](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/pelles-c/pelles-c_screenshot.png)
 	
 Pelles C is a complete development kit for Windows. It contains among other things an optimizing C compiler, a macro assembler, a linker, a resource compiler, a message compiler, a code signing utility, a make utility and an install builder. 
 
