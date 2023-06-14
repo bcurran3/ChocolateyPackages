@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pelles-c</id>
-    <version>9.00.0.0</version>
+    <version>10.00.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pelles-c</packageSourceUrl>
     <title>Pelles C (Install)</title>
     <authors>Pelle Orinius</authors>
     <projectUrl>http://www.smorgasbordet.com/pellesc</projectUrl>
     <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/pelles-c/pelles-c_icon.png</iconUrl>
-    <copyright>Copyright © Pelle Orinius</copyright>
+    <copyright>Copyright Pelle Orinius</copyright>
     <licenseUrl>http://www.smorgasbordet.com/pellesc/termsofuse.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://wiki.pellesc.de/</docsUrl>
@@ -35,7 +35,7 @@ The compiler is originally based on LCC (by Chris Fraser and David Hanson), but 
 
 The install builder for Windows is originally based on NSIS from Nullsoft.
 
-###Features:
+### Features:
 * Support for 32-bit Windows (X86) and 64-bit Windows (X64).
 * Support for the newer C standards C99 and C11.
 * Support for OpenMP version 3.1.
@@ -63,9 +63,6 @@ The install builder for Windows is originally based on NSIS from Nullsoft.
 
 </description>
     <releaseNotes>http://www.smorgasbordet.com/pellesc/</releaseNotes>
-    <dependencies>
-      <dependency id="autohotkey" version="1.1.27" />
-    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
