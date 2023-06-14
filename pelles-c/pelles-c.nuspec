@@ -20,7 +20,7 @@
     <description>
 ---
 
-###[choco://pelles-c](choco://pelles-c)
+### [choco://pelles-c](choco://pelles-c)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
