@@ -12,10 +12,14 @@ if ($bits -eq 64)
    {
 	$exeTarget = "tageditor-$ENV:ChocolateyPackageVersion-i686-w64-mingw32.exe"
 	Install-BinFile -Name tageditor -Path "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-i686-w64-mingw32-cli.exe"
+	Write-Host "" | Out-File "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-i686-w64-mingw32.exe.ignore"
+	Write-Host "" | Out-File "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-i686-w64-mingw32-cli.exe.ignore"
 	Remove-Item "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-x86_64-w64-mingw32.exe"
    } else {
 	$exeTarget = "tageditor-$ENV:ChocolateyPackageVersion-x86_64-w64-mingw32.exe"
 	Install-BinFile -Name tageditor -Path "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-x86_64-w64-mingw32-cli.exe"
+	Write-Host "" | Out-File "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-x86_64-w64-mingw32.exe.ignore"
+	Write-Host "" | Out-File "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-x86_64-w64-mingw32-cli.exe.ignore"
 	Remove-Item "$toolsDir\tageditor-$ENV:ChocolateyPackageVersion-i686-w64-mingw32.exe"
    }
 
