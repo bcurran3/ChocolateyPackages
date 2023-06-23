@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-bluetooth-drivers</id>
-    <version>22.220.1</version>
+    <version>22.230.0</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/18649</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-bluetooth-drivers</packageSourceUrl>
@@ -24,6 +24,11 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
+## Important Notice
+
+* Driver package 22.230.0 has been validated to support Microsoft Windows 11*
+* From the Bluetooth release 22.210.X package onwards, the Windows 10 32-bit driver for products 7265 (Rev. D), 3165, and 3168 will only receive updates to address potential security vulnerabilities. Last available Windows 10 32-bit driver version is 20.100.9.8 from package 22.200.0.
+
 ## Purpose
 
 Intel® Wireless Bluetooth® is recommended for end-users, including home users and business customers with Intel Wireless Bluetooth® technology.
@@ -37,7 +42,7 @@ Intel® Wireless Bluetooth® is recommended for end-users, including home users 
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/774106/ReleaseNotes_BT_22.210.0.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/781640/ReleaseNotes_BT_22.230.0.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
