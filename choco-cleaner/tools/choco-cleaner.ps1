@@ -70,6 +70,7 @@ $global:CCExitCode=0
 $global:global:DeletedFiles=0
 $global:PermissionErrors=$False
 $global:Reclaimed=0
+$global:VersionError=$False
 
 # Import preferences from choco-cleaner.config
 [xml]$ConfigFile = Get-Content "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.config"
@@ -420,33 +421,45 @@ function DeleteLibSynced {
 # Deletes files in the hidden .chocolatey directory
 function DeleteDotChocolatey {
 	$deltaSize=0
-if (([System.Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall\choco.exe").ProductVersion)).major -gt 1) {
-	$InstalledPackages = & choco list -r -y
-	} else {
-		$InstalledPackages = & choco list -lo -r -y
+	switch -Wildcard ("$([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall\choco.exe").ProductVersion)") {
+		'2*' {
+			$InstalledPackages = & choco list -r -y
+			break
 		}
-    $InstalledPackages=$InstalledPackages.replace("|",".")
-    $DotChocolateyDirs =  Get-ChildItem -Path $env:ChocolateyInstall\.chocolatey\* -Directory -Name
-    $delta = $DotChocolateyDirs | Where-Object {$InstalledPackages -NotContains $_}
-	$DotChocolateyFiles2Delete=$delta | foreach-object $_ {Get-ChildItem -Path $env:ChocolateyInstall\.chocolatey\$_}
-    $DeltaCount=$DotChocolateyFiles2Delete.count
-    if ($DeltaCount -ge 1){
-	   Write-Host "  ** Deleting $DeltaCount unnecessary Chocolatey .chocolatey install snapshot files..." -Foreground Green
-	   $DotChocolateyFiles2Delete | ForEach-Object {$deltaSize=$deltaSize + $_.length}
-       Remove-Item $DotChocolateyFiles2Delete.fullname -Recurse -Force # Deletes files but not empty directories
-       if ($error[0].categoryinfo.category -match "PermissionDenied") {
- 	      $global:PermissionErrors=$True
-   	      Add2LogError "deleting .chocolatey install snapshot files due to permissions."
-	    } else {
-            Set-Location -Path "$env:ChocolateyInstall\.chocolatey"
-            Remove-Item $delta -Recurse -Force
-		    $DotChocolateyFiles2Delete.fullname | ForEach-Object {Add2Log "DELETED: $_"}
-			Add2Log "RECLAIMED: $deltaSize bytes"
-			$global:DeletedFiles=$global:DeletedFiles + $DeltaCount
-			$global:Reclaimed=$global:Reclaimed + $deltaSize
+		'[01]*' {
+			$InstalledPackages = & choco list -lo -r -y
+			break
 		}
-	} else {
-	   Write-Host "  ** NO unnecessary Chocolatey .chocolatey install snapshot files to delete." -Foreground Green
+		default {
+			$global:VersionError = $True
+			Add2LogError "skipping .chocolatey install snapshot cleanup due to unrecognized choco.exe version ($_)"
+		}
+	}
+	if (-not $global:VersionError) {
+		$InstalledPackages = $InstalledPackages.Where({ $_.Contains("|") -and $_.Contains(".") -and -not $_.Contains(" ") })
+		$InstalledPackages = $InstalledPackages.Replace("|",".")
+		$DotChocolateyDirs = Get-ChildItem -LiteralPath $env:ChocolateyInstall\.chocolatey -Directory -Name
+		$delta = $DotChocolateyDirs.Where({ $InstalledPackages -notcontains $_ })
+		$DotChocolateyFiles2Delete = $delta | ForEach-Object { Get-ChildItem -LiteralPath $env:ChocolateyInstall\.chocolatey\$_ }
+		$DeltaCount = $DotChocolateyFiles2Delete.Count
+		if ($DeltaCount -ge 1) {
+			Write-Host "  ** Deleting $DeltaCount unnecessary Chocolatey .chocolatey install snapshot files..." -Foreground Green
+			$DotChocolateyFiles2Delete | ForEach-Object { $deltaSize = $deltaSize + $_.Length }
+			Remove-Item -LiteralPath $DotChocolateyFiles2Delete.FullName -Recurse -Force # Deletes files but not empty directories
+			if ($Error[0].CategoryInfo.Category -eq "PermissionDenied") {
+				$global:PermissionErrors = $True
+				Add2LogError "deleting .chocolatey install snapshot files due to permissions."
+			} else {
+				Set-Location -LiteralPath "$env:ChocolateyInstall\.chocolatey"
+				Remove-Item -LiteralPath $delta -Recurse -Force
+				$DotChocolateyFiles2Delete.FullName | ForEach-Object { Add2Log "DELETED: $_" }
+				Add2Log "RECLAIMED: $deltaSize bytes"
+				$global:DeletedFiles = $global:DeletedFiles + $DeltaCount
+				$global:Reclaimed = $global:Reclaimed + $deltaSize
+			}
+		} else {
+			Write-Host "  ** NO unnecessary Chocolatey .chocolatey install snapshot files to delete." -Foreground Green
+		}
 	}
 }
 
@@ -727,6 +740,7 @@ if ($DeleteBadShims) {DeleteBadShims}
 
 # Summary report
 if ($global:PermissionErrors) {Write-Host "  ** Some files not deleted due to permission problems." -Foreground Yellow}
+if ($global:VersionError) {Write-Host "  ** Some files not deleted due to unrecognized choco.exe version." -Foreground Yellow}
 $global:Reclaimed=$global:Reclaimed/1KB
 $global:Reclaimed = $global:Reclaimed.ToString('N0')
 Write-Host "Choco-Cleaner finished deleting $global:DeletedFiles unnecessary Chocolatey files and reclaimed ~ $global:Reclaimed KB!`n" -Foreground Magenta
