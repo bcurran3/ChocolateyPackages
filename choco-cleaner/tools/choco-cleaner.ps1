@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 
-Write-Host "Choco-Cleaner.ps1 v1.1.0 (2023-06-12) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v1.1.1 (2023-06-26) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -420,7 +420,8 @@ function DeleteLibSynced {
 # Deletes files in the hidden .chocolatey directory
 function DeleteDotChocolatey {
 	$deltaSize=0
-if (([System.Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall\choco.exe").ProductVersion)).major -gt 1) {
+#if (([System.Version]([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall\choco.exe").ProductVersion)).major -gt 1) {
+if ([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall\choco.exe").ProductMajorPart -gt 1){
 	$InstalledPackages = & choco list -r -y
 	} else {
 		$InstalledPackages = & choco list -lo -r -y
