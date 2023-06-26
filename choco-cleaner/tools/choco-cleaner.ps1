@@ -439,8 +439,7 @@ if ([System.Diagnostics.FileVersionInfo]::GetVersionInfo("$env:chocolateyinstall
  	      $global:PermissionErrors=$True
    	      Add2LogError "deleting .chocolatey install snapshot files due to permissions."
 	    } else {
-            Set-Location -Path "$env:ChocolateyInstall\.chocolatey"
-            Remove-Item $delta -Recurse -Force
+			$delta | % {Remove-Item $env:ChocolateyInstall\.chocolatey\$_ -Recurse -Force}
 		    $DotChocolateyFiles2Delete.fullname | ForEach-Object {Add2Log "DELETED: $_"}
 			Add2Log "RECLAIMED: $deltaSize bytes"
 			$global:DeletedFiles=$global:DeletedFiles + $DeltaCount
