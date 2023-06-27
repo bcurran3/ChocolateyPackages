@@ -1,7 +1,9 @@
-﻿$ErrorActionPreference = 'Stop';
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url      = 'https://download01.logi.com/web/ftp/pub/techsupport/options/options_installer.exe'
-$checksum = '59C16CFFE04EA4BBFF1B1A38E49AE99135591F72D87153FAC463927586F96E71'
+$checksum = '8A8882C14F4ABBEF7756A2E58A69E26AF7D2191A26195C51F4325029552C96AE'
+
+Confirm-Win10
 
 $packageArgs = @{
     packageName    = $env:ChocolateyPackageName
@@ -9,7 +11,7 @@ $packageArgs = @{
     checkum        = $checksum
     checksumType   = 'sha256'
     fileType       = 'EXE'
-    silentArgs     = '/quiet /norestart'
+    silentArgs     = '/quiet /update:false'
     validExitCodes = @(0)   
 }
 

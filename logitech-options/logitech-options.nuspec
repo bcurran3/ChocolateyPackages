@@ -3,17 +3,17 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>logitech-options</id>
-    <version>9.70.68</version>
+    <version>10.10.58</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/logitech-options</packageSourceUrl>
     <title>Logitech Options (Install)</title>
     <authors>Logitech</authors>
-    <projectUrl>http://support.logitech.com/en_us/software/options</projectUrl>
-    <iconUrl>https://secure.logitech.com/assets/64869/options-icon.png</iconUrl>
+    <projectUrl>https://support.logitech.com/en_us/software/options</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/logitech-options/logitech-options_icon.png</iconUrl>
     <copyright>© Logitech. All rights reserved</copyright>
-    <licenseUrl>https://www.logitech.com/tos/terms.html</licenseUrl>
+    <licenseUrl>https://www.logitech.com/en-us/tos/terms.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>logitech options keyboard mouse utility notsilent</tags>
+    <tags>logitech options keyboard mouse utility</tags>
     <summary>Logitech Options software lets you customize your device settings.</summary>
     <description>
 ---
@@ -41,7 +41,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 </description>
     <dependencies>
-      <dependency id="dotnet4.5.2" version="4.5.2" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
   </metadata>
   <files>
