@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-list-backup</id>
-    <version>2023.06.02-pre</version>
+    <version>2023.06.28</version>
     <owners>bcurran3</owners>
     <title>(unofficial) Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
@@ -85,6 +85,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * From Windows, click Chocolatey Package List Backup in the Windows Start Menu or Package List Backup inside the Chocolatey folder if [Chocolatey Shortcuts](https://chocolatey.org/packages/choco-shortcuts-winconfig) is installed.	
 	
 ### CHANGELOG:
+* 2023.06.28 - Now compatible with Chocolatey alpha/beta/delta/epsilon/zeta/eta/theta/iota/kappa/lambda/mu/nu/xi/omicron/pi/rho/sigma/tau/upsilon/phi/chi/psi/omega versions. New -ViewLog option. Added detailed logging. Minor changes to arrangement, flow, cosmetics, and comments.
 * 2023.06.02 - Added Chocolatey 2.0 compatibility, added new defaults for Win10+ computers to AllowStartIfOnBatteries, DontStopIfGoingOnBatteries, StartWhenAvailable
 * 2022.02.06 - All existing files now renamed with .bak before creating new versions. This backup is useful during migrations where the files could get overwritten during install of CPLB on a new computer. (https://github.com/bcurran3/ChocolateyPackages/issues/285)
 * 2021.09.25 - Improved OneDrive support while running under SYSTEM and handling of a missing config file.
