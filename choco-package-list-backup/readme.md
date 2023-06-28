@@ -99,6 +99,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * 2018.02.12 - added Nextcloud support (thanks thomasaiman) and fixed TonidoSync (Thanks thomasaiman!)
 * 2018.01.29 - edited re-installation message, updated donation info :)
 * 2017.12.17 - added editable custom save location (requested)
+* 2017.08.19 - initial release
 
 #### ROADMAP:
 * Possibly convert to use regkey install path for each supported program
