@@ -4,7 +4,7 @@
   <metadata>
     <id>choco-package-info-description.hook</id>
     <version>0.1.0</version>
-    <title>(unofficial) Choco Package Info Summary (Pre-Install Hook)</title>
+    <title>(unofficial) Choco Package Info Description (Pre-Install Hook)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
@@ -18,6 +18,8 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
+
+![Screenshot of Choco Package Info Description (Pre-Install Hook)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-info-collection/choco-package-info-description.hook/choco-package-info-description.hook_screenshot.png)
 
 # placeholder
 

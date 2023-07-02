@@ -19,6 +19,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
+![Screenshot of Choco Package Info Summary (Pre-Install Hook)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-info-collection/choco-package-info-summary.hook/choco-package-info-summary.hook_screenshot.png)
+
 # placeholder
 
 choco-package-info-summary.hook displays the package summary of the package you are installing before installation
