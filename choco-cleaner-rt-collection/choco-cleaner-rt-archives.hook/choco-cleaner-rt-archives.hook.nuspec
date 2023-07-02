@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-cleaner-rt-archives.hook</id>
+    <version>0.1.0</version>
+    <title>(unofficial) Choco Cleaner RT for Archives (Post-Install Hook)</title>
+    <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-archives.hook</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+---
+
+### [choco://choco-cleaner-rt-archives.hook](choco://choco-cleaner-rt-archives.hook)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+# PLACEHOLDER
+
+Choco Cleaner RT for Archives deletes unnecessary archive files after Chocolatey package installs
+    
+</description>
+    <summary>Choco Cleaner RT for Archives deletes unnecessary archive files after Chocolatey package installs</summary>
+    <releaseNotes>
+### CHANGELOG:
+* 0.1.0 - initial release
+	</releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial choco cleaner cleanup hook</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-archives.hook</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-archives.hook</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="hook\**" target="hook" />
+  </files>
+</package>

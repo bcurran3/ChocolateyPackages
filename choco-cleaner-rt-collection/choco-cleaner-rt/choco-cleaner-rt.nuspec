@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-cleaner-rt</id>
+    <version>0.1.0</version>
+    <title>(unofficial) Choco Cleaner RT</title>
+    <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+---
+
+### [choco://choco-cleaner-rt](choco://choco-cleaner-rt)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+
+# placeholder
+
+Choco Cleaner RT is a collection of essential Choco Cleaner RT hooks for cleaning unnessary orphaned Chocolatey package files
+    
+</description>
+    <summary>Choco Cleaner RT is a collection of essential Choco Cleaner RT hooks for cleaning unnessary orphaned Chocolatey package files</summary>
+    <releaseNotes>
+### CHANGELOG:
+* 0.1.0 - initial release
+	</releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial choco cleaner cleanup hook</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="1.2.0" />
+      <dependency id="choco-cleaner-rt-archives.hook" version="0.1.0" />
+      <dependency id="choco-cleaner-rt-chocolateycache.hook" version="0.1.0" />
+      <dependency id="choco-cleaner-rt-dotchocolatey.hook" version="0.1.0" />
+      <dependency id="choco-cleaner-rt-ignores.hook" version="0.1.0" />
+      <dependency id="choco-cleaner-rt-libbad.hook" version="0.1.0" />
+      <dependency id="choco-cleaner-rt-msinstallers.hook" version="0.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
