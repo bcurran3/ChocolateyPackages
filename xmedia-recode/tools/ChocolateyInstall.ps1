@@ -5,8 +5,10 @@ $TodaysVersion = ($ENV:ChocolateyPackageVersion -replace '[.]','')
 $packageArgs = @{
   packageName    = "$ENV:ChocolateyPackageName"
   fileType       = 'EXE'
-  file           = "$toolsDir\XMediaRecode"+$TodaysVersion+"_setup.exe"
-  file64         = "$toolsDir\XMediaRecode"+$TodaysVersion+"_x64_setup.exe"
+#  file           = "$toolsDir\XMediaRecode"+$TodaysVersion+"_setup.exe"
+  file           = "$toolsDir\XMediaRecode3580_setup.exe"
+#  file64         = "$toolsDir\XMediaRecode"+$TodaysVersion+"_x64_setup.exe"
+  file64         = "$toolsDir\XMediaRecode3580_x64_setup.exe"
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0)
 }
