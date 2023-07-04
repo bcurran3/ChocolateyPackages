@@ -4,7 +4,7 @@
   <metadata>
     <id>chocolatey-toast-notifications.hook</id>
     <version>1.0.0</version>
-    <title>Chocolatey Toast Notifications (Hook)</title>
+    <title>(unofficial) Chocolatey Toast Notifications (Hook)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
