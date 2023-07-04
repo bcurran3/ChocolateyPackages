@@ -21,10 +21,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of Choco Package Info Description (Pre-Install Hook)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-info-collection/choco-package-info-description.hook/choco-package-info-description.hook_screenshot.png)
 
-## So you've replaced your addiction of watching defrag with intensely watching Chocolatey packages download and install... If you're anything like me, (To be fair, probably not as I've been told the mold has been broken.) now and then you see a package upgraded and wonder why you have it installed since you can't remember the last time you ran the program or what it's even for. This little pre-install hook will show you the description of the package before the package installs. So now you'll know and have something to read as you watch the download.
+## This hook addition displays the description of the package you are installing before installation.
 
-
-This hook addition displays the description of the package you are installing before installation.
+### So you've replaced your addiction of watching defrag with intensely watching Chocolatey packages download and install... If you're anything like me, (probably not as I've been told the mold was broken) now and then you see a package upgraded and wonder why you have it installed since you can't remember the last time you ran the program or what it's even for. This little pre-install hook will show you the description of the package before the package installs. So now you'll know and have something to read as you watch the download.
 
 ## Choco-Package-Info Hooks Collection:
 [choco-package-info-description.hook](https://community.chocolatey.org/packages/choco-package-info-description.hook) - displays package description before install
@@ -36,7 +35,7 @@ This hook addition displays the description of the package you are installing be
     <summary>choco-package-info-description.hook displays the description of the package you are installing before installation</summary>
     <releaseNotes>
 ### CHANGELOG:
-* 1.0 - initial release
+* 1.0.0 - initial release
 
 ### ROADMAP:
 * No future development planned, only maintenance as needed.
