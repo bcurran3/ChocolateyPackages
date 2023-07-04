@@ -21,7 +21,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of Choco Package Info Releaes Notes (Pre-Install Hook)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-info-collection/choco-package-info-releasenotes.hook/choco-package-info-releasenotes.hook_screenshot.png)
 
-## This hook addition displays the release notes of the package you are installing before installation.
+## This hook displays the release notes of the package you are installing up upgrading right before it happens.
 
 So you've replaced your addiction of watching defrag with watching Chocolatey packages download and install... If you're anything like me, (probably not as I've been told the mold was broken) now and then you see a package upgraded and wonder what's changed in this version. This little pre-install hook will show you the release notes of the package before the package installs. So now you'll know and have something to read as you watch the download.
 
@@ -32,7 +32,7 @@ So you've replaced your addiction of watching defrag with watching Chocolatey pa
 
 **If you like this little hooker, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 </description>
-    <summary>choco-package-info-releasenotes.hook displays the release notes of the package you are installing before installation</summary>
+    <summary>choco-package-info-releasenotes.hook displays the release notes of the package you are installing up upgrading right before it happens.</summary>
     <releaseNotes>
 ### CHANGELOG:
 * 1.0.0 - initial release
