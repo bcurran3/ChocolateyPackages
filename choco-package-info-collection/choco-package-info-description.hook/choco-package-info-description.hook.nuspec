@@ -23,7 +23,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ## This hook addition displays the description of the package you are installing before installation.
 
-### So you've replaced your addiction of watching defrag with intensely watching Chocolatey packages download and install... If you're anything like me, (probably not as I've been told the mold was broken) now and then you see a package upgraded and wonder why you have it installed since you can't remember the last time you ran the program or what it's even for. This little pre-install hook will show you the description of the package before the package installs. So now you'll know and have something to read as you watch the download.
+So you've replaced your addiction of watching defrag with intensely watching Chocolatey packages download and install... If you're anything like me, (probably not as I've been told the mold was broken) now and then you see a package upgraded and wonder why you have it installed since you can't remember the last time you ran the program or what it's even for. This little pre-install hook will show you the description of the package before the package installs. So now you'll know and have something to read as you watch the download.
 
 ## Choco-Package-Info Hooks Collection:
 [choco-package-info-description.hook](https://community.chocolatey.org/packages/choco-package-info-description.hook) - displays package description before install
