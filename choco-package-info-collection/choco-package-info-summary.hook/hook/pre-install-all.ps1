@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Continue'
-# choco-package-info-summary.hook v1.0 (2023-07-01) Copyleft 2023 by Bill Curran AKA BCURRAN3
+# choco-package-info-summary.hook v1.0.0 (2023-07-04) Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 
@@ -43,7 +43,7 @@ function FormatStringWithIndentation {
 
 if (Test-Path "$env:chocolateyPackageFolder\$env:chocolateyPackageName.nuspec"){
     $nuspecXML = "$env:chocolateyPackageFolder\$env:chocolateyPackageName.nuspec"
-    [xml]$nuspecFile = Get-Content $nuspecXML -TotalCount 750
+    [xml]$nuspecFile = Get-Content $nuspecXML
 	$NuspecTitle = $nuspecFile.package.metadata.title
     $NuspecSummary = $nuspecFile.package.metadata.summary
 	if ($NuspecSummary){
