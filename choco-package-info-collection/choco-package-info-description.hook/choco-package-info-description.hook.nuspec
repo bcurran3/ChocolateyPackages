@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-info-collection/choco-package-info-description.hook</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/mychocohooks_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -54,4 +54,3 @@ So you've replaced your addiction of watching defrag with watching Chocolatey pa
     <file src="hook\**" target="hook" />
   </files>
 </package>
-
