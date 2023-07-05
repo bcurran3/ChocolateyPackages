@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-info-collection/choco-package-info-releasenotes.hook</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/mychocohooks_icon.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/bcurran3/ChocolateyPackages/master/mylogos/mychocohooks_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of Choco Package Info Releaes Notes (Pre-Install Hook)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-package-info-collection/choco-package-info-releasenotes.hook/choco-package-info-releasenotes.hook_screenshot.png)
+![Screenshot of Choco Package Info Releaes Notes (Pre-Install Hook)](https://rawcdn.githack.com/bcurran3/ChocolateyPackages/master/choco-package-info-collection/choco-package-info-releasenotes.hook/choco-package-info-releasenotes.hook_screenshot.png)
 
 ## This hook displays the release notes of the package you are installing up upgrading right before it happens.
 
