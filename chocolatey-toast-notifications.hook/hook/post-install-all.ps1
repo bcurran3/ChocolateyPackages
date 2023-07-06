@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Continue'
-# chocolatey-toast-notifications.hook v1.0 (2023-07-01) Copyleft 2023 by Bill Curran AKA BCURRAN3
+# chocolatey-toast-notifications.hook v1.0.0 (2023-07-01) Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 

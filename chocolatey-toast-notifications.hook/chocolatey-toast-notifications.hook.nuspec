@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.hook</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.hook/chocolatey-toast-notifications.hook_icon.png</iconUrl>
+    <iconUrl>https://rawcdn.githack.com/bcurran3/ChocolateyPackages/master/chocolatey-toast-notifications.hook/chocolatey-toast-notifications.hook_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
