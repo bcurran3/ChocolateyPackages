@@ -1,13 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'irfanviewplugins'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
-					  
+$file           = "$(Get-ChildItem $toolsDir\*_setup.exe -Exclude *x64*.exe)"
+$file64         = "$(Get-ChildItem $toolsDir\*_setup.exe -Include *x64*.exe)"
+
+if ($env:chocolateyForceX86){$file64 = $file}
+
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
-  file           = "$toolsDir\iview"+$TodaysVersion+"_plugins_setup.exe"
-  file64         = "$toolsDir\iview"+$TodaysVersion+"_plugins_x64_setup.exe"
+  file           = "$file"
+  file64         = "$file54"
   validExitCodes = @(0)
   silentArgs     = '/silent'
   softwareName   = ''
@@ -16,3 +19,6 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs  
 
 Remove-Item $toolsDir\*.exe -EA SilentlyContinue | Out-Null
+
+# UPDATE INSTRUCTIONS
+# Replace binaries
