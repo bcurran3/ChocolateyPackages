@@ -1,9 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'irfanview'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$TodaysVersion  = ($env:ChocolateyPackageVersion -replace '[.]','')
+$file           = "$(Get-ChildItem $toolsDir\*_setup.exe -Exclude *x64*.exe)"
+$file64         = "$(Get-ChildItem $toolsDir\*_setup.exe -Include *x64*.exe)"
 $arguments      = @{}
 $packageParameters = $env:chocolateyPackageParameters
+
+if ($env:chocolateyForceX86){$file64 = $file}
 
 Write-Debug "Default values for package parameters: 0=off, 1=on"
 $desktop = 0
@@ -82,8 +85,8 @@ Write-Debug "Silent arguments Chocolatey will use are: $silentArgs"
 $packageArgs = @{
   packageName    = $packageName
   fileType       = 'EXE'
-  file           = "$toolsDir\iview"+$TodaysVersion+"_setup.exe"
-  file64         = "$toolsDir\iview"+$TodaysVersion+"_x64_setup.exe"
+  file           = "$file"
+  file64         = "$file64"
   validExitCodes = @(0)
   silentArgs     = $silentArgs
   softwareName   = 'IrfanView*'
@@ -92,3 +95,6 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs 	
 
 Remove-Item $toolsDir\*.exe -EA SilentlyContinue | Out-Null
+
+# UPDATE INSTRUCTIONS
+# Replace binaries
