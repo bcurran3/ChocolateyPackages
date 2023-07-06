@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanview-languages</id>
-    <version>4.62</version>
+    <version>4.62.0.20230706</version>
     <title>IrfanView All Languages (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
@@ -61,7 +61,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.62" />
+      <dependency id="irfanview" version="4.62.0.20230706" />
     </dependencies>
   </metadata>
   <files>
