@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>pelles-c</id>
-    <version>11.00.2</version>
+    <version>10.00.6</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/pelles-c</packageSourceUrl>
     <title>Pelles C (Install)</title>
