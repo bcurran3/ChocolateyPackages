@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop';
 $packageName = 'sumo'
 $url         = 'https://kcsoftwares.com/files/sumo_lite.exe'
-$checksum    = '606AB8404B80FC6E29D9B0E441F5F843FD724BE18BA0ED29B12E36F7AF606E6D'
+$checksum    = '004BD05F6BA9A9D0BEE2BDBDCF498A1D18DB559CB58E28998D4061FBAFB64D97'
 
 $packageArgs = @{
     packageName    = $packageName
