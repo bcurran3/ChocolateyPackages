@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-ipdt</id>
-    <version>4.1.7.39</version>
-    <title>Intel® Processor Diagnostic Tool (Install)</title>
+    <version>4.1.8.40</version>
+    <title>Intel Processor Diagnostic Tool (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
@@ -36,7 +36,7 @@ The purpose of the Intel® Processor Diagnostic Tool is to verify the functional
 
 </description>
     <summary>IPDT performs diagnostics on Intel CPUs.</summary>
-    <releaseNotes>https://downloadmirror.intel.com/19792/eng/the%20intel%20processor%20diagnostic%204.1.5.37.w.mp%20for%20windows%2064%20bit%20os%20release%20notes.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/19792/Read%20Me%20First-Win64bit.txt</releaseNotes>
     <copyright>Intel Corporation</copyright>
     <tags>intel ipdt diagnostics cup</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-ipdt</packageSourceUrl>
