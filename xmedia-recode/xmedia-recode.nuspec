@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>xmedia-recode</id>
-    <version>3.5.8.0</version>
+    <version>3.5.8.1</version>
     <title>XMedia Recode (Install)</title>
     <authors>Sebastian Dörfler</authors>
     <copyright>Copyright © Sebastian Dörfler</copyright>
@@ -53,7 +53,7 @@ WebM to AVI, WebM to MP4, WebM to MKV, WebM to MOV, WebM to OGM
 
 * Processor: Intel / AMD compatible at 1 GHz or higher
 * RAM: 1 GB
-* Windows 7, 8, 8.1, 10
+* Windows 7, 8, 8.1, 10, 11
 * DirectX: DirectX 9
 * Nvidia CUDA: Nvidia GPU driver 347.09 or higher
 
