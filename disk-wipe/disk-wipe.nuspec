@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>disk-wipe</id>
-    <version>1.7</version>
+    <version>1.7.0.20230719</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/disk-wipe</packageSourceUrl>	
     <owners>bcurran3</owners>
     <title>Disk Wipe (Portable)</title>
@@ -11,9 +11,11 @@
     <projectUrl>http://www.diskwipe.org/</projectUrl>
     <iconUrl>http://www.diskwipe.org/images/inset_b.gif</iconUrl>
     <copyright>Copyright (C) 2009-2012 by Wipe Soft</copyright>
+    <licenseUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/disk-wipe/tools/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.diskwipe.org/user_guide.php</docsUrl>
-    <tags>disk wipe wiper util erase eraser DoD 5220 portable</tags>
+    <mailingListUrl>https://www.diskwipe.org/contact.php</mailingListUrl>
+    <tags>disk wipe wiper util erase eraser DoD 5220 portable embedded</tags>
     <summary>Disk Wipe is Free, portable Windows application for permanent volume data destruction.</summary>
     <description>
 ![Screenshot of Disk Wipe](http://www.diskwipe.org/images/diskwipe_screen1.jpg)

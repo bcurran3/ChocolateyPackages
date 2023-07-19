@@ -1,0 +1,52 @@
+Obtained from within the Disk Wipe application.
+-------------------------------------
+
+Disk Wipe - Free permanent data removal.
+Copyright © 2009-2012.  DISKWIPE SOFTWARE
+
+End-User License Agreement (EULA) for Disk Wipe
+
+This End-User License Agreement ("EULA") is a legal 
+agreement between Wipe Soft ("AUTHOR") and an individual 
+or a single entity who agrees and accepts the following terms 
+and conditions by installing, copying, or otherwise using the 
+software product identified above ("SOFTWARE PRODUCT"). 
+
+The SOFTWARE PRODUCT is protected by copyright laws 
+and international copyright treaties. The SOFTWARE 
+PRODUCT is licensed, not sold. This EULA does not give you 
+any license to the copyrights or other intellectual property 
+rights. 
+All rights not expressly granted by this EULA are reserved to 
+("AUTHOR"). 
+
+DISTRIBUTION
+You may distribute this program in unmodified form via 
+electronic means or on CD compilations. You may not sell this 
+program.
+
+LIMITATIONS
+You may not alter, reverse engineer, decompile, or 
+disassemble the SOFTWARE PRODUCT except and only to 
+the extent that such activity is expressly permitted by 
+applicable 
+law notwithstanding this limitation. 
+You may not rent, lease, lend, sell, or sublicense the 
+SOFTWARE PRODUCT. You may not rent, lease, or lend your 
+personal data (username / password).
+
+DISCLAIMER OF WARRANTY
+This SOFTWARE PRODUCT is provided as is WITHOUT 
+WARRANTY of any kind, either express or implied, including, 
+but not limited 
+to, warranties of merchantability or fitness for a particular 
+purpose. AUTHOR assumes no liability for DAMAGES, either 
+direct or consequential, which may result from the use of the 
+software product. AUTHOR takes no responsibility if one or 
+more results (statistic) are missing or they are incorrect.
+
+TERMINATION
+Without prejudice to any other rights, AUTHOR may terminate 
+this EULA if you fail to comply with the terms and conditions of 
+this EULA. In such event, you must destroy all copies of the 
+SOFTWARE PRODUCT.
