@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-chocolateycache.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-chocolateycache.hook/choco-cleaner-rt-chocolateycache.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-chocolateycache.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-chocolateycache.hook/choco-cleaner-rt-chocolateycache.hook_screenshot.png)
 
 ## Choco Cleaner RT for Chocolatey Cache Files deletes unnecessary files in the various Chocolatey cache locations
 
