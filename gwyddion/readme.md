@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/forceps/ForcePS_icon.png" width="100" height="100">
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/gwyddion/gwyddion_icons.png" width="100" height="100">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
