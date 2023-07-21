@@ -6,7 +6,7 @@
     <title>GNU Units (Install)</title>
     <version>2.22.0</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/gnu-units</packageSourceUrl>
     <authors>Adrian Mariano</authors>
     <projectUrl>https://www.gnu.org/software/units/</projectUrl>
     <projectSourceUrl>https://ftp.gnu.org/gnu/units/</projectSourceUrl>
@@ -31,7 +31,7 @@ Beyond simple unit conversions, GNU Units can be used as a general-purpose scien
 
 The units are defined in an external data file. You can use the extensive data file that comes with this program, or you can provide your own data file to suit your needs. You can also use your own data file to supplement the standard data file.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/REPLACEME/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/gnu-units/readme.md)**
 
     
 
