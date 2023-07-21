@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-desktopicons.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-desktopicons.hook/choco-cleaner-rt-desktopicons.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-desktopicons.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-desktopicons.hook/choco-cleaner-rt-desktopicons.hook_screenshot.png)
 
 ## Choco Cleaner RT for Desktop Icons deletes newly created desktop icon files after Chocolatey package installs
 
