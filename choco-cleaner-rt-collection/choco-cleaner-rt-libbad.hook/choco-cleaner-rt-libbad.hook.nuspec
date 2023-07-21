@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-libbad.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-libbad.hook/choco-cleaner-rt-libbad.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-libbad.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-libbad.hook/choco-cleaner-rt-libbad.hook_screenshot.png)
 
 ## Choco Cleaner RT for lib-bad deletes the Chocolatey lib-bad folder which contains Chocolatey packages that failed to install
 
