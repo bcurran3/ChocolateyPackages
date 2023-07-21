@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-ignores.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook/choco-cleaner-rt-ignores.hook.png)
+![screenshot of choco-cleaner-rt-ignores.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook/choco-cleaner-rt-ignores.hook_screenshot.png)
 
 ## Choco Cleaner RT for .ignore Files deletes unnecessary Chocolatey package .ignore files used during previous package installs
 
