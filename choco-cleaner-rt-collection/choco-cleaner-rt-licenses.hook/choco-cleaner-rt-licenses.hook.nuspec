@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-licenses.hook](https://github.com/bcurran3/ChocolateyPackages/tree/choco-cleaner-rt-collection/master/choco-cleaner-rt-licenses.hook/choco-cleaner-rt-licenses.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-licenses.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-licenses.hook/choco-cleaner-rt-licenses.hook_screenshot.png)
 
 ## Choco Cleaner RT for License Files deletes license and verification files included in Chocolatey packages with embedded binaries
 
