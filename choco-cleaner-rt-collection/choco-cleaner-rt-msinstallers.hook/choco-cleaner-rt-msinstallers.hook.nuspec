@@ -19,18 +19,20 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-## Choco Cleaner RT for MS Installers deletes Microsoft install packages (.msi, .msu, and .msp) left over from Chocolatey packages that forgot to delete them post install
+![screenshot of choco-cleaner-rt-msinstallers.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-msinstallers.hook/choco-cleaner-rt-msinstallers.hook_screenshot.png)
+
+## Choco Cleaner RT for MS Installers deletes unnecessary Microsoft install packages (.msi, .msu, and .msp) left over from Chocolatey packages that didn't delete them after use
 
 **Choco Cleaner RT** (runtime/realtime - you choose) hooks are the natural evolution of my [Choco-Cleaner](https://community.chocolatey.org/packages/choco-cleaner) script using hooks available in Chocolatey v1.2.0+. These hooks do micro cleansing by duplicating the features of **Choco Cleaner** before and after package installs, thus RT. No scheduling. No manually running anything. No need to edit a config file. Just install the choco-cleaner-rt-XXX.hook(s) you want. **Choco Cleaner RT** hooks run WHEN you install and update packages.
 
 ### NOTES:
-* Recovered disk space will not be as dramatic as when running **Choco-Cleaner** as **Choco-Cleaner-RT** will be running far more often and you'll see results on a per package basis.
+* Recovered disk space will not be as dramatic as when running **Choco-Cleaner** since **Choco-Cleaner-RT** will be running far more often and you'll see smaller results on a per package basis.
 * Some **Choco-Cleaner-RT** micro cleansing happens on previously installed packages instead of the current one due to technical restrictions; i.e. **choco-cleaner-rt-ignores.hook** can not delete .ignore files from the current package or Chocolatey will make shims for everything the packager didn't want shimmed.
 * File deletion logging and toggling the displayed info off are possible via a config, see [choco-cleaner-rt](https://community.chocolatey.org/packages/choco-cleaner-rt) for more info.
 * A few features of **Choco-Cleaner** are not going to be supported by CCRT such as orphaned shim checking and deleting of Chocolatey .log and .old files; if you want these features please use [Choco-Cleaner](https://community.chocolatey.org/packages/choco-cleaner).
 
 ### Choco Cleaner RT Collection:
-* [choco-cleaner-rt](https://community.chocolatey.org/packages/choco-cleaner-rt)
+* [choco-cleaner-rt](https://community.chocolatey.org/packages/choco-cleaner-rt) - installs the most desirable hooks as dependencies and the optional config file
 * [choco-cleaner-rt-archives.hook](https://community.chocolatey.org/packages/choco-cleaner-rt-archives.hook)
 * [choco-cleaner-rt-chocolateycache.hook](https://community.chocolatey.org/packages/choco-cleaner-rt-chocolateycache.hook)
 * [choco-cleaner-rt-desktopicons.hook](https://community.chocolatey.org/packages/choco-cleaner-rt-desktopicons.hook)
@@ -47,13 +49,13 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 **If you find Choco-Cleaner-RT useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 </description>
-    <summary>Choco Cleaner RT for MS Installers deletes Microsoft install packages (.msi, .msu, and .msp) left over from Chocolatey packages that forgot to delete them post install</summary>
+    <summary>Choco Cleaner RT for MS Installers deletes unnecessary Microsoft install packages (.msi, .msu, and .msp) left over from Chocolatey packages that didn't delete them after use</summary>
     <releaseNotes>
 ### CHANGELOG:
 * 0.1.0 - initial release
 	</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
-    <tags>bcurran3 unofficial choco cleaner cleanup hook</tags>
+    <tags>bcurran3 unofficial choco cleaner rt cleanup hook</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-msinstallers.hook</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-msinstallers.hook</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
