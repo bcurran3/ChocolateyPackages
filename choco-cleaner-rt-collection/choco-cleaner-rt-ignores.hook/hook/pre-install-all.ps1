@@ -30,10 +30,10 @@ function Add2Log {
 }
 
 if (Test-ProcessAdminRights) {
-	$GotIgnoreFiles=Get-ChildItem -Path "$env:ChocolateyInstall\lib" -Exclude "$env:chocolateyPackageName" | ForEach-Object $_ {Get-ChildItem $_\*.ignore}
+	$GotIgnoreFiles=Get-ChildItem -Path "$env:ChocolateyInstall\lib" -Exclude "$env:chocolateyPackageName" | ForEach-Object $_ {Get-ChildItem $_.fullname *.ignore -Recurse}
 	$IgnoreFiles=$GotIgnoreFiles.count
 	if ($IgnoreFiles -ge 1){
-		Remove-Item $GotIgnoreFiles -ErrorAction SilentlyContinue
+		Remove-Item $GotIgnoreFiles.fullname -ErrorAction SilentlyContinue
 		$GotIgnoreFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
 		if ($DisplayInfo){
 			Write-Host "  ** $HookName`: Deleted $IgnoreFiles unnecessary Chocolatey package .ignore files." -Foreground Green
