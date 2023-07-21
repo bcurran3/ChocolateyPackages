@@ -23,7 +23,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ### **Choco Toast Notifications Hook** is a Chocolatey hook that displays a toast notification after installing, uninstalling, or upgrading a package.
 
-### Sound vaguley familar? This hook supercedes, replaces, and expands upon my [Chocolatey Toast Notifications Extension](https://community.chocolatey.org/packages/chocolatey-toast-notifications.extension). **Chocolatey Toast Notifications Hook** is even better than the extension as it works with ALL packages no matter if they have a program installer or not. **Chocolatey Toast Notifications Hook** also determines the difference between installs and upgrades and reports such. It's pretty and Chocotastic!
+### Sound vaguely familiar? This hook supersedes, replaces, and expands upon my [Chocolatey Toast Notifications Extension](https://community.chocolatey.org/packages/chocolatey-toast-notifications.extension). **Chocolatey Toast Notifications Hook** is even better than the extension as it works with ALL packages no matter if they have a program installer or not. **Chocolatey Toast Notifications Hook** also determines the difference between installs and upgrades and reports such. It's pretty and Chocotastic!
 
 ### PURPOSE:
 
