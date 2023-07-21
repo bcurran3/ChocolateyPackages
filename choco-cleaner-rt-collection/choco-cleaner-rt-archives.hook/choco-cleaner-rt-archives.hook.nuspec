@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of choco-cleaner-rt-archives.hook]{https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-archives.hook/choco-cleaner-rt-archives.hook_screenshot.png}
+![Screenshot of choco-cleaner-rt-archives.hook]{https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-archives.hook/choco-cleaner-rt-archives.hook_screenshot.png}
 
 ## Choco Cleaner RT for Archives deletes unnecessary left-over archive files after Chocolatey package installs
 
