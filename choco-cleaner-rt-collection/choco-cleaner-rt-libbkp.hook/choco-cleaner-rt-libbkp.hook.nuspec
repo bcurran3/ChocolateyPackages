@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-libbkp.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-libbkp.hook/choco-cleaner-rt-libbkp.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-libbkp.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-libbkp.hook/choco-cleaner-rt-libbkp.hook_screenshot.png)
 
 ## Choco Cleaner RT for lib-bkp files deletes the lib-bkp folder which contains previous Chocolatey package versions during upgrades
 
