@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-startmenuicons.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-startmenuicons.hook/choco-cleaner-rt-startmenuicons.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-startmenuicons.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-startmenuicons.hook/choco-cleaner-rt-startmenuicons.hook_screenshot.png)
 
 ## Choco Cleaner RT for Start Menu Icons deletes newly created Windows Start Menu icon files after a Chocolatey package installs
 
