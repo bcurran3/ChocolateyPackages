@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-readmes.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-readmes.hook/choco-cleaner-rt-readmes.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-readmes.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-readmes.hook/choco-cleaner-rt-readmes.hook_screenshot.png)
 
 ## Choco Cleaner RT for ReadMe Files deletes unnecessary files such as readme.md, credits.txt, etc.
 
