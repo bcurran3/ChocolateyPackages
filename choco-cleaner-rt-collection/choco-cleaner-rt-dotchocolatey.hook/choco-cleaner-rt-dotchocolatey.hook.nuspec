@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-# THIS IS NOT READY FOR PRIMETIME YET
+# THIS IS NOT READY FOR PRIMETIME YET - ADJUSTMENTS NEED TO BE MADE TO COVER CHOCOLATEY PACKAGE VERSION NORMALIZATION
 
 ## Choco Cleaner RT for .chocolatey Files deletes unnecessary Chocolatey package snapshot files from previous versions
 
