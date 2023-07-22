@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![screenshot of choco-cleaner-rt-nupkgs.hook](https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-nupkgs.hook/choco-cleaner-rt-nupkgs.hook_screenshot.png)
+![screenshot of choco-cleaner-rt-nupkgs.hook](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner-rt-collection/choco-cleaner-rt-nupkgs.hook/choco-cleaner-rt-nupkgs.hook_screenshot.png)
 
 ## Choco Cleaner RT for nupkgs deletes unnecessary Chocolatey package embedded archives and executables in .nupkg files
 
