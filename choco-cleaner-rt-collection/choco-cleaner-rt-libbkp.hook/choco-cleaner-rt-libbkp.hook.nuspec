@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-cleaner-rt-libbkp.hook</id>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <title>(unofficial) Choco Cleaner RT for lib-bkp Files (Post-Install Hook)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -52,6 +52,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>Choco Cleaner RT for lib-bkp files deletes the lib-bkp folder which contains previous Chocolatey package versions during upgrades</summary>
     <releaseNotes>
 ### CHANGELOG:
+* 0.1.1 - fixed erroneous reporting of files not deleted, more detailed logging
 * 0.1.0 - initial release
 	</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>

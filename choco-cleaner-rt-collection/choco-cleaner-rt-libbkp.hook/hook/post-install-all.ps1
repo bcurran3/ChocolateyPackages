@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Continue'
-# Choco-Cleaner-RT-libbkp.hook v0.1.0 Copyleft 2023 by Bill Curran AKA BCURRAN3
+# Choco-Cleaner-RT-libbkp.hook v0.1.1 Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 
@@ -19,8 +19,6 @@ if (Test-Path "$ConfigFile"){
 
 if ($DebugInfo) { Write-Host "  ** Running $HookName..." -Foreground Yellow }
 
-if (!(Test-Path "$(Get-ToolsLocation)\BCURRAN3")) {$LogInfo=$False}
-
 function Add2Log {
     Param ( [string]$comment )
 	
@@ -30,12 +28,13 @@ function Add2Log {
 }
 
 if (Test-ProcessAdminRights -and (Test-Path $env:ChocolateyInstall\lib-bkp)) {
-	$GotLibBkpFiles=Get-ChildItem -Path $env:ChocolateyInstall\lib-bkp -Exclude "$env:ChocolateyInstall\lib-bkp\$env:chocolateyPackageName" -Recurse -ErrorAction SilentlyContinue
+	$GotLibBkpFiles=(Get-ChildItem -Path $env:ChocolateyInstall\lib-bkp -Exclude "$env:chocolateyPackageName" -ErrorAction SilentlyContinue | Get-ChildItem -Recurse)
 	$LibBkpFiles=$GotLibBkpFiles.count
 	if ($LibBkpFiles -ge 1){
 		$GotLibBkpFiles | ForEach-Object {$GotLibBkpFilesSize=$GotLibBkpFilesSize + $_.length}
 		$GotLibBkpFilesSize = $(($GotLibBkpFilesSize/1kb).ToString('N0'))
-		Get-ChildItem -Path "$env:ChocolateyInstall\lib-bkp" -Exclude "$env:chocolateyPackageName" | ForEach-Object { Remove-Item $_ -Recurse -ErrorAction SilentlyContinue; Add2Log "DELETED: $_"}
+        $GotLibBkpFiles | ForEach-Object { Remove-Item $_.fullname -Recurse -ErrorAction SilentlyContinue; Add2Log "DELETED: $($_.fullname)"}
+		Get-ChildItem -Path "$env:ChocolateyInstall\lib-bkp" -Exclude "$env:chocolateyPackageName" | ForEach-Object { Remove-Item $_ -Recurse -ErrorAction SilentlyContinue; Add2Log "DELETED: $($_)"}
 		if ($DisplayInfo){
 			Write-Host "  ** $HookName`: Deleted $LibBkpFiles unnecessary Chocolatey backup package files from lib-bkp saving $GotLibBkpFilesSize KB." -Foreground Green
 		}
