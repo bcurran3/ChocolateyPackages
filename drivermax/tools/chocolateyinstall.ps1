@@ -2,7 +2,7 @@
 $packageName = 'drivermax' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url         = 'https://www.drivermax.com/soft/dmx/drivermax.exe'
-$checksum    = '804B5689C7781C11DFA8FA13340BA739261378F5A49B1B163C46AAD87E828058'
+$checksum    = '84B01BCDAF54A7386627BD930A6F8B74D9C0751A711424B374ADBB1C1210392F'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -17,3 +17,6 @@ $packageArgs = @{
   }
   
 Install-ChocolateyPackage @packageArgs
+
+# Update instructions:
+# Update checksum
