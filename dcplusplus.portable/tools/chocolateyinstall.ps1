@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop';
 $packageName  = 'dcplusplus.portable'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url          = 'downloads.sourceforge.net/project/dcplusplus/DC%2B%2B%200.867/DCPlusPlus-0.867.zip'
-$checksum     = '6E323740939944D544157278D47A67F5A6DCBA7B680CB83C63AB4B39928CB3E9'
-$url64        = 'https://downloads.sourceforge.net/project/dcplusplus/DC%2B%2B%200.867/DCPlusPlus-0.867-x64.zip'
-$checksum64   = 'C7854FE3ADD7B5375ED3BBA0BA26C197145CEF74637B048C55CFB85319A1DBBB'
+$url          = 'https://sourceforge.net/projects/dcplusplus/files/DC%2B%2B%200.880/DCPlusPlus-0.880.zip'
+$checksum     = '0e9290ea757f241fc156a17b644ff46adbe9284190ef36d50a25f6e6bc22c653'
+$url64        = 'https://sourceforge.net/projects/dcplusplus/files/DC%2B%2B%200.880/DCPlusPlus-0.880-x64.zip'
+$checksum64   = 'abb664eb84f8c1b4555dd2ec7f0556f8ad3d6f4385dfad85d3473909b47634c6'
 $shortcutName = 'DC++.lnk'
 $portableEXE  = "$toolsDir\DCPlusPlus.exe"
 
