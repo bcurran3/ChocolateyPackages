@@ -3,23 +3,24 @@ $ErrorActionPreference = 'Stop';
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $shortcutName = 'Shark007''s 64bit ADVANCED Codecs.lnk'
 
-if (Test-Path "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\AutoUpdate.exe"){
+if (Test-Path "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs"){ Remove-Item "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs" -Recurse -Force -ErrorAction SilentlyContinue }
+if (Test-Path "$env:ProgramFiles\Shark007\Shark007Codecs\Tools\AutoUpdate.exe"){
 	Write-Host "  ** Running AutoUpdate." -Foreground Magenta
-	Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\AutoUpdate.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools"
+	Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\Shark007Codecs\Tools\AutoUpdate.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\Shark007Codecs\Tools"
 	return
 }
 
 $packageArgs = @{
   packageName    = $env:chocolateyPackageName
   Destination    = "$env:ProgramFiles\Shark007"
-  FileFullPath64 = "$toolsDir\ADVANCED_64bitCodecs.7z"
+  FileFullPath64 = "$toolsDir\Shark007Codecs.7z"
 }
 Get-ChocolateyUnzip @packageArgs
 
-Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Launcher64.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs"
-Start-ChocolateyProcessAsAdmin -Statements "users" -ExeToRun "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\Settings64_portable.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Tools\"
-Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs\Launcher64.exe" -RunAsAdmin
-Remove-Item "$toolsDir\ADVANCED_64bitCodecs.7z" | Out-Null
+Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\Shark007Codecs\Launcher64.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\Shark007Codecs"
+Start-ChocolateyProcessAsAdmin -Statements "users" -ExeToRun "$env:ProgramFiles\Shark007\Shark007Codecs\Tools\Settings64_portable.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\Shark007Codecs\Tools\"
+Install-ChocolateyShortcut -shortcutFilePath "$ENV:ProgramData\Microsoft\Windows\Start Menu\Programs\$shortcutName" -targetPath "$env:ProgramFiles\Shark007\Shark007Codecs\Launcher64.exe" -RunAsAdmin
+Remove-Item "$toolsDir\Shark007Codecs.7z" | Out-Null
 
 # UPDATE INSTRUCTIONS:
 # replace the .7z file
