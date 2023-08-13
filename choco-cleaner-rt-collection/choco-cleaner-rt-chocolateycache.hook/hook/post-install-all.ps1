@@ -1,5 +1,5 @@
 ﻿$ErrorActionPreference = 'Continue'
-# Choco-Cleaner-RT-chocolateycache.hook v0.1.0 Copyleft 2023 by Bill Curran AKA BCURRAN3
+# Choco-Cleaner-RT-chocolateycache.hook v0.1.1 Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 
@@ -34,25 +34,25 @@ function Add2Log {
 $cacheLocation = $ChocoConfigFile.chocolatey.config | ForEach-Object { $_.add } | Where-Object { $_.key -eq 'cacheLocation' } | Select-Object -Expand value
 
 # Configured cache location
-if (Test-ProcessAdminRights -and (Test-Path $cacheLocation)){
-	$GotCacheFiles=Get-ChildItem -Path $cacheLocation -Recurse -ErrorAction SilentlyContinue
-	$CacheFiles=$GotCacheFiles.count
-	if ($CacheFiles -ge 1){
-		$GotCacheFilesSize=0
-		$GotCacheFiles | ForEach-Object {$GotCacheFilesSize=$GotCacheFilesSize + $_.length}
-		$GotCacheFilesSize = $(($GotCacheFilesSize/1kb).ToString('N0'))
-		Remove-Item -Path $cacheLocation -Recurse -ErrorAction SilentlyContinue
-		$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
-	    if ($DisplayInfo){
-			Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green
-		}
+if ($cacheLocation){
+	if (Test-ProcessAdminRights -and (Test-Path $cacheLocation)){
+	    $GotCacheFiles=Get-ChildItem -Path $cacheLocation -Recurse -ErrorAction SilentlyContinue
+	    $CacheFiles=$GotCacheFiles.count
+	    if ($CacheFiles -ge 1){
+    		$GotCacheFilesSize=0
+	    	$GotCacheFiles | ForEach-Object {$GotCacheFilesSize=$GotCacheFilesSize + $_.length}
+		    $GotCacheFilesSize = $(($GotCacheFilesSize/1kb).ToString('N0'))
+		    Remove-Item -Path $cacheLocation -Recurse -ErrorAction SilentlyContinue
+		    $GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
+	        if ($DisplayInfo){ Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green }
+	    }
+    } else {
+		if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." -Foreground Yellow }
 	}
-} else {
-	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." } -Foreground Yellow
 }
 
 # C:\Users\username\appdata\Local\temp\chocolatey
-if (Test-ProcessAdminRights -and (Test-Path $env:USERPROFILE\appdata\local\temp\chocolatey)){
+if (Test-Path $env:USERPROFILE\appdata\local\temp\chocolatey){
 	$GotCacheFiles=Get-ChildItem -Path $env:USERPROFILE\appdata\Local\temp\chocolatey -Recurse -ErrorAction SilentlyContinue
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
@@ -61,16 +61,12 @@ if (Test-ProcessAdminRights -and (Test-Path $env:USERPROFILE\appdata\local\temp\
 		$GotCacheFilesSize = $(($GotCacheFilesSize/1kb).ToString('N0'))
 		Remove-Item -Path $env:USERPROFILE\appdata\local\temp\chocolatey -Recurse -ErrorAction SilentlyContinue
 		$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
-	    if ($DisplayInfo){
-			Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green
-		}
+	    if ($DisplayInfo){ Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green }
 	}
-} else {
-	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." } -Foreground Yellow
 }
 
 # C:\Users\username\appdata\Local\temp\ChocolateyScratch
-if (Test-ProcessAdminRights -and (Test-Path $env:USERPROFILE\appdata\local\temp\ChocolateyScratch)){
+if (Test-Path $env:USERPROFILE\appdata\local\temp\ChocolateyScratch){
 	$GotCacheFiles=Get-ChildItem -Path $env:USERPROFILE\appdata\Local\temp\ChocolateyScratch -Recurse -ErrorAction SilentlyContinue
 	$CacheFiles=$GotCacheFiles.count
 	if ($CacheFiles -ge 1){
@@ -79,12 +75,8 @@ if (Test-ProcessAdminRights -and (Test-Path $env:USERPROFILE\appdata\local\temp\
 		$GotCacheFilesSize = $(($GotCacheFilesSize/1kb).ToString('N0'))
 		Remove-Item -Path $env:USERPROFILE\appdata\local\temp\ChocolateyScratch -Recurse -ErrorAction SilentlyContinue
 		$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
-	    if ($DisplayInfo){
-			Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green
-		}
+	    if ($DisplayInfo){ Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green	}
 	}
-} else {
-	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." } -Foreground Yellow
 }
 
 # C:\WINDOWS\temp\chocolatey
@@ -97,12 +89,10 @@ if (Test-ProcessAdminRights -and (Test-Path $env:SystemRoot\temp\chocolatey)){
 		$GotCacheFilesSize = $(($GotCacheFilesSize/1kb).ToString('N0'))
 		Remove-Item -Path $env:SystemRoot\temp\chocolatey -Recurse -ErrorAction SilentlyContinue
 		$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
-	    if ($DisplayInfo){
-			Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green
-		}
+	    if ($DisplayInfo){ Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green }
 	}
 } else {
-	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." } -Foreground Yellow
+	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." -Foreground Yellow }
 }
 
 # C:\WINDOWS\temp\ChocolateyScratch\
@@ -115,10 +105,8 @@ if (Test-ProcessAdminRights -and (Test-Path $env:SystemRoot\temp\ChocolateyScrat
 		$GotCacheFilesSize = $(($GotCacheFilesSize/1kb).ToString('N0'))
 		Remove-Item -Path $env:SystemRoot\temp\ChocolateyScratch -Recurse -ErrorAction SilentlyContinue
 		$GotCacheFiles.fullname | ForEach-Object {Add2Log "DELETED: $_"}
-	    if ($DisplayInfo){
-			Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green
-		}
+	    if ($DisplayInfo){ Write-Host "  ** $HookName`: Deleted $CacheFiles unnecessary Chocolatey cache files saving $GotCacheFilesSize KB." -Foreground Green	}
 	}
 } else {
-	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." } -Foreground Yellow
+	if ($DisplayInfo){ Write-Host "  ** $HookName requires admin rights." -Foreground Yellow }
 }

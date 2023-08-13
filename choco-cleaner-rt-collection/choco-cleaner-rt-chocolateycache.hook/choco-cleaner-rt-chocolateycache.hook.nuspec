@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-cleaner-rt-chocolateycache.hook</id>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
     <title>(unofficial) Choco Cleaner RT for Chocolatey Cache Files (Post-Install Hook)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -52,6 +52,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>Choco Cleaner RT for Chocolatey Cache Files deletes unnecessary files in the various Chocolatey cache locations</summary>
     <releaseNotes>
 ### CHANGELOG:
+* 0.1.1 - fixed error when Chocolatey config cacheLocation is not set (default), removed Test-ProcessAdminRights for $env:USERPROFILE\appdata\Local\temp deletions
 * 0.1.0 - initial release
 	</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
