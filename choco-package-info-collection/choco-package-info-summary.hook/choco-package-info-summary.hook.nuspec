@@ -30,7 +30,7 @@ So you've replaced your addiction of watching defrag with watching Chocolatey pa
 [choco-package-info-summary.hook](https://community.chocolatey.org/packages/choco-package-info-summary.hook) - displays package summary before install
 [choco-package-info-releasenotes.hook](https://community.chocolatey.org/packages/choco-package-info-releasenotes.hook) - displays package release notes before install
 
-**If you like this little hooker, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+**If you like this little hook, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 </description>
     <summary>choco-package-info-summary.hook displays the summary of the package you are installing or upgrading right before it happens.</summary>
     <releaseNotes>
