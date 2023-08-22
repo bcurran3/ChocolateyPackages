@@ -35,7 +35,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ### WHAT IT WON'T DO:
 * **Choco Toast Notifications Hook** will NOT work on anything other than Windows 10 and 11, this is a limitation of the [BurntToast](https://github.com/Windos/BurntToast) PowerShell module and its use of the [UWP Community Toolkit](https://github.com/Microsoft/WindowsCommunityToolkit).
 
-**If you like this little hooker, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+**If you like this little hook, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 </description>
     <summary>Choco Toast Notifications Hook is a Chocolatey hook that displays a toast notification after installing, uninstalling, or upgrading a package.</summary>
     <releaseNotes>
