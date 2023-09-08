@@ -3,14 +3,14 @@ $ErrorActionPreference = 'Stop'
 $packageName   = 'dual-monitor-tools'
 $installerType = 'msi'
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ShortVer      = $ENV:ChocolateyPackageVersion.trim('.0.0')
+$installer     = (Get-ChildItem $toolsDir\DualMonitorTools-*.msi).name
   
-  $packageArgs = @{
-  packageName   = $packageName
-  fileType      = 'MSI'
-  file          = "$toolsDir\DualMonitorTools-$ShortVer.msi"
+$packageArgs = @{
+  packageName    = $packageName
+  fileType       = 'MSI'
+  file           = "$toolsDir\$installer"
   silentArgs     = '/quiet /qn /norestart'
-  softwareName  = 'Dual Monitor Tools'
+  softwareName   = 'Dual Monitor Tools'
   validExitCodes = @(0, 3010, 1641)
   }
   
