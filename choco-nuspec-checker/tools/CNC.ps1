@@ -65,7 +65,7 @@
 .PARAMETER ShowPackageNotes
    Displays $PackageNotes.
 .PARAMETER OptimizeImages
-   Runs PNGOptimizerCL on supported image files.
+   Runs PNGOptimizerCL on PNG files and jpegoptim on JPG files.
 .PARAMETER Recurse
    Runs CNC recursively.
 .PARAMETER ReduceOutput
@@ -104,7 +104,6 @@
 
 param (
     [string]$Path=(Get-Location).path,
-    [Alias("OptimizePNGs")][switch]$OptimizeImages,
     [Alias("?")][switch]$Help,
     [switch]$AddFooter,
     [switch]$AddHeader,
@@ -116,6 +115,7 @@ param (
     [switch]$MakeBackups,
     [switch]$OpenURLs,
     [switch]$OpenValidatorInfo,
+    [switch]$OptimizeImages,
     [switch]$Recurse,
     [switch]$ReduceOutput,
     [switch]$ReducedOutput,
@@ -135,7 +135,7 @@ param (
     [switch]$WhatIf
  )
 
-Write-Host "CNC.ps1 v2023.05.17 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2023.09.10 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -152,8 +152,8 @@ $CDNlist      = "https://www.staticaly.com, https://raw.githack.com, https://git
 $CNCHeader    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCHeader.txt"
 $CNCFooter    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCFooter.txt"
 $CNCPackageNotes = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCPackageNotes.txt"
+$JPGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\jpegoptim.exe)
 $PNGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\PngOptimizerCL.exe)
-$OptimizeImages=$False
 $NewCDN       = "Staticly"
 $StaticlyCDN  = $True
 $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one."
@@ -242,7 +242,7 @@ if ($UpdateAll) {
 	 $UpdateScripts=$True
 	 $UpdateXMLComment=$True
 	 $UpdateXMLDeclaration=$True
-     $UpdateXMLns=$True
+     $UpdateXMLNamespace=$True
 	 $GLOBAL:AddPS1EAP=$True
 	 $GLOBAL:UpdateNuspec=$True
    } else {
@@ -502,6 +502,22 @@ function Check-OSIndexFiles{
      }
 }
 
+# check for JPG files for possible optimization
+function Check-JPGs{
+  $ImageFiles=(Get-ChildItem -Path $path -Include *.JPG,*.JPEG -Recurse)
+  if ($ImageFiles){
+	  if (!$ReduceOutput) {
+          Write-Host 'FYI:       ** Binary files - JPG or JPEG image file(s) found.' -Foreground Yellow
+	  }
+	  $GLOBAL:FYIs++
+	  if (!$OptimizeImages){
+		  if (!$ReduceOutput) {
+	          Write-Host '           ** Suggestion: Consider running CNC -OptimizeImages to optimize your image file(s).' -Foreground Cyan
+		  }
+	  $GLOBAL:Suggestions++
+	 }
+    }
+}
 
 # check for PNG files for possible optimization
 function Check-PNGs{
@@ -764,16 +780,37 @@ function Open-URLs{
   if ($NuspecProjectURL){&start $NuspecProjectURL}
 }
 
+# Run jpegoptim on jpeg/jpg files
+function Run-JPGOptimizer{
+  if ($OptimizeImages){
+      if (!$JPGOptimizer){
+          Write-Warning "  ** -OptimizeImages parameter given but jpegoptim.exe not found."
+	      Write-Host "           ** Run choco install jpegoptim to optimize JPG files." -Foreground Cyan
+	      return
+         }
+  $ImageFiles=(Get-ChildItem -Path $path -Include *.JPG,*.JPEG -Recurse)
+  if ($ImageFiles){
+      Write-Host "           ** Running jpegoptim on supported image files." -Foreground Green
+	  if ($WhatIf){
+          Write-Host "CNC did NOT optimize your image files, -WhatIf parameter was used." -Foreground Magenta
+	    } else {
+			$ImageFiles | % {jpegoptim $_}
+		  }
+		  $GLOBAL:Fixes++
+		 }
+  }
+}
+
 # Run PNGOptimizerCL on supported image files
 function Run-PNGOptimizer{
   if ($OptimizeImages){
-  if (!$PNGOptimizer){
-      Write-Warning "  ** -OptimizeImages parameter given but PNGOptimizerCL.exe not found."
-	  Write-Host "           ** Run choco install pngoptimizer.commandline first to use this feature." -Foreground Cyan
-	  return
-     }
+      if (!$PNGOptimizer){
+          Write-Warning "  ** -OptimizeImages parameter given but PNGOptimizerCL.exe not found."
+	      Write-Host "           ** Run choco install pngoptimizer.commandline to optimize PNG/BMP/GIF/TGA files." -Foreground Cyan
+	      return
+         }
   $ImageFiles=(Get-ChildItem -Path $path -Include *.PNG,*.BMP,*.GIF,*.TGA -Recurse)
-  if ($ImageFiles -and $PNGOptimizer){
+  if ($ImageFiles){
       Write-Host "           ** Running PNGOptimzerCL on supported image files." -Foreground Green
 	  if ($WhatIf){
           Write-Host "CNC did NOT optimize your image files, -WhatIf parameter was used." -Foreground Magenta
@@ -1031,7 +1068,7 @@ if (!(Test-XMLFile $LocalnuspecFile)){
 	}
 }
 
-if ($UpdateXMLns){
+if ($UpdateXMLNamespace){
     if ($WhatIf){
 		$GLOBAL:DelayedUpdateXMLnsDeclarationMessage=$False
        } else {
@@ -1841,6 +1878,9 @@ Check-Binaries
 # OS index files check
 Check-OSIndexFiles
 
+# check for JPG files
+Check-JPGs
+
 # check for PNG files
 Check-PNGs
 
@@ -1850,6 +1890,7 @@ Check-PackageInternalFilesIncluded
 # Git 'er done ------------------------------------------------------------------------------------------------
 
 # Optimize any images files supported by PngOptimizerCL.exe
+Run-JPGOptimizer
 Run-PNGOptimizer
 
 # End outputting check results
