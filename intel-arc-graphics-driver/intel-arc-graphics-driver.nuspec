@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-arc-graphics-driver</id>
-    <version>31.0.101.4644</version>
+    <version>31.0.101.4824</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/726609</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
@@ -31,6 +31,14 @@ Are you still experiencing an error preventing the driver update? Look here for 
 
 Any graphics issues found using Intel generic graphics drivers should be [reported directly to Intel](https://www.intel.com/content/www/us/en/support/contact-support.html). Corporate customers should always use OEM drivers and report all issues through the vendor they purchased the platforms and support through.
 
+## Platform (OS Support)
+
+* 11th Gen Intel® Core™ processor family (Codename Tiger Lake, Rocket Lake, Tiger Lake-H)
+* 12th Gen Intel® Core™ processor family (Codename Alder Lake-S, Alder Lake-H, Alder Lake-P, Alder Lake-U, Alder Lake-HX, Alder Lake-N)
+* 13th Gen Intel® Core™ processor family (Codename Raptor Lake-S, Raptor Lake-HX, Raptor Lake-H, Raptor Lake-P, Raptor Lake-U)
+* Intel® Iris® Xe Dedicated Graphics family (Codename DG1)
+* Intel® Arc® Graphics family (Codename Alchemist)
+
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-arc-graphics-driver/readme.md)**
 
 ---
@@ -40,7 +48,7 @@ Any graphics issues found using Intel generic graphics drivers should be [report
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/784083/readme.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/788440/readme.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
