@@ -1,12 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
-$toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir  = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$installer = Get-ChildItem "$toolsDir\Plexamp*.exe"
 
 $packageArgs = @{
   packageName    = "$env:ChocolateyPackageName"
   softwareName   = 'Plexamp*'
   fileType       = 'EXE'
   silentArgs     = '/S'
-  file64         = "$toolsDir\Plexamp Setup $env:ChocolateyPackageVersion.exe"
+  file64         = "$installer"
   validExitCodes = @(0,1)
   }
   
