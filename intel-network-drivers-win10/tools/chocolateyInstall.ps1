@@ -3,15 +3,15 @@ $packageName    = 'intel-network-drivers-win10'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $unzipLocation  = "$toolsDir\unzipped"
 $bits           = Get-ProcessorBits
-$IntelPackageNumber = "772070"
+$IntelPackageNumber = "785800"
 
 Confirm-Win10
 
-# Wired Drivers
+# Drivers
 $url            = "https://downloadmirror.intel.com/$IntelPackageNumber/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_32.zip"
-$checksum       = '6D02C9E8425F6DDAD180B957E4F0986647128661F6F23AFA70B83DCD342239AF'
+$checksum       = 'C9E02CDC17E9739B3AF0458CD16535E64A15C218FCD459835D2425B3D2449CB8'
 $url64          = "https://downloadmirror.intel.com/$IntelPackageNumber/Wired_driver_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
-$checksum64     = 'B99A6A996091C56A60902B5D777E850AC82931818BF7FFBACF2CAFD33EB067A5'
+$checksum64     = '0D10E40853836E94F3CDFFD566CAF324259F776258A7E9757D159BE62C706BAD'
 
 $packageArgs = @{
   packageName    = $packageName
@@ -39,11 +39,11 @@ Get-ChocolateyUnzip @packageArgs
 
 pnputil /add-driver $unzipLocation\*.inf /install /subdirs
 
-# Wired PROSet drivers
+# PROSet software
 $url            = "https://downloadmirror.intel.com/$IntelPackageNumber/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_32.zip"
-$checksum       = '4C12489DB8769C71E25E8C29CC591D588DC40A95A7153CCE1B88E26E5477F110'
+$checksum       = '00300C2934305A6438A985131346899FE264E74E338E6E1996E9F230D3E4E57D'
 $url64          = "https://downloadmirror.intel.com/$IntelPackageNumber/Wired_PROSet_"+$ENV:ChocolateyPackageVersion+"_x64.zip"
-$checksum64     = '7833CBE5825F4BA9021E95488416335302B5EE6D43C2318768CBAA971BFDEC4D'
+$checksum64     = 'F7DB9FC5A499BBFFEEA85C4B5C2876DEC8AAD84A439F0EC9AAE16B5130CF8194'
 
 $packageArgs = @{
   packageName    = $packageName
