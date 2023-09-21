@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.62.0.20230706</version>
+    <version>4.62.0.20230921</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
