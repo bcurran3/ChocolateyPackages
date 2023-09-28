@@ -18,7 +18,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ---
 
 
-![Screenshots of Plexamp](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/plexamp/plexamp_screenshot.png)	
+![Screenshots of Plexamp](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/plexamp/plexamp_screenshot.png)	
 
 Plexamp is a small music player for your desktop, with a number of unique features.Throw your best FLACs at it and experience sonic bliss!
 
@@ -62,7 +62,7 @@ Explore your library in new ways with Library Radio, Time Travel Radio, and Arti
     <copyright>Copyright Daniel Stenberg and many contributors</copyright>
     <licenseUrl>https://www.plex.tv/about/privacy-legal/plex-terms-of-service/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/plexamp/plexamp_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/plexamp/plexamp_icon.png</iconUrl>
     <releaseNotes>https://forums.plex.tv/t/plexamp-release-notes/221280</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5" version="4.5.20120822" />
