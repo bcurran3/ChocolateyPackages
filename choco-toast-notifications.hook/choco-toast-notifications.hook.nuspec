@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-toast-notifications.hook</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <title>(unofficial) Choco Toast Notifications (Hook)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-toast-notifications.hook</projectUrl>
-    <iconUrl>https://rawcdn.githack.com/bcurran3/ChocolateyPackages/master/choco-toast-notifications.hook/choco-toast-notifications.hook_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-toast-notifications.hook/choco-toast-notifications.hook_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of Choco Toast Notifications (Hook)](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-toast-notifications.hook/choco-toast-notifications.hook_screenshot.png)
+![Screenshot of Choco Toast Notifications (Hook)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-toast-notifications.hook/choco-toast-notifications.hook_screenshot.png)
 
 ### **Choco Toast Notifications Hook** is a Chocolatey hook that displays a toast notification after installing, uninstalling, or upgrading a package.
 
@@ -40,7 +40,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>Choco Toast Notifications Hook is a Chocolatey hook that displays a toast notification after installing, uninstalling, or upgrading a package.</summary>
     <releaseNotes>
 ### CHANGELOG:
-* 1.0 - initial release
+* 1.1.0 - Minor aestetics change - installed/uninstalled/upgraded moved to seperate line, should now always bypass Powershell Execution Policy, now sends toast to running user if it fails to send systemwide
+* 1.0.0 - initial release
 
 ### ROADMAP:
 * No future development planned, only maintenance as needed. ([BurntToast](https://github.com/Windos/BurntToast) v1.0 will require an update.)
