@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tageditor</id>
-    <version>3.8.1</version>
+    <version>3.9.0</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/tageditor</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>Tag Editor (Portable)</title>
     <authors>Martchus</authors>
     <projectUrl>https://github.com/Martchus/tageditor</projectUrl>
     <projectSourceUrl>https://github.com/Martchus/tageditor/releases</projectSourceUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/Martchus/tageditor/master/resources/icons/hicolor/128x128/apps/tageditor.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/Martchus/tageditor/master/resources/icons/hicolor/128x128/apps/tageditor.png</iconUrl>
     <copyright></copyright>
     <licenseUrl>https://cdn.rawgit.com/Martchus/tageditor/b19a210f/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -27,7 +27,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ---
 
 
-![Screenshot of Tag Editor](https://cdn.staticaly.com/gh/Martchus/tageditor/b19a210f/resources/screenshots/mainwindow.png)	
+![Screenshot of Tag Editor](https://raw.githubusercontent.com/Martchus/tageditor/master/resources/screenshots/mainwindow-1366x768.png)	
 A tag editor with Qt GUI and command-line interface. Supports MP4 (iTunes), ID3, Vorbis, Opus, FLAC and Matroska.
 
 ### Supported formats
