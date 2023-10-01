@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'performancetest'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url            = 'https://www.passmark.com/ftp/petst.exe'
-$checksum       = 'EE6C08A34714D135ACA6DE08AC69D602625DAF3370E35DABE439CFB2775C2443'
+$url            = 'https://www.passmark.com/downloads/petst.exe'
+$checksum       = '3D526B7DE6FEF477436C895258760B56C62645FEAE22E4AED2187BC8D44425C3'
 
 $packageArgs = @{
   packageName    = $packageName
