@@ -9,7 +9,7 @@
     <title>8GadgetPack (Install)</title>
     <authors>Helmut Buhler</authors>
     <projectUrl>http://8gadgetpack.net/</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8gadgetpack/8gadgetpack_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/8gadgetpack/8gadgetpack_icon.png</iconUrl>
     <copyright>Copyright © Helmut Buhler</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://8gadgetpack.net/index.html#Howto</docsUrl>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of 8GadgetPack](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/8gadgetpack/8gadgetpack_screenshot.png)
+![Screenshot of 8GadgetPack](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/8gadgetpack/8gadgetpack_screenshot.png)
 
 ### About 8GadgetPack
 
