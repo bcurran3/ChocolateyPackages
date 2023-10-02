@@ -29,23 +29,26 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ![Screenshot of choco-sandbox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
 	
 ### WHAT IS THIS?
-Chocolatey Sandbox (OKA **choco-sandbox**) sets up a customizable Windows Sandbox environment with Chocolatey pre-installed.
+**Chocolatey Sandbox** (OKA **choco-sandbox**) sets up a customizable [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) environment with Chocolatey pre-installed.
 	
 ### WHO IS THIS FOR?
-Chocolatey Sandbox (OKA **choco-sandbox**) is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
+**Chocolatey Sandbox** (OKA **choco-sandbox**) is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
 
 ### FEATURES:
 * Installs Chocolatey from the web on first run and caches it for future local/offline installs.
 * Automatically upgrades Chocolatey to the latest version on every run.
-* Automatically sets up default PowerShell profile with Chocolatey tab completion as well as some shortcuts (cup, cinst, cuninst, clist).
+* Automatically sets up the default PowerShell profile with Chocolatey tab completion as well as some shortcuts (cup, cinst, cuninst, clist).
 * Automatically installs packages from packages.config if it exists.
 * Automatically runs choco-sandbox-customize.ps1 for further customizatoin if it exists.
 
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-sandbox/readme.md)**
+---
 
-**If you find Chocolatey Sandbox (OKA **choco-sandbox**) useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+If you find Chocolatey Sandbox (OKA **choco-sandbox**) useful, please consider donating: 
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3
+
+---
 </description>
     <releaseNotes>
 ### CHANGELOG:
