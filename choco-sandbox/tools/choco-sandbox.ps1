@@ -32,6 +32,9 @@ if (Test-Path C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox\chocolatey.zip){
 # Upgrade Chocolatey if outdated
 Write-Host "  ** Making sure Chocolatey is up-to-date..." -Foreground Magenta
 choco upgrade chocolatey
+if (Test-Path C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip){
+	Move-Item C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox -Force
+}
 
 # Install packages
 if (Test-Path C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox\packages.config){
