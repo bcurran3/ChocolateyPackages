@@ -32,7 +32,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 **Chocolatey Sandbox** sets up a customized and customizable [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) environment with Chocolatey pre-installed.
 	
 ### WHO IS THIS FOR?
-**Chocolatey Sandbox** is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
+**Chocolatey Sandbox** is for anyone who may want to "test drive" Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
 
 ### FEATURES:
