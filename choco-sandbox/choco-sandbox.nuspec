@@ -36,7 +36,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 
 ### FEATURES:
-* Installs Chocolatey from the web on first run and caches it for future local/offline installs.
+* Installs Chocolatey from the web on first run and caches it for subsequent runs of the sandbox.
 * Automatically upgrades Chocolatey to the latest version on every run.
 * Automatically sets up the default PowerShell profile with Chocolatey tab completion as well as some shortcuts (cup, cinst, cuninst, clist).
 * Automatically installs packages from packages.config if it exists.
