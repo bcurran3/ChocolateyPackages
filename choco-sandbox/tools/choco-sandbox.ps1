@@ -6,6 +6,8 @@ Clear-Host
 Write-Host "Choco-Sandbox.ps1 v1.0.0 (2023-10-02) - Sets up Windows Sandbox with Chocolatey Installed" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
+$InstalledFromWeb=$False
+
 # Allow all scripts to run since its a sandbox
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force
 
@@ -27,13 +29,16 @@ if (Test-Path C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox\chocolatey.zip){
     [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')) | Out-Null
 # Save chocolatey.zip for future use so we don't have to continuously download it
 	Move-Item C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox
+	$InstalledFromWeb=$True
 }
 
 # Upgrade Chocolatey if outdated
-Write-Host "  ** Making sure Chocolatey is up-to-date..." -Foreground Magenta
-choco upgrade chocolatey
-if (Test-Path C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip){
-	Move-Item C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox -Force
+if (!($InstalledFromWeb)){
+	Write-Host "  ** Making sure Chocolatey is up-to-date..." -Foreground Magenta
+    choco upgrade chocolatey
+    if (Test-Path C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip){
+		Move-Item C:\Users\WDAGUtilityAccount\AppData\Local\Temp\chocolatey\chocoInstall\chocolatey.zip C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox -Force
+		}
 }
 
 # Install packages
