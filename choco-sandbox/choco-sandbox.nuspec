@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-sandbox</id>
+    <version>1.0.0</version>
+    <owners>bcurran3</owners>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <title>(unofficial) choco-sandbox</title>
+    <authors>bcurran3</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png</iconUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <copyright>public domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>bcurran3 unofficial chocolatey powershell test environment packagers maintainers</tags>
+    <summary>Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.</summary>
+    <description>
+---
+
+### [choco://choco-sandbox](choco://choco-sandbox)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot example of choco-sandbox](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
+	
+### placeholder	
+	
+### WHO IS THIS FOR?
+ **choco-sandbox** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions' functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run **ChocolateyPowerShell** and test away! 
+
+
+### INSTRUCTIONS:
+placeholder
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-sandbox/readme.md)**
+	
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+    
+</description>
+    <releaseNotes>
+### CHANGELOG:
+* 1.0.0 - initial release.
+	</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
