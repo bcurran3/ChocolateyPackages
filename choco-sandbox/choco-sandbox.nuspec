@@ -11,13 +11,13 @@
     <title>(unofficial) choco-sandbox</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>bcurran3 unofficial chocolatey powershell test environment packagers maintainers</tags>
-    <summary>Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.</summary>
+    <tags>bcurran3 unofficial chocolatey powershell sandbox test environment packagers maintainers</tags>
+    <summary>Chocolatey Sandbox (OKA choco-sandbox) runs Windows Sandbox with Chocolatey pre-installed.</summary>
     <description>
 ---
 
@@ -26,31 +26,35 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot example of choco-sandbox](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
+![Screenshot of choco-sandbox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
 	
-### placeholder	
+### WHAT IS THIS?
+Chocolatey Sandbox (OKA **choco-sandbox**) sets up a customizable Windows Sandbox environment with Chocolatey pre-installed.
 	
 ### WHO IS THIS FOR?
- **choco-sandbox** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions' functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run **ChocolateyPowerShell** and test away! 
+Chocolatey Sandbox (OKA **choco-sandbox**) is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
 
-### INSTRUCTIONS:
-placeholder
+### FEATURES:
+* Installs Chocolatey from the web on first run and caches it for future local/offline installs.
+* Automatically upgrades Chocolatey to the latest version on every run.
+* Automatically sets up default PowerShell profile with Chocolatey tab completion as well as some shortcuts (cup, cinst, cuninst, clist).
+* Automatically installs packages from packages.config if it exists.
+* Automatically runs choco-sandbox-customize.ps1 for further customizatoin if it exists.
+
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-sandbox/readme.md)**
-	
----
 
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-
----
-
-    
+**If you find Chocolatey Sandbox (OKA **choco-sandbox**) useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 </description>
     <releaseNotes>
 ### CHANGELOG:
 * 1.0.0 - initial release.
 	</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
+      <dependency id="windows-sandbox" version="0.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

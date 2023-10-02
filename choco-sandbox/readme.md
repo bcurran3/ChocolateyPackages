@@ -1,25 +1,34 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolateypowershell/chocolateypowershell_icon.png" width="200" height="200">
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png" width="200" height="200">
 
 **BCURRAN3'S PACKAGE NOTES:**
 * A BCURRAN3 original! So of course I endorse and use it. :)
-* If you wish to set the console colors to stand out from other PowerShell windows edit the icon, go to the Colors tab and change the RGB values to either 84,42,12 or 160,85,45 for a more unique Chocolatey brown background.
 
+---
+
+### [choco://choco-sandbox](choco://choco-sandbox)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of choco-sandbox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
 	
-### Chocolatey PowerShell loads Chocolatey modules to directly test Chocolatey functions in PowerShell.	
+### WHAT IS THIS?
+Chocolatey Sandbox (OKA **choco-sandbox**) sets up a customizable Windows Sandbox environment with Chocolatey pre-installed.
 	
 ### WHO IS THIS FOR?
- **ChocolateyPowerShell** was created for Chocolatey package maintainers who want to test Chocolatey native [functions](https://chocolatey.org/docs/helpers-reference) and Chocolatey extensions' functions in PowerShell without resorting to creating packages and doing trial runs. Now you can just run **ChocolateyPowerShell** and test away! 
+Chocolatey Sandbox (OKA **choco-sandbox**) is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
 
-### INSTRUCTIONS:
-Just click the **ChocolateyPowerShell** icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
+### FEATURES:
+* Installs Chocolatey from the web on first run and caches it for future local/offline installs.
+* Automatically upgrades Chocolatey to the latest version on every run.
+* Automatically sets up default PowerShell profile with Chocolatey tab completion as well as some shortcuts (cup, cinst, cuninst, clist).
+* Automatically installs packages from packages.config if it exists.
+* Automatically runs choco-sandbox-customize.ps1 for further customizatoin if it exists.
 
 ### CHANGELOG:
-* 0.0.2.3 - new icon by Teknowledgist. Thanks!
-* 0.0.2.2 - remove forceful load of chocolatey-core extension (it'll load automatically with any other extensions)
-* 0.0.2.1 - minor cosmetic and help improvements
-* 0.0.2 - now bypasses system execution policy, added choco-shortcuts-winconfig support, added help, clean up
-* 0.0.1 - initial release.
+* 1.0.0 - initial release.
+
 
 ***
 

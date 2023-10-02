@@ -1,4 +1,4 @@
-# Choco-Sandbox.ps1 Copyleft 2023 by Bill Curran AKA BCURRAN3
+﻿# Choco-Sandbox.ps1 Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 

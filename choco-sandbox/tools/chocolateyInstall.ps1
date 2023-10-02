@@ -6,6 +6,8 @@ $script       = 'choco-sandbox.ps1'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $exe          = "$toolsDir\choco-sandbox.wsb"
 
+Confirm-WinMinimumBuild 18305
+
 # Update the WSB (config) file if the Chocolatey Tools Location is non-default
 if ($(Get-ToolsLocation) -ne "C:\tools"){
 	[xml]$WSBConfig = Get-Content "$exe"
