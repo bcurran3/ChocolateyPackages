@@ -8,7 +8,7 @@
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
-    <title>(unofficial) Choco Sandbox</title>
+    <title>(unofficial) Chocolatey Sandbox</title>
     <authors>bcurran3</authors>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
     <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_icon.png</iconUrl>
@@ -29,10 +29,10 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ![Screenshot of choco-sandbox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-sandbox/choco-sandbox_screenshot.png)
 	
 ### WHAT IS THIS?
-**Chocolatey Sandbox** (OKA **choco-sandbox**) sets up a customizable [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) environment with Chocolatey pre-installed.
+**Chocolatey Sandbox** (AKA **choco-sandbox**) sets up a customizable [Windows Sandbox](https://learn.microsoft.com/en-us/windows/security/application-security/application-isolation/windows-sandbox/windows-sandbox-overview) environment with Chocolatey pre-installed.
 	
 ### WHO IS THIS FOR?
-**Chocolatey Sandbox** (OKA **choco-sandbox**) is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
+**Chocolatey Sandbox** (AKA **choco-sandbox**) is for anyone who may want to test drive Chocolatey packages in a [sandbox](https://en.wikipedia.org/wiki/Sandbox_(computer_security)).
 
 
 ### FEATURES:
