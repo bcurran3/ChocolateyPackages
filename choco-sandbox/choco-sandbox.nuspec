@@ -45,14 +45,14 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-**If you find Chocolatey Sandbox (AKA choco-sandbox) useful, please consider donating:**
-https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3
+**If you find Chocolatey Sandbox (AKA choco-sandbox) useful, please consider donating:
+https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 
 ---
 </description>
     <releaseNotes>
 ### CHANGELOG:
-* 1.0.0 - initial release.
+* 1.0.0 - Initial release. No upgrades or features planned, only maintenance if needed for future Windows or Windows Sandbox compatibility.
 	</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
