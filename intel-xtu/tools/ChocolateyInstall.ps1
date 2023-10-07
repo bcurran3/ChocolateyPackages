@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-xtu'
 $toolsDir       = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$url64          = 'https://downloadmirror.intel.com/29183/XTUSetup.exe'
-$checksum64     = 'D6E95DC3A662EEBD80C0D5D16263673A61FEF9564FDEBCAD059389261DB2529E'
+#$url64          = 'https://downloadmirror.intel.com/29183/XTUSetup.exe'
+$url64          = 'https://downloadmirror.intel.com/29183/XTUSetup_7.13.1.5.exe'
+$checksum64     = 'A7D8A8D0B3946412AFD642B5B4A01E0133103E0EC0306A3F03C2B35C060E1DFB'
 
 Confirm-WinMinimumBuild 19041
 
@@ -30,9 +31,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyPackage @packageArgs
-
-# if error 1
-# Having Core Isolation Memory Integrity (HVCI), Hyper-V, or Virtual Machine System features enabled - are incompatible.
 
 # UPDATE INSTRUCTIONS:
 # update the checksum
