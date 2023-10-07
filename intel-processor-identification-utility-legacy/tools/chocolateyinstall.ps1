@@ -36,7 +36,7 @@ $packageArgs = @{
   url            = $url
   validExitCodes = @(0, 3010, 1641)
   silentArgs     = '/quiet /norestart'
-  softwareName   = 'Intel(R) Processor Identification Utility'
+  softwareName   = 'Intel® Processor Identification Utility - Legacy'
   checksum       = $checksum
   checksumType   = 'sha256' 
 }
