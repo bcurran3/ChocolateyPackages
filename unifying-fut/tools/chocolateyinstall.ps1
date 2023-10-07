@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop';
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url      = 'https://aws13-customer-care-assets.s3.amazonaws.com/Software/SecureDFU/Win/SecureDFU_48.exe'
-$checksum = 'D0E7DF9F19AC7DD2BA3976995ED2461C5DC296D0E5DCB65C17DAD46AACAD44C0'
-$exe      = 'SecureDFU_48.exe'
+$url      = 'https://download01.logi.com/web/ftp/pub/techsupport/keyboards/FirmwareUpdateTool_2.6.201219_x86.exe'
+$checksum = '38BCA469FF6418ADDD22A4AFFAB9F15BF96C2CE704CFC9D0A2AB51307A29F888'
+$exe      = 'FirmwareUpdateTool_2.6.201219_x86.exe'
 $shortcutName = 'Logitech Firmware Update Tool.lnk'
 
 
