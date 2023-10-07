@@ -20,6 +20,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ---
 
 	The Firmware Update Tool, allows you to update your Logitech wireless receivers and selected keyboards to the latest firmware.
+	
+	[Supported device list](https://support.logi.com/hc/en-us/articles/4473639459607)
 
 	**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/unifying-fut/readme.md)**
 
