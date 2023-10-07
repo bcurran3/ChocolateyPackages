@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>unifying-fut</id>
-    <version>2.6.201219</version>
+    <version>3.2.276959</version>
     <title>Logitech Firmware Update Tool (Portable)</title>
     <authors>Logitech</authors>
     <owners>bcurran3</owners>
