@@ -29,7 +29,7 @@ Intel® Processor Identification Utility is a free software that you can install
 
 This version of the application supports automatic software update so you will be notified when there is a new update available. The list of supported processor that the tool can identify is mentioned below. [List](https://downloadcenter.intel.com/download/28539)
 
-## For 11th Gen and older processors, use [intel-processor-identification-utility](https://community.chocolatey.org/packages/intel-processor-identification-utility) for 12th Gen and newer processors
+## intel-processor-identification-utility-legacy is for 11th Gen and older processors, use [intel-processor-identification-utility](https://community.chocolatey.org/packages/intel-processor-identification-utility) for 12th Gen and newer processors.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-processor-identification-utility-legacy/readme.md)**
 	
