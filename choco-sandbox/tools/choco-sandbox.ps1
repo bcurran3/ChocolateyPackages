@@ -56,6 +56,8 @@ if (Test-Path C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox\choco-sandbox-cu
 	& C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox\choco-sandbox-customize.ps1 -ErrorActtion SilentlyContinue
 }
 
+Set-Location "C:\Users\WDAGUtilityAccount\Desktop\choco-sandbox"
+
 Write-Host "`nGo Go Chocolatey Go!" -Foreground White
 Write-Host "`nFound Chocolatey Sandbox useful?" -Foreground White
 Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -Foreground White
