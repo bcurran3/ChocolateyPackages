@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-dsa</id>
-    <version>23.3.25.6</version>
+    <version>23.4.39.9</version>
     <title>Intel® Driver &amp; Support Assistant (Install)</title>
     <authors>Intel Corporation</authors>
     <owners>bcurran3</owners>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <projectUrl>https://downloadcenter.intel.com/download/24345</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-dsa/intel-dsa_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-dsa/intel-dsa_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -28,13 +28,10 @@ Products supported: Graphics drivers, wireless networking, Intel® NUCs, and Int
 
 ### Required to install and use utility
 
-A broadband Internet connection is required to use this utility.
-
-Operating system requirements for installation: This application installs on Windows 7*, Windows 8*, Windows 8.1*, and Windows® 10.
-
-We recommend performing a Windows* update to bring your operating system up to date with the latest .NET.
-
-This application does not support older versions of Internet Explorer. We recommend using Chrome, Firefox or IE v11 browsers. 
+* A broadband Internet connection is required to use this utility.
+* Operating system requirements for installation: This application installs on Windows 7*, Windows 8*, Windows 8.1*, Windows® 10, and Windows 11*.
+* We recommend performing a Windows* update to bring your operating system up to date with the latest .NET.
+* This application does not support Internet Explorer* browser. We recommend using Chrome*, Firefox*, or Edge* (version 44.17763/18.17763 or newer) browsers.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-dsa/readme.md)**
 
@@ -47,7 +44,7 @@ This application does not support older versions of Internet Explorer. We recomm
 
 </description>
     <summary> Intel® Driver &amp; Support Assistant enables you to scan computing devices for the latest drivers available from Intel.</summary>
-    <releaseNotes>https://downloadcenter.intel.com/download/28425/Intel-Driver-Support-Assistant?v=t</releaseNotes>
+    <releaseNotes>https://www.intel.com/content/www/us/en/support/articles/000056693/software/software-applications.html</releaseNotes>
     <copyright>Intel Corporation</copyright>
     <tags>dsa intel driver support assistant update utility</tags>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-dsa</packageSourceUrl>
