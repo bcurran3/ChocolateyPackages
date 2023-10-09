@@ -3,18 +3,18 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-proset-drivers</id>
-    <version>22.240.0</version>
+    <version>22.250.1</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
     <title>Windows 10 and Windows 11 Wi-Fi Drivers for Intel Wireless Adapters (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19351</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-proset-drivers/intel-proset-drivers_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-proset-drivers/intel-proset-drivers_icon.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://www-ssl.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>intel proset wifi network adapter nic driver drivers windows</tags>
-    <summary>Intel® PROSet/Wireless Software and Drivers</summary>
+    <summary>Wi-Fi drivers for Intel Wireless Adapters</summary>
     <description>
 ---
 ### [choco://intel-proset-drivers](choco://intel-proset-drivers)
@@ -22,7 +22,9 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-Intel® PROSet/Wireless WiFi Software (includes drivers): Drivers only: This is a compressed package that includes all files required to install the wireless adapter drivers only. The zip package allows you to extract the drivers for installation on multiple systems.
+The xx.xxx.x package installs the Windows® 10 and Windows 11* Wi-Fi drivers for Intel® Wireless Adapters.
+
+See the release notes for what's new or fixed, known issues, and supported hardware.
 
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-proset-drivers/readme.md)**
@@ -32,10 +34,8 @@ Intel® PROSet/Wireless WiFi Software (includes drivers): Drivers only: This is 
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
 
 ---
-
-
-</description>
-    <releaseNotes>https://downloadmirror.intel.com/784628/ReleaseNotes_WiFi_22.240.0.pdf</releaseNotes>
+    </description>
+    <releaseNotes>https://downloadmirror.intel.com/788770/ReleaseNotes_WiFi_22.250.1.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
 	</dependencies>
