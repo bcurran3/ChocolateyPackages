@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName    = 'intel-killer-performance-suite' 
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$IntelPackageNumber = '785179'
-$url64          = "https://downloadmirror.intel.com/$IntelPackageNumber/KillerPerformanceSuite_"+$env:ChocolateyPackageVersion+"_Win10-11x64.exe"
-$checksum64     = 'E63DBF406BA085D539966BDD3083AC0CFA7766BE57246543C77A74A1E6438F7E'
+$IntelPackageNumber = '790673'
+$url64          = "https://downloadmirror.intel.com/$IntelPackageNumber/KillerPerformanceSuite_"+$env:ChocolateyPackageVersion+"_Win10-11_x64.exe"
+$checksum64     = '8346FA9AA2ACC8F098C7F58DA184CECCA45211B205C6FF4EC49759157550CC90'
 
 Confirm-Win10
 
