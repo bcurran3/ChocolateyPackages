@@ -13,7 +13,7 @@
     <bugTrackerUrl>https://sourceforge.net/p/tuxpaint/bugs/</bugTrackerUrl>
     <mailingListUrl>https://sourceforge.net/p/tuxpaint/mailman/</mailingListUrl>
     <copyright>Copyright New Breed Software/Various contributors</copyright>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/tux-paint-stamps/tux-paint-stamps_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tux-paint-stamps/tux-paint-stamps_icon.png</iconUrl>
     <licenseUrl>http://www.tuxpaint.org/docs/COPYING.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -24,7 +24,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of Tux Paint Stamps](http://www.tuxpaint.org/screenshots/example_simple.png)
+![Screenshot of Tux Paint Stamps](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/tux-paint-stamps/tux-paint-stamps_screenshot.png)
 
 This is a collection of 'rubber stamp' images for Tux Paint.
 
