@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>visualbcd</id>
-    <version>0.9.3.20231025</version>
+    <version>0.9.3.1020231025</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/visualbcd</packageSourceUrl>
     <title>Visual BCD (Install)</title>
