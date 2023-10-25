@@ -1,4 +1,5 @@
-﻿$packageName    = 'visualbcd'
+﻿$ErrorActionPreference = 'Stop'
+$packageName    = 'visualbcd'
 $installerType  = 'msi'
 $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url            = 'https://www.boyans.net/VisualBcd5/VisualBcd_0.9.3.1.msi' 

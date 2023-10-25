@@ -1,25 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>visualbcd</id>
-    <version>0.9.3.1020230720</version>
+    <version>0.9.3.20231025</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/visualbcd</packageSourceUrl>		
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/visualbcd</packageSourceUrl>
     <title>Visual BCD (Install)</title>
     <authors>BoYans</authors>
     <projectUrl>https://www.boyans.net/</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/visualbcd/visualbcd_icon.png</iconUrl>
     <copyright>Copyright BoYans</copyright>
-	<licenseUrl>https://www.boyans.net/DownloadVisualBCD.html</licenseUrl>
+    <licenseUrl>https://www.boyans.net/DownloadVisualBCD.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.boyans.net/VBCD_HowTo.html</docsUrl>
-	<mailingListUrl>https://www.boyans.net/forum.html</mailingListUrl>
+    <mailingListUrl>https://www.boyans.net/forum.html</mailingListUrl>
     <tags>boyans visual bcd editor boot manager uefi</tags>
     <summary>Visual BCD Editor - graphical bcdedit utility for Windows 7 to Windows 10</summary>
     <description>
+---
+
+### [choco://visualbcd](choco://visualbcd)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
 ![Screenshot of Visual BCD](https://www.boyans.net/images/visual-bcdedit.png)
 
-##Visual BCD Editor - graphical bcdedit utility for Windows 7 to Windows 10
+## Visual BCD Editor - graphical bcdedit utility for Windows 7 to Windows 10
 
 * easy BCD edit
 * structured view of complete BCD
@@ -45,11 +53,15 @@ New in version 0.9.3 of the tool is handling of [Custom Bootstrap Actions - boot
 Recommendation: Please read at least [Visual BCD - implementation notes and short introduction to BCD objects and elements](https://www.boyans.net/VisualBCD_doc.htm) if you don't have some BCD knowledge before manipulating BCD! There is a reason Microsoft made BCD accessible only with administrative rights. Be careful when manipulating BCD and have always an accessible BCD backup and recovery media ready! Everybody makes mistakes ;) - mistakes against BCD could make your system unbootable!
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/visualbcd/readme.md)**
+	
 
-***
+---
+
 **Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-***
-	</description>
+
+---
+
+</description>
     <releaseNotes>https://www.boyans.net/ChangeLog.rtf</releaseNotes>
   </metadata>
   <files>
