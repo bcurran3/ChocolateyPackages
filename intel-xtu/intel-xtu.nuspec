@@ -9,7 +9,7 @@
     <title>Intel® Extreme Tuning Utility (Intel® XTU) (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://downloadcenter.intel.com/download/29183</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_icon.png</iconUrl>
     <copyright>Intel Corporation</copyright>
     <licenseUrl>http://www.intel.com/content/www/us/en/legal/terms-of-use.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ---
 
 
-![Screenshot of Intel XTU](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_screenshot.png)	
+![Screenshot of Intel XTU](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/intel-xtu/intel-xtu_screenshot.png)	
 
 ### Introduction
 
