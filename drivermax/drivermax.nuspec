@@ -64,7 +64,7 @@ DriverMax automatically tests each new driver before installing it on your PC, e
     <copyright>Copyright by Innovative Solutions. All Rights Reserved.</copyright>
     <licenseUrl>http://www.drivermax.com/terms_and_conditions.htm</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/drivermax/drivermax_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/drivermax/drivermax_icon.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
