@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>tux-paint-stamps</id>
-    <version>2023.05.19</version>
+    <version>2023.05.19.20231025</version>
     <title>Tux Paint Stamps (Install)</title>
     <authors>wkendrick</authors>
     <owners>bcurran3</owners>

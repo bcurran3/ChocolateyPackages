@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$TodaysVersion = $ENV:ChocolateyPackageVersion.replace('.','-')
+$installer = Get-ChildItem "$toolsDir\tuxpaint-stamps*.exe"
 
 $packageArgs = @{
   packageName    = 'tux-paint-stamps'
   fileType       = 'EXE'
-  file           = "$toolsDir\tuxpaint-stamps-"+"$TodaysVersion"+"-windows-installer.exe"
+  file           = "$installer"
   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
   validExitCodes = @(0,1)
   softwareName   = 'Tux Paint Stamps*'
