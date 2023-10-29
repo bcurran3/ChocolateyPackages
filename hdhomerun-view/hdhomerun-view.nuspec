@@ -65,6 +65,9 @@ Also includes the HDHomeRun Setup and HDHomeRun Config programs.
 Software Changelog: https://www.silicondust.com/support/downloads/software-changelog/
 Firmware Changelog: https://www.silicondust.com/support/downloads/firmware-changelog/
     </releaseNotes>
+    <dependencies>
+      <dependency id="vcredist140" version="14.30.30704"/>
+    </dependencies>		
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
