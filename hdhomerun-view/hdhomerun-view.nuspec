@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>hdhomerun-view</id>
-    <version>2023.03.23</version>
+    <version>2023.07.19</version>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdhomerun-view</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>HDHomeRun View (Install)</title>
     <authors>SiliconDust</authors>
     <projectUrl>https://www.silicondust.com/products/software/</projectUrl>
-    <iconUrl>https://www.silicondust.com/wordpress/wp-content/uploads/2016/04/view-logo-300x88.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hdhomerun-view/hdhomerun-view_icon.png</iconUrl>
     <copyright>SiliconDust</copyright>
     <licenseUrl>https://www.silicondust.com/support/downloads/gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of HDHomeRun View software](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTEbfGLCK6jx8UChqaAEGLW7j8TH3FUb33L0dz5nxxNvMLjJJW5)
+![Screenshot of HDHomeRun View](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hdhomerun-view/hdhomerun-view_screenshot.png)
 
 ### HDHomeRun VIEW app
 

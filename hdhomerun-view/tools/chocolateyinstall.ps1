@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
-$url            = 'https://download.silicondust.com/hdhomerun/hdhomerun_windows.exe' 
-$checksum       = '0F19D183921CFF3D7F7DCDF74D658EC6971D11C78DA08D40180CA2F83156D9DA'
+$url            = 'https://download.silicondust.com/hdhomerun/hdhomerun_windows.exe'
+$checksum       = '24A1573A42766E2250BED77538E327B28C087634C85A853A787A52230D4DCD5F'
 
 $packageArgs = @{
   packageName   = $env:chocolateyPackageName
