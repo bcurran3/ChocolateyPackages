@@ -23,8 +23,9 @@ if (!(Test-Path "$(Get-ToolsLocation)\BCURRAN3\choco-sandbox")) { New-Item -Path
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force -ErrorAction SilentlyContinue
 Move-Item "$toolsDir\$exe" "$scriptDir" -Force -ErrorAction SilentlyContinue
-Move-Item "$toolsDir\packages.config.example" "$scriptDir" -Force -ErrorAction SilentlyContinue
+Move-Item "$toolsDir\choco-sandbox-customize.ps1.example" "$scriptDir" -Force -ErrorAction SilentlyContinue
 Move-Item "$toolsDir\Microsoft.PowerShell_profile.ps1" "$scriptDir" -Force -ErrorAction SilentlyContinue
+Move-Item "$toolsDir\packages.config.example" "$scriptDir" -Force -ErrorAction SilentlyContinue
 Move-Item "$toolsDir\ReadMe.txt" "$scriptDir" -Force -ErrorAction SilentlyContinue
 
 # Make shortcuts
