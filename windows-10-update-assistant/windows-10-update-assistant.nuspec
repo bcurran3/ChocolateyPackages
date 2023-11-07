@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>windows-10-update-assistant</id>
-    <version>1.4.19041.1375</version>
+    <version>1.4.19041.2183</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/windows-10-update-assistant</packageSourceUrl>
     <title>Windows 10 Update Assistant (Portable)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://www.microsoft.com/en-us/software-download/windows10</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/windows-10-update-assistant/windows-10-update-assistant_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/windows-10-update-assistant/windows-10-update-assistant_icon.png</iconUrl>
     <copyright>© Microsoft</copyright>
     <licenseUrl>https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -24,7 +24,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-## Get the Windows 10 November 2021 Update now 
+## Get the Windows 10 2022 Update | Version 22H2 now 
 
 The Windows 10 Update Assistant can help you update to the latest version of Windows 10.
 
