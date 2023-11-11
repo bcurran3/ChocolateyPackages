@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one.-->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>choco-continuous-upgrader</id>
+    <version>0.1.0-pre</version>
+    <title>(unofficial) Choco Continuous Upgrader(Script)</title>
+    <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectUrl>
+    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+---
+
+### [choco://choco-cleaner](choco://choco-continuous-upgrader)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://community.chocolatey.org/packages/choco-protocol-support)
+
+---
+
+![Screenshot of choco-continuous-upgrader](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_screenshot.png)
+
+## PLACEHOLDER
+
+
+**If you find choco-continuous-upgrader useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+    </description>
+    <summary>choco-continuous-upgrader - upgrades your Chocolatey packages continuously throughout the day</summary>
+    <releaseNotes>**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
+
+
+### CHANGELOG:
+* 0.1.0 - initial release
+
+### ROADMAP:
+* TBD
+    </releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial choco upgrader</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
