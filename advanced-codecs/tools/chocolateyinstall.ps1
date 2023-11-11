@@ -7,6 +7,7 @@ if (Test-Path "$env:ProgramFiles\Shark007\ADVANCED_64bitCodecs"){ Remove-Item "$
 if (Test-Path "$env:ProgramFiles\Shark007\Shark007Codecs\Tools\AutoUpdate.exe"){
 	Write-Host "  ** Running AutoUpdate." -Foreground Magenta
 	Start-ChocolateyProcessAsAdmin -Statements "silent" -ExeToRun "$env:ProgramFiles\Shark007\Shark007Codecs\Tools\AutoUpdate.exe" -WorkingDirectory "$env:ProgramFiles\Shark007\Shark007Codecs\Tools"
+#TODO: Check for exit code 1 and if so, run again
 	return
 }
 
