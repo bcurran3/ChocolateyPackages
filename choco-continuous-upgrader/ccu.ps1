@@ -3,16 +3,19 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-$Upgraded=$False
-#$WaitTime=900 # 15 minutes before checking again
-$WaitTime=60
+param (
+    [switch]$Start,
+    [switch]$Stop,
+	$WaitTime
+ )
+
+$AutoUpgrade=$False
 
 Write-Host "CCU.ps1 v2023.11.11 - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
-
 function keep_checking{
-
+$FoundUpgrades=$False
 
 # get list of installed packages
 Write-Host "  ** Getting list of installed Chocolatey packages..." -Foreground Magenta
@@ -52,18 +55,29 @@ for ($link=0; $link -lt $links.count; $link++)
             $InstalledVersion=$nuspecFile.package.metadata.version
 			if ($feedversion -gt $InstalledVersion)
 			{
+				$FoundUpgrades=$True
 				Write-Host "  ** Found update for $feedpackage (v$feedversion published $($feed.rss.channel.item[$link].updated))" -Foreground Magenta
-				$Upgraded=$True
-				Write-Host "  ** Founnd $feedpackage to upgrade." -Foreground Magenta
-				# & choco upgrade $feedpackage
+				if ($AutoUpgrade) {& choco upgrade $feedpackage}
 			}
 	    }
     }
 }
-if (!($Upgraded)) {	Write-Host "  ** No packages to upgrade." -Foreground Magenta }
-Write-Host "  ** Waiting $($WaitTime/60) minutes to check again." -Foreground Yellow
-Sleep $WaitTime
+if (!($FoundUpgrades)) {Write-Host "  ** No packages to upgrade." -Foreground Magenta}
+Write-Host "  ** Waiting $WaitTime minutes to before checking again. **" -Foreground Yellow
+Sleep $($WaitTime*60)
 
 }
-for (;;) {keep_checking}
 
+if ($Start) {
+	if ($WaitTime -eq $null) {$WaitTime=30}
+	for (;;) {keep_checking}
+} else {
+	Write-Host "PARAMETERS:" -Foreground Yellow
+	Write-Host " -Start to start." -Foreground Yellow
+	Write-Host " -Stop to stop. (NOT IMPLEMENTED)" -Foreground Yellow
+	Write-Host " # of minutes to wait between checks (default 30)" -Foreground Yellow
+	Write-Host 
+	Write-Host "EXAMPLE:" -Foreground Yellow
+	Write-Host " CCU -Start 60`n" -Foreground Yellow
+	Write-Host 
+}
