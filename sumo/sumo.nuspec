@@ -3,58 +3,23 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sumo</id>
-    <version>5.17.10.542</version>
-    <title>SUMo (lite)</title>
+    <version>99.99.99.99</version>
+    <title>[RETIRED] SUMo (lite)</title>
     <authors>KC Softwares</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sumo</packageSourceUrl>
-    <copyright>© KC Softwares - All rights reserved</copyright>
+    <copyright></copyright>
     <projectUrl>http://www.kcsoftwares.com/?sumo</projectUrl>
-    <bugTrackerUrl>https://www.kcsoftwares.com/sumo/bugs.php</bugTrackerUrl>
-    <mailingListUrl>https://www.kcsoftwares.com/forum/viewforum.php?f=11&amp;sid=840f0d6aa87b7e4459b8f88097a8cbdb</mailingListUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/sumo/sumo_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/retired.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <tags>kcsoftwares sumo update monitor notifier trial notsilent</tags>
-    <summary>Keep your PC up-to-date by using the most recent version of your favorite software</summary>
-    <description>
----
-
-### [choco://sumo](choco://sumo)
-To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
-
----
-
-
-![Screenshot of SUMo](http://www.kcsoftwares.com/images/SUMo_screen.png)
-
-SUMo (Software Update Monitor) keeps your PC up-to-date &amp; safe by using the most recent version of your favorite software ! Unlike built-in auto update features, SUMo tells you if updates are available before you need to use your software.
-
-### Features
-* Automatic detection of installed software
-* Detects required updates / patchs for your software
-* Detects required drivers update (requires [DUMo](http://www.kcsoftwares.com/?page=dumo))
-* Filter / authorize Beta versions (user setting)
-* Automatic self-update **(PRO only)**
-* Direct access to software developer's web site **(PRO only)**
-* Ignore list : only tracks software YOU want to track
-* More compatibility and less false positive than others Update Monitors (according to users feedback ;-)
-* Internationalization support.
-
-[SUMo PRO €14.99/yr or €29.99/lifetime](http://www.kcsoftwares.com/?buy)
-
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/sumo/readme.md)**
-
----
-
-**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
-
----
-
+    <tags>retired</tags>
+    <summary></summary>
+    <description>![retired icon](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/retired.png)
+ ## This package has been retired.
+ 
+[termination notice](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/retired.png)
     </description>
-    <releaseNotes>https://www.kcsoftwares.com/bugs/changelog_page.php?project_id=11</releaseNotes>
-    <dependencies>
-      <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
-    </dependencies>
+    <releaseNotes></releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
