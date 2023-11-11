@@ -4,18 +4,21 @@
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
 param (
+    [switch]$OnlyNotify,
     [switch]$Start,
     [switch]$Stop,
-	$WaitTime
+	[int]$WaitTime
  )
 
-$AutoUpgrade=$False
+if ($OnlyNotify){$AutoUpgrade=$False} else {$AutoUpgrade=$True}
 
 Write-Host "CCU.ps1 v2023.11.11 - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 function keep_checking{
 $FoundUpgrades=$False
+
+if (!($AutoUpgrade)){Write-Host "  ** Automatic upgrades DISABLED, notifications only." -Foreground Red}
 
 # get list of installed packages
 Write-Host "  ** Getting list of installed Chocolatey packages..." -Foreground Magenta
@@ -63,18 +66,19 @@ for ($link=0; $link -lt $links.count; $link++)
     }
 }
 if (!($FoundUpgrades)) {Write-Host "  ** No packages to upgrade." -Foreground Magenta}
-Write-Host "  ** Waiting $WaitTime minutes to before checking again. **" -Foreground Yellow
+Write-Host "  ** Waiting $WaitTime minutes before checking again... **" -Foreground Cyan
 Sleep $($WaitTime*60)
 
 }
 
-if ($Start) {
+if ($Start -or $OnlyNotify) {
 	if ($WaitTime -eq $null) {$WaitTime=30}
 	for (;;) {keep_checking}
 } else {
 	Write-Host "PARAMETERS:" -Foreground Yellow
-	Write-Host " -Start to start." -Foreground Yellow
-	Write-Host " -Stop to stop. (NOT IMPLEMENTED)" -Foreground Yellow
+	Write-Host " -Start - start checking for and install upgrades." -Foreground Yellow
+	Write-Host " -Stop  - stop checking for upgrades. (NOT IMPLEMENTED)" -Foreground Yellow
+	Write-Host " -OnlyNotify - start checking for upgrades but do not install them." -Foreground Yellow
 	Write-Host " # of minutes to wait between checks (default 30)" -Foreground Yellow
 	Write-Host 
 	Write-Host "EXAMPLE:" -Foreground Yellow
