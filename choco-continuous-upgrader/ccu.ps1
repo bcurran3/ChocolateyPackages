@@ -1,6 +1,6 @@
 #Requires -RunAsAdministrator
 # $ErrorActionPreference = 'Stop'
-# CCU.ps1 Copyleft 2023 by Bill Curran AKA BCURRAN3
+# CCU.ps1 (Chocolatey Continuous Upgrader) Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -11,17 +11,18 @@ param (
 	[int]$WaitTime
  )
 
+Write-Host "CCU.ps1 v0.1.0-alpha (2023/11/11) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+
 if ($OnlyNotify){$AutoUpgrade=$False} else {$AutoUpgrade=$True}
 if (Get-Module -ListAvailable -Name BurntToast) {$ToastAvailable=$True} else {$ToastAvailable=$False}
-
-Write-Host "CCU.ps1 v0.1.0-alpha (2023.11.11) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
-Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
+if (!($WaitTime)) {$WaitTime=30}
 
 # Send toast messages to foreground about available updates
 function send_toast{
 	if ((Get-Service WinRM).Status -eq 'Stopped') {Start-Service 'WinRM' -ErrorAction SilentlyContinue}
 	if ((Get-Service WinRM).Status -eq 'Running') {
-		Invoke-Command -ComputerName $(hostname) -ArgumentList $FeedPackage,$FeedVersion -ScriptBlock {param([string]$FeedPackage, [string]$FeedVersion) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey Continuous Updater:`n", "$Feedpackage v$FeedVersion `nUPGRADE AVAILABLE." -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
+		Invoke-Command -ComputerName $(hostname) -ArgumentList $FeedPackage,$FeedPackageVersion -ScriptBlock {param([string]$FeedPackage, [string]$FeedPackageVersion) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey Continuous Updater:`n", "$Feedpackage v$FeedPackageVersion `nUPGRADE AVAILABLE." -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
 	}
 }
 
@@ -42,7 +43,21 @@ $InstalledPackages = $InstalledPackages + (Get-Childitem $env:ChocolateyInstall\
 
 # Get Feedburner list of updated packages
 Write-Host "  ** Getting Feedburner list of recently published Chocolatey packages..." -Foreground Magenta
-[xml]$feed = Invoke-WebRequest -Uri 'https://feeds.feedburner.com/chocolatey' | Select-Object -ExpandProperty Content
+try {
+	[xml]$feed = Invoke-WebRequest -Uri 'https://feeds.feedburner.com/chocolatey' | Select-Object -ExpandProperty Content
+}
+catch {
+    if ( $_.Exception.Response.StatusCode.Value__ -eq 404 )
+	{
+        Write-Host "  ** 404 error getting https://feeds.feedburner.com/chocolatey" -Foreground Red
+		Write-Host "  ** Waiting $WaitTime minutes before checking again... **" -Foreground Cyan
+		Sleep $($WaitTime*60)
+		return
+    }
+    else {
+        Write-Host "False response..." -Foreground Red
+    }
+}
 $links = $feed.rss.channel.item.link
 
 Write-Host "  ** Found $($links.count) Chocolatey packages in Feedburner list." -Foreground Green
@@ -51,21 +66,21 @@ Write-Host "  ** $($feed.rss.channel.item[0].title) is the latest Chocolatey pac
 # Upgrade and/or notify updated packages
 for ($link=0; $link -lt $links.count; $link++)
 {
-    $feedpackage = $links[$link] | split-path | split-path -leaf
-	$feedversion = $links[$link] | split-path -leaf
+    $FeedPackage = $links[$link] | split-path | split-path -leaf
+	$FeedPackageVersion = $links[$link] | split-path -leaf
 
     for ($installed=0; $installed -lt $InstalledPackages.count; $installed++)
     {
-		if ($InstalledPackages[$installed] -eq $feedpackage)
+		if ($InstalledPackages[$installed] -eq $FeedPackage)
 	    {
-			[xml]$nuspecFile = Get-Content "$env:ChocolateyInstall\lib\$feedpackage\$feedpackage.nuspec"
+			[xml]$nuspecFile = Get-Content "$env:ChocolateyInstall\lib\$FeedPackage\$FeedPackage.nuspec"
             $InstalledVersion=$nuspecFile.package.metadata.version
-			if ($feedversion -gt $InstalledVersion)
+			if ($FeedPackageVersion -gt $InstalledVersion)
 			{
 				$FoundUpgrades=$True
-                Write-Host "  ** Found update for $feedpackage (v$feedversion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" -Foreground Magenta
+                Write-Host "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" -Foreground Magenta
 				if ($ToastAvailable) {send_toast}
-				if ($AutoUpgrade) {& choco upgrade $feedpackage}
+				if ($AutoUpgrade) {& choco upgrade $FeedPackage}
 			}
 	    }
     }
@@ -77,7 +92,6 @@ Sleep $($WaitTime*60)
 }
 
 if ($Start -or $OnlyNotify) {
-	if (!($WaitTime)) {$WaitTime=30}
 	for (;;) {keep_checking}
 } else {
 	Write-Host "PARAMETERS:" -Foreground Yellow
