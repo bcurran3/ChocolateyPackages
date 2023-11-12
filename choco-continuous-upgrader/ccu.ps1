@@ -1,3 +1,4 @@
+#Requires -RunAsAdministrator
 # $ErrorActionPreference = 'Stop'
 # CCU.ps1 Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
@@ -11,16 +12,26 @@ param (
  )
 
 if ($OnlyNotify){$AutoUpgrade=$False} else {$AutoUpgrade=$True}
+if (Get-Module -ListAvailable -Name BurntToast) {$ToastAvailable=$True} else {$ToastAvailable=$False}
 
-Write-Host "CCU.ps1 v2023.11.11 - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v0.1.0-alpha (2023.11.11) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
+# Send toast messages to foreground about available updates
+function send_toast{
+	if ((Get-Service WinRM).Status -eq 'Stopped') {Start-Service 'WinRM' -ErrorAction SilentlyContinue}
+	if ((Get-Service WinRM).Status -eq 'Running') {
+		Invoke-Command -ComputerName $(hostname) -ArgumentList $FeedPackage,$FeedVersion -ScriptBlock {param([string]$FeedPackage, [string]$FeedVersion) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey Continuous Updater:`n", "$Feedpackage v$FeedVersion `nUPGRADE AVAILABLE." -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
+	}
+}
+
+# Meat & Potatoes
 function keep_checking{
 $FoundUpgrades=$False
 
 if (!($AutoUpgrade)){Write-Host "  ** Automatic upgrades DISABLED, notifications only." -Foreground Red}
 
-# get list of installed packages
+# Get list of installed packages
 Write-Host "  ** Getting list of installed Chocolatey packages..." -Foreground Magenta
 Write-Host "  ** Found $((Get-Childitem $env:ChocolateyInstall\lib).count) installed Chocolatey packages" -Foreground Green
 Write-Host "  ** Found $((Get-Childitem $env:ChocolateyInstall\extensions).count) installed Chocolatey extensions" -Foreground Green
@@ -29,22 +40,15 @@ $InstalledPackages = Get-Childitem $env:ChocolateyInstall\lib | Split-Path -Leaf
 $InstalledPackages = $InstalledPackages + (Get-Childitem $env:ChocolateyInstall\extensions | Split-Path -Leaf)
 $InstalledPackages = $InstalledPackages + (Get-Childitem $env:ChocolateyInstall\hooks | Split-Path -Leaf)
 
-#choco feedburner get links
+# Get Feedburner list of updated packages
 Write-Host "  ** Getting Feedburner list of recently published Chocolatey packages..." -Foreground Magenta
 [xml]$feed = Invoke-WebRequest -Uri 'https://feeds.feedburner.com/chocolatey' | Select-Object -ExpandProperty Content
-
-# Get all the link elements in the RSS feed
 $links = $feed.rss.channel.item.link
 
 Write-Host "  ** Found $($links.count) Chocolatey packages in Feedburner list." -Foreground Green
-Write-Host "  ** Latest published Chocolatey package was at $($feed.rss.channel.item[0].updated)" -Foreground Green
-Sleep 2
+Write-Host "  ** $($feed.rss.channel.item[0].title) is the latest Chocolatey package published at $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[0].updated), $(Get-TimeZone).id))." -Foreground Green
 
-# TDL: Need to get versions of packages
-# from .chocolatey would be nice if clean
-# from .nuspec is going to be very io intensive
-
-# Output the links
+# Upgrade and/or notify updated packages
 for ($link=0; $link -lt $links.count; $link++)
 {
     $feedpackage = $links[$link] | split-path | split-path -leaf
@@ -59,7 +63,8 @@ for ($link=0; $link -lt $links.count; $link++)
 			if ($feedversion -gt $InstalledVersion)
 			{
 				$FoundUpgrades=$True
-				Write-Host "  ** Found update for $feedpackage (v$feedversion published $($feed.rss.channel.item[$link].updated))" -Foreground Magenta
+                Write-Host "  ** Found update for $feedpackage (v$feedversion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" -Foreground Magenta
+				if ($ToastAvailable) {send_toast}
 				if ($AutoUpgrade) {& choco upgrade $feedpackage}
 			}
 	    }
@@ -72,7 +77,7 @@ Sleep $($WaitTime*60)
 }
 
 if ($Start -or $OnlyNotify) {
-	if ($WaitTime -eq $null) {$WaitTime=30}
+	if (!($WaitTime)) {$WaitTime=30}
 	for (;;) {keep_checking}
 } else {
 	Write-Host "PARAMETERS:" -Foreground Yellow
@@ -85,3 +90,8 @@ if ($Start -or $OnlyNotify) {
 	Write-Host " CCU -Start 60`n" -Foreground Yellow
 	Write-Host 
 }
+
+# TDL:
+# Move functions to PSM
+# Use Start-Job to call functions to run in background
+# Implement -Stop to Remove-Job
