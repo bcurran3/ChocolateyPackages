@@ -15,7 +15,7 @@ param (
 	$WaitTime
  )
 
-Write-Host "CCU.ps1 v0.1.0-alpha (2023/11/15) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v0.1.0-alpha (2023/11/16) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 
@@ -52,6 +52,7 @@ if ($Foreground) {$env:Notify=$False} else {$env:Notify=$True}
 if ($OnlyNotify){$env:AutoUpgrade=$False;$env:Notify=$True} else {$env:AutoUpgrade=$True}
 if ($DoNotNotify) {$env:Notify=$False} else {$env:Notify=$True}
 if (Get-Module -ListAvailable -Name BurntToast) {$env:ToastAvailable=$True} else {$env:ToastAvailable=$False}
+if (!$WaitTime) {$WaitTime="30"}
 $env:WaitTime=$WaitTime
 $toolsdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $CheckJob=Get-Job | Where-Object {$_.Name -eq "CCU"}
@@ -84,9 +85,9 @@ if ($Start -or $OnlyNotify) {
 		return
 		} else {
 			Start-Job -Name CCU -InitializationScript { Import-Module S:\dev\GitHub\ChocolateyPackages\choco-continuous-upgrader\ccu.psm1 } {for (;;) {keep_checking}} | Out-Null
-			Write-Host "  ** Started CCU background job." -Foreground Yellow
+			Write-Host "  ** STARTED CCU background job." -Foreground Yellow
 			if (!($OnlyNotify)) {Write-Host "  ** Automatic upgrades ENABLED" -Foreground Yellow} else {Write-Host "  ** Automatic upgrades are DISABLED." -Foreground Yellow}
-			Write-Host "  ** Upgrades will be checked for every $WaitTime minutes." -Foreground Yellow
+			Write-Host "  ** Upgrades will be checked for every $WaitTime minutes.`n" -Foreground Yellow
 		}
 		return
 }
@@ -104,7 +105,7 @@ if ($Stop){
 	if ($CheckJob){
 		Stop-Job -Name CCU
 	    Remove-Job -Name CCU
-		Write-Host "  ** STOPPED CCU background job." -Foreground Yellow
+		Write-Host "  ** STOPPED CCU background job.`n" -Foreground Yellow
 		} else {
 			Write-Host "  ** CCU background job not running.`n" -Foreground Yellow
 			}
