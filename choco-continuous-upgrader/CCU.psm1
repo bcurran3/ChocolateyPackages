@@ -2,12 +2,6 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-#if (Get-Module -ListAvailable -Name BurntToast) {$ToastAvailable=$True} else {$ToastAvailable=$False}
-
-# DEBUG ONLY
-#$TestAdmin=(New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-#if (!$TestAdmin) {Write-Warning "Not running as admin."} else {Write-Host "  ** Running as admin." -Foreground Yellow}
-
 function print_info {
 	
 	param (
@@ -31,19 +25,16 @@ function send_toast{
 }
 
 function send_notification {
-	if ($ToastAvailable) {send_toast} else {send_msg}
+	if ($env:ToastAvailable) {send_toast} else {send_msg}
 }
 
 # Meat & Potatoes
 function keep_checking{
 	
-# Debug	
-$AutoUpgrade=$False
-	
     $FoundUpgrades=$False
-	if (!($global:WaitTime)) {$global:WaitTime=30}
+	if (!($env:WaitTime)) {$env:WaitTime=30}
 	
-    if (!($AutoUpgrade)){print_info "  ** Automatic upgrades DISABLED, notifications only." "Red"}
+    if (!($env:AutoUpgrade)){print_info "  ** Automatic upgrades DISABLED, notifications only." "Red"}
 
     # Get list of installed packages
     print_info "  ** Getting list of installed Chocolatey packages..." "Magenta"
@@ -63,8 +54,8 @@ $AutoUpgrade=$False
         if ( $_.Exception.Response.StatusCode.Value__ -eq 404 )
     	{
             print_info "  ** 404 error getting https://feeds.feedburner.com/chocolatey" "Red"
-    		print_info "  ** Waiting $global:WaitTime minutes before checking again..." "Cyan"
-    		Sleep $($global:WaitTime*60)
+    		print_info "  ** Waiting $env:WaitTime minutes before checking again..." "Cyan"
+    		Sleep $([int]$env:WaitTime*60)
     		return
         }
         else {
@@ -92,13 +83,13 @@ $AutoUpgrade=$False
     			{
     				$FoundUpgrades=$True
                     print_info "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" "Magenta"
-    				if ($Notify) {send_notification}
-    				if ($AutoUpgrade) {& choco upgrade $FeedPackage}
+    				if ($env:Notify) {send_notification}
+    				if ($env:AutoUpgrade) {& choco upgrade $FeedPackage -y -whatif}
     			}
     	    }
         }
     }
     if (!($FoundUpgrades)) {print_info "  ** No packages to upgrade." "Magenta"}
-    print_info "  ** Waiting $global:WaitTime minutes before checking again..." "Cyan"
-    Sleep $($global:WaitTime*60)
+    print_info "  ** Waiting $env:WaitTime minutes before checking again..." "Cyan"
+    Sleep $([int]$env:WaitTime*60)
 }
