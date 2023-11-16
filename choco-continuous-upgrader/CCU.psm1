@@ -12,6 +12,8 @@ function print_info {
 	Write-Host "$message" -Foreground "$color"
 }
 
+# TODO: add 2nd print info function for less notifications options
+
 function send_msg{
 	& msg * /time:3 "Chocolatey Continuous Upgrader:`n$Feedpackage v$FeedPackageVersion`nUPGRADE AVAILABLE."
 }
@@ -37,6 +39,7 @@ function keep_checking{
     if (!($env:AutoUpgrade)){print_info "  ** Automatic upgrades DISABLED, notifications only." "Red"}
 
     # Get list of installed packages
+	print_info "  ** 'CCU -Stop' to stop." "Yellow"
     print_info "  ** Getting list of installed Chocolatey packages..." "Magenta"
     print_info "  ** Found $((Get-Childitem $env:ChocolateyInstall\lib).count) installed Chocolatey packages" "Green"
     print_info "  ** Found $((Get-Childitem $env:ChocolateyInstall\extensions).count) installed Chocolatey extensions" "Green"
@@ -84,7 +87,10 @@ function keep_checking{
     				$FoundUpgrades=$True
                     print_info "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" "Magenta"
     				if ($env:Notify) {send_notification}
-    				if ($env:AutoUpgrade) {& choco upgrade $FeedPackage -y -whatif}
+# TODO: Debug AutoUpgrade condition not working for some reason
+#    				if ($env:AutoUpgrade) {& choco upgrade $FeedPackage -y}
+                    Write-Host "  ** DEBUG: env:AutoUpgrade is set to $env:AutoUpgrade" -Foreground Yellow
+					if ($env:AutoUpgrade) {Write-Host "  ** DEBUG: 'choco upgrade $Feedpackage -y' would run here" -Foreground Yellow}
     			}
     	    }
         }
