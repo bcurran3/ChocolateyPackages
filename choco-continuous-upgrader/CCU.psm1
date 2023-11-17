@@ -9,10 +9,8 @@ function print_info {
     [string]$color
  )
 
-	Write-Host "$message" -Foreground "$color"
+    if ($env:ReducedOutput -eq $True) {return} else {Write-Host "$message" -Foreground "$color"}
 }
-
-# TODO: add 2nd print info function for less notifications options
 
 function send_msg{
 	& msg * /time:3 "Chocolatey Continuous Upgrader:`n$Feedpackage v$FeedPackageVersion`nUPGRADE AVAILABLE."
@@ -37,9 +35,10 @@ function keep_checking{
 	if ($env:WaitTime -eq '') {$env:WaitTime=30}
 	
     # Get list of installed packages
+	Clear-Host
 	print_info "  ** 'CCU -Stop' to stop." "Yellow"
-    if ($env:AutoUpgrade -eq $False){print_info "  ** Automatic upgrades DISABLED." "Red"}
-	#if ($env:Notify -eq $False){print_info "  ** Automatic upgrades DISABLED." "Red"}
+    if ($env:AutoUpgrade -eq $True){print_info "  ** Automatic upgrades ENABLED." "Yellow"} else {print_info "  ** Automatic upgrades DISABLED." "Red"}
+	if ($env:Notify -eq $True){print_info "  ** Notifications ENABLED." "Yellow"} else {print_info "  ** Notifications DISABLED." "Yellow"}
     print_info "  ** Getting list of installed Chocolatey packages..." "Magenta"
     print_info "  ** Found $((Get-Childitem $env:ChocolateyInstall\lib).count) installed Chocolatey packages" "Green"
     print_info "  ** Found $((Get-Childitem $env:ChocolateyInstall\extensions).count) installed Chocolatey extensions" "Green"
@@ -56,8 +55,8 @@ function keep_checking{
     catch {
         if ( $_.Exception.Response.StatusCode.Value__ -eq 404 )
     	{
-            print_info "  ** 404 error getting https://feeds.feedburner.com/chocolatey" "Red"
-    		print_info "  ** Waiting $env:WaitTime minutes before checking again..." "Cyan"
+            Write-Host "  ** 404 error getting https://feeds.feedburner.com/chocolatey" -Foreground Red
+    		Write-Host "  ** Waiting $env:WaitTime minutes before checking again..." -Foreground Cyan
     		Sleep $([int]$env:WaitTime*60)
     		return
         }
@@ -85,7 +84,7 @@ function keep_checking{
     			if ($FeedPackageVersion -gt $InstalledVersion)
     			{
     				$FoundUpgrades=$True
-                    print_info "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" "Magenta"
+                    Write-Host "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" -Foreground Magenta
     				if ($env:Notify -eq $True) {send_notification}
     				if ($env:AutoUpgrade -eq $True) {& choco upgrade $FeedPackage -y}
     			}
@@ -93,6 +92,15 @@ function keep_checking{
         }
     }
     if (!($FoundUpgrades)) {print_info "  ** No packages to upgrade." "Magenta"}
-    print_info "  ** Waiting $env:WaitTime minutes before checking again..." "Cyan"
+    Write-Host "  ** Waiting $env:WaitTime minutes before checking again..." -Foreground Cyan
     Sleep $([int]$env:WaitTime*60)
 }
+
+# TOO TIRED TO DO THIS RIGHT!
+#for ($i=0; $i -le [int]$env:WaitTime*60; $i++) {
+#	$WaitTimeRemaining=$env:WaitTime*60
+#	Write-Host "  ** Waiting $env:WaitTime minutes before checking again..." -NoNewLine -Foreground Cyan
+#	Sleep 60
+#	([int]$env:WaitTime*60 - 60)
+#	Write-Host "`r  ** Waiting $env:WaitTime minutes before checking again..." -NoNewLine -Foreground Cyan
+#}

@@ -5,17 +5,17 @@
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
 param (
-    [switch]$Foreground,
 	[Alias("?")][switch]$Help,
-	[switch]$DoNotNotify,
-	[Alias("NotifyOnly")][switch]$OnlyNotify,
     [switch]$Start,
     [switch]$Stop,
     [switch]$Status,
+	[switch]$Notify,
+	[switch]$NoUpgrades,
+	[switch]$ReducedOutput,
+    [switch]$Foreground,
 	[int]$WaitTime
  )
 
-# TODO: add another switch for minimum notifications;i.e. only blahblah is avaible for ugprade
 # TODO: Figure out why Burnt Toast chokes sometimes and figure out how to fix it
 # TODO: Figure out why PowerShell sometimes exits and temporarily crashes with:
 # [error 2147942405 (0x80070005) when launching `%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe']
@@ -24,7 +24,7 @@ Write-Host "CCU.ps1 v0.1.0-alpha (2023/11/16) - (unofficial) Chocolatey Continuo
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 
-if (!$Start -and !$Stop -and !$Status -and !$Help -and !$OnlyNotify -and !$Foreground -and !$DoNotNotify ) {
+if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$Foreground) {
 	Write-Host "  ** Please run 'CCU -?' or 'CCU -help' for help menu.`n" -Foreground White
 	return
 }
@@ -36,12 +36,14 @@ if ( $Help ) {
 	Write-Host " -Stop"
 	Write-Host "    Stop checking for upgrades."
 	Write-Host " -Status"
-	Write-Host "    Show status of CCU background job."
-	Write-Host " -DoNotNotify"
-	Write-Host "    Don't send notifications about upgrades."
-	Write-Host " -OnlyNotify"
-	Write-Host "    Start checking for upgrades but do not install them."
-	Write-Host " -Foreground"
+	Write-Host "    Show status of CCU running or not."
+	Write-Host " -Notify (assumes -Start)"
+	Write-Host "    Send notifications when upgrades are found."
+	Write-Host " -NoUpgrades (assumes -Start)"
+	Write-Host "    Disable auto-upgrading of packages."
+	Write-Host " -ReducedOutput (assumes -Start)"
+	Write-Host "    Only minimal info displayed."
+	Write-Host " -Foreground (assumes -Start)"
     Write-Host "    Run in foreground instead of background."
 	Write-Host " #"
 	Write-Host "    Number of minutes to wait between checks (default 30)."
@@ -53,13 +55,14 @@ if ( $Help ) {
 	return
 }
 
-if ($Foreground) {$Start=$True;$env:Notify=$False} else {$env:Notify=$True}
-if ($OnlyNotify){$Start=$True;$env:AutoUpgrade=$False;$env:Notify=$True} else {$env:AutoUpgrade=$True}
-if ($DoNotNotify) {$Start=$True;$env:Notify=$False} else {$env:Notify=$True}
-if (Get-Module -ListAvailable -Name BurntToast) {$env:ToastAvailable=$True} else {$env:ToastAvailable=$False}
-if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
+if ($Foreground) {$Start=$True}
+if ($Notify){$Start=$True;$env:Notify=$True} else {$env:Notify=$False}
+if ($NoUpgrades){$Start=$True;$env:AutoUpgrade=$False} else {$env:AutoUpgrade=$True}
+if ($ReducedOutput){$Start=$True;$env:ReducedOutput=$True} else {$env:ReducedOutput=$False}
 if (!$WaitTime) {$WaitTime="30"}
 $env:WaitTime=$WaitTime
+if (Get-Module -ListAvailable -Name BurntToast) {$env:ToastAvailable=$True} else {$env:ToastAvailable=$False}
+if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 $toolsdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $CheckJob=Get-Job | Where-Object {$_.Name -eq "CCU"}
 $CheckForeground=Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
@@ -90,7 +93,6 @@ if ($Start) {
 		return
 	}
 	if ($Foreground){
-		# TODO: fix ./CCU.psm to include full path (can't use variable as currently implemented) MAYBE OK using -WorkingDirectory
 		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Updater''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Normal -WorkingDirectory "$toolsDir" -PassThru
 		$CCUProcess | Export-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
 		Write-Host "  ** CCU STARTED in foreground." -Foreground Yellow
@@ -98,8 +100,8 @@ if ($Start) {
 			Start-Job -Name CCU -InitializationScript { Import-Module S:\dev\GitHub\ChocolateyPackages\choco-continuous-upgrader\ccu.psm1 } {for (;;) {keep_checking}} | Out-Null
 	 	    Write-Host "  ** CCU STARTED in background." -Foreground Yellow 
 		}
-		if (!($OnlyNotify)) {Write-Host "  ** CCU automatic upgrades ENABLED" -Foreground Yellow} else {Write-Host "  ** CCU automatic upgrades are DISABLED." -Foreground Yellow}
-		if ($DoNotNotify) {Write-Host "  ** CCU notifications DISABLED." -Foreground Yellow}
+		if ($Notify) {Write-Host "  ** CCU notifications ENABLED" -Foreground Yellow} else {Write-Host "  ** CCU notifications DISABLED." -Foreground Yellow}
+		if ($NoUpgrades) {Write-Host "  ** CCU will NOT auto-upgrade packages." -Foreground Yellow} else {Write-Host "  ** CCU WILL auto-upgrade packages." -Foreground Yellow}
 		Write-Host "  ** CCU will check for upgrades every $WaitTime minutes.`n" -Foreground Yellow
 		return
 }
