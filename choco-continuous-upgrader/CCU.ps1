@@ -24,7 +24,7 @@ Write-Host "CCU.ps1 v0.1.0-alpha (2023/11/16) - (unofficial) Chocolatey Continuo
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 
-if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$Foreground) {
+if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$Foreground -and !$NoUpgrades -and !$ReducedOutput -and !$Waittime) {
 	Write-Host "  ** Please run 'CCU -?' or 'CCU -help' for help menu.`n" -Foreground White
 	return
 }
@@ -65,9 +65,13 @@ if (Get-Module -ListAvailable -Name BurntToast) {$env:ToastAvailable=$True} else
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 $toolsdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
 $CheckJob=Get-Job | Where-Object {$_.Name -eq "CCU"}
-$CheckForeground=Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
+$CheckForeground=Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-running.tmp"
 
 if ($Status){
+	if (Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"){Get-Content "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"; Write-Host ""}
+	if (Get-Process -Name choco -ErrorAction SilentlyContinue){
+		Write-Host "  ** Chocolatey is installing an upgrade." -Foreground Yellow
+	}
 	if ($CheckJob){
 		Write-Host "  ** CCU is running in background!" -Foreground Yellow
 		Receive-Job -Name CCU
@@ -94,19 +98,24 @@ if ($Start) {
 	}
 	if ($Foreground){
 		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Updater''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Normal -WorkingDirectory "$toolsDir" -PassThru
-		$CCUProcess | Export-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
+		$CCUProcess | Export-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-running.tmp"
 		Write-Host "  ** CCU STARTED in foreground." -Foreground Yellow
 		} else {
 			Start-Job -Name CCU -InitializationScript { Import-Module S:\dev\GitHub\ChocolateyPackages\choco-continuous-upgrader\ccu.psm1 } {for (;;) {keep_checking}} | Out-Null
 	 	    Write-Host "  ** CCU STARTED in background." -Foreground Yellow 
 		}
 		if ($Notify) {Write-Host "  ** CCU notifications ENABLED" -Foreground Yellow} else {Write-Host "  ** CCU notifications DISABLED." -Foreground Yellow}
-		if ($NoUpgrades) {Write-Host "  ** CCU will NOT auto-upgrade packages." -Foreground Yellow} else {Write-Host "  ** CCU WILL auto-upgrade packages." -Foreground Yellow}
+		if ($NoUpgrades) {Write-Host "  ** CCU package upgrades DISABLED." -Foreground Yellow} else {Write-Host "  ** CCU package upgrades ENABLED." -Foreground Yellow}
 		Write-Host "  ** CCU will check for upgrades every $WaitTime minutes.`n" -Foreground Yellow
 		return
 }
 
 if ($Stop){
+	if (Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"){Remove-Item "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"}
+	if (Get-Process -Name choco -ErrorAction SilentlyContinue){
+		Write-Host "  ** Chocolatey is installing an upgrade. Waiting for it to finish..." -Foreground Yellow
+		while (Get-Process -Name choco -ErrorAction SilentlyContinue) {Start-Sleep 1}
+	}
 	if ($CheckJob){
 		Stop-Job -Name CCU
 	    Remove-Job -Name CCU
@@ -116,14 +125,14 @@ if ($Stop){
 			}
 	if ($CheckForeground)
 	{
-		$CCUProcess = Import-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
+		$CCUProcess = Import-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-running.tmp"
         $CCUProcess | Stop-Process -ErrorAction SilentlyContinue
 		if (!$?) {
 			Write-Host "  ** CCU already STOPPED! (Someone closed the window?)`n" -Foreground Yellow
 			} else {
 				Write-Host "  ** CCU STOPPED in foreground.`n" -Foreground Yellow
 			}
-		Remove-Item "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
+		Remove-Item "$env:chocolateyToolsLocation\BCURRAN3\CCU-running.tmp"
 	} else {
 		Write-Host "  ** CCU not running in foreground.`n" -Foreground Yellow
 	}

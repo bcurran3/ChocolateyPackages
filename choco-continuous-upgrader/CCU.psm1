@@ -85,22 +85,23 @@ function keep_checking{
     			{
     				$FoundUpgrades=$True
                     Write-Host "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" -Foreground Magenta
+					Add-Content -Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp" -Value "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))"
     				if ($env:Notify -eq $True) {send_notification}
     				if ($env:AutoUpgrade -eq $True) {& choco upgrade $FeedPackage -y}
     			}
     	    }
         }
     }
-    if (!($FoundUpgrades)) {print_info "  ** No packages to upgrade." "Magenta"}
-    Write-Host "  ** Waiting $env:WaitTime minutes before checking again..." -Foreground Cyan
-    Sleep $([int]$env:WaitTime*60)
+    if (!($FoundUpgrades)) {
+		print_info "  ** No packages to upgrade." "Magenta"
+		Add-Content -Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp" -Value "  ** No packages to upgrade."
+		}
+    $WaitTimeRemaining=$env:WaitTime
+	Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...`r" -Foreground Cyan -NoNewLine
+    while($WaitTimeRemaining -gt 0){
+		Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...   `r" -Foreground Cyan -NoNewLine
+	    Sleep 60
+	    $WaitTimeRemaining=$WaitTimeRemaining-1
+	}
+	if (Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"){Remove-Item "$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"}
 }
-
-# TOO TIRED TO DO THIS RIGHT!
-#for ($i=0; $i -le [int]$env:WaitTime*60; $i++) {
-#	$WaitTimeRemaining=$env:WaitTime*60
-#	Write-Host "  ** Waiting $env:WaitTime minutes before checking again..." -NoNewLine -Foreground Cyan
-#	Sleep 60
-#	([int]$env:WaitTime*60 - 60)
-#	Write-Host "`r  ** Waiting $env:WaitTime minutes before checking again..." -NoNewLine -Foreground Cyan
-#}
