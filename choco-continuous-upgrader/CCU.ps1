@@ -66,39 +66,41 @@ $CheckForeground=Test-Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshand
 
 if ($Status){
 	if ($CheckJob){
-		Write-Host "  ** CCU background job is running!" -Foreground Yellow
+		Write-Host "  ** CCU is running in background!" -Foreground Yellow
 		Receive-Job -Name CCU
 		return
 		} else {
-			Write-Host "  ** CCU background job is not running." -Foreground Yellow
+			Write-Host "  ** CCU is not running in background." -Foreground Yellow
 		}
 	if ($CheckForeground){
-	    Write-Host "  ** CCU foreground process is running!`n" -Foreground Yellow
+	    Write-Host "  ** CCU is running in foreground!`n" -Foreground Yellow
 	} else {
-		Write-Host "  ** CCU foreground process is not running.`n" -Foreground Yellow
+		Write-Host "  ** CCU is not running in foreground.`n" -Foreground Yellow
 	}
 	return
 }
 
 if ($Start) {
 	if ($CheckJob){ 
-	Write-Host "  ** CCU background job already running!`n" -Foreground Yellow
+	Write-Host "  ** CCU is already running in background!`n" -Foreground Yellow
 	return
 	}
 	if ($CheckForeground){
-		Write-Host "  ** CCU foreground process is already running!`n." -Foreground Yellow
+		Write-Host "  ** CCU is already running in foreground!`n." -Foreground Yellow
 		return
 	}
 	if ($Foreground){
+		# TODO: fix ./CCU.psm to include full path (can't use variable as currently implemented) MAYBE OK using -WorkingDirectory
 		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Updater''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Normal -WorkingDirectory "$toolsDir" -PassThru
 		$CCUProcess | Export-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
-		Write-Host "  ** STARTED CCU foreground process." -Foreground Yellow
+		Write-Host "  ** CCU STARTED in foreground." -Foreground Yellow
 		} else {
 			Start-Job -Name CCU -InitializationScript { Import-Module S:\dev\GitHub\ChocolateyPackages\choco-continuous-upgrader\ccu.psm1 } {for (;;) {keep_checking}} | Out-Null
-	 	    Write-Host "  ** STARTED CCU background job." -Foreground Yellow 
+	 	    Write-Host "  ** CCU STARTED in background." -Foreground Yellow 
 		}
-		if (!($OnlyNotify)) {Write-Host "  ** Automatic upgrades ENABLED" -Foreground Yellow} else {Write-Host "  ** Automatic upgrades are DISABLED." -Foreground Yellow}
-		Write-Host "  ** Upgrades will be checked for every $WaitTime minutes.`n" -Foreground Yellow
+		if (!($OnlyNotify)) {Write-Host "  ** CCU automatic upgrades ENABLED" -Foreground Yellow} else {Write-Host "  ** CCU automatic upgrades are DISABLED." -Foreground Yellow}
+		if ($DoNotNotify) {Write-Host "  ** CCU notifications DISABLED." -Foreground Yellow}
+		Write-Host "  ** CCU will check for upgrades every $WaitTime minutes.`n" -Foreground Yellow
 		return
 }
 
@@ -106,19 +108,22 @@ if ($Stop){
 	if ($CheckJob){
 		Stop-Job -Name CCU
 	    Remove-Job -Name CCU
-		Write-Host "  ** STOPPED CCU background job." -Foreground Yellow
+		Write-Host "  ** CCU STOPPED in background." -Foreground Yellow
 		} else {
-			Write-Host "  ** CCU background job not running." -Foreground Yellow
+			Write-Host "  ** CCU not running in background." -Foreground Yellow
 			}
 	if ($CheckForeground)
 	{
 		$CCUProcess = Import-Clixml -Path "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
         $CCUProcess | Stop-Process -ErrorAction SilentlyContinue
+		if (!$?) {
+			Write-Host "  ** CCU already STOPPED! (Someone closed the window?)`n" -Foreground Yellow
+			} else {
+				Write-Host "  ** CCU STOPPED in foreground.`n" -Foreground Yellow
+			}
 		Remove-Item "$env:chocolateyToolsLocation\BCURRAN3\CCUprocesshandle.xml"
-		Write-Host "  ** STOPPED CCU foreground process.`n" -Foreground Yellow
-# TODO: catch the error if the process was already stopped and report already stopped (someone closed the window)		
 	} else {
-		Write-Host "  ** CCU foreground process not running.`n" -Foreground Yellow
+		Write-Host "  ** CCU not running in foreground.`n" -Foreground Yellow
 	}
 	return
 }

@@ -27,19 +27,19 @@ function send_toast{
 }
 
 function send_notification {
-	if ($env:ToastAvailable) {send_toast} else {send_msg}
+	if ($env:ToastAvailable -eq $True) {send_toast} else {send_msg}
 }
 
 # Meat & Potatoes
 function keep_checking{
 	
     $FoundUpgrades=$False
-	if (!($env:WaitTime)) {$env:WaitTime=30}
+	if ($env:WaitTime -eq '') {$env:WaitTime=30}
 	
-    if (!($env:AutoUpgrade)){print_info "  ** Automatic upgrades DISABLED, notifications only." "Red"}
-
     # Get list of installed packages
 	print_info "  ** 'CCU -Stop' to stop." "Yellow"
+    if ($env:AutoUpgrade -eq $False){print_info "  ** Automatic upgrades DISABLED." "Red"}
+	#if ($env:Notify -eq $False){print_info "  ** Automatic upgrades DISABLED." "Red"}
     print_info "  ** Getting list of installed Chocolatey packages..." "Magenta"
     print_info "  ** Found $((Get-Childitem $env:ChocolateyInstall\lib).count) installed Chocolatey packages" "Green"
     print_info "  ** Found $((Get-Childitem $env:ChocolateyInstall\extensions).count) installed Chocolatey extensions" "Green"
@@ -86,11 +86,8 @@ function keep_checking{
     			{
     				$FoundUpgrades=$True
                     print_info "  ** Found update for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" "Magenta"
-    				if ($env:Notify) {send_notification}
-# TODO: Debug AutoUpgrade condition not working for some reason
-#    				if ($env:AutoUpgrade) {& choco upgrade $FeedPackage -y}
-                    Write-Host "  ** DEBUG: env:AutoUpgrade is set to $env:AutoUpgrade" -Foreground Yellow
-					if ($env:AutoUpgrade) {Write-Host "  ** DEBUG: 'choco upgrade $Feedpackage -y' would run here" -Foreground Yellow}
+    				if ($env:Notify -eq $True) {send_notification}
+    				if ($env:AutoUpgrade -eq $True) {& choco upgrade $FeedPackage -y}
     			}
     	    }
         }
