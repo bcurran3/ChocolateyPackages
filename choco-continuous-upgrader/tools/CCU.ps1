@@ -16,7 +16,7 @@ param (
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v0.1.0-RC1 (2023/11/17) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v0.1.0-beta1 (2023/11/17) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 $Background=$True
