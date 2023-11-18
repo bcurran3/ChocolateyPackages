@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_icon.png" width="200" height="200">
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_icon.png" width="200" height="200">
 
 ![Screenshot of Choco-Cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_screenshot.png)	
 
@@ -10,7 +10,7 @@
 ## PLACEHOLDER
 
 CHANGELOG:
-* 0.1.0 - beta
+* 0.1.0 - initial release
 
 ***
 
