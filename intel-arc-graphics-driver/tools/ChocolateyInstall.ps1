@@ -2,15 +2,18 @@
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $TodaysArray   = ($env:ChocolateyPackageVersion.split('.'))
 $TodaysVersion = $TodaysArray[2] + "." + $TodaysArray[3]
-$IntelPackageNumber = '791578'
+$IntelPackageNumber = '792980'
 $url64       = "https://downloadmirror.intel.com/$IntelPackageNumber/gfx_win_"+"$TodaysVersion"+".exe"
-$checksum64  = '11E35C18C7B0568BE46063E7FA6844F1B7BA48548791402F6AA17132401305D1'
+$checksum64  = '07A4B26A5C27ED03FB81CFB19FF5315B7949F125432CB7254C3A0094C8497CC1'
 
 Confirm-WinMinimumBuild 19042
 if (!(Get-IsIntelVideo)){
     Write-Warning "  ** No Intel display adapter found."
     throw
    }
+   
+#Write-Host "  ** These drivers are for Intel 11th Gen processors and higher." -Foreground Yellow
+#Write-Host "  ** Use intel-graphics-driver for Intel 6th thru 10th Gen processors." -Foreground Yellow
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
