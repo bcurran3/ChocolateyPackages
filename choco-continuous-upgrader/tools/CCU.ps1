@@ -1,12 +1,13 @@
 ﻿#Requires -RunAsAdministrator
-# $ErrorActionPreference = 'Stop'
+#$ErrorActionPreference = 'Stop'
 # CCU.ps1 (Chocolatey Continuous Upgrader) Copyleft 2023 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
 param (
 	[Alias("?")][switch]$Help,
-	[switch]$Debug,
+    [Alias("GeekMode")][switch]$Debug,
+	[switch]$DeleteConfig,
 	[switch]$EditConfig,
     [switch]$Start,
     [switch]$Stop,
@@ -16,20 +17,18 @@ param (
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v0.1.0-beta1 (2023/11/17) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v1.0.0-RC1 (2023/11/18) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
+$ErrorActionPreference = 'Stop'
 $Background=$True
 $CCUconfig="$env:chocolateyToolsLocation\BCURRAN3\CCU.config"
 $RunningFile="$env:chocolateyToolsLocation\BCURRAN3\CCU-running.tmp"
 $StatusFile="$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"
-$toolsdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
+$execdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
 if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 
-## START FUNCTIONS
-
-# Create config file to set defaults
-function create_config{
+function create_config {
 	Write-Host "  ** Creating new CCU config file:`n" -Foreground Yellow
 	if (Test-Path "$CCUconfig") {Remove-Item "$CCUconfig" -Force}
 	
@@ -37,10 +36,10 @@ function create_config{
 		$ConfigNotify=Read-Host "     CCU notifications (True/False)? "
 	} until (($ConfigNotify -eq 'true') -or ($ConfigNotify -eq 'false'))
 	do {
-		$ConfigNoUpgrades=Read-Host "     CCU automatic upgrades (True/False)? "
+		$ConfigNoUpgrades=Read-Host "     Disable CCU automatic upgrades (True/False)? "
 	} until (($ConfigNoUpgrades -eq 'true') -or ($ConfigNoUpgrades -eq 'false'))
 	do {
-		[int]$ConfigWaitTime=Read-Host "     CCU wait time between checking for upgrades (# of minutes)? "
+		[int]$ConfigWaitTime=Read-Host "     CCU wait time (# of minutes)? "
 	} until ($ConfigWaitTime -is [int])
 	
 	$ConfigFile = New-Object System.XMl.XmlTextWriter("$CCUconfig", $Null)
@@ -55,53 +54,58 @@ function create_config{
 	$ConfigFile.WriteEndDocument()
     $ConfigFile.Flush()
     $ConfigFile.Close()
-	Write-Host "`n  ** Created $CCUconfig`n" -Foreground Magenta
+	Write-Host "`n  ** Created $CCUconfig." -Foreground Magenta
+	if (Test-Path "$RunningFile") {
+		Write-Host "  ** Restart CCU for defaults to take effect." -Foreground Magenta
+	}
+	Write-Host ""
 }
 
-function print_footer{
+function print_footer {
 	Write-Host "Found CCU.ps1 useful?" -ForegroundColor White
     Write-Host "Buy me a beer at https://www.paypal.me/bcurran3donations" -ForegroundColor White
     Write-Host "Become a patron at https://www.patreon.com/bcurran3" -ForegroundColor White
 }
 
-# Import preferences from config file
-function read_config{
-    [xml]$ConfigFile = Get-Content "$CCUconfig"
-    if ($ConfigFile.Preferences.Notify -eq 'true') {[bool]$env:Notify=$True} else {[bool]$env:Notify=$False}
-    if ($ConfigFile.Preferences.NoUpgrades -eq 'true') {[bool]$env:NoUpgrades=$False} else {[bool]$env:NoUpgrades=$True}
-    if ($ConfigFile.Preferences.WaitTime) {[int]$env:WaitTime=$ConfigFile.Preferences.WaitTime} else {[int]$env:WaitTime=30}
+if (Test-Path "$RunningFile") {
+	$created=(Get-ChildItem "$RunningFile").LastWriteTime
+	$rebooted=(Get-CimInstance -ClassName win32_operatingsystem | select csname, lastbootuptime).LastBootUpTime
+	if ($created -lt $rebooted) {
+		Write-Host " ** CCU detected a reboot while previously running." -Foreground Yellow
+		Write-Host " ** Deleting temp file.`n" -Foreground Yellow
+		Remove-Item $RunningFile
+		}
 }
 
-## END FUNCTIONS
-
-############################### NEEDS LOGIC DEBUGGING AND TESTING
-
-if (Test-Path "$CCUconfig") {
-	read_config
-	if (!(Test-Path "$RunningFile")){
-	$Notify=[bool]$env:Notify
-	$NoUpgrades=[bool]$env:NoUpgrades
-	$WaitTime=[int]$env:WaitTime
-	} else {
+if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$NoUpgrades -and !$Debug -and !$EditConfig -and !$WaitTime) {
+	$MiniHelp=$True
+	if (Test-Path "$CCUconfig") {
+		[xml]$ConfigFile = Get-Content "$CCUconfig"
+        if ($ConfigFile.Preferences.Notify -eq 'true') {$Notify=$True}
+        if ($ConfigFile.Preferences.NoUpgrades -eq 'true') {$NoUpgrades=$True}
+        if ($ConfigFile.Preferences.WaitTime) {$WaitTime=$ConfigFile.Preferences.WaitTime}
+	    $Start=$True
+		$MiniHelp=$False
+	}
+	if (Test-Path "$RunningFile") {
+		$Start=$False
 		$Status=$True
+		$MiniHelp=$False
+	}
+	if ($MiniHelp) {
+		Write-Host "  ** Please run 'CCU -?' or 'CCU -help' for help menu.`n" -Foreground White
+		return
 	}
 }
+
+if ($EditConfig) {create_config; return}
+if ($DeleteConfig) {Remove-Item "$CCUconfig"; Write-Host "  ** Deleted $CCUconfig" -Foreground Yellow; return}
 if ($Debug) {$Start=$True; $Background=$False}
-if ($Notify){$env:Notify=$True; $Start=$True} else {$env:Notify=$False}
-if ($NoUpgrades){$env:AutoUpgrade=$False; $Start=$True} else {$env:AutoUpgrade=$True}
+if ($Notify) {$env:Notify=$True; $Start=$True} else {$env:Notify=$False}
+if ($NoUpgrades) {$env:AutoUpgrade=$False; $Start=$True} else {$env:AutoUpgrade=$True}
 if ($WaitTime) {$Start=$True}
 if (!$WaitTime) {$WaitTime="30"} ; $env:WaitTime=$WaitTime
 if ($Stop) {$Help=$False; $Start=$False; $Status=$False}
-
-############################### NEEDS LOGIC DEBUGGING AND TESTING
-
-if ($EditConfig) {create_config; return}
-
-#if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$NoUpgrades -and !$Debug -and !$EditConfig -and !$WaitTime) {
-if (!$Start -and !$Stop -and !$Status) {
-	Write-Host "  ** Please run 'CCU -?' or 'CCU -help' for help menu.`n" -Foreground White
-	return
-}
 
 if ( $Help ) {
 	Write-Host "OPTIONS AND SWITCHES:" -Foreground Magenta
@@ -119,6 +123,8 @@ if ( $Help ) {
 	Write-Host "    Number of minutes to wait between checks (default 30)."
 	Write-Host " -EditConfig"
 	Write-Host "    Create CCU config file."
+	Write-Host " -GeekMode"
+	Write-Host "    Just for fun."
 	Write-Host " -Help, -?"
 	Write-Host "    This menu."
 	Write-Host 
@@ -127,18 +133,21 @@ if ( $Help ) {
 	return
 }
 
-if ($Status){
-	if (Test-Path "$RunningFile"){
+if ($Status) {
+	if (Test-Path "$RunningFile") {
 		Write-Host "  ** CCU is running." -Foreground Yellow
-		} else {
-			Write-Host "  ** CCU is not running." -Foreground Yellow
-		}
-	if (Test-Path "$StatusFile"){
-		foreach($line in Get-Content "$StatusFile") {
+		if (Test-Path "$StatusFile") {
+			foreach($line in Get-Content "$StatusFile") {
 			Write-Host "$line" -Foreground Yellow
-			}
+			} 
+		} else {
+			Write-Host "  ** ERROR: Status file not found. Run `'CCU -Status`' again." -Foreground Red
+			Write-Host "  ** ERROR: If this error continues, Run `'CCU -Stop`'" -Foreground Red
+		}
+	} else {
+		Write-Host "  ** CCU is not running." -Foreground Yellow
 	}
-	if (Get-Process -Name choco -ErrorAction SilentlyContinue){
+	if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
 		Write-Host "  ** Chocolatey is installing an upgrade.`n" -Foreground Yellow
 	}
 	Write-Host ""
@@ -147,16 +156,16 @@ if ($Status){
 }
 
 if ($Start) {
-	if (Test-Path "$RunningFile"){
+	if (Test-Path "$RunningFile") {
 		Write-Host "  ** CCU is already running!`n" -Foreground Yellow
 		return
 	}
-	if ($Background){
-		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Upgrader''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Hidden -WorkingDirectory "$toolsDir" -PassThru
+	if ($Background) {
+		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Upgrader''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Hidden -WorkingDirectory "$execdir" -PassThru
 		$CCUProcess | Export-Clixml -Path "$RunningFile"
 	}
-	if ($Debug){
-		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Upgrader''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Normal -WorkingDirectory "$toolsDir" -PassThru
+	if ($Debug) {
+		$CCUProcess = Start-Process PowerShell -ArgumentList '$host.ui.RawUI.WindowTitle=''Chocolatey Continuous Upgrader''; Import-Module ./CCU.psm1; for (;;) {keep_checking}' -WindowStyle Normal -WorkingDirectory "$execdir" -PassThru
 		$CCUProcess | Export-Clixml -Path "$RunningFile"
 	}
 	Write-Host "  ** CCU STARTED." -Foreground Yellow
@@ -167,8 +176,8 @@ if ($Start) {
 	return
 }
 
-if ($Stop){
-	if (Get-Process -Name choco -ErrorAction SilentlyContinue){
+if ($Stop) {
+	if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
 		Write-Host "  ** Chocolatey is installing an upgrade. Waiting for it to finish..." -Foreground Yellow
 		while (Get-Process -Name choco -ErrorAction SilentlyContinue) {Start-Sleep 1}
 	}
@@ -179,9 +188,8 @@ if ($Stop){
 	} else {
 		Write-Host "  ** CCU STOPPED.`n" -Foreground Yellow
 	}
-	if (Test-Path "$RunningFile"){Remove-Item "$RunningFile"}
-	if (Test-Path "$StatusFile"){Remove-Item "$StatusFile"}
+	if (Test-Path "$RunningFile") {Remove-Item "$RunningFile" -Force}
+	if (Test-Path "$StatusFile") {Remove-Item "$StatusFile" -Force}
 	print_footer
 	return
 }
-

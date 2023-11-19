@@ -2,17 +2,23 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
-if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 if (Get-Module -ListAvailable -Name BurntToast) {$ToastAvailable=$True} else {$ToastAvailable=$False}
+if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 $StatusFile="$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"
 
+if (Test-Path "$StatusFile") {Remove-Item "$StatusFile" -Force}
+if ($env:AutoUpgrade -eq 'true') {$AutoUpgrade=$True} else {$AutoUpgrade=$False}
+if ($env:Notify -eq 'true') {$Notify=$True} else {$Notify=$False}
+if ($env:WaitTime -eq '') {$WaitTime=30} else {$WaitTime=$env:WaitTime}
+
+
 # Send Windows MSG messages to foreground about available upgrades
-function send_msg{
+function send_msg {
 	& msg * /time:3 "Chocolatey Continuous Upgrader:`n$Feedpackage v$FeedPackageVersion`nUPGRADE AVAILABLE."
 }
 
 # Send toast messages to foreground about available upgrades
-function send_toast{
+function send_toast {
 	if ((Get-Service WinRM).Status -eq 'Stopped') {Start-Service 'WinRM' -ErrorAction SilentlyContinue}
 	if ((Get-Service WinRM).Status -eq 'Running') {
 		Invoke-Command -ComputerName $(hostname) -ArgumentList $FeedPackage,$FeedPackageVersion -ScriptBlock {param([string]$FeedPackage, [string]$FeedPackageVersion) Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force; New-BurntToastNotification -Text "Chocolatey Continuous Upgrader:`n", "$Feedpackage v$FeedPackageVersion `nUPGRADE AVAILABLE." -AppLogo "$env:PUBLIC\Pictures\choco.ico"}
@@ -24,26 +30,26 @@ function send_notification {
 }
 
 # Meat and Potatoes
-function keep_checking{
+function keep_checking {
 	
     $FoundUpgrades=$False
-	if ($env:WaitTime -eq '') {$env:WaitTime=30}
+	if (!$WaitTime) {$WaitTime=30}
 	Clear-Host
-	if ($env:Notify -eq $True){
+	if ($Notify) {
 		Write-Host "  ** CCU notifications ENABLED." -Foreground Yellow
 		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications ENABLED."
 		} else {
 			Write-Host "  ** CCU Notifications DISABLED." -Foreground Yellow
 			Add-Content -Path "$StatusFile" -Value "  ** CCU notifications DISABLED."
 		}
-    if ($env:AutoUpgrade -eq $True){
+    if ($AutoUpgrade) {
 		Write-Host "  ** CCU package upgrades ENABLED." -Foreground Yellow
 		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades ENABLED."
 	} else {
 		Write-Host "  ** CCU package upgrades DISABLED." -Foreground Red
 		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades DISABLED."
 		}
-	Add-Content -Path "$StatusFile" -Value "  ** CCU will check for upgrades every $env:WaitTime minutes."
+	Add-Content -Path "$StatusFile" -Value "  ** CCU will check for upgrades every $WaitTime minutes."
     # Get list of installed packages
     Write-Host "  ** Getting list of installed Chocolatey packages..." -Foreground Magenta
     Write-Host "  ** Found $((Get-Childitem $env:ChocolateyInstall\lib).count) installed Chocolatey packages" -Foreground Green
@@ -62,9 +68,9 @@ function keep_checking{
         if ( $_.Exception.Response.StatusCode.Value__ -eq 404 )
     	{
             Write-Host "  ** 404 error getting https://feeds.feedburner.com/chocolatey" -Foreground Red
-			$WaitTimeRemaining=$env:WaitTime
+			$WaitTimeRemaining=$WaitTime
 	        Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...`r" -Foreground Cyan -NoNewLine
-            while($WaitTimeRemaining -gt 0){
+            while($WaitTimeRemaining -gt 0) {
 				Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...   `r" -Foreground Cyan -NoNewLine
 	            Sleep 60
 	            $WaitTimeRemaining=$WaitTimeRemaining-1
@@ -98,8 +104,8 @@ function keep_checking{
     				$FoundUpgrades=$True
                     Write-Host "  ** Found upgrade for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))" -Foreground Magenta
 					Add-Content -Path "$StatusFile" -Value "  ** Found upgrade for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))"
-    				if ($env:Notify -eq $True) {send_notification}
-    				if ($env:AutoUpgrade -eq $True) {
+    				if ($Notify) {send_notification}
+    				if ($AutoUpgrade) {
 						& choco upgrade $FeedPackage -y
 						if ($?) {
 							Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage SUCCESSFUL."
@@ -116,12 +122,12 @@ function keep_checking{
 		Write-Host "  ** No packages to upgrade." -Foreground Magenta
 		Add-Content -Path "$StatusFile" -Value "  ** No packages to upgrade."
 		}
-    $WaitTimeRemaining=$env:WaitTime
+    $WaitTimeRemaining=$WaitTime
 	Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...`r" -Foreground Cyan -NoNewLine
-    while($WaitTimeRemaining -gt 0){
+    while($WaitTimeRemaining -gt 0) {
 		Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...   `r" -Foreground Cyan -NoNewLine
 	    Sleep 60
 	    $WaitTimeRemaining=$WaitTimeRemaining-1
 	}
-	if (Test-Path "$StatusFile"){Remove-Item "$StatusFile"}
+	if (Test-Path "$StatusFile") {Remove-Item "$StatusFile"}
 }

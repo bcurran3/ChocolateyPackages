@@ -15,7 +15,4 @@ Move-Item "$toolsDir\CCU.*" "$scriptDir" -Force -ErrorAction SilentlyContinue
 # Create "shim"
 Install-ChocolateyPowershellCommand -PackageName 'CCU' -PSFileFullPath "$scriptDir\$script"
 
-# Cleanup
-Remove-Item "$toolsDir\CCU.*" -Force -ErrorAction SilentlyContinue | Out-Null
-
-Write-Host "  ** To run Chocolatey Continuous Upgrader type `'CCU`' from the command line." -Foreground Magenta
+Write-Host "  ** Type `'CCU`' at the command line to run Chocolatey Continuous Upgrader." -Foreground Magenta

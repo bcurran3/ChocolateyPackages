@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-continuous-upgrader</id>
-    <version>0.1.0-beta1</version>
-    <title>(unofficial) Choco Continuous Upgrader(Script)</title>
+    <version>1.0.0-RC1</version>
+    <title>(unofficial) Chocolatey Continuous Upgrader (CCU) (Script)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
@@ -14,28 +14,48 @@
     <description>
 ---
 
-### [choco://choco-cleaner](choco://choco-continuous-upgrader)
+### [choco://choco-continuous-upgrader](choco://choco-continuous-upgrader)
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://community.chocolatey.org/packages/choco-protocol-support)
 
 ---
 
 ![Screenshot of choco-continuous-upgrader](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_screenshot.png)
+[Click here for secret GeekMode screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_geekmodescreenshot.png)
 
-## PLACEHOLDER
+This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at) which is a pseudo replacement for [choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup). (Got that? There will be a pop quiz!) **CCU** is a result of my obsessive desire to keep my Chocolatey packages up-to-date.
+
+# DO YOU WANT TO UPGRADE YOUR CHOCOLATEY PACKAGES CONTINUOUSLY THROUGHOUT THE DAY?
+
+# YOU JUST FOUND THE EASY WAY!
+	
+# HOW DOES IT WORK?
+
+**CCU* starts a background PowerShell process which continuously checks [FeedBurner](https://feeds.feedburner.com/chocolatey) for recently published Chocolatey packages. When locally installed packages are found in the feed, they are automatically upgraded.
+
+**CCU* defaults to checking every 30 minutes, automatically upgrading packages, and no foreground notifications. These defaults are overrideable and configurable.
+
+### HIGHLY RECOMMENDED:
+* Install my [choco-toast-notifications.hook](https://community.chocolatey.org/packages/choco-toast-notifications.hook) to enable beautiful foreground toast notifications of package upgrades.
+
+### USAGE INSTRUCTIONS:
+**CCU -Start** will start *CCU* with defaults.
+**CCU -Status** will display *CCU*'s running options and packages that have been upgraded or waiting to be upgraded.
+**CCU -Stop** to stop **CCU**.
+**CCU -EditConfig** to set your custom defaults.
+**CCU -Help** for more info.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
 
 **If you find choco-continuous-upgrader useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
     </description>
-    <summary>choco-continuous-upgrader - upgrades your Chocolatey packages continuously throughout the day</summary>
-    <releaseNotes>**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
-
-
+    <summary>choco-continuous-upgrader (CCU) - upgrades your Chocolatey packages continuously throughout the day</summary>
+    <releaseNotes>
 ### CHANGELOG:
-* 0.1.0 - initial release
+* 1.0.0 - initial release
 
-### ROADMAP:
-* TBD
+### ROADMAP
+* - Nothing planned.
+* - Maybe, just maybe... only if I'm really bored one day or people demand it, setup a scheduled task to auto-run CCU on system boot.
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco upgrader</tags>
