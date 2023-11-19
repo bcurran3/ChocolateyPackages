@@ -32,7 +32,7 @@ This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolat
 
 **CCU** starts a background PowerShell process which continuously checks [FeedBurner](https://feeds.feedburner.com/chocolatey) for recently published Chocolatey packages. When locally installed packages are found in the feed, they are automatically upgraded.
 
-**CCU** defaults to checking every 30 minutes, automatically upgrading packages, and no foreground notifications. These defaults are overrideable and configurable; e.g. you could use **CCU** to just notify you of upgrades without automatically installing them.
+**CCU** defaults to checking every 30 minutes, automatically upgrading packages, and no foreground notifications. These defaults are overridable and configurable; e.g. you could use **CCU** to just notify you of upgrades without automatically installing them.
 
 ### HIGHLY RECOMMENDED:
 Install my [choco-toast-notifications.hook](https://community.chocolatey.org/packages/choco-toast-notifications.hook) to enable beautiful foreground toast notifications of package installs, upgrades, and uninstalls. If you plan to use **CCU** only for notifications of upgrades without having them automatically installed, I recommend using [burnttoast-psmodule](https://community.chocolatey.org/packages/burnttoast-psmodule) for those notifications.
