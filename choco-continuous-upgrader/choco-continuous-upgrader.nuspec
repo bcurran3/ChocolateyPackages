@@ -30,9 +30,9 @@ This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolat
 	
 # HOW DOES IT WORK?
 
-**CCU* starts a background PowerShell process which continuously checks [FeedBurner](https://feeds.feedburner.com/chocolatey) for recently published Chocolatey packages. When locally installed packages are found in the feed, they are automatically upgraded.
+**CCU** starts a background PowerShell process which continuously checks [FeedBurner](https://feeds.feedburner.com/chocolatey) for recently published Chocolatey packages. When locally installed packages are found in the feed, they are automatically upgraded.
 
-**CCU* defaults to checking every 30 minutes, automatically upgrading packages, and no foreground notifications. These defaults are overrideable and configurable.
+**CCU** defaults to checking every 30 minutes, automatically upgrading packages, and no foreground notifications. These defaults are overrideable and configurable.
 
 ### HIGHLY RECOMMENDED:
 * Install my [choco-toast-notifications.hook](https://community.chocolatey.org/packages/choco-toast-notifications.hook) to enable beautiful foreground toast notifications of package upgrades.
@@ -58,7 +58,7 @@ This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolat
 * - Maybe, just maybe... only if I'm really bored one day or people demand it, setup a scheduled task to auto-run CCU on system boot.
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
-    <tags>bcurran3 unofficial choco upgrader</tags>
+    <tags>bcurran3 unofficial CCU choco upgrade all cup</tags>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
