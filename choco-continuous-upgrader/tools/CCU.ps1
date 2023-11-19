@@ -128,8 +128,9 @@ if ( $Help ) {
 	Write-Host " -Help, -?"
 	Write-Host "    This menu."
 	Write-Host 
-	Write-Host "EXAMPLE:" -Foreground Magenta
+	Write-Host "EXAMPLES:" -Foreground Magenta
 	Write-Host " CCU -Start 60`n"
+	Write-Host " CCU -Start -Notify -NoUpgrades 15`n"
 	return
 }
 
