@@ -1,8 +1,5 @@
 <img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_icon.png" width="200" height="200">
 
-![Screenshot of choco-continuous-upgrader](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_screenshot.png)
-[Click here for secret GeekMode screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_geekmodescreenshot.png)
-
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
