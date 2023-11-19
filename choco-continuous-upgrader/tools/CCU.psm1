@@ -31,24 +31,23 @@ function send_notification {
 
 # Meat and Potatoes
 function keep_checking {
-	
     $FoundUpgrades=$False
 	if (!$WaitTime) {$WaitTime=30}
 	Clear-Host
 	if ($Notify) {
 		Write-Host "  ** CCU notifications ENABLED." -Foreground Yellow
 		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications ENABLED."
-		} else {
-			Write-Host "  ** CCU Notifications DISABLED." -Foreground Yellow
-			Add-Content -Path "$StatusFile" -Value "  ** CCU notifications DISABLED."
-		}
+	} else {
+		Write-Host "  ** CCU Notifications DISABLED." -Foreground Yellow
+		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications DISABLED."
+	}
     if ($AutoUpgrade) {
 		Write-Host "  ** CCU package upgrades ENABLED." -Foreground Yellow
 		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades ENABLED."
 	} else {
 		Write-Host "  ** CCU package upgrades DISABLED." -Foreground Red
 		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades DISABLED."
-		}
+	}
 	Add-Content -Path "$StatusFile" -Value "  ** CCU will check for upgrades every $WaitTime minutes."
     # Get list of installed packages
     Write-Host "  ** Getting list of installed Chocolatey packages..." -Foreground Magenta
@@ -65,21 +64,17 @@ function keep_checking {
     	[xml]$feed = Invoke-WebRequest -Uri 'https://feeds.feedburner.com/chocolatey' | Select-Object -ExpandProperty Content
     }
     catch {
-        if ( $_.Exception.Response.StatusCode.Value__ -eq 404 )
-    	{
+        if ( $_.Exception.Response.StatusCode.Value__ -eq 404 ) {
             Write-Host "  ** 404 error getting https://feeds.feedburner.com/chocolatey" -Foreground Red
 			$WaitTimeRemaining=$WaitTime
 	        Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...`r" -Foreground Cyan -NoNewLine
-            while($WaitTimeRemaining -gt 0) {
+            while ($WaitTimeRemaining -gt 0) {
 				Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...   `r" -Foreground Cyan -NoNewLine
 	            Sleep 60
 	            $WaitTimeRemaining=$WaitTimeRemaining-1
 			}
     		return
-        }
-        else {
-            Write-Host "  ** Bad response..." -Foreground Red
-        }
+        } else { Write-Host "  ** Bad response..." -Foreground Red }
     }
     $links = $feed.rss.channel.item.link
 
@@ -106,14 +101,17 @@ function keep_checking {
 					Add-Content -Path "$StatusFile" -Value "  ** Found upgrade for $FeedPackage (v$FeedPackageVersion published $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$link].updated), $(Get-TimeZone).id)))"
     				if ($Notify) {send_notification}
     				if ($AutoUpgrade) {
+						if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
+							Write-Host "  ** Chocolatey is running elsewhere. Waiting for it to finish..." -Foreground Yellow
+                 		    while (Get-Process -Name choco -ErrorAction SilentlyContinue) {Start-Sleep 1}
+	                    }
 						& choco upgrade $FeedPackage -y
 						if ($?) {
 							Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage SUCCESSFUL."
-							}
-							else {
-								Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage FAILED."
-							}
+						} else {
+							Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage FAILED."
 						}
+					}
     			}
     	    }
         }
@@ -124,7 +122,7 @@ function keep_checking {
 		}
     $WaitTimeRemaining=$WaitTime
 	Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...`r" -Foreground Cyan -NoNewLine
-    while($WaitTimeRemaining -gt 0) {
+    while ($WaitTimeRemaining -gt 0) {
 		Write-Host "  ** Waiting $WaitTimeRemaining minutes before checking again...   `r" -Foreground Cyan -NoNewLine
 	    Sleep 60
 	    $WaitTimeRemaining=$WaitTimeRemaining-1

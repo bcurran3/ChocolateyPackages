@@ -17,7 +17,7 @@ param (
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v1.0.0-RC1 (2023/11/18) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v1.0.0-RC2 (2023/11/18) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 $ErrorActionPreference = 'Stop'
