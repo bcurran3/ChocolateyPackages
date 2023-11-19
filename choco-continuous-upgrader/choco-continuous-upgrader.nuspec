@@ -48,9 +48,9 @@ This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolat
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
 
-**If you find choco-continuous-upgrader useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
+**If you find choco-continuous-upgrader (CCU) useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
     </description>
-    <summary>choco-continuous-upgrader (CCU) - upgrades your Chocolatey packages continuously throughout the day</summary>
+    <summary>choco-continuous-upgrader (CCU) - Upgrades your Chocolatey packages continuously throughout the day.</summary>
     <releaseNotes>
 ### CHANGELOG:
 * 1.0.0 - initial release
