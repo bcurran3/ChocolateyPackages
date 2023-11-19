@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
@@ -29,6 +29,7 @@ SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/lapt
 It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-upgrade-all -EditConfig** to enable the new enhanced features.
 
 ## CHANGELOG:
+* 2023.05.26 - added new defaults for Win10+ computers (-DontStopIfGoingOnBatteries -ExecutionTimeLimit (New-TimeSpan -Hours 2) -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 5) -StartWhenAvailable)
 * 2023.05.10 - Fixed bug causing an error when there was no pre-existing icons, added detailed logging, added -ViewLog option, added report
 * 2021.03.13 - Added option to automatically delete newly created Desktop and Start Menu icons. Added option to run pre and post processing scripts. Added configurable arguments. Added ability to set default user profile. Edit C:\tools\BCURRAN3\choco-upgrade-all.config to enable the enhanced options. You can new run choco-upgrade-all from the command line to take advantage of the enhanced options. Added choco-install script to work with the same enhanced options. Added -EditConfig option to edit the config file.
 * 2018.08.22 - Fixed compatibility with Windows 7 &amp; 8 machines by using SchTasks.exe for everything and not using the Windows 10/Server 2016 only get-scheduledtask cmdlet. Removed PowerShell v4/v5 dependency.
