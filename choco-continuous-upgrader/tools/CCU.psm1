@@ -48,7 +48,7 @@ function keep_checking {
 		Write-Host "  ** CCU package upgrades DISABLED." -Foreground Red
 		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades DISABLED."
 	}
-	Add-Content -Path "$StatusFile" -Value "  ** CCU will check for upgrades every $WaitTime minutes."
+	Add-Content -Path "$StatusFile" -Value "  ** CCU is checking for upgrades every $WaitTime minutes."
     # Get list of installed packages
     Write-Host "  ** Getting list of installed Chocolatey packages..." -Foreground Magenta
     Write-Host "  ** Found $((Get-Childitem $env:ChocolateyInstall\lib).count) installed Chocolatey packages" -Foreground Green
