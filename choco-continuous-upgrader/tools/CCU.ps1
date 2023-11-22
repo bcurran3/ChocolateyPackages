@@ -84,6 +84,7 @@ function create_scheduledtask {
 		Write-Host "  ** Run `'CCU -CreateConfig`' to set defaults.`n" -Foreground Yellow
 		return
 	}
+	Write-Host "  ** Creating CCU scheduled task.`n" -Foreground Magenta
     $ErrorActionPreference = 'SilentlyContinue'
     $GotTask = (&schtasks.exe /query /tn "CCU") 2> $null
     $ErrorActionPreference = 'Stop'
@@ -96,7 +97,7 @@ function create_scheduledtask {
 #	    $TaskSettings=New-ScheduledTaskSettingsSet -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 5) -StartWhenAvailable
 #	    Set-ScheduledTask -TaskName "CCU" -Settings $TaskSettings
 #    }
-    Write-Host "  ** CCU will run at Windows startup." -Foreground Yellow 
+    Write-Host "`n  ** CCU will run at Windows startup.`n" -Foreground Yellow
 }
 
 function delete_scheduledtask {

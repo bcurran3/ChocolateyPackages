@@ -39,11 +39,13 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
 
 ### USAGE INSTRUCTIONS:
 **CCU -Start** will start **CCU** with defaults.
+**CCU -Stop** to stop **CCU**.
 **CCU -Status** will display **CCU**'s running options and packages that have been upgraded or waiting to be upgraded.
 **CCU -Notify** (assumes -Start) will send foreground notifications of upgrades using either BurntToast or MSG.
 **CCU -NoUpgrades** (assumes -Start) will check for upgrades but not automatically install them.
-**CCU -Stop** to stop **CCU**.
-**CCU -EditConfig** to set your custom defaults.
+**CCU -UpgradeAllFirst** (assumes -Start) runs 'choco upgrade all -y' before checking for upgrades.
+**CCU -CreateConfig** to set your custom defaults.
+**CCU -CreateScheduledTask** to set CCU to run on bootup.
 **CCU -Help** for more info.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
@@ -57,7 +59,6 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
 
 ### ROADMAP
 * - Nothing planned.
-* - Maybe, just maybe... only if I'm really bored one day or people demand it, setup a scheduled task to auto-run CCU on system boot.
 * - It would be neat to make a tray app that replicates GeekMode...
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
