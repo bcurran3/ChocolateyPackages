@@ -3,14 +3,14 @@
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
 if (Get-Module -ListAvailable -Name BurntToast) {$ToastAvailable=$True} else {$ToastAvailable=$False}
-if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
+if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$env:SystemDrive\tools"}
 $StatusFile="$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"
 
 if (Test-Path "$StatusFile") {Remove-Item "$StatusFile" -Force}
 if ($env:AutoUpgrade -eq 'true') {$AutoUpgrade=$True} else {$AutoUpgrade=$False}
 if ($env:Notify -eq 'true') {$Notify=$True} else {$Notify=$False}
+#$if ($env:UpgradeAllFirst -eq 'true') {$UpgradeAllFirst=$True} else {$UpgradeAllFirst=$False}
 if ($env:WaitTime -eq '') {$WaitTime=30} else {$WaitTime=$env:WaitTime}
-
 
 # Send Windows MSG messages to foreground about available upgrades
 function send_msg {
@@ -31,22 +31,38 @@ function send_notification {
 
 # Meat and Potatoes
 function keep_checking {
+	
+	Clear-Host
+	if ($env:UpgradeAllFirst -eq 'true') {
+		Write-Host "  ** CCU UpgradeAllFirst is ENABLED." -Foreground Yellow
+		Add-Content -Path "$StatusFile" -Value "  ** CCU UpgradeAllFirst is ENABLED."
+		if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
+			Write-Host "  ** Chocolatey is running elsewhere. Waiting for it to finish..." -Foreground Yellow
+			Add-Content -Path "$StatusFile" -Value "  ** Chocolatey is running elsewhere. Waiting for it to finish..."
+            while (Get-Process -Name choco -ErrorAction SilentlyContinue) {Start-Sleep 1}
+		} else {
+			Write-Host "  ** CCU is running `'choco upgrade all -y`'." -Foreground Yellow
+		    Add-Content -Path "$StatusFile" -Value "  ** CCU is running `'choco upgrade all -y`'"
+		    & choco upgrade all -y
+		}
+		if (Test-Path "$StatusFile") {Remove-Item "$StatusFile"}
+		$env:UpgradeAllFirst="false"
+	}
     $FoundUpgrades=$False
 	if (!$WaitTime) {$WaitTime=30}
-	Clear-Host
 	if ($Notify) {
-		Write-Host "  ** CCU notifications ENABLED." -Foreground Yellow
-		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications ENABLED."
+		Write-Host "  ** CCU notifications are ENABLED." -Foreground Yellow
+		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications are ENABLED."
 	} else {
-		Write-Host "  ** CCU Notifications DISABLED." -Foreground Yellow
-		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications DISABLED."
+		Write-Host "  ** CCU notifications are DISABLED." -Foreground Yellow
+		Add-Content -Path "$StatusFile" -Value "  ** CCU notifications are DISABLED."
 	}
     if ($AutoUpgrade) {
-		Write-Host "  ** CCU package upgrades ENABLED." -Foreground Yellow
-		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades ENABLED."
+		Write-Host "  ** CCU package upgrades are ENABLED." -Foreground Yellow
+		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades are ENABLED."
 	} else {
-		Write-Host "  ** CCU package upgrades DISABLED." -Foreground Red
-		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades DISABLED."
+		Write-Host "  ** CCU package upgrades are DISABLED." -Foreground Yellow
+		Add-Content -Path "$StatusFile" -Value "  ** CCU package upgrades are DISABLED."
 	}
 	Add-Content -Path "$StatusFile" -Value "  ** CCU is checking for upgrades every $WaitTime minutes."
     # Get list of installed packages
@@ -79,6 +95,7 @@ function keep_checking {
     $links = $feed.rss.channel.item.link
 
     Write-Host "  ** Found $($links.count) Chocolatey packages in Feedburner list." -Foreground Green
+    Write-Host "  ** $($feed.rss.channel.item[$($links.count)-1].title) is the oldest Chocolatey package published at $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[$($links.count)-1].updated), $(Get-TimeZone).id))." -Foreground Green
     Write-Host "  ** $($feed.rss.channel.item[0].title) is the latest Chocolatey package published at $([System.TimeZoneInfo]::ConvertTimeBySystemTimeZoneId((Get-Date -Date $feed.rss.channel.item[0].updated), $(Get-TimeZone).id))." -Foreground Green
 
     # Upgrade and/or notify about upgraded packages
@@ -104,19 +121,20 @@ function keep_checking {
 						if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
 							Write-Host "  ** Chocolatey is running elsewhere. Waiting for it to finish..." -Foreground Yellow
                  		    while (Get-Process -Name choco -ErrorAction SilentlyContinue) {Start-Sleep 1}
-	                    }
-						& choco upgrade $FeedPackage -y
-						if ($?) {
-							Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage SUCCESSFUL."
-						} else {
-							Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage FAILED."
+	                    } else {
+							& choco upgrade $FeedPackage -y
+						    if (!$LASTEXITCODE) {
+							   Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage SUCCESSFUL."
+						    } else {
+  							  Add-Content -Path "$StatusFile" -Value "  ** choco upgrade of $FeedPackage had ERRORS. ($LASTEXITCODE)"
+						    }
 						}
 					}
     			}
     	    }
         }
     }
-    if (!($FoundUpgrades)) {
+    if (!$FoundUpgrades) {
 		Write-Host "  ** No packages to upgrade." -Foreground Magenta
 		Add-Content -Path "$StatusFile" -Value "  ** No packages to upgrade."
 		}

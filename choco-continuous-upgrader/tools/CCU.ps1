@@ -6,18 +6,21 @@
 
 param (
 	[Alias("?")][switch]$Help,
-    [Alias("GeekMode")][switch]$Debug,
-	[switch]$DeleteConfig,
-	[switch]$EditConfig,
     [switch]$Start,
     [switch]$Stop,
     [switch]$Status,
 	[Alias("Notifications")][switch]$Notify,
 	[Alias("DoNotUpgrade")][switch]$NoUpgrades,
+	[Alias("UpgradeAll")][switch]$UpgradeAllFirst,
+	[switch]$CreateConfig,	
+	[switch]$DeleteConfig,
+	[Alias("CreateTask")][switch]$CreateScheduledTask,
+	[Alias("DeleteTask")][switch]$DeleteScheduledTask,
+    [Alias("GeekMode")][switch]$Debug,
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v1.0.0-RC2 (2023/11/18) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v1.0.0-RC2 (2023/11/21) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 $ErrorActionPreference = 'Stop'
@@ -29,7 +32,7 @@ $execdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
 if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 
 function create_config {
-	Write-Host "  ** Creating new CCU config file:`n" -Foreground Yellow
+	Write-Host "  ** Creating CCU config file:`n" -Foreground Magenta
 	if (Test-Path "$CCUconfig") {Remove-Item "$CCUconfig" -Force}
 	
 	do {
@@ -38,6 +41,9 @@ function create_config {
 	do {
 		$ConfigNoUpgrades=Read-Host "     Disable CCU automatic upgrades (True/False)? "
 	} until (($ConfigNoUpgrades -eq 'true') -or ($ConfigNoUpgrades -eq 'false'))
+	do {
+		$ConfigUpgradeAllFirst=Read-Host "     CCU upgrade all packages on run? (True/False)? "
+	} until (($ConfigUpgradeAllFirst -eq 'true') -or ($ConfigUpgradeAllFirst -eq 'false'))
 	do {
 		[int]$ConfigWaitTime=Read-Host "     CCU wait time (# of minutes)? "
 	} until ($ConfigWaitTime -is [int])
@@ -50,15 +56,59 @@ function create_config {
 	$ConfigFile.WriteStartElement("Preferences")
     $ConfigFile.WriteElementString("Notify","$ConfigNotify")
 	$ConfigFile.WriteElementString("NoUpgrades","$ConfigNoUpgrades")
+	$ConfigFile.WriteElementString("UpgradeAllFirst","$ConfigUpgradeAllFirst")
 	$ConfigFile.WriteElementString("WaitTime","$ConfigWaitTime")
 	$ConfigFile.WriteEndDocument()
     $ConfigFile.Flush()
     $ConfigFile.Close()
 	Write-Host "`n  ** Created $CCUconfig." -Foreground Magenta
 	if (Test-Path "$RunningFile") {
-		Write-Host "  ** Restart CCU for defaults to take effect." -Foreground Magenta
+		Write-Host "  ** Restart CCU for defaults to take effect." -Foreground Yellow
 	}
 	Write-Host ""
+}
+
+function delete_config {
+	if (Test-Path "$CCUconfig") {
+		Remove-Item "$CCUconfig"
+	    Write-Host "  ** Deleted $CCUconfig`n" -Foreground Magenta
+	} else {
+		Write-Host "  ** CCU config file not found.`n" -Foreground Yellow
+	}
+}
+
+function create_scheduledtask {
+	if (!(Test-Path "$CCUconfig")) {
+		Write-Host "  ** CCU config file not found." -Foreground Yellow
+		Write-Host "  ** CCU needs defaults to run as a scheduled task." -Foreground Yellow
+		Write-Host "  ** Run `'CCU -CreateConfig`' to set defaults.`n" -Foreground Yellow
+		return
+	}
+    $ErrorActionPreference = 'SilentlyContinue'
+    $GotTask = (&schtasks.exe /query /tn "CCU") 2> $null
+    $ErrorActionPreference = 'Stop'
+    if ($GotTask){
+      &schtasks.exe /DELETE /TN "CCU" /F
+    }
+    SchTasks /Create /SC ONSTART /RU $(whoami) /RP /RL HIGHEST /TN "CCU" /TR "%ChocolateyInstall%\bin\CCU.bat" /F
+# TODO: fix authentication error - needs credentials to modify task!!!!
+#    if ([Environment]::OSVersion.Version.Major -ge 10){
+#	    $TaskSettings=New-ScheduledTaskSettingsSet -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 5) -StartWhenAvailable
+#	    Set-ScheduledTask -TaskName "CCU" -Settings $TaskSettings
+#    }
+    Write-Host "  ** CCU will run at Windows startup." -Foreground Yellow 
+}
+
+function delete_scheduledtask {
+    $ErrorActionPreference = 'SilentlyContinue'
+    $GotTask = (&schtasks.exe /query /tn "CCU") 2> $null
+    $ErrorActionPreference = 'Stop'
+    if ($GotTask){
+      &schtasks.exe /DELETE /TN "CCU" /F
+	  Write-Host "`n  ** CCU scheduled task deleted.`n" -Foreground Magenta
+    } else {
+		Write-Host "  ** No CCU scheduled task to delete.`n" -Foreground Yellow
+	}
 }
 
 function print_footer {
@@ -72,17 +122,23 @@ if (Test-Path "$RunningFile") {
 	$rebooted=(Get-CimInstance -ClassName win32_operatingsystem | select csname, lastbootuptime).LastBootUpTime
 	if ($created -lt $rebooted) {
 		Write-Host " ** CCU detected a reboot while previously running." -Foreground Yellow
-		Write-Host " ** Deleting temp file.`n" -Foreground Yellow
+		Write-Host " ** Deleting temp file.`n" -Foreground Magenta
 		Remove-Item $RunningFile
 		}
 }
 
-if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$NoUpgrades -and !$Debug -and !$EditConfig -and !$WaitTime) {
+if ($CreateConfig) {create_config; return}
+if ($DeleteConfig) {delete_config; return}
+if ($CreateScheduledTask) {create_scheduledtask; return}
+if ($DeleteScheduledTask) {delete_scheduledtask; return}
+
+if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$NoUpgrades -and !$Debug -and !$WaitTime) {
 	$MiniHelp=$True
 	if (Test-Path "$CCUconfig") {
 		[xml]$ConfigFile = Get-Content "$CCUconfig"
         if ($ConfigFile.Preferences.Notify -eq 'true') {$Notify=$True}
         if ($ConfigFile.Preferences.NoUpgrades -eq 'true') {$NoUpgrades=$True}
+		if ($ConfigFile.Preferences.UpgradeAllFirst -eq 'true') {$UpgradeAllFirst=$True}
         if ($ConfigFile.Preferences.WaitTime) {$WaitTime=$ConfigFile.Preferences.WaitTime}
 	    $Start=$True
 		$MiniHelp=$False
@@ -98,13 +154,11 @@ if (!$Start -and !$Stop -and !$Status -and !$Help -and !$Notify -and !$NoUpgrade
 	}
 }
 
-if ($EditConfig) {create_config; return}
-if ($DeleteConfig) {Remove-Item "$CCUconfig"; Write-Host "  ** Deleted $CCUconfig" -Foreground Yellow; return}
 if ($Debug) {$Start=$True; $Background=$False}
 if ($Notify) {$env:Notify=$True; $Start=$True} else {$env:Notify=$False}
 if ($NoUpgrades) {$env:AutoUpgrade=$False; $Start=$True} else {$env:AutoUpgrade=$True}
-if ($WaitTime) {$Start=$True}
-if (!$WaitTime) {$WaitTime="30"} ; $env:WaitTime=$WaitTime
+if ($UpgradeAllFirst) {$env:UpgradeAllFirst=$True} else {$env:UpgradeAllFirst=$False}
+if ($WaitTime) {$Start=$True}; if (!$WaitTime) {$WaitTime="30"} ; $env:WaitTime=$WaitTime
 if ($Stop) {$Help=$False; $Start=$False; $Status=$False}
 
 if ( $Help ) {
@@ -119,18 +173,22 @@ if ( $Help ) {
 	Write-Host "    Send notifications when upgrades are found."
 	Write-Host " -NoUpgrades (assumes -Start)"
 	Write-Host "    Disable auto-upgrading of packages."
+	Write-Host " -UpgradeAllFirst (assumes -Start)"
+	Write-Host "    Run `'choco upgrade all -y`' before checking for upgrades."
 	Write-Host " #  (assumes -Start)"
 	Write-Host "    Number of minutes to wait between checks (default 30)."
-	Write-Host " -EditConfig"
-	Write-Host "    Create CCU config file."
-	Write-Host " -GeekMode"
+	Write-Host " -CreateConfig"
+	Write-Host "    Create CCU config file with defaults."
+	Write-Host " -DeleteConfig"
+	Write-Host "    Deletes the CCU config file."
+	Write-Host " -CreateScheduledTask"
+	Write-Host "    Create a scheduled task to run CCU on system boot."
+	Write-Host " -DeleteScheduledTask"
+	Write-Host "    Deltets the scheduled task to CCU on system boot."
+	Write-Host " -GeekMode (assumes -Start)"
 	Write-Host "    Just for fun."
 	Write-Host " -Help, -?"
-	Write-Host "    This menu."
-	Write-Host 
-	Write-Host "EXAMPLES:" -Foreground Magenta
-	Write-Host " CCU -Start 60"
-	Write-Host " CCU -Start -Notify -NoUpgrades 15`n"
+	Write-Host "    This menu.`n"
 	return
 }
 
@@ -170,8 +228,8 @@ if ($Start) {
 		$CCUProcess | Export-Clixml -Path "$RunningFile"
 	}
 	Write-Host "  ** CCU STARTED." -Foreground Yellow
-	if ($Notify) {Write-Host "  ** CCU notifications ENABLED." -Foreground Yellow} else {Write-Host "  ** CCU notifications DISABLED." -Foreground Yellow}
-	if ($NoUpgrades) {Write-Host "  ** CCU package upgrades DISABLED." -Foreground Yellow} else {Write-Host "  ** CCU package upgrades ENABLED." -Foreground Yellow}
+	if ($Notify) {Write-Host "  ** CCU notifications are ENABLED." -Foreground Yellow} else {Write-Host "  ** CCU notifications are DISABLED." -Foreground Yellow}
+	if ($NoUpgrades) {Write-Host "  ** CCU package upgrades are DISABLED." -Foreground Yellow} else {Write-Host "  ** CCU package upgrades are ENABLED." -Foreground Yellow}
 	Write-Host "  ** CCU will check for upgrades every $WaitTime minutes.`n" -Foreground Yellow
 	print_footer
 	return

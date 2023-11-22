@@ -45,6 +45,7 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
 ### ROADMAP
 * - Nothing planned.
 * - Maybe, just maybe... only if I'm really bored one day or people demand it, setup a scheduled task to auto-run CCU on system boot.
+* - It would be neat to make a tray app that replicates GeekMode...
 
 ***
 
