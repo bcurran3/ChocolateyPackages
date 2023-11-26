@@ -20,7 +20,7 @@ param (
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v1.0.0-RC2 (2023/11/21) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v1.0.0 (2023/11/21) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 $ErrorActionPreference = 'Stop'
@@ -92,11 +92,6 @@ function create_scheduledtask {
       &schtasks.exe /DELETE /TN "CCU" /F
     }
     SchTasks /Create /SC ONSTART /RU $(whoami) /RP /RL HIGHEST /TN "CCU" /TR "%ChocolateyInstall%\bin\CCU.bat" /F
-# TODO: fix authentication error - needs credentials to modify task!!!!
-#    if ([Environment]::OSVersion.Version.Major -ge 10){
-#	    $TaskSettings=New-ScheduledTaskSettingsSet -DontStopIfGoingOnBatteries -RunOnlyIfNetworkAvailable -RestartCount 3 -RestartInterval (New-TimeSpan -Minutes 5) -StartWhenAvailable
-#	    Set-ScheduledTask -TaskName "CCU" -Settings $TaskSettings
-#    }
     Write-Host "`n  ** CCU will run at Windows startup.`n" -Foreground Yellow
 }
 

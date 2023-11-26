@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-continuous-upgrader</id>
-    <version>1.0.0-RC2</version>
+    <version>1.0.0</version>
     <title>(unofficial) Chocolatey Continuous Upgrader (CCU) (Script)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
