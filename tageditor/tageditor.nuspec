@@ -47,6 +47,8 @@ The tag editor can also display technical information such as the ID, format, la
 
 It also allows to inspect and validate the element structure of MP4 and Matroska files.
 
+NOTE: tageditor routinely gets flagged by anti-virus programs. From the README.md - "Antivirus software often **wrongly** considers the executable harmful. This is a known problem. Please don't create issues about it."
+
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/screenlogic-connect/readme.md)**
 
 ---
