@@ -2,9 +2,9 @@
 $toolsDir      = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $TodaysArray   = ($env:ChocolateyPackageVersion.split('.'))
 $TodaysVersion = $TodaysArray[2] + "." + $TodaysArray[3]
-$IntelPackageNumber = '792980'
+$IntelPackageNumber = '793688'
 $url64       = "https://downloadmirror.intel.com/$IntelPackageNumber/gfx_win_"+"$TodaysVersion"+".exe"
-$checksum64  = '07A4B26A5C27ED03FB81CFB19FF5315B7949F125432CB7254C3A0094C8497CC1'
+$checksum64  = '5BD8FA949ACBDB8482B52DECAED9AD30BB2A0E49A6A47B8DE0BB3B8E98F8A520'
 
 Confirm-WinMinimumBuild 19042
 if (!(Get-IsIntelVideo)){
