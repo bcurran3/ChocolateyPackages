@@ -4,7 +4,7 @@
   <metadata>
     <id>simple-sticky-notes</id>
     <title>Simple Sticky Notes (Install)</title>
-    <version>6.2.0.0</version>
+    <version>6.3.0.0</version>
     <authors>Simnet Limited</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/simple-sticky-notes</packageSourceUrl>
@@ -35,14 +35,14 @@ Minimum Requirements: Windows® 11 / 10 / 8.1 / 8 / 7 / Vista / XP PC with a 1 G
 ---
 
 </description>
-    <projectUrl>http://www.simplestickynotes.com</projectUrl>
-    <docsUrl>http://www.simplestickynotes.com/help/</docsUrl>
+    <projectUrl>https://www.simplestickynotes.com</projectUrl>
+    <docsUrl>https://www.simplestickynotes.com/help/</docsUrl>
     <tags>simple sticky notes postit post-it stickies binary</tags>
     <copyright>Simnet Limited</copyright>
-    <licenseUrl>http://www.simplestickynotes.com/eula/</licenseUrl>
+    <licenseUrl>https://www.simplestickynotes.com/eula/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/simple-sticky-notes/simple-sticky-notes_icon.png</iconUrl>
-    <releaseNotes>http://www.simplestickynotes.com/simple-sticky-notes-version-history/</releaseNotes>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/simple-sticky-notes/simple-sticky-notes_icon.png</iconUrl>
+    <releaseNotes>https://www.simplestickynotes.com/simple-sticky-notes-version-history/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
