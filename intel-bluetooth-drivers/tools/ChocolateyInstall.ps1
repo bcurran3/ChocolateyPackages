@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'intel-bluetooth-drivers' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$IntelPackageNumber = '787935'
+$IntelPackageNumber = '794069'
 $url64       = "https://downloadmirror.intel.com/$IntelPackageNumber/BT-"+$env:ChocolateyPackageVersion+"-64UWD-Win10-Win11.exe"
-$checksum64  = 'DEC8D2CC209140398BF1D7CA430B7EE1A5CBBD992F622F17A08DAC6EAC23857A'
+$checksum64  = 'A639A39BF1C7B5E27B3487F14A8D99F81D5E7334580E917606CB4A32647A2816'
 
 Confirm-Win10
 
