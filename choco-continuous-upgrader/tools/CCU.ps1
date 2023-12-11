@@ -12,7 +12,7 @@ param (
 	[Alias("Notifications")][switch]$Notify,
 	[Alias("DoNotUpgrade")][switch]$NoUpgrades,
 	[Alias("UpgradeAll")][switch]$UpgradeAllFirst,
-	[switch]$CreateConfig,	
+	[Alias("EditConfig")][switch]$CreateConfig,
 	[switch]$DeleteConfig,
 	[Alias("CreateTask")][switch]$CreateScheduledTask,
 	[Alias("DeleteTask")][switch]$DeleteScheduledTask,
@@ -20,7 +20,7 @@ param (
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v1.0.0 (2023/11/21) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v1.0.1 (2023/12/11) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 $ErrorActionPreference = 'Stop'
@@ -165,23 +165,23 @@ if ( $Help ) {
 	Write-Host "    Stop checking for upgrades."
 	Write-Host " -Status"
 	Write-Host "    Show CCU status."
-	Write-Host " -Notify (assumes -Start)"
+	Write-Host " -Notify, -Notifications (assumes -Start)"
 	Write-Host "    Send notifications when upgrades are found."
-	Write-Host " -NoUpgrades (assumes -Start)"
+	Write-Host " -NoUpgrades, -DoNotUpgrade (assumes -Start)"
 	Write-Host "    Disable auto-upgrading of packages."
-	Write-Host " -UpgradeAllFirst (assumes -Start)"
-	Write-Host "    Run `'choco upgrade all -y`' before checking for upgrades."
+	Write-Host " -UpgradeAll, -UpgradeAllFirst (assumes -Start)"
+	Write-Host "    Run `'choco upgrade all -y`' before continuously checking for upgrades."
 	Write-Host " #  (assumes -Start)"
-	Write-Host "    Number of minutes to wait between checks (default 30)."
-	Write-Host " -CreateConfig"
-	Write-Host "    Create CCU config file with defaults."
+	Write-Host "    Number of minutes to wait between checks for upgrades (default 30)."
+	Write-Host " -CreateConfig, -EditConfig"
+	Write-Host "    Creates CCU config file with your preferences."
 	Write-Host " -DeleteConfig"
 	Write-Host "    Deletes the CCU config file."
-	Write-Host " -CreateScheduledTask"
-	Write-Host "    Create a scheduled task to run CCU on system boot."
-	Write-Host " -DeleteScheduledTask"
-	Write-Host "    Deltets the scheduled task to CCU on system boot."
-	Write-Host " -GeekMode (assumes -Start)"
+	Write-Host " -CreateTask, -CreateScheduledTask"
+	Write-Host "    Creates a scheduled task to run CCU on system boot."
+	Write-Host " -DeleteTask, -DeleteScheduledTask"
+	Write-Host "    Deletes the scheduled task to run CCU on system boot."
+	Write-Host " -GeekMode, -Debug (assumes -Start)"
 	Write-Host "    Just for fun."
 	Write-Host " -Help, -?"
 	Write-Host "    This menu.`n"
@@ -193,8 +193,8 @@ if ($Status) {
 		Write-Host "  ** CCU is running." -Foreground Yellow
 		if (Test-Path "$StatusFile") {
 			foreach($line in Get-Content "$StatusFile") {
-			Write-Host "$line" -Foreground Yellow
-			} 
+				Write-Host "$line" -Foreground Yellow
+			}
 		} else {
 			Write-Host "  ** ERROR: Status file not found. Run `'CCU -Status`' again." -Foreground Red
 			Write-Host "  ** ERROR: If this error continues, Run `'CCU -Stop`'" -Foreground Red
@@ -203,7 +203,7 @@ if ($Status) {
 		Write-Host "  ** CCU is not running." -Foreground Yellow
 	}
 	if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
-		Write-Host "  ** Chocolatey is installing an upgrade.`n" -Foreground Yellow
+		Write-Host "  ** Chocolatey is currently running.`n" -Foreground Yellow
 	}
 	Write-Host ""
 	print_footer
@@ -233,7 +233,7 @@ if ($Start) {
 
 if ($Stop) {
 	if (Get-Process -Name choco -ErrorAction SilentlyContinue) {
-		Write-Host "  ** Chocolatey is installing an upgrade. Waiting for it to finish..." -Foreground Yellow
+		Write-Host "  ** Chocolatey is currently running. Waiting for it to finish..." -Foreground Yellow
 		while (Get-Process -Name choco -ErrorAction SilentlyContinue) {Start-Sleep 1}
 	}
 	if (Test-Path "$RunningFile") {$CCUProcess = Import-Clixml -Path "$RunningFile"}

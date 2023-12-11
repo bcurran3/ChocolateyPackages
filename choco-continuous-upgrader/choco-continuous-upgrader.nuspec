@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-continuous-upgrader</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>(unofficial) Chocolatey Continuous Upgrader (CCU) (Script)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -55,6 +55,7 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
     <summary>choco-continuous-upgrader (CCU) - Upgrades your Chocolatey packages continuously throughout the day.</summary>
     <releaseNotes>
 ### CHANGELOG:
+* 1.0.1 - Re-worded some status messages and added timestamp to last check. If the event WinRM fails to start for toast notifications MSG will now be used.
 * 1.0.0 - initial release
 
 ### ROADMAP
