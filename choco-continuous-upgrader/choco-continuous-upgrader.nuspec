@@ -38,13 +38,13 @@ This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolat
 Install my [choco-toast-notifications.hook](https://community.chocolatey.org/packages/choco-toast-notifications.hook) to enable beautiful foreground toast notifications of package installs, upgrades, and uninstalls. If you plan to use **CCU** only for notifications of upgrades without having them automatically installed, I recommend using [burnttoast-psmodule](https://community.chocolatey.org/packages/burnttoast-psmodule) for those notifications.
 
 ### USAGE INSTRUCTIONS:
-**CCU -Start** will start **CCU** with defaults.
+**CCU -Start** will start **CCU** with defaults or your preferences if you created a config file.
 **CCU -Stop** to stop **CCU**.
-**CCU -Status** will display **CCU**'s running options and packages that have been upgraded or waiting to be upgraded.
+**CCU -Status** will display **CCU**'s running options and packages that have been upgraded or waiting to be upgraded since last check.
 **CCU -Notify** (assumes -Start) will send foreground notifications of upgrades using either BurntToast or MSG.
 **CCU -NoUpgrades** (assumes -Start) will check for upgrades but not automatically install them.
-**CCU -UpgradeAll** (assumes -Start) runs 'choco upgrade all -y' before checking for upgrades.
-**CCU -CreateConfig** to set your custom defaults.
+**CCU -UpgradeAll** (assumes -Start) runs 'choco upgrade all -y' before continuously checking for upgrades.
+**CCU -CreateConfig** to set your preferences.
 **CCU -CreateTask** to set CCU to run on bootup.
 **CCU -Help** for more info.
 
