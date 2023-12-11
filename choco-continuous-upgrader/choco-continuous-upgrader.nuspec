@@ -43,9 +43,9 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
 **CCU -Status** will display **CCU**'s running options and packages that have been upgraded or waiting to be upgraded.
 **CCU -Notify** (assumes -Start) will send foreground notifications of upgrades using either BurntToast or MSG.
 **CCU -NoUpgrades** (assumes -Start) will check for upgrades but not automatically install them.
-**CCU -UpgradeAllFirst** (assumes -Start) runs 'choco upgrade all -y' before checking for upgrades.
+**CCU -UpgradeAll** (assumes -Start) runs 'choco upgrade all -y' before checking for upgrades.
 **CCU -CreateConfig** to set your custom defaults.
-**CCU -CreateScheduledTask** to set CCU to run on bootup.
+**CCU -CreateTask** to set CCU to run on bootup.
 **CCU -Help** for more info.
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
