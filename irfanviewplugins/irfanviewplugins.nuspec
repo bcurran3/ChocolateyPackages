@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanviewplugins</id>
-    <version>4.62.0.20230921</version>
+    <version>4.66</version>
     <title>IrfanView All Plugins (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>
-    <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
-    <projectUrl>http://www.irfanview.com/plugins.htm</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.png</iconUrl>
+    <licenseUrl>https://www.irfanview.com/eula.htm</licenseUrl>
+    <projectUrl>https://www.irfanview.com/plugins.htm</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -39,11 +39,11 @@ Please see the [IrfanView PlugIns](http://www.irfanview.com/plugins.htm) web pag
     <summary>Additional plugins for IrFanView</summary>
     <copyright>© Irfan Skiljan</copyright>
     <tags>irfanview image photo viewer plugin plugins binary embedded</tags>
-    <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
+    <docsUrl>https://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
-    <releaseNotes>http://www.irfanview.com/plugins.htm</releaseNotes>
+    <releaseNotes>https://www.irfanview.com/plugins.htm</releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.62.0.20230706" />
+      <dependency id="irfanview" version="4.66" />
     </dependencies>
   </metadata>
   <files>
