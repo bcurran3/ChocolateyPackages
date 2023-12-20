@@ -3,14 +3,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>irfanview-languages</id>
-    <version>4.62.0.20230706</version>
+    <version>4.66.0</version>
     <title>IrfanView All Languages (Install)</title>
     <authors>Irfan Skiljan</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanview-languages</packageSourceUrl>
-    <licenseUrl>http://www.irfanview.com/eula.htm</licenseUrl>
+    <licenseUrl>https://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>https://www.irfanview.com/languages.htm</projectUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/irfanview/irfanview_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanview/irfanview_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -20,29 +20,42 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-### Available languages for version 4.60::
+### Available languages:
 
 * English (always included)
-* Deutsch/German (schon integriert, hier die deutsche Hilfe-Datei)
-* French 
-* Chinese 
-* Russian (help file included) (also contains translated PlugIns)
-* Japanese (help file included) 
-* Spanish 
-* Portugues-Brasil (help file included) 
-* Nederlands 
-* Polski (help file included) 
-* Ukrainian 
-* Portuguese 
-* Finnish
-* Italian 
-* Czech/Cesky
-* Slovak 
-* Hungarian (help file included) 
-* Slovenscina 
 * Arabic
+* Bulgarian
+* Catalan
+* Chinese
+* Czech/Cesky
+* Dansk
+* Deutsch/German (schon integriert, hier die deutsche Hilfe-Datei)
 * Estonian
-* Bulgarian 
+* Finnish
+* French
+* Hebrew
+* Hungarian (help file included)
+* Italian
+* Japanese (help file included)
+* Korean
+* Latvian
+* Lithuanian
+* Nederlands
+* Norwegian/Norsk
+* Polski (help file included)
+* Portugues-Brasil (help file included)
+* Portuguese
+* Romanian
+* Russian (help file included) (also contains translated PlugIns)
+* Slovak
+* Slovenscina
+* Spanish
+* Svenska/Swedish
+* Turkish
+* Ukrainian
+* Uzbek
+
+(Some are updated for this version, some are mostly compatible.)
 
 **[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/irfanview-languages/readme.md)**
 
@@ -57,11 +70,11 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
     <summary>Additional languages for IrFanView</summary>
     <copyright>© Irfan Skiljan</copyright>
     <tags>irfanview image photo viewer languages binary embedded</tags>
-    <docsUrl>http://www.irfanview.com/faq.htm</docsUrl>
+    <docsUrl>https://www.irfanview.com/faq.htm</docsUrl>
     <mailingListUrl>https://irfanview-forum.de/</mailingListUrl>
     <releaseNotes></releaseNotes>
     <dependencies>
-      <dependency id="irfanview" version="4.62.0.20230706" />
+      <dependency id="irfanview" version="4.66.0" />
     </dependencies>
   </metadata>
   <files>
