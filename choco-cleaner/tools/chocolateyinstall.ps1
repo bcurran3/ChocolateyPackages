@@ -101,6 +101,7 @@ if ($pp["NOTASK"] -eq 'true' -or $pp["NOSCHEDULE"] -eq 'true'){
 
 # Create scheduled task
 SchTasks /Create /SC WEEKLY /D SUN /RU SYSTEM /RL HIGHEST /TN "choco-cleaner" /TR "%ChocolateyInstall%\bin\choco-cleaner.bat" /ST 23:00 /F
+Set-ScheduledTask -TaskName choco-cleaner -Settings (New-ScheduledTaskSettingsSet -StartWhenAvailable)
 SchTasks /query /tn "choco-cleaner"
 Write-Host "  ** Now configured to run Choco-Cleaner at 11:00 PM every SUNDAY." -Foreground Magenta
 Write-Host "  ** You can manually run Choco-Cleaner from the Command Prompt, Powershell, or the Windows Start Menu icon." -Foreground Magenta
