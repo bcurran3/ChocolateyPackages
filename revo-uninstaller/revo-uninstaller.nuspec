@@ -3,15 +3,15 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>revo-uninstaller</id>
-    <version>2.4.1.0</version>
+    <version>2.4.5.0</version>
     <title>Revo Uninstaller Free (Install)</title>
     <authors>VS Revo Group Ltd.</authors>
     <owners>bcurran3, jivkok</owners>
-    <licenseUrl>http://www.revouninstaller.com/revo_uninstaller_free_download.html</licenseUrl>
+    <licenseUrl>https://www.revouninstaller.com/revo_uninstaller_free_download.html</licenseUrl>
     <copyright>VS Revo Group Ltd.</copyright>
     <projectUrl>https://www.revouninstaller.com</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/revo-uninstaller</packageSourceUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/revo-uninstaller/revo-uninstaller_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/revo-uninstaller/revo-uninstaller_icon.png</iconUrl>
     <docsUrl>https://www.revouninstaller.com/revo_uninstaller_how_to.html</docsUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>Revo Uninstaller Pro is innovative uninstaller program which helps you to uninstall unnecessary software and remove easily unwanted programs installed on your personal computer.</summary>
@@ -26,31 +26,19 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ![Screenshot of Revo Uninstaller (Pro)](https://www.revouninstaller.com/images/screens/All_Programs_Icons.jpg)	
 
-Revo Uninstaller is a freeware uninstall utility. It has powerful features to uninstall programs scanning for leftover files, folders and registry entries after uninstall. With its unique 'Hunter mode' it offers you some simple, easy to use but effective and powerful approaches to manage (uninstall, stop, delete, disable from auto starting) and to get information about your installed and/or running application. Many cleaning tools included!	
-	
-#### MAIN FEATURES
-Here are just a few reasons to choose Revo Uninstaller for all of your uninstallation needs
+### Uninstaller
 
-#### ADVANCED SCANNING FOR LEFTOVERS
-- remove remnants of one or few programs
+The Uninstaller module is Revo Uninstaller's primary feature for situations when a program won’t uninstall normally or when you have some doubts that a program has not been uninstalled completely.
 
-#### FORCED UNINSTALL
-- remove stubborn programs
+Also when a program is uninstalled, often times there are multiple files, folders, and/or Registry entries left on your system, which can cause various issues if not removed. This happens more frequently than you might think.
 
-#### QUICK/MULTIPLE UNINSTALL
-- quick uninstall of one or few programs
+Revo Uninstaller acts as both a replacement and a supplement to the built-in functionality in Windows by first running the built-in uninstaller for the program, and then scanning for leftover data afterwards, making it your best choice when it comes to completely remove stubborn programs, temporary files, and other unnecessary program data that is left behind after the standard uninstall process.
 
-#### REAL-TIME INSTALLATION MONITOR
-- for complete uninstall
+### Hunter Mode
 
-#### LOGS DATABASE
-- traced installation by our team ready to uninstall your installed programs
+Hunter Mode is an innovative feature that allows you to select in a more flexible way the program to uninstall or manage. When you activate Hunter Mode, Revo Uninstaller ‘s main window will disappear, and a new targeting icon will appear instead. Simply drag and drop that icon over the opened window, System Tray icon, or Desktop icon of the program you wish to control, and Revo Uninstaller will display any available options in a convenient menu. This can be very useful because many programs loading on start-up and/or remain in the system tray without your consent, or you do not even know which program that is.
 
-#### MANAGE INSTALLATION LOGS
-- edit, review, share (export, import) logs
-
-#### MULTI-LEVEL BACKUP SYSTEM
-- safe uninstall of programs
+The Hunter Mode can come in handy when you want to uninstall an unknown program (or at the very least disable its automatic start-up in Windows), which you cannot find listed anywhere, but you can see its window or icon.
 
 **SOCIAL MEDIA:**
 [Facebook](https://www.facebook.com/Revo-Uninstaller-53526911789) | [Twitter](https://twitter.com/vsrevounin) | [Google+](https://plus.google.com/116436870689515674048/posts) | [LinkIn](https://www.linkedin.com/company/vs-revo-group)
