@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-arc-graphics-driver</id>
-    <version>31.0.101.4972</version>
+    <version>31.0.101.5122</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/785597</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
@@ -14,7 +14,7 @@
     <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://community.intel.com/</mailingListUrl>
-    <tags>intel arcgraphics video driver</tags>
+    <tags>intel arc iris video driver</tags>
     <summary>Intel Arc Graphics Driver for Windows 10/11</summary>
     <description>
 ---
@@ -48,7 +48,7 @@ Any graphics issues found using Intel generic graphics drivers should be [report
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/793688/readme.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/812114/readme_101.5084.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
