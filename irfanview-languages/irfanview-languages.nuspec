@@ -10,7 +10,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanview-languages</packageSourceUrl>
     <licenseUrl>https://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>https://www.irfanview.com/languages.htm</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanview/irfanview_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/irfanview/irfanview_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
