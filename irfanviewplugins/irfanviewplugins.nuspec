@@ -10,7 +10,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/irfanviewplugins</packageSourceUrl>
     <licenseUrl>https://www.irfanview.com/eula.htm</licenseUrl>
     <projectUrl>https://www.irfanview.com/plugins.htm</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/irfanviewplugins/irfanviewplugins_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/irfanviewplugins/irfanviewplugins_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
