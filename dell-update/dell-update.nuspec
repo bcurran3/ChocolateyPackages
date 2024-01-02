@@ -3,14 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>dell-update</id>
-    <version>4.9.0</version>
+    <version>5.1.0</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dell-update</packageSourceUrl>
     <title>Dell Update Windows Universal Application</title>
     <authors>Dell Inc.</authors>
-    <projectUrl>https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=34ynx</projectUrl>
-    <docsUrl>https://dl.dell.com/topicspdf/command-update_users-guide_en-us.pdf</docsUrl>
-    <iconUrl>https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/dell-update/dell-update_icon.png</iconUrl>
+    <projectUrl>https://www.dell.com/support/home/en-ie/drivers/driversdetails?driverid=534c4</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/dell-update/dell-update_icon.png</iconUrl>
     <copyright>(c) Dell Inc.</copyright>
     <licenseUrl>https://www.dell.com/learn/us/en/uscorp1/terms-of-sale-consumer-license-agreements</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -41,8 +40,6 @@ Dell Update Classic interface is not supported from version 4.7 and later. If yo
 ---
 </description>
     <dependencies>
-      <dependency id="netfx-4.8" version="4.8.0.0" />
-      <!-- still necessary after switching to WUA (4.7.1)? -->
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
   </metadata>

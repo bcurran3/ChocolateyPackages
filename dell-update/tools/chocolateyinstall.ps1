@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 $packageName = 'dell-update' 
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$url         = 'https://dl.dell.com/FOLDER10012597M/1/Dell-Update-Windows-Universal-Application_34YNX_WIN_4.9.0_A01.EXE?uid=922303f7-d1c7-46f6-d488-2a6114ea42bf&fn=Dell-Update-Windows-Universal-Application_34YNX_WIN_4.9.0_A01.EXE'
-$checksum    = 'EB5578DAB065E0145EFCB232A145B7DA7E662F7165FCC2F61EDFCE1408CB8839'
+$url         = 'https://dl.dell.com/FOLDER10791749M/1/Dell-Update-Windows-Universal-Application_534C4_WIN_5.1.0_A00.EXE'
+$checksum    = '7AD11A0AD05215397F1F431256CBEF36241C685AE8A37B2CAFB17C51BD097712'
 
 Confirm-Win10
 
