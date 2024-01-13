@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-killer-performance-suite</id>
-    <version>35.23.842</version>
+    <version>35.23.1292</version>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
     <title>Intel® Killer Performance Suite (Install)</title>
@@ -40,7 +40,7 @@ The Intel Killer™ Performance Suite package installs the Windows 10 and Window
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/794919/KillerPerformanceSuite_35.23.842.pdf</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/813202/KillerPerformanceSuite_35.23.1292.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
     </dependencies>
