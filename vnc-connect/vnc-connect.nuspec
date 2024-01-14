@@ -9,7 +9,7 @@
     <title>VNC Connect (Install)</title>
     <authors>RealVNC Limited.</authors>
     <projectUrl>https://www.realvnc.com/products/vnc/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-connect_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/vnc-connect/vnc-connect_icon.png</iconUrl>
     <copyright>Copyright © RealVNC Limited. All rights reserved.</copyright>
     <licenseUrl>https://www.realvnc.com/legal/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -27,7 +27,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 ---
 
 
-![Screen shot of VNC Connect Viewer](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-viewer_screenshot.png)
+![Screen shot of VNC Connect Viewer](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/vnc-connect/vnc-viewer_screenshot.png)
 
 ### VNC Connect business benefits
 
