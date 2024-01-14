@@ -18,13 +18,12 @@ if (Test-Path "$scriptDir\CNC.cmd") { Remove-Item "$scriptDir\CNC.cmd" -Force | 
 # Install
 # Move new files and support files (if applicable)
 Move-Item "$toolsDir\$script" "$scriptDir" -Force
+if (!(Test-Path "$scriptDir\CNC.config")) { Move-Item "$toolsDir\CNC.config" "$scriptDir" -Force }
 Install-ChocolateyPowershellCommand -PackageName 'CNC' -PSFileFullPath "$scriptDir\$script"
-if (!(Test-Path "$scriptDir\CNCHeader.txt")) { Move-Item "$toolsDir\CNCHeader.txt" "$scriptDir" -Force }
-if (!(Test-Path "$scriptDir\CNCFooter.txt")) { Move-Item "$toolsDir\CNCFooter.txt" "$scriptDir" -Force }
-if (!(Test-Path "$scriptDir\CNCPackageNotes.txt")) { Move-Item "$toolsDir\CNCPackageNotes.txt" "$scriptDir" -Force }
-#if (!(Test-Path "$scriptDir\CNC.config")) { Move-Item "$toolsDir\CNC.config" "$scriptDir" -Force }
-if ($ENV:Path -NotMatch '\BCURRAN3'){ Install-ChocolateyPath "$scriptDir" "Machine" ; refreshenv }
+# Below files not used after migrating to .config file
+#if (!(Test-Path "$scriptDir\CNCHeader.txt")) { Move-Item "$toolsDir\CNCHeader.txt" "$scriptDir" -Force }
+#if (!(Test-Path "$scriptDir\CNCFooter.txt")) { Move-Item "$toolsDir\CNCFooter.txt" "$scriptDir" -Force }
+#if (!(Test-Path "$scriptDir\CNCPackageNotes.txt")) { Move-Item "$toolsDir\CNCPackageNotes.txt" "$scriptDir" -Force }
 
 # Cleanup
-Remove-Item "$toolsDir\*.txt" -Force -ErrorAction SilentlyContinue | Out-Null
-Remove-Item "$toolsDir\*.config" -Force -ErrorAction SilentlyContinue | Out-Null
+Remove-Item "$toolsDir\CNC*.*" -Force -ErrorAction SilentlyContinue | Out-Null

@@ -1,5 +1,5 @@
 ﻿# $ErrorActionPreference = 'Stop'
-# CNC.ps1 Copyleft 2018-2023 by Bill Curran AKA BCURRAN3
+# CNC.ps1 Copyleft 2018-2024 by Bill Curran AKA BCURRAN3
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues if you have suggestions for improvement.
 
@@ -54,6 +54,8 @@
    Edit $CNCPackageNotes with Notepad++ or Notepad.
 .PARAMETER MakeBackups
    Make filename.ext.CNC.BAK of all modified files.
+.PARAMETER Offline
+   Offline mode
 .PARAMETER OpenURLs
    Opens all URLs in your browser for inspection when finished.
 .PARAMETER OpenValidatorInfo
@@ -77,7 +79,7 @@
 .PARAMETER UpdateAll
    Rights all wrongs!
 .PARAMETER UpdateImageURLs
-   Updates image URLs with Staticaly CDN URLs (default).
+   Updates image URLs with default CDN URLs.
 .PARAMETER UpdateScripts
    Re-writes your PowerShell scripts with fixes, e.g. change to UTF-8 w/BOM, and add ErrorActionPreference=Stop.
 .PARAMETER UpdateXMLComment
@@ -96,8 +98,6 @@
    Test run, don't save changes.
 
 .LINK
-   https://github.com/chocolatey/package-validator/wiki
-.LINK
    https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
 
 #>
@@ -109,16 +109,17 @@ param (
     [switch]$AddHeader,
     [switch]$AddPackageNotes,
     [switch]$Debug,
+	[switch]$EditConfig,
     [switch]$EditFooter,
     [switch]$EditHeader,
     [switch]$EditPackageNotes,
     [switch]$MakeBackups,
+	[switch]$Offline,
     [switch]$OpenURLs,
     [switch]$OpenValidatorInfo,
     [switch]$OptimizeImages,
     [switch]$Recurse,
-    [switch]$ReduceOutput,
-    [switch]$ReducedOutput,
+	[Alias("ReducedOutput")][switch]$ReduceOutput,
     [switch]$ShowFooter,
     [switch]$ShowHeader,
     [switch]$ShowPackageNotes,
@@ -135,44 +136,50 @@ param (
     [switch]$WhatIf
  )
 
-Write-Host "CNC.ps1 v2023.09.10 - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
+Write-Host "CNC.ps1 v2024.01.14-pre - (unofficial) Chocolatey .nuspec Checker ""CNC - Run it through the Bill.""" -Foreground White
 Write-Host "Copyleft 2018-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
 if (!($ENV:ChocolateyToolsLocation)) {$ENV:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
-if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3")) {Write-Warning "Configuration not found. Please re-install.";throw}
+if (!(Test-Path "$ENV:ChocolateyToolsLocation\BCURRAN3\$scriptDir\CNC.config")) {Write-Warning "Configuration not found."}
 
 # parameters and variables -------------------------------------------------------------------------------------
 
-$PSDefaultParameterValues['*:Encoding'] = 'utf8'
 $AcceptableIconExts=@("png","svg")
 # All 7Zip supported formats plus EXE, MSU, MSP, APPX, APPXBUNDLE, IMG - What else is needed?
 $BinaryExtensions=@("*.exe","*.img","*.msu","*.msp","*.appx","*.appxbundle","*.7z","*.xz","*.bzip2","*.gzip","*.tar","*.zip","*.wim","*.ar","*.arj","*.cab","*.chm","*.cpio","*.cramfs","*.dmg","*.ext","*.fat","*.gpt""*.hfs","*.ihex","*.iso","*.lzh","*.lzma","*.mbr","*.msi","*.nsis","*.ntfs","*.qcow2","*.rar","*.rpm","*.squashfs","*.udf","*.uefi","*.vdi","*.vhd","*.vmdk","*.xar","*.z")
-$CDNlist      = "https://www.staticaly.com, https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
-$CNCHeader    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCHeader.txt"
-$CNCFooter    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCFooter.txt"
-$CNCPackageNotes = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCPackageNotes.txt"
+$CDNlist      = "https://raw.githack.com, https://gitcdn.link, or https://www.jsdelivr.com"
+#$CNCHeader    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCHeader.txt"
+#$CNCFooter    = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCFooter.txt"
+#$CNCPackageNotes = "$ENV:ChocolateyToolsLocation\BCURRAN3\CNCPackageNotes.txt"
 $JPGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\jpegoptim.exe)
 $PNGOptimizer = (Test-Path $ENV:ChocolateyInstall\bin\PngOptimizerCL.exe)
-$NewCDN       = "Staticly"
-$StaticlyCDN  = $True
+$NewCDN       = "jsDelivr"
+$jsDelivrCDN=$True
+$PSDefaultParameterValues['*:Encoding'] = 'utf8'
+$scriptDir   = "$ENV:ChocolateyToolsLocation\BCURRAN3"
 $XMLComment = "Do not remove this test for UTF-8: if `“Ω`” doesn`’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one."
 $XMLNamespace = "http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd"
 # <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
 
-## Import preferences - see comments in CNC.config for settings 
-#[xml]$ConfigFile = Get-Content "$scriptDir\CNC.config"
-#$UpdateAll       = $ConfigFile.Settings.Preferences.UpdateAll
-#$CDN             = $ConfigFile.Settings.Preferences.CDN
-#$MakeBackups     = $ConfigFile.Settings.Preferences.MakeBackups
-#$OptimizeImages  = $ConfigFile.Settings.Preferences.OptimizeImages
-#$Header          = $ConfigFile.Settings.Preferences.Header
-#$Footer          = $ConfigFile.Settings.Preferences.Footer
-#$PackageNotes    = $ConfigFile.Settings.Preferences.PackageNotes
-
-#$UseHeader       = $ConfigFile.Settings.Preferences.UseHeader
-#$UseFooter       = $ConfigFile.Settings.Preferences.UseFooter
-#$UsePackageNotes = $ConfigFile.Settings.Preferences.UsePackageNotes
+# Import preferences - see comments in CNC.config for settings 
+[xml]$ConfigFile = Get-Content "$scriptDir\CNC.config"
+if ($ConfigFile.Settings.Preferences.UpdateAll -eq 'true') {$UpdateAll=$True}
+if ($ConfigFile.Settings.Preferences.UpdateImageURLs -eq 'true') {$UpdateImageURLs=$True}
+if ($ConfigFile.Settings.Preferences.AddHeader -eq 'true') {$AddHeader=$True}
+if ($ConfigFile.Settings.Preferences.AddFooter -eq 'true') {$AddFooter=$True}
+if ($ConfigFile.Settings.Preferences.AddPackageNotes -eq 'true') {$AddPackageNotes=$True}
+if ($ConfigFile.Settings.Preferences.MakeBackups -eq 'true') {$MakeBackups=$True}
+if ($ConfigFile.Settings.Preferences.Offline -eq 'true') {$Offline=$True}
+if ($ConfigFile.Settings.Preferences.OptimizeImages -eq 'true') {$OptimizeImages=$True}
+if ($ConfigFile.Settings.Preferences.ReduceOutput -eq 'true') {$ReduceOutput=$True}
+$NewCDN       = $ConfigFile.Settings.Preferences.CDN
+if ($NewCDN -match 'GitHack') {$GitHackCDN=$True}
+if ($NewCDN -match 'GitCDN') {$GitCDN=$True}
+if ($NewCDN -match 'jsDelivr') {$jsDelivrCDN=$True}
+$Header       = $ConfigFile.Settings.Preferences.Header
+$Footer       = $ConfigFile.Settings.Preferences.Footer
+$PackageNotes = $ConfigFile.Settings.Preferences.PackageNotes
 
 if ($help) {
     Get-Help $MyInvocation.MyCommand.Definition -Detailed
@@ -185,42 +192,31 @@ if (Test-Path $ENV:ChocolateyInstall\bin\notepad++.exe){
       $Editor="notepad.exe"
     }
 
-if ($EditFooter) {
-    Write-Host "  ** Editing contents of $CNCFooter." -Foreground Magenta
-	&$Editor $CNCFooter
-	return
-}
+if ($EditFooter) {Write-Host "  ** Deprecated. Using -EditConfig." -Foreground Magenta; $EditConfig=$True}
+if ($EditHeader) {Write-Host "  ** Deprecated. Using -EditConfig." -Foreground Magenta; $EditConfig=$True}
+if ($EditPackageNotes) {Write-Host "  ** Deprecated. Using -EditConfig." -Foreground Magenta; $EditConfig=$True}
 
-if ($EditHeader) {
-    Write-Host "  ** Editing contents of $CNCHeader." -Foreground Magenta
-	&$Editor $CNCHeader
-	return
-}
-
-if ($EditPackageNotes) {
-    Write-Host "  ** Editing contents of $CNCPackageNotes." -Foreground Magenta
-	&$Editor $CNCPackageNotes
+if ($EditConfig) {
+    Write-Host "  ** Editing contents of "$scriptDir\CNC.config"." -Foreground Magenta
+	&$Editor "$scriptDir\CNC.config"
 	return
 }
 
 if ($ShowFooter) {
-	Write-Host "  ** Displaying contents of $CNCFooter." -Foreground Magenta
-    Write-Host	
-    Get-Content $CNCFooter
+	Write-Host "  ** Displaying Footer from $scriptDir\CNC.config." -Foreground Magenta
+    Write-Host	"$Footer" -Foreground Yellow
 	return
 }
 
 if ($ShowHeader) {
-    Write-Host "  ** Displaying contents of $CNCHeader." -Foreground Magenta
-    Write-Host	
-    Get-Content $CNCHeader
+    Write-Host "  ** Displaying Header from $scriptDir\CNC.config." -Foreground Magenta
+    Write-Host	"$Header" -Foreground Yellow
 	return
 }
 
 if ($ShowPackageNotes) {
-    Write-Host "  ** Displaying contents of $CNCPackageNotes." -Foreground Magenta
-    Write-Host	
-    Get-Content $CNCPackageNotes
+    Write-Host "  ** Displaying PackageNotes from $scriptDir\CNC.config." -Foreground Magenta
+    Write-Host	"$PackageNotes" -Foreground Yellow
 	return
 }
 
@@ -230,8 +226,6 @@ if ($OpenValidatorInfo) {
     &start https://docs.chocolatey.org/en-us/community-repository/moderation/package-validator/rules/
 	return
 }
-
-if ($ReducedOutput) {$ReduceOutput=$True}
 
 if ($Update) {$GLOBAL:UpdateNuspec=$True}
 
@@ -250,27 +244,33 @@ if ($UpdateAll) {
 }
 
 if ($UseGitHack) {
-     $GitHackCDN=$True
-	 $StaticlyCDN=$False
+	 $GitHackCDN=$True
+	 $GitCDN=$False
+     $jsDelivrCDN=$False
 	 $NewCDN="GitHack"
+	 $UpdateImageURLs=$True
    } else {
      $GitHackCDN=$False
 }
 
 if ($UsegitCDN) {
-     $GitCDN=$True
-	 $StaticlyCDN=$False
+	 $GitHackCDN=$False
+	 $GitCDN=$True
+     $jsDelivrCDN=$False
 	 $NewCDN="GitCDN"
+	 $UpdateImageURLs=$True
    } else {
      $GitCDN=$False
 }
 
 if ($UsejsDelivr) {
+	 $GitHackCDN=$False
+	 $GitCDN=$False
      $jsDelivrCDN=$True
-	 $StaticlyCDN=$False
 	 $NewCDN="jsDelivr"
-   } else {
-     $jsDelivrCDN=$False
+	 $UpdateImageURLs=$True
+#   } else {
+#     $jsDelivrCDN=$False
 }
 
 if ($path -eq "\"){
@@ -317,6 +317,7 @@ if ($NuspecIconURL -Match '.SVG') {
 	Write-Host "           ** <iconUrl> - SVG image found. It's a vector Victor - no dimensions. We have clearance, Clarence." -Foreground Green
 	return
 	}
+if ($Offline) {return}
 Write-Host "(Downloading icon)" -NoNewLine -Foreground Magenta
 (New-Object System.Net.WebClient).DownloadFile($NuspecIconURL, "$pwd\iconURL.image")
 Write-Host "`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b                  `b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b`b" -NoNewLine
@@ -377,6 +378,7 @@ function Test-PowerShellSyntax
 # Validate that URL elements are actually URLs and verify the URLs are good
 # Thanks https://stackoverflow.com/questions/23760070/the-remote-server-returned-an-error-401-unauthorized
 function Validate-URL([string]$element,[string]$url){
+	if ($Offline) {return}
 if (($url -match 'http://') -or ($url -match 'https://')){
 	 Write-Host "(Validating URL)" -NoNewLine -Foreground Magenta
      $HTTP_Response = $null
@@ -597,8 +599,9 @@ function Add-Header{
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	  }	
-  if (Test-Path $CNCHeader){
-      $Header=[IO.File]::ReadAllText($CNCHeader)
+#  if (Test-Path $CNCHeader){
+#      $Header=[IO.File]::ReadAllText($CNCHeader)
+#      $Header=$CNCHeader
 	  if ($Header -match '\$NuspecAuthors') {$Header=$Header -replace '\$NuspecAuthors',"$NuspecAuthors"}
 	  if ($Header -match '\$NuspecID') {$Header=$Header -replace '\$NuspecID',"$NuspecID"}
 	  if ($Header -match '\$NuspecOwners') {$Header=$Header -replace '\$NuspecOwners',"$NuspecOwners"}
@@ -609,10 +612,10 @@ function Add-Header{
 	  $GLOBAL:UpdateNuspec=$True
 	  $GLOBAL:Fixes++
 	  return $NuspecDescription
-    } else {
-	  Write-Warning "           ** $CNCHeader not found."
-	  return $NuspecDescription
-     }
+#    } else {
+#	  Write-Warning "           ** $CNCHeader not found."
+#	  return $NuspecDescription
+#     }
 }
 
 # check if footer template is in the description
@@ -638,8 +641,9 @@ function Add-Footer{
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	 }	
-  if (Test-Path $CNCFooter){
-      $Footer=[IO.File]::ReadAllText($CNCFooter)
+#  if (Test-Path $CNCFooter){
+      #$Footer=[IO.File]::ReadAllText($CNCFooter)
+#	  $Footer=$CNCFooter
 	  if ($Footer -match '\$NuspecAuthors') {$Footer=$Footer -replace '\$NuspecAuthors',"$NuspecAuthors"}
 	  if ($Footer -match '\$NuspecID') {$Footer=$Footer -replace '\$NuspecID',"$NuspecID"}
 	  if ($Footer -match '\$NuspecOwners') {$Footer=$Footer -replace '\$NuspecOwners',"$NuspecOwners"}
@@ -650,10 +654,10 @@ function Add-Footer{
       $GLOBAL:UpdateNuspec=$True
 	  $GLOBAL:Fixes++
 	  return $NuspecDescription
-    } else {
-	  Write-Warning "           ** $CNCFooter NOT found."
-	  return $NuspecDescription
-    }
+#    } else {
+#	  Write-Warning "           ** $CNCFooter NOT found."
+#	  return $NuspecDescription
+#    }
 }
 
 # check if package release notes are in the description
@@ -683,8 +687,9 @@ function Add-PackageNotes{
 	  $GLOBAL:FYIs++
 	  return $NuspecDescription
 	 }	
-  if (Test-Path $CNCPackageNotes){
-      $PackageNotes=[IO.File]::ReadAllText($CNCPackageNotes)
+#  if (Test-Path $CNCPackageNotes){
+#      $PackageNotes=[IO.File]::ReadAllText($CNCPackageNotes)
+#      $PackageNotes=$CNCPackageNotes
 	  if ($PackageNotes -match '\$NuspecAuthors') {$PackageNotes=PackageNotes -replace '\$NuspecAuthors',"$NuspecAuthors"}
 	  if ($PackageNotes -match '\$NuspecID') {$PackageNotes=$PackageNotes -replace '\$NuspecID',"$NuspecID"}
 	  if ($PackageNotes -match '\$NuspecOwners') {$PackageNotes=$PackageNotes -replace '\$NuspecOwners',"$NuspecOwners"}
@@ -695,10 +700,10 @@ function Add-PackageNotes{
       $GLOBAL:UpdateNuspec=$True
 	  $GLOBAL:Fixes++
 	  return $NuspecDescription
-    } else {
-	  Write-Warning "           ** $CNCPackageNotes NOT found."
-	  return $NuspecDescription
-    }
+#    } else {
+#	  Write-Warning "           ** $CNCPackageNotes NOT found."
+#	  return $NuspecDescription
+#    }
 }
 
 # check Markdown header problems after chocolatey.org Sept. 2019 updates
@@ -721,6 +726,7 @@ function Fix-Markdown{
 
 # Check package current status on chocolatey.org
 function Check-OnlineStatus{
+	if ($Offline) {return}
 $PackagePageInfo  = try { (Invoke-WebRequest -Uri "https://chocolatey.org/packages/$NuspecID" -UseBasicParsing -DisableKeepAlive).StatusCode } catch [Net.WebException]{ [int]$_.Exception.Response.StatusCode } 
   if ($PackagePageInfo -eq '404'){
 	  Write-Host "FYI:       ** This appears to be a brand new package. Cool!" -Foreground Green
@@ -829,16 +835,10 @@ function Run-PNGOptimizer{
 # TODO check for "main" when GH stops making new repos with "master" in 10/2020
 # Convert RawGit and non-CDN URLs to supported CDN URLs
 function Update-CDNURL([string]$oldURL){
-  if ($StaticlyCDN){
-      if ($oldURL -match 'https://raw.githubusercontent.com'){$StaticalyURL=($oldURL -replace 'https://raw.githubusercontent.com','https://cdn.staticaly.com/gh')}
-      if ($oldURL -match 'https://cdn.rawgit.com'){$StaticalyURL=($oldURL -replace 'https://cdn.rawgit.com','https://cdn.staticaly.com/gh')}
-      $GLOBAL:UpdateNuspec=$True
-      $GLOBAL:Fixes++
-      return $StaticalyURL
-    }
   if ($GitCDN){
       if ($oldURL -match 'https://raw.githubusercontent.com'){$GitCNDURL=($oldURL -replace 'https://raw.githubusercontent.com','https://gitcdn.link/repo')}
       if ($oldURL -match 'https://cdn.rawgit.com'){$GitCNDURL=($oldURL -replace 'https://cdn.rawgit.com','https://gitcdn.link/repo')}
+	  if ($oldURL -match 'https://cdn.staticaly.com/gh'){$GitCNDURL=($oldURL -replace 'https://cdn.staticaly.com/gh','https://gitcdn.link/repo')}
       $GLOBAL:UpdateNuspec=$True
       $GLOBAL:Fixes++
       return $GitCNDURL
@@ -846,6 +846,7 @@ function Update-CDNURL([string]$oldURL){
   if ($GitHackCDN){
       if ($oldURL -match 'https://raw.githubusercontent.com'){$GitHackURL=($oldURL -replace 'https://raw.githubusercontent.com','https://rawcdn.githack.com')}
       if ($oldURL -match 'https://cdn.rawgit.com'){$GitHackURL=($oldURL -replace 'https://cdn.rawgit.com','https://rawcdn.githack.com')}
+      if ($oldURL -match 'https://cdn.staticaly.com/gh'){$GitHackURL=($oldURL -replace 'https://cdn.staticaly.com/gh','https://rawcdn.githack.com')}
       $GLOBAL:UpdateNuspec=$True
       $GLOBAL:Fixes++
       return $GitHackURL
@@ -860,10 +861,15 @@ function Update-CDNURL([string]$oldURL){
           $jsDelivrURL=($oldURL -replace 'https://cdn.rawgit.com','https://cdn.jsdelivr.net/gh')
 	      $jsDelivrURL=($jsDelivrURL -replace 'master/','')
 	     }
+      if ($oldURL -match 'https://cdn.staticaly.com/gh'){
+          $jsDelivrURL=($oldURL -replace 'https://cdn.staticaly.com/gh','https://cdn.jsdelivr.net/gh')
+	      $jsDelivrURL=($jsDelivrURL -replace 'master/','')
+	     }
       $GLOBAL:UpdateNuspec=$True
       $GLOBAL:Fixes++
       return $jsDelivrURL
     }
+  Write-Host "           ** No CDN selected." -Foreground Red
 }
 
 # Update the nuspec XML declaration with encoding info
@@ -1358,6 +1364,10 @@ if (!$NuspecDescription){
 		 }
 		 $GLOBAL:Required++
 		 }
+     if ($NuspecDescription -match 'cdn.staticaly.com'){
+	     Write-Host "           ** <description> - includes a now defunct staticaly.com link. Change to a diffeent CDN." -Foreground Red
+         $GLOBAL:FYIs++
+		}
 	 if ($NuspecDescription -match "raw.githubusercontent"){
 		 if ($UpdateImageURLs){
 			 Write-Host "           ** <description> - URL(s) updated to use $NewCDN." -Foreground Green
@@ -1462,6 +1472,10 @@ if (!($NuspecIconURL)) {
 		 }
          $GLOBAL:Required++
 		}
+     if ($NuspecIconURL -cmatch 'cdn.staticaly.com'){
+	     Write-Host "WARNING:   ** <iconUrl> - includes a now defunct staticaly.com link. Change to a diffeent CDN." -Foreground Red
+         $GLOBAL:FYIs++
+		}
      Validate-URL "<iconUrl>" $NuspecIconURL
 	 if ($GLOBAL:ValidURL){
 	     Get-ImageDimensions
@@ -1476,9 +1490,9 @@ if (!($NuspecIconURL)) {
        }
 	 if ($NuspecIconURL -match "raw.githubusercontent"){
          if ($UpdateImageURLs) {
-		    $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
-			Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
-		   } else {
+			 $NuspecIconURL=$(Update-CDNURL "$NuspecIconURL")
+			 Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
+		 } else {
 		     Write-Warning "  ** <iconUrl> - uses a GitHub raw link. Please use a CDN such as:"
 			 if (!$ReduceOutput) {
 				 Write-Host "           ** $CDNlist" -Foreground Cyan		   
@@ -1489,7 +1503,7 @@ if (!($NuspecIconURL)) {
 		}
      if ($NuspecIconURL -match "cdn.rawgit.com"){
          if ($UpdateImageURLs) {
-		     $NuspecIconURL=(Update-CDNURL "$NuspecIconURL")
+		     $NuspecIconURL=$(Update-CDNURL "$NuspecIconURL")
 			 Write-Host "           ** <iconUrl> - URL updated to: `n              $NuspecIconURL" -Foreground Green
 		   } else {
 		     Write-Warning "  ** <iconUrl> - uses RawGit which will be going offline October 2019. Please change to a CDN such as:"
@@ -1943,10 +1957,10 @@ exit $exitcode
 # ^ ALMOST: $NuspecDescription | Select-String -Pattern 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)' -AllMatches   | % { $_.Matches } `  | % { $_.Value } `  | Sort-Object ` | Get-Unique
 # ^ doesn't strip ) end of markdown [](), strips * in urls
 # Reformat invalid Markdown headings automagically (Need to parse out and skip URLs.)
-# Move header, footer, and package notes into one XML config file
 # Add option of displaying useful tips and tweaks (AutoHotKey, BeCyIconGrabber, PngOptimizer, Regshot, service viewer program, Sumo, etc)
 # Add logging option when recursivly checking files
 # MAYBE edit and re-write handling CDATA in description (not sure if there is a need)
 # Address new Validator changes: https://blog.chocolatey.org/2022/08/upcoming-changes-validator/ - HIGH PRIORITY
 # Possibly add option to run scripts through PSScriptAnalyzer
+# re-order elements in groupings
 # What else?
