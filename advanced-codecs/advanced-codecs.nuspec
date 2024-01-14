@@ -4,7 +4,7 @@
   <metadata>
     <id>advanced-codecs</id>
     <title>Shark007's 64bit ADVANCED Codecs (Portable)</title>
-    <version>18.2.0</version>
+    <version>18.2.2</version>
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ## 64bit ADVANCED Codecs for Windows
 	
-![Screen shot of Settings Application](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_screenshot.png)
+![Screen shot of Settings Application](https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/advanced-codecs/advanced-codecs_screenshot.png)
 
 ## Portable, self updating, codec solutions.
 
@@ -67,7 +67,7 @@ If you ever find yourself broken, simply press the [RESET ALL] button to return 
 [SETUP AND USAGE](https://shark007.net/forum/Thread-Setup-and-usage)
 
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/advanced-codecs/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/advanced-codecs/readme.md)**
 
 ---
 
@@ -78,12 +78,12 @@ If you ever find yourself broken, simply press the [RESET ALL] button to return 
 </description>
     <projectUrl>https://shark007.net/x64components1.html</projectUrl>
     <docsUrl>https://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
-	<releaseNotes>(unofficial) https://www.videohelp.com/software/Win7codecs/version-history</releaseNotes>
+    <releaseNotes>(unofficial) https://www.videohelp.com/software/Win7codecs/version-history</releaseNotes>
     <mailingListUrl>https://shark007.net/forum/</mailingListUrl>
     <tags>shark007 codecs codec audio video multimedia ffdshow ffmpeg icaros lav amr mpc ofr divx mka ape flac evo flv m4b mkv ogg ogv ogm rmvb h264 h265 avi wmv rm mpg mp4 xvid y4m binary embedded</tags>
     <licenseUrl>https://shark007.net/disclaimer.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/advanced-codecs/advanced-codecs_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/advanced-codecs/advanced-codecs_icon.png</iconUrl>
     <dependencies>
       <dependency id="chocolatey-misc-helpers.extension" version="0.0.2" />
     </dependencies>
@@ -92,4 +92,3 @@ If you ever find yourself broken, simply press the [RESET ALL] button to return 
     <file src="tools\**" target="tools" />
   </files>
 </package>
-
