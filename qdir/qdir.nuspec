@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>qdir</id>
-    <version>11.44</version>
+    <version>11.46</version>
     <title>Q-Dir (Install)</title>
     <authors>Nenad Hrg (SOFTWAREOK.COM)</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
     <projectUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/qdir/qdir_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/qdir/qdir_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
