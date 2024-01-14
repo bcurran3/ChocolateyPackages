@@ -4,7 +4,7 @@ $toolsDir       = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $IntelPackageNumber = '813202'
 #$url64          = "https://downloadmirror.intel.com/$IntelPackageNumber/KillerPerformanceSuite_"+$env:ChocolateyPackageVersion+"_Win10-11x64.exe"
 $url64          = 'https://downloadmirror.intel.com/813202/KillerPerformanceSuite_35.23.1292_Win10-11x64.exe'
-$checksum64     = 'D4FED4EEE4CCAAD97C5E80CADC477ACF34451DEDC1B64456AA71B4E16DFBA603'
+$checksum64     = 'C6918D5D6D2EF73FA95C106982990ED74F4FA700A1476B5FA5842DB7A5CAA7AB'
 
 Confirm-Win10
 
