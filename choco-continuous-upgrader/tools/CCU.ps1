@@ -20,16 +20,16 @@ param (
 	[int]$WaitTime
  )
 
-Write-Host "CCU.ps1 v1.0.1 (2023/12/11) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
+Write-Host "CCU.ps1 v1.0.2 (2024/01/14) - (unofficial) Chocolatey Continuous Upgrader" -Foreground White
 Write-Host "Copyleft 2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
+if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 $ErrorActionPreference = 'Stop'
 $Background=$True
 $CCUconfig="$env:chocolateyToolsLocation\BCURRAN3\CCU.config"
 $RunningFile="$env:chocolateyToolsLocation\BCURRAN3\CCU-running.tmp"
 $StatusFile="$env:chocolateyToolsLocation\BCURRAN3\CCU-status.tmp"
 $execdir=(Split-Path -parent $MyInvocation.MyCommand.Definition)
-if (!$env:ChocolateyToolsLocation) {$env:ChocolateyToolsLocation = "$ENV:SystemDrive\tools"}
 
 function create_config {
 	Write-Host "  ** Creating CCU config file:`n" -Foreground Magenta

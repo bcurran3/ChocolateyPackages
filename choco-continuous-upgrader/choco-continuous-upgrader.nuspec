@@ -3,13 +3,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-continuous-upgrader</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <title>(unofficial) Chocolatey Continuous Upgrader (CCU) (Script)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/choco-continuous-upgrader/choco-continuous-upgrader_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -19,8 +19,8 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of choco-continuous-upgrader](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_screenshot.png)
-[Click here for secret GeekMode screenshot](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-continuous-upgrader/choco-continuous-upgrader_geekmodescreenshot.png)
+![Screenshot of choco-continuous-upgrader](https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/choco-continuous-upgrader/choco-continuous-upgrader_screenshot.png)
+[Click here for secret GeekMode screenshot](https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/choco-continuous-upgrader/choco-continuous-upgrader_geekmodescreenshot.png)
 
 This package is a pseudo replacement for [choco-upgrade-all-at](https://chocolatey.org/packages/choco-upgrade-all-at) which is a pseudo replacement for [choco-upgrade-all-at-startup](https://chocolatey.org/packages/choco-upgrade-all-at-startup). (Got that? There will be a pop quiz!) **CCU** is a result of my obsessive desire to keep my Chocolatey packages up-to-date.
 
@@ -48,13 +48,14 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
 **CCU -CreateTask** to set CCU to run on bootup.
 **CCU -Help** for more info.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-continuous-upgrader/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/choco-continuous-upgrader/readme.md)**
 
 **If you find choco-continuous-upgrader (CCU) useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
     </description>
     <summary>choco-continuous-upgrader (CCU) - Upgrades your Chocolatey packages continuously throughout the day.</summary>
     <releaseNotes>
 ### CHANGELOG:
+* 1.0.2 - fixed bug where $env:ChocolateyToolsLocation wasn't defined before use
 * 1.0.1 - Re-worded some status messages and added timestamp to last check. If the event WinRM fails to start for toast notifications MSG will now be used.
 * 1.0.0 - initial release
 
