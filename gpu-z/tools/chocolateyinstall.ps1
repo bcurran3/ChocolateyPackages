@@ -2,7 +2,7 @@
 #https://www.techpowerup.com/download/techpowerup-gpu-z/
 $packageName = 'gpu-z'
 $toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$file        = (Get-ChildItem $toolsDir\GPU-Z*.exe).name
+$file        = $((Get-ChildItem $toolsDir\GPU-Z*.exe).name)
 
 Remove-Item $ENV:ChocolateyInstall\bin\gpu-z*.exe  # delete old shims
 Remove-Item $toolsDir\*.ignore                     # delete old .ignore files (2.18.0+)
