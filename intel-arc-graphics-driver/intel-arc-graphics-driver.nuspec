@@ -9,7 +9,7 @@
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
     <title>Intel Arc &amp; Iris Xe Graphics Drivers</title>
     <authors>Intel Corporation</authors>
-    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/intel-arc-graphics-driver/intel-arc-graphics-driver_icon.png</iconUrl>
     <copyright>© Intel Corporation</copyright>
     <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -55,7 +55,7 @@ Any graphics issues found using Intel generic graphics drivers should be [report
     <releaseNotes>https://downloadmirror.intel.com/813048/readme_101.5122.txt</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
-      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
     </dependencies>
   </metadata>
   <files>
