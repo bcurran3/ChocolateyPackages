@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>intel-arc-graphics-driver</id>
-    <version>31.0.101.5123</version>
+    <version>31.0.101.5186</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/785597</projectUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
@@ -23,8 +23,6 @@
 To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
 
 ---
-
-## NOTE: Repackage of v31.0.101.5122
 
 ## Detailed Description
 **Note:** Installing this Intel generic graphics driver will overwrite your computer manufacturer (OEM) customized driver. OEM drivers are handpicked and include customized features and solutions to platform-specific issues. The generic Intel driver provides users the latest and greatest feature enhancements and bug fixes that OEMs may not have customized yet to address platform-specific needs. Users can check for matching OEM versions at OEM websites.
@@ -52,7 +50,7 @@ Any graphics issues found using Intel generic graphics drivers should be [report
 ---
 
 </description>
-    <releaseNotes>https://downloadmirror.intel.com/813048/readme_101.5122.txt</releaseNotes>
+    <releaseNotes>https://downloadmirror.intel.com/814237/ReleaseNotes_101.5186_101.5234_WHQL.pdf</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
       <dependency id="chocolatey-os-dependency.extension" version="0.0.1" />
