@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>dropbox-disable-autoupdate.hook</id>
+    <version>0.1.0</version>
+    <title>dropbox-disable-autoupdate.hook (Post-Install Hook)</title>
+    <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dropbox-disable-autoupdate.hook</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+disables Dropbox's automatic updates
+    </description>
+    <summary>disables Dropbox's automatic updates</summary>
+    <releaseNotes>
+### CHANGELOG:
+* 0.1.0 - initial release
+	</releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 unofficial choco cleaner cleanup hook</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dropbox-disable-autoupdate.hook</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/dropbox-disable-autoupdate.hook</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="hook\**" target="hook" />
+  </files>
+</package>

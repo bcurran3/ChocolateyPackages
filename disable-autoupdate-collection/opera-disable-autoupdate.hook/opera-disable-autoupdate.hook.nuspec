@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
+  <metadata>
+    <id>opera-disable-autoupdate.hook</id>
+    <version>0.1.0</version>
+    <title>opera-disable-autoupdate.hook (Post-Install Hook)</title>
+    <authors>bcurran3</authors>
+    <owners>bcurran3</owners>
+    <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/opera-disable-autoupdate.hook</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>
+## Disables [Opera](https://community.chocolatey.org/packages/opera)'s automatic updates so that upgrades are handled only by Chocolatey.
+    </description>
+    <summary>disables Opera's automatic updates</summary>
+    <releaseNotes>
+### CHANGELOG:
+* 0.1.0 - initial release
+	</releaseNotes>
+    <copyright>Copyleft Bill Curran</copyright>
+    <tags>bcurran3 disableautoupdate opera hook</tags>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/opera-disable-autoupdate.hook</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/opera-disable-autoupdate.hook</packageSourceUrl>
+    <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+    <dependencies>
+      <dependency id="chocolatey" version="1.2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="hook\**" target="hook" />
+  </files>
+</package>

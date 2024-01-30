@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
     <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-nuspec-checker</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/choco-nuspec-checker/choco-nuspec-checker_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
 ---
@@ -19,7 +19,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 
-![Screenshot of (unofficial) Chocolatey .nuspec Checker (CNC) (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
+![Screenshot of (unofficial) Chocolatey .nuspec Checker (CNC) (Script)](https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
 ## **choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix most of them! Find out AND FIX what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** also goes beyond it's original scope and checks for common Chocolatey install/uninstall script errors and omissions as well.
 
@@ -48,7 +48,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC -help** for help with options and switches
 * Run **CNC** to check the .nuspec in your current directory or run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/choco-nuspec-checker/readme.md)**
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
     </description>
@@ -58,7 +58,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * 2024.xx.xx - New CNC.config file for setting your preferences/defaults. New offline mode. BREAKING CHANGES: CNCFooter.txt, CNCHeader.txt, and CNCPackageNotes.txt are no longer used. Functionality is replaced with contents in CNC.config. When using a UseCDN switch -UpdateImageURLs defaults to true. Can now replace defunct Staticaly CDN URLs with other CDN URLs.
 * 2023.09.10 - -OptimizeImages works again, added optimization of JPG files if jpegoptim is installed when using the -OptimizeImages feature, -UpdateXMLNamespace works again
 * 2023.05.17 - CNC now returns a non-zero exit code if there are any required changes and displays the total required changes of all nuspec files when the -Recurse switch is used
-* 2023.05.15 - display # of characters when description is >4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file, added TheCakeIsNaOH's (Thanks!) move args to params and add help comments merge, minor updates to package URL checking and noficiations, no longer checks URLs with variables baked in, don't display PS error when non-image icon files are downloaded, less false positives checking for sourceforge and fosshub links in chocolateyinstall.ps1, updated markdown checking to display error line(s), checks chocolateyinstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included, new -ReduceOutput option to only show problems/errors (no blue or green informational messages), checks chocolateyinstall.ps1 for use of checksums, added checking for private enviroment variables, reports when http instead of https links are used, fixed bug where releaseNotes wasn't being checked for invalid Markdown
+* 2023.05.15 - display # of characters when description is &gt;4000, more specific template value checking, fix empty/missing files element message, skip dimension checking of SVG files, prep for moving some options to config file, added TheCakeIsNaOH's (Thanks!) move args to params and add help comments merge, minor updates to package URL checking and noficiations, no longer checks URLs with variables baked in, don't display PS error when non-image icon files are downloaded, less false positives checking for sourceforge and fosshub links in chocolateyinstall.ps1, updated markdown checking to display error line(s), checks chocolateyinstall.ps1 for improper use of Install-ChocolateyPackage and Install-ChocolateyZipPackage when binaries are included, new -ReduceOutput option to only show problems/errors (no blue or green informational messages), checks chocolateyinstall.ps1 for use of checksums, added checking for private enviroment variables, reports when http instead of https links are used, fixed bug where releaseNotes wasn't being checked for invalid Markdown
 * 2020.09.21 - recurse switch has been added, thanks TheCakeIsNaOH!
 * 2020.09.20 - An AddPackageNotes feature has been added, works the same as the AddHeader and AddFooter options. Updated nuspec URL errors as requirements to be fixed. Updated online package status messages. Added "PackageInternalFilesIncluded" checking. Minor cosmetic updates.
 * 2020.09.15 - CNC will now ignore update.ps1 files.

@@ -4,7 +4,7 @@
 # LICENSE: GNU GPL v3 - https://www.gnu.org/licenses/gpl.html
 # Suggestions? Problems? Open a GitHub issue at https://github.com/bcurran3/ChocolateyPackages/issues
 
-Write-Host "Choco-Cleaner.ps1 v1.1.1 (2023-06-26) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
+Write-Host "Choco-Cleaner.ps1 v1.1.2 PRE (2023-07-21) - deletes unnecessary residual Chocolatey files to free up disk space" -Foreground White
 Write-Host "Copyleft 2017-2023 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 # Verify ChocolateyToolsLocation was created by Get-ToolsLocation during install and is in the environment
@@ -25,10 +25,24 @@ if ($args -eq "-EditConfig"){
 	return
 }
 
+# Easily edit the CCRT config file
+if ($args -eq "-EditConfigRT"){
+	Write-Host "  ** Editing contents of choco-cleaner-rt.config." -Foreground Magenta
+	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner-rt.config"
+	return
+}
+
 # Easily view the log file
 if ($args -eq "-ViewLog"){
 	Write-Host "  ** Showing contents of choco-cleaner.log." -Foreground Magenta
 	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner.log"
+	return
+}
+
+# Easily view the CCRT log file
+if ($args -eq "-ViewLogRT"){
+	Write-Host "  ** Showing contents of choco-cleaner-rt.log." -Foreground Magenta
+	&$Editor "$ENV:ChocolateyToolsLocation\BCURRAN3\choco-cleaner-rt.log"
 	return
 }
 

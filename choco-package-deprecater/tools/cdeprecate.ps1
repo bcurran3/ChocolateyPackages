@@ -10,7 +10,7 @@ $ErrorActionPreference = 'Stop'
 # REF: https://github.com/chocolatey/choco-wiki/issues/109
 # REF: https://github.com/chocolatey/choco-wiki/issues/110
 
-Write-Host "cdeprecate.ps1 v2022.03.15 - (unofficial) Chocolatey Package Deprecater/Retirer" -Foreground White
+Write-Host "cdeprecate.ps1 v2022.03.17 - (unofficial) Chocolatey Package Deprecater/Retirer" -Foreground White
 Write-Host "Copyleft 2019-2022 Bill Curran (bcurran3@yahoo.com) - free for personal and commercial use`n" -Foreground White
 
 $PSDefaultParameterValues['*:Encoding'] = 'utf8'
@@ -97,7 +97,7 @@ $NuspecCopyright = $nuspecFile.package.metadata.copyright
 $NuspecDependencies = $nuspecFile.package.metadata.dependencies
 $NuspecDescription = $nuspecFile.package.metadata.description
 $NuspecDocsURL = $nuspecFile.package.metadata.docsurl
-$NuspecFiles = $nuspecFile.package.files.file
+$NuspecFiles = $nuspecFile.package.files
 $NuspecIconURL = $nuspecFile.package.metadata.iconurl
 $NuspecID = $nuspecFile.package.metadata.id
 $NuspecLicenseURL = $nuspecFile.package.metadata.licenseurl
@@ -119,15 +119,6 @@ $NuspecVersion = $nuspecFile.package.metadata.version
 
 $NuspecDisplayName=$LocalnuspecFile.Name
 $NuspecDisplayName=$NuspecDisplayName.ToUpper()
-
-if ($debug){
-	Write-Host "Path equals $path"
-	Write-Host "LocalnuspecFile equals $LocalnuspecFile"
-	Write-Host "nuspecXML equals $nuspecXML"
-	Write-Host "NuspecTitle equals $NuspecTitle"
-	Write-Host "nuspecFile.package.metadata.requireLicenseAcceptance equals $nuspecFile.package.metadata.requireLicenseAcceptance"
-	Write-Host "NuspecRequireLicenseAcceptance equals $NuspecRequireLicenseAcceptance"
-}
 
 if ($deprecate) {Write-Host "Deprecating $NuspecDisplayName`:" -Foreground Magenta}
 if ($retire){Write-Host "Retiring $NuspecDisplayName`:" -Foreground Magenta}
@@ -153,10 +144,10 @@ if ($NuspecBugTrackerURL) {$UpdatednuspecFile.package.metadata.bugtrackerurl=''}
 if ($NuspecCopyright) {$UpdatednuspecFile.package.metadata.copyright=''}
 if ($NuspecDependencies){
     if ($deprecate){
-        $UpdatednuspecFile.package.metadata.dependencies='Add your superceding package here.'
+        $UpdatednuspecFile.package.metadata.dependencies="Add your superceding package here."
        }
     if ($retire){
-        $UpdatednuspecFile.package.metadata.dependencies=''
+#        $UpdatednuspecFile.package.metadata.dependencies=""
       }
    } else {
      if ($deprecate){
@@ -168,8 +159,14 @@ if ($deprecate){$UpdatednuspecFile.package.metadata.description=$DeprecatedDescr
 if ($retire){$UpdatednuspecFile.package.metadata.description=$RetiredDescription}
 if ($NuspecDocsURL){$UpdatednuspecFile.package.metadata.docsurl=''}
 if ($NuspecIconURL){$UpdatednuspecFile.package.metadata.iconurl=''}
-if ($deprecate -and $addicon){$UpdatednuspecFile.package.metadata.iconurl=$DeprecatedIconUrl}
-if ($retire -and $addicon){$UpdatednuspecFile.package.metadata.iconurl=$RetiredIconUrl}
+if ($deprecate -and $addicon){
+	$UpdatednuspecFile.package.metadata.iconurl=$DeprecatedIconUrl
+	$UpdatednuspecFile.package.metadata.description="![deprecated icon]($DeprecatedIconUrl)`n $DeprecatedDescription"
+	}
+if ($retire -and $addicon){
+	$UpdatednuspecFile.package.metadata.iconurl=$RetiredIconUrl
+	$UpdatednuspecFile.package.metadata.description="![retired icon]($RetiredIconUrl)`n $RetiredDescription"
+	}
 if ($NuspecLicenseURL) {$UpdatednuspecFile.package.metadata.licenseurl=''}
 if ($NuspecRequireLicenseAcceptance) {$UpdatednuspecFile.package.metadata.requireLicenseAcceptance='false'}
 if ($NuspecMailingListURL) {$UpdatednuspecFile.package.metadata.mailinglisturl=''}
@@ -187,6 +184,47 @@ $UpdatednuspecFile.package.metadata.version='99.99.99.99'
 #TDL: Need to handle <files> still          <<<<<<<<<<<<<---------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #TDL: Need to handle <dependencies> still   <<<<<<<<<<<<<---------------------------------------------------------------------!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+if ($retire -and !$NuspecFiles)
+   {
+
+
+	$NewStuff=$UpdatednuspecFile.CreateNode("element", "files", $null)
+#    $NewStuff.InnerText=("true") 
+	$UpdatednuspecFile.package.AppendChild($NewStuff) | Out-Null
+
+	$NewStuff=$UpdatednuspecFile.CreateNode("element", "file", $null)
+    $NewStuff.InnerText=("the filespec") 
+    $UpdatednuspecFile.package.files.AppendChild($NewStuff) | Out-Null
+	   
+#	$child = $UpdatednuspecFile.CreateElement("files")
+#    $UpdatednuspecFile.DocumentElement.AppendChild($child)
+	
+#	$child = $UpdatednuspecFile.CreateElement("files", "file")
+#    $UpdatednuspecFile.DocumentElement.AppendChild($child)
+	
+#	$node = $UpdatednuspecFile.SelectSingleNode("//IpAddress[text()='1.2.3.5']")
+#    $UpdatednuspecFile.ParentNode.InsertAfter('files', 'file')
+	
+#	$child = $UpdatednuspecFile.CreateNode("file")
+#    $UpdatednuspecFile.files.DocumentElement.AppendChild($child)
+	   
+#	$NewStuff=$UpdatednuspecFile.CreateNode("element", "files", $null)
+#	$UpdatednuspecFile.package.AppendChild($NewStuff) | Out-Null
+#	$UpdatednuspecFile.package.files.AppendChild($UpdatednuspecFile.CreateElement("file"))
+	
+	
+	
+#	$NewStuff=$UpdatednuspecFile.CreateNode("element", "file", $null)
+#	$UpdatednuspecFile.package.files.AppendChild($NewStuff) | Out-Null
+#	$UpdatednuspecFile.package.files.file = "test"
+#	$NewStuff=$UpdatednuspecFile.files.CreateNode("element", "file", $null)
+#    $NewStuff.configuration.AppendChild('file src=`"tools\**`" target=`"tools`"')
+#    $NewStuff.InnerText=('file src=`"tools\**`" target=`"tools`"') 
+   }
+
+
+#############################
+
       $xfile = [System.Xml.XmlWriter]::Create($LocalnuspecFile, $settings)
       try{
         $UpdatednuspecFile.Save($xfile)
@@ -196,8 +234,8 @@ $UpdatednuspecFile.package.metadata.version='99.99.99.99'
 }
 
 if ($deprecate -or $retire) {
-    if (Test-Path $path\$LocalnuspecFile.cdeprecate.bak) {Write-Host "  ** Please delete your current backup before continuing." -Foreground Red ; break} # <<<-- doesn't work for some reason
-    Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.cdeprecate.bak" -Force | Out-Null # ALWAYS make backup copy!
+    if (Test-Path "$LocalnuspecFile.cdeprecate.bak") {Write-Host "  ** CAUTION: Please delete your current backup before continuing. `n" -Foreground Red ; break} 
+	    Copy-Item "$LocalnuspecFile" "$LocalnuspecFile.cdeprecate.bak" -Force | Out-Null # ALWAYS make backup copy!
     Write-Host "  ** Backup saved to $LocalnuspecFile.cdeprecate.bak." -Foreground Green
     Update-nuspec
 	if ($retire){

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>snort</id>
+    <version>2.9.20</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/snort</packageSourceUrl>
+    <owners>bcurran3</owners>
+    <title>Snort (Install)</title>
+    <authors>By Martin Roesch and The Snort Team</authors>
+    <projectUrl>https://www.snort.org/</projectUrl>
+    <iconUrl>https://www.snort.org/assets/Snortpig_professor2.png</iconUrl>
+    <copyright>Copyright (C) 2014-2015 Cisco and/or its affiliates. All rights reserved. Copyright (C) 1998-2013 Sourcefire, Inc., et al.</copyright>
+    <licenseUrl>https://www.snort.org/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.snort.org/downloads</projectSourceUrl>
+    <docsUrl>https://www.snort.org/documents</docsUrl>
+    <mailingListUrl>https://www.snort.org/community</mailingListUrl>
+    <bugTrackerUrl>https://www.snort.org/downloads</bugTrackerUrl>
+    <tags>snort network intrusion security utility packet sniffer binary</tags>
+    <summary>Snort is an open source intrusion prevention system capable of real-time traffic analysis and packet logging.</summary>
+    <description>
+___
+### [choco://snort](choco://snort)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+___
+
+#### What is Snort?
+
+Snort is the foremost Open Source Intrusion Prevention System (IPS) in the world. Snort IPS uses a series of rules that help define malicious network activity and uses those rules to find packets that match against them and generates alerts for users.
+
+Snort can be deployed inline to stop these packets, as well. Snort has three primary uses: As a packet sniffer like tcpdump, as a packet logger — which is useful for network traffic debugging, or it can be used as a full-blown network intrusion prevention system. Snort can be downloaded and configured for personal and business use alike.
+
+#### What are my options for buying and using Snort?
+
+Once downloaded and configured, Snort rules are distributed in two sets: The “Community Ruleset” and the “Snort Subscriber Ruleset.”
+
+The Snort Subscriber Ruleset is developed, tested, and approved by Cisco Talos. Subscribers to the Snort Subscriber Ruleset will receive the ruleset in real-time as they are released to Cisco customers. You can download the rules and deploy them in your network through the Snort.org website. The Community Ruleset is developed by the Snort community and QAed by Cisco Talos. It is freely available to all users.
+
+For more information about Snort Subscriber Rulesets available for purchase, please visit the Snort product page.
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/snort/readme.md)**
+	
+
+___
+
+Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.
+___
+
+</description>
+    <releaseNotes>https://www.snort.org/downloads/snort/release_notes_2.9.20.txt</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey" version="1.1.27" />
+      <dependency id="winpcap" version="4.1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

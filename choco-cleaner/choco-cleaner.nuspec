@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-cleaner</id>
-    <version>1.1.1</version>
+    <version>1.1.2</version>
     <title>(unofficial) Choco Cleaner (Script + Task)</title>
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
@@ -89,6 +89,7 @@ If you have a previous release of **Choco-Cleaner** installed, upgrading to a ne
 If you are using [choco-upgrade-all-at](https://community.chocolatey.org/packages/choco-upgrade-all-at) or [choco-upgrade-all-at-startup](https://community.chocolatey.org/packages/choco-upgrade-all-at-startup), run Choco-Upgrade-All -EditConfig and set **choco-cleaner** as your PostProcessScript and delete the scheduled task.
 
 ### CHANGELOG:
+* 1.x.x - Added -EditConfigRT and -ViewLogRT options for Choco Cleaner RT support
 * 1.1.1 - DeleteDotChocolatey now compatible with Chocolatey alpha/beta/delta/epsilon/zeta/eta/theta/iota/kappa/lambda/mu/nu/xi/omicron/pi/rho/sigma/tau/upsilon/phi/chi/psi/omega versions. No longer changes directory to .chocolatey when using DeleteDotChocolatey.
 * 1.1.0 - Chocolatey v2 compatible - due to the breaking change to the choco list command in Chocolatey v2, all files in .chocolatey get deleted when DeleteDotChocolatey feature is enabled. CC now checks the Chocolatey version and uses the appropriate choco list command depending on version.
 * 1.0.0 - v1.0 full feature release, all goals achieved! (The crowd roars... or is that just the sound of loud crickets?) You wanted **Choco-Cleaner** to delete the unnecessary files in the .chocolatey dir - you got it! now can delete files in lib-synced (opt-in), legend in config file got a much needed re-write (You won't see it/get it on upgrades.), no longer deletes .ignore files in Chocolatey program dirs as choco.exe regenerates 11 .ignore files EVERY time it runs now, changed log size from 4K to 50K due to increase in logging, "features" are now PS functions, now returns an exit code of 1 when there are errors

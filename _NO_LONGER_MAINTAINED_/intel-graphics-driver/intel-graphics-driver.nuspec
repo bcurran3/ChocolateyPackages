@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>intel-graphics-driver</id>
+    <version>31.0.101.3790</version>
+    <owners>bcurran3</owners>
+    <projectUrl>https://www.intel.com/content/www/us/en/download/19344</projectUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-graphics-driver</packageSourceUrl>
+    <title>Intel® Graphics – Windows* DCH Drivers</title>
+    <authors>Intel Corporation</authors>
+    <iconUrl>https://www-ssl.intel.com/sites/sitewide/HAT/50recode/pix/main-logo.png</iconUrl>
+    <copyright>© Intel Corporation</copyright>
+    <licenseUrl>https://software.intel.com/en-us/articles/end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <mailingListUrl>https://communities.intel.com/community/tech</mailingListUrl>
+    <tags>intel graphics video driver</tags>
+    <summary>Intel® Graphics Driver for Windows® 10</summary>
+    <description>
+---
+
+### [choco://intel-graphics-driver](choco://intel-graphics-driver)
+To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ](https://chocolatey.org/packages/choco-protocol-support)
+
+---
+
+## Detailed Description
+**Note:** Installing this Intel generic graphics driver will overwrite your Computer Manufacturer (OEM) customized driver. OEM drivers are handpicked and include customized features and solutions to platform-specific issues. The generic Intel driver provides users the latest and greatest feature enhancements and bug fixes that OEMs may not have customized yet to address platform-specific needs. Users can check for matching OEM versions at OEM websites.
+
+Any graphics issues found using Intel generic graphics drivers should be [reported directly to Intel](https://www.intel.com/content/www/us/en/support/contact-support.html). Corporate customers should always use OEM drivers and report all issues through the vendor they purchased the platforms and support through.
+
+Install the [Intel® Driver &amp; Support Assistant](https://www.intel.com/content/www/us/en/support/detect.html), which automatically checks for drivers on a regular basis and can provide notifications when new drivers are available.
+
+## Highlights:
+
+* Launch driver for 12th Generation Intel® Core™ Processors with Intel® UHD Graphics (Codename Alder Lake-HX). 
+* Intel® Game On Driver support for Evil Dead: The Game* and Dolmen* on Intel® 11th Generation with Xe Graphics and newer. 
+
+## OS Reference:
+
+* Microsoft Windows® 10-64 - October 2018 Update (1809)
+* Microsoft Windows 10-64 - May 2019 Update (1903)
+* Microsoft Windows 10-64 - November 2019 Update (1909)
+* Microsoft Windows 10-64 - May 2020 Update (2004)
+* Microsoft Windows 10-64 - October 2020 Update (20H2)
+* Microsoft Windows 10-64 - May 2021 Update (21H1)
+* Microsoft Windows 10-64 - November 2021 Update (21H2) 
+* Microsoft Windows 11*-64 - October 2021 Update (21H2) 
+
+## Platform (OS Support)
+
+* 6th Gen Intel® Core™ processor family (Codename Skylake) (1903-21H1)
+* 7th Gen Intel® Core™ processor family (Codename Kaby Lake) (1903-21H1)
+* 8th Gen Intel® Core™ processor family (Codename Kaby Lake-R, Coffee Lake, Whiskey Lake (1903+)
+* 9th Gen Intel® Core™ processor family (Codename Coffee Lake-R) (1903+)
+* 10th Gen Intel® Core™ processor family (Codename Comet Lake, Amber Lake, Ice Lake) (1903+)
+* 11th Gen Intel® Core™ processor family (Codename Tiger Lake, Rocket Lake, Tiger Lake-H) (1909+)
+* 12th Gen Intel® Core™ processor family (Codename Alder Lake-S, Alder Lake-H, Alder Lake-P, Alder Lake-U, Alder Lake-HX) (20H2+) 
+* Intel® Core™ Processor with Intel® Hybrid Technology (Codename Lakefield) (1909+)
+* Intel® Atom®, Pentium® and Celeron® processor family (Codename Apollo Lake, Elkhart Lake) (1809+)
+* Intel® Pentium® and Celeron® processor family (Codename Gemini Lake, Jasper Lake) (1903-21H1, 1909+)
+* Intel® Iris® Xe Dedicated Graphics family (Codename DG1) (2004+)
+
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/intel-graphics-driver/readme.md)**
+
+---
+
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+
+---
+
+</description>
+    <releaseNotes>https://downloadmirror.intel.com/751359/readme_1013790.txt</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-fastanswers.extension" version="0.0.2" />
+      <dependency id="chocolatey-os-dependency.extension" version="0.0.1"/>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

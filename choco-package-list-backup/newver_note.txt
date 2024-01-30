@@ -1,0 +1,4 @@
+$GoogleDrive = Get-PSDrive | Where-Object {  $_.Name -eq 'Google Drive'}
+
+
+quit using choco list and replace with method from newer scripts such as choco-continuous-updater (and a choco-cleaner-rt hook?)

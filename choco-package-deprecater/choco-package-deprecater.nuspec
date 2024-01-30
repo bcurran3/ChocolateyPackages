@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-package-deprecater</id>
-    <version>2022.03.15</version>
+    <version>2022.03.17</version>
     <title>(unofficial) Chocolatey Package Deprecater/Retirer (Script)</title>
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
