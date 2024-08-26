@@ -27,6 +27,7 @@ Chocolatey Sandbox (OKA **choco-sandbox**) is for anyone who may want to test dr
 * Automatically runs choco-sandbox-customize.ps1 for further customizatoin if it exists.
 
 ### CHANGELOG:
+* 1.0.1 - choco commands in choco-sandbox.ps1 now use -y, chocolatey package cache handling changed for better compatibility, added hints to choco-sandbox.ps1 for those who don't RTFM
 * 1.0.0 - initial release.
 
 
