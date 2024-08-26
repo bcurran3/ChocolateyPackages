@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>choco-sandbox</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <owners>bcurran3</owners>
     <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectSourceUrl>
     <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</packageSourceUrl>
@@ -52,6 +52,7 @@ https://www.paypal.me/bcurran3donations or become a patron at https://www.patreo
 </description>
     <releaseNotes>
 ### CHANGELOG:
+* 1.0.1 - choco commands in choco-sandbox.ps1 now use -y, chocolatey package cache handling changed for better compatibility, added hints to choco-sandbox.ps1 for those who don't RTFM
 * 1.0.0 - Initial release. No upgrades or features planned, only maintenance if needed for future Windows or Windows Sandbox compatibility.
 	</releaseNotes>
     <dependencies>
