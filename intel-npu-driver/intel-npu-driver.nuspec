@@ -6,7 +6,7 @@
     <version>32.0.100.4724</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/794734/intel-npu-driver-windows.html</projectUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-npu-driver</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/intel-npu-driver</packageSourceUrl>
     <title>Intel NPU Software &amp; Drivers (Install)</title>
     <authors>Intel Corporation</authors>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>

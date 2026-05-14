@@ -5,7 +5,7 @@
     <id>intel-killer-performance-suite</id>
     <version>40.26.403.2234</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-killer-performance-suite</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/intel-killer-performance-suite</packageSourceUrl>
     <title>Intel® Killer Performance Suite (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19779</projectUrl>

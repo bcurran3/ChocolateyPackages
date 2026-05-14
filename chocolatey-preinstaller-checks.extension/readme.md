@@ -1,11 +1,11 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original!
 * I personally use and endorse this extension.
 
-![Screenshot of chocolatey-preinstaller-checks.extension](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-preinstaller-checks.extension_extras/chocolatey-preinstaller-checks.extension_screenshot.png)
+![Screenshot of chocolatey-preinstaller-checks.extension](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-preinstaller-checks.extension_extras/chocolatey-preinstaller-checks.extension_screenshot.png)
 
 ## **Chocolatey Preinstaller Checks Extension** is a Chocolatey extension that intercepts and runs checks before installing or uninstalling a program. This extension will start working automatically once installed and does NOT need to be implemented by package creators/maintainers. **Chocolatey Preinstaller Checks Extension** is meant to be installed and used directly by Chocolatey end users.
 
@@ -45,7 +45,7 @@ ROADMAP:
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 

@@ -4,18 +4,18 @@
   <metadata>
     <id>choco-upgrade-all-at-startup</id>
     <version>2023.05.26</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-upgrade-all-at-startup</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <owners>bcurran3</owners>
     <title>Choco Upgrade All at Startup (Task)</title>
     <authors>Bill Curran</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-upgrade-all-at-startup</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at-startup</projectSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-upgrade-all-at-startup</projectSourceUrl>
     <tags>bcurran3 unofficial choco upgrade startup config schtasks scheduled task</tags>
     <summary>choco-upgrade-all-at-startup - Configures a scheduled task to run "choco upgrade all -y" at Windows startup.</summary>
     <description>
@@ -51,7 +51,7 @@ SYSADMINS: I recommend use of **choco-upgrade-all-at-startup** for notebook/lapt
 #### IF UPGRADING FROM A VERSION EARLIER THAN 2021.03.15:
 It is **HIGHLY** advised you read the Release Notes/ChangeLog and **run choco-upgrade-all -EditConfig** to enable the new enhanced features.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at-startup/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-upgrade-all-at-startup/readme.md)**
 
 **If you find choco-upgrade-all-at-startup useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	

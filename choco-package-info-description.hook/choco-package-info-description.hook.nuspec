@@ -8,7 +8,7 @@
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-info-collection/choco-package-info-description.hook</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-package-info-collection/choco-package-info-description.hook</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/mychocohooks_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -42,8 +42,8 @@ So you've replaced your addiction of watching defrag with watching Chocolatey pa
 	</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco package-info hook</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-info-collection/choco-package-info-description.hook</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-info-collection/choco-package-info-description.hook</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-package-info-collection/choco-package-info-description.hook</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-package-info-collection/choco-package-info-description.hook</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <dependencies>

@@ -6,7 +6,7 @@
     <title>VirtIO Drivers and Guest Tools (Install)</title>
     <version>0.1.285.1</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/</packageSourceUrl>
     <authors>Red Hat, Google, Virtuozzo, IBM</authors>
     <projectUrl>https://www.linux-kvm.org/page/WindowsGuestDrivers</projectUrl>
     <projectSourceUrl>https://github.com/virtio-win/kvm-guest-drivers-windows</projectSourceUrl>

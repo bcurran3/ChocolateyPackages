@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
@@ -16,10 +16,10 @@ To provide (fairly) easy to remember micro functions for (new?) package creators
 The use cases go on...
 
 #Functions
-![List of functions](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/List_of_functions.png)
+![List of functions](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-fastanswers.extension/List_of_functions.png)
 
 Screenshot testing all functions with simple test-package install script that does: $test=function and Write-Out function result for each function. Results from the functions show that the test package was run on a computer with Microsoft Windows 10 Pro build 16299 64bit, joined to a domain, (onboard) Intel video, (discreet) Nvidia video, has a SSD, is a workstation not a server, and is pending a reboot.
-![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-fastanswers.extension/chocolatey-fastanswers.extension.png)
+![](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-fastanswers.extension/chocolatey-fastanswers.extension.png)
 
 ###CHANGE LOG:
 * 0.0.2 - Added Get-IsAMDCPU, Get-IsARMCPU, Get-IsHyperV, Get-IsIntelCPU, Get-IsKVM, Get-IsMobile, Get-NuspecInfo, Get-IsWinServer2019, and Get-IsXen. Improved Get-IsVM, Get-IsWin7/8/80/81/10, Get-IsWinServer2016, and Get-IsVMware. Bug fixed in Get-IsWin8 and Get-IsWin81.
@@ -34,7 +34,7 @@ Screenshot testing all functions with simple test-package install script that do
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 

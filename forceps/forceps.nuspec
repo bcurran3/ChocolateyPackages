@@ -5,10 +5,10 @@
     <id>forceps</id>
     <version>1.0.0.1</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/forceps</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/forceps</packageSourceUrl>
     <title>ForcePS (Portable)</title>
     <authors>Bill Curran</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/forceps</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/main/forceps</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/forceps_icon.png</iconUrl>
     <copyright>Copyleft Bill Curran</copyright>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>

@@ -9,9 +9,9 @@
     <owners>bcurran3</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectUrl>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-preinstaller-checks.extension</packageSourceUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-preinstaller-checks.extension</projectUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-preinstaller-checks.extension</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-preinstaller-checks.extension</packageSourceUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>

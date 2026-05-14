@@ -5,11 +5,11 @@
     <id>choco-persistent-packages</id>
     <version>2018.05.06</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-persistent-packages</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-persistent-packages</packageSourceUrl>
     <title>Choco Persistent Packages (Task)</title>
     <authors>Bill Curran</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-persistent-packages</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-persistent-packages</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>Copyleft Bill Curran</copyright>
@@ -55,7 +55,7 @@ You can install **choco-persistent-packages** with TIME and ABORTTIME parameters
 
 If you have a previous release of **choco-persistent-packages** installed, upgrading to a new version will NOT modify your current scheduled task or list of persistent packages. You will need to uninstall and re-install to take advantage of the new ABORTTIME feature.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-persistent-packages/readme.md)**
 	
 
 ---
@@ -65,7 +65,7 @@ If you have a previous release of **choco-persistent-packages** installed, upgra
 ---
 
 </description>
-    <releaseNotes>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-persistent-packages/readme.md</releaseNotes>
+    <releaseNotes>https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-persistent-packages/readme.md</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>

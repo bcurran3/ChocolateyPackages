@@ -8,12 +8,12 @@
     <title>Choco Package List Backup to Local and Cloud (Script + Task)</title>
     <authors>Bill Curran</authors>
     <copyright>Copyleft Bill Curran</copyright>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-package-list-backup</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-package-list-backup</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-package-list-backup</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-package-list-backup</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-package-list-backup</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>bcurran3 choco unofficial package packages.config backup script cloud</tags>

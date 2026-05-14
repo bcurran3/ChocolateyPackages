@@ -8,7 +8,7 @@
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-cleaner_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -65,7 +65,7 @@ Set it and forget it! **Choco-Cleaner** cleans up your Chocolatey installation e
 **If you find Choco-Cleaner useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
     </description>
     <summary>choco-cleaner - deletes unnecessary residual Chocolatey files to free up disk space</summary>
-    <releaseNotes>**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-cleaner/readme.md)**
+    <releaseNotes>**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-cleaner/readme.md)**
 
 ### INSTALL EXAMPLES:
 * **choco install choco-cleaner** - (default) installs **Choco-Cleaner** to run every Sunday at 11:00 PM
@@ -118,8 +118,8 @@ If you are using [choco-upgrade-all-at](https://community.chocolatey.org/package
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco cleaner cleanup schtasks scheduled task</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <dependencies>

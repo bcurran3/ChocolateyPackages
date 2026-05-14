@@ -8,7 +8,7 @@
     <authors>Bill Curran</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-toast-notifications.extension</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -60,8 +60,8 @@ To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco toast notifications extension</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-toast-notifications.extension</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-toast-notifications.extension</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-toast-notifications.extension</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <dependencies>

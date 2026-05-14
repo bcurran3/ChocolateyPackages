@@ -6,7 +6,7 @@
     <version>32.0.101.8735</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/785597</projectUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-arc-graphics-driver</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/intel-arc-graphics-driver</packageSourceUrl>
     <title>Intel Arc Graphics Drivers</title>
     <authors>Intel Corporation</authors>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>

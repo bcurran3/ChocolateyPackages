@@ -1,11 +1,11 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/InstChoco/InstChoco_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
 * A BCURRAN3 original! So of course I endorse and use it. :)
 * It is not recommended to run InstChoco without the -ynp switch on servers if you are using the Windows Active Directory Domain features!
 
-![Screenshot of InstChoco in use](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_screenshot.png)
+![Screenshot of InstChoco in use](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/InstChoco/InstChoco_screenshot.png)
 
 #InstChoco - The ULTIMATE Chocolatey and Chocolatey packages (re)installer!
 	
@@ -13,15 +13,15 @@
 
 ##ANSWER: You need InstChoco for the NEXT time you want to install Chocolatey and automate package (re)installation!
 
-**InstChoco** is the evolution of an old batch file I used over the years to automate installing Chocolatey followed by a bunch of "choco install program -y" commands to install my standard set of packages. I eventually decided to make it a program with additional features. I also integrated with other Chocolatey packages I've created. What you see now is the culmination of many long hard hours of work. I think **InstChoco** is the best it can be, but I'm always open to new features. Feel free to contact me with feedback. You can find **InstChoco.exe** in \ProgramData\chocolatey\lib\instchoco\tools. If you don't already have Chocolatey installed you can download **InstChoco** from [SOFTPEDIA](http://www.softpedia.com/get/System/System-Miscellaneous/InstChoco.shtml), [CNET's Download.com](https://download.cnet.com/InstChoco/3000-2094_4-77751542.html), or [directly from my GitHub repo](https://github.com/bcurran3/ChocolateyPackages/raw/master/InstChoco/tools/InstChoco.exe).
+**InstChoco** is the evolution of an old batch file I used over the years to automate installing Chocolatey followed by a bunch of "choco install program -y" commands to install my standard set of packages. I eventually decided to make it a program with additional features. I also integrated with other Chocolatey packages I've created. What you see now is the culmination of many long hard hours of work. I think **InstChoco** is the best it can be, but I'm always open to new features. Feel free to contact me with feedback. You can find **InstChoco.exe** in \ProgramData\chocolatey\lib\instchoco\tools. If you don't already have Chocolatey installed you can download **InstChoco** from [SOFTPEDIA](http://www.softpedia.com/get/System/System-Miscellaneous/InstChoco.shtml), [CNET's Download.com](https://download.cnet.com/InstChoco/3000-2094_4-77751542.html), or [directly from my GitHub repo](https://github.com/bcurran3/ChocolateyPackages/raw/main/InstChoco/tools/InstChoco.exe).
 
 ###FEATURES:
 
-![Screenshot of InstChoco features](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_features_screenshot.png)
+![Screenshot of InstChoco features](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/InstChoco/InstChoco_features_screenshot.png)
 
 ###Usage: 
 
-![Screenshot of InstChoco Options](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/InstChoco/InstChoco_usage_screenshot.png)
+![Screenshot of InstChoco Options](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/InstChoco/InstChoco_usage_screenshot.png)
 
 
 ROADMAP:
@@ -48,7 +48,7 @@ ROADMAP:
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 

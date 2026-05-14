@@ -5,13 +5,13 @@
     <id>instchoco</id>
     <version>2.11</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/InstChoco</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/InstChoco</packageSourceUrl>
     <title>InstChoco (Portable)</title>
     <authors>Bill Curran</authors>
     <projectUrl>http://lacomputerbuddy.com/InstChoco/</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <copyright>Copyright 2017-2019 Bill Curran</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/InstChoco/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/InstChoco/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>

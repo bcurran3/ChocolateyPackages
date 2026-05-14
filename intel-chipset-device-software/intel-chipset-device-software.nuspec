@@ -5,7 +5,7 @@
     <id>intel-chipset-device-software</id>
     <version>10.1.20398.8776</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-chipset-device-software</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/intel-chipset-device-software</packageSourceUrl>
     <title>Intel® Chipset INF Utility (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19347</projectUrl>

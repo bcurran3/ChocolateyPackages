@@ -9,7 +9,7 @@
     <owners>bcurran3</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-cleaner_icon.png</iconUrl>
     <description>
 ---
@@ -56,8 +56,8 @@ To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts
 	</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco cleaner rt cleanup hook</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner-rt-collection/choco-cleaner-rt-ignores.hook</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <dependencies>

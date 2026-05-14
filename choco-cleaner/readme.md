@@ -1,6 +1,6 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_icon.png" width="200" height="200">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/choco-cleaner/choco-cleaner_icon.png" width="200" height="200">
 
-![Screenshot of Choco-Cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_screenshot.png)	
+![Screenshot of Choco-Cleaner](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-cleaner/choco-cleaner_screenshot.png)	
 
 **BCURRAN3'S PACKAGE NOTES:**
 
@@ -15,7 +15,7 @@
 #### This package creates a Windows Scheduled Task to run Choco-Cleaner.ps1 every Sunday at 11:00 PM.
 
 ## **BEFORE and AFTER Choco-Cleaner: (198 packages installed and does not include temp folder deletions.)**
-![schreenshot of files and diskspace  before Choco-Cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_before.png) ![schreenshot of files and diskspace after choco-cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/choco-cleaner/choco-cleaner_after.png)
+![schreenshot of files and diskspace  before Choco-Cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/choco-cleaner/choco-cleaner_before.png) ![schreenshot of files and diskspace after choco-cleaner](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/choco-cleaner/choco-cleaner_after.png)
 
 **Sure, you're probably not going to get gigabytes of space back, but every few KB matters on some computers and to some people! Due to [slack space](https://www.computerhope.com/jargon/s/slack-space.htm) small files such as 6 byte .ignore files actually take up 4 KB of HDD space each.**
 
@@ -99,7 +99,7 @@ CHANGELOG:
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 

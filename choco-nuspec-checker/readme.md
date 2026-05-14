@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_icon.png" width="139" height="88">
+<img src="https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-nuspec-checker/choco-nuspec-checker_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
@@ -13,7 +13,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 
 ---
 	
-![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
+![Screenshot of (unofficial) Chocolatey .nuspec Checker (Script)](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-nuspec-checker/choco-nuspec-checker_screenshot.png)
 
 ## **choco-nuspec-checker** (**CNC**) is a PowerShell script I designed for Chocolatey package maintainers/creators to check Chocolatey .nuspec files for common errors and omissions... and automatically fix most of them! Find out AND FIX what the Chocolatey validator is going to tell you BEFORE you submit your package. **CNC** also goes beyond it's original scope and checks for common Chocolatey install/uninstall script errors and omissions as well.
 
@@ -42,7 +42,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 * **CNC -help** for help with options and switches
 * Run **CNC** to check the .nuspec in your current directory or run **CNC X:\SOMEWHERE** to check the .nuspec in that directory. (Do not specify the file, just the directory.)
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-nuspec-checker/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-nuspec-checker/readme.md)**
 
 **If you find choco-nuspec-checker useful please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	
@@ -97,7 +97,7 @@ To use choco:// protocol URLs, install [(unofficial) choco:// Protocol support ]
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 
