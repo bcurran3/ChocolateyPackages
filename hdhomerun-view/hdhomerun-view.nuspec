@@ -4,12 +4,12 @@
   <metadata>
     <id>hdhomerun-view</id>
     <version>2023.12.14</version>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/hdhomerun-view</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/hdhomerun-view</packageSourceUrl>
     <owners>bcurran3</owners>
     <title>HDHomeRun View (Install)</title>
     <authors>SiliconDust</authors>
     <projectUrl>https://www.silicondust.com/products/software/</projectUrl>
-    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hdhomerun-view/hdhomerun-view_icon.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/hdhomerun-view/hdhomerun-view_icon.png</iconUrl>
     <copyright>SiliconDust</copyright>
     <licenseUrl>https://www.silicondust.com/support/downloads/gpl/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,7 +25,7 @@ To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts
 
 ---
 
-![Screenshot of HDHomeRun View](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/hdhomerun-view/hdhomerun-view_screenshot.png)
+![Screenshot of HDHomeRun View](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/hdhomerun-view/hdhomerun-view_screenshot.png)
 
 ### HDHomeRun VIEW app
 
@@ -51,7 +51,7 @@ Also includes the HDHomeRun Setup and HDHomeRun Config programs.
 **RELATED PACKAGES**
 [HDHomeRun Viewer for Plex ](https://chocolatey.org/packages/hdhomerunviewer-plex) | [HDGrandSlam for Plex ](https://chocolatey.org/packages/hdgrandslam-plex)
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/hdhomerun-view/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/hdhomerun-view/readme.md)**
 
 ---
 

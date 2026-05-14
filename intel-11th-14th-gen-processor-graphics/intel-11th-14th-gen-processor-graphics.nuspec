@@ -6,7 +6,7 @@
     <version>32.0.101.7084</version>
     <owners>bcurran3</owners>
     <projectUrl>https://www.intel.com/content/www/us/en/download/864990</projectUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-11th-14th-gen-processor-graphics</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/intel-11th-14th-gen-processor-graphics</packageSourceUrl>
     <title>Intel 11th – 14th Gen Processor Graphics</title>
     <authors>Intel Corporation</authors>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/Intel-logo-boxed.png</iconUrl>

@@ -5,12 +5,12 @@
     <id>choco-sandbox</id>
     <version>1.0.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-sandbox</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-sandbox</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>Chocolatey Sandbox</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-sandbox</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-sandbox</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-sandbox_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>

@@ -5,12 +5,12 @@
     <id>choco-optimize-at</id>
     <version>0.0.1.1</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-optimize-at</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-optimize-at</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>Choco Optimize at (Task)</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-optimize-at</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-optimize-at</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
@@ -46,7 +46,7 @@ You can install **choco-optimize-at** with multiple parameters to make it run "[
 * Not specifying a time will always default to 5 AM.
 * When WEEKLY is specified but a DAY isn't, default first run will be a week from installation date; i.e. next week on whatever day of the week you installed the package.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-optimize-at/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-optimize-at/readme.md)**
 	
 
 ---

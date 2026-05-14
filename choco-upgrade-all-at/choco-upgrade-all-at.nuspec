@@ -5,12 +5,12 @@
     <id>choco-upgrade-all-at</id>
     <version>0.0.7</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-upgrade-all-at</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-upgrade-all-at</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>Choco Upgrade All at (Task)</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-upgrade-all-at</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-upgrade-all-at</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
@@ -57,7 +57,7 @@ Run **choco-upgrade-all -EditConfig** to enable enhanced options such as:
 
 ### SEE THE RELEASE NOTES FOR MORE INFORMATION
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-upgrade-all-at/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-upgrade-all-at/readme.md)**
 
 **If you find choco-upgrade-all-at useful, and I suspect you will, please consider donating: https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	

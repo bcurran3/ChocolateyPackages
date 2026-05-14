@@ -5,7 +5,7 @@
     <id>intel-proset-drivers</id>
     <version>24.40.0</version>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/intel-proset-drivers</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/intel-proset-drivers</packageSourceUrl>
     <title>Intel® Wireless Wi-Fi Drivers for Windows 10 and Windows 11 (Install)</title>
     <authors>Intel Corporation</authors>
     <projectUrl>https://www.intel.com/content/www/us/en/download/19351</projectUrl>

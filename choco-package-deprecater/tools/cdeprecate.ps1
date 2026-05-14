@@ -57,9 +57,9 @@ if ($args -eq "-OpenDeprecateDocs") {&start https://docs.chocolatey.org/en-us/co
 
 # Set default preferences incase of corrupt or missing cdeprecate.config
 $DeprecatedDescription = '## This package has been deprecated. It has been replaced by the dependency shown below.'
-$DeprecatedIconUrl     = 'https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/deprecated.png'
+$DeprecatedIconUrl     = 'https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/mylogos/deprecated.png'
 $RetiredDescription    = '## This package has been retired.'
-$RetiredIconUrl        = 'https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/retired.png'
+$RetiredIconUrl        = 'https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/mylogos/retired.png'
 
 # Import preferences - see comments in cdeprecate.config for settings
 If (Test-Path "$scriptDir\$ScriptConfig") {

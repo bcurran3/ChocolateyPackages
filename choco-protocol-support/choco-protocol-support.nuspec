@@ -5,11 +5,11 @@
     <id>choco-protocol-support</id>
     <version>0.3</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-protocol-support</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-protocol-support</packageSourceUrl>
     <title>(unofficial) choco:// Protocol support</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-protocol-support</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-protocol-support</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-protocol-support_icon.png</iconUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>

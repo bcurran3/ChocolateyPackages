@@ -6,14 +6,14 @@
     <version>0.0.2.2</version>
     <title>Chocolatey Fast Answers Extension</title>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-fastanswers.extension</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-fastanswers.extension</packageSourceUrl>
     <authors>Bill Curran</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-fastanswers.extension</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-fastanswers.extension</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <copyright>public domain</copyright>
     <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-fastanswers.extension</projectSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolatey-fastanswers.extension</projectSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <tags>bcurran3 choco fast answers extension extensions</tags>

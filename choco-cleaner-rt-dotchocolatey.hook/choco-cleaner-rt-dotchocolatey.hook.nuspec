@@ -8,7 +8,7 @@
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-dotchocolatey.hook</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner-rt-collection/choco-cleaner-rt-dotchocolatey.hook</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-cleaner_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -60,8 +60,8 @@ To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts
 	</releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial choco cleaner rt cleanup hook</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-dotchocolatey.hook</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-cleaner-rt-collection/choco-cleaner-rt-dotchocolatey.hook</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner-rt-collection/choco-cleaner-rt-dotchocolatey.hook</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-cleaner-rt-collection/choco-cleaner-rt-dotchocolatey.hook</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <dependencies>

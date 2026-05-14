@@ -5,12 +5,12 @@
     <id>chocolateypowershell</id>
     <version>0.0.2.3</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolateypowershell</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolateypowershell</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <title>Chocolatey PowerShell</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolateypowershell</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/chocolateypowershell</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/chocolateypowershell_icon.png</iconUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
     <copyright>public domain</copyright>
@@ -37,7 +37,7 @@ To use choco:// protocol URLs, install [choco:// Protocol support ](https://nuts
 ### INSTRUCTIONS:
 Just click the **ChocolateyPowerShell** icon on your desktop and hit yes to the UAC and then you can start entering and using Chocolatey [functions](https://chocolatey.org/docs/helpers-reference). NOTE: There are environmental variables you will need to declare such as $packageName etc. that will be required by many functions.
 
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/chocolateypowershell/readme.md)**
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/chocolateypowershell/readme.md)**
 
 
 ---

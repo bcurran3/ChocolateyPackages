@@ -5,11 +5,11 @@
     <id>choco-install-packages-from-web-winconfig</id>
     <version>0.0.2</version>
     <owners>bcurran3</owners>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-install-packages-from-web-winconfig</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-install-packages-from-web-winconfig</packageSourceUrl>
     <title>Install Chocolatey Packages from your Web Browser (Config)</title>
     <authors>bcurran3</authors>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-install-packages-from-web-winconfig</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-install-packages-from-web-winconfig</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/bcurran3_icon.png</iconUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
@@ -56,7 +56,7 @@ WARNING: Only install one package at a time until such time as Chocolatey v1.x i
 https://www.paypal.me/bcurran3donations or become a patron at https://www.patreon.com/bcurran3**
 	</description>
     <releaseNotes>
-**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/master/choco-install-packages-from-web-winconfig/readme.md)**	
+**[PACKAGE NOTES](https://github.com/bcurran3/ChocolateyPackages/blob/main/choco-install-packages-from-web-winconfig/readme.md)**	
 	</releaseNotes>
     <dependencies>
       <dependency id="sudo" version="1.0" />

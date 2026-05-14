@@ -1,6 +1,6 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
-![screenshot of choco-protocol-support](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_screenshot.png)	
+![screenshot of choco-protocol-support](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-protocol-support/choco-protocol-support_screenshot.png)	
 	
 # Implements installing of Chocolatey packages from the web using choco:// Protocol.
 
@@ -14,7 +14,7 @@ If you like the convienance of this package, you should also check out [Install 
 
 ### USAGE INSTRUCTIONS:
 Just click a choco://packagename URL on a web page and the package will install after one or two approval clicks. 
-Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/master/choco-protocol-support/choco-protocol-support_opera_example.png)
+Browser examples: [Chrome](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-protocol-support/choco-protocol-support_chrome_example.png) | [Firefox](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-protocol-support/choco-protocol-support_firefox_example.png) | [Opera](https://raw.githubusercontent.com/bcurran3/ChocolateyPackages/main/choco-protocol-support/choco-protocol-support_opera_example.png)
 
 ### **Easy peasy, Chocolateasy!**
 
@@ -50,7 +50,7 @@ You can install any Chocolatey package from the [Chocolatey Community Repository
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 

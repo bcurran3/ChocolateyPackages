@@ -1,4 +1,4 @@
-<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
+<img src="https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/mylogos/myunofficialChocolateylogo_icon.png" width="139" height="88">
 
 **BCURRAN3'S PACKAGE NOTES:**
 
@@ -10,11 +10,11 @@
 These didn't fit into the concept scope of my other extensions so I decided to start a new miscellaneous collection and will add to it as "needed."
 
 ###HELPERS:
-* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
-* **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
-* **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-CheckandStop** - Checks for and stops a process if running. Creates variables to easily restart the process after a package upgrade. Useful for installers that fail if the program is running, i.e. KeePass, uTorrent, etc. or for stopping programs that automatically run after install, i.e. Skype, SuMo, Ellp, etc. as well as for programs that will stop running during an upgrade and then not return to a running state post upgrade, i.e. Plex Media Server, etc. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-CheckandThrow** - Checks if a process is running and aborts installation/upgrade if so. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
+* **Start-WaitandStop** - Starts a background process to stop a (foreground) process - quits after 5 minutes or after the process gets stopped. Useful to stop additional pop-up programs during installation. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-misc-helpers.extension_extras/chocolatey-misc-helpers.extension_screenshot.png)
 * **Start-WaitandStopActual** - (do not directly use) Called by Start-WaitandStop to make Start-WaitandStop simple to use.
-* **Test-Dependency** - Provides a way to verify a dependency is installed. Does NOT check version. Returns True/False. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/master/chocolatey-misc-helpers.extension_extras/Test-Dependency_screenshot.png)
+* **Test-Dependency** - Provides a way to verify a dependency is installed. Does NOT check version. Returns True/False. [Screenshot](https://cdn.staticaly.com/gh/bcurran3/ChocolateyPackages/main/chocolatey-misc-helpers.extension_extras/Test-Dependency_screenshot.png)
 * **Read comments in the scripts for help implementing.**
 
 ###USAGE:
@@ -45,7 +45,7 @@ The functions below were added to v0.0.2 and v0.0.3 but were later nullified; in
 Like my [original Chocolatey add-ons and packages](https://community.chocolatey.org/packages?q=tag%3Abcurran3)? or my [400+ other program packages](https://chocolatey.org/profiles/bcurran3)? Find them useful? Appreciate my hard work, time, and effort?
 
 
-<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/master/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
+<h1>How about buying me a <img src="https://cdn.rawgit.com/bcurran3/ChocolateyPackages/main/mylogos/beer.png" alt="" width="40" height="40"> via PayPal?</h1>
 
 [![PayPal Donate](https://www.paypalobjects.com/webstatic/mktg/logo/AM_SbyPP_mc_vs_dc_ae.jpg)](https://www.paypal.me/bcurran3donations)
 

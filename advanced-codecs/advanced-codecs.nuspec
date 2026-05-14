@@ -8,7 +8,7 @@
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://shark007.net/x64components1.html</projectUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/advanced-codecs</packageSourceUrl>
     <tags>deprecated</tags>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/deprecated.png</iconUrl>

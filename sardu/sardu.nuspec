@@ -8,7 +8,7 @@
     <authors>Davide Costa</authors>
 	<copyright>SARDU Pro srl.</copyright>
     <owners>bcurran3</owners>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/sardu</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/sardu</packageSourceUrl>
     <projectUrl>https://www.sarducd.it/</projectUrl>
     <docsUrl>https://www.sarducd.it/tutorial-en</docsUrl>
     <mailingListUrl>https://www.sarducd.it/forum/</mailingListUrl>

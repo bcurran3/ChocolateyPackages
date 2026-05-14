@@ -8,7 +8,7 @@
     <authors>bcurran3</authors>
     <owners>bcurran3</owners>
     <licenseUrl>https://www.gnu.org/licenses/gpl.html</licenseUrl>
-    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectUrl>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-continuous-upgrader</projectUrl>
     <iconUrl>https://nuts.bcurran3.org/endpoints/images/content/choco-continuous-upgrader_icon.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>
@@ -65,8 +65,8 @@ Install my [choco-toast-notifications.hook](https://community.chocolatey.org/pac
     </releaseNotes>
     <copyright>Copyleft Bill Curran</copyright>
     <tags>bcurran3 unofficial CCU choco upgrade all cup</tags>
-    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</projectSourceUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/choco-continuous-upgrader</packageSourceUrl>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-continuous-upgrader</projectSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/choco-continuous-upgrader</packageSourceUrl>
     <mailingListUrl>https://www.patreon.com/bcurran3</mailingListUrl>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
   </metadata>

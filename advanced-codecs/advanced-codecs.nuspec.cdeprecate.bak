@@ -8,7 +8,7 @@
     <authors>Shark007</authors>
     <owners>bcurran3</owners>
     <projectUrl>https://shark007.net/x64components1.html</projectUrl>
-    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/advanced-codecs</packageSourceUrl>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/main/advanced-codecs</packageSourceUrl>
     <docsUrl>https://shark007.net/forum/Thread-Setup-and-usage</docsUrl>
     <releaseNotes></releaseNotes>
     <mailingListUrl>https://shark007.net/forum/</mailingListUrl>
